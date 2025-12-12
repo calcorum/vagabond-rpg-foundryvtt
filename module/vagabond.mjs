@@ -6,6 +6,19 @@
 // Import configuration
 import { VAGABOND } from "./helpers/config.mjs";
 
+// Import data models
+import { CharacterData, NPCData } from "./data/actor/_module.mjs";
+import {
+  AncestryData,
+  ClassData,
+  SpellData,
+  PerkData,
+  WeaponData,
+  ArmorData,
+  EquipmentData,
+  FeatureData,
+} from "./data/item/_module.mjs";
+
 // Import document classes
 // import { VagabondActor } from "./documents/actor.mjs";
 // import { VagabondItem } from "./documents/item.mjs";
@@ -34,11 +47,29 @@ Hooks.once("init", () => {
   // Add custom constants for configuration
   CONFIG.VAGABOND = VAGABOND;
 
-  // Define custom Document classes
+  // Register Actor data models
+  CONFIG.Actor.dataModels = {
+    character: CharacterData,
+    npc: NPCData,
+  };
+
+  // Register Item data models
+  CONFIG.Item.dataModels = {
+    ancestry: AncestryData,
+    class: ClassData,
+    spell: SpellData,
+    perk: PerkData,
+    weapon: WeaponData,
+    armor: ArmorData,
+    equipment: EquipmentData,
+    feature: FeatureData,
+  };
+
+  // Define custom Document classes (for future use)
   // CONFIG.Actor.documentClass = VagabondActor;
   // CONFIG.Item.documentClass = VagabondItem;
 
-  // Register sheet application classes
+  // Register sheet application classes (TODO: Phase 3-4)
   // Actors.unregisterSheet("core", ActorSheet);
   // Actors.registerSheet("vagabond", VagabondCharacterSheet, {
   //   types: ["character"],
@@ -52,7 +83,7 @@ Hooks.once("init", () => {
   //   label: "VAGABOND.SheetItem"
   // });
 
-  // Preload Handlebars templates
+  // Preload Handlebars templates (TODO: Phase 3)
   // return preloadHandlebarsTemplates();
 });
 
