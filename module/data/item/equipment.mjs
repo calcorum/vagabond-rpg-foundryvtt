@@ -76,6 +76,44 @@ export default class EquipmentData extends VagabondItemBase {
 
       // Tags for filtering/searching
       tags: new fields.ArrayField(new fields.StringField(), { initial: [] }),
+
+      // Relic System - Powerful magic items with unique abilities
+      relic: new fields.SchemaField({
+        // Is this item a relic?
+        isRelic: new fields.BooleanField({ initial: false }),
+
+        // Relic tier (determines power level)
+        tier: new fields.NumberField({
+          integer: true,
+          initial: 1,
+          min: 1,
+          max: 5,
+        }),
+
+        // Unique ability name
+        abilityName: new fields.StringField({ required: false, blank: true }),
+
+        // Unique ability description
+        abilityDescription: new fields.HTMLField({ required: false, blank: true }),
+
+        // Activation cost (mana, luck, etc.)
+        activationCost: new fields.StringField({ required: false, blank: true }),
+
+        // Uses per day (0 = unlimited or passive)
+        usesPerDay: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+
+        // Current uses remaining
+        usesRemaining: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+
+        // Attunement required?
+        requiresAttunement: new fields.BooleanField({ initial: false }),
+
+        // Currently attuned?
+        attuned: new fields.BooleanField({ initial: false }),
+
+        // Lore/history of the relic
+        lore: new fields.HTMLField({ required: false, blank: true }),
+      }),
     };
   }
 

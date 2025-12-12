@@ -29,6 +29,14 @@ export default class CharacterData extends VagabondActorBase {
     return {
       ...baseSchema,
 
+      // Reference to equipped ancestry item (UUID)
+      ancestryId: new fields.StringField({
+        required: false,
+        nullable: true,
+        blank: true,
+        initial: null,
+      }),
+
       // Character level (1-10)
       level: new fields.NumberField({
         required: true,
@@ -200,15 +208,57 @@ export default class CharacterData extends VagabondActorBase {
         fatigue: new fields.SchemaField({
           value: new fields.NumberField({ integer: true, initial: 0, min: 0, max: 5 }),
         }),
+
+        // Studied Dice pool (Scholar class feature - d8s that can replace d20 rolls)
+        studiedDice: new fields.SchemaField({
+          value: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+          max: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        }),
       }),
 
-      // Custom resources (for class-specific tracking like Studied Dice)
+      // Custom resources (for class-specific tracking)
       customResources: new fields.ArrayField(
         new fields.SchemaField({
           name: new fields.StringField({ required: true }),
           value: new fields.NumberField({ integer: true, initial: 0 }),
           max: new fields.NumberField({ integer: true, initial: 0 }),
         })
+      ),
+
+      // Status Effects with Countdown Dice support
+      // Countdown Dice: Track duration with shrinking dice (d6 -> d4 -> ends)
+      statusEffects: new fields.ArrayField(
+        new fields.SchemaField({
+          // Effect name (e.g., "Burning", "Poisoned", "Blessed")
+          name: new fields.StringField({ required: true }),
+          // Effect description
+          description: new fields.StringField({ required: false, blank: true }),
+          // Source of the effect (item UUID, spell name, etc.)
+          source: new fields.StringField({ required: false, blank: true }),
+          // Icon path for display
+          icon: new fields.StringField({ initial: "icons/svg/aura.svg" }),
+          // Is this a beneficial or harmful effect?
+          beneficial: new fields.BooleanField({ initial: false }),
+          // Duration type: "countdown" (Cd4/Cd6), "rounds", "turns", "permanent"
+          durationType: new fields.StringField({
+            initial: "countdown",
+            choices: ["countdown", "rounds", "turns", "permanent"],
+          }),
+          // Current countdown die size (6 = d6, 4 = d4, 0 = ended)
+          countdownDie: new fields.NumberField({ integer: true, initial: 6, min: 0, max: 12 }),
+          // For rounds/turns duration: remaining count
+          durationValue: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+          // Active Effect changes to apply while this status is active
+          changes: new fields.ArrayField(
+            new fields.SchemaField({
+              key: new fields.StringField({ required: true }),
+              mode: new fields.NumberField({ integer: true, initial: 2 }),
+              value: new fields.StringField({ required: true }),
+            }),
+            { initial: [] }
+          ),
+        }),
+        { initial: [] }
       ),
 
       // Armor value (from equipped armor)

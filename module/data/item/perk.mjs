@@ -72,6 +72,37 @@ export default class PerkData extends VagabondItemBase {
         per: new fields.StringField({ initial: "" }), // "short", "long", "day", ""
       }),
 
+      // Luck System Integration
+      // Cost in Luck points to activate this perk
+      luckCost: new fields.NumberField({
+        integer: true,
+        initial: 0,
+        min: 0,
+      }),
+
+      // Does this perk grant Luck when triggered?
+      grantsLuck: new fields.NumberField({
+        integer: true,
+        initial: 0,
+        min: 0,
+      }),
+
+      // Ritual System (specific perks are rituals with extended casting)
+      isRitual: new fields.BooleanField({ initial: false }),
+
+      // Ritual duration in minutes (10, 60, etc.)
+      ritualDuration: new fields.NumberField({
+        integer: true,
+        initial: 0,
+        min: 0,
+      }),
+
+      // Ritual components required (text description)
+      ritualComponents: new fields.StringField({
+        required: false,
+        blank: true,
+      }),
+
       // Tags for categorization
       tags: new fields.ArrayField(new fields.StringField(), { initial: [] }),
     };

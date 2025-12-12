@@ -41,6 +41,8 @@ export const EFFECT_KEYS = {
   "hp.bonus": "system.resources.hp.bonus",
   "mana.bonus": "system.resources.mana.bonus",
   "mana.castingMax": "system.resources.mana.castingMax",
+  "luck.max": "system.resources.luck.max",
+  "studiedDice.max": "system.resources.studiedDice.max",
   "speed.bonus": "system.speed.bonus",
   armor: "system.armor",
   "itemSlots.bonus": "system.itemSlots.bonus",
