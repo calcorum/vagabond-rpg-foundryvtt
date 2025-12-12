@@ -14,7 +14,7 @@ VAGABOND.stats = {
   awareness: "VAGABOND.StatAwareness",
   reason: "VAGABOND.StatReason",
   presence: "VAGABOND.StatPresence",
-  luck: "VAGABOND.StatLuck"
+  luck: "VAGABOND.StatLuck",
 };
 
 /**
@@ -26,7 +26,7 @@ VAGABOND.statsAbbr = {
   awareness: "VAGABOND.StatAwarenessAbbr",
   reason: "VAGABOND.StatReasonAbbr",
   presence: "VAGABOND.StatPresenceAbbr",
-  luck: "VAGABOND.StatLuckAbbr"
+  luck: "VAGABOND.StatLuckAbbr",
 };
 
 /**
@@ -44,7 +44,7 @@ VAGABOND.skills = {
   mysticism: { label: "VAGABOND.SkillMysticism", stat: "awareness" },
   performance: { label: "VAGABOND.SkillPerformance", stat: "presence" },
   sneak: { label: "VAGABOND.SkillSneak", stat: "dexterity" },
-  survival: { label: "VAGABOND.SkillSurvival", stat: "awareness" }
+  survival: { label: "VAGABOND.SkillSurvival", stat: "awareness" },
 };
 
 /**
@@ -54,7 +54,7 @@ VAGABOND.attackTypes = {
   melee: { label: "VAGABOND.AttackMelee", stat: "might" },
   brawl: { label: "VAGABOND.AttackBrawl", stat: "might" },
   ranged: { label: "VAGABOND.AttackRanged", stat: "awareness" },
-  finesse: { label: "VAGABOND.AttackFinesse", stat: "dexterity" }
+  finesse: { label: "VAGABOND.AttackFinesse", stat: "dexterity" },
 };
 
 /**
@@ -63,7 +63,7 @@ VAGABOND.attackTypes = {
 VAGABOND.saves = {
   reflex: { label: "VAGABOND.SaveReflex", stats: ["dexterity", "awareness"] },
   endure: { label: "VAGABOND.SaveEndure", stats: ["might", "might"] },
-  will: { label: "VAGABOND.SaveWill", stats: ["reason", "presence"] }
+  will: { label: "VAGABOND.SaveWill", stats: ["reason", "presence"] },
 };
 
 /**
@@ -78,7 +78,7 @@ VAGABOND.spellDelivery = {
   cone: { label: "VAGABOND.DeliveryCone", cost: 2 },
   glyph: { label: "VAGABOND.DeliveryGlyph", cost: 2 },
   line: { label: "VAGABOND.DeliveryLine", cost: 2 },
-  sphere: { label: "VAGABOND.DeliverySphere", cost: 2 }
+  sphere: { label: "VAGABOND.DeliverySphere", cost: 2 },
 };
 
 /**
@@ -87,7 +87,7 @@ VAGABOND.spellDelivery = {
 VAGABOND.spellDuration = {
   instant: { label: "VAGABOND.DurationInstant", focus: false },
   focus: { label: "VAGABOND.DurationFocus", focus: true },
-  continual: { label: "VAGABOND.DurationContinual", focus: false }
+  continual: { label: "VAGABOND.DurationContinual", focus: false },
 };
 
 /**
@@ -101,7 +101,7 @@ VAGABOND.damageTypes = {
   cold: "VAGABOND.DamageCold",
   shock: "VAGABOND.DamageShock",
   poison: "VAGABOND.DamagePoison",
-  acid: "VAGABOND.DamageAcid"
+  acid: "VAGABOND.DamageAcid",
 };
 
 /**
@@ -115,7 +115,7 @@ VAGABOND.weaponProperties = {
   loading: "VAGABOND.PropertyLoading",
   brawl: "VAGABOND.PropertyBrawl",
   crude: "VAGABOND.PropertyCrude",
-  versatile: "VAGABOND.PropertyVersatile"
+  versatile: "VAGABOND.PropertyVersatile",
 };
 
 /**
@@ -125,7 +125,7 @@ VAGABOND.gripTypes = {
   "1h": "VAGABOND.Grip1H",
   "2h": "VAGABOND.Grip2H",
   versatile: "VAGABOND.GripVersatile",
-  fist: "VAGABOND.GripFist"
+  fist: "VAGABOND.GripFist",
 };
 
 /**
@@ -134,7 +134,7 @@ VAGABOND.gripTypes = {
 VAGABOND.armorTypes = {
   light: "VAGABOND.ArmorLight",
   heavy: "VAGABOND.ArmorHeavy",
-  shield: "VAGABOND.ArmorShield"
+  shield: "VAGABOND.ArmorShield",
 };
 
 /**
@@ -146,7 +146,7 @@ VAGABOND.sizes = {
   large: "VAGABOND.SizeLarge",
   huge: "VAGABOND.SizeHuge",
   giant: "VAGABOND.SizeGiant",
-  colossal: "VAGABOND.SizeColossal"
+  colossal: "VAGABOND.SizeColossal",
 };
 
 /**
@@ -160,7 +160,7 @@ VAGABOND.beingTypes = {
   beast: "VAGABOND.BeingBeast",
   outer: "VAGABOND.BeingOuter",
   primordial: "VAGABOND.BeingPrimordial",
-  undead: "VAGABOND.BeingUndead"
+  undead: "VAGABOND.BeingUndead",
 };
 
 /**
@@ -169,7 +169,7 @@ VAGABOND.beingTypes = {
 VAGABOND.zones = {
   frontline: "VAGABOND.ZoneFrontline",
   midline: "VAGABOND.ZoneMidline",
-  backline: "VAGABOND.ZoneBackline"
+  backline: "VAGABOND.ZoneBackline",
 };
 
 /**
@@ -186,7 +186,7 @@ VAGABOND.speedByDex = {
   4: 30,
   5: 30,
   6: 35,
-  7: 35
+  7: 35,
 };
 
 /**

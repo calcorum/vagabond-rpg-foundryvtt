@@ -1,0 +1,118 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "globals": {
+    "game": "readonly",
+    "canvas": "readonly",
+    "ui": "readonly",
+    "CONFIG": "readonly",
+    "CONST": "readonly",
+    "Hooks": "readonly",
+    "Application": "readonly",
+    "FormApplication": "readonly",
+    "ActorSheet": "readonly",
+    "ItemSheet": "readonly",
+    "Actor": "readonly",
+    "Item": "readonly",
+    "ChatMessage": "readonly",
+    "Roll": "readonly",
+    "Dialog": "readonly",
+    "TextEditor": "readonly",
+    "FilePicker": "readonly",
+    "Handlebars": "readonly",
+    "foundry": "readonly",
+    "renderTemplate": "readonly",
+    "loadTemplates": "readonly",
+    "getTemplate": "readonly",
+    "fromUuid": "readonly",
+    "fromUuidSync": "readonly",
+    "duplicate": "readonly",
+    "mergeObject": "readonly",
+    "setProperty": "readonly",
+    "getProperty": "readonly",
+    "hasProperty": "readonly",
+    "expandObject": "readonly",
+    "flattenObject": "readonly",
+    "isObjectEmpty": "readonly",
+    "invertObject": "readonly",
+    "filterObject": "readonly",
+    "diffObject": "readonly",
+    "randomID": "readonly",
+    "debounce": "readonly",
+    "deepClone": "readonly",
+    "isEmpty": "readonly",
+    "getType": "readonly",
+    "ActiveEffect": "readonly",
+    "Token": "readonly",
+    "TokenDocument": "readonly",
+    "Scene": "readonly",
+    "User": "readonly",
+    "Folder": "readonly",
+    "Compendium": "readonly",
+    "CompendiumCollection": "readonly",
+    "DocumentSheetConfig": "readonly",
+    "ContextMenu": "readonly",
+    "DragDrop": "readonly",
+    "SearchFilter": "readonly",
+    "Tabs": "readonly",
+    "quench": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "builtinGlobals": true,
+        "hoist": "all",
+        "allow": ["event", "name", "status", "parent", "top", "close", "open", "print"]
+      }
+    ],
+    "no-var": "error",
+    "prefer-const": "warn",
+    "eqeqeq": ["error", "smart"],
+    "curly": ["error", "multi-line"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": "warn",
+    "no-duplicate-imports": "error",
+    "no-template-curly-in-string": "warn",
+    "no-unreachable-loop": "error",
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true,
+        "variables": true
+      }
+    ],
+    "arrow-body-style": ["warn", "as-needed"],
+    "no-else-return": "warn",
+    "no-lonely-if": "warn",
+    "no-unneeded-ternary": "warn",
+    "prefer-arrow-callback": "warn",
+    "prefer-template": "warn",
+    "object-shorthand": "warn",
+    "spaced-comment": ["warn", "always", { "markers": ["/"] }]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.mjs", "**/tests/**/*.mjs"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["node_modules/", "foundrydata/", "styles/*.css", "*.min.js"]
+}

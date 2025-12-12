@@ -2,23 +2,23 @@
 // ==========================================
 
 // Configuration
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // Base styles
-@import 'base';
+@import "base";
 
 // Components
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/tabs';
+@import "components/buttons";
+@import "components/forms";
+@import "components/tabs";
 
 // Sheets
-@import 'sheets/actor-sheet';
-@import 'sheets/item-sheet';
+@import "sheets/actor-sheet";
+@import "sheets/item-sheet";
 
 // Dialogs
-@import 'dialogs/roll-dialog';
+@import "dialogs/roll-dialog";
 
 // Chat
-@import 'chat/chat-cards';
+@import "chat/chat-cards";

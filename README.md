@@ -15,6 +15,7 @@ A complete Foundry VTT v13 system implementation for **Vagabond RPG** - Pulp Fan
 ## Installation
 
 ### From Foundry
+
 1. Open Foundry VTT Setup
 2. Navigate to Game Systems
 3. Click "Install System"
@@ -24,6 +25,7 @@ A complete Foundry VTT v13 system implementation for **Vagabond RPG** - Pulp Fan
    ```
 
 ### Manual Installation
+
 1. Download the latest release from GitHub
 2. Extract to `Data/systems/vagabond/`
 3. Restart Foundry VTT
@@ -31,10 +33,12 @@ A complete Foundry VTT v13 system implementation for **Vagabond RPG** - Pulp Fan
 ## Development Setup
 
 ### Prerequisites
+
 - Node.js 18+
 - Docker & Docker Compose (for local Foundry instance)
 
 ### Quick Start
+
 ```bash
 # Clone the repository
 git clone https://github.com/calcorum/vagabond-rpg-foundryvtt.git
@@ -53,6 +57,7 @@ docker compose up -d
 ```
 
 ### Project Structure
+
 ```
 vagabond-rpg-foundryvtt/
 ├── module/                 # JavaScript modules
@@ -76,6 +81,7 @@ vagabond-rpg-foundryvtt/
 ```
 
 ### Building Styles
+
 ```bash
 # One-time build
 npm run build
@@ -85,6 +91,7 @@ npm run watch
 ```
 
 ### Creating a Release
+
 ```bash
 npm run release
 ```

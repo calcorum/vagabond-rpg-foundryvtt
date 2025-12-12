@@ -11,29 +11,29 @@ $color-parchment-dark: #d4c4a8;
 $color-parchment-darker: #c4b08c;
 
 // Text colors (high contrast)
-$color-text-primary: #2c2416;      // Main text - dark brown/black
-$color-text-secondary: #4a3f2f;    // Secondary text
-$color-text-muted: #6b5d4d;        // Muted/disabled text
-$color-text-inverse: #f5f0e1;      // Text on dark backgrounds
+$color-text-primary: #2c2416; // Main text - dark brown/black
+$color-text-secondary: #4a3f2f; // Secondary text
+$color-text-muted: #6b5d4d; // Muted/disabled text
+$color-text-inverse: #f5f0e1; // Text on dark backgrounds
 
 // Accent colors
-$color-accent-primary: #8b4513;    // Saddle brown - primary actions
-$color-accent-secondary: #654321;  // Dark brown - secondary
-$color-accent-highlight: #cd853f;  // Peru - highlights/hover
+$color-accent-primary: #8b4513; // Saddle brown - primary actions
+$color-accent-secondary: #654321; // Dark brown - secondary
+$color-accent-highlight: #cd853f; // Peru - highlights/hover
 
 // Semantic colors
-$color-success: #2d5a27;           // Dark green - success/healing
-$color-danger: #8b0000;            // Dark red - damage/danger
-$color-warning: #b8860b;           // Dark goldenrod - warnings
-$color-info: #2f4f4f;              // Dark slate gray - info
+$color-success: #2d5a27; // Dark green - success/healing
+$color-danger: #8b0000; // Dark red - damage/danger
+$color-warning: #b8860b; // Dark goldenrod - warnings
+$color-info: #2f4f4f; // Dark slate gray - info
 
 // Stat colors (for visual distinction)
-$color-might: #8b0000;             // Red - strength/power
-$color-dexterity: #228b22;         // Green - agility
-$color-awareness: #4169e1;         // Royal blue - perception
-$color-reason: #9932cc;            // Purple - intellect
-$color-presence: #daa520;          // Goldenrod - charisma
-$color-luck: #20b2aa;              // Light sea green - fortune
+$color-might: #8b0000; // Red - strength/power
+$color-dexterity: #228b22; // Green - agility
+$color-awareness: #4169e1; // Royal blue - perception
+$color-reason: #9932cc; // Purple - intellect
+$color-presence: #daa520; // Goldenrod - charisma
+$color-luck: #20b2aa; // Light sea green - fortune
 
 // Borders
 $color-border: #8b7355;
@@ -46,19 +46,19 @@ $shadow-medium: rgba(0, 0, 0, 0.2);
 $shadow-dark: rgba(0, 0, 0, 0.3);
 
 // Typography
-$font-family-header: 'Modesto Condensed', 'Roboto Slab', 'Georgia', serif;
-$font-family-body: 'Signika', 'Roboto', 'Helvetica Neue', sans-serif;
-$font-family-mono: 'Roboto Mono', 'Consolas', monospace;
+$font-family-header: "Modesto Condensed", "Roboto Slab", "Georgia", serif;
+$font-family-body: "Signika", "Roboto", "Helvetica Neue", sans-serif;
+$font-family-mono: "Roboto Mono", "Consolas", monospace;
 
 // Font sizes (using rem for accessibility)
-$font-size-xs: 0.75rem;    // 12px
-$font-size-sm: 0.875rem;   // 14px
-$font-size-base: 1rem;     // 16px
-$font-size-lg: 1.125rem;   // 18px
-$font-size-xl: 1.25rem;    // 20px
-$font-size-2xl: 1.5rem;    // 24px
-$font-size-3xl: 1.875rem;  // 30px
-$font-size-4xl: 2.25rem;   // 36px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
 
 // Font weights
 $font-weight-normal: 400;
@@ -73,14 +73,14 @@ $line-height-relaxed: 1.75;
 
 // Spacing scale
 $spacing-0: 0;
-$spacing-1: 0.25rem;   // 4px
-$spacing-2: 0.5rem;    // 8px
-$spacing-3: 0.75rem;   // 12px
-$spacing-4: 1rem;      // 16px
-$spacing-5: 1.25rem;   // 20px
-$spacing-6: 1.5rem;    // 24px
-$spacing-8: 2rem;      // 32px
-$spacing-10: 2.5rem;   // 40px
+$spacing-1: 0.25rem; // 4px
+$spacing-2: 0.5rem; // 8px
+$spacing-3: 0.75rem; // 12px
+$spacing-4: 1rem; // 16px
+$spacing-5: 1.25rem; // 20px
+$spacing-6: 1.5rem; // 24px
+$spacing-8: 2rem; // 32px
+$spacing-10: 2.5rem; // 40px
 
 // Border radius
 $radius-sm: 2px;

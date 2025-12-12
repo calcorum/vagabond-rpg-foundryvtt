@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Foundry data
+foundrydata/
+
+# Build artifacts
+styles/*.css
+styles/*.css.map
+
+# Package lock
+package-lock.json
+
+# Compendium packs (LevelDB format)
+packs/*/*.db
+packs/*/CURRENT
+packs/*/LOCK
+packs/*/LOG*
+packs/*/MANIFEST*
+
+# IDE
+.idea/
+.vscode/
+
+# Minified files
+*.min.js
+*.min.css

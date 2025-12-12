@@ -17,6 +17,9 @@ import { VAGABOND } from "./helpers/config.mjs";
 // Import helper functions
 // import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 
+// Import test registration (for Quench)
+import { registerQuenchTests } from "./tests/quench-init.mjs";
+
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
@@ -24,7 +27,8 @@ import { VAGABOND } from "./helpers/config.mjs";
 /**
  * Init hook - runs once when Foundry initializes
  */
-Hooks.once("init", function() {
+Hooks.once("init", () => {
+  // eslint-disable-next-line no-console
   console.log("Vagabond RPG | Initializing Vagabond RPG System");
 
   // Add custom constants for configuration
@@ -59,7 +63,8 @@ Hooks.once("init", function() {
 /**
  * Ready hook - runs when Foundry is fully loaded
  */
-Hooks.once("ready", function() {
+Hooks.once("ready", () => {
+  // eslint-disable-next-line no-console
   console.log("Vagabond RPG | System Ready");
 
   // Display welcome message for GMs
@@ -76,56 +81,59 @@ Hooks.once("ready", function() {
 /**
  * Define Handlebars helpers used throughout the system
  */
-Hooks.once("init", function() {
+Hooks.once("init", () => {
   // Multiply helper for formulas
-  Handlebars.registerHelper("multiply", function(a, b) {
-    return Number(a) * Number(b);
-  });
+  Handlebars.registerHelper("multiply", (a, b) => Number(a) * Number(b));
 
   // Subtract helper
-  Handlebars.registerHelper("subtract", function(a, b) {
-    return Number(a) - Number(b);
-  });
+  Handlebars.registerHelper("subtract", (a, b) => Number(a) - Number(b));
 
   // Calculate difficulty (20 - stat or 20 - stat*2 if trained)
-  Handlebars.registerHelper("difficulty", function(stat, trained) {
+  Handlebars.registerHelper("difficulty", (stat, trained) => {
     const statValue = Number(stat) || 0;
-    return trained ? 20 - (statValue * 2) : 20 - statValue;
+    return trained ? 20 - statValue * 2 : 20 - statValue;
   });
 
   // Check if value equals comparison
-  Handlebars.registerHelper("eq", function(a, b) {
-    return a === b;
-  });
+  Handlebars.registerHelper("eq", (a, b) => a === b);
 
   // Check if value is greater than
-  Handlebars.registerHelper("gt", function(a, b) {
-    return Number(a) > Number(b);
-  });
+  Handlebars.registerHelper("gt", (a, b) => Number(a) > Number(b));
 
   // Check if value is less than
-  Handlebars.registerHelper("lt", function(a, b) {
-    return Number(a) < Number(b);
-  });
+  Handlebars.registerHelper("lt", (a, b) => Number(a) < Number(b));
 
   // Concatenate strings
-  Handlebars.registerHelper("concat", function(...args) {
+  Handlebars.registerHelper("concat", (...args) => {
     // Remove the Handlebars options object from args
     args.pop();
     return args.join("");
   });
 
   // Capitalize first letter
-  Handlebars.registerHelper("capitalize", function(str) {
+  Handlebars.registerHelper("capitalize", (str) => {
     if (typeof str !== "string") return "";
     return str.charAt(0).toUpperCase() + str.slice(1);
   });
 
   // Format number with sign (+/-)
-  Handlebars.registerHelper("signedNumber", function(num) {
+  Handlebars.registerHelper("signedNumber", (num) => {
     const n = Number(num) || 0;
     return n >= 0 ? `+${n}` : `${n}`;
   });
+});
+
+/* -------------------------------------------- */
+/*  Quench Test Registration                    */
+/* -------------------------------------------- */
+
+/**
+ * Register tests with the Quench testing framework if available.
+ * Quench provides in-Foundry testing using Mocha + Chai.
+ * @see https://github.com/Ethaks/FVTT-Quench
+ */
+Hooks.once("quenchReady", (quenchRunner) => {
+  registerQuenchTests(quenchRunner);
 });
 
 /* -------------------------------------------- */
@@ -133,7 +141,8 @@ Hooks.once("init", function() {
 /* -------------------------------------------- */
 
 if (import.meta.hot) {
-  import.meta.hot.accept((newModule) => {
+  import.meta.hot.accept((_newModule) => {
+    // eslint-disable-next-line no-console
     console.log("Vagabond RPG | Hot reload triggered");
   });
 }

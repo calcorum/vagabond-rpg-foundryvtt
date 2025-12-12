@@ -109,7 +109,16 @@
     {
       "name": "Vagabond RPG",
       "sorting": "a",
-      "packs": ["ancestries", "classes", "spells", "perks", "weapons", "armor", "equipment", "bestiary"]
+      "packs": [
+        "ancestries",
+        "classes",
+        "spells",
+        "perks",
+        "weapons",
+        "armor",
+        "equipment",
+        "bestiary"
+      ]
     }
   ],
   "socket": false,
