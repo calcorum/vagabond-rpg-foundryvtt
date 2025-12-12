@@ -1,0 +1,26 @@
+{
+  "name": "vagabond-foundryvtt",
+  "version": "0.1.0",
+  "description": "Foundry VTT system for Vagabond RPG",
+  "scripts": {
+    "build": "sass styles/scss/vagabond.scss styles/vagabond.css --style=compressed",
+    "watch": "sass styles/scss/vagabond.scss styles/vagabond.css --watch --style=expanded --source-map",
+    "lint": "eslint module/",
+    "release": "npm run build && zip -r vagabond.zip system.json module/ templates/ styles/vagabond.css lang/ packs/ assets/ LICENSE README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calcorum/vagabond-rpg-foundryvtt.git"
+  },
+  "author": "Cal Corum <cal.corum@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calcorum/vagabond-rpg-foundryvtt/issues"
+  },
+  "homepage": "https://github.com/calcorum/vagabond-rpg-foundryvtt#readme",
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "eslint": "^8.56.0"
+  },
+  "type": "module"
+}

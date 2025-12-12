@@ -1,0 +1,111 @@
+// Vagabond RPG - Tab Styles
+// ==========================
+
+.vagabond {
+  // Tab navigation
+  .sheet-tabs {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 2px solid $color-border;
+    background-color: $color-parchment-dark;
+
+    .item {
+      margin: 0;
+      padding: $spacing-2 $spacing-4;
+      font-family: $font-family-header;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      color: $color-text-secondary;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        color: $color-text-primary;
+        background-color: $color-parchment;
+      }
+
+      &.active {
+        color: $color-text-primary;
+        background-color: $color-parchment;
+        border-bottom-color: $color-accent-primary;
+      }
+
+      @include focus-visible;
+
+      i {
+        margin-right: $spacing-2;
+      }
+    }
+  }
+
+  // Tab content area
+  .sheet-body {
+    @include custom-scrollbar;
+    overflow-y: auto;
+    padding: $spacing-4;
+
+    .tab {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  // Vertical tabs variant
+  .sheet-tabs.vertical {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 2px solid $color-border;
+
+    .item {
+      border-bottom: none;
+      border-right: 2px solid transparent;
+      margin-bottom: 0;
+      margin-right: -2px;
+
+      &.active {
+        border-right-color: $color-accent-primary;
+      }
+    }
+  }
+
+  // Sub-tabs (within a tab)
+  .sub-tabs {
+    display: flex;
+    gap: $spacing-2;
+    margin-bottom: $spacing-4;
+    padding-bottom: $spacing-2;
+    border-bottom: 1px solid $color-border-light;
+
+    .sub-tab {
+      padding: $spacing-1 $spacing-3;
+      font-size: $font-size-sm;
+      color: $color-text-muted;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        color: $color-text-primary;
+        background-color: $color-parchment-dark;
+      }
+
+      &.active {
+        color: $color-text-primary;
+        background-color: $color-parchment-dark;
+        border-color: $color-border;
+      }
+    }
+  }
+}

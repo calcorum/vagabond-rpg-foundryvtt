@@ -1,0 +1,127 @@
+{
+  "id": "vagabond",
+  "title": "Vagabond RPG",
+  "description": "A Foundry VTT system implementation for Vagabond RPG - Pulp Fantasy Roleplaying",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Cal Corum",
+      "email": "cal.corum@gmail.com"
+    }
+  ],
+  "esmodules": ["module/vagabond.mjs"],
+  "styles": ["styles/vagabond.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "ancestries",
+      "label": "Ancestries",
+      "path": "packs/ancestries",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "classes",
+      "label": "Classes",
+      "path": "packs/classes",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "path": "packs/spells",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "perks",
+      "label": "Perks",
+      "path": "packs/perks",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "path": "packs/weapons",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "path": "packs/armor",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "path": "packs/equipment",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Vagabond RPG",
+      "sorting": "a",
+      "packs": ["ancestries", "classes", "spells", "perks", "weapons", "armor", "equipment", "bestiary"]
+    }
+  ],
+  "socket": false,
+  "url": "https://github.com/calcorum/vagabond-rpg-foundryvtt",
+  "manifest": "https://github.com/calcorum/vagabond-rpg-foundryvtt/releases/latest/download/system.json",
+  "download": "https://github.com/calcorum/vagabond-rpg-foundryvtt/releases/latest/download/vagabond.zip",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "bugs": "https://github.com/calcorum/vagabond-rpg-foundryvtt/issues",
+  "changelog": "CHANGELOG.md",
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.mana",
+  "gridDistance": 5,
+  "gridUnits": "ft"
+}

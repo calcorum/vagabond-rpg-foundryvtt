@@ -1,0 +1,156 @@
+// Vagabond RPG - Base Styles
+// ===========================
+
+// Reset/normalize for Foundry context
+.vagabond {
+  // Base typography
+  font-family: $font-family-body;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $color-text-primary;
+
+  // Box sizing
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  // Links
+  a {
+    color: $color-accent-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent-secondary;
+      text-decoration: underline;
+    }
+
+    @include focus-visible;
+  }
+
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-header;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-2 0;
+  }
+
+  h1 { font-size: $font-size-4xl; }
+  h2 { font-size: $font-size-3xl; }
+  h3 { font-size: $font-size-2xl; }
+  h4 { font-size: $font-size-xl; }
+  h5 { font-size: $font-size-lg; }
+  h6 { font-size: $font-size-base; }
+
+  // Paragraphs
+  p {
+    margin: 0 0 $spacing-4 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Lists
+  ul, ol {
+    margin: 0 0 $spacing-4 0;
+    padding-left: $spacing-6;
+  }
+
+  li {
+    margin-bottom: $spacing-1;
+  }
+
+  // Images
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Tables
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: $spacing-4;
+  }
+
+  th, td {
+    padding: $spacing-2 $spacing-3;
+    text-align: left;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  th {
+    font-weight: $font-weight-semibold;
+    background-color: $color-parchment-dark;
+  }
+
+  // Horizontal rule
+  hr {
+    border: none;
+    border-top: 1px solid $color-border;
+    margin: $spacing-4 0;
+  }
+
+  // Code
+  code {
+    font-family: $font-family-mono;
+    font-size: $font-size-sm;
+    padding: $spacing-1 $spacing-2;
+    background-color: $color-parchment-dark;
+    border-radius: $radius-sm;
+  }
+
+  // Blockquote
+  blockquote {
+    margin: 0 0 $spacing-4 0;
+    padding: $spacing-3 $spacing-4;
+    border-left: 3px solid $color-accent-primary;
+    background-color: $color-parchment-dark;
+    font-style: italic;
+  }
+
+  // Selection
+  ::selection {
+    background-color: $color-accent-highlight;
+    color: $color-text-primary;
+  }
+}
+
+// Foundry sheet wrapper styles
+.sheet.vagabond {
+  @include custom-scrollbar;
+  background: $color-parchment;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($color-parchment-light, 0.3) 0%,
+      transparent 5%,
+      transparent 95%,
+      rgba($color-parchment-dark, 0.3) 100%
+    );
+}
+
+// Window header customization
+.window-app.vagabond {
+  .window-header {
+    background: linear-gradient(to bottom, $color-parchment-dark, $color-parchment-darker);
+    border-bottom: 2px solid $color-border-dark;
+
+    .window-title {
+      font-family: $font-family-header;
+      font-size: $font-size-lg;
+      color: $color-text-primary;
+    }
+
+    .header-button {
+      color: $color-text-secondary;
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+  }
+}

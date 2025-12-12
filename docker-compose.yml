@@ -1,0 +1,28 @@
+services:
+  foundry:
+    image: felddy/foundryvtt:release
+    container_name: vagabond-foundry-dev
+    hostname: vagabond-foundry-dev
+    restart: unless-stopped
+    environment:
+      - FOUNDRY_USERNAME=${FOUNDRY_USERNAME}
+      - FOUNDRY_PASSWORD=${FOUNDRY_PASSWORD}
+      - FOUNDRY_ADMIN_KEY=${FOUNDRY_ADMIN_KEY:-vagabond-dev}
+      - FOUNDRY_LICENSE_KEY=${FOUNDRY_LICENSE_KEY}
+      - CONTAINER_PRESERVE_CONFIG=true
+    volumes:
+      # Foundry data directory
+      - ./foundrydata:/data
+      # Mount system directly for hot reload development
+      - ./:/data/Data/systems/vagabond:ro
+    ports:
+      - "30000:30000"
+    # Required for Docker-in-LXC or rootless podman
+    security_opt:
+      - apparmor=unconfined
+
+# Note: Create a .env file with your Foundry credentials:
+# FOUNDRY_USERNAME=your-username
+# FOUNDRY_PASSWORD=your-password
+# FOUNDRY_LICENSE_KEY=your-license-key
+# FOUNDRY_ADMIN_KEY=your-admin-key

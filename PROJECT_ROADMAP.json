@@ -1,0 +1,1034 @@
+{
+  "project": {
+    "name": "Vagabond RPG - Foundry VTT System",
+    "description": "Complete Foundry VTT v13 system implementation for Vagabond RPG (Pulp Fantasy TTRPG)",
+    "repository": "vagabond-rpg-foundryvtt",
+    "license": "MIT",
+    "foundry_version": "13",
+    "created": "2024-12-12",
+    "status": "in_progress"
+  },
+  "phases": [
+    {
+      "id": "phase-0",
+      "name": "Project Foundation",
+      "description": "Initial setup, tooling, and development environment",
+      "tasks": [
+        {
+          "id": "0.1",
+          "name": "Create system manifest (system.json)",
+          "description": "Define system metadata, compatibility, dependencies, and entry points for Foundry VTT",
+          "completed": true,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": []
+        },
+        {
+          "id": "0.2",
+          "name": "Create project structure",
+          "description": "Set up directory structure: module/, templates/, styles/, lang/, packs/, assets/",
+          "completed": true,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": []
+        },
+        {
+          "id": "0.3",
+          "name": "Set up local Foundry dev container",
+          "description": "Docker Compose for local Foundry instance with hot-reload system mounting",
+          "completed": true,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": []
+        },
+        {
+          "id": "0.4",
+          "name": "Create README.md",
+          "description": "Project documentation with setup instructions, development guide, and contribution guidelines",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": []
+        },
+        {
+          "id": "0.5",
+          "name": "Create .gitignore",
+          "description": "Ignore node_modules, foundry data, secrets, IDE files",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": []
+        },
+        {
+          "id": "0.6",
+          "name": "Set up SCSS compilation",
+          "description": "Build tooling for SCSS to CSS compilation with watch mode",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["0.2"]
+        },
+        {
+          "id": "0.7",
+          "name": "Create LICENSE file",
+          "description": "MIT license file",
+          "completed": true,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": []
+        },
+        {
+          "id": "0.8",
+          "name": "Create CLAUDE.md",
+          "description": "AI context file for development assistance",
+          "completed": true,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "phase-1",
+      "name": "Data Models",
+      "description": "Define all Actor and Item data structures using Foundry's Data Model system",
+      "tasks": [
+        {
+          "id": "1.1",
+          "name": "Create base Actor data model",
+          "description": "Shared fields for all actors: name, img, type, system data container",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["0.1", "0.2"]
+        },
+        {
+          "id": "1.2",
+          "name": "Create Character (PC) data model",
+          "description": "Stats (MIT/DEX/AWR/RSN/PRS/LUK), derived values (HP, Speed, Saves, Skill difficulties), level, XP, ancestry, class reference",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.1"]
+        },
+        {
+          "id": "1.3",
+          "name": "Create NPC/Monster data model",
+          "description": "HD, HP, TL, Zone, Morale, Appearing, Armor, Immune, Weak, Actions array, Abilities array",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.1"]
+        },
+        {
+          "id": "1.4",
+          "name": "Create dynamic resources system",
+          "description": "Extensible resource tracker: HP, Mana, Luck, Fatigue, Studied Dice, custom resources with current/max/bonus fields",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.2"]
+        },
+        {
+          "id": "1.5",
+          "name": "Create Skills data structure",
+          "description": "12 skills with associated stat, trained boolean, difficulty calculation, custom crit threshold",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.2"]
+        },
+        {
+          "id": "1.6",
+          "name": "Create base Item data model",
+          "description": "Shared fields for all items: name, img, type, system data container, description",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["0.1", "0.2"]
+        },
+        {
+          "id": "1.7",
+          "name": "Create Ancestry item data model",
+          "description": "Being type, size, traits array with name/description pairs",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.8",
+          "name": "Create Class item data model",
+          "description": "Key stat, action style, zone, training grants, starting pack, progression table (level -> features/mana/spells), feature definitions",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.9",
+          "name": "Create Spell item data model",
+          "description": "Damage type, base effect, crit effect, valid delivery types, duration options, mana cost formula components",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.10",
+          "name": "Create Perk item data model",
+          "description": "Prerequisites (stat requirements, training requirements, spell requirements), full description, mechanical effects",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.11",
+          "name": "Create Weapon item data model",
+          "description": "Damage dice, grip type (1H/2H/Versatile), properties (Finesse, Thrown, Cleave, etc.), attack skill, slot cost, value",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.12",
+          "name": "Create Armor item data model",
+          "description": "Armor value, type (Light/Heavy/Shield), slot cost, value, dodge penalty flag",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.13",
+          "name": "Create Equipment item data model",
+          "description": "Generic items: slot cost, value, description, quantity, consumable flag",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.14",
+          "name": "Create Feature item data model",
+          "description": "Class features as separate items: source class, level gained, description, mechanical effects, passive vs active",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6"]
+        },
+        {
+          "id": "1.15",
+          "name": "Create Active Effects integration",
+          "description": "System for items (classes, perks, features) to modify actor stats, crit thresholds, resources",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.2", "1.8", "1.10", "1.14"]
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "name": "Core System Logic",
+      "description": "JavaScript modules for game mechanics, rolls, and calculations",
+      "tasks": [
+        {
+          "id": "2.1",
+          "name": "Create main system entry point (vagabond.mjs)",
+          "description": "System initialization, hook registration, CONFIG setup, document class registration",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.1", "1.6"]
+        },
+        {
+          "id": "2.2",
+          "name": "Implement VagabondActor class",
+          "description": "Extended Actor with prepareData for derived values calculation (HP, Speed, Saves, Skill difficulties)",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.1", "1.2", "1.3"]
+        },
+        {
+          "id": "2.3",
+          "name": "Implement VagabondItem class",
+          "description": "Extended Item with type-specific preparation and chat card generation",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.1", "1.6"]
+        },
+        {
+          "id": "2.4",
+          "name": "Create dice rolling module",
+          "description": "Core roll functions: d20 checks, damage rolls, exploding dice (d6!), countdown dice, favor/hinder modifiers",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.1"]
+        },
+        {
+          "id": "2.5",
+          "name": "Implement skill check system",
+          "description": "Roll dialog with skill selection, favor/hinder toggles, automatic difficulty calculation, crit threshold display",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.2", "2.4"]
+        },
+        {
+          "id": "2.6",
+          "name": "Implement attack roll system",
+          "description": "Weapon attack rolls with stat selection, damage calculation, crit bonus damage, Block/Dodge prompts for targets",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.4", "2.5", "1.11"]
+        },
+        {
+          "id": "2.7",
+          "name": "Implement save roll system",
+          "description": "Reflex/Endure/Will saves with correct stat combinations, favor/hinder, crit detection",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.4", "2.5"]
+        },
+        {
+          "id": "2.8",
+          "name": "Implement spell casting system",
+          "description": "Dynamic spell dialog: select damage dice, delivery type, duration; auto-calculate mana cost; track focus state",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.4", "1.9"]
+        },
+        {
+          "id": "2.9",
+          "name": "Implement crit threshold modifier system",
+          "description": "Per-skill and per-action crit thresholds that can be modified by Active Effects from classes/perks/features",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.5", "1.15"]
+        },
+        {
+          "id": "2.10",
+          "name": "Implement resource management",
+          "description": "HP damage/healing, Mana spending/recovery, Luck pool, Fatigue accumulation with death trigger at 5",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.2", "1.4"]
+        },
+        {
+          "id": "2.11",
+          "name": "Implement inventory slot tracking",
+          "description": "Calculate slots used from equipped items, max slots from Might, over-capacity warnings",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.2", "1.11", "1.12", "1.13"]
+        },
+        {
+          "id": "2.12",
+          "name": "Implement class feature automation",
+          "description": "When class item added to character, apply appropriate Active Effects for current level; update on level change",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.2", "2.3", "1.8", "1.15"]
+        },
+        {
+          "id": "2.13",
+          "name": "Implement morale check system (NPC)",
+          "description": "2d6 vs Morale roll, triggered manually or via hooks on death/half HP",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["2.4", "1.3"]
+        },
+        {
+          "id": "2.14",
+          "name": "Implement zone AI hints (NPC)",
+          "description": "Display suggested behavior based on Zone (Frontline/Midline/Backline) and HP status",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["1.3"]
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "name": "Actor Sheets (UI)",
+      "description": "Handlebars templates and sheet classes for Actor display and interaction",
+      "tasks": [
+        {
+          "id": "3.1",
+          "name": "Create base VagabondActorSheet class",
+          "description": "Extended ActorSheet with common methods, tab handling, drag-drop, context menus",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.2"]
+        },
+        {
+          "id": "3.2",
+          "name": "Design Character sheet layout (HTML/Handlebars)",
+          "description": "Match official Hero Record: Stats column, HP/Armor/Fatigue, Speed section, Saves, Skills grid, Attacks, Inventory, Abilities, Magic",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.1"]
+        },
+        {
+          "id": "3.3",
+          "name": "Implement Character sheet - Header section",
+          "description": "Name, Ancestry, Level, Class, XP, Size, Being Type fields",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2"]
+        },
+        {
+          "id": "3.4",
+          "name": "Implement Character sheet - Stats section",
+          "description": "Six stats display with large numbers matching official sheet aesthetic",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2"]
+        },
+        {
+          "id": "3.5",
+          "name": "Implement Character sheet - Combat section",
+          "description": "HP (current/max), Armor, Fatigue, Speed (base/bonus/crawl/travel), Current Luck",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2"]
+        },
+        {
+          "id": "3.6",
+          "name": "Implement Character sheet - Saves section",
+          "description": "Reflex, Endure, Will with calculated difficulties, clickable for rolls",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2", "2.7"]
+        },
+        {
+          "id": "3.7",
+          "name": "Implement Character sheet - Skills section",
+          "description": "12 skills grid with trained checkboxes, stat associations, difficulty numbers, clickable for rolls",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2", "2.5"]
+        },
+        {
+          "id": "3.8",
+          "name": "Implement Character sheet - Attacks section",
+          "description": "Weapon attack skills (Melee/Brawl/Ranged/Finesse) with difficulties, equipped weapons list with roll buttons",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2", "2.6"]
+        },
+        {
+          "id": "3.9",
+          "name": "Implement Character sheet - Inventory tab",
+          "description": "Item list with slots display, wealth tracking (G/S/C), occupied/max/bonus slots, drag-drop support",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.2", "2.11"]
+        },
+        {
+          "id": "3.10",
+          "name": "Implement Character sheet - Abilities tab",
+          "description": "List of Features, Perks, Ancestry traits; expandable descriptions; usage tracking for limited abilities",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.2"]
+        },
+        {
+          "id": "3.11",
+          "name": "Implement Character sheet - Magic tab",
+          "description": "Mana (current/max/casting max), known spells list with cast buttons, focus indicator",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.2", "2.8"]
+        },
+        {
+          "id": "3.12",
+          "name": "Implement Character sheet - Biography tab",
+          "description": "Rich text editor for character background, notes, bonds",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["3.2"]
+        },
+        {
+          "id": "3.13",
+          "name": "Create NPC/Monster sheet layout",
+          "description": "Compact stat block format: HD, HP, TL, Zone, Morale, Armor, Immunities, Weaknesses, Actions, Abilities",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.1", "1.3"]
+        },
+        {
+          "id": "3.14",
+          "name": "Implement NPC sheet - Stat block section",
+          "description": "Display all combat-relevant stats in traditional TTRPG stat block format",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.13"]
+        },
+        {
+          "id": "3.15",
+          "name": "Implement NPC sheet - Actions section",
+          "description": "List of attack actions with clickable roll buttons, damage dice display",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.13", "2.4"]
+        },
+        {
+          "id": "3.16",
+          "name": "Implement NPC sheet - Morale button",
+          "description": "Clickable morale check with result interpretation",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["3.13", "2.13"]
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "name": "Item Sheets (UI)",
+      "description": "Handlebars templates and sheet classes for Item display and editing",
+      "tasks": [
+        {
+          "id": "4.1",
+          "name": "Create base VagabondItemSheet class",
+          "description": "Extended ItemSheet with common methods, type-specific tab handling",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.3"]
+        },
+        {
+          "id": "4.2",
+          "name": "Implement Ancestry item sheet",
+          "description": "Being type dropdown, size dropdown, traits editor (add/remove trait entries)",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.7"]
+        },
+        {
+          "id": "4.3",
+          "name": "Implement Class item sheet",
+          "description": "Key stat, training grants, progression table editor, feature definitions",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.8"]
+        },
+        {
+          "id": "4.4",
+          "name": "Implement Spell item sheet",
+          "description": "Damage type, effect text, crit effect, delivery options checkboxes, cost formula display",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.9"]
+        },
+        {
+          "id": "4.5",
+          "name": "Implement Perk item sheet",
+          "description": "Prerequisites editor (stat/training/spell requirements), description, effects",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.10"]
+        },
+        {
+          "id": "4.6",
+          "name": "Implement Weapon item sheet",
+          "description": "Damage dice selector, grip type, properties checkboxes, attack skill dropdown, value/slots",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.11"]
+        },
+        {
+          "id": "4.7",
+          "name": "Implement Armor item sheet",
+          "description": "Armor value, type dropdown, dodge penalty checkbox, value/slots",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.12"]
+        },
+        {
+          "id": "4.8",
+          "name": "Implement Equipment item sheet",
+          "description": "Generic item fields: description, quantity, slots, value, consumable flag",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.13"]
+        },
+        {
+          "id": "4.9",
+          "name": "Implement Feature item sheet",
+          "description": "Source class, level requirement, description, passive/active toggle, effects editor",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.14"]
+        }
+      ]
+    },
+    {
+      "id": "phase-5",
+      "name": "Styling & Theming",
+      "description": "SCSS styles for parchment theme with accessibility considerations",
+      "tasks": [
+        {
+          "id": "5.1",
+          "name": "Create SCSS architecture",
+          "description": "Variables file, mixins, partials structure for maintainable styles",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["0.6"]
+        },
+        {
+          "id": "5.2",
+          "name": "Define color palette",
+          "description": "Parchment background tones, high-contrast text colors, accent colors; WCAG AA compliant",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["5.1"]
+        },
+        {
+          "id": "5.3",
+          "name": "Create typography system",
+          "description": "Font selections for headers (stylized) and body (readable), size scale, line heights",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["5.1"]
+        },
+        {
+          "id": "5.4",
+          "name": "Style Character sheet",
+          "description": "Match official Hero Record aesthetic: stat column layout, bordered sections, parchment background",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["5.1", "5.2", "5.3", "3.2"]
+        },
+        {
+          "id": "5.5",
+          "name": "Style NPC sheet",
+          "description": "Clean stat block format, readable at small sizes, collapsible sections",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["5.1", "5.2", "5.3", "3.13"]
+        },
+        {
+          "id": "5.6",
+          "name": "Style Item sheets",
+          "description": "Consistent look across all item types, clear form layouts",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["5.1", "5.2", "5.3", "4.1"]
+        },
+        {
+          "id": "5.7",
+          "name": "Style roll dialogs",
+          "description": "Favor/Hinder toggles, modifier inputs, clear roll button",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["5.1", "5.2"]
+        },
+        {
+          "id": "5.8",
+          "name": "Style chat cards",
+          "description": "Roll results, spell casts, attack outcomes in themed chat messages",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["5.1", "5.2"]
+        },
+        {
+          "id": "5.9",
+          "name": "Accessibility audit",
+          "description": "Verify color contrast ratios, focus indicators, screen reader compatibility",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["5.4", "5.5", "5.6"]
+        }
+      ]
+    },
+    {
+      "id": "phase-6",
+      "name": "Compendium Content",
+      "description": "Pre-populated compendium packs with all Vagabond RPG content",
+      "tasks": [
+        {
+          "id": "6.1",
+          "name": "Create compendium pack definitions",
+          "description": "Define packs in system.json: ancestries, classes, spells, perks, weapons, armor, equipment, monsters",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["0.1"]
+        },
+        {
+          "id": "6.2",
+          "name": "Populate Ancestries compendium",
+          "description": "Human, Dwarf, Elf, Halfling, Draken, Goblin, Orc with full traits",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.1", "1.7"]
+        },
+        {
+          "id": "6.3",
+          "name": "Populate Classes compendium",
+          "description": "All 18 classes with complete progression tables and features",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.1", "1.8"]
+        },
+        {
+          "id": "6.4",
+          "name": "Populate Spells compendium",
+          "description": "All 55+ spells with damage types, effects, crit bonuses, delivery/duration options",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.1", "1.9"]
+        },
+        {
+          "id": "6.5",
+          "name": "Populate Perks compendium",
+          "description": "All 90+ perks with prerequisites and full descriptions",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.1", "1.10"]
+        },
+        {
+          "id": "6.6",
+          "name": "Populate Weapons compendium",
+          "description": "Standard weapons from equipment tables with stats and properties",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["6.1", "1.11"]
+        },
+        {
+          "id": "6.7",
+          "name": "Populate Armor compendium",
+          "description": "Standard armor options from equipment tables",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["6.1", "1.12"]
+        },
+        {
+          "id": "6.8",
+          "name": "Populate Equipment compendium",
+          "description": "Adventuring gear, alchemical items, tools from equipment tables",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["6.1", "1.13"]
+        },
+        {
+          "id": "6.9",
+          "name": "Populate Bestiary compendium",
+          "description": "Monsters from bestiary with full stat blocks (prioritize common encounters)",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["6.1", "1.3"]
+        }
+      ]
+    },
+    {
+      "id": "phase-7",
+      "name": "Roll Dialogs & Chat",
+      "description": "Interactive roll configuration dialogs and rich chat message output",
+      "tasks": [
+        {
+          "id": "7.1",
+          "name": "Create Skill Check dialog",
+          "description": "Select skill, show difficulty/crit threshold, favor/hinder toggles, situational modifier input",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.5"]
+        },
+        {
+          "id": "7.2",
+          "name": "Create Attack Roll dialog",
+          "description": "Weapon selection, attack skill, favor/hinder, show crit threshold, target selection",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.6"]
+        },
+        {
+          "id": "7.3",
+          "name": "Create Save Roll dialog",
+          "description": "Save type selection (or auto from context), Block/Dodge choice for defense, favor/hinder",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.7"]
+        },
+        {
+          "id": "7.4",
+          "name": "Create Spell Cast dialog",
+          "description": "Damage dice selector (+Mana), delivery type dropdown with cost display, duration selector, total mana cost, cast skill",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["2.8"]
+        },
+        {
+          "id": "7.5",
+          "name": "Create Damage Roll dialog",
+          "description": "Dice pool display, exploding toggle, crit bonus indicator, target HP context",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.4"]
+        },
+        {
+          "id": "7.6",
+          "name": "Create roll result chat cards",
+          "description": "Rich chat output: roll formula, result, success/fail/crit indicator, damage if applicable",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.4"]
+        },
+        {
+          "id": "7.7",
+          "name": "Create spell cast chat cards",
+          "description": "Spell name, effect description, mana spent, damage if applicable, duration/focus indicator",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.8", "7.6"]
+        },
+        {
+          "id": "7.8",
+          "name": "Create defense prompt system",
+          "description": "When attack targets a token, prompt defender with Block/Dodge buttons in chat",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["7.2", "7.3"]
+        }
+      ]
+    },
+    {
+      "id": "phase-8",
+      "name": "Localization",
+      "description": "Internationalization support with English as base language",
+      "tasks": [
+        {
+          "id": "8.1",
+          "name": "Create English language file",
+          "description": "All UI strings, stat names, skill names, item type names in en.json",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.2", "4.1"]
+        },
+        {
+          "id": "8.2",
+          "name": "Implement localization in templates",
+          "description": "Replace hardcoded strings with {{localize}} calls throughout all Handlebars templates",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["8.1"]
+        }
+      ]
+    },
+    {
+      "id": "phase-9",
+      "name": "Testing & Polish",
+      "description": "Quality assurance, bug fixes, and user experience refinements",
+      "tasks": [
+        {
+          "id": "9.1",
+          "name": "Test character creation workflow",
+          "description": "Create character from scratch: set stats, add ancestry, add class, verify derived values",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["3.2", "6.2", "6.3"]
+        },
+        {
+          "id": "9.2",
+          "name": "Test skill check workflow",
+          "description": "Roll all 12 skills with various favor/hinder combinations, verify difficulties",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["7.1"]
+        },
+        {
+          "id": "9.3",
+          "name": "Test combat workflow",
+          "description": "Full combat round: attacks, saves, damage, HP tracking, death at 0 HP",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["7.2", "7.3", "7.5"]
+        },
+        {
+          "id": "9.4",
+          "name": "Test spell casting workflow",
+          "description": "Cast spells with various delivery/duration/damage combinations, verify mana costs",
+          "completed": false,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["7.4"]
+        },
+        {
+          "id": "9.5",
+          "name": "Test leveling workflow",
+          "description": "Level up character: HP increase, feature gains, perk at odd levels, stat at even levels",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["2.12"]
+        },
+        {
+          "id": "9.6",
+          "name": "Test compendium import",
+          "description": "Drag items from all compendiums to character, verify data integrity",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.2", "6.3", "6.4", "6.5"]
+        },
+        {
+          "id": "9.7",
+          "name": "Test NPC/Monster workflow",
+          "description": "Create monster, run attacks, trigger morale check",
+          "completed": false,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.13", "6.9"]
+        },
+        {
+          "id": "9.8",
+          "name": "Cross-browser testing",
+          "description": "Verify functionality in Chrome, Firefox, Safari",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["9.1", "9.2", "9.3", "9.4"]
+        },
+        {
+          "id": "9.9",
+          "name": "Performance optimization",
+          "description": "Profile sheet rendering, optimize slow operations",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["9.1"]
+        }
+      ]
+    },
+    {
+      "id": "phase-10",
+      "name": "Documentation & Release",
+      "description": "User documentation and package preparation for distribution",
+      "tasks": [
+        {
+          "id": "10.1",
+          "name": "Write user guide",
+          "description": "How to create characters, use sheets, cast spells, run combat",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["9.1", "9.2", "9.3", "9.4"]
+        },
+        {
+          "id": "10.2",
+          "name": "Write GM guide",
+          "description": "How to create NPCs/monsters, use compendiums, run encounters",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["9.7"]
+        },
+        {
+          "id": "10.3",
+          "name": "Create changelog",
+          "description": "Version history with features and fixes",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": []
+        },
+        {
+          "id": "10.4",
+          "name": "Prepare package for Foundry repository",
+          "description": "Verify manifest, create release bundle, test fresh installation",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["10.1", "10.2"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 98,
+    "phases": 11,
+    "critical_path": [
+      "0.1 -> 1.1 -> 2.1 -> 2.2 -> 3.1 -> 3.2 -> 7.1 -> 9.2",
+      "0.1 -> 1.6 -> 1.9 -> 2.8 -> 7.4 -> 9.4"
+    ],
+    "estimated_complexity": "large",
+    "notes": [
+      "Phase 0-2 must complete before meaningful UI work",
+      "Phases 3-4 can proceed in parallel once data models exist",
+      "Phase 5 styling can be iterated throughout",
+      "Phase 6 content population can happen incrementally",
+      "Phase 7 dialogs depend on core mechanics but can be refined iteratively",
+      "Testing should happen continuously, not just in Phase 9"
+    ]
+  }
+}

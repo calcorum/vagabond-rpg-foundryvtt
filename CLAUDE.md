@@ -1,0 +1,86 @@
+# Vagabond RPG Foundry VTT System - Development Context
+
+## Project Overview
+This is a complete Foundry VTT v13 system implementation for Vagabond RPG (Pulp Fantasy TTRPG).
+
+## Key Architecture Decisions
+
+### Data Models (Foundry v13 style)
+- Use TypeDataModel classes in `module/data/` for Actor and Item schemas
+- Character stats: Might, Dexterity, Awareness, Reason, Presence, Luck (range 2-7)
+- Derived values calculated in `prepareData()`: HP, Speed, Save difficulties, Skill difficulties
+
+### Roll System
+- Base formula: d20 >= (20 - Stat) for untrained, d20 >= (20 - Stat*2) for trained
+- Favor: +d6 bonus die
+- Hinder: -d6 penalty die
+- Crit: Natural 20 by default, but threshold can be modified per-skill by Active Effects
+- Exploding dice: d6! notation for certain abilities
+
+### Spell Casting
+- Dynamic mana cost = base + delivery cost + duration cost + extra damage dice
+- Delivery types: Touch(0), Remote(0), Imbue(0), Cube(1), Aura(2), Cone(2), Glyph(2), Line(2), Sphere(2)
+- Duration: Instant (free), Focus (ongoing), Continual (permanent)
+- Cast dialog must calculate and display total mana cost before casting
+
+### Class System
+- Classes are Items with progression tables
+- When dragged to character, creates Active Effects for current level
+- On level up, update Active Effects to grant new features
+- Supports future multiclassing by allowing multiple class items
+
+### Crit Threshold System
+- Each skill/action has a `critThreshold` field (default 20)
+- Active Effects from classes/perks can modify: `system.skills.melee.critThreshold`
+- Fighter's Valor reduces crit by 1/2/3 at levels 1/4/8
+- Gunslinger's Deadeye dynamically reduces on consecutive hits
+
+### Resources
+- HP: max = Might * Level
+- Mana: class-dependent, max from class progression
+- Luck: equals Luck stat, refreshes on rest
+- Fatigue: 0-5, death at 5, each reduces item slots by 1
+- Studied Dice: some classes grant these
+- Custom resources can be added dynamically
+
+## File Naming Conventions
+- Main system entry: `vagabond.mjs`
+- Document classes: `VagabondActor.mjs`, `VagabondItem.mjs`
+- Sheet classes: `VagabondCharacterSheet.mjs`, `VagabondNPCSheet.mjs`
+- Data models: `CharacterData.mjs`, `NPCData.mjs`, `SpellData.mjs`, etc.
+- Templates: `character-sheet.hbs`, `npc-sheet.hbs`, `spell-item.hbs`
+
+## Testing Commands
+```bash
+# Start local Foundry
+docker compose up -d
+
+# Watch SCSS
+npm run watch
+
+# View logs
+docker compose logs -f foundry
+```
+
+## Reference Data Location
+Game rules and content are documented in NoteDiscovery under `gaming/vagabond-rpg/`:
+- `core-mechanics.md` - Stats, checks, dice, HP
+- `combat.md` - Actions, movement, defending, zones
+- `character-creation.md` - Ancestries, classes, leveling
+- `magic-system.md` - Casting, mana, delivery, duration
+- `spells-full-text.md` - All 55+ spells with full descriptions
+- `perks-full-list.md` - All 90+ perks with prerequisites
+- `classes-full-text.md` - All 18 classes with progression tables
+- `bestiary.md` - Creature categories, TL reference
+
+Original PDF at: `/mnt/NV2/Development/claude-home/gaming/Vagabond_RPG_-_Pulp_Fantasy_Core_Rulebook_Interactive_PDF.pdf`
+Character sheet reference: `/mnt/NV2/Development/claude-home/gaming/Vagabond_-_Hero_Record_Interactive_PDF.pdf`
+
+## Project Roadmap
+See `PROJECT_ROADMAP.json` for complete task breakdown with dependencies.
+
+## Style Guidelines
+- Parchment color scheme with high contrast (WCAG AA compliant)
+- Match official Hero Record layout where possible
+- Use CSS custom properties for theming
+- SCSS with BEM naming convention

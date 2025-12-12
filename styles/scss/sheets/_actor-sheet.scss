@@ -1,0 +1,83 @@
+// Vagabond RPG - Actor Sheet Styles
+// ==================================
+
+// Placeholder - will be expanded in Phase 3
+.vagabond.sheet.actor {
+  min-width: 600px;
+  min-height: 500px;
+
+  .sheet-header {
+    @include flex-between;
+    padding: $spacing-4;
+    background-color: $color-parchment-dark;
+    border-bottom: 2px solid $color-border;
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid $color-border;
+      border-radius: $radius-md;
+    }
+
+    .header-fields {
+      flex: 1;
+      margin-left: $spacing-4;
+    }
+  }
+}
+
+// Character sheet specific
+.vagabond.sheet.actor.character {
+  // Stats column (left side, matching official sheet)
+  .stats-column {
+    @include flex-column;
+    gap: $spacing-3;
+    padding: $spacing-4;
+    background-color: $color-parchment-dark;
+    border-right: 2px solid $color-border;
+
+    .stat-block {
+      text-align: center;
+
+      .stat-label {
+        font-family: $font-family-header;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $color-text-secondary;
+        margin-bottom: $spacing-1;
+      }
+
+      .stat-value {
+        @include stat-badge;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// NPC/Monster sheet specific
+.vagabond.sheet.actor.npc {
+  min-width: 400px;
+
+  .stat-block-display {
+    @include panel;
+    padding: $spacing-4;
+
+    .stat-line {
+      @include flex-between;
+      padding: $spacing-1 0;
+      border-bottom: 1px solid $color-border-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .label {
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}

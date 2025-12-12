@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Foundry data (dev environment)
+foundrydata/
+
+# Build artifacts
+styles/*.css
+styles/*.css.map
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Secrets
+*.pem
+*.key
+credentials.json

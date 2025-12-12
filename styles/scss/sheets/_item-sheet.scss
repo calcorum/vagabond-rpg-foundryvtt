@@ -1,0 +1,101 @@
+// Vagabond RPG - Item Sheet Styles
+// =================================
+
+// Placeholder - will be expanded in Phase 4
+.vagabond.sheet.item {
+  min-width: 400px;
+  min-height: 300px;
+
+  .sheet-header {
+    @include flex-between;
+    padding: $spacing-4;
+    background-color: $color-parchment-dark;
+    border-bottom: 2px solid $color-border;
+
+    .item-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid $color-border;
+      border-radius: $radius-md;
+    }
+
+    .header-fields {
+      flex: 1;
+      margin-left: $spacing-4;
+    }
+  }
+
+  .sheet-body {
+    padding: $spacing-4;
+  }
+
+  // Item description
+  .item-description {
+    .editor {
+      min-height: 150px;
+    }
+  }
+}
+
+// Spell item specific
+.vagabond.sheet.item.spell {
+  .spell-details {
+    @include grid(2);
+    margin-bottom: $spacing-4;
+  }
+
+  .delivery-options {
+    margin-bottom: $spacing-4;
+
+    .option-grid {
+      @include grid(3, $spacing-2);
+    }
+  }
+}
+
+// Perk item specific
+.vagabond.sheet.item.perk {
+  .prerequisites {
+    @include panel;
+    padding: $spacing-3;
+    margin-bottom: $spacing-4;
+
+    .prereq-list {
+      @include flex-column;
+      gap: $spacing-2;
+    }
+  }
+}
+
+// Weapon item specific
+.vagabond.sheet.item.weapon {
+  .weapon-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-2;
+    margin-bottom: $spacing-4;
+
+    .property-tag {
+      padding: $spacing-1 $spacing-2;
+      font-size: $font-size-sm;
+      background-color: $color-parchment-dark;
+      border: 1px solid $color-border;
+      border-radius: $radius-full;
+    }
+  }
+}
+
+// Class item specific
+.vagabond.sheet.item.class {
+  .progression-table {
+    width: 100%;
+    margin-bottom: $spacing-4;
+
+    th {
+      position: sticky;
+      top: 0;
+      background-color: $color-parchment-dark;
+    }
+  }
+}

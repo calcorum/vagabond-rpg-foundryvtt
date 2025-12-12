@@ -1,0 +1,108 @@
+// Vagabond RPG - Button Styles
+// =============================
+
+.vagabond {
+  // Primary button
+  .btn-primary {
+    @include button-primary;
+  }
+
+  // Secondary button
+  .btn-secondary {
+    @include button-secondary;
+  }
+
+  // Small button variant
+  .btn-sm {
+    padding: $spacing-1 $spacing-2;
+    font-size: $font-size-xs;
+  }
+
+  // Large button variant
+  .btn-lg {
+    padding: $spacing-3 $spacing-6;
+    font-size: $font-size-lg;
+  }
+
+  // Icon button (square, for icons only)
+  .btn-icon {
+    @include button-base;
+    @include flex-center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover:not(:disabled) {
+      background-color: $color-parchment-dark;
+    }
+
+    i {
+      font-size: $font-size-base;
+    }
+  }
+
+  // Rollable button (for dice rolls)
+  .btn-roll {
+    @include button-base;
+    background-color: $color-parchment-light;
+    color: $color-text-primary;
+    border-color: $color-border;
+
+    &:hover:not(:disabled) {
+      background-color: $color-accent-highlight;
+      border-color: $color-accent-primary;
+    }
+
+    i {
+      margin-right: $spacing-2;
+    }
+  }
+
+  // Danger button
+  .btn-danger {
+    @include button-base;
+    background-color: $color-danger;
+    color: $color-text-inverse;
+    border-color: darken($color-danger, 10%);
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-danger, 10%);
+    }
+  }
+
+  // Success button
+  .btn-success {
+    @include button-base;
+    background-color: $color-success;
+    color: $color-text-inverse;
+    border-color: darken($color-success, 10%);
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-success, 10%);
+    }
+  }
+
+  // Button group
+  .btn-group {
+    display: inline-flex;
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: $radius-md 0 0 $radius-md;
+      }
+
+      &:last-child {
+        border-radius: 0 $radius-md $radius-md 0;
+      }
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+}

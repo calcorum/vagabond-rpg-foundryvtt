@@ -1,0 +1,154 @@
+// Vagabond RPG - Roll Dialog Styles
+// ==================================
+
+// Placeholder - will be expanded in Phase 7
+.vagabond.dialog.roll-dialog {
+  .dialog-content {
+    padding: $spacing-4;
+  }
+
+  // Roll info section
+  .roll-info {
+    @include panel;
+    padding: $spacing-3;
+    margin-bottom: $spacing-4;
+
+    .difficulty-display {
+      @include flex-center;
+      gap: $spacing-4;
+
+      .difficulty-value {
+        font-family: $font-family-header;
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bold;
+      }
+
+      .crit-threshold {
+        font-size: $font-size-sm;
+        color: $color-text-muted;
+
+        .crit-value {
+          color: $color-accent-primary;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+
+  // Favor/Hinder toggles
+  .modifiers {
+    @include flex-center;
+    gap: $spacing-4;
+    margin-bottom: $spacing-4;
+
+    .modifier-toggle {
+      @include flex-center;
+      gap: $spacing-2;
+
+      label {
+        font-weight: $font-weight-medium;
+      }
+
+      &.favor .toggle-active {
+        color: $color-success;
+      }
+
+      &.hinder .toggle-active {
+        color: $color-danger;
+      }
+    }
+  }
+
+  // Situational modifier
+  .situational-modifier {
+    @include flex-center;
+    gap: $spacing-2;
+    margin-bottom: $spacing-4;
+
+    input {
+      width: 60px;
+      text-align: center;
+    }
+  }
+
+  // Roll button
+  .roll-button {
+    @include button-primary;
+    width: 100%;
+    padding: $spacing-3;
+    font-size: $font-size-lg;
+
+    i {
+      margin-right: $spacing-2;
+    }
+  }
+}
+
+// Spell cast dialog specific
+.vagabond.dialog.spell-cast-dialog {
+  .mana-cost {
+    @include panel;
+    @include flex-between;
+    padding: $spacing-3;
+    margin-bottom: $spacing-4;
+
+    .cost-label {
+      font-weight: $font-weight-semibold;
+    }
+
+    .cost-value {
+      font-family: $font-family-header;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $color-accent-primary;
+    }
+
+    &.insufficient {
+      border-color: $color-danger;
+
+      .cost-value {
+        color: $color-danger;
+      }
+    }
+  }
+
+  .delivery-selection,
+  .duration-selection,
+  .damage-selection {
+    margin-bottom: $spacing-4;
+
+    .selection-label {
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacing-2;
+    }
+
+    .selection-grid {
+      @include grid(2, $spacing-2);
+    }
+
+    .selection-option {
+      @include panel;
+      padding: $spacing-2;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        border-color: $color-accent-primary;
+      }
+
+      &.selected {
+        background-color: $color-parchment-dark;
+        border-color: $color-accent-primary;
+      }
+
+      .option-name {
+        font-weight: $font-weight-medium;
+      }
+
+      .option-cost {
+        font-size: $font-size-sm;
+        color: $color-text-muted;
+      }
+    }
+  }
+}
