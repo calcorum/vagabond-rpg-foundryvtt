@@ -216,12 +216,26 @@ export default class CharacterData extends VagabondActorBase {
         }),
       }),
 
-      // Custom resources (for class-specific tracking)
+      // Custom resources (for class-specific tracking like Alchemist Formulae, Hunter's Mark, etc.)
       customResources: new fields.ArrayField(
         new fields.SchemaField({
           name: new fields.StringField({ required: true }),
           value: new fields.NumberField({ integer: true, initial: 0 }),
           max: new fields.NumberField({ integer: true, initial: 0 }),
+          // Resource type for different tracking behaviors
+          type: new fields.StringField({
+            initial: "counter",
+            choices: ["counter", "tracker", "toggle", "list"],
+          }),
+          // Subtype for specific mechanics (formulae, marked-target, crit-reduction, etc.)
+          subtype: new fields.StringField({ required: false, blank: true }),
+          // When this resource resets
+          resetOn: new fields.StringField({
+            initial: "",
+            choices: ["", "rest", "turn", "round", "day", "combat"],
+          }),
+          // Flexible data storage for complex resources (formulae lists, target IDs, etc.)
+          data: new fields.ObjectField({ initial: {} }),
         })
       ),
 
@@ -264,16 +278,39 @@ export default class CharacterData extends VagabondActorBase {
       // Armor value (from equipped armor)
       armor: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
 
-      // Item slots tracking
+      // Item slots tracking (8 + Might - Fatigue + bonuses)
       itemSlots: new fields.SchemaField({
+        // Currently used slots (auto-calculated from inventory)
         used: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Maximum available slots (auto-calculated)
         max: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Total bonus from all sources (auto-calculated from bonuses array)
         bonus: new fields.NumberField({ integer: true, initial: 0 }),
+        // Individual bonus sources for tracking (Orc Hulking, Pack Mule, etc.)
+        bonuses: new fields.ArrayField(
+          new fields.SchemaField({
+            source: new fields.StringField({ required: true }), // "Orc Hulking", "Pack Mule"
+            value: new fields.NumberField({ integer: true, initial: 0 }),
+          }),
+          { initial: [] }
+        ),
+        // Is the character overburdened (used > max)?
+        overburdened: new fields.BooleanField({ initial: false }),
       }),
 
-      // Movement speed
+      // Movement speeds (multiple types like NPCs)
       speed: new fields.SchemaField({
-        value: new fields.NumberField({ integer: true, initial: 30 }),
+        // Walking speed (base from DEX)
+        walk: new fields.NumberField({ integer: true, initial: 30, min: 0 }),
+        // Flying speed (from spells, ancestry, features)
+        fly: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Swimming speed (Hunter Rover, some ancestries)
+        swim: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Climbing speed (Hunter Rover, some ancestries)
+        climb: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Burrowing speed (rare, some beasts)
+        burrow: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Bonus to walking speed from effects
         bonus: new fields.NumberField({ integer: true, initial: 0 }),
       }),
 
@@ -305,6 +342,64 @@ export default class CharacterData extends VagabondActorBase {
         size: new fields.StringField({ initial: "medium" }),
         beingType: new fields.StringField({ initial: "humanlike" }),
       }),
+
+      // Favor/Hinder tracking (d20 +/- d6 modifiers)
+      // Cancel each other 1-for-1, don't stack
+      favorHinder: new fields.SchemaField({
+        favor: new fields.ArrayField(
+          new fields.SchemaField({
+            source: new fields.StringField({ required: true }), // "Flanking", "Virtuoso", etc.
+            appliesTo: new fields.ArrayField(new fields.StringField()), // ["Attack Checks"], ["Reflex Saves"]
+            duration: new fields.StringField({
+              initial: "instant",
+              choices: ["instant", "until-next-turn", "focus", "continual", "permanent"],
+            }),
+          }),
+          { initial: [] }
+        ),
+        hinder: new fields.ArrayField(
+          new fields.SchemaField({
+            source: new fields.StringField({ required: true }), // "Heavy Armor", "Fog spell", etc.
+            appliesTo: new fields.ArrayField(new fields.StringField()), // ["Dodge Saves"], ["sight-based checks"]
+            duration: new fields.StringField({
+              initial: "instant",
+              choices: ["instant", "until-next-turn", "focus", "continual", "permanent"],
+            }),
+          }),
+          { initial: [] }
+        ),
+      }),
+
+      // Focus tracking for maintained spells
+      focus: new fields.SchemaField({
+        // Currently focused spell/effect
+        active: new fields.ArrayField(
+          new fields.SchemaField({
+            spellId: new fields.StringField({ required: false, blank: true }),
+            spellName: new fields.StringField({ required: true }),
+            target: new fields.StringField({ required: false, blank: true }), // Target ID or description
+            manaCostPerRound: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+            requiresSaveCheck: new fields.BooleanField({ initial: false }), // Cast Check each Round?
+            canBeBroken: new fields.BooleanField({ initial: true }), // Can Focus be broken by damage?
+          }),
+          { initial: [] }
+        ),
+        // Maximum concurrent focus (usually 1, Ancient Growth = 2)
+        maxConcurrent: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
+      }),
+
+      // Progression tracking for leveling
+      progression: new fields.SchemaField({
+        // XP pacing determines XP required per level
+        xpPacing: new fields.StringField({
+          initial: "normal",
+          choices: ["quick", "normal", "epic", "saga"],
+        }),
+        // Track which perks were gained at which level
+        perksGainedByLevel: new fields.ObjectField({ initial: {} }), // { "3": ["perkId1"], "5": ["perkId2"] }
+        // Track which stats were increased at which level
+        statIncreasesByLevel: new fields.ObjectField({ initial: {} }), // { "2": "might", "4": "dexterity" }
+      }),
     };
   }
 
@@ -329,15 +424,20 @@ export default class CharacterData extends VagabondActorBase {
     // Calculate Max HP: Might × Level + bonus
     this.resources.hp.max = stats.might.value * level + this.resources.hp.bonus;
 
-    // Calculate Speed based on Dexterity
+    // Calculate Walking Speed based on Dexterity
     const speedByDex = CONFIG.VAGABOND?.speedByDex || { 2: 25, 3: 25, 4: 30, 5: 30, 6: 35, 7: 35 };
     const dexValue = Math.max(2, Math.min(7, stats.dexterity.value));
-    this.speed.value = (speedByDex[dexValue] || 30) + this.speed.bonus;
+    this.speed.walk = (speedByDex[dexValue] || 30) + this.speed.bonus;
 
     // Calculate Item Slots: 8 + Might - Fatigue + bonus
     const baseSlots = CONFIG.VAGABOND?.baseItemSlots || 8;
+    // Sum up all bonus sources
+    const totalBonus = this.itemSlots.bonuses.reduce((sum, b) => sum + b.value, 0);
+    this.itemSlots.bonus = totalBonus;
     this.itemSlots.max =
       baseSlots + stats.might.value - this.resources.fatigue.value + this.itemSlots.bonus;
+    // Check if overburdened
+    this.itemSlots.overburdened = this.itemSlots.used > this.itemSlots.max;
 
     // Calculate Luck pool max (equals Luck stat)
     this.resources.luck.max = stats.luck.value;

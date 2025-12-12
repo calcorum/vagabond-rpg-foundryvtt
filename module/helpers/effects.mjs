@@ -43,6 +43,13 @@ export const EFFECT_KEYS = {
   "mana.castingMax": "system.resources.mana.castingMax",
   "luck.max": "system.resources.luck.max",
   "studiedDice.max": "system.resources.studiedDice.max",
+
+  // Movement speeds
+  "speed.walk": "system.speed.walk",
+  "speed.fly": "system.speed.fly",
+  "speed.swim": "system.speed.swim",
+  "speed.climb": "system.speed.climb",
+  "speed.burrow": "system.speed.burrow",
   "speed.bonus": "system.speed.bonus",
   armor: "system.armor",
   "itemSlots.bonus": "system.itemSlots.bonus",

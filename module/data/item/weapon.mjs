@@ -83,6 +83,12 @@ export default class WeaponData extends VagabondItemBase {
         versatile: new fields.BooleanField({ initial: false }),
       }),
 
+      // Weapon material (affects damage vs certain creatures)
+      material: new fields.StringField({
+        initial: "mundane",
+        choices: ["mundane", "silvered", "adamantine", "magical"],
+      }),
+
       // Inventory slot cost
       slots: new fields.NumberField({
         integer: true,
