@@ -73,6 +73,24 @@ export default class NPCData extends VagabondActorBase {
         max: 12,
       }),
 
+      // Morale check tracking
+      moraleStatus: new fields.SchemaField({
+        // Has a morale check been triggered this combat?
+        checkedThisCombat: new fields.BooleanField({ initial: false }),
+        // What triggered the last check?
+        lastTrigger: new fields.StringField({
+          initial: "",
+          choices: ["", "first-death", "half-hp", "half-incapacitated", "leader-death"],
+        }),
+        // Result of the last morale check
+        lastResult: new fields.StringField({
+          initial: "",
+          choices: ["", "passed", "failed-retreat", "failed-surrender"],
+        }),
+        // Is this NPC currently fleeing/surrendered?
+        broken: new fields.BooleanField({ initial: false }),
+      }),
+
       // Number appearing (for random encounters)
       appearing: new fields.StringField({ initial: "1d6" }),
 
@@ -88,6 +106,13 @@ export default class NPCData extends VagabondActorBase {
 
       // Being type (for targeting by certain effects)
       beingType: new fields.StringField({ initial: "beast" }),
+
+      // Senses (vision types)
+      senses: new fields.SchemaField({
+        darksight: new fields.BooleanField({ initial: false }),
+        blindsight: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
+        tremorsense: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
+      }),
 
       // Movement speed
       speed: new fields.SchemaField({

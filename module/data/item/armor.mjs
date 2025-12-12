@@ -33,15 +33,21 @@ export default class ArmorData extends VagabondItemBase {
         min: 0,
       }),
 
-      // Armor type (light, heavy, shield)
+      // Armor type (none, light, medium, heavy, shield)
       armorType: new fields.StringField({
         required: true,
         initial: "light",
-        choices: ["light", "heavy", "shield"],
+        choices: ["none", "light", "medium", "heavy", "shield"],
       }),
 
-      // Does this armor impose a dodge penalty?
+      // Does this armor impose a dodge penalty? (auto-set based on type for heavy)
       dodgePenalty: new fields.BooleanField({ initial: false }),
+
+      // Hinders dodge saves (heavy armor hinders, medium may partially)
+      hindersDodge: new fields.BooleanField({ initial: false }),
+
+      // Prevents certain abilities (Barbarian Rage requires light or no armor)
+      preventsRage: new fields.BooleanField({ initial: false }),
 
       // Inventory slot cost
       slots: new fields.NumberField({

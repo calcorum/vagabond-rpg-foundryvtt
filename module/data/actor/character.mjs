@@ -339,8 +339,29 @@ export default class CharacterData extends VagabondActorBase {
 
       // Character details
       details: new fields.SchemaField({
-        size: new fields.StringField({ initial: "medium" }),
-        beingType: new fields.StringField({ initial: "humanlike" }),
+        // Size category with mechanical effects
+        size: new fields.StringField({
+          initial: "medium",
+          choices: ["small", "medium", "large", "huge", "giant", "colossal"],
+        }),
+        // Units occupied on grid (derived from size)
+        unitsOccupied: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
+        // Small creatures don't block movement through their space
+        allowsMovementThrough: new fields.BooleanField({ initial: false }),
+        // Being type for targeting effects
+        beingType: new fields.StringField({
+          initial: "humanlike",
+          choices: [
+            "humanlike",
+            "fae",
+            "cryptid",
+            "artificial",
+            "undead",
+            "primordial",
+            "hellspawn",
+            "beast",
+          ],
+        }),
       }),
 
       // Favor/Hinder tracking (d20 +/- d6 modifiers)
@@ -399,6 +420,178 @@ export default class CharacterData extends VagabondActorBase {
         perksGainedByLevel: new fields.ObjectField({ initial: {} }), // { "3": ["perkId1"], "5": ["perkId2"] }
         // Track which stats were increased at which level
         statIncreasesByLevel: new fields.ObjectField({ initial: {} }), // { "2": "might", "4": "dexterity" }
+      }),
+
+      // Senses and vision types
+      senses: new fields.SchemaField({
+        darksight: new fields.BooleanField({ initial: false }), // Dwarf, Goblin, Orc, Infravision perk
+        blindsight: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
+        tremorsense: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
+        // Special vision abilities from perks/ancestry
+        specialVision: new fields.SchemaField({
+          elvenEyes: new fields.BooleanField({ initial: false }), // Favor on sight Detect
+          witchsight: new fields.BooleanField({ initial: false }), // See Invisible, Favor vs illusions
+          sixthSense: new fields.BooleanField({ initial: false }), // Ignore Blinded for sight-based checks
+        }),
+      }),
+
+      // Known languages
+      languages: new fields.ArrayField(new fields.StringField(), { initial: ["Common"] }),
+
+      // Rest and breather tracking
+      restTracking: new fields.SchemaField({
+        // Timestamp of last full rest
+        lastRest: new fields.StringField({ required: false, blank: true }),
+        // Number of breathers taken in current combat/scene
+        breathersTaken: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Bonuses to rest (Song of Rest, Tricksy, etc.)
+        restBonuses: new fields.ArrayField(
+          new fields.SchemaField({
+            source: new fields.StringField({ required: true }), // "Song of Rest", "Tricksy"
+            effect: new fields.StringField({ required: true }), // "+PRS HP", "+1 Luck"
+          }),
+          { initial: [] }
+        ),
+      }),
+
+      // Travel and exploration tracking
+      travel: new fields.SchemaField({
+        // Miles traveled today (for Padfoot perk)
+        milesThisDay: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Current travel pace
+        pace: new fields.StringField({
+          initial: "normal",
+          choices: ["slow", "normal", "fast"],
+        }),
+        // Can forage at normal pace (Hunter Survivalist)
+        canForage: new fields.BooleanField({ initial: false }),
+        // Shifts elapsed (time tracking for cooldowns)
+        shiftsElapsed: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+      }),
+
+      // Crafting projects in progress
+      crafting: new fields.SchemaField({
+        activeProjects: new fields.ArrayField(
+          new fields.SchemaField({
+            itemName: new fields.StringField({ required: true }),
+            targetValue: new fields.NumberField({ integer: true, initial: 0 }), // In silver
+            materialsCost: new fields.NumberField({ integer: true, initial: 0 }),
+            shiftsRequired: new fields.NumberField({ integer: true, initial: 1 }),
+            shiftsCompleted: new fields.NumberField({ integer: true, initial: 0 }),
+            bonuses: new fields.ArrayField(
+              new fields.SchemaField({
+                source: new fields.StringField({ required: true }), // "Master Artisan"
+                effect: new fields.StringField({ required: true }), // "2× Shifts"
+              }),
+              { initial: [] }
+            ),
+          }),
+          { initial: [] }
+        ),
+      }),
+
+      // Combat positioning and flanking
+      combat: new fields.SchemaField({
+        // Is this character currently flanked?
+        isFlanked: new fields.BooleanField({ initial: false }),
+        // IDs of allies providing flanking
+        flankingAllies: new fields.ArrayField(new fields.StringField(), { initial: [] }),
+        // Ignores flanking penalties (Situational Awareness perk)
+        ignoresFlankingPenalty: new fields.BooleanField({ initial: false }),
+        // Current combat zone
+        currentZone: new fields.StringField({
+          initial: "",
+          choices: ["", "frontline", "midline", "backline"],
+        }),
+        // Is dual-wielding?
+        isDualWielding: new fields.BooleanField({ initial: false }),
+        // Main hand weapon ID
+        mainHandWeapon: new fields.StringField({ required: false, blank: true }),
+        // Off hand weapon/shield ID
+        offHandWeapon: new fields.StringField({ required: false, blank: true }),
+      }),
+
+      // Casting and spell component tracking
+      casting: new fields.SchemaField({
+        // Currently equipped trinket item ID
+        equippedTrinket: new fields.StringField({ required: false, blank: true }),
+        // Can cast through weapon (Gish perk)
+        canCastThroughWeapon: new fields.BooleanField({ initial: false }),
+        // Can cast through musical instrument (Harmonic Resonance)
+        canCastThroughInstrument: new fields.BooleanField({ initial: false }),
+      }),
+
+      // Downtime activity tracking
+      downtime: new fields.SchemaField({
+        activities: new fields.ArrayField(
+          new fields.SchemaField({
+            type: new fields.StringField({
+              initial: "work",
+              choices: ["craft", "study", "carouse", "work", "research"],
+            }),
+            shiftsSpent: new fields.NumberField({ integer: true, initial: 0 }),
+            result: new fields.StringField({ required: false, blank: true }),
+          }),
+          { initial: [] }
+        ),
+      }),
+
+      // Quest tracking (for cooldowns like Medium perk)
+      quests: new fields.SchemaField({
+        activeQuests: new fields.ArrayField(new fields.StringField(), { initial: [] }),
+        completedQuests: new fields.ArrayField(new fields.StringField(), { initial: [] }),
+        // For Medium perk cooldown
+        lastQuestCompleted: new fields.StringField({ required: false, blank: true }),
+      }),
+
+      // Death and dying state
+      death: new fields.SchemaField({
+        isDead: new fields.BooleanField({ initial: false }),
+        deathCause: new fields.StringField({
+          initial: "",
+          choices: ["", "hp-zero", "body-destroyed", "fatigue-five"],
+        }),
+        canBeRevived: new fields.BooleanField({ initial: true }),
+        revivedCount: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+        // Luminary Revivify used today?
+        luminaryRevivifyUsed: new fields.BooleanField({ initial: false }),
+        // Force of Nature used this combat?
+        forceOfNatureUsed: new fields.BooleanField({ initial: false }),
+      }),
+
+      // Summoned creatures tracking
+      summons: new fields.SchemaField({
+        active: new fields.ArrayField(
+          new fields.SchemaField({
+            id: new fields.StringField({ required: true }),
+            name: new fields.StringField({ required: true }),
+            type: new fields.StringField({
+              initial: "beast",
+              choices: ["companion", "familiar", "primordial", "beast", "undead"],
+            }),
+            source: new fields.StringField({ required: true }), // "Animal Companion", "Familiar perk"
+            hd: new fields.NumberField({ integer: true, initial: 1 }),
+            currentHP: new fields.NumberField({ integer: true, initial: 4 }),
+            maxHP: new fields.NumberField({ integer: true, initial: 4 }),
+            usesSkill: new fields.StringField({ initial: "survival" }), // Which skill for checks
+            commandMethod: new fields.StringField({
+              initial: "action",
+              choices: ["action", "skip-move", "automatic"],
+            }),
+            duration: new fields.StringField({
+              initial: "permanent",
+              choices: ["permanent", "focus", "shift", "scene"],
+            }),
+          }),
+          { initial: [] }
+        ),
+        maxConcurrent: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
+      }),
+
+      // Preferred combat zone (from class)
+      preferredZone: new fields.StringField({
+        initial: "frontline",
+        choices: ["frontline", "midline", "backline", "flexible"],
       }),
     };
   }

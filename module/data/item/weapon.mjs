@@ -33,10 +33,11 @@ export default class WeaponData extends VagabondItemBase {
         initial: "1d6",
       }),
 
-      // Damage type
+      // Damage type (physical: blunt/piercing/slashing, elemental: fire/cold/shock/acid/poison)
       damageType: new fields.StringField({
         required: true,
         initial: "blunt",
+        choices: ["blunt", "piercing", "slashing", "fire", "cold", "shock", "acid", "poison"],
       }),
 
       // Bonus damage (from magic, etc.)
@@ -105,6 +106,12 @@ export default class WeaponData extends VagabondItemBase {
 
       // Is this weapon equipped?
       equipped: new fields.BooleanField({ initial: false }),
+
+      // Which hand is this weapon equipped in? (for dual-wielding)
+      equippedHand: new fields.StringField({
+        initial: "",
+        choices: ["", "main", "off", "both"],
+      }),
 
       // Quantity (for ammunition, thrown weapons)
       quantity: new fields.NumberField({

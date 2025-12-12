@@ -77,6 +77,12 @@ export default class EquipmentData extends VagabondItemBase {
       // Tags for filtering/searching
       tags: new fields.ArrayField(new fields.StringField(), { initial: [] }),
 
+      // Is this item a valid spell casting trinket?
+      isTrinket: new fields.BooleanField({ initial: false }),
+
+      // Can spells be cast through this item? (for Familiars, Gish weapons)
+      canCastThrough: new fields.BooleanField({ initial: false }),
+
       // Relic System - Powerful magic items with unique abilities
       relic: new fields.SchemaField({
         // Is this item a relic?
