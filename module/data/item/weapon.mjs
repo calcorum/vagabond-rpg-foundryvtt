@@ -107,10 +107,13 @@ export default class WeaponData extends VagabondItemBase {
       // Is this weapon equipped?
       equipped: new fields.BooleanField({ initial: false }),
 
-      // Which hand is this weapon equipped in? (for dual-wielding)
+      // Which hand is this weapon equipped in? (for dual-wielding, null = not equipped)
       equippedHand: new fields.StringField({
-        initial: "",
-        choices: ["", "main", "off", "both"],
+        required: false,
+        nullable: true,
+        blank: false,
+        initial: null,
+        choices: ["main", "off", "both"],
       }),
 
       // Quantity (for ammunition, thrown weapons)

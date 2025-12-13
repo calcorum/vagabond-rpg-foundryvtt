@@ -43,8 +43,11 @@ export default class FeatureData extends VagabondItemBase {
       // For active features: activation type
       activation: new fields.SchemaField({
         type: new fields.StringField({
-          initial: "",
-          choices: ["", "action", "bonus", "reaction", "free", "special"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["action", "bonus", "reaction", "free", "special"],
         }),
         cost: new fields.StringField({ required: false, blank: true }),
       }),
@@ -54,8 +57,11 @@ export default class FeatureData extends VagabondItemBase {
         value: new fields.NumberField({ integer: true, initial: 0 }),
         max: new fields.NumberField({ integer: true, initial: 0 }),
         per: new fields.StringField({
-          initial: "",
-          choices: ["", "short", "long", "day", "encounter"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["short", "long", "day", "encounter"],
         }),
       }),
 

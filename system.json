@@ -121,6 +121,47 @@
       ]
     }
   ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": [
+          "biography.appearance",
+          "biography.background",
+          "biography.personality",
+          "biography.notes"
+        ]
+      },
+      "npc": {
+        "htmlFields": ["abilities.description", "loot", "gmNotes"]
+      }
+    },
+    "Item": {
+      "ancestry": {
+        "htmlFields": ["description"]
+      },
+      "class": {
+        "htmlFields": ["description"]
+      },
+      "spell": {
+        "htmlFields": ["description"]
+      },
+      "perk": {
+        "htmlFields": ["description"]
+      },
+      "weapon": {
+        "htmlFields": ["description", "relic.abilityDescription", "relic.lore"]
+      },
+      "armor": {
+        "htmlFields": ["description", "relic.abilityDescription", "relic.lore"]
+      },
+      "equipment": {
+        "htmlFields": ["description"]
+      },
+      "feature": {
+        "htmlFields": ["description"]
+      }
+    }
+  },
   "socket": false,
   "url": "https://github.com/calcorum/vagabond-rpg-foundryvtt",
   "manifest": "https://github.com/calcorum/vagabond-rpg-foundryvtt/releases/latest/download/system.json",
@@ -131,6 +172,8 @@
   "changelog": "CHANGELOG.md",
   "primaryTokenAttribute": "resources.hp",
   "secondaryTokenAttribute": "resources.mana",
-  "gridDistance": 5,
-  "gridUnits": "ft"
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  }
 }

@@ -8,9 +8,9 @@
  */
 
 // Import test modules
-// import { registerActorTests } from "./actor.test.mjs";
+import { registerActorTests } from "./actor.test.mjs";
+import { registerDiceTests } from "./dice.test.mjs";
 // import { registerItemTests } from "./item.test.mjs";
-// import { registerRollTests } from "./rolls.test.mjs";
 // import { registerEffectTests } from "./effects.test.mjs";
 
 /**
@@ -63,10 +63,10 @@ export function registerQuenchTests(quenchRunner) {
     { displayName: "Vagabond: Sanity Checks" }
   );
 
-  // Register domain-specific test batches (uncomment as implemented)
-  // registerActorTests(quenchRunner);
+  // Register domain-specific test batches
+  registerActorTests(quenchRunner);
+  registerDiceTests(quenchRunner);
   // registerItemTests(quenchRunner);
-  // registerRollTests(quenchRunner);
   // registerEffectTests(quenchRunner);
 
   // eslint-disable-next-line no-console

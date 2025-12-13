@@ -79,13 +79,19 @@ export default class NPCData extends VagabondActorBase {
         checkedThisCombat: new fields.BooleanField({ initial: false }),
         // What triggered the last check?
         lastTrigger: new fields.StringField({
-          initial: "",
-          choices: ["", "first-death", "half-hp", "half-incapacitated", "leader-death"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["first-death", "half-hp", "half-incapacitated", "leader-death"],
         }),
         // Result of the last morale check
         lastResult: new fields.StringField({
-          initial: "",
-          choices: ["", "passed", "failed-retreat", "failed-surrender"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["passed", "failed-retreat", "failed-surrender"],
         }),
         // Is this NPC currently fleeing/surrendered?
         broken: new fields.BooleanField({ initial: false }),

@@ -229,10 +229,13 @@ export default class CharacterData extends VagabondActorBase {
           }),
           // Subtype for specific mechanics (formulae, marked-target, crit-reduction, etc.)
           subtype: new fields.StringField({ required: false, blank: true }),
-          // When this resource resets
+          // When this resource resets (null = manual/never)
           resetOn: new fields.StringField({
-            initial: "",
-            choices: ["", "rest", "turn", "round", "day", "combat"],
+            required: false,
+            nullable: true,
+            blank: false,
+            initial: null,
+            choices: ["rest", "turn", "round", "day", "combat"],
           }),
           // Flexible data storage for complex resources (formulae lists, target IDs, etc.)
           data: new fields.ObjectField({ initial: {} }),
@@ -498,10 +501,13 @@ export default class CharacterData extends VagabondActorBase {
         flankingAllies: new fields.ArrayField(new fields.StringField(), { initial: [] }),
         // Ignores flanking penalties (Situational Awareness perk)
         ignoresFlankingPenalty: new fields.BooleanField({ initial: false }),
-        // Current combat zone
+        // Current combat zone (nullable - not in combat if null)
         currentZone: new fields.StringField({
-          initial: "",
-          choices: ["", "frontline", "midline", "backline"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["frontline", "midline", "backline"],
         }),
         // Is dual-wielding?
         isDualWielding: new fields.BooleanField({ initial: false }),
@@ -548,8 +554,11 @@ export default class CharacterData extends VagabondActorBase {
       death: new fields.SchemaField({
         isDead: new fields.BooleanField({ initial: false }),
         deathCause: new fields.StringField({
-          initial: "",
-          choices: ["", "hp-zero", "body-destroyed", "fatigue-five"],
+          required: false,
+          nullable: true,
+          blank: false,
+          initial: null,
+          choices: ["hp-zero", "body-destroyed", "fatigue-five"],
         }),
         canBeRevived: new fields.BooleanField({ initial: true }),
         revivedCount: new fields.NumberField({ integer: true, initial: 0, min: 0 }),

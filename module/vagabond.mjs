@@ -20,8 +20,7 @@ import {
 } from "./data/item/_module.mjs";
 
 // Import document classes
-// import { VagabondActor } from "./documents/actor.mjs";
-// import { VagabondItem } from "./documents/item.mjs";
+import { VagabondActor, VagabondItem } from "./documents/_module.mjs";
 
 // Import sheet classes
 // import { VagabondCharacterSheet } from "./sheets/actor-sheet.mjs";
@@ -65,9 +64,9 @@ Hooks.once("init", () => {
     feature: FeatureData,
   };
 
-  // Define custom Document classes (for future use)
-  // CONFIG.Actor.documentClass = VagabondActor;
-  // CONFIG.Item.documentClass = VagabondItem;
+  // Define custom Document classes
+  CONFIG.Actor.documentClass = VagabondActor;
+  CONFIG.Item.documentClass = VagabondItem;
 
   // Register sheet application classes (TODO: Phase 3-4)
   // Actors.unregisterSheet("core", ActorSheet);
