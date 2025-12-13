@@ -260,32 +260,78 @@ export function registerActorTests(quenchRunner) {
       });
 
       describe("Favor/Hinder System", () => {
-        it("tracks favor and hinder modifiers separately", async () => {
+        it("detects favor from Active Effect flags", async () => {
           /**
-           * Favor adds +d6 to rolls, Hinder adds -d6.
-           * They cancel 1-for-1 and don't stack (multiple favors = still +1d6).
-           * Each entry tracks: source, appliesTo (what rolls), duration.
+           * Favor/Hinder is now tracked via Active Effect flags instead of data schema.
+           * Flag convention: flags.vagabond.favor.skills.<skillId>
+           * The getNetFavorHinder method checks these flags.
            */
-          await testActor.update({
-            "system.favorHinder.favor": [
-              {
-                source: "Flanking",
-                appliesTo: ["Attack Checks"],
-                duration: "until-next-turn",
-              },
-            ],
-            "system.favorHinder.hinder": [
-              {
-                source: "Heavy Armor",
-                appliesTo: ["Dodge Saves"],
-                duration: "permanent",
-              },
-            ],
-          });
+          // Set a flag directly (simulating what an Active Effect would do)
+          await testActor.setFlag("vagabond", "favor.skills.performance", true);
 
-          expect(testActor.system.favorHinder.favor.length).to.equal(1);
-          expect(testActor.system.favorHinder.hinder.length).to.equal(1);
-          expect(testActor.system.favorHinder.favor[0].source).to.equal("Flanking");
+          const result = testActor.getNetFavorHinder({ skillId: "performance" });
+          expect(result.net).to.equal(1);
+          expect(result.favorSources.length).to.equal(1);
+
+          // Clean up
+          await testActor.unsetFlag("vagabond", "favor.skills.performance");
+        });
+
+        it("detects hinder from Active Effect flags", async () => {
+          /**
+           * Hinder flags work the same way as favor flags.
+           * Flag convention: flags.vagabond.hinder.skills.<skillId>
+           */
+          await testActor.setFlag("vagabond", "hinder.skills.sneak", true);
+
+          const result = testActor.getNetFavorHinder({ skillId: "sneak" });
+          expect(result.net).to.equal(-1);
+          expect(result.hinderSources.length).to.equal(1);
+
+          // Clean up
+          await testActor.unsetFlag("vagabond", "hinder.skills.sneak");
+        });
+
+        it("cancels favor and hinder 1-for-1", async () => {
+          /**
+           * When both favor and hinder apply to the same roll, they cancel out.
+           * Net result is clamped to -1, 0, or +1.
+           */
+          await testActor.setFlag("vagabond", "favor.skills.arcana", true);
+          await testActor.setFlag("vagabond", "hinder.skills.arcana", true);
+
+          const result = testActor.getNetFavorHinder({ skillId: "arcana" });
+          expect(result.net).to.equal(0);
+
+          // Clean up
+          await testActor.unsetFlag("vagabond", "favor.skills.arcana");
+          await testActor.unsetFlag("vagabond", "hinder.skills.arcana");
+        });
+
+        it("detects favor/hinder for attack rolls", async () => {
+          /**
+           * Attack rolls check flags.vagabond.favor.attacks and hinder.attacks.
+           */
+          await testActor.setFlag("vagabond", "favor.attacks", true);
+
+          const result = testActor.getNetFavorHinder({ isAttack: true });
+          expect(result.net).to.equal(1);
+
+          // Clean up
+          await testActor.unsetFlag("vagabond", "favor.attacks");
+        });
+
+        it("detects favor/hinder for save rolls", async () => {
+          /**
+           * Save rolls check flags.vagabond.favor.saves.<saveType>.
+           */
+          await testActor.setFlag("vagabond", "hinder.saves.reflex", true);
+
+          const result = testActor.getNetFavorHinder({ saveType: "reflex" });
+          expect(result.net).to.equal(-1);
+
+          // Clean up
+          await testActor.unsetFlag("vagabond", "hinder.saves.reflex");
         });
       });
 

@@ -1,0 +1,79 @@
+{{!-- Skill Check Chat Card Template --}}
+{{!-- Displays skill check results with roll details, success/fail, and modifiers --}}
+
+<div class="vagabond chat-card skill-roll">
+  {{!-- Header --}}
+  <header class="card-header">
+    <h3 class="skill-name">{{skillLabel}}</h3>
+    {{#if trained}}
+    <span class="trained-badge">{{localize "VAGABOND.Trained"}}</span>
+    {{/if}}
+  </header>
+
+  {{!-- Roll Result --}}
+  <div class="roll-result {{#if isCrit}}critical{{else if isFumble}}fumble{{else if success}}success{{else}}failure{{/if}}">
+    <div class="roll-total">{{total}}</div>
+    <div class="roll-status">
+      {{#if isCrit}}
+      <span class="status critical">{{localize "VAGABOND.Critical"}}</span>
+      {{else if isFumble}}
+      <span class="status fumble">{{localize "VAGABOND.Fumble"}}</span>
+      {{else if success}}
+      <span class="status success">{{localize "VAGABOND.Success"}}</span>
+      {{else}}
+      <span class="status failure">{{localize "VAGABOND.Failure"}}</span>
+      {{/if}}
+    </div>
+  </div>
+
+  {{!-- Roll Details --}}
+  <div class="roll-details">
+    <div class="roll-formula">
+      <span class="label">{{localize "VAGABOND.Formula"}}:</span>
+      <span class="value">{{formula}}</span>
+    </div>
+    <div class="roll-breakdown">
+      <span class="d20-result">
+        <i class="fa-solid fa-dice-d20"></i> {{d20Result}}
+      </span>
+      {{#if favorDie}}
+      <span class="favor-die {{#if (gt netFavorHinder 0)}}favor{{else}}hinder{{/if}}">
+        <i class="fa-solid fa-dice-d6"></i> {{favorDie}}
+      </span>
+      {{/if}}
+      {{#if modifier}}
+      <span class="modifier">
+        {{#if (gt modifier 0)}}+{{/if}}{{modifier}}
+      </span>
+      {{/if}}
+    </div>
+  </div>
+
+  {{!-- Target Info --}}
+  <div class="target-info">
+    <div class="difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value">{{difficulty}}</span>
+    </div>
+    {{#if (lt critThreshold 20)}}
+    <div class="crit-threshold">
+      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
+      <span class="value">{{critThreshold}}+</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Favor/Hinder Sources --}}
+  {{#if favorSources.length}}
+  <div class="favor-sources">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.Favor"}}: {{#each favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hinderSources.length}}
+  <div class="hinder-sources">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.Hinder"}}: {{#each hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+</div>

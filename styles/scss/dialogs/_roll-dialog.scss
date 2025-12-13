@@ -1,7 +1,211 @@
 // Vagabond RPG - Roll Dialog Styles
 // ==================================
 
-// Placeholder - will be expanded in Phase 7
+// ApplicationV2 Roll Dialog Base
+.vagabond.roll-dialog {
+  // Force light background on the entire window
+  background-color: $color-parchment;
+  color: $color-text-primary;
+
+  .roll-dialog-content {
+    @include flex-column;
+    gap: $spacing-3;
+    padding: $spacing-4;
+    background-color: $color-parchment;
+    color: $color-text-primary;
+  }
+
+  // Automatic favor/hinder from Active Effects
+  .auto-favor-hinder {
+    @include flex-center;
+    gap: $spacing-2;
+    padding: $spacing-2 $spacing-3;
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+
+    i {
+      font-size: $font-size-base;
+    }
+
+    &.favor {
+      background-color: rgba($color-success, 0.15);
+      color: $color-success;
+      border: 1px solid $color-success;
+    }
+
+    &.hinder {
+      background-color: rgba($color-danger, 0.15);
+      color: $color-danger;
+      border: 1px solid $color-danger;
+    }
+  }
+
+  // Skill selection
+  .skill-selection {
+    @include flex-column;
+    gap: $spacing-2;
+
+    label {
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  // Skill info panel
+  .skill-info {
+    @include panel;
+    @include grid(2, $spacing-2);
+    padding: $spacing-3;
+
+    > div {
+      @include flex-between;
+    }
+
+    .label {
+      font-size: $font-size-sm;
+      color: $color-text-muted;
+    }
+
+    .value {
+      font-weight: $font-weight-medium;
+
+      &.trained {
+        color: $color-success;
+      }
+
+      &.untrained {
+        color: $color-text-muted;
+      }
+
+      &.difficulty {
+        font-family: $font-family-header;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+      }
+
+      &.crit {
+        color: $color-warning;
+      }
+    }
+  }
+
+  // Favor/Hinder toggle section
+  .favor-hinder-section {
+    @include flex-column;
+    gap: $spacing-2;
+
+    > label {
+      font-weight: $font-weight-semibold;
+    }
+
+    .favor-hinder-toggles {
+      display: flex;
+      gap: $spacing-2;
+
+      button {
+        @include button-secondary;
+        flex: 1;
+        gap: $spacing-2;
+
+        &.favor-btn {
+          &.active,
+          &:hover {
+            background-color: rgba($color-success, 0.15);
+            border-color: $color-success;
+            color: $color-success;
+          }
+        }
+
+        &.hinder-btn {
+          &.active,
+          &:hover {
+            background-color: rgba($color-danger, 0.15);
+            border-color: $color-danger;
+            color: $color-danger;
+          }
+        }
+      }
+    }
+
+    .net-favor-hinder {
+      @include flex-center;
+      padding: $spacing-1 $spacing-2;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      border-radius: $radius-md;
+
+      &.favor {
+        background-color: rgba($color-success, 0.15);
+        color: $color-success;
+      }
+
+      &.hinder {
+        background-color: rgba($color-danger, 0.15);
+        color: $color-danger;
+      }
+    }
+  }
+
+  // Situational modifier section
+  .modifier-section {
+    @include flex-column;
+    gap: $spacing-2;
+
+    > label {
+      font-weight: $font-weight-semibold;
+    }
+
+    .modifier-presets {
+      display: flex;
+      gap: $spacing-2;
+
+      .modifier-preset {
+        @include button-secondary;
+        flex: 1;
+        padding: $spacing-1 $spacing-2;
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+
+        &:hover {
+          background-color: $color-parchment-dark;
+        }
+      }
+    }
+
+    .modifier-input {
+      input {
+        @include input-base;
+        width: 100%;
+        text-align: center;
+        font-family: $font-family-mono;
+      }
+    }
+  }
+
+  // Roll button
+  .dialog-buttons {
+    margin-top: $spacing-2;
+
+    .roll-btn {
+      @include button-primary;
+      width: 100%;
+      padding: $spacing-3;
+      font-size: $font-size-lg;
+      gap: $spacing-2;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Skill check dialog specific
+.vagabond.skill-check-dialog {
+  // Additional skill-specific styles if needed
+}
+
+// Legacy dialog styles (for backward compatibility)
 .vagabond.dialog.roll-dialog {
   .dialog-content {
     padding: $spacing-4;
@@ -149,6 +353,180 @@
         font-size: $font-size-sm;
         color: $color-text-muted;
       }
+    }
+  }
+}
+
+// Favor/Hinder Debug Panel
+.vagabond.favor-hinder-debug {
+  // Force light background on the entire window content
+  // Using !important to override Foundry's dark theme styles
+  background-color: $color-parchment !important;
+  color: $color-text-primary !important;
+
+  * {
+    color: $color-text-primary;
+  }
+
+  // Enable scrolling on the window content
+  .window-content {
+    overflow-y: auto !important;
+    max-height: 80vh;
+    @include custom-scrollbar;
+  }
+
+  .favor-hinder-debug-content {
+    @include flex-column;
+    gap: $spacing-4;
+    padding: $spacing-4;
+    background-color: $color-parchment !important;
+  }
+
+  .actor-selection {
+    @include flex-column;
+    gap: $spacing-2;
+
+    label {
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+  }
+
+  .debug-panels {
+    @include flex-column;
+    gap: $spacing-4;
+  }
+
+  .debug-panel {
+    @include panel;
+    padding: $spacing-3;
+    background-color: $color-parchment-light;
+
+    h3 {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $spacing-2;
+      margin: 0 0 $spacing-3 0;
+      padding-bottom: $spacing-2;
+      border-bottom: 1px solid $color-border;
+      font-size: $font-size-base;
+      color: $color-text-primary;
+
+      i {
+        color: $color-accent-primary;
+      }
+    }
+  }
+
+  .flag-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $color-parchment-light;
+
+    th,
+    td {
+      padding: $spacing-2;
+      text-align: left;
+      border-bottom: 1px solid $color-border-light;
+      color: $color-text-primary;
+    }
+
+    th {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      color: $color-text-secondary;
+      background-color: $color-parchment-dark;
+
+      &.center {
+        text-align: center;
+      }
+    }
+
+    td {
+      background-color: $color-parchment-light !important;
+
+      &.center {
+        text-align: center;
+      }
+
+      &.skill-name {
+        @include flex-between;
+      }
+    }
+
+    // Alternating row colors with good contrast
+    tbody tr:nth-child(even) td {
+      background-color: $color-parchment !important;
+    }
+
+    .stat-tag {
+      font-size: $font-size-xs;
+      padding: $spacing-1 $spacing-2;
+      background-color: $color-parchment-dark;
+      border-radius: $radius-full;
+      color: $color-text-secondary;
+      text-transform: uppercase;
+    }
+
+    input[type="checkbox"] {
+      width: 1.25rem;
+      height: 1.25rem;
+      cursor: pointer;
+      accent-color: $color-accent-primary;
+    }
+
+    tbody tr:hover td {
+      background-color: $color-parchment-dark;
+    }
+  }
+
+  .debug-actions {
+    display: flex;
+    gap: $spacing-3;
+    padding-top: $spacing-3;
+    border-top: 1px solid $color-border;
+
+    button {
+      @include button-base;
+      flex: 1;
+      gap: $spacing-2;
+    }
+
+    .test-roll-btn {
+      @include button-primary;
+    }
+
+    .clear-btn {
+      @include button-secondary;
+      color: $color-danger;
+      border-color: $color-danger;
+
+      &:hover:not(:disabled) {
+        background-color: rgba($color-danger, 0.1);
+      }
+    }
+  }
+
+  .no-actor-message {
+    @include flex-column;
+    align-items: center;
+    gap: $spacing-3;
+    padding: $spacing-6;
+    text-align: center;
+    color: $color-text-muted;
+
+    i {
+      font-size: $font-size-4xl;
+      opacity: 0.5;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .hint {
+      font-size: $font-size-sm;
+      font-style: italic;
     }
   }
 }

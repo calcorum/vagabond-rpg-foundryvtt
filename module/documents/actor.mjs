@@ -464,29 +464,99 @@ export default class VagabondActor extends Actor {
 
   /**
    * Get the net favor/hinder for a specific roll type.
-   * Favor and Hinder cancel 1-for-1.
+   * Checks Active Effect flags for persistent favor/hinder sources.
+   * Favor and Hinder cancel 1-for-1, capped at +1 or -1.
    *
-   * @param {string} rollType - The type of roll (e.g., "Attack Checks", "Reflex Saves")
-   * @returns {number} Net modifier: positive = favor, negative = hinder, 0 = neutral
+   * Flag convention (set by Active Effects):
+   * - flags.vagabond.favor.skills.<skillId> - Favor on specific skill
+   * - flags.vagabond.hinder.skills.<skillId> - Hinder on specific skill
+   * - flags.vagabond.favor.attacks - Favor on attack rolls
+   * - flags.vagabond.hinder.attacks - Hinder on attack rolls
+   * - flags.vagabond.favor.saves.<saveType> - Favor on specific save
+   * - flags.vagabond.hinder.saves.<saveType> - Hinder on specific save
+   *
+   * @param {Object} options - Options for determining favor/hinder
+   * @param {string} [options.skillId] - Skill ID for skill checks (e.g., "arcana", "brawl")
+   * @param {boolean} [options.isAttack] - True if this is an attack roll
+   * @param {string} [options.saveType] - Save type (e.g., "reflex", "endure", "will")
+   * @returns {Object} Result with net value and sources
+   * @returns {number} result.net - Net modifier: +1 (favor), 0 (neutral), -1 (hinder)
+   * @returns {string[]} result.favorSources - Names of active favor sources
+   * @returns {string[]} result.hinderSources - Names of active hinder sources
    */
-  getNetFavorHinder(rollType) {
-    if (this.type !== "character") return 0;
+  getNetFavorHinder({ skillId = null, isAttack = false, saveType = null } = {}) {
+    if (this.type !== "character") return { net: 0, favorSources: [], hinderSources: [] };
 
-    const favorHinder = this.system.favorHinder;
-    if (!favorHinder) return 0;
+    const favorSources = [];
+    const hinderSources = [];
 
-    // Count favor sources that apply to this roll type
-    const favorCount = (favorHinder.favor || []).filter(
-      (f) => !f.appliesTo?.length || f.appliesTo.includes(rollType)
-    ).length;
+    // Check skill-specific flags
+    if (skillId) {
+      if (this.getFlag("vagabond", `favor.skills.${skillId}`)) {
+        favorSources.push(this._getFavorHinderSourceName("favor", "skills", skillId));
+      }
+      if (this.getFlag("vagabond", `hinder.skills.${skillId}`)) {
+        hinderSources.push(this._getFavorHinderSourceName("hinder", "skills", skillId));
+      }
+    }
 
-    // Count hinder sources that apply to this roll type
-    const hinderCount = (favorHinder.hinder || []).filter(
-      (h) => !h.appliesTo?.length || h.appliesTo.includes(rollType)
-    ).length;
+    // Check attack flags
+    if (isAttack) {
+      if (this.getFlag("vagabond", "favor.attacks")) {
+        favorSources.push(this._getFavorHinderSourceName("favor", "attacks"));
+      }
+      if (this.getFlag("vagabond", "hinder.attacks")) {
+        hinderSources.push(this._getFavorHinderSourceName("hinder", "attacks"));
+      }
+    }
+
+    // Check save-specific flags
+    if (saveType) {
+      if (this.getFlag("vagabond", `favor.saves.${saveType}`)) {
+        favorSources.push(this._getFavorHinderSourceName("favor", "saves", saveType));
+      }
+      if (this.getFlag("vagabond", `hinder.saves.${saveType}`)) {
+        hinderSources.push(this._getFavorHinderSourceName("hinder", "saves", saveType));
+      }
+    }
 
     // They cancel 1-for-1, max of +1 or -1
-    const net = favorCount - hinderCount;
-    return Math.clamp(net, -1, 1);
+    const net = Math.clamp(favorSources.length - hinderSources.length, -1, 1);
+
+    return { net, favorSources, hinderSources };
+  }
+
+  /**
+   * Get the source name for a favor/hinder flag by finding the Active Effect that set it.
+   *
+   * @param {string} type - "favor" or "hinder"
+   * @param {string} category - "skills", "attacks", or "saves"
+   * @param {string} [subtype] - Skill ID or save type
+   * @returns {string} Source name or generic description
+   * @private
+   */
+  _getFavorHinderSourceName(type, category, subtype = null) {
+    const flagKey = subtype
+      ? `flags.vagabond.${type}.${category}.${subtype}`
+      : `flags.vagabond.${type}.${category}`;
+
+    // Find the Active Effect that sets this flag
+    for (const effect of this.effects) {
+      if (!effect.active) continue;
+      for (const change of effect.changes) {
+        if (change.key === flagKey) {
+          return effect.name || effect.parent?.name || `${type} effect`;
+        }
+      }
+    }
+
+    // Fallback if source not found
+    const categoryLabel =
+      category === "skills"
+        ? `${subtype} checks`
+        : category === "saves"
+          ? `${subtype} saves`
+          : category;
+    return `${type} on ${categoryLabel}`;
   }
 }

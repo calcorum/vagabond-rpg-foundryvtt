@@ -290,6 +290,67 @@ docs: Update README with installation instructions
 
 ---
 
+## Architecture Decisions
+
+### Roll Dialog System (Phase 2.5+)
+
+**Decision Date:** 2024-12-13
+
+| Decision              | Choice                              | Rationale                                                                            |
+| --------------------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
+| Application API       | **ApplicationV2**                   | Modern Foundry v13 API, forward-compatible, cleaner lifecycle                        |
+| Dialog Behavior       | **Hybrid**                          | Normal click = dialog, Shift+click = quick roll with defaults                        |
+| Favor/Hinder          | **Manual toggles + Active Effects** | GM announces situational favor/hinder; persistent sources use flags                  |
+| Situational Modifiers | **Preset buttons + custom input**   | Buttons: -5, -1, +1, +5; plus free-form input field                                  |
+| Dialog Structure      | **Base class + subclasses**         | `VagabondRollDialog` base → `SkillCheckDialog`, `AttackRollDialog`, `SaveRollDialog` |
+| Chat Output           | **Custom templates**                | Rich chat cards with skill name, difficulty, success/fail, crit indicators           |
+
+### Favor/Hinder via Active Effects
+
+Persistent favor/hinder from class features, perks, or conditions uses Foundry flags set by Active Effects:
+
+```javascript
+// Active Effect change for a perk granting Favor on Performance checks:
+{ key: "flags.vagabond.favor.skills.performance", mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, value: true }
+
+// Active Effect change for Hinder on all attack rolls:
+{ key: "flags.vagabond.hinder.attacks", mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, value: true }
+
+// Active Effect change for Favor on Reflex saves:
+{ key: "flags.vagabond.favor.saves.reflex", mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, value: true }
+```
+
+**Flag Convention:**
+
+- `flags.vagabond.favor.skills.<skillId>` - Favor on specific skill checks
+- `flags.vagabond.hinder.skills.<skillId>` - Hinder on specific skill checks
+- `flags.vagabond.favor.attacks` - Favor on all attack rolls
+- `flags.vagabond.hinder.attacks` - Hinder on all attack rolls
+- `flags.vagabond.favor.saves.<saveType>` - Favor on specific save type
+- `flags.vagabond.hinder.saves.<saveType>` - Hinder on specific save type
+
+The roll dialog checks these flags and displays any automatic favor/hinder, while still allowing manual override for situational modifiers announced by the GM.
+
+### File Structure for Dialogs
+
+```
+module/applications/
+├── _module.mjs              # Export barrel
+├── base-roll-dialog.mjs     # VagabondRollDialog (ApplicationV2 base)
+├── skill-check-dialog.mjs   # SkillCheckDialog extends VagabondRollDialog
+├── attack-roll-dialog.mjs   # AttackRollDialog (Phase 2.6)
+└── save-roll-dialog.mjs     # SaveRollDialog (Phase 2.7)
+
+templates/dialog/
+├── roll-dialog-base.hbs     # Shared dialog structure
+└── skill-check.hbs          # Skill-specific content
+
+templates/chat/
+└── skill-roll.hbs           # Skill check result card
+```
+
+---
+
 ## Resources
 
 - [Foundry VTT API Documentation](https://foundryvtt.com/api/)

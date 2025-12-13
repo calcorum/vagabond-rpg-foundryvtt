@@ -239,7 +239,7 @@
           "id": "2.1",
           "name": "Create main system entry point (vagabond.mjs)",
           "description": "System initialization, hook registration, CONFIG setup, document class registration",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
           "dependencies": ["1.1", "1.6"]
@@ -248,7 +248,7 @@
           "id": "2.2",
           "name": "Implement VagabondActor class",
           "description": "Extended Actor with prepareData for derived values calculation (HP, Speed, Saves, Skill difficulties)",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.1", "1.2", "1.3"]
@@ -257,7 +257,7 @@
           "id": "2.3",
           "name": "Implement VagabondItem class",
           "description": "Extended Item with type-specific preparation and chat card generation",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.1", "1.6"]
@@ -266,7 +266,7 @@
           "id": "2.4",
           "name": "Create dice rolling module",
           "description": "Core roll functions: d20 checks, damage rolls, exploding dice (d6!), countdown dice, favor/hinder modifiers",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.1"]

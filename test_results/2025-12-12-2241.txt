@@ -1,0 +1,462 @@
+(PASS) Test Complete: adds +d6 when favorHinder is positive
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: subtracts d6 when favorHinder is negative
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: has no extra die when favorHinder is 0
+Object { test: {…} }
+quench-reporter.ts:150:14
+Suite: Flat Modifiers
+Object { suite: {…} }
+quench-reporter.ts:105:15
+(PASS) Test Complete: applies positive modifiers to the roll
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: applies negative modifiers to the roll
+Object { test: {…} }
+quench-reporter.ts:150:14
+Vagabond: Skill Check System quench-reporter.ts:103:15
+Suite: Skill Check Rolls
+Object { suite: {…} }
+quench-reporter.ts:105:15
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: uses correct difficulty for trained skills
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: uses correct difficulty for untrained skills
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: uses skill-specific crit threshold
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(PASS) Test Complete: throws error for unknown skill
+Object { test: {…} }
+quench-reporter.ts:150:14
+Vagabond: Attack Check System quench-reporter.ts:103:15
+Suite: Attack Check Rolls
+Object { suite: {…} }
+quench-reporter.ts:105:15
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+Error: VagabondItem validation errors:
+  type: "weapon" is not a valid type for the Item Document class
+  system:
+    equippedHand: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseItem http://localhost:30000/scripts/foundry.mjs:15503
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Item http://localhost:30000/scripts/foundry.mjs:45138
+    VagabondItem http://localhost:30000/systems/vagabond/module/documents/item.mjs:15
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: calculates difficulty from attack stat
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+Error: VagabondItem validation errors:
+  type: "weapon" is not a valid type for the Item Document class
+  system:
+    equippedHand: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseItem http://localhost:30000/scripts/foundry.mjs:15503
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Item http://localhost:30000/scripts/foundry.mjs:45138
+    VagabondItem http://localhost:30000/systems/vagabond/module/documents/item.mjs:15
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: uses attack-specific crit threshold
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Vagabond: Save Roll System quench-reporter.ts:103:15
+Suite: Save Rolls
+Object { suite: {…} }
+quench-reporter.ts:105:15
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: rolls against provided difficulty
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: saves do not crit (threshold stays 20)
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Vagabond: Damage Roll System quench-reporter.ts:103:15
+Suite: Damage Rolls
+Object { suite: {…} }
+quench-reporter.ts:105:15
+(PASS) Test Complete: evaluates damage formula
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: doubles dice on critical hit
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: does not double modifiers on crit
+Object { test: {…} }
+quench-reporter.ts:150:14
+Suite: doubleDice Helper
+Object { suite: {…} }
+quench-reporter.ts:105:15
+(PASS) Test Complete: doubles dice count in formula
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: preserves modifiers when doubling dice
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: handles multiple dice types
+Object { test: {…} }
+quench-reporter.ts:150:14
+Vagabond: Countdown Dice System quench-reporter.ts:103:15
+Suite: Countdown Dice
+Object { suite: {…} }
+quench-reporter.ts:105:15
+(PASS) Test Complete: rolls the specified die size
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: continues on high rolls (3-6 on d6)
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: shrinks die on low rolls (1-2)
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: ends effect when d4 rolls 1-2
+Object { test: {…} }
+quench-reporter.ts:150:14
+(PASS) Test Complete: returns ended state for die size 0
+Object { test: {…} }
+quench-reporter.ts:150:14
+Vagabond: Morale Check System quench-reporter.ts:103:15
+Suite: Morale Checks
+Object { suite: {…} }
+quench-reporter.ts:105:15
+Error: VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: rolls 2d6 against morale score
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: passes when roll <= morale
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: fails when roll > morale
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+Error: VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+Error: VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string
+    DataModelValidationError http://localhost:30000/scripts/foundry.mjs:5221
+    asError http://localhost:30000/scripts/foundry.mjs:5141
+    validate http://localhost:30000/scripts/foundry.mjs:11743
+    DataModel http://localhost:30000/scripts/foundry.mjs:11419
+    Document http://localhost:30000/scripts/foundry.mjs:12005
+    BaseActor http://localhost:30000/scripts/foundry.mjs:14207
+    ClientDocument http://localhost:30000/scripts/foundry.mjs:32362
+    Actor http://localhost:30000/scripts/foundry.mjs:41217
+    VagabondActor http://localhost:30000/systems/vagabond/module/documents/actor.mjs:16
+    #preCreateDocumentArray http://localhost:30000/scripts/foundry.mjs:58608
+    _createDocuments http://localhost:30000/scripts/foundry.mjs:58570
+    create http://localhost:30000/scripts/foundry.mjs:58201
+foundry.mjs:23855:30
+(FAIL) Test Complete: throws error for non-NPC actors
+Object { test: {…}, err: TypeError }
+quench-reporter.ts:170:14
+QUENCH | TEST RUN COMPLETE
+Object { stats: {…} }
+quench-reporter.ts:185:14
+VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string 11 foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string 9 foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string 5 foundry.mjs:115132:18
+VagabondItem validation errors:
+  type: "weapon" is not a valid type for the Item Document class
+  system:
+    equippedHand: may not be a blank string foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string foundry.mjs:115132:18
+VagabondItem validation errors:
+  type: "weapon" is not a valid type for the Item Document class
+  system:
+    equippedHand: may not be a blank string foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string 2 foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "npc" is not a valid type for the Actor Document class
+  system:
+    moraleStatus:
+      lastTrigger: may not be a blank string
+      lastResult: may not be a blank string 4 foundry.mjs:115132:18
+VagabondActor validation errors:
+  type: "character" is not a valid type for the Actor Document class
+  system:
+    combat:
+      currentZone: may not be a blank string
+    death:
+      deathCause: may not be a blank string foundry.mjs:115132:18

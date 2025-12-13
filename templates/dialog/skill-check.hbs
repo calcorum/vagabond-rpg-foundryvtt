@@ -1,0 +1,104 @@
+{{!-- Skill Check Dialog Template --}}
+{{!-- Extends roll-dialog-base with skill-specific information --}}
+
+<div class="vagabond roll-dialog-content skill-check-dialog">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if hasAutoFavor}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hasAutoHinder}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each autoFavorHinder.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Skill Selection --}}
+  <div class="skill-selection">
+    <label>{{localize "VAGABOND.Skill"}}</label>
+    <select name="skillId">
+      <option value="">{{localize "VAGABOND.SelectSkill"}}</option>
+      {{#each rollSpecific.skills}}
+      <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>
+        {{this.label}} ({{capitalize this.stat}}) {{#if this.trained}}*{{/if}}
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{!-- Skill Info (if skill selected) --}}
+  {{#if rollSpecific.selectedSkill}}
+  <div class="skill-info">
+    <div class="skill-stat">
+      <span class="label">{{localize "VAGABOND.Stat"}}:</span>
+      <span class="value">{{rollSpecific.statLabel}} ({{rollSpecific.statValue}})</span>
+    </div>
+    <div class="skill-trained">
+      <span class="label">{{localize "VAGABOND.Training"}}:</span>
+      <span class="value {{#if rollSpecific.trained}}trained{{else}}untrained{{/if}}">
+        {{#if rollSpecific.trained}}
+        {{localize "VAGABOND.Trained"}}
+        {{else}}
+        {{localize "VAGABOND.Untrained"}}
+        {{/if}}
+      </span>
+    </div>
+    <div class="skill-difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value difficulty">{{rollSpecific.difficulty}}</span>
+    </div>
+    {{#if (lt rollSpecific.critThreshold 20)}}
+    <div class="skill-crit">
+      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
+      <span class="value crit">{{rollSpecific.critThreshold}}+</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">+d6 {{localize "VAGABOND.Favor"}}</div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">-d6 {{localize "VAGABOND.Hinder"}}</div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      {{#each modifierPresets}}
+      <button type="button" class="modifier-preset" data-modifier-preset="{{this.value}}">
+        {{this.label}}
+      </button>
+      {{/each}}
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn" {{#unless rollSpecific.selectedSkill}}disabled{{/unless}}>
+      <i class="fa-solid fa-dice-d20"></i>
+      {{localize "VAGABOND.Roll"}}
+    </button>
+  </div>
+</div>

@@ -367,32 +367,14 @@ export default class CharacterData extends VagabondActorBase {
         }),
       }),
 
-      // Favor/Hinder tracking (d20 +/- d6 modifiers)
-      // Cancel each other 1-for-1, don't stack
-      favorHinder: new fields.SchemaField({
-        favor: new fields.ArrayField(
-          new fields.SchemaField({
-            source: new fields.StringField({ required: true }), // "Flanking", "Virtuoso", etc.
-            appliesTo: new fields.ArrayField(new fields.StringField()), // ["Attack Checks"], ["Reflex Saves"]
-            duration: new fields.StringField({
-              initial: "instant",
-              choices: ["instant", "until-next-turn", "focus", "continual", "permanent"],
-            }),
-          }),
-          { initial: [] }
-        ),
-        hinder: new fields.ArrayField(
-          new fields.SchemaField({
-            source: new fields.StringField({ required: true }), // "Heavy Armor", "Fog spell", etc.
-            appliesTo: new fields.ArrayField(new fields.StringField()), // ["Dodge Saves"], ["sight-based checks"]
-            duration: new fields.StringField({
-              initial: "instant",
-              choices: ["instant", "until-next-turn", "focus", "continual", "permanent"],
-            }),
-          }),
-          { initial: [] }
-        ),
-      }),
+      // NOTE: Favor/Hinder is now handled via Active Effects flags instead of a data schema.
+      // See DEVELOPMENT.md "Favor/Hinder via Active Effects" for the flag convention:
+      // - flags.vagabond.favor.skills.<skillId>
+      // - flags.vagabond.hinder.skills.<skillId>
+      // - flags.vagabond.favor.attacks
+      // - flags.vagabond.hinder.attacks
+      // - flags.vagabond.favor.saves.<saveType>
+      // - flags.vagabond.hinder.saves.<saveType>
 
       // Focus tracking for maintained spells
       focus: new fields.SchemaField({

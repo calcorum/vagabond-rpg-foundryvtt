@@ -130,8 +130,9 @@ export async function skillCheck(actor, skillId, options = {}) {
   const difficulty = skillData.difficulty;
   const critThreshold = skillData.critThreshold || 20;
 
-  // Determine favor/hinder
-  const favorHinder = options.favorHinder ?? actor.getNetFavorHinder?.(`${skillId} Checks`) ?? 0;
+  // Determine favor/hinder from Active Effect flags or override
+  const favorHinderResult = actor.getNetFavorHinder?.({ skillId }) ?? { net: 0 };
+  const favorHinder = options.favorHinder ?? favorHinderResult.net;
 
   return d20Check({
     difficulty,
@@ -170,8 +171,9 @@ export async function attackCheck(actor, weapon, options = {}) {
   // Get crit threshold from attack data
   const critThreshold = system.attacks?.[attackType]?.critThreshold || 20;
 
-  // Determine favor/hinder
-  const favorHinder = options.favorHinder ?? actor.getNetFavorHinder?.("Attack Checks") ?? 0;
+  // Determine favor/hinder from Active Effect flags or override
+  const favorHinderResult = actor.getNetFavorHinder?.({ isAttack: true }) ?? { net: 0 };
+  const favorHinder = options.favorHinder ?? favorHinderResult.net;
 
   return d20Check({
     difficulty,
@@ -200,12 +202,9 @@ export async function saveRoll(actor, saveType, difficulty, options = {}) {
     throw new Error(`Unknown save type: ${saveType}`);
   }
 
-  // Determine favor/hinder based on save type
-  let rollType = `${saveType.charAt(0).toUpperCase() + saveType.slice(1)} Saves`;
-  if (options.isBlock) rollType = "Block Saves";
-  if (options.isDodge) rollType = "Dodge Saves";
-
-  const favorHinder = options.favorHinder ?? actor.getNetFavorHinder?.(rollType) ?? 0;
+  // Determine favor/hinder from Active Effect flags or override
+  const favorHinderResult = actor.getNetFavorHinder?.({ saveType }) ?? { net: 0 };
+  const favorHinder = options.favorHinder ?? favorHinderResult.net;
 
   return d20Check({
     difficulty,

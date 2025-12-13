@@ -22,6 +22,9 @@ import {
 // Import document classes
 import { VagabondActor, VagabondItem } from "./documents/_module.mjs";
 
+// Import application classes
+import { VagabondRollDialog, SkillCheckDialog, FavorHinderDebug } from "./applications/_module.mjs";
+
 // Import sheet classes
 // import { VagabondCharacterSheet } from "./sheets/actor-sheet.mjs";
 // import { VagabondItemSheet } from "./sheets/item-sheet.mjs";
@@ -45,6 +48,15 @@ Hooks.once("init", () => {
 
   // Add custom constants for configuration
   CONFIG.VAGABOND = VAGABOND;
+
+  // Expose application classes globally for macro/API access
+  game.vagabond = {
+    applications: {
+      VagabondRollDialog,
+      SkillCheckDialog,
+      FavorHinderDebug,
+    },
+  };
 
   // Register Actor data models
   CONFIG.Actor.dataModels = {
@@ -93,7 +105,7 @@ Hooks.once("init", () => {
 /**
  * Ready hook - runs when Foundry is fully loaded
  */
-Hooks.once("ready", () => {
+Hooks.once("ready", async () => {
   // eslint-disable-next-line no-console
   console.log("Vagabond RPG | System Ready");
 
@@ -101,8 +113,57 @@ Hooks.once("ready", () => {
   if (game.user.isGM) {
     const version = game.system.version;
     ui.notifications.info(`Vagabond RPG v${version} - System loaded successfully!`);
+
+    // Create development macros if they don't exist
+    await _createDevMacros();
   }
 });
+
+/**
+ * Create development/debug macros if they don't already exist.
+ * @private
+ */
+async function _createDevMacros() {
+  // Favor/Hinder Debug macro
+  const debugMacroName = "Favor/Hinder Debug";
+  const existingMacro = game.macros.find((m) => m.name === debugMacroName);
+
+  if (!existingMacro) {
+    await Macro.create({
+      name: debugMacroName,
+      type: "script",
+      img: "icons/svg/bug.svg",
+      command: "game.vagabond.applications.FavorHinderDebug.open();",
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Favor/Hinder Debug macro");
+  }
+
+  // Skill Check macro
+  const skillMacroName = "Skill Check";
+  const existingSkillMacro = game.macros.find((m) => m.name === skillMacroName);
+
+  if (!existingSkillMacro) {
+    await Macro.create({
+      name: skillMacroName,
+      type: "script",
+      img: "icons/svg/d20.svg",
+      command: `// Opens skill check dialog for selected token or prompts to select actor
+const actor = canvas.tokens.controlled[0]?.actor
+  || game.actors.find(a => a.type === "character");
+
+if (!actor) {
+  ui.notifications.warn("Select a token or create a character first");
+} else {
+  game.vagabond.applications.SkillCheckDialog.prompt(actor);
+}`,
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Skill Check macro");
+  }
+}
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */

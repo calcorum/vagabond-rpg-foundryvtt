@@ -163,6 +163,7 @@
   "VAGABOND.Success": "Success",
   "VAGABOND.Failure": "Failure",
   "VAGABOND.Critical": "Critical!",
+  "VAGABOND.Fumble": "Fumble!",
 
   "VAGABOND.Damage": "Damage",
   "VAGABOND.DamageType": "Damage Type",
@@ -209,5 +210,23 @@
   "VAGABOND.ItemTypeFeature": "Feature",
   "VAGABOND.ItemTypeWeapon": "Weapon",
   "VAGABOND.ItemTypeArmor": "Armor",
-  "VAGABOND.ItemTypeEquipment": "Equipment"
+  "VAGABOND.ItemTypeEquipment": "Equipment",
+
+  "VAGABOND.RollDialog": "Roll",
+  "VAGABOND.SkillCheck": "Skill Check",
+  "VAGABOND.Check": "Check",
+  "VAGABOND.Skill": "Skill",
+  "VAGABOND.Stat": "Stat",
+  "VAGABOND.Training": "Training",
+  "VAGABOND.Untrained": "Untrained",
+  "VAGABOND.SelectSkill": "Select Skill...",
+  "VAGABOND.SelectSkillFirst": "Please select a skill first",
+  "VAGABOND.FavorHinder": "Favor / Hinder",
+  "VAGABOND.SituationalModifier": "Situational Modifier",
+  "VAGABOND.AutoFavor": "Auto Favor",
+  "VAGABOND.AutoHinder": "Auto Hinder",
+  "VAGABOND.Formula": "Formula",
+
+  "VAGABOND.SelectActor": "Select Actor",
+  "VAGABOND.Save": "Save"
 }

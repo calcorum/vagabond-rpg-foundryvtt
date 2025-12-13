@@ -55,6 +55,7 @@
     "Scene": "readonly",
     "User": "readonly",
     "Folder": "readonly",
+    "Macro": "readonly",
     "Compendium": "readonly",
     "CompendiumCollection": "readonly",
     "DocumentSheetConfig": "readonly",

@@ -1,0 +1,66 @@
+{{!-- Base Roll Dialog Template --}}
+{{!-- Provides common UI for all roll dialogs: favor/hinder, modifiers, roll button --}}
+
+<div class="vagabond roll-dialog-content">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if hasAutoFavor}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hasAutoHinder}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each autoFavorHinder.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Roll-specific content (provided by subclass) --}}
+  <div class="roll-specific">
+    {{> @partial-block}}
+  </div>
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">+d6 {{localize "VAGABOND.Favor"}}</div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">-d6 {{localize "VAGABOND.Hinder"}}</div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      {{#each modifierPresets}}
+      <button type="button" class="modifier-preset" data-modifier-preset="{{this.value}}">
+        {{this.label}}
+      </button>
+      {{/each}}
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn">
+      <i class="fa-solid fa-dice-d20"></i>
+      {{localize "VAGABOND.Roll"}}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+{{!-- Favor/Hinder Debug Panel Template --}}
+{{!-- Development tool for testing favor/hinder flags on actors --}}
+
+<div class="vagabond favor-hinder-debug-content">
+  {{!-- Actor Selection --}}
+  <div class="actor-selection">
+    <label>{{localize "VAGABOND.SelectActor"}}</label>
+    <select name="actorId">
+      <option value="">-- Select Actor --</option>
+      {{#each actors}}
+      <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>
+        {{this.name}}
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{#if actor}}
+  <div class="debug-panels">
+    {{!-- Skills Panel --}}
+    <div class="debug-panel skills-panel">
+      <h3>
+        <i class="fa-solid fa-book"></i>
+        {{localize "VAGABOND.Skills"}}
+      </h3>
+      <table class="flag-table">
+        <thead>
+          <tr>
+            <th>{{localize "VAGABOND.Skill"}}</th>
+            <th class="center">{{localize "VAGABOND.Favor"}}</th>
+            <th class="center">{{localize "VAGABOND.Hinder"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each skills}}
+          <tr>
+            <td class="skill-name">
+              {{this.label}}
+              <span class="stat-tag">{{this.stat}}</span>
+            </td>
+            <td class="center">
+              <input type="checkbox"
+                     class="skill-flag"
+                     data-skill="{{this.id}}"
+                     data-flag-type="favor"
+                     {{#if this.favor}}checked{{/if}}>
+            </td>
+            <td class="center">
+              <input type="checkbox"
+                     class="skill-flag"
+                     data-skill="{{this.id}}"
+                     data-flag-type="hinder"
+                     {{#if this.hinder}}checked{{/if}}>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    {{!-- Attacks Panel --}}
+    <div class="debug-panel attacks-panel">
+      <h3>
+        <i class="fa-solid fa-swords"></i>
+        {{localize "VAGABOND.Attacks"}}
+      </h3>
+      <table class="flag-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th class="center">{{localize "VAGABOND.Favor"}}</th>
+            <th class="center">{{localize "VAGABOND.Hinder"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All Attacks</td>
+            <td class="center">
+              <input type="checkbox"
+                     class="attack-flag"
+                     data-flag-type="favor"
+                     {{#if attacks.favor}}checked{{/if}}>
+            </td>
+            <td class="center">
+              <input type="checkbox"
+                     class="attack-flag"
+                     data-flag-type="hinder"
+                     {{#if attacks.hinder}}checked{{/if}}>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {{!-- Saves Panel --}}
+    <div class="debug-panel saves-panel">
+      <h3>
+        <i class="fa-solid fa-shield"></i>
+        {{localize "VAGABOND.Saves"}}
+      </h3>
+      <table class="flag-table">
+        <thead>
+          <tr>
+            <th>{{localize "VAGABOND.Save"}}</th>
+            <th class="center">{{localize "VAGABOND.Favor"}}</th>
+            <th class="center">{{localize "VAGABOND.Hinder"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each saves}}
+          <tr>
+            <td>{{this.label}}</td>
+            <td class="center">
+              <input type="checkbox"
+                     class="save-flag"
+                     data-save="{{this.id}}"
+                     data-flag-type="favor"
+                     {{#if this.favor}}checked{{/if}}>
+            </td>
+            <td class="center">
+              <input type="checkbox"
+                     class="save-flag"
+                     data-save="{{this.id}}"
+                     data-flag-type="hinder"
+                     {{#if this.hinder}}checked{{/if}}>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {{!-- Action Buttons --}}
+  <div class="debug-actions">
+    <button type="button" class="test-roll-btn" data-action="test-roll">
+      <i class="fa-solid fa-dice-d20"></i>
+      Test Skill Roll
+    </button>
+    <button type="button" class="clear-btn" data-action="clear-all">
+      <i class="fa-solid fa-trash"></i>
+      Clear All Flags
+    </button>
+  </div>
+
+  {{else}}
+  <div class="no-actor-message">
+    <i class="fa-solid fa-user-slash"></i>
+    <p>Select an actor to manage favor/hinder flags.</p>
+    <p class="hint">You can also select a token on the canvas before opening this panel.</p>
+  </div>
+  {{/if}}
+</div>
