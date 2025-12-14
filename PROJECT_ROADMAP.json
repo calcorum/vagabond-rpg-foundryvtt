@@ -342,19 +342,21 @@
           "id": "2.12",
           "name": "Implement class feature automation",
           "description": "When class item added to character, apply appropriate Active Effects for current level; update on level change",
-          "completed": false,
-          "tested": false,
+          "completed": true,
+          "tested": true,
           "priority": "high",
-          "dependencies": ["2.2", "2.3", "1.8", "1.15"]
+          "dependencies": ["2.2", "2.3", "1.8", "1.15"],
+          "notes": "Implemented via _onCreate/_preDelete lifecycle methods and updateActor hook. Made applyClassFeatures() idempotent. Commit 8afcf8c."
         },
         {
           "id": "2.13",
           "name": "Implement morale check system (NPC)",
           "description": "2d6 vs Morale roll, triggered manually or via hooks on death/half HP",
-          "completed": false,
-          "tested": false,
+          "completed": true,
+          "tested": true,
           "priority": "medium",
-          "dependencies": ["2.4", "1.3"]
+          "dependencies": ["2.4", "1.3"],
+          "notes": "rollMorale() for individual, rollGroupMorale() for lowest in selection, auto-prompt at half HP, chat button handler, macro created. Commit f6948dc."
         },
         {
           "id": "2.14",
@@ -376,145 +378,161 @@
           "id": "3.1",
           "name": "Create base VagabondActorSheet class",
           "description": "Extended ActorSheet with common methods, tab handling, drag-drop, context menus",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.2"]
+          "dependencies": ["2.2"],
+          "notes": "Uses Foundry v13 ApplicationV2 with HandlebarsApplicationMixin. Includes action handlers, drag-drop, item management."
         },
         {
           "id": "3.2",
           "name": "Design Character sheet layout (HTML/Handlebars)",
           "description": "Match official Hero Record: Stats column, HP/Armor/Fatigue, Speed section, Saves, Skills grid, Attacks, Inventory, Abilities, Magic",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.1"]
+          "dependencies": ["3.1"],
+          "notes": "Tabbed layout with Main, Inventory, Abilities, Magic, Biography tabs. Templates in templates/actor/."
         },
         {
           "id": "3.3",
           "name": "Implement Character sheet - Header section",
           "description": "Name, Ancestry, Level, Class, XP, Size, Being Type fields",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2"]
+          "dependencies": ["3.2"],
+          "notes": "Header includes portrait, name, ancestry/class display, level/XP inputs, HP/Mana bars, secondary resources."
         },
         {
           "id": "3.4",
           "name": "Implement Character sheet - Stats section",
           "description": "Six stats display with large numbers matching official sheet aesthetic",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2"]
+          "dependencies": ["3.2"],
+          "notes": "Stats grid on Main tab with editable values and stat abbreviations."
         },
         {
           "id": "3.5",
           "name": "Implement Character sheet - Combat section",
           "description": "HP (current/max), Armor, Fatigue, Speed (base/bonus/crawl/travel), Current Luck",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2"]
+          "dependencies": ["3.2"],
+          "notes": "Resource bars in header, secondary resources (Luck, Fatigue, Armor, Speed) displayed."
         },
         {
           "id": "3.6",
           "name": "Implement Character sheet - Saves section",
           "description": "Reflex, Endure, Will with calculated difficulties, clickable for rolls",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2", "2.7"]
+          "dependencies": ["3.2", "2.7"],
+          "notes": "Saves grid on Main tab with stat formulas and clickable roll action."
         },
         {
           "id": "3.7",
           "name": "Implement Character sheet - Skills section",
           "description": "12 skills grid with trained checkboxes, stat associations, difficulty numbers, clickable for rolls",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2", "2.5"]
+          "dependencies": ["3.2", "2.5"],
+          "notes": "Skills grid with trained toggle, stat abbreviation, difficulty, crit threshold display."
         },
         {
           "id": "3.8",
           "name": "Implement Character sheet - Attacks section",
           "description": "Weapon attack skills (Melee/Brawl/Ranged/Finesse) with difficulties, equipped weapons list with roll buttons",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["3.2", "2.6"]
+          "dependencies": ["3.2", "2.6"],
+          "notes": "Attack skills and equipped weapons on Main tab with roll buttons."
         },
         {
           "id": "3.9",
           "name": "Implement Character sheet - Inventory tab",
           "description": "Item list with slots display, wealth tracking (G/S/C), occupied/max/bonus slots, drag-drop support",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.2", "2.11"]
+          "dependencies": ["3.2", "2.11"],
+          "notes": "Inventory tab with weapons, armor, equipment sections, slot tracking, wealth inputs."
         },
         {
           "id": "3.10",
           "name": "Implement Character sheet - Abilities tab",
           "description": "List of Features, Perks, Ancestry traits; expandable descriptions; usage tracking for limited abilities",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.2"]
+          "dependencies": ["3.2"],
+          "notes": "Abilities tab with ancestry, features, perks, and active effects display."
         },
         {
           "id": "3.11",
           "name": "Implement Character sheet - Magic tab",
           "description": "Mana (current/max/casting max), known spells list with cast buttons, focus indicator",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.2", "2.8"]
+          "dependencies": ["3.2", "2.8"],
+          "notes": "Magic tab with mana display, focus tracking, spell list with cast buttons, reference guide."
         },
         {
           "id": "3.12",
           "name": "Implement Character sheet - Biography tab",
           "description": "Rich text editor for character background, notes, bonds",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["3.2"]
+          "dependencies": ["3.2"],
+          "notes": "Biography tab with character details, languages, senses, biography and notes textareas."
         },
         {
           "id": "3.13",
           "name": "Create NPC/Monster sheet layout",
           "description": "Compact stat block format: HD, HP, TL, Zone, Morale, Armor, Immunities, Weaknesses, Actions, Abilities",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.1", "1.3"]
+          "dependencies": ["3.1", "1.3"],
+          "notes": "NPC sheet with header, stats, actions, abilities, and notes sections (no tabs)."
         },
         {
           "id": "3.14",
           "name": "Implement NPC sheet - Stat block section",
           "description": "Display all combat-relevant stats in traditional TTRPG stat block format",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.13"]
+          "dependencies": ["3.13"],
+          "notes": "Stats section with zone, speed, size, being type, senses, damage modifiers."
         },
         {
           "id": "3.15",
           "name": "Implement NPC sheet - Actions section",
           "description": "List of attack actions with clickable roll buttons, damage dice display",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["3.13", "2.4"]
+          "dependencies": ["3.13", "2.4"],
+          "notes": "Dynamic actions list with add/delete, editable fields, roll buttons."
         },
         {
           "id": "3.16",
           "name": "Implement NPC sheet - Morale button",
           "description": "Clickable morale check with result interpretation",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["3.13", "2.13"]
+          "dependencies": ["3.13", "2.13"],
+          "notes": "Morale roll button in header, disabled when morale broken."
         }
       ]
     },

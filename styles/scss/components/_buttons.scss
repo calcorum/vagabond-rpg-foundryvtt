@@ -33,13 +33,38 @@
     padding: 0;
     background-color: transparent;
     border-color: transparent;
+    color: $color-text-primary;
 
     &:hover:not(:disabled) {
       background-color: $color-parchment-dark;
+      color: $color-accent-primary;
     }
 
     i {
       font-size: $font-size-base;
+    }
+  }
+
+  // Small icon button (for +/- resource buttons)
+  .btn-icon-sm {
+    @include button-base;
+    @include flex-center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: $color-parchment;
+    border: 1px solid $color-border;
+    color: $color-text-primary;
+
+    &:hover:not(:disabled) {
+      background-color: $color-parchment-dark;
+      border-color: $color-accent-primary;
+      color: $color-accent-primary;
+    }
+
+    i {
+      font-size: 10px;
+      color: inherit;
     }
   }
 

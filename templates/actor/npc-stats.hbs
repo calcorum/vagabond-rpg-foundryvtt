@@ -1,0 +1,136 @@
+{{!-- NPC Sheet Stats Section --}}
+<section class="npc-stats">
+  <div class="stats-row">
+    {{!-- Zone --}}
+    <div class="stat-group zone">
+      <label>{{localize "VAGABOND.Zone"}}</label>
+      <select name="system.zone">
+        {{#each zoneOptions}}
+        <option value="{{@key}}" {{#if (eq @key ../zone)}}selected{{/if}}>
+          {{localize this}}
+        </option>
+        {{/each}}
+      </select>
+      <p class="zone-hint">{{zoneBehavior}}</p>
+    </div>
+
+    {{!-- Speed --}}
+    <div class="stat-group speed">
+      <label>{{localize "VAGABOND.Speed"}}</label>
+      <div class="speed-values">
+        <div class="speed-item walk">
+          <i class="fa-solid fa-shoe-prints"></i>
+          <input type="number" name="system.speed.value" value="{{speed.walk}}" min="0" />
+          <span class="unit">ft</span>
+        </div>
+        {{#if speed.hasSpecialMovement}}
+        {{#if speed.fly}}
+        <div class="speed-item fly">
+          <i class="fa-solid fa-feather"></i>
+          <input type="number" name="system.speed.fly" value="{{speed.fly}}" min="0" />
+          <span class="unit">ft</span>
+        </div>
+        {{/if}}
+        {{#if speed.swim}}
+        <div class="speed-item swim">
+          <i class="fa-solid fa-water"></i>
+          <input type="number" name="system.speed.swim" value="{{speed.swim}}" min="0" />
+          <span class="unit">ft</span>
+        </div>
+        {{/if}}
+        {{#if speed.climb}}
+        <div class="speed-item climb">
+          <i class="fa-solid fa-mountain"></i>
+          <input type="number" name="system.speed.climb" value="{{speed.climb}}" min="0" />
+          <span class="unit">ft</span>
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+    </div>
+
+    {{!-- Size & Type --}}
+    <div class="stat-group type">
+      <div class="type-field">
+        <label>{{localize "VAGABOND.Size"}}</label>
+        <select name="system.size">
+          {{#each sizeOptions}}
+          <option value="{{@key}}" {{#if (eq @key ../size)}}selected{{/if}}>
+            {{localize this}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="type-field">
+        <label>{{localize "VAGABOND.BeingType"}}</label>
+        <select name="system.beingType">
+          {{#each beingTypeOptions}}
+          <option value="{{@key}}" {{#if (eq @key ../beingType)}}selected{{/if}}>
+            {{localize this}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    {{!-- Appearing --}}
+    <div class="stat-group appearing">
+      <label>{{localize "VAGABOND.Appearing"}}</label>
+      <input type="text" name="system.appearing" value="{{appearing}}" placeholder="1d6" />
+    </div>
+  </div>
+
+  {{!-- Senses --}}
+  {{#if hasSenses}}
+  <div class="senses-row">
+    <label>{{localize "VAGABOND.Senses"}}:</label>
+    {{#if senses.darksight}}
+    <span class="sense-tag">{{localize "VAGABOND.Darksight"}}</span>
+    {{/if}}
+    {{#if senses.blindsight}}
+    <span class="sense-tag">{{localize "VAGABOND.Blindsight"}} {{senses.blindsight}} ft</span>
+    {{/if}}
+    {{#if senses.tremorsense}}
+    <span class="sense-tag">{{localize "VAGABOND.Tremorsense"}} {{senses.tremorsense}} ft</span>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{!-- Damage Modifiers --}}
+  {{#if hasDamageModifiers}}
+  <div class="damage-modifiers">
+    {{#if immunities.length}}
+    <div class="modifier-row immunities">
+      <label>{{localize "VAGABOND.Immunities"}}:</label>
+      <div class="modifier-tags">
+        {{#each immunities}}
+        <span class="modifier-tag immune">{{this}}</span>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if resistances.length}}
+    <div class="modifier-row resistances">
+      <label>{{localize "VAGABOND.Resistances"}}:</label>
+      <div class="modifier-tags">
+        {{#each resistances}}
+        <span class="modifier-tag resist">{{this}}</span>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if weaknesses.length}}
+    <div class="modifier-row weaknesses">
+      <label>{{localize "VAGABOND.Weaknesses"}}:</label>
+      <div class="modifier-tags">
+        {{#each weaknesses}}
+        <span class="modifier-tag weak">{{this}}</span>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+</section>

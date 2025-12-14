@@ -1,0 +1,45 @@
+{{!-- NPC Sheet Abilities Section --}}
+<section class="npc-abilities">
+  <div class="section-header-row">
+    <h2 class="section-header">{{localize "VAGABOND.Abilities"}}</h2>
+    <button type="button" class="ability-add" data-action="addAbility"
+            data-tooltip="{{localize 'VAGABOND.AddAbility'}}">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+
+  <ul class="ability-list">
+    {{#each abilities}}
+    <li class="ability-item" data-ability-index="{{this.index}}">
+      <div class="ability-header">
+        <input type="text" class="ability-name" name="system.abilities.{{this.index}}.name"
+               value="{{this.name}}" placeholder="{{localize 'VAGABOND.AbilityName'}}" />
+        <div class="ability-controls">
+          <label class="ability-passive">
+            <input type="checkbox" name="system.abilities.{{this.index}}.passive"
+                   {{#if this.passive}}checked{{/if}} />
+            {{localize "VAGABOND.Passive"}}
+          </label>
+          <button type="button" class="ability-delete" data-action="deleteAbility"
+                  data-ability-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.DeleteAbility'}}">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="ability-description">
+        <textarea name="system.abilities.{{this.index}}.description"
+                  placeholder="{{localize 'VAGABOND.AbilityDescription'}}">{{this.description}}</textarea>
+      </div>
+    </li>
+    {{else}}
+    <li class="ability-item empty">
+      <p>{{localize "VAGABOND.NoAbilities"}}</p>
+      <button type="button" data-action="addAbility">
+        <i class="fa-solid fa-plus"></i>
+        {{localize "VAGABOND.AddAbility"}}
+      </button>
+    </li>
+    {{/each}}
+  </ul>
+</section>

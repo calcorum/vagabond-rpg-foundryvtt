@@ -1,0 +1,110 @@
+{{!-- Character Sheet Main Tab --}}
+<section class="sheet-body tab-content main-tab">
+  <div class="main-grid">
+    {{!-- Left Column: Stats --}}
+    <div class="stats-column">
+      <h2 class="section-header">{{localize "VAGABOND.Stats"}}</h2>
+      <div class="stats-grid">
+        {{#each stats}}
+        <div class="stat-block {{this.color}}">
+          <label class="stat-label" data-tooltip="{{localize this.label}}">{{this.abbr}}</label>
+          <input type="number" class="stat-value" name="{{this.path}}"
+                 value="{{this.value}}" min="1" max="10" />
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- Center Column: Saves & Skills --}}
+    <div class="center-column">
+      {{!-- Saves Section --}}
+      <div class="saves-section">
+        <h2 class="section-header">{{localize "VAGABOND.Saves"}}</h2>
+        <div class="saves-list">
+          {{#each saves}}
+          <div class="save-row" data-action="rollSave" data-save="{{this.id}}">
+            <span class="save-label">{{localize this.label}}</span>
+            <span class="save-stats">({{this.stats}})</span>
+            <span class="save-difficulty">{{this.difficulty}}</span>
+            <i class="fa-solid fa-dice-d20 roll-icon"></i>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Skills Section --}}
+      <div class="skills-section">
+        <h2 class="section-header">{{localize "VAGABOND.Skills"}}</h2>
+        <div class="skills-grid">
+          {{#each skills}}
+          <div class="skill-row {{#if this.trained}}trained{{/if}}" data-skill="{{this.id}}">
+            <button type="button" class="skill-trained-toggle"
+                    data-action="toggleTrained" data-skill="{{this.id}}"
+                    data-tooltip="{{localize 'VAGABOND.ToggleTrained'}}">
+              {{#if this.trained}}
+              <i class="fa-solid fa-check"></i>
+              {{else}}
+              <i class="fa-regular fa-circle"></i>
+              {{/if}}
+            </button>
+            <span class="skill-name">{{localize this.label}}</span>
+            <span class="skill-stat">({{this.statAbbr}})</span>
+            <span class="skill-difficulty">{{this.difficulty}}</span>
+            {{#if this.hasCritBonus}}
+            <span class="skill-crit" data-tooltip="{{localize 'VAGABOND.CritThreshold'}}">
+              <i class="fa-solid fa-star"></i>{{this.critThreshold}}
+            </span>
+            {{/if}}
+            <button type="button" class="skill-roll-btn"
+                    data-action="rollSkill" data-skill="{{this.id}}"
+                    data-tooltip="{{localize 'VAGABOND.RollSkill'}}">
+              <i class="fa-solid fa-dice-d20"></i>
+            </button>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    {{!-- Right Column: Attacks & Weapons --}}
+    <div class="attacks-column">
+      {{!-- Attack Skills --}}
+      <div class="attack-skills-section">
+        <h2 class="section-header">{{localize "VAGABOND.Attacks"}}</h2>
+        <div class="attack-skills-grid">
+          {{#each attackSkills}}
+          <div class="attack-skill-row" data-action="rollAttack" data-attack-skill="{{this.id}}">
+            <span class="attack-name">{{localize this.label}}</span>
+            <span class="attack-stat">({{this.statAbbr}})</span>
+            <span class="attack-difficulty">{{this.difficulty}}</span>
+            {{#if this.hasCritBonus}}
+            <span class="attack-crit">
+              <i class="fa-solid fa-star"></i>{{this.critThreshold}}
+            </span>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Equipped Weapons --}}
+      <div class="equipped-weapons-section">
+        <h3 class="subsection-header">{{localize "VAGABOND.EquippedWeapons"}}</h3>
+        <ul class="weapon-list">
+          {{#each items.weapons}}
+          {{#if this.system.equipped}}
+          <li class="weapon-item" data-item-id="{{this.id}}">
+            <span class="weapon-name" data-action="itemEdit">{{this.name}}</span>
+            <span class="weapon-damage">{{this.system.damage}}</span>
+            <button type="button" class="weapon-roll" data-action="rollAttack"
+                    data-weapon-id="{{this.id}}" data-tooltip="{{localize 'VAGABOND.RollAttack'}}">
+              <i class="fa-solid fa-dice-d20"></i>
+            </button>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{{!-- NPC Sheet Notes Section --}}
+<section class="npc-notes">
+  {{!-- Loot --}}
+  <div class="notes-section loot">
+    <h2 class="section-header">{{localize "VAGABOND.Loot"}}</h2>
+    <div class="editor-container">
+      <textarea name="system.loot"
+                placeholder="{{localize 'VAGABOND.LootPlaceholder'}}">{{loot}}</textarea>
+    </div>
+  </div>
+
+  {{!-- GM Notes --}}
+  <div class="notes-section gm-notes">
+    <h2 class="section-header">{{localize "VAGABOND.GMNotes"}}</h2>
+    <div class="editor-container">
+      <textarea name="system.gmNotes"
+                placeholder="{{localize 'VAGABOND.GMNotesPlaceholder'}}">{{gmNotes}}</textarea>
+    </div>
+  </div>
+</section>

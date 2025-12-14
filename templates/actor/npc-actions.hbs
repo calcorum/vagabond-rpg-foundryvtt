@@ -1,0 +1,80 @@
+{{!-- NPC Sheet Actions Section --}}
+<section class="npc-actions">
+  <div class="section-header-row">
+    <h2 class="section-header">{{localize "VAGABOND.Actions"}}</h2>
+    <button type="button" class="action-add" data-action="addAction"
+            data-tooltip="{{localize 'VAGABOND.AddAction'}}">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+
+  <ul class="action-list">
+    {{#each actions}}
+    <li class="action-item" data-action-index="{{this.index}}">
+      <div class="action-header">
+        <input type="text" class="action-name" name="system.actions.{{this.index}}.name"
+               value="{{this.name}}" placeholder="{{localize 'VAGABOND.ActionName'}}" />
+        <div class="action-controls">
+          <button type="button" class="action-roll" data-action="rollAction"
+                  data-action-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.RollAction'}}">
+            <i class="fa-solid fa-dice-d20"></i>
+          </button>
+          <button type="button" class="action-delete" data-action="deleteAction"
+                  data-action-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.DeleteAction'}}">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="action-details">
+        <div class="action-field attack-type">
+          <label>{{localize "VAGABOND.AttackType"}}</label>
+          <select name="system.actions.{{this.index}}.attackType">
+            {{#each ../attackTypeOptions}}
+            <option value="{{@key}}" {{#if (eq @key ../this.attackType)}}selected{{/if}}>
+              {{localize this}}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="action-field damage">
+          <label>{{localize "VAGABOND.Damage"}}</label>
+          <input type="text" name="system.actions.{{this.index}}.damage"
+                 value="{{this.damage}}" placeholder="1d6" />
+        </div>
+
+        <div class="action-field damage-type">
+          <label>{{localize "VAGABOND.DamageType"}}</label>
+          <select name="system.actions.{{this.index}}.damageType">
+            {{#each ../damageTypeOptions}}
+            <option value="{{@key}}" {{#if (eq @key ../this.damageType)}}selected{{/if}}>
+              {{localize this}}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="action-field range">
+          <label>{{localize "VAGABOND.Range"}}</label>
+          <input type="text" name="system.actions.{{this.index}}.range"
+                 value="{{this.range}}" placeholder="60 ft" />
+        </div>
+      </div>
+
+      <div class="action-description">
+        <textarea name="system.actions.{{this.index}}.description"
+                  placeholder="{{localize 'VAGABOND.ActionDescription'}}">{{this.description}}</textarea>
+      </div>
+    </li>
+    {{else}}
+    <li class="action-item empty">
+      <p>{{localize "VAGABOND.NoActions"}}</p>
+      <button type="button" data-action="addAction">
+        <i class="fa-solid fa-plus"></i>
+        {{localize "VAGABOND.AddAction"}}
+      </button>
+    </li>
+    {{/each}}
+  </ul>
+</section>

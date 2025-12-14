@@ -1,0 +1,122 @@
+{{!-- Character Sheet Inventory Tab --}}
+<section class="sheet-body tab-content inventory-tab">
+  {{!-- Item Slots Header --}}
+  <div class="inventory-header">
+    <div class="item-slots {{#if itemSlots.overburdened}}overburdened{{/if}}">
+      <span class="slots-label">{{localize "VAGABOND.ItemSlots"}}:</span>
+      <span class="slots-used">{{itemSlots.used}}</span>
+      <span class="slots-separator">/</span>
+      <span class="slots-max">{{itemSlots.max}}</span>
+      {{#if itemSlots.overburdened}}
+      <span class="overburdened-warning">
+        <i class="fa-solid fa-exclamation-triangle"></i>
+        {{localize "VAGABOND.Overburdened"}}
+      </span>
+      {{/if}}
+    </div>
+
+    <div class="wealth">
+      <div class="currency gold">
+        <input type="number" name="system.wealth.gold" value="{{wealth.gold}}" min="0" />
+        <label>{{localize "VAGABOND.Gold"}}</label>
+      </div>
+      <div class="currency silver">
+        <input type="number" name="system.wealth.silver" value="{{wealth.silver}}" min="0" />
+        <label>{{localize "VAGABOND.Silver"}}</label>
+      </div>
+      <div class="currency copper">
+        <input type="number" name="system.wealth.copper" value="{{wealth.copper}}" min="0" />
+        <label>{{localize "VAGABOND.Copper"}}</label>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Weapons Section --}}
+  <div class="inventory-section weapons">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Weapons"}}</h2>
+      <button type="button" class="item-create" data-action="itemCreate" data-type="weapon"
+              data-tooltip="{{localize 'VAGABOND.CreateWeapon'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+    <ul class="item-list">
+      {{#each items.weapons}}
+      <li class="item-row" data-item-id="{{this.id}}">
+        <img class="item-img" src="{{this.img}}" alt="{{this.name}}" />
+        <span class="item-name" data-action="itemEdit">{{this.name}}</span>
+        <span class="item-damage">{{this.system.damage}}</span>
+        <span class="item-slots">{{this.system.slots}} slot{{#if (gt this.system.slots 1)}}s{{/if}}</span>
+        <button type="button" class="item-equipped {{#if this.system.equipped}}active{{/if}}"
+                data-action="itemToggleEquipped" data-tooltip="{{localize 'VAGABOND.ToggleEquipped'}}">
+          <i class="fa-solid fa-shield-halved"></i>
+        </button>
+        <button type="button" class="item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="item-row empty">{{localize "VAGABOND.NoWeapons"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- Armor Section --}}
+  <div class="inventory-section armor">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Armor"}}</h2>
+      <button type="button" class="item-create" data-action="itemCreate" data-type="armor"
+              data-tooltip="{{localize 'VAGABOND.CreateArmor'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+    <ul class="item-list">
+      {{#each items.armor}}
+      <li class="item-row" data-item-id="{{this.id}}">
+        <img class="item-img" src="{{this.img}}" alt="{{this.name}}" />
+        <span class="item-name" data-action="itemEdit">{{this.name}}</span>
+        <span class="item-armor-value">+{{this.system.armorValue}} Armor</span>
+        <span class="item-slots">{{this.system.slots}} slot{{#if (gt this.system.slots 1)}}s{{/if}}</span>
+        <button type="button" class="item-equipped {{#if this.system.equipped}}active{{/if}}"
+                data-action="itemToggleEquipped" data-tooltip="{{localize 'VAGABOND.ToggleEquipped'}}">
+          <i class="fa-solid fa-shield-halved"></i>
+        </button>
+        <button type="button" class="item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="item-row empty">{{localize "VAGABOND.NoArmor"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- Equipment Section --}}
+  <div class="inventory-section equipment">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Equipment"}}</h2>
+      <button type="button" class="item-create" data-action="itemCreate" data-type="equipment"
+              data-tooltip="{{localize 'VAGABOND.CreateEquipment'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+    <ul class="item-list">
+      {{#each items.equipment}}
+      <li class="item-row" data-item-id="{{this.id}}">
+        <img class="item-img" src="{{this.img}}" alt="{{this.name}}" />
+        <span class="item-name" data-action="itemEdit">{{this.name}}</span>
+        <span class="item-quantity">x{{this.system.quantity}}</span>
+        <span class="item-slots">{{this.system.slots}} slot{{#if (gt this.system.slots 1)}}s{{/if}}</span>
+        <button type="button" class="item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="item-row empty">{{localize "VAGABOND.NoEquipment"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+{{!-- NPC Sheet Header --}}
+<header class="sheet-header npc-header">
+  <div class="header-portrait">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}"
+         data-edit="img" data-tooltip="VAGABOND.ChangePortrait" />
+  </div>
+
+  <div class="header-info">
+    <h1 class="actor-name">
+      <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'VAGABOND.NPCName'}}" />
+    </h1>
+
+    <div class="header-stats">
+      <div class="stat-box hd">
+        <label>HD</label>
+        <input type="number" name="system.hd" value="{{hd}}" min="0" />
+      </div>
+
+      <div class="stat-box tl">
+        <label>TL</label>
+        <input type="number" name="system.tl" value="{{tl}}" min="0" step="0.1" />
+      </div>
+
+      <div class="stat-box armor">
+        <label>{{localize "VAGABOND.Armor"}}</label>
+        <input type="number" name="system.armor" value="{{armor}}" min="0" />
+      </div>
+
+      <div class="stat-box morale">
+        <label>{{localize "VAGABOND.Morale"}}</label>
+        <input type="number" name="system.morale" value="{{morale}}" min="2" max="12" />
+        <button type="button" class="morale-roll" data-action="rollMorale"
+                data-tooltip="{{localize 'VAGABOND.RollMorale'}}"
+                {{#if moraleStatus.broken}}disabled{{/if}}>
+          <i class="fa-solid fa-dice"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-hp">
+    <div class="hp-bar {{#if hp.isDead}}dead{{else if hp.isHalf}}half{{/if}}">
+      <label>HP</label>
+      <div class="bar-container">
+        <div class="bar-fill" style="width: {{hp.percent}}%"></div>
+        <div class="bar-values">
+          <input type="number" name="system.hp.value" value="{{hp.value}}" min="0" />
+          <span class="separator">/</span>
+          <input type="number" name="system.hp.max" value="{{hp.max}}" min="1" />
+        </div>
+      </div>
+    </div>
+
+    {{#if moraleStatus.broken}}
+    <div class="morale-broken">
+      <i class="fa-solid fa-flag"></i>
+      {{localize "VAGABOND.MoraleBroken"}}
+    </div>
+    {{/if}}
+  </div>
+</header>

@@ -1,0 +1,121 @@
+{{!-- Character Sheet Abilities Tab --}}
+<section class="sheet-body tab-content abilities-tab">
+  {{!-- Ancestry Section --}}
+  {{#if ancestry}}
+  <div class="abilities-section ancestry">
+    <h2 class="section-header">{{localize "VAGABOND.Ancestry"}}</h2>
+    <div class="ancestry-block" data-item-id="{{ancestry.id}}">
+      <div class="ancestry-header">
+        <img class="ancestry-img" src="{{ancestry.img}}" alt="{{ancestry.name}}" />
+        <div class="ancestry-info">
+          <span class="ancestry-name" data-action="itemEdit">{{ancestry.name}}</span>
+          <span class="ancestry-being-type">{{ancestry.system.beingType}}</span>
+          <span class="ancestry-size">{{ancestry.system.size}}</span>
+        </div>
+      </div>
+      {{#if ancestry.system.traits.length}}
+      <div class="ancestry-traits">
+        {{#each ancestry.system.traits}}
+        <div class="trait">
+          <strong>{{this.name}}:</strong> {{{this.description}}}
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- Class Features Section --}}
+  <div class="abilities-section features">
+    <h2 class="section-header">{{localize "VAGABOND.Features"}}</h2>
+    <ul class="ability-list">
+      {{#each items.features}}
+      <li class="ability-item" data-item-id="{{this.id}}">
+        <img class="ability-img" src="{{this.img}}" alt="{{this.name}}" />
+        <div class="ability-info">
+          <span class="ability-name" data-action="itemEdit">{{this.name}}</span>
+          {{#if this.system.sourceClass}}
+          <span class="ability-source">{{this.system.sourceClass}} Lv{{this.system.levelGained}}</span>
+          {{/if}}
+        </div>
+        <div class="ability-description">{{{this.system.description}}}</div>
+        <button type="button" class="item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="ability-item empty">{{localize "VAGABOND.NoFeatures"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- Perks Section --}}
+  <div class="abilities-section perks">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Perks"}}</h2>
+      <button type="button" class="item-create" data-action="itemCreate" data-type="perk"
+              data-tooltip="{{localize 'VAGABOND.CreatePerk'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+    <ul class="ability-list">
+      {{#each items.perks}}
+      <li class="ability-item" data-item-id="{{this.id}}">
+        <img class="ability-img" src="{{this.img}}" alt="{{this.name}}" />
+        <div class="ability-info">
+          <span class="ability-name" data-action="itemEdit">{{this.name}}</span>
+          {{#if this.system.prerequisites}}
+          <span class="ability-prereqs">{{this.system.prerequisites}}</span>
+          {{/if}}
+        </div>
+        <div class="ability-description">{{{this.system.description}}}</div>
+        <button type="button" class="item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="ability-item empty">{{localize "VAGABOND.NoPerks"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- Active Effects Section --}}
+  <div class="abilities-section effects">
+    <h2 class="section-header">{{localize "VAGABOND.ActiveEffects"}}</h2>
+
+    {{#if effects.temporary.length}}
+    <div class="effects-group temporary">
+      <h3 class="subsection-header">{{localize "VAGABOND.TemporaryEffects"}}</h3>
+      <ul class="effect-list">
+        {{#each effects.temporary}}
+        <li class="effect-item">
+          <img class="effect-icon" src="{{this.icon}}" alt="{{this.name}}" />
+          <span class="effect-name">{{this.name}}</span>
+          {{#if this.duration.remaining}}
+          <span class="effect-duration">{{this.duration.remaining}} rounds</span>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if effects.passive.length}}
+    <div class="effects-group passive">
+      <h3 class="subsection-header">{{localize "VAGABOND.PassiveEffects"}}</h3>
+      <ul class="effect-list">
+        {{#each effects.passive}}
+        <li class="effect-item">
+          <img class="effect-icon" src="{{this.icon}}" alt="{{this.name}}" />
+          <span class="effect-name">{{this.name}}</span>
+          <span class="effect-source">{{this.parent.name}}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+</section>

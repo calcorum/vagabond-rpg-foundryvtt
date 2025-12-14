@@ -1,0 +1,118 @@
+{{!-- Character Sheet Header --}}
+<header class="sheet-header">
+  <div class="header-left">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}"
+         data-edit="img" data-tooltip="VAGABOND.ChangePortrait" />
+  </div>
+
+  <div class="header-center">
+    <h1 class="actor-name">
+      <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'VAGABOND.CharacterName'}}" />
+    </h1>
+
+    <div class="header-fields">
+      <div class="header-field">
+        <label>{{localize "VAGABOND.Ancestry"}}</label>
+        <span class="ancestry-name">{{ancestryName}}</span>
+      </div>
+
+      <div class="header-field">
+        <label>{{localize "VAGABOND.Class"}}</label>
+        <span class="class-name">{{className}}</span>
+      </div>
+
+      <div class="header-field">
+        <label>{{localize "VAGABOND.Level"}}</label>
+        <input type="number" name="system.level" value="{{system.level}}" min="1" max="10" />
+      </div>
+
+      <div class="header-field">
+        <label>{{localize "VAGABOND.XP"}}</label>
+        <input type="number" name="system.xp" value="{{system.xp}}" min="0" />
+      </div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <div class="resource-bars">
+      {{!-- HP Bar --}}
+      <div class="resource-bar hp {{resources.hp.color}}">
+        <label>{{localize resources.hp.label}}</label>
+        <div class="bar-row">
+          <div class="bar-container">
+            <div class="bar-fill" style="width: {{resources.hp.percent}}%"></div>
+            <div class="bar-values">
+              <input type="number" name="system.resources.hp.value" value="{{resources.hp.value}}" min="0" />
+              <span class="separator">/</span>
+              <span class="max">{{resources.hp.max}}</span>
+            </div>
+          </div>
+          <div class="resource-buttons">
+            <button type="button" data-action="modifyResource" data-resource="hp" data-delta="-1"
+                    data-tooltip="{{localize 'VAGABOND.Damage'}}">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button type="button" data-action="modifyResource" data-resource="hp" data-delta="1"
+                    data-tooltip="{{localize 'VAGABOND.Heal'}}">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Mana Bar --}}
+      {{#if resources.mana.max}}
+      <div class="resource-bar mana">
+        <label>{{localize resources.mana.label}}</label>
+        <div class="bar-row">
+          <div class="bar-container">
+            <div class="bar-fill" style="width: {{resources.mana.percent}}%"></div>
+            <div class="bar-values">
+              <input type="number" name="system.resources.mana.value" value="{{resources.mana.value}}" min="0" />
+              <span class="separator">/</span>
+              <span class="max">{{resources.mana.max}}</span>
+            </div>
+          </div>
+          <div class="resource-buttons">
+            <button type="button" data-action="modifyResource" data-resource="mana" data-delta="-1">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button type="button" data-action="modifyResource" data-resource="mana" data-delta="1">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+
+    <div class="secondary-resources">
+      <div class="resource luck">
+        <label>{{localize resources.luck.label}}</label>
+        <input type="number" name="system.resources.luck.value"
+               value="{{resources.luck.value}}" min="0" max="{{resources.luck.max}}" />
+        <span class="separator">/</span>
+        <span class="max">{{resources.luck.max}}</span>
+      </div>
+
+      <div class="resource fatigue {{#if resources.fatigue.isDangerous}}danger{{/if}}">
+        <label>{{localize resources.fatigue.label}}</label>
+        <input type="number" name="system.resources.fatigue.value"
+               value="{{resources.fatigue.value}}" min="0" max="5" />
+        <span class="separator">/</span>
+        <span class="max">5</span>
+      </div>
+
+      <div class="resource armor">
+        <label>{{localize "VAGABOND.Armor"}}</label>
+        <span class="value">{{system.armor}}</span>
+      </div>
+
+      <div class="resource speed">
+        <label>{{localize "VAGABOND.Speed"}}</label>
+        <span class="value">{{speed.walk}}</span>
+        <span class="unit">ft</span>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+{{!-- Sheet Tabs Navigation --}}
+{{#if tabs.length}}
+<nav class="sheet-tabs">
+  {{#each tabs}}
+  <button type="button" class="tab-button {{this.cssClass}}"
+          data-action="changeTab" data-tab="{{this.id}}"
+          data-tooltip="{{localize this.label}}">
+    <i class="{{this.icon}}"></i>
+    <span class="tab-label">{{localize this.label}}</span>
+  </button>
+  {{/each}}
+</nav>
+{{/if}}

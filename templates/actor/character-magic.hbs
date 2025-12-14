@@ -1,0 +1,114 @@
+{{!-- Character Sheet Magic Tab --}}
+<section class="sheet-body tab-content magic-tab">
+  {{!-- Mana Display --}}
+  <div class="magic-header">
+    <div class="mana-display">
+      <label>{{localize "VAGABOND.Mana"}}</label>
+      <div class="mana-values">
+        <input type="number" name="system.resources.mana.value"
+               value="{{resources.mana.value}}" min="0" max="{{resources.mana.max}}" />
+        <span class="separator">/</span>
+        <span class="max">{{resources.mana.max}}</span>
+      </div>
+      {{#if resources.mana.castingMax}}
+      <div class="casting-max">
+        <span class="label">{{localize "VAGABOND.CastingMax"}}:</span>
+        <span class="value">{{resources.mana.castingMax}}</span>
+      </div>
+      {{/if}}
+    </div>
+
+    {{!-- Focus Status --}}
+    {{#if hasFocus}}
+    <div class="focus-display">
+      <h3>{{localize "VAGABOND.FocusActive"}}</h3>
+      <ul class="focus-list">
+        {{#each focus.active}}
+        <li class="focus-item">
+          <span class="focus-spell">{{this.spellName}}</span>
+          {{#if this.target}}
+          <span class="focus-target">on {{this.target}}</span>
+          {{/if}}
+          {{#if this.manaCostPerRound}}
+          <span class="focus-cost">{{this.manaCostPerRound}} Mana/round</span>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Known Spells Section --}}
+  <div class="spells-section">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.KnownSpells"}}</h2>
+      <button type="button" class="item-create" data-action="itemCreate" data-type="spell"
+              data-tooltip="{{localize 'VAGABOND.CreateSpell'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <ul class="spell-list">
+      {{#each items.spells}}
+      <li class="spell-item" data-item-id="{{this.id}}">
+        <img class="spell-img" src="{{this.img}}" alt="{{this.name}}" />
+        <div class="spell-info">
+          <span class="spell-name" data-action="itemEdit">{{this.name}}</span>
+          <span class="spell-type">{{this.system.damageType}}</span>
+        </div>
+        <div class="spell-details">
+          {{#if this.system.baseDamage}}
+          <span class="spell-damage">
+            <i class="fa-solid fa-burst"></i>
+            {{this.system.baseDamage}}
+          </span>
+          {{/if}}
+          {{#if this.system.baseEffect}}
+          <span class="spell-effect" data-tooltip="{{this.system.baseEffect}}">
+            <i class="fa-solid fa-wand-sparkles"></i>
+            Effect
+          </span>
+          {{/if}}
+        </div>
+        <div class="spell-actions">
+          <button type="button" class="spell-cast" data-action="castSpell" data-spell-id="{{this.id}}"
+                  data-tooltip="{{localize 'VAGABOND.CastSpell'}}">
+            <i class="fa-solid fa-magic"></i>
+            {{localize "VAGABOND.Cast"}}
+          </button>
+          <button type="button" class="item-delete" data-action="itemDelete"
+                  data-tooltip="{{localize 'VAGABOND.DeleteItem'}}">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </li>
+      {{else}}
+      <li class="spell-item empty">{{localize "VAGABOND.NoSpells"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- Spell Casting Reference --}}
+  <div class="casting-reference">
+    <h3>{{localize "VAGABOND.SpellcastingReference"}}</h3>
+    <div class="reference-grid">
+      <div class="reference-section delivery">
+        <h4>{{localize "VAGABOND.Delivery"}}</h4>
+        <ul>
+          <li><strong>Touch/Remote/Imbue:</strong> 0 Mana</li>
+          <li><strong>Cube:</strong> +1 Mana</li>
+          <li><strong>Aura/Cone/Glyph/Line/Sphere:</strong> +2 Mana</li>
+        </ul>
+      </div>
+      <div class="reference-section duration">
+        <h4>{{localize "VAGABOND.Duration"}}</h4>
+        <ul>
+          <li><strong>Instant:</strong> Immediate effect</li>
+          <li><strong>Focus:</strong> Maintained (1 Mana/round vs unwilling)</li>
+          <li><strong>Continual:</strong> Lasts until conditions met</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

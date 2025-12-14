@@ -3,6 +3,8 @@
  * @module vagabond
  */
 
+/* global Actors */
+
 // Import configuration
 import { VAGABOND } from "./helpers/config.mjs";
 
@@ -33,11 +35,7 @@ import {
 } from "./applications/_module.mjs";
 
 // Import sheet classes
-// import { VagabondCharacterSheet } from "./sheets/actor-sheet.mjs";
-// import { VagabondItemSheet } from "./sheets/item-sheet.mjs";
-
-// Import helper functions
-// import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
+import { VagabondActorSheet, VagabondCharacterSheet, VagabondNPCSheet } from "./sheets/_module.mjs";
 
 // Import test registration (for Quench)
 import { registerQuenchTests } from "./tests/quench-init.mjs";
@@ -47,9 +45,34 @@ import { registerQuenchTests } from "./tests/quench-init.mjs";
 /* -------------------------------------------- */
 
 /**
+ * Preload Handlebars templates.
+ * @returns {Promise}
+ */
+async function preloadHandlebarsTemplates() {
+  const templatePaths = [
+    // Character sheet parts
+    "systems/vagabond/templates/actor/character-header.hbs",
+    "systems/vagabond/templates/actor/character-main.hbs",
+    "systems/vagabond/templates/actor/character-inventory.hbs",
+    "systems/vagabond/templates/actor/character-abilities.hbs",
+    "systems/vagabond/templates/actor/character-magic.hbs",
+    "systems/vagabond/templates/actor/character-biography.hbs",
+    "systems/vagabond/templates/actor/parts/tabs.hbs",
+    // NPC sheet parts
+    "systems/vagabond/templates/actor/npc-header.hbs",
+    "systems/vagabond/templates/actor/npc-stats.hbs",
+    "systems/vagabond/templates/actor/npc-actions.hbs",
+    "systems/vagabond/templates/actor/npc-abilities.hbs",
+    "systems/vagabond/templates/actor/npc-notes.hbs",
+  ];
+
+  return loadTemplates(templatePaths);
+}
+
+/**
  * Init hook - runs once when Foundry initializes
  */
-Hooks.once("init", () => {
+Hooks.once("init", async () => {
   // eslint-disable-next-line no-console
   console.log("Vagabond RPG | Initializing Vagabond RPG System");
 
@@ -65,6 +88,11 @@ Hooks.once("init", () => {
       SaveRollDialog,
       SpellCastDialog,
       FavorHinderDebug,
+    },
+    sheets: {
+      VagabondActorSheet,
+      VagabondCharacterSheet,
+      VagabondNPCSheet,
     },
   };
 
@@ -90,22 +118,28 @@ Hooks.once("init", () => {
   CONFIG.Actor.documentClass = VagabondActor;
   CONFIG.Item.documentClass = VagabondItem;
 
-  // Register sheet application classes (TODO: Phase 3-4)
-  // Actors.unregisterSheet("core", ActorSheet);
-  // Actors.registerSheet("vagabond", VagabondCharacterSheet, {
-  //   types: ["character"],
-  //   makeDefault: true,
-  //   label: "VAGABOND.SheetCharacter"
-  // });
+  // Register Actor sheet classes
+  Actors.unregisterSheet("core", ActorSheet);
+  Actors.registerSheet("vagabond", VagabondCharacterSheet, {
+    types: ["character"],
+    makeDefault: true,
+    label: "VAGABOND.SheetCharacter",
+  });
+  Actors.registerSheet("vagabond", VagabondNPCSheet, {
+    types: ["npc"],
+    makeDefault: true,
+    label: "VAGABOND.SheetNPC",
+  });
 
+  // Register Item sheet classes (TODO: Phase 4)
   // Items.unregisterSheet("core", ItemSheet);
   // Items.registerSheet("vagabond", VagabondItemSheet, {
   //   makeDefault: true,
   //   label: "VAGABOND.SheetItem"
   // });
 
-  // Preload Handlebars templates (TODO: Phase 3)
-  // return preloadHandlebarsTemplates();
+  // Preload Handlebars templates
+  await preloadHandlebarsTemplates();
 });
 
 /* -------------------------------------------- */

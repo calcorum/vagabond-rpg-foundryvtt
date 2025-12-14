@@ -1,0 +1,86 @@
+{{!-- Character Sheet Biography Tab --}}
+<section class="sheet-body tab-content biography-tab">
+  {{!-- Character Details --}}
+  <div class="biography-section details">
+    <h2 class="section-header">{{localize "VAGABOND.CharacterDetails"}}</h2>
+    <div class="details-grid">
+      <div class="detail-field">
+        <label>{{localize "VAGABOND.Size"}}</label>
+        <select name="system.details.size">
+          {{#each sizeOptions}}
+          <option value="{{@key}}" {{#if (eq @key ../details.size)}}selected{{/if}}>
+            {{localize this}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="detail-field">
+        <label>{{localize "VAGABOND.BeingType"}}</label>
+        <select name="system.details.beingType">
+          {{#each beingTypeOptions}}
+          <option value="{{@key}}" {{#if (eq @key ../details.beingType)}}selected{{/if}}>
+            {{localize this}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Languages --}}
+  <div class="biography-section languages">
+    <h2 class="section-header">{{localize "VAGABOND.Languages"}}</h2>
+    <div class="languages-list">
+      {{#each system.languages}}
+      <span class="language-tag">{{this}}</span>
+      {{else}}
+      <span class="no-languages">{{localize "VAGABOND.NoLanguages"}}</span>
+      {{/each}}
+    </div>
+  </div>
+
+  {{!-- Senses --}}
+  <div class="biography-section senses">
+    <h2 class="section-header">{{localize "VAGABOND.Senses"}}</h2>
+    <div class="senses-grid">
+      <div class="sense-field">
+        <label>
+          <input type="checkbox" name="system.senses.darksight"
+                 {{#if system.senses.darksight}}checked{{/if}} />
+          {{localize "VAGABOND.Darksight"}}
+        </label>
+      </div>
+      <div class="sense-field">
+        <label>{{localize "VAGABOND.Blindsight"}}</label>
+        <input type="number" name="system.senses.blindsight"
+               value="{{system.senses.blindsight}}" min="0" />
+        <span class="unit">ft</span>
+      </div>
+      <div class="sense-field">
+        <label>{{localize "VAGABOND.Tremorsense"}}</label>
+        <input type="number" name="system.senses.tremorsense"
+               value="{{system.senses.tremorsense}}" min="0" />
+        <span class="unit">ft</span>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Biography Text --}}
+  <div class="biography-section biography-text">
+    <h2 class="section-header">{{localize "VAGABOND.Biography"}}</h2>
+    <div class="editor-container">
+      <textarea class="biography-editor" name="system.biography"
+                placeholder="{{localize 'VAGABOND.BiographyPlaceholder'}}">{{system.biography}}</textarea>
+    </div>
+  </div>
+
+  {{!-- Notes --}}
+  <div class="biography-section notes">
+    <h2 class="section-header">{{localize "VAGABOND.Notes"}}</h2>
+    <div class="editor-container">
+      <textarea class="notes-editor" name="system.notes"
+                placeholder="{{localize 'VAGABOND.NotesPlaceholder'}}">{{system.notes}}</textarea>
+    </div>
+  </div>
+</section>

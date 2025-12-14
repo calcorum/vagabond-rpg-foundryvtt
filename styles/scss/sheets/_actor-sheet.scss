@@ -1,44 +1,418 @@
 // Vagabond RPG - Actor Sheet Styles
 // ==================================
 
-// Placeholder - will be expanded in Phase 3
+// Base actor sheet styles
 .vagabond.sheet.actor {
   min-width: 600px;
   min-height: 500px;
 
+  // ==========================================
+  // HEADER - Three Column Layout
+  // ==========================================
   .sheet-header {
-    @include flex-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: $spacing-4;
     padding: $spacing-4;
     background-color: $color-parchment-dark;
     border-bottom: 2px solid $color-border;
 
-    .profile-img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border: 2px solid $color-border;
-      border-radius: $radius-md;
+    // Left column - Portrait
+    .header-left {
+      display: flex;
+      align-items: flex-start;
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: none; // Remove border, container provides it
+        border-radius: $radius-md;
+        cursor: pointer;
+        transition: opacity $transition-fast;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
     }
 
-    .header-fields {
+    // Center column - Name and details
+    .header-center {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+      min-width: 200px;
+
+      .actor-name {
+        margin: 0;
+
+        input {
+          @include input-base;
+          width: 100%;
+          font-family: $font-family-header;
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          padding: $spacing-2;
+        }
+      }
+
+      .header-fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-2;
+
+        .header-field {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-1;
+
+          label {
+            font-size: $font-size-xs;
+            font-weight: $font-weight-semibold;
+            color: $color-text-secondary;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+
+          span {
+            font-size: $font-size-sm;
+            color: $color-text-primary;
+          }
+
+          input {
+            @include input-base;
+            padding: $spacing-1 $spacing-2;
+            font-size: $font-size-sm;
+
+            &[type="number"] {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    // Right column - Resources
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-3;
+      min-width: 200px;
+      max-width: 250px;
+    }
+  }
+
+  // ==========================================
+  // RESOURCE BARS (HP, Mana)
+  // ==========================================
+  .resource-bars {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+  }
+
+  .resource-bar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-1;
+
+    > label {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-bold;
+      color: $color-text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+    }
+
+    // The meter container
+    .bar-container {
       flex: 1;
-      margin-left: $spacing-4;
+      position: relative;
+      height: 28px;
+      background-color: $color-parchment-darker;
+      border: 1px solid $color-border;
+      border-radius: $radius-md;
+      overflow: hidden;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.15);
+
+      // The fill bar
+      .bar-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: $radius-md 0 0 $radius-md;
+        transition: width $transition-base;
+      }
+
+      // Values overlay - backdrop pill for legibility
+      .bar-values {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-1;
+        padding: $spacing-1 $spacing-2;
+        background: rgba($color-parchment-light, 0.85);
+        border-radius: $radius-full;
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+
+        input {
+          width: 32px;
+          padding: 2px 4px;
+          font-size: $font-size-sm;
+          font-weight: $font-weight-bold;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid $color-border-light;
+          border-radius: $radius-sm;
+
+          &:focus {
+            background: white;
+            outline: none;
+            border-color: $color-accent-primary;
+          }
+        }
+
+        .separator {
+          color: $color-text-secondary;
+          font-size: $font-size-sm;
+        }
+
+        .max {
+          font-size: $font-size-sm;
+          color: $color-text-secondary;
+        }
+      }
+    }
+
+    // Resource +/- buttons
+    .resource-buttons {
+      display: flex;
+      gap: $spacing-1;
+
+      button {
+        @include button-base;
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background-color: $color-parchment;
+        border: 1px solid $color-border;
+        color: $color-text-primary;
+
+        &:hover:not(:disabled) {
+          background-color: $color-parchment-dark;
+          border-color: $color-accent-primary;
+          color: $color-accent-primary;
+        }
+
+        i {
+          font-size: 10px;
+          color: inherit;
+        }
+      }
+    }
+
+    // HP-specific colors
+    &.hp {
+      .bar-fill {
+        background: linear-gradient(to bottom, $color-danger, darken($color-danger, 10%));
+      }
+
+      &.healthy .bar-fill {
+        background: linear-gradient(to bottom, $color-success, darken($color-success, 10%));
+      }
+
+      &.warning .bar-fill {
+        background: linear-gradient(to bottom, $color-warning, darken($color-warning, 10%));
+      }
+
+      &.critical .bar-fill {
+        background: linear-gradient(to bottom, $color-danger, darken($color-danger, 15%));
+      }
+    }
+
+    // Mana-specific colors
+    &.mana {
+      .bar-fill {
+        background: linear-gradient(to bottom, $color-info, darken($color-info, 10%));
+      }
+    }
+  }
+
+  // ==========================================
+  // SECONDARY RESOURCES (Luck, Fatigue, etc.)
+  // ==========================================
+  .secondary-resources {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2;
+  }
+
+  .resource {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+    padding: $spacing-1 $spacing-2;
+    background-color: $color-parchment;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+
+    label {
+      font-weight: $font-weight-semibold;
+      color: $color-text-secondary;
+      margin-right: auto;
+    }
+
+    .value {
+      font-weight: $font-weight-bold;
+      color: $color-text-primary;
+    }
+
+    .separator {
+      color: $color-text-muted;
+    }
+
+    .max {
+      color: $color-text-secondary;
+    }
+
+    .unit {
+      font-size: $font-size-xs;
+      color: $color-text-muted;
+    }
+
+    input {
+      width: 36px;
+      padding: $spacing-1;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      background: $color-parchment-light;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-sm;
+
+      &:focus {
+        outline: none;
+        border-color: $color-accent-primary;
+      }
+    }
+
+    // Danger state for fatigue
+    &.danger {
+      background-color: rgba($color-danger, 0.1);
+      border-color: $color-danger;
+
+      label,
+      .value {
+        color: $color-danger;
+      }
     }
   }
 }
 
-// Character sheet specific
+// ==========================================
+// CHARACTER SHEET SPECIFIC
+// ==========================================
 .vagabond.sheet.actor.character {
-  // Stats column (left side, matching official sheet)
-  .stats-column {
-    @include flex-column;
-    gap: $spacing-3;
+  // ----------------------------------------
+  // Tab Content Area
+  // ----------------------------------------
+  .tab-content {
     padding: $spacing-4;
-    background-color: $color-parchment-dark;
-    border-right: 2px solid $color-border;
+    background-color: $color-parchment;
+    overflow-y: auto;
+    @include custom-scrollbar;
+
+    // Enable container queries for responsive layout based on sheet width
+    container-type: inline-size;
+    container-name: sheet-content;
+  }
+
+  // ----------------------------------------
+  // Section Headers
+  // ----------------------------------------
+  .section-header {
+    font-family: $font-family-header;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-3 0;
+    padding-bottom: $spacing-2;
+    border-bottom: 2px solid $color-border;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .subsection-header {
+    font-family: $font-family-header;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-text-secondary;
+    margin: $spacing-3 0 $spacing-2 0;
+  }
+
+  // ----------------------------------------
+  // Main Tab Layout
+  // ----------------------------------------
+  .main-tab {
+    .main-grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: $spacing-4;
+
+      // Responsive: stack vertically on narrow container
+      @container sheet-content (max-width: #{$breakpoint-narrow}) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+        .stats-column {
+          order: 1;
+        }
+        .center-column {
+          order: 2;
+        }
+        .attacks-column {
+          order: 3;
+        }
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // Stats Column (Left)
+  // ----------------------------------------
+  .stats-column {
+    min-width: 120px;
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-2;
+    }
 
     .stat-block {
-      text-align: center;
+      @include flex-column;
+      align-items: center;
+      padding: $spacing-2;
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-md;
 
       .stat-label {
         font-family: $font-family-header;
@@ -51,14 +425,333 @@
       }
 
       .stat-value {
-        @include stat-badge;
-        margin: 0 auto;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        font-family: $font-family-header;
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        color: $color-text-primary;
+        background-color: $color-parchment;
+        border: 2px solid $color-border;
+        border-radius: $radius-md;
+
+        &:focus {
+          outline: none;
+          border-color: $color-accent-primary;
+        }
+      }
+    }
+
+    // Responsive: horizontal stats on narrow container
+    @container sheet-content (max-width: #{$breakpoint-narrow}) {
+      min-width: 0;
+
+      .stats-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: $spacing-1;
+      }
+
+      .stat-block {
+        padding: $spacing-1;
+
+        .stat-value {
+          width: 40px;
+          height: 40px;
+          font-size: $font-size-xl;
+        }
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // Center Column (Saves & Skills)
+  // ----------------------------------------
+  .center-column {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  // Saves Section
+  .saves-section {
+    .saves-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+    }
+
+    .save-row {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-2 $spacing-3;
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        background-color: $color-parchment-dark;
+        border-color: $color-accent-primary;
+
+        .roll-icon {
+          color: $color-accent-primary;
+        }
+      }
+
+      .save-label {
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+      }
+
+      .save-stats {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-right: auto;
+      }
+
+      .save-difficulty {
+        font-family: $font-family-header;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        color: $color-text-primary;
+        min-width: 28px;
+        text-align: center;
+      }
+
+      .roll-icon {
+        color: $color-text-muted;
+        transition: color $transition-fast;
+      }
+    }
+  }
+
+  // Skills Section
+  .skills-section {
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-2;
+    }
+
+    .skill-row {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-1 $spacing-2;
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-md;
+      transition: all $transition-fast;
+
+      &:hover {
+        background-color: $color-parchment-dark;
+        border-color: $color-border;
+      }
+
+      &.trained {
+        background-color: rgba($color-success, 0.1);
+        border-color: rgba($color-success, 0.3);
+
+        .skill-trained-toggle {
+          color: $color-success;
+          border-color: $color-success;
+        }
+      }
+
+      .skill-trained-toggle {
+        @include flex-center;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        background: transparent;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+        color: $color-text-muted;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          border-color: $color-accent-primary;
+          color: $color-accent-primary;
+        }
+
+        i {
+          font-size: 10px;
+        }
+      }
+
+      .skill-name {
+        font-weight: $font-weight-medium;
+        color: $color-text-primary;
+        flex: 1;
+      }
+
+      .skill-stat {
+        font-size: $font-size-xs;
+        color: $color-text-secondary;
+      }
+
+      .skill-difficulty {
+        font-family: $font-family-header;
+        font-weight: $font-weight-bold;
+        color: $color-text-primary;
+        min-width: 24px;
+        text-align: center;
+      }
+
+      .skill-crit {
+        font-size: $font-size-xs;
+        color: $color-warning;
+
+        i {
+          margin-right: 2px;
+        }
+      }
+
+      .skill-roll-btn {
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        color: $color-text-muted;
+        cursor: pointer;
+        transition: color $transition-fast;
+
+        &:hover {
+          color: $color-accent-primary;
+        }
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // Attacks Column (Right)
+  // ----------------------------------------
+  .attacks-column {
+    min-width: 180px;
+
+    .attack-skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+    }
+
+    // Responsive: horizontal attacks on narrow container
+    @container sheet-content (max-width: #{$breakpoint-narrow}) {
+      min-width: 0;
+
+      .attack-skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-2;
+      }
+    }
+
+    .attack-skill-row {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-2 $spacing-3;
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        background-color: $color-parchment-dark;
+        border-color: $color-accent-primary;
+      }
+
+      .attack-name {
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+      }
+
+      .attack-stat {
+        font-size: $font-size-xs;
+        color: $color-text-secondary;
+        margin-right: auto;
+      }
+
+      .attack-difficulty {
+        font-family: $font-family-header;
+        font-weight: $font-weight-bold;
+        color: $color-text-primary;
+      }
+
+      .attack-crit {
+        font-size: $font-size-xs;
+        color: $color-warning;
+      }
+    }
+
+    // Equipped Weapons List
+    .weapon-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .weapon-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-2;
+      border-bottom: 1px solid $color-border-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .weapon-name {
+        flex: 1;
+        font-weight: $font-weight-medium;
+        color: $color-text-primary;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-accent-primary;
+        }
+      }
+
+      .weapon-damage {
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+        color: $color-danger;
+      }
+
+      .weapon-roll {
+        @include flex-center;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        background-color: $color-parchment;
+        border: 1px solid $color-border;
+        border-radius: $radius-md;
+        color: $color-text-primary;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: $color-accent-highlight;
+          border-color: $color-accent-primary;
+          color: $color-accent-primary;
+        }
       }
     }
   }
 }
 
-// NPC/Monster sheet specific
+// ==========================================
+// NPC/MONSTER SHEET SPECIFIC
+// ==========================================
 .vagabond.sheet.actor.npc {
   min-width: 400px;
 
