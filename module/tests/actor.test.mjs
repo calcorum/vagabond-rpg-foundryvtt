@@ -359,6 +359,218 @@ export function registerActorTests(quenchRunner) {
           expect(testActor.system.focus.active[0].spellName).to.equal("Telekinesis");
         });
       });
+
+      describe("Resource Management Methods", () => {
+        it("modifyResource changes HP within bounds", async () => {
+          /**
+           * modifyResource() adjusts any resource by a delta value.
+           * Values are clamped between 0 and max.
+           */
+          await testActor.update({ "system.resources.hp.value": 3 });
+
+          // Increase HP
+          await testActor.modifyResource("hp", 2);
+          expect(testActor.system.resources.hp.value).to.equal(5); // max is 5
+
+          // Try to exceed max
+          await testActor.modifyResource("hp", 10);
+          expect(testActor.system.resources.hp.value).to.equal(5); // clamped to max
+
+          // Decrease HP
+          await testActor.modifyResource("hp", -2);
+          expect(testActor.system.resources.hp.value).to.equal(3);
+
+          // Try to go below 0
+          await testActor.modifyResource("hp", -10);
+          expect(testActor.system.resources.hp.value).to.equal(0); // clamped to 0
+        });
+
+        it("applyDamage reduces HP accounting for armor", async () => {
+          /**
+           * applyDamage() subtracts damage from HP after applying armor reduction.
+           * Armor is calculated from equipped armor items in prepareDerivedData.
+           */
+          await testActor.update({ "system.resources.hp.value": 5 });
+
+          // Create equipped armor to get armor value
+          await testActor.createEmbeddedDocuments("Item", [
+            {
+              name: "Leather Armor",
+              type: "armor",
+              "system.armorValue": 2,
+              "system.equipped": true,
+            },
+          ]);
+
+          // 4 damage - 2 armor = 2 actual damage
+          await testActor.applyDamage(4);
+          expect(testActor.system.resources.hp.value).to.equal(3);
+        });
+
+        it("applyDamage can ignore armor when specified", async () => {
+          /**
+           * Some effects bypass armor (piercing, magic, etc.).
+           * Pass ignoreArmor: true to deal full damage.
+           */
+          await testActor.update({ "system.resources.hp.value": 5 });
+
+          // Create equipped armor
+          await testActor.createEmbeddedDocuments("Item", [
+            {
+              name: "Leather Armor",
+              type: "armor",
+              "system.armorValue": 2,
+              "system.equipped": true,
+            },
+          ]);
+
+          await testActor.applyDamage(3, { ignoreArmor: true });
+          expect(testActor.system.resources.hp.value).to.equal(2); // full 3 damage, armor ignored
+        });
+
+        it("applyHealing restores HP up to max", async () => {
+          /**
+           * applyHealing() adds HP, clamped to max.
+           */
+          await testActor.update({ "system.resources.hp.value": 1 });
+
+          await testActor.applyHealing(2);
+          expect(testActor.system.resources.hp.value).to.equal(3);
+
+          // Can't exceed max
+          await testActor.applyHealing(100);
+          expect(testActor.system.resources.hp.value).to.equal(5); // max
+        });
+
+        it("spendMana reduces mana and returns success status", async () => {
+          /**
+           * spendMana() attempts to spend mana for spellcasting.
+           * Returns true if successful, false if insufficient mana.
+           */
+          await testActor.update({
+            "system.resources.mana.value": 5,
+            "system.resources.mana.max": 10,
+          });
+
+          const success1 = await testActor.spendMana(3);
+          expect(success1).to.equal(true);
+          expect(testActor.system.resources.mana.value).to.equal(2);
+
+          // Try to spend more than available
+          const success2 = await testActor.spendMana(5);
+          expect(success2).to.equal(false);
+          expect(testActor.system.resources.mana.value).to.equal(2); // unchanged
+        });
+
+        it("spendLuck reduces luck pool and returns success status", async () => {
+          /**
+           * spendLuck() spends one luck point for rerolls or luck-based abilities.
+           * Returns true if successful, false if no luck remaining.
+           */
+          await testActor.update({ "system.resources.luck.value": 2 });
+
+          const success1 = await testActor.spendLuck();
+          expect(success1).to.equal(true);
+          expect(testActor.system.resources.luck.value).to.equal(1);
+
+          const success2 = await testActor.spendLuck();
+          expect(success2).to.equal(true);
+          expect(testActor.system.resources.luck.value).to.equal(0);
+
+          // No luck remaining
+          const success3 = await testActor.spendLuck();
+          expect(success3).to.equal(false);
+          expect(testActor.system.resources.luck.value).to.equal(0);
+        });
+
+        it("addFatigue increases fatigue up to maximum of 5", async () => {
+          /**
+           * addFatigue() accumulates fatigue (max 5 = death).
+           * Each point also reduces available item slots.
+           */
+          expect(testActor.system.resources.fatigue.value).to.equal(0);
+
+          await testActor.addFatigue(2);
+          expect(testActor.system.resources.fatigue.value).to.equal(2);
+
+          await testActor.addFatigue(1);
+          expect(testActor.system.resources.fatigue.value).to.equal(3);
+
+          // Can't exceed 5
+          await testActor.addFatigue(10);
+          expect(testActor.system.resources.fatigue.value).to.equal(5);
+        });
+
+        it("takeBreather recovers Might HP and tracks breathers taken", async () => {
+          /**
+           * Short rest (breather) recovers HP equal to Might stat.
+           * Tracks number of breathers taken for potential limits.
+           */
+          await testActor.update({ "system.resources.hp.value": 1 });
+
+          const result = await testActor.takeBreather();
+
+          // Might is 5, so recover up to 5 HP (but max HP is 5, current was 1)
+          expect(result.recovered).to.equal(4); // 5 - 1 = 4 recovered
+          expect(testActor.system.resources.hp.value).to.equal(5);
+          expect(result.breathersTaken).to.equal(1);
+
+          // Take another breather (but already at max HP)
+          const result2 = await testActor.takeBreather();
+          expect(result2.recovered).to.equal(0);
+          expect(result2.breathersTaken).to.equal(2);
+        });
+
+        it("takeFullRest restores all resources and reduces fatigue", async () => {
+          /**
+           * Full rest restores HP, Mana, Luck to max and reduces Fatigue by 1.
+           * Resets breather counter.
+           */
+          await testActor.update({
+            "system.resources.hp.value": 1,
+            "system.resources.mana.value": 0,
+            "system.resources.mana.max": 10,
+            "system.resources.luck.value": 0,
+            "system.resources.fatigue.value": 3,
+            "system.restTracking.breathersTaken": 5,
+          });
+
+          const result = await testActor.takeFullRest();
+
+          expect(testActor.system.resources.hp.value).to.equal(5); // max
+          expect(testActor.system.resources.mana.value).to.equal(10); // max
+          expect(testActor.system.resources.luck.value).to.equal(2); // max = luck stat
+          expect(testActor.system.resources.fatigue.value).to.equal(2); // reduced by 1
+          expect(testActor.system.restTracking.breathersTaken).to.equal(0);
+          expect(result.fatigueReduced).to.equal(1);
+        });
+
+        it("isDead returns true when HP is 0", async () => {
+          /**
+           * Characters die when HP reaches 0 or fatigue reaches 5.
+           */
+          await testActor.update({ "system.resources.hp.value": 1 });
+          expect(testActor.isDead).to.equal(false);
+
+          await testActor.update({ "system.resources.hp.value": 0 });
+          expect(testActor.isDead).to.equal(true);
+        });
+
+        it("isDead returns true when fatigue reaches 5", async () => {
+          /**
+           * Death by exhaustion occurs at 5 fatigue.
+           * Must have HP > 0 to isolate the fatigue check.
+           */
+          await testActor.update({
+            "system.resources.hp.value": 5,
+            "system.resources.fatigue.value": 4,
+          });
+          expect(testActor.isDead).to.equal(false);
+
+          await testActor.update({ "system.resources.fatigue.value": 5 });
+          expect(testActor.isDead).to.equal(true);
+        });
+      });
     },
     { displayName: "Vagabond: Character Actors" }
   );
