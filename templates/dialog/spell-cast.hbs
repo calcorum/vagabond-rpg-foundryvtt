@@ -1,0 +1,208 @@
+{{!-- Spell Cast Dialog Template --}}
+{{!-- Extends roll-dialog-base with spell casting configuration --}}
+
+<div class="roll-dialog-content spell-cast-dialog">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if hasAutoFavor}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hasAutoHinder}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each autoFavorHinder.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Mana Display --}}
+  <div class="mana-display">
+    <div class="mana-current">
+      <span class="label">{{localize "VAGABOND.Mana"}}:</span>
+      <span class="value {{#unless rollSpecific.canAfford}}insufficient{{/unless}}">
+        {{rollSpecific.currentMana}} / {{rollSpecific.maxMana}}
+      </span>
+    </div>
+    <div class="mana-cost">
+      <span class="label">{{localize "VAGABOND.Cost"}}:</span>
+      <span class="value {{#unless rollSpecific.canAfford}}insufficient{{/unless}}">
+        {{rollSpecific.manaCost}}
+      </span>
+    </div>
+  </div>
+
+  {{!-- Spell Selection --}}
+  <div class="spell-selection">
+    <label for="spellId">{{localize "VAGABOND.Spell"}}</label>
+    {{#if rollSpecific.hasSpells}}
+    <select name="spellId">
+      {{#each rollSpecific.spells}}
+      <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>
+        {{this.name}}{{#if this.isDamaging}} ({{this.damageType}}){{/if}}
+      </option>
+      {{/each}}
+    </select>
+    {{else}}
+    <div class="no-spells-warning">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      {{localize "VAGABOND.NoSpellsKnown"}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Spell Info (shown when spell selected) --}}
+  {{#if rollSpecific.spell}}
+  <div class="spell-info">
+    {{!-- Casting Skill Info --}}
+    <div class="casting-skill">
+      <span class="label">{{localize "VAGABOND.CastingSkill"}}:</span>
+      <span class="value">
+        {{rollSpecific.castingSkillLabel}}
+        ({{rollSpecific.statLabel}} {{rollSpecific.statValue}})
+        {{#unless rollSpecific.trained}}<span class="untrained">({{localize "VAGABOND.Untrained"}})</span>{{/unless}}
+      </span>
+    </div>
+    <div class="casting-difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value difficulty">{{rollSpecific.difficulty}}</span>
+    </div>
+    {{#if (lt rollSpecific.critThreshold 20)}}
+    <div class="casting-crit">
+      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
+      <span class="value crit">{{rollSpecific.critThreshold}}+</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Effect Description and Toggle --}}
+  {{#if rollSpecific.hasEffect}}
+  <div class="spell-effect">
+    <div class="effect-header">
+      <label class="checkbox-label include-effect-toggle">
+        <input type="checkbox" name="includeEffect" {{#if rollSpecific.includeEffect}}checked{{/if}}>
+        <span>{{localize "VAGABOND.IncludeEffect"}}</span>
+      </label>
+    </div>
+    {{#if rollSpecific.includeEffect}}
+    <div class="effect-text">{{{rollSpecific.effect}}}</div>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{!-- Damage Configuration (only for damaging spells) --}}
+  {{#if rollSpecific.isDamaging}}
+  <div class="damage-config">
+    <label for="damageDice">{{localize "VAGABOND.DamageDice"}}</label>
+    <div class="damage-dice-input">
+      <input type="range"
+             name="damageDice"
+             min="0"
+             max="{{rollSpecific.maxDamageDice}}"
+             value="{{rollSpecific.damageDice}}">
+      <span class="dice-count">{{rollSpecific.damageDice}}{{rollSpecific.damageBase}}</span>
+    </div>
+    {{#if rollSpecific.damageFormula}}
+    <div class="damage-preview">
+      <span class="label">{{localize "VAGABOND.Damage"}}:</span>
+      <span class="value">{{rollSpecific.damageFormula}}</span>
+      <span class="damage-type">({{rollSpecific.damageTypeLabel}})</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{!-- Delivery Type Selection --}}
+  <div class="delivery-selection">
+    <label for="delivery">{{localize "VAGABOND.Delivery"}}</label>
+    <select name="delivery">
+      {{#each rollSpecific.deliveryOptions}}
+      <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>
+        {{this.label}}{{#if this.cost}} (+{{this.cost}} {{localize "VAGABOND.Mana"}}){{/if}}
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{!-- Duration Type Selection --}}
+  <div class="duration-selection">
+    <label for="duration">{{localize "VAGABOND.Duration"}}</label>
+    <select name="duration">
+      {{#each rollSpecific.durationOptions}}
+      <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>
+        {{this.label}}{{#if this.isFocus}} <i class="fa-solid fa-bullseye"></i>{{/if}}
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{!-- Focus Warning --}}
+  {{#if rollSpecific.willRequireFocus}}
+  <div class="focus-warning">
+    <i class="fa-solid fa-bullseye"></i>
+    <span>{{localize "VAGABOND.FocusDurationWarning"}}</span>
+    {{#if rollSpecific.isCurrentlyFocusing}}
+    <div class="current-focus">
+      {{localize "VAGABOND.CurrentlyFocusing"}}:
+      {{#each rollSpecific.focusedSpells}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+    </div>
+    {{#unless rollSpecific.canAddFocus}}
+    <div class="focus-limit-warning">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      {{localize "VAGABOND.FocusLimitReachedWarning"}}
+    </div>
+    {{/unless}}
+    {{/if}}
+  </div>
+  {{/if}}
+  {{/if}}
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">
+      <i class="fa-solid fa-dice-d6"></i> +d6 {{localize "VAGABOND.Favor"}}
+    </div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">
+      <i class="fa-solid fa-dice-d6"></i> -d6 {{localize "VAGABOND.Hinder"}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      <button type="button" class="modifier-preset" data-modifier-preset="-5">-5</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="-1">-1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="1">+1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="5">+5</button>
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn" {{#unless rollSpecific.spell}}disabled{{/unless}} {{#unless rollSpecific.canAfford}}disabled{{/unless}}>
+      <i class="fa-solid fa-wand-sparkles"></i>
+      {{localize "VAGABOND.CastSpell"}}
+      {{#unless rollSpecific.canAfford}}
+      <span class="insufficient-mana-label">({{localize "VAGABOND.InsufficientManaShort"}})</span>
+      {{/unless}}
+    </button>
+  </div>
+</div>

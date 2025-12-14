@@ -28,6 +28,7 @@ import {
   SkillCheckDialog,
   AttackRollDialog,
   SaveRollDialog,
+  SpellCastDialog,
   FavorHinderDebug,
 } from "./applications/_module.mjs";
 
@@ -62,6 +63,7 @@ Hooks.once("init", () => {
       SkillCheckDialog,
       AttackRollDialog,
       SaveRollDialog,
+      SpellCastDialog,
       FavorHinderDebug,
     },
   };
@@ -218,6 +220,30 @@ if (!actor) {
     });
     // eslint-disable-next-line no-console
     console.log("Vagabond RPG | Created Save Roll macro");
+  }
+
+  // Cast Spell macro
+  const castMacroName = "Cast Spell";
+  const existingCastMacro = game.macros.find((m) => m.name === castMacroName);
+
+  if (!existingCastMacro) {
+    await Macro.create({
+      name: castMacroName,
+      type: "script",
+      img: "icons/svg/lightning.svg",
+      command: `// Opens spell cast dialog for selected token
+const actor = canvas.tokens.controlled[0]?.actor
+  || game.actors.find(a => a.type === "character");
+
+if (!actor) {
+  ui.notifications.warn("Select a token or create a character first");
+} else {
+  game.vagabond.applications.SpellCastDialog.prompt(actor);
+}`,
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Cast Spell macro");
   }
 }
 

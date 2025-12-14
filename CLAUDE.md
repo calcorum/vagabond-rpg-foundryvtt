@@ -22,10 +22,20 @@ This is a complete Foundry VTT v13 system implementation for Vagabond RPG (Pulp 
 
 ### Spell Casting
 
-- Dynamic mana cost = base + delivery cost + duration cost + extra damage dice
-- Delivery types: Touch(0), Remote(0), Imbue(0), Cube(1), Aura(2), Cone(2), Glyph(2), Line(2), Sphere(2)
-- Duration: Instant (free), Focus (ongoing), Continual (permanent)
-- Cast dialog must calculate and display total mana cost before casting
+**Casting Decisions:** When casting, determine Damage/Effect, Delivery, and Duration.
+
+**Mana Cost Formula:**
+
+1. **Base cost:**
+   - Only 1d6 damage OR only effect = 0 Mana
+   - Both damage AND effect = 1 Mana
+2. **+ Extra damage dice:** +1 Mana per d6 beyond the first
+3. **+ Delivery cost:** Touch(0), Remote(0), Imbue(0), Cube(1), Aura(2), Cone(2), Glyph(2), Line(2), Sphere(2)
+4. **Duration:** Instant/Focus/Continual - no initial cost, but Focus requires 1 Mana/round to maintain on unwilling targets
+
+**Cast Checks:** Only required when targeting an unwilling Being.
+
+**Cast Skills by Class:** Wizard/Magus=Arcana, Druid/Luminary/Witch=Mysticism, Sorcerer=Influence, Revelator=Leadership
 
 ### Class System
 
@@ -71,6 +81,13 @@ npm run watch
 docker compose logs -f foundry
 ```
 
+### Testing Code Revisions
+
+```bash
+# Restart local Foundry container
+docker compose restart
+```
+
 ## Reference Data Location
 
 Game rules and content are documented in NoteDiscovery under `gaming/vagabond-rpg/`:
@@ -83,6 +100,19 @@ Game rules and content are documented in NoteDiscovery under `gaming/vagabond-rp
 - `perks-full-list.md` - All 90+ perks with prerequisites
 - `classes-full-text.md` - All 18 classes with progression tables
 - `bestiary.md` - Creature categories, TL reference
+
+**To access NoteDiscovery:**
+
+```bash
+# List all notes
+cd ~/.claude/skills/notediscovery && python client.py list
+
+# Read a specific note
+cd ~/.claude/skills/notediscovery && python client.py read "gaming/vagabond-rpg/magic-system.md"
+
+# Search notes
+cd ~/.claude/skills/notediscovery && python client.py search "keyword"
+```
 
 Original PDF at: `/mnt/NV2/Development/claude-home/gaming/Vagabond_RPG_-_Pulp_Fantasy_Core_Rulebook_Interactive_PDF.pdf`
 Character sheet reference: `/mnt/NV2/Development/claude-home/gaming/Vagabond_-_Hero_Record_Interactive_PDF.pdf`

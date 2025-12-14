@@ -257,5 +257,27 @@
   "VAGABOND.DodgeInfo": "Dodge allows you to avoid the attack entirely",
   "VAGABOND.BlockedWith": "Blocked with shield",
   "VAGABOND.DodgedAttack": "Dodged the attack",
-  "VAGABOND.CriticalSuccess": "Critical Success!"
+  "VAGABOND.CriticalSuccess": "Critical Success!",
+
+  "VAGABOND.CastSpell": "Cast Spell",
+  "VAGABOND.Spell": "Spell",
+  "VAGABOND.SelectSpell": "Select Spell...",
+  "VAGABOND.SelectSpellFirst": "Please select a spell first",
+  "VAGABOND.NoSpellsKnown": "No spells known",
+  "VAGABOND.CastingSkill": "Casting Skill",
+  "VAGABOND.DamageDice": "Damage Dice",
+  "VAGABOND.Cost": "Cost",
+  "VAGABOND.IncludeEffect": "Include Effect",
+  "VAGABOND.FocusDurationWarning": "This spell requires Focus to maintain",
+  "VAGABOND.CurrentlyFocusing": "Currently focusing",
+  "VAGABOND.FocusLimitReached": "Focus limit reached!",
+  "VAGABOND.FocusLimitReachedWarning": "You are already focusing on the maximum number of spells",
+  "VAGABOND.NowFocusing": "Now focusing on {spell}",
+  "VAGABOND.RequiresFocus": "Requires Focus",
+  "VAGABOND.NowFocusingSpell": "Now Focusing on this spell",
+  "VAGABOND.InsufficientMana": "Insufficient mana! Cost: {cost}, Available: {current}",
+  "VAGABOND.InsufficientManaShort": "Insufficient Mana",
+  "VAGABOND.CastSuccess": "Cast Success!",
+  "VAGABOND.CastFailed": "Cast Failed",
+  "VAGABOND.CriticalCast": "Critical Cast!"
 }

@@ -1,0 +1,152 @@
+{{!-- Spell Cast Chat Card Template --}}
+{{!-- Displays spell casting results with spell info, success/fail, and damage --}}
+
+<div class="vagabond chat-card spell-cast">
+  {{!-- Header with Spell Info --}}
+  <header class="card-header">
+    <img src="{{spell.img}}" alt="{{spell.name}}" class="spell-icon">
+    <div class="header-text">
+      <h3 class="spell-name">{{spell.name}}</h3>
+      <span class="casting-skill-badge">{{castingSkillLabel}}</span>
+    </div>
+  </header>
+
+  {{!-- Casting Configuration --}}
+  <div class="cast-config">
+    <div class="config-item delivery">
+      <span class="label">{{localize "VAGABOND.Delivery"}}:</span>
+      <span class="value">{{deliveryLabel}}</span>
+    </div>
+    <div class="config-item duration">
+      <span class="label">{{localize "VAGABOND.Duration"}}:</span>
+      <span class="value">
+        {{durationLabel}}
+        {{#if isFocus}}<i class="fa-solid fa-bullseye" title="{{localize 'VAGABOND.RequiresFocus'}}"></i>{{/if}}
+      </span>
+    </div>
+    <div class="config-item mana-cost">
+      <span class="label">{{localize "VAGABOND.ManaCost"}}:</span>
+      <span class="value">{{manaCost}}</span>
+    </div>
+  </div>
+
+  {{!-- Roll Result --}}
+  <div class="roll-result {{#if isCrit}}critical{{else if isFumble}}fumble{{else if success}}success{{else}}failure{{/if}}">
+    <div class="roll-total">{{total}}</div>
+    <div class="roll-status">
+      {{#if isCrit}}
+      <span class="status critical">{{localize "VAGABOND.CriticalCast"}}</span>
+      {{else if isFumble}}
+      <span class="status fumble">{{localize "VAGABOND.Fumble"}}</span>
+      {{else if success}}
+      <span class="status success">{{localize "VAGABOND.CastSuccess"}}</span>
+      {{else}}
+      <span class="status failure">{{localize "VAGABOND.CastFailed"}}</span>
+      {{/if}}
+    </div>
+  </div>
+
+  {{!-- Roll Details --}}
+  <div class="roll-details">
+    <div class="roll-formula">
+      <span class="label">{{localize "VAGABOND.Formula"}}:</span>
+      <span class="value">{{formula}}</span>
+    </div>
+    <div class="roll-breakdown">
+      <span class="d20-result">
+        <i class="fa-solid fa-dice-d20"></i> {{d20Result}}
+      </span>
+      {{#if favorDie}}
+      <span class="favor-die {{#if (gt netFavorHinder 0)}}favor{{else}}hinder{{/if}}">
+        <i class="fa-solid fa-dice-d6"></i> {{favorDie}}
+      </span>
+      {{/if}}
+      {{#if modifier}}
+      <span class="modifier">
+        {{#if (gt modifier 0)}}+{{/if}}{{modifier}}
+      </span>
+      {{/if}}
+    </div>
+  </div>
+
+  {{!-- Target Info --}}
+  <div class="target-info">
+    <div class="difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value">{{this.difficulty}}</span>
+    </div>
+    {{#if (lt this.critThreshold 20)}}
+    <div class="crit-threshold">
+      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
+      <span class="value">{{this.critThreshold}}+</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Spell Effect (if successful and effect included) --}}
+  {{#if success}}
+  {{#if includeEffect}}
+  {{#if hasEffect}}
+  <div class="spell-effect-section">
+    <div class="effect-header">
+      <i class="fa-solid fa-sparkles"></i>
+      <span>{{localize "VAGABOND.Effect"}}</span>
+    </div>
+    <div class="effect-text">{{{spell.effect}}}</div>
+    {{#if isCrit}}
+    {{#if spell.critEffect}}
+    <div class="crit-effect">
+      <span class="crit-label">{{localize "VAGABOND.CritEffect"}}:</span>
+      <span class="crit-text">{{{spell.critEffect}}}</span>
+    </div>
+    {{/if}}
+    {{/if}}
+  </div>
+  {{/if}}
+  {{/if}}
+  {{/if}}
+
+  {{!-- Damage Section (if hit and dealing damage) --}}
+  {{#if hasDamage}}
+  <div class="damage-section {{#if isCrit}}critical{{/if}}">
+    <div class="damage-header">
+      <i class="fa-solid fa-burst"></i>
+      <span>{{localize "VAGABOND.Damage"}}</span>
+      {{#if isCrit}}
+      <span class="crit-label">({{localize "VAGABOND.Critical"}}!)</span>
+      {{/if}}
+    </div>
+    <div class="damage-result">
+      <span class="damage-total">{{damageTotal}}</span>
+      <span class="damage-type">{{spell.damageTypeLabel}}</span>
+    </div>
+    <div class="damage-formula">
+      {{damageFormula}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- Focus Indicator --}}
+  {{#if isFocus}}
+  {{#if success}}
+  <div class="focus-indicator">
+    <i class="fa-solid fa-bullseye"></i>
+    <span>{{localize "VAGABOND.NowFocusingSpell"}}</span>
+  </div>
+  {{/if}}
+  {{/if}}
+
+  {{!-- Favor/Hinder Sources --}}
+  {{#if favorSources.length}}
+  <div class="favor-sources">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.Favor"}}: {{#each favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hinderSources.length}}
+  <div class="hinder-sources">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.Hinder"}}: {{#each hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+</div>

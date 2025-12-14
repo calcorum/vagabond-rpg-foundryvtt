@@ -94,17 +94,40 @@ export default class SpellData extends VagabondItemBase {
   /**
    * Calculate the mana cost for casting this spell with given options.
    *
+   * Mana Cost Formula (from rulebook):
+   * 1. Base cost: Only 1d6 damage OR only effect = 0 Mana; Both damage AND effect = 1 Mana
+   * 2. + Extra damage dice: +1 Mana per d6 beyond the first
+   * 3. + Delivery cost: Touch(0), Remote(0), Imbue(0), Cube(1), Aura/Cone/Glyph/Line/Sphere(2)
+   * 4. Duration: No initial cost (Focus requires 1 Mana/round to maintain on unwilling targets)
+   *
    * @param {Object} options - Casting options
    * @param {number} options.damageDice - Number of damage dice (default 0)
    * @param {string} options.delivery - Delivery type (default "touch")
    * @param {string} options.duration - Duration type (default "instant")
+   * @param {boolean} options.includeEffect - Whether casting includes the spell's effect (default true if spell has effect)
    * @returns {number} Total mana cost
    */
-  calculateManaCost({ damageDice = 0, delivery = "touch", duration = "instant" } = {}) {
+  calculateManaCost({
+    damageDice = 0,
+    delivery = "touch",
+    duration = "instant",
+    includeEffect = null,
+  } = {}) {
     let cost = 0;
 
-    // Damage dice cost (1 mana per die)
-    cost += damageDice;
+    // Determine if spell has an effect (beyond just damage)
+    const hasEffect = includeEffect ?? Boolean(this.effect && this.effect.trim());
+    const hasDamage = damageDice > 0;
+
+    // Base cost: Both damage AND effect = 1 Mana; otherwise 0
+    if (hasDamage && hasEffect) {
+      cost += 1;
+    }
+
+    // Extra damage dice cost (+1 per die beyond the first)
+    if (damageDice > 1) {
+      cost += damageDice - 1;
+    }
 
     // Delivery cost
     const deliveryCosts = {
@@ -120,10 +143,8 @@ export default class SpellData extends VagabondItemBase {
     };
     cost += deliveryCosts[delivery] || 0;
 
-    // Duration cost (continual adds +2 if dealing damage)
-    if (duration === "continual" && damageDice > 0) {
-      cost += 2;
-    }
+    // Duration doesn't add initial cost
+    // (Focus maintenance cost is handled separately during gameplay)
 
     return cost;
   }

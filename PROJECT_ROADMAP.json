@@ -295,19 +295,21 @@
           "id": "2.7",
           "name": "Implement save roll system",
           "description": "Reflex/Endure/Will saves with correct stat combinations, favor/hinder, crit detection",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.4", "2.5"]
+          "dependencies": ["2.4", "2.5"],
+          "notes": "SaveRollDialog with save type selection, Block/Dodge defense options. Uses {{this.variable}} pattern for Handlebars context."
         },
         {
           "id": "2.8",
           "name": "Implement spell casting system",
           "description": "Dynamic spell dialog: select damage dice, delivery type, duration; auto-calculate mana cost; track focus state",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.4", "1.9"]
+          "dependencies": ["2.4", "1.9"],
+          "notes": "SpellCastDialog with damage/effect toggle, delivery/duration selectors, live mana cost using rulebook formula. Focus tracking on successful cast."
         },
         {
           "id": "2.9",

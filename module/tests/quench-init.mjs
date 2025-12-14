@@ -10,6 +10,7 @@
 // Import test modules
 import { registerActorTests } from "./actor.test.mjs";
 import { registerDiceTests } from "./dice.test.mjs";
+import { registerSpellTests } from "./spell.test.mjs";
 // import { registerItemTests } from "./item.test.mjs";
 // import { registerEffectTests } from "./effects.test.mjs";
 
@@ -66,6 +67,7 @@ export function registerQuenchTests(quenchRunner) {
   // Register domain-specific test batches
   registerActorTests(quenchRunner);
   registerDiceTests(quenchRunner);
+  registerSpellTests(quenchRunner);
   // registerItemTests(quenchRunner);
   // registerEffectTests(quenchRunner);
 
