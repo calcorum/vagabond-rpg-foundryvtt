@@ -87,12 +87,16 @@ export default class SkillCheckDialog extends VagabondRollDialog {
     // Available skills for dropdown (if no skill pre-selected)
     context.skills = Object.entries(CONFIG.VAGABOND?.skills || {}).map(([id, config]) => {
       const skillData = this.actor.system.skills?.[id] || {};
+      const statValue = this.actor.system.stats?.[config.stat]?.value || 0;
+      const trained = skillData.trained || false;
+      // Calculate difficulty directly: 20 - stat (untrained) or 20 - stat×2 (trained)
+      const difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
       return {
         id,
         label: game.i18n.localize(config.label),
         stat: config.stat,
-        trained: skillData.trained || false,
-        difficulty: skillData.difficulty || 20,
+        trained,
+        difficulty,
         critThreshold: skillData.critThreshold || 20,
         selected: id === this.skillId,
       };
@@ -103,15 +107,25 @@ export default class SkillCheckDialog extends VagabondRollDialog {
     context.skillData = this.skillData;
 
     if (this.skillData) {
-      context.difficulty = this.skillData.difficulty;
-      context.critThreshold = this.skillData.critThreshold || 20;
-      context.trained = this.skillData.trained;
-
-      // Get the associated stat
+      // Get the associated stat and calculate difficulty
       const statKey = CONFIG.VAGABOND?.skills?.[this.skillId]?.stat;
+      const statValue = this.actor.system.stats?.[statKey]?.value || 0;
+      const trained = this.skillData.trained;
+      // Calculate difficulty: 20 - stat (untrained) or 20 - stat×2 (trained)
+      const difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
+      const critThreshold = this.skillData.critThreshold || 20;
+
+      // Store on instance for use in _executeRoll
+      this._calculatedDifficulty = difficulty;
+      this._calculatedCritThreshold = critThreshold;
+
+      context.difficulty = difficulty;
+      context.critThreshold = critThreshold;
+      context.trained = trained;
+
       if (statKey) {
         context.statLabel = game.i18n.localize(CONFIG.VAGABOND?.stats?.[statKey]?.label || statKey);
-        context.statValue = this.actor.system.stats?.[statKey]?.value || 0;
+        context.statValue = statValue;
       }
     }
 
@@ -142,8 +156,10 @@ export default class SkillCheckDialog extends VagabondRollDialog {
       return;
     }
 
-    // Perform the skill check
+    // Perform the skill check with pre-calculated difficulty
     const result = await skillCheck(this.actor, this.skillId, {
+      difficulty: this._calculatedDifficulty,
+      critThreshold: this._calculatedCritThreshold,
       favorHinder: this.netFavorHinder,
       modifier: this.rollConfig.modifier,
     });

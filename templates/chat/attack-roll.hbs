@@ -1,13 +1,14 @@
-{{!-- Skill Check Chat Card Template --}}
-{{!-- Displays skill check results with roll details, success/fail, and modifiers --}}
+{{!-- Attack Roll Chat Card Template --}}
+{{!-- Displays attack results with weapon info, hit/miss, and damage --}}
 
-<div class="vagabond chat-card skill-roll">
-  {{!-- Header --}}
+<div class="vagabond chat-card attack-roll">
+  {{!-- Header with Weapon Info --}}
   <header class="card-header">
-    <h3 class="skill-name">{{skillLabel}}</h3>
-    {{#if trained}}
-    <span class="trained-badge">{{localize "VAGABOND.Trained"}}</span>
-    {{/if}}
+    <img src="{{weapon.img}}" alt="{{weapon.name}}" class="weapon-icon">
+    <div class="header-text">
+      <h3 class="weapon-name">{{weapon.name}}</h3>
+      <span class="attack-type-badge">{{attackLabel}}</span>
+    </div>
   </header>
 
   {{!-- Roll Result --}}
@@ -15,13 +16,13 @@
     <div class="roll-total">{{total}}</div>
     <div class="roll-status">
       {{#if isCrit}}
-      <span class="status critical">{{localize "VAGABOND.Critical"}}</span>
+      <span class="status critical">{{localize "VAGABOND.CriticalHit"}}</span>
       {{else if isFumble}}
       <span class="status fumble">{{localize "VAGABOND.Fumble"}}</span>
       {{else if success}}
-      <span class="status success">{{localize "VAGABOND.Success"}}</span>
+      <span class="status success">{{localize "VAGABOND.Hit"}}</span>
       {{else}}
-      <span class="status failure">{{localize "VAGABOND.Failure"}}</span>
+      <span class="status failure">{{localize "VAGABOND.Miss"}}</span>
       {{/if}}
     </div>
   </div>
@@ -62,6 +63,38 @@
     </div>
     {{/if}}
   </div>
+
+  {{!-- Damage Section (if hit) --}}
+  {{#if hasDamage}}
+  <div class="damage-section {{#if isCrit}}critical{{/if}}">
+    <div class="damage-header">
+      <i class="fa-solid fa-burst"></i>
+      <span>{{localize "VAGABOND.Damage"}}</span>
+      {{#if isCrit}}
+      <span class="crit-label">({{localize "VAGABOND.Critical"}}!)</span>
+      {{/if}}
+    </div>
+    <div class="damage-result">
+      <span class="damage-total">{{damageTotal}}</span>
+      <span class="damage-type">{{weapon.damageTypeLabel}}</span>
+    </div>
+    <div class="damage-formula">
+      {{damageFormula}}
+      {{#if twoHanded}}
+      <span class="grip-indicator">({{localize "VAGABOND.TwoHanded"}})</span>
+      {{/if}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- Weapon Properties --}}
+  {{#if weapon.properties.length}}
+  <div class="weapon-properties">
+    {{#each weapon.properties}}
+    <span class="property-tag">{{this}}</span>
+    {{/each}}
+  </div>
+  {{/if}}
 
   {{!-- Favor/Hinder Sources --}}
   {{#if favorSources.length}}

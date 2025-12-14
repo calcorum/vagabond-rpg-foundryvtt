@@ -1,0 +1,126 @@
+{{!-- Attack Roll Dialog Template --}}
+{{!-- Extends roll-dialog-base with attack-specific content --}}
+
+<div class="roll-dialog-content">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if hasAutoFavor}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if hasAutoHinder}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each autoFavorHinder.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Weapon Selection --}}
+  <div class="weapon-selection">
+    <label for="weaponId">{{localize "VAGABOND.Weapon"}}</label>
+    <select name="weaponId">
+      {{#each rollSpecific.weapons}}
+      <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>
+        {{this.name}}{{#if this.isUnarmed}} ({{localize "VAGABOND.Fist"}}){{else unless this.equipped}} ({{localize "VAGABOND.Unequipped"}}){{/if}}
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{!-- Attack Info (shown when weapon selected) --}}
+  {{#if rollSpecific.weapon}}
+  <div class="attack-info">
+    <div class="attack-type">
+      <span class="label">{{localize "VAGABOND.AttackType"}}:</span>
+      <span class="value">{{rollSpecific.attackLabel}}</span>
+    </div>
+    <div class="attack-stat">
+      <span class="label">{{localize "VAGABOND.Stat"}}:</span>
+      <span class="value">{{rollSpecific.statLabel}} ({{rollSpecific.statValue}})</span>
+    </div>
+    <div class="attack-difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value difficulty">{{rollSpecific.difficulty}}</span>
+    </div>
+    {{#if (lt rollSpecific.critThreshold 20)}}
+    <div class="attack-crit">
+      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
+      <span class="value crit">{{rollSpecific.critThreshold}}+</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Damage Preview --}}
+  <div class="damage-preview">
+    <div class="damage-formula">
+      <span class="label">{{localize "VAGABOND.Damage"}}:</span>
+      <span class="value">{{rollSpecific.damageFormula}}</span>
+      <span class="damage-type">({{rollSpecific.damageTypeLabel}})</span>
+    </div>
+    {{#if rollSpecific.properties.length}}
+    <div class="weapon-properties">
+      {{#each rollSpecific.propertyLabels}}
+      <span class="property-tag">{{this}}</span>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Versatile Weapon Toggle --}}
+  {{#if rollSpecific.isVersatile}}
+  <div class="versatile-toggle">
+    <label class="checkbox-label">
+      <input type="checkbox" name="twoHanded" {{#if rollSpecific.twoHanded}}checked{{/if}}>
+      <span>{{localize "VAGABOND.TwoHandedGrip"}}</span>
+    </label>
+  </div>
+  {{/if}}
+  {{/if}}
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-favor="1">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-favor="-1">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">
+      <i class="fa-solid fa-dice-d6"></i> +d6 {{localize "VAGABOND.Favor"}}
+    </div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">
+      <i class="fa-solid fa-dice-d6"></i> -d6 {{localize "VAGABOND.Hinder"}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      <button type="button" class="modifier-preset" data-modifier="-5">-5</button>
+      <button type="button" class="modifier-preset" data-modifier="-1">-1</button>
+      <button type="button" class="modifier-preset" data-modifier="1">+1</button>
+      <button type="button" class="modifier-preset" data-modifier="5">+5</button>
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn" {{#unless rollSpecific.weapon}}disabled{{/unless}}>
+      <i class="fa-solid fa-dice-d20"></i>
+      {{localize "VAGABOND.RollAttack"}}
+    </button>
+  </div>
+</div>

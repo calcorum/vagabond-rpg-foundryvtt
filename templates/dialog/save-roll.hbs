@@ -1,0 +1,130 @@
+{{!-- Save Roll Dialog Template --}}
+{{!-- Extends roll-dialog-base with save-specific content --}}
+
+<div class="roll-dialog-content">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if autoFavorHinder.favorSources.length}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if autoFavorHinder.hinderSources.length}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each autoFavorHinder.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Save Type Selection --}}
+  <div class="save-selection">
+    <label for="saveType">{{localize "VAGABOND.SaveType"}}</label>
+    <select name="saveType">
+      <option value="">-- {{localize "VAGABOND.SelectSave"}} --</option>
+      {{#each rollSpecific.saves}}
+      <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>
+        {{this.label}} ({{this.stats}})
+      </option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{!-- Save Info (shown when save type selected) --}}
+  {{#if rollSpecific.saveData}}
+  <div class="save-info">
+    <div class="save-stats">
+      <span class="label">{{localize "VAGABOND.Stats"}}:</span>
+      <span class="value">
+        {{#each rollSpecific.statLabels}}
+        <span class="stat-name">{{this}}</span>{{#unless @last}} + {{/unless}}
+        {{/each}}
+      </span>
+    </div>
+    <div class="save-difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value difficulty">{{rollSpecific.difficulty}}</span>
+    </div>
+  </div>
+
+  {{!-- Defense Options (Block/Dodge for Reflex) --}}
+  {{#if rollSpecific.showDefenseOptions}}
+  <div class="defense-options">
+    <label>{{localize "VAGABOND.DefenseType"}}</label>
+    <div class="defense-buttons">
+      <button type="button" class="defense-btn dodge-btn {{#if (eq rollSpecific.defenseType 'dodge')}}active{{/if}}" data-defense="dodge">
+        <i class="fa-solid fa-person-running"></i>
+        {{localize "VAGABOND.Dodge"}}
+      </button>
+      {{#if rollSpecific.hasShield}}
+      <button type="button" class="defense-btn block-btn {{#if (eq rollSpecific.defenseType 'block')}}active{{/if}}" data-defense="block">
+        <i class="fa-solid fa-shield"></i>
+        {{localize "VAGABOND.Block"}}
+      </button>
+      {{else}}
+      <button type="button" class="defense-btn block-btn" disabled title="{{localize 'VAGABOND.RequiresShield'}}">
+        <i class="fa-solid fa-shield"></i>
+        {{localize "VAGABOND.Block"}}
+      </button>
+      {{/if}}
+    </div>
+    {{#if rollSpecific.defenseType}}
+    <div class="defense-info">
+      {{#if (eq rollSpecific.defenseType 'block')}}
+      <i class="fa-solid fa-info-circle"></i>
+      <span>{{localize "VAGABOND.BlockInfo"}}</span>
+      {{else}}
+      <i class="fa-solid fa-info-circle"></i>
+      <span>{{localize "VAGABOND.DodgeInfo"}}</span>
+      {{/if}}
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{/if}}
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">
+      <i class="fa-solid fa-dice-d6"></i> +d6 {{localize "VAGABOND.Favor"}}
+    </div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">
+      <i class="fa-solid fa-dice-d6"></i> -d6 {{localize "VAGABOND.Hinder"}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      <button type="button" class="modifier-preset" data-modifier-preset="-5">-5</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="-1">-1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="1">+1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="5">+5</button>
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn" {{#unless rollSpecific.saveData}}disabled{{/unless}}>
+      <i class="fa-solid fa-shield-halved"></i>
+      {{localize "VAGABOND.RollSave"}}
+    </button>
+  </div>
+</div>

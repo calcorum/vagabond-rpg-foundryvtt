@@ -232,6 +232,28 @@ export function registerDiceTests(quenchRunner) {
           expect(result.difficulty).to.equal(16);
         });
 
+        it("uses provided difficulty when passed in options", async () => {
+          /**
+           * When difficulty is passed via options (e.g., from the dialog),
+           * it should be used instead of calculating from stats.
+           * This ensures the dialog-displayed difficulty matches the roll.
+           */
+          const result = await skillCheck(testActor, "arcana", { difficulty: 12 });
+
+          // Should use the provided difficulty, not calculate it
+          expect(result.difficulty).to.equal(12);
+        });
+
+        it("uses provided critThreshold when passed in options", async () => {
+          /**
+           * When critThreshold is passed via options (e.g., from the dialog),
+           * it should override the skill's default critThreshold.
+           */
+          const result = await skillCheck(testActor, "arcana", { critThreshold: 18 });
+
+          expect(result.critThreshold).to.equal(18);
+        });
+
         it("uses skill-specific crit threshold", async () => {
           /**
            * Skills can have modified crit thresholds from class features.
@@ -264,7 +286,6 @@ export function registerDiceTests(quenchRunner) {
       const { describe, it, expect, beforeEach, afterEach } = context;
 
       let testActor = null;
-      let testWeapon = null;
 
       beforeEach(async () => {
         testActor = await Actor.create({
@@ -287,25 +308,25 @@ export function registerDiceTests(quenchRunner) {
             },
             level: 1,
           },
-        });
-
-        testWeapon = await Item.create({
-          name: "Test Sword",
-          type: "weapon",
-          system: {
-            damage: "1d8",
-            attackSkill: "melee",
-            gripType: "1h",
-            properties: [],
-          },
+          items: [
+            {
+              name: "Test Sword",
+              type: "weapon",
+              system: {
+                damage: "1d8",
+                attackType: "melee",
+                grip: "1h",
+                damageType: "slashing",
+                equipped: true,
+              },
+            },
+          ],
         });
       });
 
       afterEach(async () => {
         if (testActor) await testActor.delete();
-        if (testWeapon) await testWeapon.delete();
         testActor = null;
-        testWeapon = null;
       });
 
       describe("Attack Check Rolls", () => {
@@ -314,6 +335,7 @@ export function registerDiceTests(quenchRunner) {
            * Attack difficulty = 20 - (stat × 2) (attacks are always trained)
            * Melee uses Might (5), so difficulty = 20 - 10 = 10
            */
+          const testWeapon = testActor.items.find((i) => i.type === "weapon");
           const result = await attackCheck(testActor, testWeapon);
 
           expect(result.difficulty).to.equal(10);
@@ -324,6 +346,7 @@ export function registerDiceTests(quenchRunner) {
            * Attack types can have modified crit thresholds.
            * Melee attacks have critThreshold: 19 in test data.
            */
+          const testWeapon = testActor.items.find((i) => i.type === "weapon");
           const result = await attackCheck(testActor, testWeapon);
 
           expect(result.critThreshold).to.equal(19);

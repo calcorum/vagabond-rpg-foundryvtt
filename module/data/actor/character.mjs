@@ -120,54 +120,66 @@ export default class CharacterData extends VagabondActorBase {
         }),
       }),
 
-      // 12 skills with training and custom crit thresholds
+      // 12 skills with training, difficulty (computed), and custom crit thresholds
       skills: new fields.SchemaField({
         arcana: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         brawl: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         craft: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         detect: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         finesse: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         influence: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         leadership: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         medicine: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         mysticism: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         performance: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         sneak: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         survival: new fields.SchemaField({
           trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
       }),
@@ -662,9 +674,6 @@ export default class CharacterData extends VagabondActorBase {
 
       // Calculate difficulty: 20 - stat (untrained) or 20 - stat×2 (trained)
       skillData.difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
-
-      // Store the associated stat for reference
-      skillData.stat = statKey;
     }
   }
 

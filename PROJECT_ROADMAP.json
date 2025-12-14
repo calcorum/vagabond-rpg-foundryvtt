@@ -275,19 +275,21 @@
           "id": "2.5",
           "name": "Implement skill check system",
           "description": "Roll dialog with skill selection, favor/hinder toggles, automatic difficulty calculation, crit threshold display",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.2", "2.4"]
+          "dependencies": ["2.2", "2.4"],
+          "notes": "Implemented with ApplicationV2, favor/hinder via Active Effects flags, FavorHinderDebug panel for testing"
         },
         {
           "id": "2.6",
           "name": "Implement attack roll system",
           "description": "Weapon attack rolls with stat selection, damage calculation, crit bonus damage, Block/Dodge prompts for targets",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.4", "2.5", "1.11"]
+          "dependencies": ["2.4", "2.5", "1.11"],
+          "notes": "AttackRollDialog with weapon selection, damage roll on hit, crit doubles dice. Block/Dodge prompts deferred to Task 7.8"
         },
         {
           "id": "2.7",

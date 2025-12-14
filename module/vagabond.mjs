@@ -23,7 +23,13 @@ import {
 import { VagabondActor, VagabondItem } from "./documents/_module.mjs";
 
 // Import application classes
-import { VagabondRollDialog, SkillCheckDialog, FavorHinderDebug } from "./applications/_module.mjs";
+import {
+  VagabondRollDialog,
+  SkillCheckDialog,
+  AttackRollDialog,
+  SaveRollDialog,
+  FavorHinderDebug,
+} from "./applications/_module.mjs";
 
 // Import sheet classes
 // import { VagabondCharacterSheet } from "./sheets/actor-sheet.mjs";
@@ -54,6 +60,8 @@ Hooks.once("init", () => {
     applications: {
       VagabondRollDialog,
       SkillCheckDialog,
+      AttackRollDialog,
+      SaveRollDialog,
       FavorHinderDebug,
     },
   };
@@ -162,6 +170,54 @@ if (!actor) {
     });
     // eslint-disable-next-line no-console
     console.log("Vagabond RPG | Created Skill Check macro");
+  }
+
+  // Attack Roll macro
+  const attackMacroName = "Attack Roll";
+  const existingAttackMacro = game.macros.find((m) => m.name === attackMacroName);
+
+  if (!existingAttackMacro) {
+    await Macro.create({
+      name: attackMacroName,
+      type: "script",
+      img: "icons/svg/sword.svg",
+      command: `// Opens attack roll dialog for selected token
+const actor = canvas.tokens.controlled[0]?.actor
+  || game.actors.find(a => a.type === "character");
+
+if (!actor) {
+  ui.notifications.warn("Select a token or create a character first");
+} else {
+  game.vagabond.applications.AttackRollDialog.prompt(actor);
+}`,
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Attack Roll macro");
+  }
+
+  // Save Roll macro
+  const saveMacroName = "Save Roll";
+  const existingSaveMacro = game.macros.find((m) => m.name === saveMacroName);
+
+  if (!existingSaveMacro) {
+    await Macro.create({
+      name: saveMacroName,
+      type: "script",
+      img: "icons/svg/shield.svg",
+      command: `// Opens save roll dialog for selected token
+const actor = canvas.tokens.controlled[0]?.actor
+  || game.actors.find(a => a.type === "character");
+
+if (!actor) {
+  ui.notifications.warn("Select a token or create a character first");
+} else {
+  game.vagabond.applications.SaveRollDialog.prompt(actor);
+}`,
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Save Roll macro");
   }
 }
 

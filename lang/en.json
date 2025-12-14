@@ -228,5 +228,34 @@
   "VAGABOND.Formula": "Formula",
 
   "VAGABOND.SelectActor": "Select Actor",
-  "VAGABOND.Save": "Save"
+  "VAGABOND.Save": "Save",
+
+  "VAGABOND.Attack": "Attack",
+  "VAGABOND.AttackRoll": "Attack Roll",
+  "VAGABOND.AttackType": "Attack Type",
+  "VAGABOND.Weapon": "Weapon",
+  "VAGABOND.SelectWeapon": "Select Weapon...",
+  "VAGABOND.SelectWeaponFirst": "Please select a weapon first",
+  "VAGABOND.NoWeaponsAvailable": "No weapons available",
+  "VAGABOND.Unequipped": "unequipped",
+  "VAGABOND.Hit": "Hit!",
+  "VAGABOND.Miss": "Miss",
+  "VAGABOND.CriticalHit": "Critical Hit!",
+  "VAGABOND.TwoHanded": "Two-Handed",
+  "VAGABOND.TwoHandedGrip": "Use Two-Handed Grip",
+  "VAGABOND.Unarmed": "Unarmed",
+  "VAGABOND.Fist": "Fist",
+
+  "VAGABOND.SaveRoll": "Save Roll",
+  "VAGABOND.SaveType": "Save Type",
+  "VAGABOND.SelectSave": "Select Save",
+  "VAGABOND.SelectSaveFirst": "Please select a save type first",
+  "VAGABOND.Stats": "Stats",
+  "VAGABOND.DefenseType": "Defense Type",
+  "VAGABOND.RequiresShield": "Requires an equipped shield",
+  "VAGABOND.BlockInfo": "Block uses your shield to reduce incoming damage",
+  "VAGABOND.DodgeInfo": "Dodge allows you to avoid the attack entirely",
+  "VAGABOND.BlockedWith": "Blocked with shield",
+  "VAGABOND.DodgedAttack": "Dodged the attack",
+  "VAGABOND.CriticalSuccess": "Critical Success!"
 }

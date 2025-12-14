@@ -1,12 +1,15 @@
-{{!-- Skill Check Chat Card Template --}}
-{{!-- Displays skill check results with roll details, success/fail, and modifiers --}}
+{{!-- Save Roll Chat Card Template --}}
+{{!-- Displays save results with stats used and success/fail --}}
 
-<div class="vagabond chat-card skill-roll">
+<div class="vagabond chat-card save-roll">
   {{!-- Header --}}
   <header class="card-header">
-    <h3 class="skill-name">{{skillLabel}}</h3>
-    {{#if trained}}
-    <span class="trained-badge">{{localize "VAGABOND.Trained"}}</span>
+    <h3 class="save-name">
+      <i class="fa-solid fa-shield-halved"></i>
+      {{saveLabel}} {{localize "VAGABOND.Save"}}
+    </h3>
+    {{#if isDefense}}
+    <span class="defense-badge {{defenseType}}">{{defenseLabel}}</span>
     {{/if}}
   </header>
 
@@ -15,7 +18,7 @@
     <div class="roll-total">{{total}}</div>
     <div class="roll-status">
       {{#if isCrit}}
-      <span class="status critical">{{localize "VAGABOND.Critical"}}</span>
+      <span class="status critical">{{localize "VAGABOND.CriticalSuccess"}}</span>
       {{else if isFumble}}
       <span class="status fumble">{{localize "VAGABOND.Fumble"}}</span>
       {{else if success}}
@@ -49,19 +52,34 @@
     </div>
   </div>
 
-  {{!-- Target Info --}}
-  <div class="target-info">
+  {{!-- Save Info --}}
+  <div class="save-info">
+    <div class="stats-used">
+      <span class="label">{{localize "VAGABOND.Stats"}}:</span>
+      <span class="value">
+        {{#each stats}}
+        <span class="stat-abbr">{{this}}</span>{{#unless @last}} + {{/unless}}
+        {{/each}}
+      </span>
+    </div>
     <div class="difficulty">
       <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
       <span class="value">{{this.difficulty}}</span>
     </div>
-    {{#if (lt this.critThreshold 20)}}
-    <div class="crit-threshold">
-      <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
-      <span class="value">{{this.critThreshold}}+</span>
-    </div>
+  </div>
+
+  {{!-- Defense Info --}}
+  {{#if isDefense}}
+  <div class="defense-info-display">
+    {{#if (eq defenseType 'block')}}
+    <i class="fa-solid fa-shield"></i>
+    <span>{{localize "VAGABOND.BlockedWith"}}</span>
+    {{else if (eq defenseType 'dodge')}}
+    <i class="fa-solid fa-person-running"></i>
+    <span>{{localize "VAGABOND.DodgedAttack"}}</span>
     {{/if}}
   </div>
+  {{/if}}
 
   {{!-- Favor/Hinder Sources --}}
   {{#if favorSources.length}}

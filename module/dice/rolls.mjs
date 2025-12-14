@@ -126,9 +126,17 @@ export async function skillCheck(actor, skillId, options = {}) {
     throw new Error(`Actor does not have skill: ${skillId}`);
   }
 
-  // Get difficulty from calculated value
-  const difficulty = skillData.difficulty;
-  const critThreshold = skillData.critThreshold || 20;
+  // Use provided difficulty or calculate from stat and training
+  let difficulty;
+  if (options.difficulty !== undefined) {
+    difficulty = options.difficulty;
+  } else {
+    const statKey = skillConfig.stat;
+    const statValue = system.stats?.[statKey]?.value || 0;
+    const trained = skillData.trained;
+    difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
+  }
+  const critThreshold = options.critThreshold ?? skillData.critThreshold ?? 20;
 
   // Determine favor/hinder from Active Effect flags or override
   const favorHinderResult = actor.getNetFavorHinder?.({ skillId }) ?? { net: 0 };
@@ -154,7 +162,7 @@ export async function skillCheck(actor, skillId, options = {}) {
  * @returns {Promise<VagabondRollResult>} The roll result
  */
 export async function attackCheck(actor, weapon, options = {}) {
-  const attackType = weapon.system.attackSkill || "melee";
+  const attackType = weapon.system.attackType || "melee";
   const attackConfig = CONFIG.VAGABOND?.attackTypes?.[attackType];
 
   if (!attackConfig) {
@@ -162,14 +170,18 @@ export async function attackCheck(actor, weapon, options = {}) {
   }
 
   const system = actor.system;
-  const statKey = attackConfig.stat;
+
+  // Use weapon's getAttackStat() if available, otherwise fall back to config
+  const statKey = weapon.system.getAttackStat?.() || attackConfig.stat;
   const statValue = system.stats?.[statKey]?.value || 0;
 
-  // Attack difficulty = 20 - stat (attacks are always "trained")
+  // Attack difficulty = 20 - stat × 2 (attacks are always "trained")
   const difficulty = 20 - statValue * 2;
 
-  // Get crit threshold from attack data
-  const critThreshold = system.attacks?.[attackType]?.critThreshold || 20;
+  // Get crit threshold: weapon override > actor attack data > default
+  const actorCritThreshold = system.attacks?.[attackType]?.critThreshold || 20;
+  const weaponCritThreshold = weapon.system.critThreshold;
+  const critThreshold = weaponCritThreshold ?? actorCritThreshold;
 
   // Determine favor/hinder from Active Effect flags or override
   const favorHinderResult = actor.getNetFavorHinder?.({ isAttack: true }) ?? { net: 0 };
