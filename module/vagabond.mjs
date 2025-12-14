@@ -245,6 +245,25 @@ if (!actor) {
     // eslint-disable-next-line no-console
     console.log("Vagabond RPG | Created Cast Spell macro");
   }
+
+  // Morale Check macro
+  const moraleMacroName = "Morale Check";
+  const existingMoraleMacro = game.macros.find((m) => m.name === moraleMacroName);
+
+  if (!existingMoraleMacro) {
+    await Macro.create({
+      name: moraleMacroName,
+      type: "script",
+      img: "icons/svg/skull.svg",
+      command: `// Roll morale for selected NPC tokens
+// Uses lowest morale score if multiple NPCs selected (group check)
+const VagabondActor = CONFIG.Actor.documentClass;
+VagabondActor.rollGroupMorale({ trigger: "manual" });`,
+      flags: { vagabond: { systemMacro: true } },
+    });
+    // eslint-disable-next-line no-console
+    console.log("Vagabond RPG | Created Morale Check macro");
+  }
 }
 
 /* -------------------------------------------- */
@@ -330,6 +349,68 @@ Hooks.on("updateActor", async (actor, changed, _options, userId) => {
   for (const classItem of classes) {
     await classItem.updateClassFeatures(newLevel, oldLevel);
   }
+});
+
+/* -------------------------------------------- */
+/*  NPC Morale System                           */
+/* -------------------------------------------- */
+
+/**
+ * When an NPC's HP drops to half or below, prompt a morale check.
+ * Only triggers once per combat (until morale status is reset).
+ */
+Hooks.on("updateActor", async (actor, changed, options, userId) => {
+  // Only process for the updating user (GM typically)
+  if (game.user.id !== userId) return;
+
+  // Only process NPC HP changes
+  if (actor.type !== "npc") return;
+  if (!foundry.utils.hasProperty(changed, "system.hp.value")) return;
+
+  // Skip if already broken or already prompted this combat
+  const moraleStatus = actor.system.moraleStatus;
+  if (moraleStatus?.broken || moraleStatus?.checkedThisCombat) return;
+
+  // Check if HP dropped to half or below
+  const newHP = changed.system.hp.value;
+  const maxHP = actor.system.hp.max;
+  const halfHP = Math.floor(maxHP / 2);
+
+  // Only trigger if crossing the half-HP threshold
+  // (options._previousHP is set by _preUpdate if we had it, but we'll use current logic)
+  if (newHP <= halfHP && newHP > 0) {
+    // Prompt the GM with a morale check button
+    await actor.promptMoraleCheck("half-hp");
+  }
+});
+
+/**
+ * Handle clicks on morale roll buttons in chat messages.
+ * The button is created by VagabondActor.promptMoraleCheck().
+ */
+Hooks.on("renderChatMessage", (message, html) => {
+  // Find morale roll buttons in this message
+  html.find(".morale-roll-btn").on("click", async (event) => {
+    event.preventDefault();
+
+    const button = event.currentTarget;
+    const actorId = button.dataset.actorId;
+    const trigger = button.dataset.trigger;
+
+    // Get the actor
+    const actor = game.actors.get(actorId);
+    if (!actor) {
+      ui.notifications.error("Could not find actor for morale check");
+      return;
+    }
+
+    // Roll morale
+    await actor.rollMorale({ trigger });
+
+    // Disable the button after rolling
+    button.disabled = true;
+    button.textContent = "Morale Checked";
+  });
 });
 
 /* -------------------------------------------- */

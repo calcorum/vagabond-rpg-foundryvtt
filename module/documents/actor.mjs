@@ -520,6 +520,211 @@ export default class VagabondActor extends Actor {
     return this.system.shouldCheckMorale?.() || false;
   }
 
+  /* -------------------------------------------- */
+  /*  Morale System (NPC)                         */
+  /* -------------------------------------------- */
+
+  /**
+   * Roll a morale check for this NPC.
+   * Morale fails if 2d6 > Morale score.
+   *
+   * @param {Object} options - Roll options
+   * @param {string} [options.trigger] - What triggered this check (first-death, half-hp, etc.)
+   * @param {boolean} [options.skipMessage=false] - If true, don't post chat message
+   * @returns {Promise<Object>} Result with roll, passed, and morale data
+   */
+  async rollMorale({ trigger = null, skipMessage = false } = {}) {
+    if (this.type !== "npc") {
+      ui.notifications.warn("Morale checks are only for NPCs");
+      return null;
+    }
+
+    const morale = this.system.morale;
+
+    // Roll 2d6
+    const roll = await new Roll("2d6").evaluate();
+
+    // Morale fails if roll > morale score
+    const passed = roll.total <= morale;
+
+    // Update morale status
+    const updates = {
+      "system.moraleStatus.checkedThisCombat": true,
+      "system.moraleStatus.lastTrigger": trigger,
+      "system.moraleStatus.lastResult": passed ? "passed" : "failed-retreat",
+    };
+
+    // If failed, mark as broken
+    if (!passed) {
+      updates["system.moraleStatus.broken"] = true;
+    }
+
+    await this.update(updates);
+
+    // Post chat message
+    if (!skipMessage) {
+      await this._postMoraleMessage(roll, morale, passed, trigger);
+    }
+
+    return { roll, passed, morale, trigger };
+  }
+
+  /**
+   * Post a morale check result to chat.
+   *
+   * @param {Roll} roll - The 2d6 roll
+   * @param {number} morale - The morale score
+   * @param {boolean} passed - Whether the check passed
+   * @param {string} trigger - What triggered the check
+   * @private
+   */
+  async _postMoraleMessage(roll, morale, passed, trigger) {
+    const triggerLabels = {
+      "first-death": "first ally death",
+      "half-hp": "reaching half HP",
+      "half-incapacitated": "half of group incapacitated",
+      "leader-death": "leader death",
+      manual: "GM request",
+    };
+
+    const triggerText = triggerLabels[trigger] || trigger || "unknown trigger";
+    const resultText = passed
+      ? `<span style="color: green; font-weight: bold;">HOLDS!</span> (rolled ${roll.total} ≤ ${morale})`
+      : `<span style="color: red; font-weight: bold;">BREAKS!</span> (rolled ${roll.total} > ${morale})`;
+
+    const content = `
+      <div class="vagabond morale-check">
+        <h3>Morale Check</h3>
+        <p><strong>Trigger:</strong> ${triggerText}</p>
+        <p><strong>Morale Score:</strong> ${morale}</p>
+        <p><strong>Result:</strong> ${resultText}</p>
+        ${!passed ? "<p><em>The enemy retreats or surrenders!</em></p>" : ""}
+      </div>
+    `;
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      content,
+      rolls: [roll],
+      sound: CONFIG.sounds.dice,
+    });
+  }
+
+  /**
+   * Roll morale for multiple selected NPCs as a group.
+   * Uses the lowest morale score among the group.
+   *
+   * @param {Object} options - Roll options
+   * @param {string} [options.trigger] - What triggered this check
+   * @returns {Promise<Object>} Result with roll, passed, and affected actors
+   */
+  static async rollGroupMorale({ trigger = "manual" } = {}) {
+    // Get selected NPC tokens
+    const tokens = canvas.tokens.controlled.filter((t) => t.actor?.type === "npc");
+
+    if (tokens.length === 0) {
+      ui.notifications.warn("Select one or more NPC tokens to roll morale");
+      return null;
+    }
+
+    // Find the lowest morale score (weakest link)
+    const actors = tokens.map((t) => t.actor);
+    const lowestMorale = Math.min(...actors.map((a) => a.system.morale));
+    const groupName =
+      tokens.length === 1
+        ? tokens[0].name
+        : `${tokens.length} enemies (lowest morale: ${lowestMorale})`;
+
+    // Roll 2d6
+    const roll = await new Roll("2d6").evaluate();
+    const passed = roll.total <= lowestMorale;
+
+    // Update all affected actors
+    for (const actor of actors) {
+      await actor.update({
+        "system.moraleStatus.checkedThisCombat": true,
+        "system.moraleStatus.lastTrigger": trigger,
+        "system.moraleStatus.lastResult": passed ? "passed" : "failed-retreat",
+        "system.moraleStatus.broken": !passed,
+      });
+    }
+
+    // Post group result to chat
+    const triggerLabels = {
+      "first-death": "first ally death",
+      "half-hp": "reaching half HP",
+      "half-incapacitated": "half of group incapacitated",
+      "leader-death": "leader death",
+      manual: "GM request",
+    };
+
+    const triggerText = triggerLabels[trigger] || trigger || "unknown trigger";
+    const resultText = passed
+      ? `<span style="color: green; font-weight: bold;">HOLDS!</span> (rolled ${roll.total} ≤ ${lowestMorale})`
+      : `<span style="color: red; font-weight: bold;">BREAKS!</span> (rolled ${roll.total} > ${lowestMorale})`;
+
+    const actorNames = actors.map((a) => a.name).join(", ");
+
+    const content = `
+      <div class="vagabond morale-check group">
+        <h3>Group Morale Check</h3>
+        <p><strong>Group:</strong> ${actorNames}</p>
+        <p><strong>Trigger:</strong> ${triggerText}</p>
+        <p><strong>Morale Score:</strong> ${lowestMorale} (lowest in group)</p>
+        <p><strong>Result:</strong> ${resultText}</p>
+        ${!passed ? "<p><em>The enemies retreat or surrender!</em></p>" : ""}
+      </div>
+    `;
+
+    await ChatMessage.create({
+      speaker: { alias: "Morale Check" },
+      content,
+      rolls: [roll],
+      sound: CONFIG.sounds.dice,
+    });
+
+    return { roll, passed, morale: lowestMorale, actors, trigger };
+  }
+
+  /**
+   * Post a morale prompt to chat when a trigger condition is met.
+   * Includes a clickable button to roll morale.
+   *
+   * @param {string} trigger - What triggered the prompt
+   */
+  async promptMoraleCheck(trigger) {
+    if (this.type !== "npc") return;
+
+    // Don't prompt if already broken
+    if (this.system.moraleStatus?.broken) return;
+
+    const triggerLabels = {
+      "first-death": "first ally death",
+      "half-hp": "reaching half HP",
+      "half-incapacitated": "half of group incapacitated",
+      "leader-death": "leader death",
+    };
+
+    const triggerText = triggerLabels[trigger] || trigger;
+
+    const content = `
+      <div class="vagabond morale-prompt">
+        <h3>Morale Check Triggered</h3>
+        <p><strong>${this.name}</strong> has reached a morale trigger: <em>${triggerText}</em></p>
+        <p>Morale Score: <strong>${this.system.morale}</strong></p>
+        <button type="button" class="morale-roll-btn" data-actor-id="${this.id}" data-trigger="${trigger}">
+          Roll Morale Check
+        </button>
+      </div>
+    `;
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      content,
+      whisper: game.users.filter((u) => u.isGM).map((u) => u.id),
+    });
+  }
+
   /**
    * Get the net favor/hinder for a specific roll type.
    * Checks Active Effect flags for persistent favor/hinder sources.

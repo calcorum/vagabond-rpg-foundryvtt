@@ -83,7 +83,7 @@ export default class NPCData extends VagabondActorBase {
           nullable: true,
           blank: false,
           initial: null,
-          choices: ["first-death", "half-hp", "half-incapacitated", "leader-death"],
+          choices: ["first-death", "half-hp", "half-incapacitated", "leader-death", "manual"],
         }),
         // Result of the last morale check
         lastResult: new fields.StringField({
