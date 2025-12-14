@@ -135,7 +135,8 @@ export default class ClassData extends VagabondItemBase {
   }
 
   /**
-   * Get casting max at a given level.
+   * Get cumulative casting max at a given level.
+   * Casting max increases are cumulative across levels.
    *
    * @param {number} level - Character level
    * @returns {number} Casting max (max mana per spell)
@@ -143,8 +144,8 @@ export default class ClassData extends VagabondItemBase {
   getCastingMaxAtLevel(level) {
     let castingMax = 0;
     for (const prog of this.progression) {
-      if (prog.level <= level && prog.castingMax > castingMax) {
-        castingMax = prog.castingMax;
+      if (prog.level <= level) {
+        castingMax += prog.castingMax || 0;
       }
     }
     return castingMax;

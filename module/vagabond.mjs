@@ -297,6 +297,42 @@ Hooks.once("init", () => {
 });
 
 /* -------------------------------------------- */
+/*  Class Feature Automation                    */
+/* -------------------------------------------- */
+
+/**
+ * Class feature application is handled by VagabondItem._onCreate
+ * which runs as part of the document creation flow.
+ *
+ * Class effect cleanup is handled by VagabondItem._preDelete
+ * which runs before the document is deleted.
+ */
+
+/**
+ * When a character's level changes, update class features.
+ * This must be a Hook since level changes don't go through Item lifecycle.
+ */
+Hooks.on("updateActor", async (actor, changed, _options, userId) => {
+  // Only process for the updating user
+  if (game.user.id !== userId) return;
+
+  // Only process character level changes
+  if (actor.type !== "character") return;
+  if (!foundry.utils.hasProperty(changed, "system.level")) return;
+
+  const newLevel = changed.system.level;
+  const oldLevel = actor._source.system.level; // Get previous value from source
+
+  if (newLevel === oldLevel) return;
+
+  // Update features for each class
+  const classes = actor.items.filter((i) => i.type === "class");
+  for (const classItem of classes) {
+    await classItem.updateClassFeatures(newLevel, oldLevel);
+  }
+});
+
+/* -------------------------------------------- */
 /*  Quench Test Registration                    */
 /* -------------------------------------------- */
 

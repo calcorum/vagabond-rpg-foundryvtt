@@ -14,6 +14,49 @@
  */
 export default class VagabondItem extends Item {
   /* -------------------------------------------- */
+  /*  Document Lifecycle                          */
+  /* -------------------------------------------- */
+
+  /**
+   * Handle item creation. For class items, apply features as Active Effects.
+   * Note: This runs asynchronously after createEmbeddedDocuments returns.
+   * The applyClassFeatures method is idempotent and safe to call multiple times.
+   *
+   * @override
+   */
+  async _onCreate(data, options, userId) {
+    await super._onCreate(data, options, userId);
+
+    // Only process for the creating user
+    if (game.user.id !== userId) return;
+
+    // Apply class features when class is added to a character
+    // Check that actor still exists (may be deleted in tests)
+    if (this.type === "class" && this.parent?.type === "character" && this.actor?.id) {
+      try {
+        await this.applyClassFeatures();
+      } catch (err) {
+        // Actor may have been deleted during tests - silently ignore
+        if (!err.message?.includes("does not exist")) throw err;
+      }
+    }
+  }
+
+  /**
+   * Handle item deletion. For class items, remove associated Active Effects.
+   *
+   * @override
+   */
+  async _preDelete(options, userId) {
+    // Remove class effects before deletion
+    if (this.type === "class" && this.parent?.type === "character") {
+      await this._removeClassEffects();
+    }
+
+    return super._preDelete(options, userId);
+  }
+
+  /* -------------------------------------------- */
   /*  Data Preparation                            */
   /* -------------------------------------------- */
 
@@ -505,6 +548,210 @@ export default class VagabondItem extends Item {
     }
 
     return features;
+  }
+
+  /**
+   * Apply class features as Active Effects based on character's current level.
+   * Called when class is added to character or when level changes.
+   * This method is idempotent - it won't create duplicate effects.
+   *
+   * @param {number} [targetLevel] - Level to apply features for (defaults to actor's level)
+   * @returns {Promise<ActiveEffect[]>} Created effects
+   */
+  async applyClassFeatures(targetLevel = null) {
+    if (this.type !== "class" || !this.actor) return [];
+
+    const level = targetLevel ?? this.actor.system.level ?? 1;
+    const features = this.system.features || [];
+
+    // Get features at or below current level that have changes
+    const applicableFeatures = features.filter((f) => f.level <= level && f.changes?.length > 0);
+
+    if (applicableFeatures.length === 0) {
+      // Still apply progression even if no features with changes
+      await this._applyClassProgression(level);
+      await this._applyTrainedSkills();
+      return [];
+    }
+
+    // Filter out features that already have effects applied (idempotent)
+    const existingEffects = this.actor.effects.filter((e) => e.origin === this.uuid);
+    const existingFeatureNames = new Set(
+      existingEffects.map((e) => e.flags?.vagabond?.featureName)
+    );
+    const newFeatures = applicableFeatures.filter((f) => !existingFeatureNames.has(f.name));
+
+    if (newFeatures.length === 0) {
+      // All features already applied, just update progression
+      await this._applyClassProgression(level);
+      await this._applyTrainedSkills();
+      return [];
+    }
+
+    // Build Active Effect data for each new feature
+    const effectsData = newFeatures.map((feature) => ({
+      name: `${this.name}: ${feature.name}`,
+      icon: this.img || "icons/svg/book.svg",
+      origin: this.uuid,
+      changes: feature.changes.map((change) => ({
+        key: change.key,
+        mode: change.mode ?? 2, // Default to ADD mode
+        value: String(change.value),
+        priority: change.priority ?? null,
+      })),
+      flags: {
+        vagabond: {
+          classFeature: true,
+          className: this.name,
+          featureName: feature.name,
+          featureLevel: feature.level,
+        },
+      },
+    }));
+
+    // Create the effects
+    const createdEffects = await this.actor.createEmbeddedDocuments("ActiveEffect", effectsData);
+
+    // Also update actor's mana and casting max from class progression
+    await this._applyClassProgression(level);
+
+    // Train skills from class
+    await this._applyTrainedSkills();
+
+    return createdEffects;
+  }
+
+  /**
+   * Update class features when character level changes.
+   * Adds new features gained at the new level.
+   *
+   * @param {number} newLevel - The new character level
+   * @param {number} oldLevel - The previous character level
+   * @returns {Promise<ActiveEffect[]>} Newly created effects
+   */
+  async updateClassFeatures(newLevel, oldLevel) {
+    if (this.type !== "class" || !this.actor) return [];
+
+    const features = this.system.features || [];
+
+    // Find features gained between old and new level
+    const newFeatures = features.filter(
+      (f) => f.level > oldLevel && f.level <= newLevel && f.changes?.length > 0
+    );
+
+    if (newFeatures.length === 0) {
+      // Still update progression stats even if no new features
+      await this._applyClassProgression(newLevel);
+      return [];
+    }
+
+    // Build Active Effect data for new features
+    const effectsData = newFeatures.map((feature) => ({
+      name: `${this.name}: ${feature.name}`,
+      icon: this.img || "icons/svg/book.svg",
+      origin: this.uuid,
+      changes: feature.changes.map((change) => ({
+        key: change.key,
+        mode: change.mode ?? 2,
+        value: String(change.value),
+        priority: change.priority ?? null,
+      })),
+      flags: {
+        vagabond: {
+          classFeature: true,
+          className: this.name,
+          featureName: feature.name,
+          featureLevel: feature.level,
+        },
+      },
+    }));
+
+    const createdEffects = await this.actor.createEmbeddedDocuments("ActiveEffect", effectsData);
+
+    // Update mana and casting max
+    await this._applyClassProgression(newLevel);
+
+    return createdEffects;
+  }
+
+  /**
+   * Remove all Active Effects originating from this class.
+   *
+   * @private
+   * @returns {Promise<void>}
+   */
+  async _removeClassEffects() {
+    if (!this.actor) return;
+
+    const classEffects = this.actor.effects.filter((e) => e.origin === this.uuid);
+    if (classEffects.length > 0) {
+      const ids = classEffects.map((e) => e.id);
+      await this.actor.deleteEmbeddedDocuments("ActiveEffect", ids);
+    }
+  }
+
+  /**
+   * Apply class progression stats (mana, casting max) to the actor.
+   *
+   * @private
+   * @param {number} level - Character level
+   * @returns {Promise<void>}
+   */
+  async _applyClassProgression(level) {
+    if (!this.actor || !this.system.isCaster) return;
+
+    // Calculate mana and casting max directly from progression data
+    // (methods on data model may not be available on embedded items)
+    const progression = this.system.progression || [];
+    let mana = 0;
+    let castingMax = 0;
+    for (const prog of progression) {
+      if (prog.level <= level) {
+        mana += prog.mana || 0;
+        castingMax += prog.castingMax || 0;
+      }
+    }
+
+    // Update actor's mana pool
+    const updates = {};
+    if (mana > 0) {
+      updates["system.resources.mana.max"] = mana;
+      // Set current mana to max if it was 0 (initial grant)
+      if (this.actor.system.resources.mana.value === 0) {
+        updates["system.resources.mana.value"] = mana;
+      }
+    }
+    if (castingMax > 0) {
+      updates["system.resources.mana.castingMax"] = castingMax;
+    }
+
+    if (Object.keys(updates).length > 0) {
+      await this.actor.update(updates);
+    }
+  }
+
+  /**
+   * Apply trained skills from class to the actor.
+   *
+   * @private
+   * @returns {Promise<void>}
+   */
+  async _applyTrainedSkills() {
+    if (!this.actor) return;
+
+    const trainedSkills = this.system.trainedSkills || [];
+    if (trainedSkills.length === 0) return;
+
+    const updates = {};
+    for (const skillId of trainedSkills) {
+      if (this.actor.system.skills?.[skillId]) {
+        updates[`system.skills.${skillId}.trained`] = true;
+      }
+    }
+
+    if (Object.keys(updates).length > 0) {
+      await this.actor.update(updates);
+    }
   }
 
   /* -------------------------------------------- */

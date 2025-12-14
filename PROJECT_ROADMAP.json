@@ -333,8 +333,8 @@
           "id": "2.11",
           "name": "Implement inventory slot tracking",
           "description": "Calculate slots used from equipped items, max slots from Might, over-capacity warnings",
-          "completed": false,
-          "tested": false,
+          "completed": true,
+          "tested": true,
           "priority": "high",
           "dependencies": ["2.2", "1.11", "1.12", "1.13"]
         },

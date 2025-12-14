@@ -15,6 +15,64 @@
  */
 export default class VagabondActor extends Actor {
   /* -------------------------------------------- */
+  /*  Document Lifecycle                          */
+  /* -------------------------------------------- */
+
+  /**
+   * Handle actor updates. Detect level changes and update class features.
+   *
+   * @override
+   */
+  async _onUpdate(changed, options, userId) {
+    await super._onUpdate(changed, options, userId);
+
+    // Only process for the updating user
+    if (game.user.id !== userId) return;
+
+    // Check for level change on characters
+    if (this.type === "character" && changed.system?.level !== undefined) {
+      const newLevel = changed.system.level;
+      const oldLevel = options._previousLevel ?? 1;
+
+      if (newLevel !== oldLevel) {
+        await this._onLevelChange(newLevel, oldLevel);
+      }
+    }
+  }
+
+  /**
+   * Capture current level before update for comparison.
+   *
+   * @override
+   */
+  async _preUpdate(changed, options, userId) {
+    await super._preUpdate(changed, options, userId);
+
+    // Store current level for level change detection
+    if (this.type === "character" && changed.system?.level !== undefined) {
+      options._previousLevel = this.system.level;
+    }
+  }
+
+  /**
+   * Handle character level changes.
+   * Updates class features for all owned class items.
+   *
+   * @param {number} newLevel - The new character level
+   * @param {number} oldLevel - The previous character level
+   * @private
+   */
+  async _onLevelChange(newLevel, oldLevel) {
+    // Get all class items
+    const classes = this.items.filter((i) => i.type === "class");
+
+    // Update features for each class
+    for (const classItem of classes) {
+      await classItem.updateClassFeatures(newLevel, oldLevel);
+    }
+  }
+
+  /* -------------------------------------------- */
   /*  Data Preparation                            */
   /* -------------------------------------------- */
 
