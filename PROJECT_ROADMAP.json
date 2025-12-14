@@ -324,8 +324,8 @@
           "id": "2.10",
           "name": "Implement resource management",
           "description": "HP damage/healing, Mana spending/recovery, Luck pool, Fatigue accumulation with death trigger at 5",
-          "completed": false,
-          "tested": false,
+          "completed": true,
+          "tested": true,
           "priority": "high",
           "dependencies": ["2.2", "1.4"]
         },
