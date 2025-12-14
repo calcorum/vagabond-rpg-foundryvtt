@@ -11,6 +11,7 @@
 import { registerActorTests } from "./actor.test.mjs";
 import { registerDiceTests } from "./dice.test.mjs";
 import { registerSpellTests } from "./spell.test.mjs";
+import { registerCritThresholdTests } from "./crit-threshold.test.mjs";
 // import { registerItemTests } from "./item.test.mjs";
 // import { registerEffectTests } from "./effects.test.mjs";
 
@@ -68,6 +69,7 @@ export function registerQuenchTests(quenchRunner) {
   registerActorTests(quenchRunner);
   registerDiceTests(quenchRunner);
   registerSpellTests(quenchRunner);
+  registerCritThresholdTests(quenchRunner);
   // registerItemTests(quenchRunner);
   // registerEffectTests(quenchRunner);
 

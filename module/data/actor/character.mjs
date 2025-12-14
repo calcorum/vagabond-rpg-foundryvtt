@@ -650,8 +650,11 @@ export default class CharacterData extends VagabondActorBase {
     this.saves.will.difficulty =
       20 - (stats.reason.value + stats.presence.value) - this.saves.will.bonus;
 
-    // Calculate Skill Difficulties
+    // Calculate Skill Difficulties (also clamps skill crit thresholds)
     this._calculateSkillDifficulties();
+
+    // Clamp attack crit thresholds after Active Effects
+    this._clampAttackCritThresholds();
   }
 
   /**
@@ -674,6 +677,21 @@ export default class CharacterData extends VagabondActorBase {
 
       // Calculate difficulty: 20 - stat (untrained) or 20 - stat×2 (trained)
       skillData.difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
+
+      // Clamp crit threshold after Active Effects (schema min doesn't apply to effect-modified data)
+      skillData.critThreshold = Math.max(1, Math.min(20, skillData.critThreshold));
+    }
+  }
+
+  /**
+   * Clamp attack crit thresholds after Active Effects are applied.
+   * Schema constraints don't apply to effect-modified data.
+   *
+   * @private
+   */
+  _clampAttackCritThresholds() {
+    for (const attackData of Object.values(this.attacks)) {
+      attackData.critThreshold = Math.max(1, Math.min(20, attackData.critThreshold));
     }
   }
 
