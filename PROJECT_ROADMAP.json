@@ -315,8 +315,8 @@
           "id": "2.9",
           "name": "Implement crit threshold modifier system",
           "description": "Per-skill and per-action crit thresholds that can be modified by Active Effects from classes/perks/features",
-          "completed": false,
-          "tested": false,
+          "completed": true,
+          "tested": true,
           "priority": "high",
           "dependencies": ["2.5", "1.15"]
         },
