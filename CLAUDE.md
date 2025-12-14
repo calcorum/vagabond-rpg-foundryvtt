@@ -92,14 +92,15 @@ docker compose restart
 
 Game rules and content are documented in NoteDiscovery under `gaming/vagabond-rpg/`:
 
-- `core-mechanics.md` - Stats, checks, dice, HP
-- `combat.md` - Actions, movement, defending, zones
-- `character-creation.md` - Ancestries, classes, leveling
-- `magic-system.md` - Casting, mana, delivery, duration
-- `spells-full-text.md` - All 55+ spells with full descriptions
-- `perks-full-list.md` - All 90+ perks with prerequisites
-- `classes-full-text.md` - All 18 classes with progression tables
-- `bestiary.md` - Creature categories, TL reference
+- `core-mechanics` - Stats, checks, dice, HP
+- `combat` - Actions, movement, defending, zones
+- `character-creation` - Ancestries, classes, leveling
+- `magic-system` - Casting, mana, delivery, duration
+- `spells-full-text` - All 55+ spells with full descriptions
+- `perks-full-list` - All 90+ perks with prerequisites
+- `classes-full-text` - All 18 classes with progression tables
+- `bestiary` - Creature categories, TL reference
+- `testing-strategy` - Quench testing patterns (unit vs integration, async handling)
 
 **To access NoteDiscovery:**
 
