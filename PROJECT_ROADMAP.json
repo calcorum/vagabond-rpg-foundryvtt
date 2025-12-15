@@ -492,7 +492,7 @@
           "tested": false,
           "priority": "medium",
           "dependencies": ["3.2"],
-          "notes": "Biography tab with character details (Size, Being Type), senses (6 boolean toggles: Allsight, Blindsight, Darkvision, Echolocation, Seismicsense, Telepathy in 3-column grid), biography and notes textareas. Languages section hidden until implemented."
+          "notes": "Biography tab with character details (Size, Being Type), senses (6 boolean toggles in 3-column grid), movement capabilities (5 boolean toggles: Climb/Cling/Fly/Phase/Swim matching NPC sheet), biography and notes textareas. Languages section hidden until implemented."
         },
         {
           "id": "3.13",
@@ -512,7 +512,7 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["3.13"],
-          "notes": "Stats section with zone, speed, size, being type, senses (6 boolean toggles matching character sheet), damage modifiers."
+          "notes": "Stats section with zone (with behavior hint), speed (single value), movement capabilities (5 boolean toggles: Climb/Cling/Fly/Phase/Swim per RAW), size, being type, appearing (rollable label), senses (6 boolean toggles), damage modifiers (immunities/resistances/weaknesses)."
         },
         {
           "id": "3.15",
@@ -670,10 +670,11 @@
           "id": "5.5",
           "name": "Style NPC sheet",
           "description": "Clean stat block format, readable at small sizes, collapsible sections",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["5.1", "5.2", "5.3", "3.13"]
+          "dependencies": ["5.1", "5.2", "5.3", "3.13"],
+          "notes": "NPC sheet styled with: header (portrait, name, HD/TL/Armor boxes, HP bar, morale), stats section (zone with behavior hint, speed, size/type, appearing with rollable label), movement grid (Climb/Cling/Fly/Phase/Swim booleans matching senses pattern), senses row, damage modifiers, actions list with add/delete/roll, abilities list, notes section (loot, GM notes). Scrollbar fix for overflow. Movement uses boolean toggles per RAW (all use base speed)."
         },
         {
           "id": "5.6",
