@@ -710,10 +710,11 @@
           "id": "5.9",
           "name": "Accessibility audit",
           "description": "Verify color contrast ratios, focus indicators, screen reader compatibility",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["5.4", "5.5", "5.6"]
+          "dependencies": ["5.4", "5.5", "5.6"],
+          "notes": "Fixed WCAG AA compliance: accent-highlight (#7a4f1d, 5.23:1), warning (#705308, 5.29:1), dark theme muted text (#9a8e7e, 5.39:1). Added .sr-only utility, .interactive-row with focus-visible, prefers-reduced-motion support. Interactive rows (saves, attacks) have role=button, tabindex=0, aria-labels. Stat inputs have proper label for= associations. Keyboard accessibility via _setupKeyboardAccessibility() for Enter/Space activation."
         },
         {
           "id": "5.10",

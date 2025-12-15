@@ -94,7 +94,7 @@ body.theme-dark .vagabond:not(.theme-light),
   // Light text colors (parchment-tinted)
   --color-text-primary: #e8dcc8;
   --color-text-secondary: #c4b8a4;
-  --color-text-muted: #8a7e6e;
+  --color-text-muted: #9a8e7e; // Lightened for WCAG AA contrast (4.5:1)
   --color-text-inverse: #1e1a16;
 
   // Accent colors (slightly brighter for dark bg)
@@ -105,7 +105,7 @@ body.theme-dark .vagabond:not(.theme-light),
   // Semantic colors (adjusted for dark backgrounds)
   --color-success: #4a9f42;
   --color-danger: #c94444;
-  --color-warning: #d4a32c;
+  --color-warning: #c99020; // Adjusted for contrast
   --color-info: #4a8080;
 
   // Stat colors (brighter for dark bg)

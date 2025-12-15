@@ -7,9 +7,10 @@
       <div class="stats-grid">
         {{#each stats}}
         <div class="stat-block {{this.color}}">
-          <label class="stat-label" data-tooltip="{{localize this.label}}">{{this.abbr}}</label>
-          <input type="number" class="stat-value" name="{{this.path}}"
-                 value="{{this.value}}" min="1" max="10" />
+          <label class="stat-label" for="stat-{{this.id}}" data-tooltip="{{localize this.label}}">{{this.abbr}}</label>
+          <input type="number" class="stat-value" id="stat-{{this.id}}" name="{{this.path}}"
+                 value="{{this.value}}" min="1" max="10"
+                 aria-label="{{localize this.label}}" />
         </div>
         {{/each}}
       </div>
@@ -22,11 +23,13 @@
         <h2 class="section-header">{{localize "VAGABOND.Saves"}}</h2>
         <div class="saves-list">
           {{#each saves}}
-          <div class="save-row" data-action="rollSave" data-save="{{this.id}}">
+          <div class="save-row interactive-row" role="button" tabindex="0"
+               data-action="rollSave" data-save="{{this.id}}"
+               aria-label="{{localize this.label}} {{localize 'VAGABOND.Save'}}: {{localize 'VAGABOND.Difficulty'}} {{this.difficulty}}">
             <span class="save-label">{{localize this.label}}</span>
             <span class="save-stats">({{this.stats}})</span>
             <span class="save-difficulty">{{this.difficulty}}</span>
-            <i class="fa-solid fa-dice-d20 roll-icon"></i>
+            <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
           </div>
           {{/each}}
         </div>
@@ -73,13 +76,15 @@
         <h2 class="section-header">{{localize "VAGABOND.Attacks"}}</h2>
         <div class="attack-skills-grid">
           {{#each attackSkills}}
-          <div class="attack-skill-row" data-action="rollAttack" data-attack-skill="{{this.id}}">
+          <div class="attack-skill-row interactive-row" role="button" tabindex="0"
+               data-action="rollAttack" data-attack-skill="{{this.id}}"
+               aria-label="{{localize this.label}} {{localize 'VAGABOND.Attack'}}: {{localize 'VAGABOND.Difficulty'}} {{this.difficulty}}">
             <span class="attack-name">{{localize this.label}}</span>
             <span class="attack-stat">({{this.statAbbr}})</span>
             <span class="attack-difficulty">{{this.difficulty}}</span>
             {{#if this.hasCritBonus}}
             <span class="attack-crit">
-              <i class="fa-solid fa-star"></i>{{this.critThreshold}}
+              <i class="fa-solid fa-star" aria-hidden="true"></i>{{this.critThreshold}}
             </span>
             {{/if}}
           </div>

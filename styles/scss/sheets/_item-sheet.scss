@@ -328,9 +328,6 @@
       border-radius: $radius-sm;
       background-color: var(--color-bg-input);
       min-height: 120px;
-      max-height: 400px;
-      overflow: auto;
-      resize: vertical;
 
       // Static content display (non-editable)
       > .editor-content {
@@ -340,13 +337,11 @@
 
       // ProseMirror custom element styling
       prose-mirror {
-        display: flex;
-        flex-direction: column;
+        display: block;
         min-height: 100px;
 
         // The menu bar that appears when editing
         > menu.editor-menu {
-          flex: 0 0 auto;
           position: sticky;
           top: 0;
           z-index: 1;
@@ -356,21 +351,18 @@
 
         // Foundry's inner editor-container
         > .editor-container {
-          flex: 1 1 auto;
-          display: flex;
-          flex-direction: column;
           min-height: 80px;
 
           // The actual editable content area
           > .editor-content {
-            flex: 1 1 auto;
             padding: $spacing-2;
+            min-height: 60px;
           }
         }
 
-        // Toggle button
+        // Toggle button - keep visible for editing
         > button.toggle {
-          display: none; // Hide since we use toggled="false"
+          // Don't hide - let Foundry handle it
         }
       }
     }
@@ -602,9 +594,6 @@
       border-radius: $radius-sm;
       background-color: var(--color-bg-input);
       min-height: 80px;
-      max-height: 300px;
-      overflow: auto;
-      resize: vertical;
 
       // Static content display (non-editable)
       > .editor-content {
@@ -614,13 +603,11 @@
 
       // ProseMirror custom element styling
       prose-mirror {
-        display: flex;
-        flex-direction: column;
+        display: block;
         min-height: 60px;
 
         // The menu bar that appears when editing
         > menu.editor-menu {
-          flex: 0 0 auto;
           position: sticky;
           top: 0;
           z-index: 1;
@@ -630,21 +617,18 @@
 
         // Foundry's inner editor-container
         > .editor-container {
-          flex: 1 1 auto;
-          display: flex;
-          flex-direction: column;
           min-height: 40px;
 
           // The actual editable content area
           > .editor-content {
-            flex: 1 1 auto;
             padding: $spacing-2;
+            min-height: 30px;
           }
         }
 
-        // Toggle button
+        // Toggle button - keep visible for editing
         > button.toggle {
-          display: none;
+          // Don't hide - let Foundry handle it
         }
       }
     }

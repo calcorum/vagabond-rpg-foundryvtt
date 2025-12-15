@@ -140,6 +140,69 @@
   }
 }
 
+// Accessibility utilities
+.vagabond {
+  // Screen reader only (visually hidden but accessible)
+  .sr-only {
+    @include sr-only;
+  }
+
+  // Skip link (visible on focus)
+  .skip-link {
+    @include sr-only;
+
+    &:focus {
+      position: fixed;
+      top: $spacing-2;
+      left: $spacing-2;
+      z-index: $z-tooltip;
+      width: auto;
+      height: auto;
+      padding: $spacing-2 $spacing-4;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+      background-color: var(--color-bg-primary);
+      border: 2px solid var(--color-accent-primary);
+      border-radius: $radius-md;
+      color: var(--color-text-primary);
+    }
+  }
+
+  // Interactive row styling (for keyboard accessible rows)
+  .interactive-row {
+    cursor: pointer;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: var(--color-bg-highlight);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent-primary);
+      outline-offset: -2px;
+      background-color: var(--color-bg-highlight);
+    }
+
+    // Active state for touch/click feedback
+    &:active {
+      background-color: var(--color-bg-tertiary);
+    }
+  }
+
+  // Ensure reduced motion preference is respected
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
 // Foundry sheet wrapper styles
 .sheet.vagabond {
   @include custom-scrollbar;

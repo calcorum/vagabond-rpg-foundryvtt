@@ -285,6 +285,31 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
 
     // Initialize any content-editable fields
     this._initializeEditors();
+
+    // Add keyboard accessibility for interactive rows
+    this._setupKeyboardAccessibility();
+  }
+
+  /**
+   * Set up keyboard event listeners for elements with role="button".
+   * This enables Enter/Space key activation for accessibility.
+   * @protected
+   */
+  _setupKeyboardAccessibility() {
+    if (!this.element) return;
+
+    // Find all elements with role="button" that have data-action
+    const interactiveElements = this.element.querySelectorAll('[role="button"][data-action]');
+
+    for (const el of interactiveElements) {
+      el.addEventListener("keydown", (event) => {
+        // Trigger click on Enter or Space
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          el.click();
+        }
+      });
+    }
   }
 
   /**
