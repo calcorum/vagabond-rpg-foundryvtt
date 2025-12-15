@@ -482,7 +482,7 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["3.2", "2.8"],
-          "notes": "Magic tab with mana display, focus tracking, spell list with cast buttons, reference guide."
+          "notes": "Magic tab with mana display (matching inventory header format), focus panel, spell list with damage/effect badges and cast buttons, spellcasting reference guide with delivery/duration costs."
         },
         {
           "id": "3.12",
@@ -492,7 +492,7 @@
           "tested": false,
           "priority": "medium",
           "dependencies": ["3.2"],
-          "notes": "Biography tab with character details, languages, senses, biography and notes textareas."
+          "notes": "Biography tab with character details (Size, Being Type), senses (6 boolean toggles: Allsight, Blindsight, Darkvision, Echolocation, Seismicsense, Telepathy in 3-column grid), biography and notes textareas. Languages section hidden until implemented."
         },
         {
           "id": "3.13",
@@ -512,7 +512,7 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["3.13"],
-          "notes": "Stats section with zone, speed, size, being type, senses, damage modifiers."
+          "notes": "Stats section with zone, speed, size, being type, senses (6 boolean toggles matching character sheet), damage modifiers."
         },
         {
           "id": "3.15",
@@ -660,11 +660,11 @@
           "id": "5.4",
           "name": "Style Character sheet",
           "description": "Match official Hero Record aesthetic: stat column layout, bordered sections, parchment background",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["5.1", "5.2", "5.3", "3.2"],
-          "notes": "In progress. Completed: Header, Main tab (stats, combat, saves, skills, attacks), Inventory tab (inline header with item slots/currencies, item lists), Abilities tab (ancestry, features, perks with prerequisite display, active effects). Remaining: Magic tab, Biography tab."
+          "notes": "All tabs styled: Header (portrait, name, resources), Main tab (stats, combat, saves, skills, attacks), Inventory tab (inline header with item slots/currencies, item lists), Abilities tab (ancestry, features, perks, active effects), Magic tab (mana display, focus panel, spell list, casting reference), Biography tab (details, senses grid, textareas). Uses container queries for responsive layout."
         },
         {
           "id": "5.5",
