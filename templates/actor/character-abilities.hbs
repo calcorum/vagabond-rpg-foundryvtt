@@ -66,8 +66,8 @@
         <img class="ability-img" src="{{this.img}}" alt="{{this.name}}" />
         <div class="ability-info">
           <span class="ability-name" data-action="itemEdit">{{this.name}}</span>
-          {{#if this.system.prerequisites}}
-          <span class="ability-prereqs">{{this.system.prerequisites}}</span>
+          {{#if this.prerequisiteString}}
+          <span class="ability-prereqs">{{this.prerequisiteString}}</span>
           {{/if}}
         </div>
         <div class="ability-description">{{{this.system.description}}}</div>

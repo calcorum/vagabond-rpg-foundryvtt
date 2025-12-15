@@ -203,9 +203,13 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
         case "feature":
           items.features.push(item);
           break;
-        case "perk":
+        case "perk": {
+          // Add formatted prerequisite string for display (hide "None")
+          const prereqStr = item.system.getPrerequisiteString?.() || "";
+          item.prerequisiteString = prereqStr !== "None" ? prereqStr : "";
           items.perks.push(item);
           break;
+        }
         case "class":
           items.classes.push(item);
           break;
