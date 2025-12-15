@@ -44,7 +44,7 @@ export default class VagabondRollDialog extends HandlebarsApplicationMixin(Appli
   /** @override */
   static DEFAULT_OPTIONS = {
     id: "vagabond-roll-dialog",
-    classes: ["vagabond", "roll-dialog"],
+    classes: ["vagabond", "roll-dialog", "themed"],
     tag: "form",
     window: {
       title: "VAGABOND.RollDialog",
@@ -143,6 +143,9 @@ export default class VagabondRollDialog extends HandlebarsApplicationMixin(Appli
   _onRender(context, options) {
     super._onRender(context, options);
 
+    // Apply theme class based on configured theme
+    this._applyThemeClass();
+
     // Favor/Hinder toggle buttons
     const favorBtn = this.element.querySelector('[data-action="toggle-favor"]');
     const hinderBtn = this.element.querySelector('[data-action="toggle-hinder"]');
@@ -164,6 +167,40 @@ export default class VagabondRollDialog extends HandlebarsApplicationMixin(Appli
     modifierInput?.addEventListener("change", (event) => {
       this.rollConfig.modifier = parseInt(event.target.value, 10) || 0;
     });
+  }
+
+  /**
+   * Apply the configured theme class to the dialog element.
+   * Foundry v13 doesn't automatically add theme classes to ApplicationV2,
+   * so we handle it manually.
+   * @protected
+   */
+  _applyThemeClass() {
+    if (!this.element) return;
+
+    // Remove any existing theme classes
+    this.element.classList.remove("theme-light", "theme-dark");
+
+    // Check global preference
+    let theme = null;
+    try {
+      const uiConfig = game.settings.get("core", "uiConfig");
+      const colorScheme = uiConfig?.colorScheme?.applications;
+      if (colorScheme === "dark") {
+        theme = "dark";
+      } else if (colorScheme === "light") {
+        theme = "light";
+      }
+    } catch {
+      // Settings not available, use default
+    }
+
+    // Apply the theme class
+    if (theme === "dark") {
+      this.element.classList.add("theme-dark");
+    } else if (theme === "light") {
+      this.element.classList.add("theme-light");
+    }
   }
 
   /**

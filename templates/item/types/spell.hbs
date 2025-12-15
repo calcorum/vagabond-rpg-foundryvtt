@@ -111,24 +111,36 @@
   {{!-- Effect --}}
   <div class="spell-effect">
     <label>{{localize "VAGABOND.Effect"}}</label>
-    <div class="editor-container">
-      {{editor system.effect target="system.effect" button=true editable=editable engine="prosemirror"}}
+    <div class="editor-wrapper">
+      {{#if editable}}
+      <prose-mirror name="system.effect" toggled="false">{{{enrichedEffect}}}</prose-mirror>
+      {{else}}
+      <div class="editor-content">{{{enrichedEffect}}}</div>
+      {{/if}}
     </div>
   </div>
 
   {{!-- Crit Effect --}}
   <div class="spell-crit-effect">
     <label>{{localize "VAGABOND.CritEffect"}}</label>
-    <div class="editor-container">
-      {{editor system.critEffect target="system.critEffect" button=true editable=editable engine="prosemirror"}}
+    <div class="editor-wrapper">
+      {{#if editable}}
+      <prose-mirror name="system.critEffect" toggled="false">{{{enrichedCritEffect}}}</prose-mirror>
+      {{else}}
+      <div class="editor-content">{{{enrichedCritEffect}}}</div>
+      {{/if}}
     </div>
   </div>
 
   {{!-- Description --}}
   <div class="item-description">
     <label>{{localize "VAGABOND.Description"}}</label>
-    <div class="editor-container">
-      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    <div class="editor-wrapper">
+      {{#if editable}}
+      <prose-mirror name="system.description" toggled="false">{{{enrichedDescription}}}</prose-mirror>
+      {{else}}
+      <div class="editor-content">{{{enrichedDescription}}}</div>
+      {{/if}}
     </div>
   </div>
 </div>

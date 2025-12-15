@@ -1,0 +1,146 @@
+// Vagabond RPG - Theme Variables (CSS Custom Properties)
+// ======================================================
+// These CSS custom properties enable theme switching.
+// The SCSS variables are kept for compile-time calculations (like mix()).
+// Runtime theming uses the CSS custom properties.
+
+// ==========================================
+// LIGHT THEME (Default - Parchment)
+// ==========================================
+// This is the default theme, warm parchment colors
+// WCAG AA compliant (4.5:1 contrast ratio minimum)
+
+.vagabond {
+  // Background colors
+  --color-bg-primary: #{$color-parchment};
+  --color-bg-secondary: #{$color-parchment-dark};
+  --color-bg-tertiary: #{$color-parchment-darker};
+  --color-bg-input: #{$color-parchment-light};
+  --color-bg-highlight: #{$color-parchment-light};
+
+  // Text colors
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-muted: #{$color-text-muted};
+  --color-text-inverse: #{$color-text-inverse};
+
+  // Accent colors
+  --color-accent-primary: #{$color-accent-primary};
+  --color-accent-secondary: #{$color-accent-secondary};
+  --color-accent-highlight: #{$color-accent-highlight};
+
+  // Semantic colors
+  --color-success: #{$color-success};
+  --color-danger: #{$color-danger};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+
+  // Stat colors (for visual distinction)
+  --color-might: #{$color-might};
+  --color-dexterity: #{$color-dexterity};
+  --color-awareness: #{$color-awareness};
+  --color-reason: #{$color-reason};
+  --color-presence: #{$color-presence};
+  --color-luck: #{$color-luck};
+
+  // Border colors
+  --color-border: #{$color-border};
+  --color-border-light: #{$color-border-light};
+  --color-border-dark: #{$color-border-dark};
+
+  // Shadows
+  --shadow-light: #{$shadow-light};
+  --shadow-medium: #{$shadow-medium};
+  --shadow-dark: #{$shadow-dark};
+
+  // Resource bar colors (HP, Mana)
+  --color-hp-fill: #{$color-danger};
+  --color-hp-bg: #{$color-parchment-darker};
+  --color-mana-fill: #{$color-reason};
+  --color-mana-bg: #{$color-parchment-darker};
+  --color-bar-values-bg: rgba(245, 240, 225, 0.85);
+  --color-bar-input-bg: rgba(255, 255, 255, 0.9);
+
+  // Type badge backgrounds (mixed with background)
+  --color-badge-weapon: #{mix($color-danger, $color-parchment, 15%)};
+  --color-badge-armor: #{mix($color-info, $color-parchment, 15%)};
+  --color-badge-spell: #{mix($color-reason, $color-parchment, 15%)};
+  --color-badge-perk: #{mix($color-success, $color-parchment, 15%)};
+  --color-badge-class: #{mix($color-warning, $color-parchment, 15%)};
+  --color-badge-feature: #{mix($color-presence, $color-parchment, 15%)};
+  --color-badge-ancestry: #{mix($color-luck, $color-parchment, 15%)};
+  --color-badge-equipment: #{mix($color-dexterity, $color-parchment, 15%)};
+}
+
+// ==========================================
+// DARK THEME
+// ==========================================
+// Dark backgrounds with warm parchment-tinted text
+// Maintains the fantasy aesthetic while being easier on eyes
+//
+// Two application methods:
+// 1. Global: body.theme-dark .vagabond - when Foundry's global theme is dark
+// 2. Per-sheet: .vagabond.theme-dark - when sheet has theme-dark class (applied by _applyThemeClass)
+
+body.theme-dark .vagabond:not(.theme-light),
+.vagabond.theme-dark {
+  // Dark background colors (warm-tinted darks)
+  --color-bg-primary: #1e1a16;
+  --color-bg-secondary: #2a2520;
+  --color-bg-tertiary: #36302a;
+  --color-bg-input: #252119;
+  --color-bg-highlight: #3d362e;
+
+  // Light text colors (parchment-tinted)
+  --color-text-primary: #e8dcc8;
+  --color-text-secondary: #c4b8a4;
+  --color-text-muted: #8a7e6e;
+  --color-text-inverse: #1e1a16;
+
+  // Accent colors (slightly brighter for dark bg)
+  --color-accent-primary: #c9682a;
+  --color-accent-secondary: #a85a24;
+  --color-accent-highlight: #e8a060;
+
+  // Semantic colors (adjusted for dark backgrounds)
+  --color-success: #4a9f42;
+  --color-danger: #c94444;
+  --color-warning: #d4a32c;
+  --color-info: #4a8080;
+
+  // Stat colors (brighter for dark bg)
+  --color-might: #e05050;
+  --color-dexterity: #50c050;
+  --color-awareness: #6090e0;
+  --color-reason: #b060e0;
+  --color-presence: #e0b030;
+  --color-luck: #40d0d0;
+
+  // Border colors (warm grays)
+  --color-border: #5c4a3a;
+  --color-border-light: #6d5a4a;
+  --color-border-dark: #4a3a2a;
+
+  // Shadows (more pronounced on dark)
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-medium: rgba(0, 0, 0, 0.35);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+
+  // Resource bar colors
+  --color-hp-fill: #c94444;
+  --color-hp-bg: #2a2520;
+  --color-mana-fill: #7050b0;
+  --color-mana-bg: #2a2520;
+  --color-bar-values-bg: rgba(30, 26, 22, 0.9);
+  --color-bar-input-bg: rgba(42, 37, 32, 0.95);
+
+  // Type badge backgrounds (for dark theme)
+  --color-badge-weapon: #3d2828;
+  --color-badge-armor: #283838;
+  --color-badge-spell: #382840;
+  --color-badge-perk: #283828;
+  --color-badge-class: #383828;
+  --color-badge-feature: #383028;
+  --color-badge-ancestry: #283838;
+  --color-badge-equipment: #283828;
+}

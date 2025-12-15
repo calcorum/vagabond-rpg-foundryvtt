@@ -680,28 +680,31 @@
           "id": "5.6",
           "name": "Style Item sheets",
           "description": "Consistent look across all item types, clear form layouts",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["5.1", "5.2", "5.3", "4.1"]
+          "dependencies": ["5.1", "5.2", "5.3", "4.1"],
+          "notes": "Styled all 8 item types with: header (image with hover effect, styled name input, color-coded type badges), tab navigation, form inputs (transitions, focus states, disabled states), fieldsets, properties grids, type-specific sections (traits, prerequisites, progression tables, features, relic sections, spell effects). Added .hidden utility for tab switching, custom scrollbar, flexbox layout for proper scrolling. ALSO IMPLEMENTED: Light/Dark theme system with CSS custom properties - registered themes in system.json, created _theme-variables.scss with light (parchment) and dark color palettes, converted all SCSS color variables to CSS custom properties across base, mixins, components, and sheet styles."
         },
         {
           "id": "5.7",
           "name": "Style roll dialogs",
           "description": "Favor/Hinder toggles, modifier inputs, clear roll button",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["5.1", "5.2"]
+          "dependencies": ["5.1", "5.2"],
+          "notes": "Comprehensive styling in _roll-dialog.scss (950 lines): ApplicationV2 dialogs with themed backgrounds, skill/weapon/save/spell selections, info panels with difficulty/crit display, favor/hinder toggles with active states, damage preview, mana display for spells, focus warnings, legacy dialog support, Favor/Hinder Debug Panel."
         },
         {
           "id": "5.8",
           "name": "Style chat cards",
           "description": "Roll results, spell casts, attack outcomes in themed chat messages",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["5.1", "5.2"]
+          "dependencies": ["5.1", "5.2"],
+          "notes": "Comprehensive styling in _chat-cards.scss (577 lines): Card headers with icons and badges, roll results with success/failure/critical/fumble states, roll breakdown display, damage sections with critical highlighting, weapon properties, spell cards with mana cost and focus indicator, animations for crits and fumbles."
         },
         {
           "id": "5.9",
@@ -711,6 +714,26 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["5.4", "5.5", "5.6"]
+        },
+        {
+          "id": "5.10",
+          "name": "Investigate per-sheet theming in Foundry v13",
+          "description": "Per-sheet theme selection via Configure Sheet dialog doesn't work - Foundry v13 shows theme options but doesn't store selection in document flags or apply theme classes to ApplicationV2 sheets. Infrastructure exists (CSS variables, _applyThemeClass JS), need to find correct Foundry API for per-sheet theme storage. Global theme switching works via Settings > Color Scheme.",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["5.6"],
+          "notes": "CSS infrastructure complete in _theme-variables.scss. JS _applyThemeClass() in base-actor-sheet.mjs and base-item-sheet.mjs applies theme class based on settings. Current workaround: use global Foundry color scheme (Settings > Configure Settings > Color Scheme > Applications). Per-sheet theme dropdown in Configure Sheet appears but selection not persisted to document.flags.core.sheetTheme."
+        },
+        {
+          "id": "5.11",
+          "name": "Add resizable editor containers",
+          "description": "Allow users to drag-resize ProseMirror editor text boxes on item sheets for viewing/editing longer content. CSS resize:vertical not working with Foundry's prose-mirror element structure.",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["5.6"],
+          "notes": "Editors functional with prose-mirror element in v13 ApplicationV2. Resize handle not appearing despite CSS - may need JavaScript-based resize or different approach. Foundry's internal .editor-container conflicts with custom wrapper naming."
         }
       ]
     },

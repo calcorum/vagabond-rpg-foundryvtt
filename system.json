@@ -16,6 +16,17 @@
   ],
   "esmodules": ["module/vagabond.mjs"],
   "styles": ["styles/vagabond.css"],
+  "themes": [
+    {
+      "name": "light",
+      "label": "VAGABOND.ThemeLight",
+      "default": true
+    },
+    {
+      "name": "dark",
+      "label": "VAGABOND.ThemeDark"
+    }
+  ],
   "languages": [
     {
       "lang": "en",

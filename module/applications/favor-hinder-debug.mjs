@@ -26,7 +26,7 @@ export default class FavorHinderDebug extends HandlebarsApplicationMixin(Applica
   /** @override */
   static DEFAULT_OPTIONS = {
     id: "vagabond-favor-hinder-debug",
-    classes: ["vagabond", "favor-hinder-debug"],
+    classes: ["vagabond", "favor-hinder-debug", "themed"],
     tag: "div",
     window: {
       title: "Favor/Hinder Debug",
@@ -174,6 +174,9 @@ export default class FavorHinderDebug extends HandlebarsApplicationMixin(Applica
   _onRender(context, options) {
     super._onRender(context, options);
 
+    // Apply theme class based on configured theme
+    this._applyThemeClass();
+
     // Actor selection dropdown
     const actorSelect = this.element.querySelector('[name="actorId"]');
     actorSelect?.addEventListener("change", (event) => {
@@ -317,6 +320,40 @@ export default class FavorHinderDebug extends HandlebarsApplicationMixin(Applica
     // Import and open the skill check dialog
     const { SkillCheckDialog } = game.vagabond.applications;
     SkillCheckDialog.prompt(this.actor);
+  }
+
+  /**
+   * Apply the configured theme class to the dialog element.
+   * Foundry v13 doesn't automatically add theme classes to ApplicationV2,
+   * so we handle it manually.
+   * @protected
+   */
+  _applyThemeClass() {
+    if (!this.element) return;
+
+    // Remove any existing theme classes
+    this.element.classList.remove("theme-light", "theme-dark");
+
+    // Check global preference
+    let theme = null;
+    try {
+      const uiConfig = game.settings.get("core", "uiConfig");
+      const colorScheme = uiConfig?.colorScheme?.applications;
+      if (colorScheme === "dark") {
+        theme = "dark";
+      } else if (colorScheme === "light") {
+        theme = "light";
+      }
+    } catch {
+      // Settings not available, use default
+    }
+
+    // Apply the theme class
+    if (theme === "dark") {
+      this.element.classList.add("theme-dark");
+    } else if (theme === "light") {
+      this.element.classList.add("theme-light");
+    }
   }
 
   /* -------------------------------------------- */

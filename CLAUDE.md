@@ -118,6 +118,10 @@ cd ~/.claude/skills/notediscovery && python client.py search "keyword"
 Original PDF at: `/mnt/NV2/Development/claude-home/gaming/Vagabond_RPG_-_Pulp_Fantasy_Core_Rulebook_Interactive_PDF.pdf`
 Character sheet reference: `/mnt/NV2/Development/claude-home/gaming/Vagabond_-_Hero_Record_Interactive_PDF.pdf`
 
+## Reference Project Documentation
+
+The D&D 5e Foundry system is very well documented here: https://deepwiki.com/foundryvtt/dnd5e/1-dnd5e-system-overview
+
 ## Project Roadmap
 
 See `PROJECT_ROADMAP.json` for complete task breakdown with dependencies.

@@ -38,7 +38,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
   /** @override */
   static DEFAULT_OPTIONS = {
     id: "vagabond-actor-sheet-{id}",
-    classes: ["vagabond", "sheet", "actor"],
+    classes: ["vagabond", "sheet", "actor", "themed"],
     tag: "form",
     window: {
       title: "VAGABOND.ActorSheet",
@@ -271,6 +271,9 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
   _onRender(context, options) {
     super._onRender(context, options);
 
+    // Apply theme class based on configured theme
+    this._applyThemeClass();
+
     // Remove stale tab content (ApplicationV2 appends parts without removing old ones)
     this._cleanupInactiveTabs();
 
@@ -282,6 +285,49 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
 
     // Initialize any content-editable fields
     this._initializeEditors();
+  }
+
+  /**
+   * Apply the configured theme class to the sheet element.
+   * Foundry v13 doesn't automatically add theme classes to ApplicationV2 sheets,
+   * so we handle it manually.
+   * @protected
+   */
+  _applyThemeClass() {
+    if (!this.element) return;
+
+    // Remove any existing theme classes
+    this.element.classList.remove("theme-light", "theme-dark");
+
+    // Get the configured theme for this sheet
+    // DocumentSheetConfig stores per-document and per-type theme preferences
+    const sheetConfig = this.document.getFlag("core", "sheetTheme");
+    const typeConfig = game.settings.get("core", "sheetClasses")?.[this.document.documentName]?.[
+      this.document.type
+    ];
+    const defaultTheme = typeConfig?.defaultTheme;
+
+    // Determine which theme to apply: document-specific > type default > global
+    let theme = sheetConfig || defaultTheme;
+
+    // If no specific theme, check global preference
+    if (!theme) {
+      const uiConfig = game.settings.get("core", "uiConfig");
+      const colorScheme = uiConfig?.colorScheme?.applications;
+      if (colorScheme === "dark") {
+        theme = "dark";
+      } else if (colorScheme === "light") {
+        theme = "light";
+      }
+    }
+
+    // Apply the theme class
+    if (theme === "dark") {
+      this.element.classList.add("theme-dark");
+    } else if (theme === "light") {
+      this.element.classList.add("theme-light");
+    }
+    // If still no theme, it will use body.theme-dark/light via CSS
   }
 
   /**
@@ -581,7 +627,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
     const weaponId = target.dataset.weaponId;
 
     const { AttackRollDialog } = game.vagabond.applications;
-    await AttackRollDialog.prompt(this.actor, { weaponId });
+    await AttackRollDialog.prompt(this.actor, weaponId);
   }
 
   /**
@@ -594,11 +640,8 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
     const spellId = target.dataset.spellId;
     if (!spellId) return;
 
-    const spell = this.actor.items.get(spellId);
-    if (!spell) return;
-
     const { SpellCastDialog } = game.vagabond.applications;
-    await SpellCastDialog.prompt(this.actor, { spell });
+    await SpellCastDialog.prompt(this.actor, spellId);
   }
 
   /**

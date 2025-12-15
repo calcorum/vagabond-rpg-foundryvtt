@@ -228,8 +228,12 @@
   {{!-- Description --}}
   <div class="item-description">
     <label>{{localize "VAGABOND.Description"}}</label>
-    <div class="editor-container">
-      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    <div class="editor-wrapper">
+      {{#if editable}}
+      <prose-mirror name="system.description" toggled="false">{{{enrichedDescription}}}</prose-mirror>
+      {{else}}
+      <div class="editor-content">{{{enrichedDescription}}}</div>
+      {{/if}}
     </div>
   </div>
 </div>

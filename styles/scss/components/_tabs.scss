@@ -9,8 +9,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    border-bottom: 2px solid $color-border;
-    background-color: $color-parchment-dark;
+    border-bottom: 2px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
 
     .item {
       margin: 0;
@@ -18,7 +18,7 @@
       font-family: $font-family-header;
       font-size: $font-size-base;
       font-weight: $font-weight-medium;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       background-color: transparent;
       border: none;
       border-bottom: 2px solid transparent;
@@ -27,14 +27,14 @@
       transition: all $transition-fast;
 
       &:hover {
-        color: $color-text-primary;
-        background-color: $color-parchment;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-primary);
       }
 
       &.active {
-        color: $color-text-primary;
-        background-color: $color-parchment;
-        border-bottom-color: $color-accent-primary;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-primary);
+        border-bottom-color: var(--color-accent-primary);
       }
 
       @include focus-visible;
@@ -64,7 +64,7 @@
   .sheet-tabs.vertical {
     flex-direction: column;
     border-bottom: none;
-    border-right: 2px solid $color-border;
+    border-right: 2px solid var(--color-border);
 
     .item {
       border-bottom: none;
@@ -73,7 +73,7 @@
       margin-right: -2px;
 
       &.active {
-        border-right-color: $color-accent-primary;
+        border-right-color: var(--color-accent-primary);
       }
     }
   }
@@ -84,12 +84,12 @@
     gap: $spacing-2;
     margin-bottom: $spacing-4;
     padding-bottom: $spacing-2;
-    border-bottom: 1px solid $color-border-light;
+    border-bottom: 1px solid var(--color-border-light);
 
     .sub-tab {
       padding: $spacing-1 $spacing-3;
       font-size: $font-size-sm;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
       background-color: transparent;
       border: 1px solid transparent;
       border-radius: $radius-md;
@@ -97,14 +97,14 @@
       transition: all $transition-fast;
 
       &:hover {
-        color: $color-text-primary;
-        background-color: $color-parchment-dark;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-secondary);
       }
 
       &.active {
-        color: $color-text-primary;
-        background-color: $color-parchment-dark;
-        border-color: $color-border;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-secondary);
+        border-color: var(--color-border);
       }
     }
   }

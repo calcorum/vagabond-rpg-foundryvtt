@@ -34,7 +34,7 @@ export default class VagabondItemSheet extends HandlebarsApplicationMixin(ItemSh
   /** @override */
   static DEFAULT_OPTIONS = {
     id: "vagabond-item-sheet-{id}",
-    classes: ["vagabond", "sheet", "item"],
+    classes: ["vagabond", "sheet", "item", "themed"],
     tag: "form",
     window: {
       title: "VAGABOND.ItemSheet",
@@ -163,6 +163,39 @@ export default class VagabondItemSheet extends HandlebarsApplicationMixin(ItemSh
     // Active Effects on this item
     context.effects = this._prepareEffects();
 
+    // Enrich HTML content for ProseMirror editors
+    // ApplicationV2 requires enriched HTML to be prepared in context
+    const enrichOptions = {
+      secrets: this.item.isOwner,
+      rollData: context.rollData,
+      relativeTo: this.item,
+    };
+    const TextEditorImpl = foundry.applications.ux.TextEditor.implementation;
+    context.enrichedDescription = await TextEditorImpl.enrichHTML(
+      this.item.system.description ?? "",
+      enrichOptions
+    );
+
+    // Enrich spell-specific fields
+    if (this.item.type === "spell") {
+      context.enrichedEffect = await TextEditorImpl.enrichHTML(
+        this.item.system.effect ?? "",
+        enrichOptions
+      );
+      context.enrichedCritEffect = await TextEditorImpl.enrichHTML(
+        this.item.system.critEffect ?? "",
+        enrichOptions
+      );
+    }
+
+    // Enrich class-specific fields
+    if (this.item.type === "class") {
+      context.enrichedStartingPack = await TextEditorImpl.enrichHTML(
+        this.item.system.startingPack ?? "",
+        enrichOptions
+      );
+    }
+
     // Type-specific context
     await this._prepareTypeContext(context, options);
 
@@ -205,6 +238,9 @@ export default class VagabondItemSheet extends HandlebarsApplicationMixin(ItemSh
   _onRender(context, options) {
     super._onRender(context, options);
 
+    // Apply theme class based on configured theme
+    this._applyThemeClass();
+
     // Clean up inactive tabs if using tabs
     if (this.hasTabs) {
       this._cleanupInactiveTabs();
@@ -212,6 +248,46 @@ export default class VagabondItemSheet extends HandlebarsApplicationMixin(ItemSh
 
     // Initialize rich text editors
     this._initializeEditors();
+  }
+
+  /**
+   * Apply the configured theme class to the sheet element.
+   * Foundry v13 doesn't automatically add theme classes to ApplicationV2 sheets,
+   * so we handle it manually.
+   * @protected
+   */
+  _applyThemeClass() {
+    if (!this.element) return;
+
+    // Remove any existing theme classes
+    this.element.classList.remove("theme-light", "theme-dark");
+
+    // Try to get per-sheet theme (location TBD - Foundry v13 storage unclear)
+    // TODO: Find correct API for per-sheet theme in Foundry v13
+    const sheetConfig = this.document.getFlag("core", "sheetTheme");
+    const sheetClasses = game.settings.get("core", "sheetClasses");
+    const typeConfig = sheetClasses?.[this.document.documentName]?.[this.document.type];
+
+    // Determine which theme to apply: document-specific > type default > global
+    let theme = sheetConfig || typeConfig?.defaultTheme;
+
+    // If no specific theme, check global preference
+    if (!theme) {
+      const uiConfig = game.settings.get("core", "uiConfig");
+      const colorScheme = uiConfig?.colorScheme?.applications;
+      if (colorScheme === "dark") {
+        theme = "dark";
+      } else if (colorScheme === "light") {
+        theme = "light";
+      }
+    }
+
+    // Apply the theme class
+    if (theme === "dark") {
+      this.element.classList.add("theme-dark");
+    } else if (theme === "light") {
+      this.element.classList.add("theme-light");
+    }
   }
 
   /**

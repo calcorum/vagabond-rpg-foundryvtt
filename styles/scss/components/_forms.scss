@@ -41,13 +41,18 @@
     padding: $spacing-2 $spacing-8 $spacing-2 $spacing-3;
     cursor: pointer;
     appearance: none;
-    background-color: $color-parchment-light !important;
-    color: $color-text-primary !important;
+    background-color: var(--color-bg-input) !important;
+    color: var(--color-text-primary) !important;
     font-size: $font-size-base;
     line-height: 1.5;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c2416' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right $spacing-3 center;
+  }
+
+  // Dark theme select arrow override (per-sheet, following D&D5e pattern)
+  &.themed.theme-dark select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e8dcc8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   }
 
   // Checkbox
@@ -56,7 +61,7 @@
     height: 1rem;
     margin: 0;
     cursor: pointer;
-    accent-color: $color-accent-primary;
+    accent-color: var(--color-accent-primary);
 
     @include focus-visible;
   }
@@ -78,7 +83,7 @@
     height: 1rem;
     margin: 0;
     cursor: pointer;
-    accent-color: $color-accent-primary;
+    accent-color: var(--color-accent-primary);
 
     @include focus-visible;
   }
@@ -91,7 +96,7 @@
       display: block;
       margin-bottom: $spacing-1;
       font-weight: $font-weight-medium;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
     }
 
     &.inline {
@@ -134,6 +139,7 @@
       text-align: center;
       background: transparent;
       border: none;
+      color: inherit;
 
       &:focus {
         outline: none;
@@ -153,7 +159,7 @@
     }
 
     .separator {
-      color: $color-text-muted;
+      color: var(--color-text-muted);
     }
   }
 
@@ -166,12 +172,12 @@
     transition: all $transition-fast;
 
     &:hover {
-      border-color: $color-border-light;
+      border-color: var(--color-border-light);
     }
 
     &:focus {
-      background: $color-parchment-light;
-      border-color: $color-accent-primary;
+      background: var(--color-bg-input);
+      border-color: var(--color-accent-primary);
       outline: none;
     }
   }
@@ -179,9 +185,14 @@
   // Readonly display (looks like text, not input)
   .readonly-value {
     padding: $spacing-2 $spacing-3;
-    background-color: $color-parchment-dark;
-    border: 1px solid $color-border-light;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-light);
     border-radius: $radius-md;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
   }
+}
+
+// Global dark theme select arrow override (when body has theme-dark)
+body.theme-dark .vagabond select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e8dcc8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
 }

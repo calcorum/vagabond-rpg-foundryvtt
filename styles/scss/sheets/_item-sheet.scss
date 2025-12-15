@@ -4,25 +4,36 @@
 .vagabond.sheet.item {
   min-width: 500px;
   min-height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  // Utility class for hiding inactive tabs
+  .hidden {
+    display: none !important;
+  }
 
   // Header styling
   .sheet-header.item-header {
     @include flex-between;
     padding: $spacing-4;
-    background-color: $color-parchment-dark;
-    border-bottom: 2px solid $color-border;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 2px solid var(--color-border);
     gap: $spacing-4;
 
     .item-img {
       width: 64px;
       height: 64px;
       object-fit: cover;
-      border: 2px solid $color-border;
+      border: 2px solid var(--color-border);
       border-radius: $radius-md;
       cursor: pointer;
+      transition: all $transition-fast;
+      box-shadow: 0 1px 3px var(--shadow-light);
 
       &:hover {
-        border-color: $color-accent-primary;
+        border-color: var(--color-accent-primary);
+        box-shadow: 0 2px 6px var(--shadow-medium);
+        transform: scale(1.02);
       }
     }
 
@@ -37,14 +48,23 @@
 
         input {
           width: 100%;
-          font-size: $font-size-lg;
-          font-weight: bold;
+          font-family: $font-family-header;
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          color: var(--color-text-primary);
           border: none;
           background: transparent;
           border-bottom: 1px solid transparent;
+          padding: $spacing-1 0;
+          transition: border-color $transition-fast;
+
+          &:hover {
+            border-bottom-color: var(--color-border-light);
+          }
 
           &:focus {
-            border-bottom-color: $color-accent-primary;
+            border-bottom-color: var(--color-accent-primary);
+            outline: none;
           }
         }
       }
@@ -56,35 +76,64 @@
           font-size: $font-size-sm;
           font-weight: 500;
           text-transform: capitalize;
-          background-color: $color-parchment;
-          border: 1px solid $color-border;
+          background-color: var(--color-bg-primary);
+          border: 1px solid var(--color-border);
           border-radius: $radius-full;
 
           &.weapon {
-            background-color: mix($color-danger, $color-parchment, 15%);
+            background-color: var(--color-badge-weapon);
           }
           &.armor {
-            background-color: mix($color-info, $color-parchment, 15%);
+            background-color: var(--color-badge-armor);
           }
           &.spell {
-            background-color: mix($color-reason, $color-parchment, 15%);
+            background-color: var(--color-badge-spell);
           }
           &.perk {
-            background-color: mix($color-success, $color-parchment, 15%);
+            background-color: var(--color-badge-perk);
           }
           &.class {
-            background-color: mix($color-warning, $color-parchment, 15%);
+            background-color: var(--color-badge-class);
+          }
+          &.feature {
+            background-color: var(--color-badge-feature);
+          }
+          &.ancestry {
+            background-color: var(--color-badge-ancestry);
+          }
+          &.equipment {
+            background-color: var(--color-badge-equipment);
           }
         }
       }
     }
   }
 
-  // Sheet body
-  .sheet-body {
+  // Tab content areas (both .sheet-body and .tab-content)
+  .sheet-body,
+  .tab-content {
     padding: $spacing-4;
     overflow-y: auto;
-    max-height: calc(100% - 80px);
+    background-color: var(--color-bg-primary);
+    @include custom-scrollbar;
+
+    // When used as standalone body (no tabs)
+    &.sheet-body {
+      flex: 1;
+      min-height: 0; // Important for flexbox scrolling
+    }
+  }
+
+  // Details tab specific
+  .details-tab {
+    &.sheet-body {
+      // Combined class - body that's also the details tab
+    }
+  }
+
+  // Effects tab has its own padding defined in .effects-tab
+  .effects-tab.tab-content {
+    padding: 0; // Remove duplicate padding, .effects-tab handles it
   }
 
   // Item content container
@@ -120,9 +169,11 @@
       }
 
       label {
-        font-size: $font-size-sm;
-        font-weight: 500;
-        color: $color-text-secondary;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
       }
 
       input[type="text"],
@@ -130,17 +181,29 @@
       select,
       textarea {
         padding: $spacing-2;
-        border: 1px solid $color-border;
+        border: 1px solid var(--color-border);
         border-radius: $radius-sm;
-        background-color: $color-parchment-light;
+        background-color: var(--color-bg-input);
+        font-family: $font-family-body;
+        font-size: $font-size-sm;
+        color: var(--color-text-primary);
+        transition:
+          border-color $transition-fast,
+          box-shadow $transition-fast;
+
+        &:hover:not(:disabled) {
+          border-color: var(--color-border-dark);
+        }
 
         &:focus {
-          border-color: $color-accent-primary;
+          border-color: var(--color-accent-primary);
+          box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.15);
           outline: none;
         }
 
         &:disabled {
-          background-color: $color-parchment;
+          background-color: var(--color-bg-primary);
+          color: var(--color-text-muted);
           cursor: not-allowed;
         }
       }
@@ -150,6 +213,12 @@
         height: 18px;
         margin: 0;
         cursor: pointer;
+        accent-color: var(--color-accent-primary);
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
       }
 
       input[type="number"] {
@@ -168,7 +237,7 @@
 
       .units {
         font-size: $font-size-sm;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
       }
 
       textarea {
@@ -180,11 +249,11 @@
 
   // Fieldset styling
   fieldset {
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: $radius-md;
     padding: $spacing-3;
     margin: 0;
-    background-color: rgba($color-parchment-dark, 0.3);
+    background-color: var(--color-bg-highlight);
 
     legend {
       padding: 0 $spacing-2;
@@ -254,15 +323,55 @@
       font-weight: 600;
     }
 
-    .editor-container {
-      border: 1px solid $color-border;
+    .editor-wrapper {
+      border: 1px solid var(--color-border);
       border-radius: $radius-sm;
-      overflow: hidden;
+      background-color: var(--color-bg-input);
+      min-height: 120px;
+      max-height: 400px;
+      overflow: auto;
+      resize: vertical;
 
-      .editor {
-        min-height: 120px;
+      // Static content display (non-editable)
+      > .editor-content {
+        min-height: 100px;
         padding: $spacing-2;
-        background-color: $color-parchment-light;
+      }
+
+      // ProseMirror custom element styling
+      prose-mirror {
+        display: flex;
+        flex-direction: column;
+        min-height: 100px;
+
+        // The menu bar that appears when editing
+        > menu.editor-menu {
+          flex: 0 0 auto;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          background-color: var(--color-bg-secondary);
+          border-bottom: 1px solid var(--color-border);
+        }
+
+        // Foundry's inner editor-container
+        > .editor-container {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          min-height: 80px;
+
+          // The actual editable content area
+          > .editor-content {
+            flex: 1 1 auto;
+            padding: $spacing-2;
+          }
+        }
+
+        // Toggle button
+        > button.toggle {
+          display: none; // Hide since we use toggled="false"
+        }
       }
     }
   }
@@ -275,9 +384,9 @@
 
     .trait-entry {
       padding: $spacing-3;
-      border: 1px solid $color-border;
+      border: 1px solid var(--color-border);
       border-radius: $radius-sm;
-      background-color: $color-parchment-light;
+      background-color: var(--color-bg-input);
 
       .trait-header {
         display: flex;
@@ -291,7 +400,7 @@
 
         button {
           @include button-icon;
-          color: $color-danger;
+          color: var(--color-danger);
         }
       }
 
@@ -302,7 +411,7 @@
     }
 
     .no-traits {
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       font-style: italic;
       text-align: center;
       padding: $spacing-4;
@@ -330,7 +439,7 @@
         label {
           font-size: $font-size-xs;
           font-weight: 600;
-          color: $color-text-secondary;
+          color: var(--color-text-secondary);
         }
 
         input {
@@ -364,7 +473,7 @@
 
       .hint {
         font-size: $font-size-xs;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         font-style: italic;
       }
     }
@@ -380,7 +489,7 @@
         grid-template-columns: 50px 60px 80px 80px 1fr 40px;
         gap: $spacing-2;
         padding: $spacing-2;
-        background-color: $color-parchment-dark;
+        background-color: var(--color-bg-secondary);
         font-size: $font-size-xs;
         font-weight: 600;
         border-radius: $radius-sm $radius-sm 0 0;
@@ -391,8 +500,8 @@
         grid-template-columns: 50px 60px 80px 80px 1fr 40px;
         gap: $spacing-2;
         padding: $spacing-2;
-        border-bottom: 1px solid $color-border;
-        background-color: $color-parchment-light;
+        border-bottom: 1px solid var(--color-border);
+        background-color: var(--color-bg-input);
 
         &:last-child {
           border-radius: 0 0 $radius-sm $radius-sm;
@@ -406,14 +515,14 @@
 
         button {
           @include button-icon;
-          color: $color-danger;
+          color: var(--color-danger);
         }
       }
 
       .no-progression {
         padding: $spacing-4;
         text-align: center;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         font-style: italic;
       }
     }
@@ -429,9 +538,9 @@
 
       .feature-entry {
         padding: $spacing-3;
-        border: 1px solid $color-border;
+        border: 1px solid var(--color-border);
         border-radius: $radius-sm;
-        background-color: $color-parchment-light;
+        background-color: var(--color-bg-input);
 
         .feature-header {
           display: flex;
@@ -458,7 +567,7 @@
 
           button {
             @include button-icon;
-            color: $color-danger;
+            color: var(--color-danger);
           }
         }
 
@@ -471,7 +580,7 @@
       .no-features {
         padding: $spacing-4;
         text-align: center;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         font-style: italic;
       }
     }
@@ -488,14 +597,55 @@
       font-weight: 600;
     }
 
-    .editor-container {
-      border: 1px solid $color-border;
+    .editor-wrapper {
+      border: 1px solid var(--color-border);
       border-radius: $radius-sm;
+      background-color: var(--color-bg-input);
+      min-height: 80px;
+      max-height: 300px;
+      overflow: auto;
+      resize: vertical;
 
-      .editor {
-        min-height: 80px;
+      // Static content display (non-editable)
+      > .editor-content {
+        min-height: 60px;
         padding: $spacing-2;
-        background-color: $color-parchment-light;
+      }
+
+      // ProseMirror custom element styling
+      prose-mirror {
+        display: flex;
+        flex-direction: column;
+        min-height: 60px;
+
+        // The menu bar that appears when editing
+        > menu.editor-menu {
+          flex: 0 0 auto;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          background-color: var(--color-bg-secondary);
+          border-bottom: 1px solid var(--color-border);
+        }
+
+        // Foundry's inner editor-container
+        > .editor-container {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          min-height: 40px;
+
+          // The actual editable content area
+          > .editor-content {
+            flex: 1 1 auto;
+            padding: $spacing-2;
+          }
+        }
+
+        // Toggle button
+        > button.toggle {
+          display: none;
+        }
       }
     }
   }
@@ -512,6 +662,94 @@
   .activation-section {
     .item-stats-row {
       margin-top: $spacing-2;
+    }
+  }
+
+  // Requirements section (feature)
+  .requirements-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+
+    > label {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    input {
+      padding: $spacing-2;
+      border: 1px solid var(--color-border);
+      border-radius: $radius-sm;
+      background-color: var(--color-bg-input);
+      font-family: $font-family-body;
+      font-size: $font-size-sm;
+      color: var(--color-text-primary);
+      transition:
+        border-color $transition-fast,
+        box-shadow $transition-fast;
+
+      &:hover:not(:disabled) {
+        border-color: var(--color-border-dark);
+      }
+
+      &:focus {
+        border-color: var(--color-accent-primary);
+        box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.15);
+        outline: none;
+      }
+
+      &:disabled {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-muted);
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Ritual components (perk)
+  .ritual-components {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+
+    > label {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    input {
+      padding: $spacing-2;
+      border: 1px solid var(--color-border);
+      border-radius: $radius-sm;
+      background-color: var(--color-bg-input);
+      font-family: $font-family-body;
+      font-size: $font-size-sm;
+      color: var(--color-text-primary);
+      transition:
+        border-color $transition-fast,
+        box-shadow $transition-fast;
+
+      &:hover:not(:disabled) {
+        border-color: var(--color-border-dark);
+      }
+
+      &:focus {
+        border-color: var(--color-accent-primary);
+        box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.15);
+        outline: none;
+      }
+
+      &:disabled {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-muted);
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -561,8 +799,8 @@
       align-items: center;
       gap: $spacing-2;
       padding: $spacing-2;
-      background-color: $color-parchment-light;
-      border: 1px solid $color-border;
+      background-color: var(--color-bg-input);
+      border: 1px solid var(--color-border);
       border-radius: $radius-sm;
 
       &.disabled {
@@ -587,7 +825,7 @@
         width: 24px;
         height: 24px;
         border-radius: $radius-sm;
-        border: 1px solid $color-border;
+        border: 1px solid var(--color-border);
       }
 
       .effect-name {
@@ -603,10 +841,10 @@
           @include button-icon;
 
           &.delete {
-            color: $color-danger;
+            color: var(--color-danger);
 
             &:hover {
-              background-color: rgba($color-danger, 0.1);
+              background-color: rgba(201, 68, 68, 0.1);
             }
           }
         }
@@ -614,7 +852,7 @@
     }
 
     .no-effects {
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       font-style: italic;
       text-align: center;
       padding: $spacing-4;
@@ -622,7 +860,7 @@
 
     .effects-hint {
       font-size: $font-size-sm;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       margin-top: $spacing-2;
 
       i {

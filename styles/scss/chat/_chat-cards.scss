@@ -1,36 +1,45 @@
 // Vagabond RPG - Chat Card Styles
 // ================================
+// Uses CSS custom properties for theme support.
 
 // Base chat card
 .vagabond.chat-card {
   @include panel;
   overflow: hidden;
+  background-color: var(--color-bg-primary);
 
   // Card header
   .card-header {
     @include flex-between;
     padding: $spacing-2 $spacing-3;
-    background-color: $color-parchment-dark;
-    border-bottom: 1px solid $color-border;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
 
     .card-title,
     h3 {
+      @include flex-center;
+      gap: $spacing-2;
       font-family: $font-family-header;
       font-size: $font-size-base;
       font-weight: $font-weight-bold;
       margin: 0;
+      color: var(--color-text-primary);
+
+      i {
+        color: var(--color-accent-primary);
+      }
     }
 
     .card-subtitle {
       font-size: $font-size-sm;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
     }
 
     .trained-badge {
       font-size: $font-size-xs;
       padding: $spacing-1 $spacing-2;
-      background-color: rgba($color-success, 0.2);
-      color: $color-success;
+      background-color: rgba(74, 159, 66, 0.2);
+      color: var(--color-success);
       border-radius: $radius-full;
       font-weight: $font-weight-medium;
     }
@@ -46,17 +55,18 @@
     @include flex-column;
     align-items: center;
     gap: $spacing-2;
-    padding: $spacing-3;
-    margin: $spacing-2 0;
-    background-color: $color-parchment-light;
+    padding: $spacing-4;
+    margin: $spacing-3;
+    background-color: var(--color-bg-secondary);
     border-radius: $radius-md;
-    border: 2px solid $color-border;
+    border: 2px solid var(--color-border);
 
     .roll-total {
       font-family: $font-family-header;
       font-size: $font-size-4xl;
       font-weight: $font-weight-bold;
       line-height: 1;
+      color: var(--color-text-primary);
     }
 
     .roll-status {
@@ -71,45 +81,45 @@
       }
 
       .success {
-        background-color: rgba($color-success, 0.2);
-        color: $color-success;
+        background-color: rgba(74, 159, 66, 0.2);
+        color: var(--color-success);
       }
 
       .failure {
-        background-color: rgba($color-danger, 0.2);
-        color: $color-danger;
+        background-color: rgba(201, 68, 68, 0.2);
+        color: var(--color-danger);
       }
 
       .critical {
-        background-color: rgba($color-warning, 0.3);
-        color: $color-warning;
+        background-color: rgba(212, 163, 44, 0.3);
+        color: var(--color-warning);
         animation: pulse 1s ease-in-out;
       }
 
       .fumble {
-        background-color: rgba($color-danger, 0.3);
-        color: $color-danger;
+        background-color: rgba(201, 68, 68, 0.3);
+        color: var(--color-danger);
         animation: shake 0.5s ease-in-out;
       }
     }
 
     // Conditional styling based on result
     &.success {
-      border-color: $color-success;
+      border-color: var(--color-success);
     }
 
     &.failure {
-      border-color: $color-danger;
+      border-color: var(--color-danger);
     }
 
     &.critical {
-      border-color: $color-warning;
-      background-color: rgba($color-warning, 0.1);
+      border-color: var(--color-warning);
+      background-color: rgba(212, 163, 44, 0.1);
     }
 
     &.fumble {
-      border-color: $color-danger;
-      background-color: rgba($color-danger, 0.1);
+      border-color: var(--color-danger);
+      background-color: rgba(201, 68, 68, 0.1);
     }
   }
 
@@ -117,8 +127,9 @@
   .roll-details {
     @include flex-column;
     gap: $spacing-2;
-    padding: $spacing-2;
-    background-color: $color-parchment-dark;
+    padding: $spacing-3;
+    margin: 0 $spacing-3 $spacing-3;
+    background-color: var(--color-bg-secondary);
     border-radius: $radius-md;
     font-size: $font-size-sm;
 
@@ -126,11 +137,12 @@
       @include flex-between;
 
       .label {
-        color: $color-text-muted;
+        color: var(--color-text-muted);
       }
 
       .value {
         font-family: $font-family-mono;
+        color: var(--color-text-primary);
       }
     }
 
@@ -138,7 +150,7 @@
       @include flex-center;
       gap: $spacing-3;
       padding-top: $spacing-2;
-      border-top: 1px solid $color-border;
+      border-top: 1px solid var(--color-border);
 
       span {
         @include flex-center;
@@ -148,32 +160,38 @@
       .d20-result {
         font-family: $font-family-mono;
         font-weight: $font-weight-bold;
+        color: var(--color-text-primary);
       }
 
       .favor-die {
         font-family: $font-family-mono;
 
         &.favor {
-          color: $color-success;
+          color: var(--color-success);
         }
 
         &.hinder {
-          color: $color-danger;
+          color: var(--color-danger);
         }
       }
 
       .modifier {
         font-family: $font-family-mono;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
       }
     }
   }
 
-  // Target info (difficulty, crit threshold)
+  // Info sections (save-info, skill-info, target-info)
+  .save-info,
+  .skill-info,
   .target-info {
-    @include grid(2, $spacing-2);
-    margin-top: $spacing-2;
-    padding: $spacing-2;
+    @include flex-column;
+    gap: $spacing-1;
+    margin: 0 $spacing-3 $spacing-3;
+    padding: $spacing-2 $spacing-3;
+    background-color: var(--color-bg-tertiary);
+    border-radius: $radius-md;
     font-size: $font-size-sm;
 
     > div {
@@ -181,11 +199,53 @@
     }
 
     .label {
-      color: $color-text-muted;
+      color: var(--color-text-muted);
     }
 
     .value {
       font-weight: $font-weight-medium;
+      color: var(--color-text-primary);
+    }
+
+    .stat-abbr {
+      font-weight: $font-weight-bold;
+      color: var(--color-accent-primary);
+    }
+  }
+
+  // Defense info display
+  .defense-info-display {
+    @include flex-center;
+    gap: $spacing-2;
+    margin: 0 $spacing-3 $spacing-3;
+    padding: $spacing-2 $spacing-3;
+    background-color: rgba(64, 144, 224, 0.1);
+    border: 1px solid var(--color-info);
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: var(--color-info);
+
+    i {
+      font-size: $font-size-base;
+    }
+  }
+
+  // Defense badge
+  .defense-badge {
+    font-size: $font-size-xs;
+    padding: $spacing-1 $spacing-2;
+    border-radius: $radius-full;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+
+    &.block {
+      background-color: rgba(64, 144, 224, 0.2);
+      color: var(--color-info);
+    }
+
+    &.dodge {
+      background-color: rgba(74, 159, 66, 0.2);
+      color: var(--color-success);
     }
   }
 
@@ -194,20 +254,20 @@
   .hinder-sources {
     @include flex-center;
     gap: $spacing-2;
-    margin-top: $spacing-2;
+    margin: 0 $spacing-3 $spacing-3;
     padding: $spacing-2;
     font-size: $font-size-sm;
     border-radius: $radius-md;
   }
 
   .favor-sources {
-    background-color: rgba($color-success, 0.1);
-    color: $color-success;
+    background-color: rgba(74, 159, 66, 0.1);
+    color: var(--color-success);
   }
 
   .hinder-sources {
-    background-color: rgba($color-danger, 0.1);
-    color: $color-danger;
+    background-color: rgba(201, 68, 68, 0.1);
+    color: var(--color-danger);
   }
 
   // Result status (legacy)
@@ -220,18 +280,18 @@
     border-radius: $radius-md;
 
     &.success {
-      background-color: rgba($color-success, 0.2);
-      color: $color-success;
+      background-color: rgba(74, 159, 66, 0.2);
+      color: var(--color-success);
     }
 
     &.failure {
-      background-color: rgba($color-danger, 0.2);
-      color: $color-danger;
+      background-color: rgba(201, 68, 68, 0.2);
+      color: var(--color-danger);
     }
 
     &.critical {
-      background-color: rgba($color-warning, 0.2);
-      color: $color-warning;
+      background-color: rgba(212, 163, 44, 0.2);
+      color: var(--color-warning);
       animation: pulse 1s ease-in-out;
     }
   }
@@ -240,27 +300,27 @@
   .damage-display {
     @include flex-center;
     gap: $spacing-2;
-    margin-top: $spacing-3;
+    margin: $spacing-3;
     padding: $spacing-2;
-    background-color: rgba($color-danger, 0.1);
-    border: 1px solid $color-danger;
+    background-color: rgba(201, 68, 68, 0.1);
+    border: 1px solid var(--color-danger);
     border-radius: $radius-md;
 
     .damage-label {
       font-size: $font-size-sm;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
     }
 
     .damage-value {
       font-family: $font-family-header;
       font-size: $font-size-xl;
       font-weight: $font-weight-bold;
-      color: $color-danger;
+      color: var(--color-danger);
     }
 
     .damage-type {
       font-size: $font-size-sm;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
     }
   }
 
@@ -269,7 +329,7 @@
     display: flex;
     gap: $spacing-2;
     padding: $spacing-3;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
 
     button {
       flex: 1;
@@ -280,6 +340,13 @@
 // Skill roll card specific
 .vagabond.chat-card.skill-roll {
   .skill-name {
+    margin: 0;
+  }
+}
+
+// Save roll card specific
+.vagabond.chat-card.save-roll {
+  .save-name {
     margin: 0;
   }
 }
@@ -295,7 +362,7 @@
       width: 32px;
       height: 32px;
       border-radius: $radius-sm;
-      border: 1px solid $color-border;
+      border: 1px solid var(--color-border);
     }
 
     .header-text {
@@ -304,13 +371,14 @@
       .weapon-name {
         margin: 0;
         font-size: $font-size-base;
+        color: var(--color-text-primary);
       }
 
       .attack-type-badge {
         font-size: $font-size-xs;
         padding: $spacing-1 $spacing-2;
-        background-color: rgba($color-accent-primary, 0.2);
-        color: $color-accent-primary;
+        background-color: rgba(139, 69, 19, 0.2);
+        color: var(--color-accent-primary);
         border-radius: $radius-full;
         font-weight: $font-weight-medium;
       }
@@ -318,18 +386,18 @@
   }
 
   .damage-section {
-    margin-top: $spacing-3;
+    margin: $spacing-3;
     padding: $spacing-3;
-    background-color: rgba($color-danger, 0.1);
-    border: 1px solid rgba($color-danger, 0.3);
+    background-color: rgba(201, 68, 68, 0.1);
+    border: 1px solid rgba(201, 68, 68, 0.3);
     border-radius: $radius-md;
 
     &.critical {
-      background-color: rgba($color-warning, 0.15);
-      border-color: $color-warning;
+      background-color: rgba(212, 163, 44, 0.15);
+      border-color: var(--color-warning);
 
       .damage-total {
-        color: $color-warning;
+        color: var(--color-warning);
       }
     }
 
@@ -338,13 +406,14 @@
       gap: $spacing-2;
       font-weight: $font-weight-semibold;
       margin-bottom: $spacing-2;
+      color: var(--color-text-primary);
 
       i {
-        color: $color-danger;
+        color: var(--color-danger);
       }
 
       .crit-label {
-        color: $color-warning;
+        color: var(--color-warning);
         font-size: $font-size-sm;
       }
     }
@@ -357,13 +426,13 @@
         font-family: $font-family-header;
         font-size: $font-size-3xl;
         font-weight: $font-weight-bold;
-        color: $color-danger;
+        color: var(--color-danger);
         line-height: 1;
       }
 
       .damage-type {
         font-size: $font-size-sm;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         text-transform: capitalize;
       }
     }
@@ -374,10 +443,10 @@
       margin-top: $spacing-2;
       font-family: $font-family-mono;
       font-size: $font-size-sm;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
 
       .grip-indicator {
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
       }
     }
   }
@@ -386,32 +455,54 @@
     display: flex;
     flex-wrap: wrap;
     gap: $spacing-1;
-    margin-top: $spacing-2;
+    margin: $spacing-2 $spacing-3;
     padding: $spacing-2;
 
     .property-tag {
       font-size: $font-size-xs;
       padding: $spacing-1 $spacing-2;
-      background-color: $color-parchment-dark;
+      background-color: var(--color-bg-secondary);
       border-radius: $radius-full;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       text-transform: capitalize;
     }
   }
 }
 
 // Spell card specific
-.vagabond.chat-card.spell-card {
+.vagabond.chat-card.spell-card,
+.vagabond.chat-card.spell-cast {
+  .card-header {
+    .spell-name {
+      margin: 0;
+    }
+
+    .mana-cost-badge {
+      font-size: $font-size-xs;
+      padding: $spacing-1 $spacing-2;
+      background-color: rgba(112, 80, 176, 0.2);
+      color: var(--color-reason);
+      border-radius: $radius-full;
+      font-weight: $font-weight-medium;
+
+      i {
+        margin-right: $spacing-1;
+      }
+    }
+  }
+
   .spell-effect {
     padding: $spacing-3;
     font-style: italic;
-    border-left: 3px solid $color-accent-primary;
-    background-color: $color-parchment-light;
-    margin: $spacing-3 0;
+    border-left: 3px solid var(--color-accent-primary);
+    background-color: var(--color-bg-secondary);
+    margin: $spacing-3;
+    color: var(--color-text-secondary);
   }
 
   .spell-meta {
     @include grid(2, $spacing-2);
+    margin: 0 $spacing-3 $spacing-3;
     font-size: $font-size-sm;
 
     .meta-item {
@@ -419,9 +510,44 @@
       padding: $spacing-1;
 
       .meta-label {
-        color: $color-text-muted;
+        color: var(--color-text-muted);
+      }
+
+      .meta-value {
+        font-weight: $font-weight-medium;
+        color: var(--color-text-primary);
       }
     }
+  }
+
+  // Mana spent display
+  .mana-spent {
+    @include flex-center;
+    gap: $spacing-2;
+    margin: 0 $spacing-3 $spacing-3;
+    padding: $spacing-2;
+    background-color: rgba(112, 80, 176, 0.1);
+    border: 1px solid rgba(112, 80, 176, 0.3);
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: var(--color-reason);
+
+    i {
+      font-size: $font-size-base;
+    }
+  }
+
+  // Focus indicator
+  .focus-indicator {
+    @include flex-center;
+    gap: $spacing-2;
+    margin: 0 $spacing-3 $spacing-3;
+    padding: $spacing-2;
+    background-color: rgba(212, 163, 44, 0.1);
+    border: 1px solid var(--color-warning);
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: var(--color-warning);
   }
 }
 

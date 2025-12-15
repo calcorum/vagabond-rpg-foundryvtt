@@ -1,18 +1,21 @@
 // Vagabond RPG - Roll Dialog Styles
 // ==================================
+// All roll dialogs use CSS custom properties for theme support.
 
 // ApplicationV2 Roll Dialog Base
 .vagabond.roll-dialog {
-  // Force light background on the entire window
-  background-color: $color-parchment;
-  color: $color-text-primary;
+  // Use themed class for proper theme support
+  &.themed {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
 
   .roll-dialog-content {
     @include flex-column;
     gap: $spacing-3;
     padding: $spacing-4;
-    background-color: $color-parchment;
-    color: $color-text-primary;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 
   // Automatic favor/hinder from Active Effects
@@ -28,30 +31,60 @@
     }
 
     &.favor {
-      background-color: rgba($color-success, 0.15);
-      color: $color-success;
-      border: 1px solid $color-success;
+      background-color: rgba(74, 159, 66, 0.15);
+      color: var(--color-success);
+      border: 1px solid var(--color-success);
     }
 
     &.hinder {
-      background-color: rgba($color-danger, 0.15);
-      color: $color-danger;
-      border: 1px solid $color-danger;
+      background-color: rgba(201, 68, 68, 0.15);
+      color: var(--color-danger);
+      border: 1px solid var(--color-danger);
     }
   }
 
-  // Skill selection
-  .skill-selection {
+  // Common selection dropdowns
+  .skill-selection,
+  .weapon-selection,
+  .save-selection,
+  .spell-selection {
     @include flex-column;
     gap: $spacing-2;
 
     label {
       font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    select {
+      @include input-base;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .no-weapons-message,
+    .no-spells-warning {
+      @include flex-center;
+      gap: $spacing-2;
+      padding: $spacing-3;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-style: italic;
+      background-color: var(--color-bg-secondary);
+      border-radius: $radius-md;
+
+      i {
+        color: var(--color-warning);
+      }
     }
   }
 
-  // Skill info panel
-  .skill-info {
+  // Info panels (skill-info, attack-info, save-info, spell-info)
+  .skill-info,
+  .attack-info,
+  .save-info,
+  .spell-info,
+  .casting-skill {
     @include panel;
     @include grid(2, $spacing-2);
     padding: $spacing-3;
@@ -62,28 +95,113 @@
 
     .label {
       font-size: $font-size-sm;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
     }
 
     .value {
       font-weight: $font-weight-medium;
+      color: var(--color-text-primary);
 
       &.trained {
-        color: $color-success;
+        color: var(--color-success);
       }
 
       &.untrained {
-        color: $color-text-muted;
+        color: var(--color-text-muted);
       }
 
       &.difficulty {
         font-family: $font-family-header;
         font-size: $font-size-lg;
         font-weight: $font-weight-bold;
+        color: var(--color-accent-primary);
       }
 
       &.crit {
-        color: $color-warning;
+        color: var(--color-warning);
+      }
+    }
+
+    .stat-name {
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  // Single-column info (for spell dialog)
+  .spell-info {
+    @include flex-column;
+    gap: $spacing-2;
+
+    > div {
+      @include flex-between;
+    }
+  }
+
+  // Damage preview panel
+  .damage-preview {
+    @include panel;
+    padding: $spacing-3;
+    background-color: rgba(201, 68, 68, 0.08);
+    border-color: rgba(201, 68, 68, 0.3);
+
+    .damage-formula {
+      @include flex-center;
+      gap: $spacing-2;
+
+      .label {
+        font-size: $font-size-sm;
+        color: var(--color-text-muted);
+      }
+
+      .value {
+        font-family: $font-family-mono;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+        color: var(--color-danger);
+      }
+
+      .damage-type {
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+      }
+    }
+
+    .weapon-properties {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-1;
+      margin-top: $spacing-2;
+      justify-content: center;
+
+      .property-tag {
+        font-size: $font-size-xs;
+        padding: $spacing-1 $spacing-2;
+        background-color: var(--color-bg-secondary);
+        border-radius: $radius-full;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Versatile weapon toggle
+  .versatile-toggle {
+    @include flex-center;
+    padding: $spacing-2;
+
+    .checkbox-label {
+      @include flex-center;
+      gap: $spacing-2;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        width: 1.25rem;
+        height: 1.25rem;
+        accent-color: var(--color-accent-primary);
+      }
+
+      span {
+        color: var(--color-text-primary);
       }
     }
   }
@@ -95,6 +213,7 @@
 
     > label {
       font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
     }
 
     .favor-hinder-toggles {
@@ -109,18 +228,18 @@
         &.favor-btn {
           &.active,
           &:hover {
-            background-color: rgba($color-success, 0.15);
-            border-color: $color-success;
-            color: $color-success;
+            background-color: rgba(74, 159, 66, 0.15);
+            border-color: var(--color-success);
+            color: var(--color-success);
           }
         }
 
         &.hinder-btn {
           &.active,
           &:hover {
-            background-color: rgba($color-danger, 0.15);
-            border-color: $color-danger;
-            color: $color-danger;
+            background-color: rgba(201, 68, 68, 0.15);
+            border-color: var(--color-danger);
+            color: var(--color-danger);
           }
         }
       }
@@ -128,19 +247,24 @@
 
     .net-favor-hinder {
       @include flex-center;
-      padding: $spacing-1 $spacing-2;
+      gap: $spacing-2;
+      padding: $spacing-2 $spacing-3;
       font-size: $font-size-sm;
       font-weight: $font-weight-medium;
       border-radius: $radius-md;
 
+      i {
+        font-size: $font-size-base;
+      }
+
       &.favor {
-        background-color: rgba($color-success, 0.15);
-        color: $color-success;
+        background-color: rgba(74, 159, 66, 0.15);
+        color: var(--color-success);
       }
 
       &.hinder {
-        background-color: rgba($color-danger, 0.15);
-        color: $color-danger;
+        background-color: rgba(201, 68, 68, 0.15);
+        color: var(--color-danger);
       }
     }
   }
@@ -152,6 +276,7 @@
 
     > label {
       font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
     }
 
     .modifier-presets {
@@ -166,7 +291,7 @@
         font-size: $font-size-sm;
 
         &:hover {
-          background-color: $color-parchment-dark;
+          background-color: var(--color-bg-secondary);
         }
       }
     }
@@ -196,129 +321,310 @@
         opacity: 0.5;
         cursor: not-allowed;
       }
+
+      .insufficient-mana-label {
+        font-size: $font-size-sm;
+        opacity: 0.8;
+      }
     }
   }
 }
 
-// Skill check dialog specific
-.vagabond.skill-check-dialog {
-  // Additional skill-specific styles if needed
-}
-
-// Attack roll dialog specific
-.vagabond.attack-roll-dialog {
-  .weapon-selection {
+// ===========================================
+// Save Roll Dialog Specific Styles
+// ===========================================
+.vagabond.roll-dialog {
+  // Defense options (Block/Dodge for Reflex saves)
+  .defense-options {
     @include flex-column;
     gap: $spacing-2;
+    margin-top: $spacing-2;
 
-    label {
+    > label {
       font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
     }
 
-    .no-weapons-message {
-      padding: $spacing-3;
-      text-align: center;
-      color: $color-text-muted;
-      font-style: italic;
+    .defense-buttons {
+      display: flex;
+      gap: $spacing-2;
+
+      .defense-btn {
+        @include button-secondary;
+        flex: 1;
+        gap: $spacing-2;
+        padding: $spacing-3;
+
+        i {
+          font-size: $font-size-lg;
+        }
+
+        &.dodge-btn {
+          &.active,
+          &:hover:not(:disabled) {
+            background-color: rgba(74, 159, 66, 0.15);
+            border-color: var(--color-success);
+            color: var(--color-success);
+          }
+        }
+
+        &.block-btn {
+          &.active,
+          &:hover:not(:disabled) {
+            background-color: rgba(64, 144, 224, 0.15);
+            border-color: var(--color-info);
+            color: var(--color-info);
+          }
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+
+          &:hover {
+            background-color: transparent;
+            border-color: var(--color-border);
+            color: var(--color-text-muted);
+          }
+        }
+      }
     }
-  }
 
-  .attack-info {
-    @include panel;
-    @include grid(2, $spacing-2);
-    padding: $spacing-3;
-
-    > div {
-      @include flex-between;
-    }
-
-    .label {
+    .defense-info {
+      @include flex-center;
+      gap: $spacing-2;
+      padding: $spacing-2 $spacing-3;
       font-size: $font-size-sm;
-      color: $color-text-muted;
-    }
+      color: var(--color-text-secondary);
+      background-color: var(--color-bg-secondary);
+      border-radius: $radius-md;
 
-    .value {
-      font-weight: $font-weight-medium;
-
-      &.difficulty {
-        font-family: $font-family-header;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-bold;
-      }
-
-      &.crit {
-        color: $color-warning;
+      i {
+        color: var(--color-info);
       }
     }
   }
+}
 
-  .damage-preview {
+// ===========================================
+// Spell Cast Dialog Specific Styles
+// ===========================================
+.vagabond.roll-dialog {
+  // Mana display
+  .mana-display {
     @include panel;
+    @include flex-between;
     padding: $spacing-3;
-    background-color: rgba($color-danger, 0.1);
-    border-color: rgba($color-danger, 0.3);
+    background: linear-gradient(135deg, rgba(112, 80, 176, 0.1), rgba(112, 80, 176, 0.05));
+    border-color: rgba(112, 80, 176, 0.3);
 
-    .damage-formula {
+    .mana-current,
+    .mana-cost {
       @include flex-center;
       gap: $spacing-2;
 
       .label {
         font-size: $font-size-sm;
-        color: $color-text-muted;
+        color: var(--color-text-muted);
+      }
+
+      .value {
+        font-family: $font-family-header;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: var(--color-reason);
+
+        &.insufficient {
+          color: var(--color-danger);
+        }
+      }
+    }
+  }
+
+  // Spell effect section
+  .spell-effect {
+    @include panel;
+    padding: $spacing-3;
+    background-color: var(--color-bg-secondary);
+
+    .effect-header {
+      margin-bottom: $spacing-2;
+
+      .include-effect-toggle {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: $spacing-2;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+          width: 1.25rem;
+          height: 1.25rem;
+          accent-color: var(--color-accent-primary);
+        }
+
+        span {
+          font-weight: $font-weight-semibold;
+          color: var(--color-text-primary);
+        }
+      }
+    }
+
+    .effect-text {
+      font-size: $font-size-sm;
+      color: var(--color-text-secondary);
+      padding: $spacing-2;
+      background-color: var(--color-bg-primary);
+      border-radius: $radius-sm;
+      border-left: 3px solid var(--color-accent-primary);
+    }
+  }
+
+  // Damage configuration (dice slider)
+  .damage-config {
+    @include flex-column;
+    gap: $spacing-2;
+
+    > label {
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    .damage-dice-input {
+      @include flex-center;
+      gap: $spacing-3;
+
+      input[type="range"] {
+        flex: 1;
+        height: 8px;
+        border-radius: $radius-full;
+        background: var(--color-bg-tertiary);
+        outline: none;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--color-danger);
+          cursor: pointer;
+          border: 2px solid var(--color-bg-primary);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        &::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--color-danger);
+          cursor: pointer;
+          border: 2px solid var(--color-bg-primary);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .dice-count {
+        font-family: $font-family-mono;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        color: var(--color-danger);
+        min-width: 4rem;
+        text-align: center;
+      }
+    }
+
+    .damage-preview {
+      @include flex-center;
+      gap: $spacing-2;
+      padding: $spacing-2;
+      background-color: rgba(201, 68, 68, 0.08);
+      border-radius: $radius-md;
+
+      .label {
+        font-size: $font-size-sm;
+        color: var(--color-text-muted);
       }
 
       .value {
         font-family: $font-family-mono;
         font-weight: $font-weight-bold;
-        font-size: $font-size-lg;
+        color: var(--color-danger);
       }
 
       .damage-type {
         font-size: $font-size-sm;
-        color: $color-text-secondary;
-      }
-    }
-
-    .weapon-properties {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $spacing-1;
-      margin-top: $spacing-2;
-      justify-content: center;
-
-      .property-tag {
-        font-size: $font-size-xs;
-        padding: $spacing-1 $spacing-2;
-        background-color: $color-parchment-dark;
-        border-radius: $radius-full;
-        color: $color-text-secondary;
-        text-transform: uppercase;
+        color: var(--color-text-secondary);
       }
     }
   }
 
-  .versatile-toggle {
-    @include flex-center;
-    padding: $spacing-2;
+  // Delivery and Duration selection
+  .delivery-selection,
+  .duration-selection {
+    @include flex-column;
+    gap: $spacing-2;
 
-    .checkbox-label {
+    > label {
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    select {
+      @include input-base;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  // Focus warning
+  .focus-warning {
+    @include panel;
+    @include flex-column;
+    gap: $spacing-2;
+    padding: $spacing-3;
+    background-color: rgba(212, 163, 44, 0.1);
+    border-color: var(--color-warning);
+
+    > i {
+      color: var(--color-warning);
+    }
+
+    > span {
+      font-size: $font-size-sm;
+      color: var(--color-text-secondary);
+    }
+
+    .current-focus {
+      font-size: $font-size-sm;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    .focus-limit-warning {
       @include flex-center;
       gap: $spacing-2;
-      cursor: pointer;
+      padding: $spacing-2;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      color: var(--color-danger);
+      background-color: rgba(201, 68, 68, 0.1);
+      border-radius: $radius-md;
 
-      input[type="checkbox"] {
-        width: 1.25rem;
-        height: 1.25rem;
-        accent-color: $color-accent-primary;
+      i {
+        color: var(--color-danger);
       }
     }
   }
 }
 
+// ===========================================
 // Legacy dialog styles (for backward compatibility)
+// ===========================================
 .vagabond.dialog.roll-dialog {
   .dialog-content {
     padding: $spacing-4;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 
   // Roll info section
@@ -335,14 +641,15 @@
         font-family: $font-family-header;
         font-size: $font-size-3xl;
         font-weight: $font-weight-bold;
+        color: var(--color-accent-primary);
       }
 
       .crit-threshold {
         font-size: $font-size-sm;
-        color: $color-text-muted;
+        color: var(--color-text-muted);
 
         .crit-value {
-          color: $color-accent-primary;
+          color: var(--color-warning);
           font-weight: $font-weight-bold;
         }
       }
@@ -361,14 +668,15 @@
 
       label {
         font-weight: $font-weight-medium;
+        color: var(--color-text-primary);
       }
 
       &.favor .toggle-active {
-        color: $color-success;
+        color: var(--color-success);
       }
 
       &.hinder .toggle-active {
-        color: $color-danger;
+        color: var(--color-danger);
       }
     }
   }
@@ -398,7 +706,7 @@
   }
 }
 
-// Spell cast dialog specific
+// Legacy spell cast dialog
 .vagabond.dialog.spell-cast-dialog {
   .mana-cost {
     @include panel;
@@ -408,20 +716,21 @@
 
     .cost-label {
       font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
     }
 
     .cost-value {
       font-family: $font-family-header;
       font-size: $font-size-xl;
       font-weight: $font-weight-bold;
-      color: $color-accent-primary;
+      color: var(--color-reason);
     }
 
     &.insufficient {
-      border-color: $color-danger;
+      border-color: var(--color-danger);
 
       .cost-value {
-        color: $color-danger;
+        color: var(--color-danger);
       }
     }
   }
@@ -434,6 +743,7 @@
     .selection-label {
       font-weight: $font-weight-semibold;
       margin-bottom: $spacing-2;
+      color: var(--color-text-primary);
     }
 
     .selection-grid {
@@ -447,35 +757,34 @@
       transition: all $transition-fast;
 
       &:hover {
-        border-color: $color-accent-primary;
+        border-color: var(--color-accent-primary);
       }
 
       &.selected {
-        background-color: $color-parchment-dark;
-        border-color: $color-accent-primary;
+        background-color: var(--color-bg-secondary);
+        border-color: var(--color-accent-primary);
       }
 
       .option-name {
         font-weight: $font-weight-medium;
+        color: var(--color-text-primary);
       }
 
       .option-cost {
         font-size: $font-size-sm;
-        color: $color-text-muted;
+        color: var(--color-text-muted);
       }
     }
   }
 }
 
+// ===========================================
 // Favor/Hinder Debug Panel
+// ===========================================
 .vagabond.favor-hinder-debug {
-  // Force light background on the entire window content
-  // Using !important to override Foundry's dark theme styles
-  background-color: $color-parchment !important;
-  color: $color-text-primary !important;
-
-  * {
-    color: $color-text-primary;
+  &.themed {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 
   // Enable scrolling on the window content
@@ -489,7 +798,7 @@
     @include flex-column;
     gap: $spacing-4;
     padding: $spacing-4;
-    background-color: $color-parchment !important;
+    background-color: var(--color-bg-primary);
   }
 
   .actor-selection {
@@ -498,7 +807,7 @@
 
     label {
       font-weight: $font-weight-semibold;
-      color: $color-text-primary;
+      color: var(--color-text-primary);
     }
   }
 
@@ -510,7 +819,7 @@
   .debug-panel {
     @include panel;
     padding: $spacing-3;
-    background-color: $color-parchment-light;
+    background-color: var(--color-bg-secondary);
 
     h3 {
       @include flex-center;
@@ -518,12 +827,12 @@
       gap: $spacing-2;
       margin: 0 0 $spacing-3 0;
       padding-bottom: $spacing-2;
-      border-bottom: 1px solid $color-border;
+      border-bottom: 1px solid var(--color-border);
       font-size: $font-size-base;
-      color: $color-text-primary;
+      color: var(--color-text-primary);
 
       i {
-        color: $color-accent-primary;
+        color: var(--color-accent-primary);
       }
     }
   }
@@ -531,21 +840,21 @@
   .flag-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: $color-parchment-light;
+    background-color: var(--color-bg-secondary);
 
     th,
     td {
       padding: $spacing-2;
       text-align: left;
-      border-bottom: 1px solid $color-border-light;
-      color: $color-text-primary;
+      border-bottom: 1px solid var(--color-border-light);
+      color: var(--color-text-primary);
     }
 
     th {
       font-size: $font-size-sm;
       font-weight: $font-weight-semibold;
-      color: $color-text-secondary;
-      background-color: $color-parchment-dark;
+      color: var(--color-text-secondary);
+      background-color: var(--color-bg-tertiary);
 
       &.center {
         text-align: center;
@@ -553,7 +862,7 @@
     }
 
     td {
-      background-color: $color-parchment-light !important;
+      background-color: var(--color-bg-secondary);
 
       &.center {
         text-align: center;
@@ -564,17 +873,16 @@
       }
     }
 
-    // Alternating row colors with good contrast
     tbody tr:nth-child(even) td {
-      background-color: $color-parchment !important;
+      background-color: var(--color-bg-primary);
     }
 
     .stat-tag {
       font-size: $font-size-xs;
       padding: $spacing-1 $spacing-2;
-      background-color: $color-parchment-dark;
+      background-color: var(--color-bg-tertiary);
       border-radius: $radius-full;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       text-transform: uppercase;
     }
 
@@ -582,11 +890,11 @@
       width: 1.25rem;
       height: 1.25rem;
       cursor: pointer;
-      accent-color: $color-accent-primary;
+      accent-color: var(--color-accent-primary);
     }
 
     tbody tr:hover td {
-      background-color: $color-parchment-dark;
+      background-color: var(--color-bg-tertiary);
     }
   }
 
@@ -594,7 +902,7 @@
     display: flex;
     gap: $spacing-3;
     padding-top: $spacing-3;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
 
     button {
       @include button-base;
@@ -608,11 +916,11 @@
 
     .clear-btn {
       @include button-secondary;
-      color: $color-danger;
-      border-color: $color-danger;
+      color: var(--color-danger);
+      border-color: var(--color-danger);
 
       &:hover:not(:disabled) {
-        background-color: rgba($color-danger, 0.1);
+        background-color: rgba(201, 68, 68, 0.1);
       }
     }
   }
@@ -623,7 +931,7 @@
     gap: $spacing-3;
     padding: $spacing-6;
     text-align: center;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
 
     i {
       font-size: $font-size-4xl;

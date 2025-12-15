@@ -7,7 +7,7 @@
   font-family: $font-family-body;
   font-size: $font-size-base;
   line-height: $line-height-normal;
-  color: $color-text-primary;
+  color: var(--color-text-primary);
 
   // Box sizing
   *,
@@ -18,12 +18,12 @@
 
   // Links
   a {
-    color: $color-accent-primary;
+    color: var(--color-accent-primary);
     text-decoration: none;
     transition: color $transition-fast;
 
     &:hover {
-      color: $color-accent-secondary;
+      color: var(--color-accent-secondary);
       text-decoration: underline;
     }
 
@@ -40,7 +40,7 @@
     font-family: $font-family-header;
     font-weight: $font-weight-bold;
     line-height: $line-height-tight;
-    color: $color-text-primary;
+    color: var(--color-text-primary);
     margin: 0 0 $spacing-2 0;
   }
 
@@ -100,18 +100,18 @@
   td {
     padding: $spacing-2 $spacing-3;
     text-align: left;
-    border-bottom: 1px solid $color-border-light;
+    border-bottom: 1px solid var(--color-border-light);
   }
 
   th {
     font-weight: $font-weight-semibold;
-    background-color: $color-parchment-dark;
+    background-color: var(--color-bg-secondary);
   }
 
   // Horizontal rule
   hr {
     border: none;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     margin: $spacing-4 0;
   }
 
@@ -120,7 +120,7 @@
     font-family: $font-family-mono;
     font-size: $font-size-sm;
     padding: $spacing-1 $spacing-2;
-    background-color: $color-parchment-dark;
+    background-color: var(--color-bg-secondary);
     border-radius: $radius-sm;
   }
 
@@ -128,48 +128,41 @@
   blockquote {
     margin: 0 0 $spacing-4 0;
     padding: $spacing-3 $spacing-4;
-    border-left: 3px solid $color-accent-primary;
-    background-color: $color-parchment-dark;
+    border-left: 3px solid var(--color-accent-primary);
+    background-color: var(--color-bg-secondary);
     font-style: italic;
   }
 
   // Selection
   ::selection {
-    background-color: $color-accent-highlight;
-    color: $color-text-primary;
+    background-color: var(--color-accent-highlight);
+    color: var(--color-text-primary);
   }
 }
 
 // Foundry sheet wrapper styles
 .sheet.vagabond {
   @include custom-scrollbar;
-  background: $color-parchment;
-  background-image: linear-gradient(
-    to bottom,
-    rgba($color-parchment-light, 0.3) 0%,
-    transparent 5%,
-    transparent 95%,
-    rgba($color-parchment-dark, 0.3) 100%
-  );
+  background: var(--color-bg-primary);
 }
 
 // Window header customization
 .window-app.vagabond {
   .window-header {
-    background: linear-gradient(to bottom, $color-parchment-dark, $color-parchment-darker);
-    border-bottom: 2px solid $color-border-dark;
+    background: linear-gradient(to bottom, var(--color-bg-secondary), var(--color-bg-tertiary));
+    border-bottom: 2px solid var(--color-border-dark);
 
     .window-title {
       font-family: $font-family-header;
       font-size: $font-size-lg;
-      color: $color-text-primary;
+      color: var(--color-text-primary);
     }
 
     .header-button {
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
 
       &:hover {
-        color: $color-text-primary;
+        color: var(--color-text-primary);
       }
     }
   }

@@ -2,6 +2,9 @@
   "VAGABOND.SystemName": "Vagabond RPG",
   "VAGABOND.SystemDescription": "A Foundry VTT system for Vagabond RPG - Pulp Fantasy Roleplaying",
 
+  "VAGABOND.ThemeLight": "Light (Parchment)",
+  "VAGABOND.ThemeDark": "Dark",
+
   "VAGABOND.SheetCharacter": "Character Sheet",
   "VAGABOND.SheetNPC": "NPC Sheet",
   "VAGABOND.SheetItem": "Item Sheet",
