@@ -1,33 +1,34 @@
 {{!-- Character Sheet Inventory Tab --}}
 <section class="sheet-body tab-content inventory-tab">
-  {{!-- Item Slots Header --}}
+  {{!-- Item Slots & Wealth Header --}}
   <div class="inventory-header">
-    <div class="item-slots {{#if itemSlots.overburdened}}overburdened{{/if}}">
-      <span class="slots-label">{{localize "VAGABOND.ItemSlots"}}:</span>
-      <span class="slots-used">{{itemSlots.used}}</span>
-      <span class="slots-separator">/</span>
-      <span class="slots-max">{{itemSlots.max}}</span>
+    <div class="header-stat item-slots {{#if itemSlots.overburdened}}overburdened{{/if}}">
+      <label>{{localize "VAGABOND.ItemSlots"}}</label>
+      <div class="stat-value">
+        <span class="current">{{itemSlots.used}}</span>
+        <span class="separator">/</span>
+        <span class="max">{{itemSlots.max}}</span>
+      </div>
       {{#if itemSlots.overburdened}}
-      <span class="overburdened-warning">
+      <span class="overburdened-warning" data-tooltip="{{localize 'VAGABOND.Overburdened'}}">
         <i class="fa-solid fa-exclamation-triangle"></i>
-        {{localize "VAGABOND.Overburdened"}}
       </span>
       {{/if}}
     </div>
 
-    <div class="wealth">
-      <div class="currency gold">
-        <input type="number" name="system.wealth.gold" value="{{wealth.gold}}" min="0" />
-        <label>{{localize "VAGABOND.Gold"}}</label>
-      </div>
-      <div class="currency silver">
-        <input type="number" name="system.wealth.silver" value="{{wealth.silver}}" min="0" />
-        <label>{{localize "VAGABOND.Silver"}}</label>
-      </div>
-      <div class="currency copper">
-        <input type="number" name="system.wealth.copper" value="{{wealth.copper}}" min="0" />
-        <label>{{localize "VAGABOND.Copper"}}</label>
-      </div>
+    <div class="header-stat gold">
+      <label>{{localize "VAGABOND.Gold"}}</label>
+      <input type="number" name="system.wealth.gold" value="{{wealth.gold}}" min="0" />
+    </div>
+
+    <div class="header-stat silver">
+      <label>{{localize "VAGABOND.Silver"}}</label>
+      <input type="number" name="system.wealth.silver" value="{{wealth.silver}}" min="0" />
+    </div>
+
+    <div class="header-stat copper">
+      <label>{{localize "VAGABOND.Copper"}}</label>
+      <input type="number" name="system.wealth.copper" value="{{wealth.copper}}" min="0" />
     </div>
   </div>
 

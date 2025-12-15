@@ -747,6 +747,321 @@
       }
     }
   }
+
+  // ----------------------------------------
+  // Inventory Tab Layout
+  // ----------------------------------------
+  .inventory-tab {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  // Inventory Header (Slots & Wealth) - Inline row
+  .inventory-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-4;
+    padding-bottom: $spacing-3;
+    margin-bottom: $spacing-2;
+    border-bottom: 2px solid $color-border;
+    flex-wrap: nowrap;
+
+    .header-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-1;
+
+      label {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $color-text-secondary;
+      }
+
+      .stat-value {
+        display: flex;
+        align-items: baseline;
+        gap: 2px;
+        font-family: $font-family-header;
+        font-size: $font-size-lg;
+
+        .current {
+          font-weight: $font-weight-bold;
+          color: $color-text-primary;
+        }
+
+        .separator {
+          color: $color-text-muted;
+        }
+
+        .max {
+          color: $color-text-secondary;
+        }
+      }
+
+      input {
+        width: 60px;
+        padding: $spacing-1 $spacing-2;
+        font-family: $font-family-header;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        background-color: $color-parchment-light;
+        border: 1px solid $color-border;
+        border-radius: $radius-md;
+
+        &:focus {
+          outline: none;
+          border-color: $color-accent-primary;
+        }
+      }
+
+      // Item slots takes remaining space to push currencies right
+      &.item-slots {
+        flex-direction: row;
+        align-items: center;
+        gap: $spacing-2;
+        margin-right: auto;
+
+        label {
+          margin-bottom: 0;
+        }
+
+        .overburdened-warning {
+          color: $color-danger;
+        }
+
+        &.overburdened .current {
+          color: $color-danger;
+        }
+      }
+
+      // Currency-specific label colors
+      &.gold label {
+        color: #b8860b;
+      }
+
+      &.silver label {
+        color: #707070;
+      }
+
+      &.copper label {
+        color: #8b4513;
+      }
+    }
+  }
+
+  // Inventory Sections (Weapons, Armor, Equipment)
+  .inventory-section {
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-2;
+
+      .section-header {
+        margin: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .item-create {
+        @include flex-center;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        background-color: $color-parchment;
+        border: 1px solid $color-border;
+        border-radius: $radius-md;
+        color: $color-text-primary;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: $color-success;
+          border-color: $color-success;
+          color: white;
+        }
+
+        i {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  // Item Lists
+  .item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: $color-parchment-light;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    overflow: hidden;
+  }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    padding: $spacing-2 $spacing-3;
+    border-bottom: 1px solid $color-border-light;
+    transition: background-color $transition-fast;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: $color-parchment;
+    }
+
+    &.empty {
+      justify-content: center;
+      padding: $spacing-4;
+      font-style: italic;
+      color: $color-text-muted;
+    }
+
+    // Item thumbnail
+    .item-img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border: 1px solid $color-border;
+      border-radius: $radius-sm;
+      background-color: $color-parchment;
+      flex-shrink: 0;
+    }
+
+    // Item name (clickable to edit)
+    .item-name {
+      flex: 1;
+      font-weight: $font-weight-medium;
+      color: $color-text-primary;
+      cursor: pointer;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-accent-primary;
+        text-decoration: underline;
+      }
+    }
+
+    // Item stats (damage, armor, quantity)
+    .item-damage,
+    .item-armor-value {
+      font-family: $font-family-mono;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      padding: $spacing-1 $spacing-2;
+      background-color: rgba($color-danger, 0.1);
+      border-radius: $radius-sm;
+      color: $color-danger;
+    }
+
+    .item-armor-value {
+      background-color: rgba($color-info, 0.1);
+      color: $color-info;
+    }
+
+    .item-quantity {
+      font-family: $font-family-mono;
+      font-size: $font-size-sm;
+      color: $color-text-secondary;
+      min-width: 32px;
+      text-align: center;
+    }
+
+    .item-slots {
+      font-size: $font-size-xs;
+      color: $color-text-muted;
+      white-space: nowrap;
+    }
+
+    // Item control buttons
+    .item-equipped,
+    .item-delete {
+      @include flex-center;
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      background-color: transparent;
+      border: 1px solid $color-border-light;
+      border-radius: $radius-sm;
+      color: $color-text-muted;
+      cursor: pointer;
+      transition: all $transition-fast;
+      flex-shrink: 0;
+
+      i {
+        font-size: $font-size-sm;
+      }
+    }
+
+    .item-equipped {
+      &:hover {
+        background-color: rgba($color-success, 0.1);
+        border-color: $color-success;
+        color: $color-success;
+      }
+
+      &.active {
+        background-color: $color-success;
+        border-color: $color-success;
+        color: white;
+      }
+    }
+
+    .item-delete {
+      &:hover {
+        background-color: rgba($color-danger, 0.1);
+        border-color: $color-danger;
+        color: $color-danger;
+      }
+    }
+  }
+
+  // Responsive inventory layout
+  @container sheet-content (max-width: 500px) {
+    .inventory-header {
+      flex-wrap: wrap;
+
+      .header-stat.item-slots {
+        flex-basis: 100%;
+        margin-bottom: $spacing-2;
+      }
+    }
+
+    .item-row {
+      flex-wrap: wrap;
+
+      .item-name {
+        flex-basis: calc(100% - 50px);
+        order: 1;
+      }
+
+      .item-img {
+        order: 0;
+      }
+
+      .item-damage,
+      .item-armor-value,
+      .item-quantity,
+      .item-slots {
+        order: 2;
+      }
+
+      .item-equipped,
+      .item-delete {
+        order: 3;
+      }
+    }
+  }
 }
 
 // ==========================================
