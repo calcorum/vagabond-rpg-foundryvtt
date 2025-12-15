@@ -89,6 +89,48 @@
     </div>
   </div>
 
+  {{!-- Movement Capabilities --}}
+  <div class="biography-section movement">
+    <h2 class="section-header">{{localize "VAGABOND.Movement"}}</h2>
+    <div class="movement-grid">
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementClimbHint'}}">
+          <input type="checkbox" name="system.movement.climb"
+                 {{#if system.movement.climb}}checked{{/if}} />
+          {{localize "VAGABOND.Climb"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementClingHint'}}">
+          <input type="checkbox" name="system.movement.cling"
+                 {{#if system.movement.cling}}checked{{/if}} />
+          {{localize "VAGABOND.Cling"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementFlyHint'}}">
+          <input type="checkbox" name="system.movement.fly"
+                 {{#if system.movement.fly}}checked{{/if}} />
+          {{localize "VAGABOND.Fly"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementPhaseHint'}}">
+          <input type="checkbox" name="system.movement.phase"
+                 {{#if system.movement.phase}}checked{{/if}} />
+          {{localize "VAGABOND.Phase"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementSwimHint'}}">
+          <input type="checkbox" name="system.movement.swim"
+                 {{#if system.movement.swim}}checked{{/if}} />
+          {{localize "VAGABOND.Swim"}}
+        </label>
+      </div>
+    </div>
+  </div>
+
   {{!-- Biography Text --}}
   <div class="biography-section biography-text">
     <h2 class="section-header">{{localize "VAGABOND.Biography"}}</h2>

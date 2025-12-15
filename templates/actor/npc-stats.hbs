@@ -17,35 +17,9 @@
     {{!-- Speed --}}
     <div class="stat-group speed">
       <label>{{localize "VAGABOND.Speed"}}</label>
-      <div class="speed-values">
-        <div class="speed-item walk">
-          <i class="fa-solid fa-shoe-prints"></i>
-          <input type="number" name="system.speed.value" value="{{speed.walk}}" min="0" />
-          <span class="unit">ft</span>
-        </div>
-        {{#if speed.hasSpecialMovement}}
-        {{#if speed.fly}}
-        <div class="speed-item fly">
-          <i class="fa-solid fa-feather"></i>
-          <input type="number" name="system.speed.fly" value="{{speed.fly}}" min="0" />
-          <span class="unit">ft</span>
-        </div>
-        {{/if}}
-        {{#if speed.swim}}
-        <div class="speed-item swim">
-          <i class="fa-solid fa-water"></i>
-          <input type="number" name="system.speed.swim" value="{{speed.swim}}" min="0" />
-          <span class="unit">ft</span>
-        </div>
-        {{/if}}
-        {{#if speed.climb}}
-        <div class="speed-item climb">
-          <i class="fa-solid fa-mountain"></i>
-          <input type="number" name="system.speed.climb" value="{{speed.climb}}" min="0" />
-          <span class="unit">ft</span>
-        </div>
-        {{/if}}
-        {{/if}}
+      <div class="speed-value">
+        <input type="number" name="system.speed.value" value="{{speed}}" min="0" />
+        <span class="unit">ft</span>
       </div>
     </div>
 
@@ -75,8 +49,48 @@
 
     {{!-- Appearing --}}
     <div class="stat-group appearing">
-      <label>{{localize "VAGABOND.Appearing"}}</label>
+      <label class="rollable" data-action="rollAppearing" data-tooltip="{{localize 'VAGABOND.RollAppearing'}}">
+        <i class="fa-solid fa-dice"></i>
+        {{localize "VAGABOND.Appearing"}}
+      </label>
       <input type="text" name="system.appearing" value="{{appearing}}" placeholder="1d6" />
+    </div>
+  </div>
+
+  {{!-- Movement Types --}}
+  <div class="biography-section movement">
+    <h2 class="section-header">{{localize "VAGABOND.Movement"}}</h2>
+    <div class="movement-grid">
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementClimbHint'}}">
+          <input type="checkbox" name="system.movement.climb" {{#if movement.climb}}checked{{/if}} />
+          {{localize "VAGABOND.Climb"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementClingHint'}}">
+          <input type="checkbox" name="system.movement.cling" {{#if movement.cling}}checked{{/if}} />
+          {{localize "VAGABOND.Cling"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementFlyHint'}}">
+          <input type="checkbox" name="system.movement.fly" {{#if movement.fly}}checked{{/if}} />
+          {{localize "VAGABOND.Fly"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementPhaseHint'}}">
+          <input type="checkbox" name="system.movement.phase" {{#if movement.phase}}checked{{/if}} />
+          {{localize "VAGABOND.Phase"}}
+        </label>
+      </div>
+      <div class="movement-field">
+        <label data-tooltip="{{localize 'VAGABOND.MovementSwimHint'}}">
+          <input type="checkbox" name="system.movement.swim" {{#if movement.swim}}checked{{/if}} />
+          {{localize "VAGABOND.Swim"}}
+        </label>
+      </div>
     </div>
   </div>
 

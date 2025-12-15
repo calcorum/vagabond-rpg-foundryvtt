@@ -313,20 +313,22 @@ export default class CharacterData extends VagabondActorBase {
         overburdened: new fields.BooleanField({ initial: false }),
       }),
 
-      // Movement speeds (multiple types like NPCs)
+      // Movement speed - base walking speed plus bonus
       speed: new fields.SchemaField({
-        // Walking speed (base from DEX)
+        // Walking speed (base from DEX, calculated in prepareDerivedData)
         walk: new fields.NumberField({ integer: true, initial: 30, min: 0 }),
-        // Flying speed (from spells, ancestry, features)
-        fly: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
-        // Swimming speed (Hunter Rover, some ancestries)
-        swim: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
-        // Climbing speed (Hunter Rover, some ancestries)
-        climb: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
-        // Burrowing speed (rare, some beasts)
-        burrow: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
         // Bonus to walking speed from effects
         bonus: new fields.NumberField({ integer: true, initial: 0 }),
+      }),
+
+      // Movement capabilities - boolean toggles for special movement types
+      // All use base speed value when enabled per RAW
+      movement: new fields.SchemaField({
+        climb: new fields.BooleanField({ initial: false }), // Full Speed while climbing
+        cling: new fields.BooleanField({ initial: false }), // As Climb, but can Move on ceilings
+        fly: new fields.BooleanField({ initial: false }), // Move through the air at full Speed
+        phase: new fields.BooleanField({ initial: false }), // Move in occupied space (5 dmg if ends turn there)
+        swim: new fields.BooleanField({ initial: false }), // Full Speed while swimming
       }),
 
       // Saves - difficulties will be calculated

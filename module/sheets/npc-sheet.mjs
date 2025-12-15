@@ -32,6 +32,7 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
         ...VagabondActorSheet.DEFAULT_OPTIONS.actions,
         rollMorale: VagabondNPCSheet.#onRollMorale,
         rollAction: VagabondNPCSheet.#onRollAction,
+        rollAppearing: VagabondNPCSheet.#onRollAppearing,
         addAction: VagabondNPCSheet.#onAddAction,
         deleteAction: VagabondNPCSheet.#onDeleteAction,
         addAbility: VagabondNPCSheet.#onAddAbility,
@@ -107,14 +108,17 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
     context.sizeOptions = CONFIG.VAGABOND?.sizes || {};
     context.beingTypeOptions = CONFIG.VAGABOND?.beingTypes || {};
 
-    // Speed
-    context.speed = {
-      walk: system.speed.value,
-      fly: system.speed.fly,
-      swim: system.speed.swim,
-      climb: system.speed.climb,
-      hasSpecialMovement: system.speed.fly > 0 || system.speed.swim > 0 || system.speed.climb > 0,
-    };
+    // Speed (base value only)
+    context.speed = system.speed.value;
+
+    // Movement capabilities (boolean toggles)
+    context.movement = system.movement;
+    context.hasMovement =
+      system.movement.climb ||
+      system.movement.cling ||
+      system.movement.fly ||
+      system.movement.phase ||
+      system.movement.swim;
 
     // Senses
     context.senses = system.senses;
@@ -217,6 +221,29 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
       content,
       rolls: [roll],
       sound: CONFIG.sounds.dice,
+    });
+  }
+
+  /**
+   * Handle appearing roll (# encountered).
+   * @param {PointerEvent} event
+   * @param {HTMLElement} _target
+   */
+  static async #onRollAppearing(event, _target) {
+    event.preventDefault();
+    const appearing = this.actor.system.appearing;
+    if (!appearing) {
+      ui.notifications.warn("No appearing dice formula set");
+      return;
+    }
+
+    // Roll the appearing formula
+    const roll = await new Roll(appearing).evaluate();
+
+    // Create chat message
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: `<strong>${this.actor.name}</strong> - # Appearing`,
     });
   }
 

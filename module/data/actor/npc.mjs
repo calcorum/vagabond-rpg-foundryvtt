@@ -123,12 +123,20 @@ export default class NPCData extends VagabondActorBase {
         telepathy: new fields.BooleanField({ initial: false }),
       }),
 
-      // Movement speed
+      // Movement speed - base value plus boolean movement capabilities
+      // All special movement types use the base speed value per RAW
       speed: new fields.SchemaField({
         value: new fields.NumberField({ integer: true, initial: 30 }),
-        fly: new fields.NumberField({ integer: true, initial: 0 }),
-        swim: new fields.NumberField({ integer: true, initial: 0 }),
-        climb: new fields.NumberField({ integer: true, initial: 0 }),
+      }),
+
+      // Movement capabilities - boolean toggles for special movement types
+      // All use base speed value when enabled
+      movement: new fields.SchemaField({
+        climb: new fields.BooleanField({ initial: false }), // Full Speed while climbing
+        cling: new fields.BooleanField({ initial: false }), // As Climb, but can Move on ceilings
+        fly: new fields.BooleanField({ initial: false }), // Move through the air at full Speed
+        phase: new fields.BooleanField({ initial: false }), // Move in occupied space (5 dmg if ends turn there)
+        swim: new fields.BooleanField({ initial: false }), // Full Speed while swimming
       }),
 
       // Damage immunities
