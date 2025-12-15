@@ -382,7 +382,7 @@
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.2"],
-          "notes": "Uses Foundry v13 ApplicationV2 with HandlebarsApplicationMixin. Includes action handlers, drag-drop, item management."
+          "notes": "Uses Foundry v13 ApplicationV2 with HandlebarsApplicationMixin. Includes action handlers, drag-drop, item management. Added _cleanupInactiveTabs() to fix ApplicationV2 part stacking issue with tabs."
         },
         {
           "id": "3.2",
@@ -472,7 +472,7 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["3.2"],
-          "notes": "Abilities tab with ancestry, features, perks, and active effects display."
+          "notes": "Abilities tab with ancestry, features, perks, and active effects display. Perk prerequisites use getPrerequisiteString() from data model for proper formatting."
         },
         {
           "id": "3.11",
@@ -663,7 +663,8 @@
           "completed": false,
           "tested": false,
           "priority": "high",
-          "dependencies": ["5.1", "5.2", "5.3", "3.2"]
+          "dependencies": ["5.1", "5.2", "5.3", "3.2"],
+          "notes": "In progress. Completed: Header, Main tab (stats, combat, saves, skills, attacks), Inventory tab (inline header with item slots/currencies, item lists), Abilities tab (ancestry, features, perks with prerequisite display, active effects). Remaining: Magic tab, Biography tab."
         },
         {
           "id": "5.5",

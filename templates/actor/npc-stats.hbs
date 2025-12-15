@@ -84,14 +84,23 @@
   {{#if hasSenses}}
   <div class="senses-row">
     <label>{{localize "VAGABOND.Senses"}}:</label>
-    {{#if senses.darksight}}
-    <span class="sense-tag">{{localize "VAGABOND.Darksight"}}</span>
+    {{#if senses.allsight}}
+    <span class="sense-tag">{{localize "VAGABOND.Allsight"}}</span>
     {{/if}}
     {{#if senses.blindsight}}
-    <span class="sense-tag">{{localize "VAGABOND.Blindsight"}} {{senses.blindsight}} ft</span>
+    <span class="sense-tag">{{localize "VAGABOND.Blindsight"}}</span>
     {{/if}}
-    {{#if senses.tremorsense}}
-    <span class="sense-tag">{{localize "VAGABOND.Tremorsense"}} {{senses.tremorsense}} ft</span>
+    {{#if senses.darkvision}}
+    <span class="sense-tag">{{localize "VAGABOND.Darkvision"}}</span>
+    {{/if}}
+    {{#if senses.echolocation}}
+    <span class="sense-tag">{{localize "VAGABOND.Echolocation"}}</span>
+    {{/if}}
+    {{#if senses.seismicsense}}
+    <span class="sense-tag">{{localize "VAGABOND.Seismicsense"}}</span>
+    {{/if}}
+    {{#if senses.telepathy}}
+    <span class="sense-tag">{{localize "VAGABOND.Telepathy"}}</span>
     {{/if}}
   </div>
   {{/if}}

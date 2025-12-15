@@ -119,7 +119,12 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
     // Senses
     context.senses = system.senses;
     context.hasSenses =
-      system.senses.darksight || system.senses.blindsight > 0 || system.senses.tremorsense > 0;
+      system.senses.allsight ||
+      system.senses.blindsight ||
+      system.senses.darkvision ||
+      system.senses.echolocation ||
+      system.senses.seismicsense ||
+      system.senses.telepathy;
 
     // Damage modifiers
     context.immunities = system.immunities || [];

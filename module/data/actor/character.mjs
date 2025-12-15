@@ -419,17 +419,14 @@ export default class CharacterData extends VagabondActorBase {
         statIncreasesByLevel: new fields.ObjectField({ initial: {} }), // { "2": "might", "4": "dexterity" }
       }),
 
-      // Senses and vision types
+      // Senses - binary toggles, may be granted by perks/traits
       senses: new fields.SchemaField({
-        darksight: new fields.BooleanField({ initial: false }), // Dwarf, Goblin, Orc, Infravision perk
-        blindsight: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
-        tremorsense: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
-        // Special vision abilities from perks/ancestry
-        specialVision: new fields.SchemaField({
-          elvenEyes: new fields.BooleanField({ initial: false }), // Favor on sight Detect
-          witchsight: new fields.BooleanField({ initial: false }), // See Invisible, Favor vs illusions
-          sixthSense: new fields.BooleanField({ initial: false }), // Ignore Blinded for sight-based checks
-        }),
+        allsight: new fields.BooleanField({ initial: false }),
+        blindsight: new fields.BooleanField({ initial: false }),
+        darkvision: new fields.BooleanField({ initial: false }), // Dwarf, Goblin, Orc, Infravision perk
+        echolocation: new fields.BooleanField({ initial: false }),
+        seismicsense: new fields.BooleanField({ initial: false }),
+        telepathy: new fields.BooleanField({ initial: false }),
       }),
 
       // Known languages

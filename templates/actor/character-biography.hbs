@@ -46,22 +46,45 @@
     <div class="senses-grid">
       <div class="sense-field">
         <label>
-          <input type="checkbox" name="system.senses.darksight"
-                 {{#if system.senses.darksight}}checked{{/if}} />
-          {{localize "VAGABOND.Darksight"}}
+          <input type="checkbox" name="system.senses.allsight"
+                 {{#if system.senses.allsight}}checked{{/if}} />
+          {{localize "VAGABOND.Allsight"}}
         </label>
       </div>
       <div class="sense-field">
-        <label>{{localize "VAGABOND.Blindsight"}}</label>
-        <input type="number" name="system.senses.blindsight"
-               value="{{system.senses.blindsight}}" min="0" />
-        <span class="unit">ft</span>
+        <label>
+          <input type="checkbox" name="system.senses.blindsight"
+                 {{#if system.senses.blindsight}}checked{{/if}} />
+          {{localize "VAGABOND.Blindsight"}}
+        </label>
       </div>
       <div class="sense-field">
-        <label>{{localize "VAGABOND.Tremorsense"}}</label>
-        <input type="number" name="system.senses.tremorsense"
-               value="{{system.senses.tremorsense}}" min="0" />
-        <span class="unit">ft</span>
+        <label>
+          <input type="checkbox" name="system.senses.darkvision"
+                 {{#if system.senses.darkvision}}checked{{/if}} />
+          {{localize "VAGABOND.Darkvision"}}
+        </label>
+      </div>
+      <div class="sense-field">
+        <label>
+          <input type="checkbox" name="system.senses.echolocation"
+                 {{#if system.senses.echolocation}}checked{{/if}} />
+          {{localize "VAGABOND.Echolocation"}}
+        </label>
+      </div>
+      <div class="sense-field">
+        <label>
+          <input type="checkbox" name="system.senses.seismicsense"
+                 {{#if system.senses.seismicsense}}checked{{/if}} />
+          {{localize "VAGABOND.Seismicsense"}}
+        </label>
+      </div>
+      <div class="sense-field">
+        <label>
+          <input type="checkbox" name="system.senses.telepathy"
+                 {{#if system.senses.telepathy}}checked{{/if}} />
+          {{localize "VAGABOND.Telepathy"}}
+        </label>
       </div>
     </div>
   </div>

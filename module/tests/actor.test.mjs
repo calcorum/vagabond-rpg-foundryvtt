@@ -664,19 +664,19 @@ export function registerActorTests(quenchRunner) {
       describe("NPC Senses", () => {
         it("tracks vision types for NPCs", async () => {
           /**
-           * Senses determine what an NPC can perceive:
-           * darksight = see in darkness, blindsight/tremorsense = range in feet
+           * Senses are binary toggles that determine what an NPC can perceive:
+           * allsight, blindsight, darkvision, echolocation, seismicsense, telepathy
            */
-          expect(testNPC.system.senses.darksight).to.equal(false);
-          expect(testNPC.system.senses.blindsight).to.equal(0);
+          expect(testNPC.system.senses.darkvision).to.equal(false);
+          expect(testNPC.system.senses.blindsight).to.equal(false);
 
           await testNPC.update({
-            "system.senses.darksight": true,
-            "system.senses.blindsight": 30,
+            "system.senses.darkvision": true,
+            "system.senses.blindsight": true,
           });
 
-          expect(testNPC.system.senses.darksight).to.equal(true);
-          expect(testNPC.system.senses.blindsight).to.equal(30);
+          expect(testNPC.system.senses.darkvision).to.equal(true);
+          expect(testNPC.system.senses.blindsight).to.equal(true);
         });
       });
 

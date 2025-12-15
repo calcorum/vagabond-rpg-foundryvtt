@@ -113,11 +113,14 @@ export default class NPCData extends VagabondActorBase {
       // Being type (for targeting by certain effects)
       beingType: new fields.StringField({ initial: "beast" }),
 
-      // Senses (vision types)
+      // Senses - binary toggles, may be granted by abilities/traits
       senses: new fields.SchemaField({
-        darksight: new fields.BooleanField({ initial: false }),
-        blindsight: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
-        tremorsense: new fields.NumberField({ integer: true, initial: 0, min: 0 }), // Range in feet
+        allsight: new fields.BooleanField({ initial: false }),
+        blindsight: new fields.BooleanField({ initial: false }),
+        darkvision: new fields.BooleanField({ initial: false }),
+        echolocation: new fields.BooleanField({ initial: false }),
+        seismicsense: new fields.BooleanField({ initial: false }),
+        telepathy: new fields.BooleanField({ initial: false }),
       }),
 
       // Movement speed

@@ -1379,6 +1379,581 @@
       }
     }
   }
+
+  // ----------------------------------------
+  // Magic Tab Layout
+  // ----------------------------------------
+  .magic-tab {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  // Magic Header (Mana & Focus)
+  .magic-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: $spacing-4;
+    padding-bottom: $spacing-3;
+    margin-bottom: $spacing-2;
+    border-bottom: 2px solid $color-border;
+  }
+
+  // Mana Display - matches inventory item-slots format
+  .mana-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing-2;
+    margin-right: auto;
+
+    > label {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $color-text-secondary;
+    }
+
+    .mana-values {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+      font-family: $font-family-header;
+      font-size: $font-size-lg;
+
+      input {
+        width: 40px;
+        padding: 2px 4px;
+        font-family: $font-family-header;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        color: $color-text-primary;
+        background-color: $color-parchment-light;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+
+        &:focus {
+          outline: none;
+          border-color: $color-accent-primary;
+        }
+      }
+
+      .separator {
+        color: $color-text-muted;
+      }
+
+      .max {
+        color: $color-text-secondary;
+      }
+    }
+
+    .casting-max {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      margin-left: $spacing-3;
+      padding-left: $spacing-3;
+      border-left: 1px solid $color-border-light;
+      font-size: $font-size-sm;
+
+      .label {
+        color: $color-text-muted;
+      }
+
+      .value {
+        font-weight: $font-weight-bold;
+        color: $color-info;
+      }
+    }
+  }
+
+  // Focus Display
+  .focus-display {
+    flex: 1;
+    min-width: 200px;
+    padding: $spacing-3;
+    background-color: rgba($color-warning, 0.1);
+    border: 1px solid rgba($color-warning, 0.3);
+    border-radius: $radius-md;
+
+    h3 {
+      margin: 0 0 $spacing-2 0;
+      font-family: $font-family-header;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: $color-warning;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .focus-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-1;
+    }
+
+    .focus-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-2;
+      background-color: $color-parchment-light;
+      border-radius: $radius-sm;
+
+      .focus-spell {
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+      }
+
+      .focus-target {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+      }
+
+      .focus-cost {
+        font-size: $font-size-xs;
+        padding: $spacing-1 $spacing-2;
+        background-color: rgba($color-info, 0.1);
+        border-radius: $radius-sm;
+        color: $color-info;
+        margin-left: auto;
+      }
+    }
+  }
+
+  // Spells Section
+  .spells-section {
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-2;
+
+      .section-header {
+        margin: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .item-create {
+        @include flex-center;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        background-color: $color-parchment;
+        border: 1px solid $color-border;
+        border-radius: $radius-md;
+        color: $color-text-primary;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: $color-success;
+          border-color: $color-success;
+          color: white;
+        }
+
+        i {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  // Spell List
+  .spell-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+  }
+
+  .spell-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: $spacing-3;
+    align-items: center;
+    padding: $spacing-3;
+    background-color: $color-parchment-light;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    transition: all $transition-fast;
+
+    &:hover {
+      background-color: $color-parchment;
+      border-color: $color-border;
+    }
+
+    &.empty {
+      display: flex;
+      justify-content: center;
+      padding: $spacing-4;
+      font-style: italic;
+      color: $color-text-muted;
+    }
+
+    .spell-img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border: 1px solid $color-border;
+      border-radius: $radius-md;
+      background-color: $color-parchment;
+    }
+
+    .spell-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .spell-name {
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-accent-primary;
+          text-decoration: underline;
+        }
+      }
+
+      .spell-type {
+        font-size: $font-size-xs;
+        color: $color-text-secondary;
+        text-transform: capitalize;
+      }
+    }
+
+    .spell-details {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+
+      .spell-damage {
+        display: flex;
+        align-items: center;
+        gap: $spacing-1;
+        padding: $spacing-1 $spacing-2;
+        background-color: rgba($color-danger, 0.1);
+        border-radius: $radius-sm;
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: $color-danger;
+
+        i {
+          font-size: $font-size-xs;
+        }
+      }
+
+      .spell-effect {
+        display: flex;
+        align-items: center;
+        gap: $spacing-1;
+        padding: $spacing-1 $spacing-2;
+        background-color: rgba($color-info, 0.1);
+        border-radius: $radius-sm;
+        font-size: $font-size-sm;
+        color: $color-info;
+        cursor: help;
+
+        i {
+          font-size: $font-size-xs;
+        }
+      }
+    }
+
+    .spell-actions {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+
+      .spell-cast {
+        display: flex;
+        align-items: center;
+        gap: $spacing-1;
+        padding: $spacing-2 $spacing-3;
+        background-color: $color-info;
+        border: none;
+        border-radius: $radius-md;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: white;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: darken($color-info, 10%);
+        }
+
+        i {
+          font-size: $font-size-sm;
+        }
+      }
+
+      .item-delete {
+        @include flex-center;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        background-color: transparent;
+        border: 1px solid $color-border-light;
+        border-radius: $radius-sm;
+        color: $color-text-muted;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: rgba($color-danger, 0.1);
+          border-color: $color-danger;
+          color: $color-danger;
+        }
+
+        i {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  // Casting Reference
+  .casting-reference {
+    padding: $spacing-3;
+    background-color: $color-parchment-light;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+
+    > h3 {
+      margin: 0 0 $spacing-3 0;
+      font-family: $font-family-header;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: $color-text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-bottom: $spacing-2;
+      border-bottom: 1px solid $color-border-light;
+    }
+
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-4;
+    }
+
+    .reference-section {
+      h4 {
+        margin: 0 0 $spacing-2 0;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-1;
+
+        li {
+          font-size: $font-size-sm;
+          color: $color-text-secondary;
+          line-height: $line-height-normal;
+
+          strong {
+            color: $color-text-primary;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive magic layout
+  @container sheet-content (max-width: 500px) {
+    .magic-header {
+      flex-direction: column;
+    }
+
+    .spell-item {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+
+      .spell-img {
+        grid-row: span 2;
+      }
+
+      .spell-details {
+        grid-column: 2;
+        justify-content: flex-start;
+      }
+
+      .spell-actions {
+        grid-column: 1 / -1;
+        justify-content: flex-end;
+      }
+    }
+
+    .casting-reference .reference-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ----------------------------------------
+  // Biography Tab Layout
+  // ----------------------------------------
+  .biography-tab {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  .biography-section {
+    // Hide languages section - not yet implemented
+    &.languages {
+      display: none;
+    }
+  }
+
+  // Character Details (Size, Being Type)
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-3;
+
+    .detail-field {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-1;
+
+      label {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $color-text-secondary;
+      }
+
+      select {
+        @include input-base;
+        padding: $spacing-2;
+        font-size: $font-size-base;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          border-color: $color-accent-primary;
+        }
+      }
+    }
+  }
+
+  // Senses Section
+  .senses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-3;
+
+    .sense-field {
+      label {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        color: $color-text-primary;
+        cursor: pointer;
+        padding: $spacing-2;
+        background-color: $color-parchment-light;
+        border: 1px solid $color-border-light;
+        border-radius: $radius-sm;
+        transition: all $transition-fast;
+
+        &:hover {
+          background-color: $color-parchment;
+          border-color: $color-border;
+        }
+
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+          accent-color: $color-accent-primary;
+
+          &:checked + span,
+          &:checked ~ span {
+            color: $color-accent-primary;
+            font-weight: $font-weight-semibold;
+          }
+        }
+      }
+
+      // Style when checkbox is checked
+      &:has(input:checked) label {
+        background-color: rgba($color-success, 0.1);
+        border-color: rgba($color-success, 0.3);
+      }
+    }
+  }
+
+  // Biography & Notes Text Areas
+  .biography-text,
+  .notes {
+    .editor-container {
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border;
+      border-radius: $radius-md;
+      overflow: hidden;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: $spacing-3;
+      font-family: $font-family-body;
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+      color: $color-text-primary;
+      background-color: transparent;
+      border: none;
+      resize: vertical;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-text-muted;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Biography gets more height
+  .biography-text textarea {
+    min-height: 200px;
+  }
+
+  // Responsive biography layout
+  @container sheet-content (max-width: 500px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .senses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 // ==========================================
