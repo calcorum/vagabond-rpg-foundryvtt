@@ -1,0 +1,140 @@
+{{!-- Perk Item Sheet Body --}}
+<div class="item-content perk-content">
+  {{!-- Prerequisites Section --}}
+  <fieldset class="prerequisites-section">
+    <legend>{{localize "VAGABOND.Prerequisites"}}</legend>
+
+    {{!-- Stat Requirements --}}
+    <div class="prereq-stats">
+      <label class="prereq-label">{{localize "VAGABOND.StatRequirements"}}</label>
+      <div class="stat-prereq-grid">
+        <div class="stat-prereq">
+          <label>MIT</label>
+          <input type="number" name="system.prerequisites.stats.might" value="{{system.prerequisites.stats.might}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-prereq">
+          <label>DEX</label>
+          <input type="number" name="system.prerequisites.stats.dexterity" value="{{system.prerequisites.stats.dexterity}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-prereq">
+          <label>AWR</label>
+          <input type="number" name="system.prerequisites.stats.awareness" value="{{system.prerequisites.stats.awareness}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-prereq">
+          <label>RSN</label>
+          <input type="number" name="system.prerequisites.stats.reason" value="{{system.prerequisites.stats.reason}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-prereq">
+          <label>PRS</label>
+          <input type="number" name="system.prerequisites.stats.presence" value="{{system.prerequisites.stats.presence}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-prereq">
+          <label>LUK</label>
+          <input type="number" name="system.prerequisites.stats.luck" value="{{system.prerequisites.stats.luck}}" min="0" max="7" placeholder="-" {{#unless editable}}disabled{{/unless}} />
+        </div>
+      </div>
+    </div>
+
+    {{!-- Training Requirements --}}
+    <div class="prereq-training">
+      <label>{{localize "VAGABOND.TrainingRequirements"}}</label>
+      <input type="text" name="system.prerequisites.trainedSkills" value="{{join system.prerequisites.trainedSkills ", "}}" placeholder="e.g. melee, arcana" {{#unless editable}}disabled{{/unless}} />
+      <span class="hint">{{localize "VAGABOND.CommaSeparated"}}</span>
+    </div>
+
+    {{!-- Spell Requirements --}}
+    <div class="prereq-spells">
+      <label>{{localize "VAGABOND.SpellRequirements"}}</label>
+      <input type="text" name="system.prerequisites.spells" value="{{join system.prerequisites.spells ", "}}" placeholder="e.g. Light, Charm" {{#unless editable}}disabled{{/unless}} />
+      <span class="hint">{{localize "VAGABOND.CommaSeparated"}}</span>
+    </div>
+
+    {{!-- Perk Requirements --}}
+    <div class="prereq-perks">
+      <label>{{localize "VAGABOND.PerkRequirements"}}</label>
+      <input type="text" name="system.prerequisites.perks" value="{{join system.prerequisites.perks ", "}}" placeholder="e.g. Tough, Familiar" {{#unless editable}}disabled{{/unless}} />
+      <span class="hint">{{localize "VAGABOND.CommaSeparated"}}</span>
+    </div>
+
+    {{!-- Custom Requirements --}}
+    <div class="prereq-custom">
+      <label>{{localize "VAGABOND.CustomRequirements"}}</label>
+      <input type="text" name="system.prerequisites.custom" value="{{system.prerequisites.custom}}" placeholder="e.g. Maximum Mana 7+" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </fieldset>
+
+  {{!-- Usage & Activation --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Passive"}}</label>
+      <input type="checkbox" name="system.passive" {{#if system.passive}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.IsRitual"}}</label>
+      <input type="checkbox" name="system.isRitual" {{#if system.isRitual}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    {{#if system.isRitual}}
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.RitualDuration"}}</label>
+      <input type="number" name="system.ritualDuration" value="{{system.ritualDuration}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      <span class="units">min</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Uses (if not passive) --}}
+  {{#unless system.passive}}
+  <fieldset class="uses-section">
+    <legend>{{localize "VAGABOND.Uses"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.UsesCurrent"}}</label>
+        <input type="number" name="system.uses.value" value="{{system.uses.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.UsesMax"}}</label>
+        <input type="number" name="system.uses.max" value="{{system.uses.max}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.RecoveryPer"}}</label>
+        <select name="system.uses.per" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.uses.per}}selected{{/unless}}>-</option>
+          <option value="short" {{#if (eq system.uses.per "short")}}selected{{/if}}>{{localize "VAGABOND.ShortRest"}}</option>
+          <option value="long" {{#if (eq system.uses.per "long")}}selected{{/if}}>{{localize "VAGABOND.LongRest"}}</option>
+          <option value="day" {{#if (eq system.uses.per "day")}}selected{{/if}}>{{localize "VAGABOND.PerDay"}}</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+  {{/unless}}
+
+  {{!-- Luck Integration --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.LuckCost"}}</label>
+      <input type="number" name="system.luckCost" value="{{system.luckCost}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.GrantsLuck"}}</label>
+      <input type="number" name="system.grantsLuck" value="{{system.grantsLuck}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Ritual Components --}}
+  {{#if system.isRitual}}
+  <div class="ritual-components">
+    <label>{{localize "VAGABOND.RitualComponents"}}</label>
+    <input type="text" name="system.ritualComponents" value="{{system.ritualComponents}}" placeholder="e.g. a corpse, herbs" {{#unless editable}}disabled{{/unless}} />
+  </div>
+  {{/if}}
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

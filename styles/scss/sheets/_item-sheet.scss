@@ -1,101 +1,656 @@
 // Vagabond RPG - Item Sheet Styles
 // =================================
 
-// Placeholder - will be expanded in Phase 4
 .vagabond.sheet.item {
-  min-width: 400px;
-  min-height: 300px;
+  min-width: 500px;
+  min-height: 400px;
 
-  .sheet-header {
+  // Header styling
+  .sheet-header.item-header {
     @include flex-between;
     padding: $spacing-4;
     background-color: $color-parchment-dark;
     border-bottom: 2px solid $color-border;
+    gap: $spacing-4;
 
     .item-img {
-      width: 60px;
-      height: 60px;
+      width: 64px;
+      height: 64px;
       object-fit: cover;
       border: 2px solid $color-border;
       border-radius: $radius-md;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $color-accent-primary;
+      }
     }
 
     .header-fields {
       flex: 1;
-      margin-left: $spacing-4;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+
+      .item-name {
+        margin: 0;
+
+        input {
+          width: 100%;
+          font-size: $font-size-lg;
+          font-weight: bold;
+          border: none;
+          background: transparent;
+          border-bottom: 1px solid transparent;
+
+          &:focus {
+            border-bottom-color: $color-accent-primary;
+          }
+        }
+      }
+
+      .item-type {
+        .type-badge {
+          display: inline-block;
+          padding: $spacing-1 $spacing-3;
+          font-size: $font-size-sm;
+          font-weight: 500;
+          text-transform: capitalize;
+          background-color: $color-parchment;
+          border: 1px solid $color-border;
+          border-radius: $radius-full;
+
+          &.weapon {
+            background-color: mix($color-danger, $color-parchment, 15%);
+          }
+          &.armor {
+            background-color: mix($color-info, $color-parchment, 15%);
+          }
+          &.spell {
+            background-color: mix($color-reason, $color-parchment, 15%);
+          }
+          &.perk {
+            background-color: mix($color-success, $color-parchment, 15%);
+          }
+          &.class {
+            background-color: mix($color-warning, $color-parchment, 15%);
+          }
+        }
+      }
     }
   }
 
+  // Sheet body
   .sheet-body {
     padding: $spacing-4;
+    overflow-y: auto;
+    max-height: calc(100% - 80px);
   }
 
-  // Item description
-  .item-description {
-    .editor {
-      min-height: 150px;
-    }
-  }
-}
-
-// Spell item specific
-.vagabond.sheet.item.spell {
-  .spell-details {
-    @include grid(2);
-    margin-bottom: $spacing-4;
+  // Item content container
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
   }
 
-  .delivery-options {
-    margin-bottom: $spacing-4;
-
-    .option-grid {
-      @include grid(3, $spacing-2);
-    }
-  }
-}
-
-// Perk item specific
-.vagabond.sheet.item.perk {
-  .prerequisites {
-    @include panel;
-    padding: $spacing-3;
-    margin-bottom: $spacing-4;
-
-    .prereq-list {
-      @include flex-column;
-      gap: $spacing-2;
-    }
-  }
-}
-
-// Weapon item specific
-.vagabond.sheet.item.weapon {
-  .weapon-properties {
+  // Stats row
+  .item-stats-row {
     display: flex;
     flex-wrap: wrap;
-    gap: $spacing-2;
-    margin-bottom: $spacing-4;
+    gap: $spacing-4;
+    align-items: flex-end;
 
-    .property-tag {
-      padding: $spacing-1 $spacing-2;
+    .stat-group {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-1;
+      min-width: 80px;
+
+      &.full-width {
+        flex: 1 1 100%;
+      }
+
+      &.wide {
+        min-width: 140px;
+
+        select {
+          min-width: 130px;
+        }
+      }
+
+      label {
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: $color-text-secondary;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      select,
+      textarea {
+        padding: $spacing-2;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+        background-color: $color-parchment-light;
+
+        &:focus {
+          border-color: $color-accent-primary;
+          outline: none;
+        }
+
+        &:disabled {
+          background-color: $color-parchment;
+          cursor: not-allowed;
+        }
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      input[type="number"] {
+        width: 70px;
+      }
+
+      .range-input {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2;
+
+        input {
+          width: 60px;
+        }
+      }
+
+      .units {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+      }
+
+      textarea {
+        min-height: 60px;
+        resize: vertical;
+      }
+    }
+  }
+
+  // Fieldset styling
+  fieldset {
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $spacing-3;
+    margin: 0;
+    background-color: rgba($color-parchment-dark, 0.3);
+
+    legend {
+      padding: 0 $spacing-2;
+      font-weight: 600;
       font-size: $font-size-sm;
-      background-color: $color-parchment-dark;
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+
+      button {
+        @include button-icon;
+        padding: $spacing-1;
+        font-size: $font-size-xs;
+      }
+    }
+
+    &.collapsed {
+      padding: $spacing-2;
+      background-color: transparent;
+    }
+  }
+
+  // Properties grid (checkboxes)
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: $spacing-2;
+
+    .property-checkbox {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      cursor: pointer;
+      font-size: $font-size-sm;
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  // Relic section
+  .relic-section {
+    .relic-toggle {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      cursor: pointer;
+    }
+
+    .relic-fields {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-3;
+      margin-top: $spacing-3;
+    }
+  }
+
+  // Description editor
+  .item-description {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+
+    > label {
+      font-weight: 600;
+    }
+
+    .editor-container {
       border: 1px solid $color-border;
-      border-radius: $radius-full;
+      border-radius: $radius-sm;
+      overflow: hidden;
+
+      .editor {
+        min-height: 120px;
+        padding: $spacing-2;
+        background-color: $color-parchment-light;
+      }
+    }
+  }
+
+  // Traits list (ancestry)
+  .traits-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3;
+
+    .trait-entry {
+      padding: $spacing-3;
+      border: 1px solid $color-border;
+      border-radius: $radius-sm;
+      background-color: $color-parchment-light;
+
+      .trait-header {
+        display: flex;
+        gap: $spacing-2;
+        margin-bottom: $spacing-2;
+
+        input {
+          flex: 1;
+          font-weight: 500;
+        }
+
+        button {
+          @include button-icon;
+          color: $color-danger;
+        }
+      }
+
+      .trait-description textarea {
+        width: 100%;
+        min-height: 60px;
+      }
+    }
+
+    .no-traits {
+      color: $color-text-secondary;
+      font-style: italic;
+      text-align: center;
+      padding: $spacing-4;
+    }
+  }
+
+  // Prerequisite sections (perk)
+  .prerequisites-section {
+    .prereq-stats {
+      margin-bottom: $spacing-3;
+    }
+
+    .stat-prereq-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: $spacing-2;
+      margin-top: $spacing-2;
+
+      .stat-prereq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-1;
+
+        label {
+          font-size: $font-size-xs;
+          font-weight: 600;
+          color: $color-text-secondary;
+        }
+
+        input {
+          width: 40px;
+          text-align: center;
+        }
+      }
+    }
+
+    .prereq-label {
+      font-weight: 500;
+      font-size: $font-size-sm;
+    }
+
+    .prereq-training,
+    .prereq-spells,
+    .prereq-perks,
+    .prereq-custom {
+      margin-top: $spacing-3;
+
+      label {
+        display: block;
+        margin-bottom: $spacing-1;
+        font-size: $font-size-sm;
+        font-weight: 500;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      .hint {
+        font-size: $font-size-xs;
+        color: $color-text-secondary;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Progression table (class)
+  .progression-section {
+    .progression-table {
+      margin-top: $spacing-3;
+
+      .progression-header {
+        display: grid;
+        grid-template-columns: 50px 60px 80px 80px 1fr 40px;
+        gap: $spacing-2;
+        padding: $spacing-2;
+        background-color: $color-parchment-dark;
+        font-size: $font-size-xs;
+        font-weight: 600;
+        border-radius: $radius-sm $radius-sm 0 0;
+      }
+
+      .progression-row {
+        display: grid;
+        grid-template-columns: 50px 60px 80px 80px 1fr 40px;
+        gap: $spacing-2;
+        padding: $spacing-2;
+        border-bottom: 1px solid $color-border;
+        background-color: $color-parchment-light;
+
+        &:last-child {
+          border-radius: 0 0 $radius-sm $radius-sm;
+        }
+
+        input {
+          width: 100%;
+          padding: $spacing-1;
+          font-size: $font-size-sm;
+        }
+
+        button {
+          @include button-icon;
+          color: $color-danger;
+        }
+      }
+
+      .no-progression {
+        padding: $spacing-4;
+        text-align: center;
+        color: $color-text-secondary;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Features list (class)
+  .features-section {
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-3;
+      margin-top: $spacing-3;
+
+      .feature-entry {
+        padding: $spacing-3;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+        background-color: $color-parchment-light;
+
+        .feature-header {
+          display: flex;
+          gap: $spacing-2;
+          align-items: center;
+          margin-bottom: $spacing-2;
+
+          input[type="text"] {
+            flex: 1;
+            font-weight: 500;
+          }
+
+          input[type="number"] {
+            width: 50px;
+          }
+
+          .passive-toggle {
+            display: flex;
+            align-items: center;
+            gap: $spacing-1;
+            font-size: $font-size-sm;
+            cursor: pointer;
+          }
+
+          button {
+            @include button-icon;
+            color: $color-danger;
+          }
+        }
+
+        .feature-description textarea {
+          width: 100%;
+          min-height: 60px;
+        }
+      }
+
+      .no-features {
+        padding: $spacing-4;
+        text-align: center;
+        color: $color-text-secondary;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Spell effect and crit effect
+  .spell-effect,
+  .spell-crit-effect {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+
+    > label {
+      font-weight: 600;
+    }
+
+    .editor-container {
+      border: 1px solid $color-border;
+      border-radius: $radius-sm;
+
+      .editor {
+        min-height: 80px;
+        padding: $spacing-2;
+        background-color: $color-parchment-light;
+      }
+    }
+  }
+
+  // Uses section
+  .uses-section,
+  .consumable-uses {
+    .item-stats-row {
+      margin-top: $spacing-2;
+    }
+  }
+
+  // Activation section
+  .activation-section {
+    .item-stats-row {
+      margin-top: $spacing-2;
+    }
+  }
+
+  // Effects tab
+  .effects-tab {
+    padding: $spacing-4;
+
+    .effects-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-3;
+    }
+
+    .effects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+        font-size: $font-size-lg;
+        font-weight: 600;
+      }
+
+      .add-effect {
+        @include button-primary;
+        padding: $spacing-1 $spacing-3;
+        font-size: $font-size-sm;
+
+        i {
+          margin-right: $spacing-1;
+        }
+      }
+    }
+
+    .effect-items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+    }
+
+    .effect-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      padding: $spacing-2;
+      background-color: $color-parchment-light;
+      border: 1px solid $color-border;
+      border-radius: $radius-sm;
+
+      &.disabled {
+        opacity: 0.6;
+
+        .effect-name {
+          text-decoration: line-through;
+        }
+
+        // Ensure controls remain clickable when effect is disabled
+        .effect-controls {
+          opacity: 1;
+          pointer-events: auto;
+
+          button {
+            pointer-events: auto;
+          }
+        }
+      }
+
+      .effect-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: $radius-sm;
+        border: 1px solid $color-border;
+      }
+
+      .effect-name {
+        flex: 1;
+        font-weight: 500;
+      }
+
+      .effect-controls {
+        display: flex;
+        gap: $spacing-1;
+
+        .effect-control {
+          @include button-icon;
+
+          &.delete {
+            color: $color-danger;
+
+            &:hover {
+              background-color: rgba($color-danger, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .no-effects {
+      color: $color-text-secondary;
+      font-style: italic;
+      text-align: center;
+      padding: $spacing-4;
+    }
+
+    .effects-hint {
+      font-size: $font-size-sm;
+      color: $color-text-secondary;
+      margin-top: $spacing-2;
+
+      i {
+        margin-right: $spacing-1;
+      }
     }
   }
 }
 
-// Class item specific
-.vagabond.sheet.item.class {
-  .progression-table {
-    width: 100%;
-    margin-bottom: $spacing-4;
+// Type-specific additional styles
+.vagabond.sheet.item.weapon {
+  .weapon-content {
+    .item-properties {
+      margin-top: $spacing-2;
+    }
+  }
+}
 
-    th {
-      position: sticky;
-      top: 0;
-      background-color: $color-parchment-dark;
+.vagabond.sheet.item.class {
+  min-width: 600px;
+  min-height: 600px;
+
+  .class-content {
+    .progression-header {
+      // Adjust columns without delete button column for non-editable
+      &.readonly {
+        grid-template-columns: 50px 60px 80px 80px 1fr;
+      }
     }
   }
 }

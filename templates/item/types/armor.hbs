@@ -1,0 +1,135 @@
+{{!-- Armor Item Sheet Body --}}
+<div class="item-content armor-content">
+  {{!-- Core Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.ArmorValue"}}</label>
+      <input type="number" name="system.armorValue" value="{{system.armorValue}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.ArmorType"}}</label>
+      <select name="system.armorType" {{#unless editable}}disabled{{/unless}}>
+        <option value="none" {{#if (eq system.armorType "none")}}selected{{/if}}>{{localize "VAGABOND.ArmorTypeNone"}}</option>
+        <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>{{localize "VAGABOND.ArmorTypeLight"}}</option>
+        <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>{{localize "VAGABOND.ArmorTypeMedium"}}</option>
+        <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>{{localize "VAGABOND.ArmorTypeHeavy"}}</option>
+        <option value="shield" {{#if (eq system.armorType "shield")}}selected{{/if}}>{{localize "VAGABOND.ArmorTypeShield"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.MagicBonus"}}</label>
+      <input type="number" name="system.magicBonus" value="{{system.magicBonus}}" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Secondary Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Slots"}}</label>
+      <input type="number" name="system.slots" value="{{system.slots}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Value"}}</label>
+      <input type="number" name="system.value" value="{{system.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      <span class="units">c</span>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Equipped"}}</label>
+      <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Penalties --}}
+  <fieldset class="item-penalties">
+    <legend>{{localize "VAGABOND.Penalties"}}</legend>
+    <div class="properties-grid">
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.dodgePenalty" {{#if system.dodgePenalty}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DodgePenalty"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.hindersDodge" {{#if system.hindersDodge}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.HindersDodge"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.preventsRage" {{#if system.preventsRage}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PreventsRage"}}
+      </label>
+    </div>
+  </fieldset>
+
+  {{!-- Relic Section (collapsible) --}}
+  <fieldset class="relic-section {{#unless system.relic.isRelic}}collapsed{{/unless}}">
+    <legend>
+      <label class="relic-toggle">
+        <input type="checkbox" name="system.relic.isRelic" {{#if system.relic.isRelic}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.Relic"}}
+      </label>
+    </legend>
+
+    {{#if system.relic.isRelic}}
+    <div class="relic-fields">
+      <div class="item-stats-row">
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.RelicTier"}}</label>
+          <input type="number" name="system.relic.tier" value="{{system.relic.tier}}" min="1" max="5" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.RequiresAttunement"}}</label>
+          <input type="checkbox" name="system.relic.requiresAttunement" {{#if system.relic.requiresAttunement}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{#if system.relic.requiresAttunement}}
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.Attuned"}}</label>
+          <input type="checkbox" name="system.relic.attuned" {{#if system.relic.attuned}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicAbilityName"}}</label>
+        <input type="text" name="system.relic.abilityName" value="{{system.relic.abilityName}}" {{#unless editable}}disabled{{/unless}} />
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicAbilityDescription"}}</label>
+        <textarea name="system.relic.abilityDescription" {{#unless editable}}disabled{{/unless}}>{{system.relic.abilityDescription}}</textarea>
+      </div>
+
+      <div class="item-stats-row">
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.ActivationCost"}}</label>
+          <input type="text" name="system.relic.activationCost" value="{{system.relic.activationCost}}" placeholder="e.g. 1 Mana" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.UsesPerDay"}}</label>
+          <input type="number" name="system.relic.usesPerDay" value="{{system.relic.usesPerDay}}" min="0" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{#if (gt system.relic.usesPerDay 0)}}
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.UsesRemaining"}}</label>
+          <input type="number" name="system.relic.usesRemaining" value="{{system.relic.usesRemaining}}" min="0" max="{{system.relic.usesPerDay}}" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicLore"}}</label>
+        <textarea name="system.relic.lore" {{#unless editable}}disabled{{/unless}}>{{system.relic.lore}}</textarea>
+      </div>
+    </div>
+    {{/if}}
+  </fieldset>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

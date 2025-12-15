@@ -92,6 +92,38 @@
   }
 }
 
+@mixin button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover:not(:disabled) {
+    color: $color-text-primary;
+    background-color: $color-parchment-dark;
+    border-color: $color-border;
+  }
+
+  &:focus {
+    outline: 2px solid $color-accent-primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
 // Form inputs
 @mixin input-base {
   padding: $spacing-2 $spacing-3;

@@ -3,7 +3,7 @@
  * @module vagabond
  */
 
-/* global Actors */
+/* global Actors, Items */
 
 // Import configuration
 import { VAGABOND } from "./helpers/config.mjs";
@@ -35,7 +35,12 @@ import {
 } from "./applications/_module.mjs";
 
 // Import sheet classes
-import { VagabondActorSheet, VagabondCharacterSheet, VagabondNPCSheet } from "./sheets/_module.mjs";
+import {
+  VagabondActorSheet,
+  VagabondCharacterSheet,
+  VagabondNPCSheet,
+  VagabondItemSheet,
+} from "./sheets/_module.mjs";
 
 // Import test registration (for Quench)
 import { registerQuenchTests } from "./tests/quench-init.mjs";
@@ -64,6 +69,20 @@ async function preloadHandlebarsTemplates() {
     "systems/vagabond/templates/actor/npc-actions.hbs",
     "systems/vagabond/templates/actor/npc-abilities.hbs",
     "systems/vagabond/templates/actor/npc-notes.hbs",
+    // Item sheet parts
+    "systems/vagabond/templates/item/parts/item-header.hbs",
+    "systems/vagabond/templates/item/parts/item-tabs.hbs",
+    "systems/vagabond/templates/item/parts/item-body.hbs",
+    "systems/vagabond/templates/item/parts/item-effects.hbs",
+    // Item type templates
+    "systems/vagabond/templates/item/types/weapon.hbs",
+    "systems/vagabond/templates/item/types/armor.hbs",
+    "systems/vagabond/templates/item/types/equipment.hbs",
+    "systems/vagabond/templates/item/types/ancestry.hbs",
+    "systems/vagabond/templates/item/types/class.hbs",
+    "systems/vagabond/templates/item/types/spell.hbs",
+    "systems/vagabond/templates/item/types/perk.hbs",
+    "systems/vagabond/templates/item/types/feature.hbs",
   ];
 
   return loadTemplates(templatePaths);
@@ -93,6 +112,7 @@ Hooks.once("init", async () => {
       VagabondActorSheet,
       VagabondCharacterSheet,
       VagabondNPCSheet,
+      VagabondItemSheet,
     },
   };
 
@@ -131,12 +151,12 @@ Hooks.once("init", async () => {
     label: "VAGABOND.SheetNPC",
   });
 
-  // Register Item sheet classes (TODO: Phase 4)
-  // Items.unregisterSheet("core", ItemSheet);
-  // Items.registerSheet("vagabond", VagabondItemSheet, {
-  //   makeDefault: true,
-  //   label: "VAGABOND.SheetItem"
-  // });
+  // Register Item sheet classes
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("vagabond", VagabondItemSheet, {
+    makeDefault: true,
+    label: "VAGABOND.SheetItem",
+  });
 
   // Preload Handlebars templates
   await preloadHandlebarsTemplates();

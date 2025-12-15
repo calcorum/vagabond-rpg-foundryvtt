@@ -1,0 +1,83 @@
+{{!-- Feature Item Sheet Body --}}
+<div class="item-content feature-content">
+  {{!-- Core Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.SourceClass"}}</label>
+      <input type="text" name="system.sourceClass" value="{{system.sourceClass}}" placeholder="e.g. Fighter" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Level"}}</label>
+      <input type="number" name="system.level" value="{{system.level}}" min="1" max="10" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Passive"}}</label>
+      <input type="checkbox" name="system.passive" {{#if system.passive}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Activation (for active features) --}}
+  {{#unless system.passive}}
+  <fieldset class="activation-section">
+    <legend>{{localize "VAGABOND.Activation"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.ActivationType"}}</label>
+        <select name="system.activation.type" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.activation.type}}selected{{/unless}}>-</option>
+          <option value="action" {{#if (eq system.activation.type "action")}}selected{{/if}}>{{localize "VAGABOND.Action"}}</option>
+          <option value="bonus" {{#if (eq system.activation.type "bonus")}}selected{{/if}}>{{localize "VAGABOND.BonusAction"}}</option>
+          <option value="reaction" {{#if (eq system.activation.type "reaction")}}selected{{/if}}>{{localize "VAGABOND.Reaction"}}</option>
+          <option value="free" {{#if (eq system.activation.type "free")}}selected{{/if}}>{{localize "VAGABOND.FreeAction"}}</option>
+          <option value="special" {{#if (eq system.activation.type "special")}}selected{{/if}}>{{localize "VAGABOND.Special"}}</option>
+        </select>
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.ActivationCost"}}</label>
+        <input type="text" name="system.activation.cost" value="{{system.activation.cost}}" placeholder="e.g. 1 Mana" {{#unless editable}}disabled{{/unless}} />
+      </div>
+    </div>
+  </fieldset>
+  {{/unless}}
+
+  {{!-- Uses (if limited) --}}
+  <fieldset class="uses-section">
+    <legend>{{localize "VAGABOND.Uses"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.UsesCurrent"}}</label>
+        <input type="number" name="system.uses.value" value="{{system.uses.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.UsesMax"}}</label>
+        <input type="number" name="system.uses.max" value="{{system.uses.max}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.RecoveryPer"}}</label>
+        <select name="system.uses.per" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.uses.per}}selected{{/unless}}>{{localize "VAGABOND.Unlimited"}}</option>
+          <option value="short" {{#if (eq system.uses.per "short")}}selected{{/if}}>{{localize "VAGABOND.ShortRest"}}</option>
+          <option value="long" {{#if (eq system.uses.per "long")}}selected{{/if}}>{{localize "VAGABOND.LongRest"}}</option>
+          <option value="day" {{#if (eq system.uses.per "day")}}selected{{/if}}>{{localize "VAGABOND.PerDay"}}</option>
+          <option value="encounter" {{#if (eq system.uses.per "encounter")}}selected{{/if}}>{{localize "VAGABOND.PerEncounter"}}</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  {{!-- Requirements --}}
+  <div class="requirements-section">
+    <label>{{localize "VAGABOND.Requirements"}}</label>
+    <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g. Chose Path of Rage" {{#unless editable}}disabled{{/unless}} />
+  </div>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

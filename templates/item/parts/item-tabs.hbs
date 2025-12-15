@@ -1,0 +1,9 @@
+{{!-- Item Sheet Tabs --}}
+<nav class="sheet-tabs tabs{{#unless hasTabs}} hidden{{/unless}}" data-group="primary">
+  {{#each tabs}}
+  <a class="item {{cssClass}}" data-tab="{{id}}" data-action="changeTab">
+    {{#if icon}}<i class="{{icon}}"></i>{{/if}}
+    {{localize label}}
+  </a>
+  {{/each}}
+</nav>

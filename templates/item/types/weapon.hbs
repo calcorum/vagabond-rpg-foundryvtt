@@ -1,0 +1,235 @@
+{{!-- Weapon Item Sheet Body --}}
+<div class="item-content weapon-content">
+  {{!-- Core Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Damage"}}</label>
+      <input type="text" name="system.damage" value="{{system.damage}}" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.DamageType"}}</label>
+      <select name="system.damageType" {{#unless editable}}disabled{{/unless}}>
+        <option value="blunt" {{#if (eq system.damageType "blunt")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeBlunt"}}</option>
+        <option value="piercing" {{#if (eq system.damageType "piercing")}}selected{{/if}}>{{localize "VAGABOND.DamageTypePiercing"}}</option>
+        <option value="slashing" {{#if (eq system.damageType "slashing")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeSlashing"}}</option>
+        <option value="fire" {{#if (eq system.damageType "fire")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeFire"}}</option>
+        <option value="cold" {{#if (eq system.damageType "cold")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeCold"}}</option>
+        <option value="shock" {{#if (eq system.damageType "shock")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeShock"}}</option>
+        <option value="acid" {{#if (eq system.damageType "acid")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeAcid"}}</option>
+        <option value="poison" {{#if (eq system.damageType "poison")}}selected{{/if}}>{{localize "VAGABOND.DamageTypePoison"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Grip"}}</label>
+      <select name="system.grip" {{#unless editable}}disabled{{/unless}}>
+        <option value="1h" {{#if (eq system.grip "1h")}}selected{{/if}}>{{localize "VAGABOND.Grip1H"}}</option>
+        <option value="2h" {{#if (eq system.grip "2h")}}selected{{/if}}>{{localize "VAGABOND.Grip2H"}}</option>
+        <option value="versatile" {{#if (eq system.grip "versatile")}}selected{{/if}}>{{localize "VAGABOND.GripVersatile"}}</option>
+        <option value="fist" {{#if (eq system.grip "fist")}}selected{{/if}}>{{localize "VAGABOND.GripFist"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.AttackSkill"}}</label>
+      <select name="system.attackType" {{#unless editable}}disabled{{/unless}}>
+        <option value="melee" {{#if (eq system.attackType "melee")}}selected{{/if}}>{{localize "VAGABOND.SkillMelee"}}</option>
+        <option value="brawl" {{#if (eq system.attackType "brawl")}}selected{{/if}}>{{localize "VAGABOND.SkillBrawl"}}</option>
+        <option value="ranged" {{#if (eq system.attackType "ranged")}}selected{{/if}}>{{localize "VAGABOND.SkillRanged"}}</option>
+        <option value="finesse" {{#if (eq system.attackType "finesse")}}selected{{/if}}>{{localize "VAGABOND.SkillFinesse"}}</option>
+      </select>
+    </div>
+  </div>
+
+  {{!-- Secondary Stats Row --}}
+  <div class="item-stats-row">
+    {{#if (eq system.grip "versatile")}}
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.VersatileDamage"}}</label>
+      <input type="text" name="system.versatileDamage" value="{{system.versatileDamage}}" placeholder="e.g. 1d8" {{#unless editable}}disabled{{/unless}} />
+    </div>
+    {{/if}}
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.BonusDamage"}}</label>
+      <input type="number" name="system.bonusDamage" value="{{system.bonusDamage}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.AttackBonus"}}</label>
+      <input type="number" name="system.attackBonus" value="{{system.attackBonus}}" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.CritThreshold"}}</label>
+      <input type="number" name="system.critThreshold" value="{{system.critThreshold}}" min="1" max="20" placeholder="20" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Range (for ranged/thrown) --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Range"}}</label>
+      <div class="range-input">
+        <input type="number" name="system.range.value" value="{{system.range.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+        <span class="units">{{system.range.units}}</span>
+      </div>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Slots"}}</label>
+      <input type="number" name="system.slots" value="{{system.slots}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Value"}}</label>
+      <input type="number" name="system.value" value="{{system.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      <span class="units">c</span>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Quantity"}}</label>
+      <input type="number" name="system.quantity" value="{{system.quantity}}" min="0" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Properties --}}
+  <fieldset class="item-properties">
+    <legend>{{localize "VAGABOND.WeaponProperties"}}</legend>
+    <div class="properties-grid">
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.finesse" {{#if system.properties.finesse}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyFinesse"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.thrown" {{#if system.properties.thrown}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyThrown"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.cleave" {{#if system.properties.cleave}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyCleave"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.reach" {{#if system.properties.reach}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyReach"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.loading" {{#if system.properties.loading}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyLoading"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.brawl" {{#if system.properties.brawl}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyBrawl"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.crude" {{#if system.properties.crude}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyCrude"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.properties.versatile" {{#if system.properties.versatile}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.PropertyVersatile"}}
+      </label>
+    </div>
+  </fieldset>
+
+  {{!-- Material --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Material"}}</label>
+      <select name="system.material" {{#unless editable}}disabled{{/unless}}>
+        <option value="mundane" {{#if (eq system.material "mundane")}}selected{{/if}}>{{localize "VAGABOND.MaterialMundane"}}</option>
+        <option value="silvered" {{#if (eq system.material "silvered")}}selected{{/if}}>{{localize "VAGABOND.MaterialSilvered"}}</option>
+        <option value="adamantine" {{#if (eq system.material "adamantine")}}selected{{/if}}>{{localize "VAGABOND.MaterialAdamantine"}}</option>
+        <option value="magical" {{#if (eq system.material "magical")}}selected{{/if}}>{{localize "VAGABOND.MaterialMagical"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Equipped"}}</label>
+      <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    {{#if system.equipped}}
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.EquippedHand"}}</label>
+      <select name="system.equippedHand" {{#unless editable}}disabled{{/unless}}>
+        <option value="main" {{#if (eq system.equippedHand "main")}}selected{{/if}}>{{localize "VAGABOND.HandMain"}}</option>
+        <option value="off" {{#if (eq system.equippedHand "off")}}selected{{/if}}>{{localize "VAGABOND.HandOff"}}</option>
+        <option value="both" {{#if (eq system.equippedHand "both")}}selected{{/if}}>{{localize "VAGABOND.HandBoth"}}</option>
+      </select>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Relic Section (collapsible) --}}
+  <fieldset class="relic-section {{#unless system.relic.isRelic}}collapsed{{/unless}}">
+    <legend>
+      <label class="relic-toggle">
+        <input type="checkbox" name="system.relic.isRelic" {{#if system.relic.isRelic}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.Relic"}}
+      </label>
+    </legend>
+
+    {{#if system.relic.isRelic}}
+    <div class="relic-fields">
+      <div class="item-stats-row">
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.RelicTier"}}</label>
+          <input type="number" name="system.relic.tier" value="{{system.relic.tier}}" min="1" max="5" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.RequiresAttunement"}}</label>
+          <input type="checkbox" name="system.relic.requiresAttunement" {{#if system.relic.requiresAttunement}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{#if system.relic.requiresAttunement}}
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.Attuned"}}</label>
+          <input type="checkbox" name="system.relic.attuned" {{#if system.relic.attuned}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicAbilityName"}}</label>
+        <input type="text" name="system.relic.abilityName" value="{{system.relic.abilityName}}" {{#unless editable}}disabled{{/unless}} />
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicAbilityDescription"}}</label>
+        <textarea name="system.relic.abilityDescription" {{#unless editable}}disabled{{/unless}}>{{system.relic.abilityDescription}}</textarea>
+      </div>
+
+      <div class="item-stats-row">
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.ActivationCost"}}</label>
+          <input type="text" name="system.relic.activationCost" value="{{system.relic.activationCost}}" placeholder="e.g. 1 Mana" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.UsesPerDay"}}</label>
+          <input type="number" name="system.relic.usesPerDay" value="{{system.relic.usesPerDay}}" min="0" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{#if (gt system.relic.usesPerDay 0)}}
+        <div class="stat-group">
+          <label>{{localize "VAGABOND.UsesRemaining"}}</label>
+          <input type="number" name="system.relic.usesRemaining" value="{{system.relic.usesRemaining}}" min="0" max="{{system.relic.usesPerDay}}" {{#unless editable}}disabled{{/unless}} />
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="stat-group full-width">
+        <label>{{localize "VAGABOND.RelicLore"}}</label>
+        <textarea name="system.relic.lore" {{#unless editable}}disabled{{/unless}}>{{system.relic.lore}}</textarea>
+      </div>
+    </div>
+    {{/if}}
+  </fieldset>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

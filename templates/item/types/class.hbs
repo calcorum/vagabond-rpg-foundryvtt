@@ -1,0 +1,163 @@
+{{!-- Class Item Sheet Body --}}
+<div class="item-content class-content">
+  {{!-- Core Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.KeyStat"}}</label>
+      <select name="system.keyStat" {{#unless editable}}disabled{{/unless}}>
+        <option value="might" {{#if (eq system.keyStat "might")}}selected{{/if}}>{{localize "VAGABOND.StatMight"}}</option>
+        <option value="dexterity" {{#if (eq system.keyStat "dexterity")}}selected{{/if}}>{{localize "VAGABOND.StatDexterity"}}</option>
+        <option value="awareness" {{#if (eq system.keyStat "awareness")}}selected{{/if}}>{{localize "VAGABOND.StatAwareness"}}</option>
+        <option value="reason" {{#if (eq system.keyStat "reason")}}selected{{/if}}>{{localize "VAGABOND.StatReason"}}</option>
+        <option value="presence" {{#if (eq system.keyStat "presence")}}selected{{/if}}>{{localize "VAGABOND.StatPresence"}}</option>
+        <option value="luck" {{#if (eq system.keyStat "luck")}}selected{{/if}}>{{localize "VAGABOND.StatLuck"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.Zone"}}</label>
+      <select name="system.zone" {{#unless editable}}disabled{{/unless}}>
+        <option value="frontline" {{#if (eq system.zone "frontline")}}selected{{/if}}>{{localize "VAGABOND.ZoneFrontline"}}</option>
+        <option value="midline" {{#if (eq system.zone "midline")}}selected{{/if}}>{{localize "VAGABOND.ZoneMidline"}}</option>
+        <option value="backline" {{#if (eq system.zone "backline")}}selected{{/if}}>{{localize "VAGABOND.ZoneBackline"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.IsCaster"}}</label>
+      <input type="checkbox" name="system.isCaster" {{#if system.isCaster}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Casting Skill (if caster) --}}
+  {{#if system.isCaster}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.ActionStyle"}}</label>
+      <select name="system.actionStyle" {{#unless editable}}disabled{{/unless}}>
+        <option value="" {{#unless system.actionStyle}}selected{{/unless}}>-</option>
+        <option value="arcana" {{#if (eq system.actionStyle "arcana")}}selected{{/if}}>{{localize "VAGABOND.SkillArcana"}}</option>
+        <option value="mysticism" {{#if (eq system.actionStyle "mysticism")}}selected{{/if}}>{{localize "VAGABOND.SkillMysticism"}}</option>
+        <option value="influence" {{#if (eq system.actionStyle "influence")}}selected{{/if}}>{{localize "VAGABOND.SkillInfluence"}}</option>
+        <option value="leadership" {{#if (eq system.actionStyle "leadership")}}selected{{/if}}>{{localize "VAGABOND.SkillLeadership"}}</option>
+        <option value="performance" {{#if (eq system.actionStyle "performance")}}selected{{/if}}>{{localize "VAGABOND.SkillPerformance"}}</option>
+      </select>
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- Trained Skills --}}
+  <div class="trained-skills-section">
+    <label>{{localize "VAGABOND.TrainedSkills"}}</label>
+    <input type="text" name="system.trainedSkills" value="{{join system.trainedSkills ", "}}" placeholder="e.g. melee, brawl, detect" {{#unless editable}}disabled{{/unless}} />
+    <span class="hint">{{localize "VAGABOND.CommaSeparated"}}</span>
+  </div>
+
+  {{!-- Starting Pack --}}
+  <div class="starting-pack-section">
+    <label>{{localize "VAGABOND.StartingPack"}}</label>
+    <div class="editor-container">
+      {{editor system.startingPack target="system.startingPack" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+
+  {{!-- Custom Resource --}}
+  <fieldset class="custom-resource-section">
+    <legend>{{localize "VAGABOND.CustomResource"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.ResourceName"}}</label>
+        <input type="text" name="system.customResource.name" value="{{system.customResource.name}}" placeholder="e.g. Studied Dice" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.ResourceMax"}}</label>
+        <input type="text" name="system.customResource.max" value="{{system.customResource.max}}" placeholder="e.g. @level" {{#unless editable}}disabled{{/unless}} />
+      </div>
+    </div>
+  </fieldset>
+
+  {{!-- Progression Table --}}
+  <fieldset class="progression-section">
+    <legend>
+      {{localize "VAGABOND.Progression"}}
+      {{#if editable}}
+      <button type="button" class="add-progression" data-action="addArrayEntry" data-field="system.progression">
+        <i class="fas fa-plus"></i>
+      </button>
+      {{/if}}
+    </legend>
+
+    <div class="progression-table">
+      <div class="progression-header">
+        <span class="col-level">{{localize "VAGABOND.Level"}}</span>
+        <span class="col-mana">{{localize "VAGABOND.Mana"}}</span>
+        <span class="col-casting">{{localize "VAGABOND.CastingMax"}}</span>
+        <span class="col-spells">{{localize "VAGABOND.SpellsKnown"}}</span>
+        <span class="col-features">{{localize "VAGABOND.Features"}}</span>
+        {{#if editable}}<span class="col-actions"></span>{{/if}}
+      </div>
+
+      {{#each system.progression as |prog index|}}
+      <div class="progression-row" data-index="{{index}}">
+        <input type="number" class="col-level" name="system.progression.{{index}}.level" value="{{prog.level}}" min="1" max="10" {{#unless ../editable}}disabled{{/unless}} />
+        <input type="number" class="col-mana" name="system.progression.{{index}}.mana" value="{{prog.mana}}" min="0" {{#unless ../editable}}disabled{{/unless}} />
+        <input type="number" class="col-casting" name="system.progression.{{index}}.castingMax" value="{{prog.castingMax}}" min="0" {{#unless ../editable}}disabled{{/unless}} />
+        <input type="number" class="col-spells" name="system.progression.{{index}}.spellsKnown" value="{{prog.spellsKnown}}" min="0" {{#unless ../editable}}disabled{{/unless}} />
+        <input type="text" class="col-features" name="system.progression.{{index}}.features" value="{{join prog.features ", "}}" {{#unless ../editable}}disabled{{/unless}} />
+        {{#if ../editable}}
+        <button type="button" class="col-actions delete-progression" data-action="deleteArrayEntry" data-field="system.progression" data-index="{{index}}">
+          <i class="fas fa-trash"></i>
+        </button>
+        {{/if}}
+      </div>
+      {{else}}
+      <p class="no-progression">{{localize "VAGABOND.NoProgression"}}</p>
+      {{/each}}
+    </div>
+  </fieldset>
+
+  {{!-- Features --}}
+  <fieldset class="features-section">
+    <legend>
+      {{localize "VAGABOND.ClassFeatures"}}
+      {{#if editable}}
+      <button type="button" class="add-feature" data-action="addArrayEntry" data-field="system.features">
+        <i class="fas fa-plus"></i>
+      </button>
+      {{/if}}
+    </legend>
+
+    <div class="features-list">
+      {{#each system.features as |feature index|}}
+      <div class="feature-entry" data-index="{{index}}">
+        <div class="feature-header">
+          <input type="text" name="system.features.{{index}}.name" value="{{feature.name}}" placeholder="{{localize 'VAGABOND.FeatureName'}}" {{#unless ../editable}}disabled{{/unless}} />
+          <input type="number" name="system.features.{{index}}.level" value="{{feature.level}}" min="1" max="10" title="{{localize 'VAGABOND.Level'}}" {{#unless ../editable}}disabled{{/unless}} />
+          <label class="passive-toggle">
+            <input type="checkbox" name="system.features.{{index}}.passive" {{#if feature.passive}}checked{{/if}} {{#unless ../editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Passive"}}
+          </label>
+          {{#if ../editable}}
+          <button type="button" class="delete-feature" data-action="deleteArrayEntry" data-field="system.features" data-index="{{index}}">
+            <i class="fas fa-trash"></i>
+          </button>
+          {{/if}}
+        </div>
+        <div class="feature-description">
+          <textarea name="system.features.{{index}}.description" placeholder="{{localize 'VAGABOND.FeatureDescription'}}" {{#unless ../editable}}disabled{{/unless}}>{{feature.description}}</textarea>
+        </div>
+      </div>
+      {{else}}
+      <p class="no-features">{{localize "VAGABOND.NoFeatures"}}</p>
+      {{/each}}
+    </div>
+  </fieldset>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+{{!-- Item Sheet Body - Routes to type-specific template --}}
+<section class="sheet-body tab-content details-tab{{#unless (eq activeTab "details")}} hidden{{/unless}}">
+  {{!-- Type-specific content is injected by subclass sheets --}}
+  {{> (concat "systems/vagabond/templates/item/types/" itemType ".hbs") }}
+</section>

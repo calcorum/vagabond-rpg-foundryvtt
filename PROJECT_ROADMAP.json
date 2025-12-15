@@ -545,7 +545,7 @@
           "id": "4.1",
           "name": "Create base VagabondItemSheet class",
           "description": "Extended ItemSheet with common methods, type-specific tab handling",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.3"]
@@ -554,7 +554,7 @@
           "id": "4.2",
           "name": "Implement Ancestry item sheet",
           "description": "Being type dropdown, size dropdown, traits editor (add/remove trait entries)",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.7"]
@@ -563,7 +563,7 @@
           "id": "4.3",
           "name": "Implement Class item sheet",
           "description": "Key stat, training grants, progression table editor, feature definitions",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.8"]
@@ -572,7 +572,7 @@
           "id": "4.4",
           "name": "Implement Spell item sheet",
           "description": "Damage type, effect text, crit effect, delivery options checkboxes, cost formula display",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.9"]
@@ -581,7 +581,7 @@
           "id": "4.5",
           "name": "Implement Perk item sheet",
           "description": "Prerequisites editor (stat/training/spell requirements), description, effects",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.10"]
@@ -590,7 +590,7 @@
           "id": "4.6",
           "name": "Implement Weapon item sheet",
           "description": "Damage dice selector, grip type, properties checkboxes, attack skill dropdown, value/slots",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.11"]
@@ -599,7 +599,7 @@
           "id": "4.7",
           "name": "Implement Armor item sheet",
           "description": "Armor value, type dropdown, dodge penalty checkbox, value/slots",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.12"]
@@ -608,7 +608,7 @@
           "id": "4.8",
           "name": "Implement Equipment item sheet",
           "description": "Generic item fields: description, quantity, slots, value, consumable flag",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.13"]
@@ -617,7 +617,7 @@
           "id": "4.9",
           "name": "Implement Feature item sheet",
           "description": "Source class, level requirement, description, passive/active toggle, effects editor",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.14"]

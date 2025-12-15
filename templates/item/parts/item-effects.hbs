@@ -1,0 +1,44 @@
+{{!-- Item Effects Tab --}}
+<section class="tab-content effects-tab{{#unless (eq activeTab "effects")}} hidden{{/unless}}">
+  <div class="effects-list">
+    <header class="effects-header">
+      <h3>{{localize "VAGABOND.ActiveEffects"}}</h3>
+      {{#if editable}}
+      <button type="button" class="add-effect" data-action="createEffect">
+        <i class="fas fa-plus"></i> {{localize "VAGABOND.AddEffect"}}
+      </button>
+      {{/if}}
+    </header>
+
+    {{#if effects.length}}
+    <ul class="effect-items">
+      {{#each effects}}
+      <li class="effect-item{{#if disabled}} disabled{{/if}}" data-effect-id="{{id}}">
+        <img class="effect-icon" src="{{icon}}" alt="{{name}}" />
+        <span class="effect-name">{{name}}</span>
+        <div class="effect-controls">
+          {{#if ../editable}}
+          <button type="button" class="effect-control" data-action="toggleEffect" title="{{localize 'VAGABOND.ToggleEffect'}}">
+            <i class="fas {{#if disabled}}fa-toggle-off{{else}}fa-toggle-on{{/if}}"></i>
+          </button>
+          <button type="button" class="effect-control" data-action="editEffect" title="{{localize 'VAGABOND.EditEffect'}}">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button type="button" class="effect-control delete" data-action="deleteEffect" title="{{localize 'VAGABOND.DeleteEffect'}}">
+            <i class="fas fa-trash"></i>
+          </button>
+          {{/if}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p class="no-effects">{{localize "VAGABOND.NoEffects"}}</p>
+    {{/if}}
+
+    <p class="effects-hint">
+      <i class="fas fa-info-circle"></i>
+      {{localize "VAGABOND.EffectsHint"}}
+    </p>
+  </div>
+</section>

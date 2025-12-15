@@ -1,0 +1,71 @@
+{{!-- Ancestry Item Sheet Body --}}
+<div class="item-content ancestry-content">
+  {{!-- Core Stats Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group wide">
+      <label>{{localize "VAGABOND.BeingType"}}</label>
+      <select name="system.beingType" {{#unless editable}}disabled{{/unless}}>
+        <option value="humanlike" {{#if (eq system.beingType "humanlike")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeHumanlike"}}</option>
+        <option value="fae" {{#if (eq system.beingType "fae")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeFae"}}</option>
+        <option value="cryptid" {{#if (eq system.beingType "cryptid")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeCryptid"}}</option>
+        <option value="beast" {{#if (eq system.beingType "beast")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeBeast"}}</option>
+        <option value="undead" {{#if (eq system.beingType "undead")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeUndead"}}</option>
+        <option value="artificial" {{#if (eq system.beingType "artificial")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeArtificial"}}</option>
+        <option value="primordial" {{#if (eq system.beingType "primordial")}}selected{{/if}}>{{localize "VAGABOND.BeingTypePrimordial"}}</option>
+        <option value="hellspawn" {{#if (eq system.beingType "hellspawn")}}selected{{/if}}>{{localize "VAGABOND.BeingTypeHellspawn"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group wide">
+      <label>{{localize "VAGABOND.Size"}}</label>
+      <select name="system.size" {{#unless editable}}disabled{{/unless}}>
+        <option value="tiny" {{#if (eq system.size "tiny")}}selected{{/if}}>{{localize "VAGABOND.SizeTiny"}}</option>
+        <option value="small" {{#if (eq system.size "small")}}selected{{/if}}>{{localize "VAGABOND.SizeSmall"}}</option>
+        <option value="medium" {{#if (eq system.size "medium")}}selected{{/if}}>{{localize "VAGABOND.SizeMedium"}}</option>
+        <option value="large" {{#if (eq system.size "large")}}selected{{/if}}>{{localize "VAGABOND.SizeLarge"}}</option>
+        <option value="huge" {{#if (eq system.size "huge")}}selected{{/if}}>{{localize "VAGABOND.SizeHuge"}}</option>
+        <option value="gargantuan" {{#if (eq system.size "gargantuan")}}selected{{/if}}>{{localize "VAGABOND.SizeGargantuan"}}</option>
+      </select>
+    </div>
+  </div>
+
+  {{!-- Traits Section --}}
+  <fieldset class="traits-section">
+    <legend>
+      {{localize "VAGABOND.Traits"}}
+      {{#if editable}}
+      <button type="button" class="add-trait" data-action="addArrayEntry" data-field="system.traits">
+        <i class="fas fa-plus"></i>
+      </button>
+      {{/if}}
+    </legend>
+
+    <div class="traits-list">
+      {{#each system.traits as |trait index|}}
+      <div class="trait-entry" data-index="{{index}}">
+        <div class="trait-header">
+          <input type="text" name="system.traits.{{index}}.name" value="{{trait.name}}" placeholder="{{localize 'VAGABOND.TraitName'}}" {{#unless ../editable}}disabled{{/unless}} />
+          {{#if ../editable}}
+          <button type="button" class="delete-trait" data-action="deleteArrayEntry" data-field="system.traits" data-index="{{index}}">
+            <i class="fas fa-trash"></i>
+          </button>
+          {{/if}}
+        </div>
+        <div class="trait-description">
+          <textarea name="system.traits.{{index}}.description" placeholder="{{localize 'VAGABOND.TraitDescription'}}" {{#unless ../editable}}disabled{{/unless}}>{{trait.description}}</textarea>
+        </div>
+      </div>
+      {{else}}
+      <p class="no-traits">{{localize "VAGABOND.NoTraits"}}</p>
+      {{/each}}
+    </div>
+  </fieldset>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>

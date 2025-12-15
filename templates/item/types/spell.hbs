@@ -1,0 +1,134 @@
+{{!-- Spell Item Sheet Body --}}
+<div class="item-content spell-content">
+  {{!-- Damage Row --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.DamageType"}}</label>
+      <select name="system.damageType" {{#unless editable}}disabled{{/unless}}>
+        <option value="" {{#unless system.damageType}}selected{{/unless}}>{{localize "VAGABOND.DamageTypeNone"}}</option>
+        <option value="fire" {{#if (eq system.damageType "fire")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeFire"}}</option>
+        <option value="cold" {{#if (eq system.damageType "cold")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeCold"}}</option>
+        <option value="shock" {{#if (eq system.damageType "shock")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeShock"}}</option>
+        <option value="acid" {{#if (eq system.damageType "acid")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeAcid"}}</option>
+        <option value="poison" {{#if (eq system.damageType "poison")}}selected{{/if}}>{{localize "VAGABOND.DamageTypePoison"}}</option>
+        <option value="blunt" {{#if (eq system.damageType "blunt")}}selected{{/if}}>{{localize "VAGABOND.DamageTypeBlunt"}}</option>
+      </select>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.DamageBase"}}</label>
+      <input type="text" name="system.damageBase" value="{{system.damageBase}}" placeholder="d6" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.MaxDice"}}</label>
+      <input type="number" name="system.maxDice" value="{{system.maxDice}}" min="0" placeholder="0 = no limit" {{#unless editable}}disabled{{/unless}} />
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.CastingSkill"}}</label>
+      <select name="system.castingSkill" {{#unless editable}}disabled{{/unless}}>
+        <option value="" {{#unless system.castingSkill}}selected{{/unless}}>{{localize "VAGABOND.UseClassDefault"}}</option>
+        <option value="arcana" {{#if (eq system.castingSkill "arcana")}}selected{{/if}}>{{localize "VAGABOND.SkillArcana"}}</option>
+        <option value="mysticism" {{#if (eq system.castingSkill "mysticism")}}selected{{/if}}>{{localize "VAGABOND.SkillMysticism"}}</option>
+        <option value="influence" {{#if (eq system.castingSkill "influence")}}selected{{/if}}>{{localize "VAGABOND.SkillInfluence"}}</option>
+        <option value="leadership" {{#if (eq system.castingSkill "leadership")}}selected{{/if}}>{{localize "VAGABOND.SkillLeadership"}}</option>
+        <option value="performance" {{#if (eq system.castingSkill "performance")}}selected{{/if}}>{{localize "VAGABOND.SkillPerformance"}}</option>
+      </select>
+    </div>
+  </div>
+
+  {{!-- Delivery Types --}}
+  <fieldset class="delivery-types">
+    <legend>{{localize "VAGABOND.DeliveryTypes"}}</legend>
+    <div class="properties-grid">
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.touch" {{#if system.deliveryTypes.touch}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryTouch"}} (0)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.remote" {{#if system.deliveryTypes.remote}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryRemote"}} (0)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.imbue" {{#if system.deliveryTypes.imbue}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryImbue"}} (0)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.cube" {{#if system.deliveryTypes.cube}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryCube"}} (1)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.aura" {{#if system.deliveryTypes.aura}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryAura"}} (2)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.cone" {{#if system.deliveryTypes.cone}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryCone"}} (2)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.glyph" {{#if system.deliveryTypes.glyph}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryGlyph"}} (2)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.line" {{#if system.deliveryTypes.line}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliveryLine"}} (2)
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.deliveryTypes.sphere" {{#if system.deliveryTypes.sphere}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DeliverySphere"}} (2)
+      </label>
+    </div>
+  </fieldset>
+
+  {{!-- Duration Types --}}
+  <fieldset class="duration-types">
+    <legend>{{localize "VAGABOND.DurationTypes"}}</legend>
+    <div class="properties-grid">
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.durationTypes.instant" {{#if system.durationTypes.instant}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DurationInstant"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.durationTypes.focus" {{#if system.durationTypes.focus}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DurationFocus"}}
+      </label>
+      <label class="property-checkbox">
+        <input type="checkbox" name="system.durationTypes.continual" {{#if system.durationTypes.continual}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+        {{localize "VAGABOND.DurationContinual"}}
+      </label>
+    </div>
+  </fieldset>
+
+  {{!-- Focus Tracking --}}
+  <div class="item-stats-row">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.CurrentlyFocusing"}}</label>
+      <input type="checkbox" name="system.focusing" {{#if system.focusing}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </div>
+
+  {{!-- Effect --}}
+  <div class="spell-effect">
+    <label>{{localize "VAGABOND.Effect"}}</label>
+    <div class="editor-container">
+      {{editor system.effect target="system.effect" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+
+  {{!-- Crit Effect --}}
+  <div class="spell-crit-effect">
+    <label>{{localize "VAGABOND.CritEffect"}}</label>
+    <div class="editor-container">
+      {{editor system.critEffect target="system.critEffect" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-container">
+      {{editor system.description target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
+  </div>
+</div>
