@@ -132,3 +132,31 @@ See `PROJECT_ROADMAP.json` for complete task breakdown with dependencies.
 - Match official Hero Record layout where possible
 - Use CSS custom properties for theming
 - SCSS with BEM naming convention
+
+## Compendium Data Review (REQUIRED)
+
+**CRITICAL: All compendium data in `packs/_source/` MUST be reviewed by a human before committing.**
+
+When creating or modifying compendium JSON files (classes, ancestries, perks, spells, etc.):
+
+1. **ALWAYS** reference the official source material in NoteDiscovery or the PDF
+2. **NEVER** invent or "hallucinate" game mechanics, flavor text, or statistics
+3. **BEFORE COMMITTING**, present the full JSON content to the user for review
+4. **WAIT FOR EXPLICIT APPROVAL** before staging compendium files for commit
+
+### Review Process
+
+1. Generate/modify the compendium JSON
+2. Show the user the complete content (not just a summary)
+3. User verifies against source material using `packs/_source/REVIEW_CHECKLIST.md`
+4. Only after user says "approved" or similar, proceed with git add/commit
+
+### What to Verify
+
+- Feature names match exactly
+- Progression tables match level-by-level
+- Prerequisites are accurate
+- Descriptions don't contain invented lore
+- Mechanical effects (changes[] arrays) are correct
+
+See `packs/_source/REVIEW_CHECKLIST.md` for the complete validation checklist.
