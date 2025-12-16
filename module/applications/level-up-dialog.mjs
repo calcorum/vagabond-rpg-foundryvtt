@@ -13,7 +13,7 @@
  */
 
 // Debug logging for level-up workflow - set to false to disable
-const DEBUG_LEVELUP = true;
+const DEBUG_LEVELUP = false;
 const debugLog = (...args) => {
   if (DEBUG_LEVELUP) console.log("[LevelUpDialog]", ...args);
 };
@@ -186,6 +186,23 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
       debugLog(`Loaded ${context.availablePerks?.length || 0} available perks`);
     }
 
+    // Load filtered perks for each choice feature
+    for (const choiceFeature of choiceFeatures) {
+      if (choiceFeature.choiceType === "perk" && choiceFeature.choiceFilter) {
+        debugLog(`Loading filtered perks for "${choiceFeature.name}"...`);
+        // Fighting Style ignores all prerequisites per the feature rules
+        const ignorePrereqs = choiceFeature.name === "Fighting Style";
+        choiceFeature.filteredPerks = await this._getFilteredPerksForChoice(
+          choiceFeature.choiceFilter,
+          ignorePrereqs
+        );
+        debugLog(
+          `Loaded ${choiceFeature.filteredPerks?.length || 0} filtered perks for "${choiceFeature.name}"`,
+          choiceFeature.filteredPerks?.map((p) => ({ name: p.name, uuid: p.uuid, id: p.id }))
+        );
+      }
+    }
+
     return context;
   }
 
@@ -223,7 +240,7 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
           uuid: perk.uuid,
           name: perk.name,
           description: perk.system.description,
-          prerequisites: perk.system.prerequisites || [],
+          prerequisites: perk.system.prerequisites || {},
           prerequisitesMet: met,
           missing: prereqResult?.missing || [],
         });
@@ -236,6 +253,79 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
       if (!a.prerequisitesMet && b.prerequisitesMet) return 1;
       return a.name.localeCompare(b.name);
     });
+
+    return perks;
+  }
+
+  /**
+   * Get perks filtered for a specific choice feature.
+   * Filters by the choiceFilter.prerequisite array (matches against perk's custom prerequisite text).
+   *
+   * @param {Object} choiceFilter - The filter from the feature (e.g., { prerequisite: ["Melee Training", "Ranged Training"] })
+   * @param {boolean} ignorePrereqs - If true, mark all filtered perks as available (for features like Fighting Style)
+   * @returns {Promise<Object[]>} Filtered perk data
+   * @private
+   */
+  async _getFilteredPerksForChoice(choiceFilter, ignorePrereqs = false) {
+    const pack = game.packs.get("vagabond.perks");
+    if (!pack) return [];
+
+    const index = await pack.getIndex();
+    const perks = [];
+    const filterValues = choiceFilter?.prerequisite || [];
+
+    debugLog("Filtering perks for choice", { filterValues, ignorePrereqs });
+
+    for (const entry of index) {
+      const perk = await pack.getDocument(entry._id);
+      if (!perk) continue;
+
+      // Build the UUID from pack and entry info (more reliable than perk.uuid)
+      const perkUuid = `Compendium.${pack.collection}.Item.${entry._id}`;
+
+      // Check if perk matches the filter (by custom prerequisite text)
+      const customPrereq = perk.system.prerequisites?.custom || "";
+      const matchesFilter = filterValues.length === 0 || filterValues.includes(customPrereq);
+
+      if (!matchesFilter) {
+        debugLog(`Perk "${perk.name}" filtered out (custom: "${customPrereq}")`);
+        continue;
+      }
+
+      // Check prerequisites (optionally ignoring all for features like Fighting Style)
+      let met = true;
+      let missing = [];
+
+      if (ignorePrereqs) {
+        // Feature allows ignoring prerequisites - all filtered perks are selectable
+        met = true;
+        missing = [];
+      } else {
+        const prereqResult = perk.checkPrerequisites?.(this.actor);
+        met = prereqResult?.met ?? true;
+        missing = prereqResult?.missing || [];
+      }
+
+      // Check if actor already has this perk
+      const alreadyHas = this.actor.items.some((i) => i.type === "perk" && i.name === perk.name);
+
+      if (!alreadyHas) {
+        perks.push({
+          id: entry._id,
+          uuid: perkUuid,
+          name: perk.name,
+          description: perk.system.description,
+          prerequisites: perk.system.prerequisites || {},
+          prerequisitesMet: met,
+          missing,
+          customPrereq,
+        });
+        debugLog(`Perk "${perk.name}" added to choice list (met: ${met}, uuid: ${perkUuid})`);
+      }
+    }
+
+    // Sort alphabetically (all should be selectable for Fighting Style)
+    perks.sort((a, b) => a.name.localeCompare(b.name));
 
     return perks;
   }
@@ -263,14 +353,38 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
       });
     }
 
-    // Handle feature choice changes
+    // Handle feature choice changes - use 'input' event as well as 'change' for better capture
     const choiceSelects = this.element.querySelectorAll("[data-feature-choice]");
     debugLog(`Found ${choiceSelects.length} feature choice select elements`);
     for (const select of choiceSelects) {
-      select.addEventListener("change", (event) => {
+      // Log initial state
+      debugLog(`Select initial state for "${select.dataset.featureChoice}":`, {
+        value: select.value,
+        selectedIndex: select.selectedIndex,
+        optionsCount: select.options.length,
+      });
+
+      // Track both change and input events
+      const handleSelection = (event) => {
         const featureName = event.currentTarget.dataset.featureChoice;
-        this.choices.featureChoices[featureName] = event.currentTarget.value;
-        debugLog(`Feature choice changed: "${featureName}" = ${event.currentTarget.value}`);
+        const newValue = event.currentTarget.value;
+        const selectedIndex = event.currentTarget.selectedIndex;
+        const selectedText = event.currentTarget.options[selectedIndex]?.textContent;
+
+        this.choices.featureChoices[featureName] = newValue;
+        debugLog(
+          `Feature choice ${event.type}: "${featureName}" = "${newValue}" (index: ${selectedIndex}, text: "${selectedText}")`
+        );
+      };
+
+      select.addEventListener("change", handleSelection);
+      select.addEventListener("input", handleSelection);
+
+      // Also track focus/blur to see if something is resetting
+      select.addEventListener("blur", (event) => {
+        debugLog(
+          `Select blur for "${event.currentTarget.dataset.featureChoice}": value="${event.currentTarget.value}"`
+        );
       });
     }
   }
@@ -320,6 +434,40 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
     const data = foundry.utils.expandObject(formData.object);
     debugLog("Expanded form data:", data);
 
+    // Also read feature choice selects directly from the form (backup method)
+    const featureChoiceSelects = form.querySelectorAll("[data-feature-choice]");
+    const directChoices = {};
+    let missingRequiredChoice = false;
+
+    for (const select of featureChoiceSelects) {
+      const featureName = select.dataset.featureChoice;
+      const selectedValue = select.value;
+      const selectedIndex = select.selectedIndex;
+      const selectedOption = select.options[selectedIndex];
+
+      debugLog(`Direct select read: "${featureName}"`, {
+        value: selectedValue,
+        selectedIndex,
+        selectedOptionText: selectedOption?.textContent,
+        optionsCount: select.options.length,
+      });
+
+      directChoices[featureName] = selectedValue;
+
+      // Check if this is a required choice with no selection
+      if (!selectedValue) {
+        missingRequiredChoice = true;
+      }
+    }
+
+    // Warn if no choice was made
+    if (missingRequiredChoice) {
+      ui.notifications.warn("Please select a perk for Feature Choices before confirming.");
+      return; // Don't proceed with level up
+    }
+
+    data.directFeatureChoices = directChoices;
+
     // Apply the level up
     await dialog._applyLevelUp(data);
   }
@@ -332,11 +480,23 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
    * @private
    */
   async _applyLevelUp(formData) {
+    // Merge all sources of feature choices (direct DOM read takes priority)
+    const featureChoicesFromForm = formData.featureChoice || {};
+    const directFeatureChoices = formData.directFeatureChoices || {};
+    const mergedFeatureChoices = {
+      ...this.choices.featureChoices,
+      ...featureChoicesFromForm,
+      ...directFeatureChoices, // Direct DOM read is most reliable
+    };
+
     debugLog("_applyLevelUp called", {
       actorName: this.actor.name,
       oldLevel: this.oldLevel,
       newLevel: this.newLevel,
       choices: this.choices,
+      featureChoicesFromForm,
+      directFeatureChoices,
+      mergedFeatureChoices,
     });
 
     // 1. Update class features for all classes
@@ -376,12 +536,26 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
       }
     }
 
-    // 3. Handle feature choices
-    debugLog(`Processing feature choices:`, this.choices.featureChoices);
-    for (const [featureName, choice] of Object.entries(this.choices.featureChoices)) {
+    // 3. Handle feature choices (using merged form data + event-tracked choices)
+    debugLog(`Processing feature choices:`, mergedFeatureChoices);
+    for (const [featureName, choice] of Object.entries(mergedFeatureChoices)) {
       debugLog(`Feature choice for "${featureName}": ${choice}`);
-      // Feature choices can be complex - for now just log
-      // TODO: Implement specific handling for choice features (e.g., add selected perk)
+
+      // Handle Fighting Style specifically
+      if (featureName === "Fighting Style") {
+        await this._applyFightingStyle(choice);
+      } else if (choice) {
+        // Generic perk choice handling - add the selected perk
+        try {
+          const perkDoc = await fromUuid(choice);
+          if (perkDoc) {
+            debugLog(`Adding choice perk: "${perkDoc.name}"`);
+            await this.actor.createEmbeddedDocuments("Item", [perkDoc.toObject()]);
+          }
+        } catch (err) {
+          console.error(`Failed to add choice perk ${choice}:`, err);
+        }
+      }
     }
 
     // Log final actor state
@@ -396,6 +570,61 @@ export default class LevelUpDialog extends HandlebarsApplicationMixin(Applicatio
 
     // Notify user
     ui.notifications.info(`${this.actor.name} advanced to level ${this.newLevel}!`);
+  }
+
+  /**
+   * Apply the Fighting Style feature.
+   * Grants Situational Awareness perk AND the selected training perk.
+   *
+   * @param {string} selectedPerkUuid - UUID of the selected training perk
+   * @returns {Promise<void>}
+   * @private
+   */
+  async _applyFightingStyle(selectedPerkUuid) {
+    debugLog("Applying Fighting Style feature");
+
+    const pack = game.packs.get("vagabond.perks");
+    if (!pack) {
+      debugWarn("Perks compendium not found, cannot apply Fighting Style");
+      return;
+    }
+
+    // 1. Auto-grant Situational Awareness
+    const index = await pack.getIndex();
+    const saEntry = index.find((e) => e.name === "Situational Awareness");
+
+    if (saEntry) {
+      const saPerk = await pack.getDocument(saEntry._id);
+      if (saPerk) {
+        // Check if actor already has it
+        const alreadyHas = this.actor.items.some(
+          (i) => i.type === "perk" && i.name === "Situational Awareness"
+        );
+        if (!alreadyHas) {
+          debugLog("Granting Situational Awareness perk");
+          await this.actor.createEmbeddedDocuments("Item", [saPerk.toObject()]);
+        } else {
+          debugLog("Actor already has Situational Awareness");
+        }
+      }
+    } else {
+      debugWarn("Situational Awareness perk not found in compendium");
+    }
+
+    // 2. Add the selected training perk
+    if (selectedPerkUuid) {
+      try {
+        const perkDoc = await fromUuid(selectedPerkUuid);
+        if (perkDoc) {
+          debugLog(`Granting selected training perk: "${perkDoc.name}"`);
+          await this.actor.createEmbeddedDocuments("Item", [perkDoc.toObject()]);
+        }
+      } catch (err) {
+        console.error(`Failed to add training perk ${selectedPerkUuid}:`, err);
+      }
+    } else {
+      debugWarn("No training perk selected for Fighting Style");
+    }
   }
 
   /* -------------------------------------------- */

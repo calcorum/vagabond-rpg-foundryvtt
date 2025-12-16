@@ -44,13 +44,13 @@
       </label>
       <div class="feature-description">{{{description}}}</div>
 
-      {{!-- For perk choices --}}
+      {{!-- For perk choices with filtered list --}}
       {{#if (eq choiceType "perk")}}
-      <select data-feature-choice="{{name}}" class="perk-choice-select">
+      <select name="featureChoice.{{name}}" data-feature-choice="{{name}}" class="perk-choice-select">
         <option value="">-- Select a Perk --</option>
-        {{#each ../availablePerks}}
-        <option value="{{uuid}}" {{#unless prerequisitesMet}}disabled{{/unless}}>
-          {{name}}{{#unless prerequisitesMet}} (Prerequisites not met){{/unless}}
+        {{#each filteredPerks}}
+        <option value="{{this.uuid}}" {{#unless this.prerequisitesMet}}disabled{{/unless}}>
+          {{this.name}}{{#unless this.prerequisitesMet}} (Prerequisites not met){{/unless}}
         </option>
         {{/each}}
       </select>

@@ -11,15 +11,30 @@
     "traits": [
       {
         "name": "Darksight",
-        "description": "<p>You can see in darkness as if it were dim light.</p>"
+        "description": "<p>You can see in darkness as if it were dim light.</p>",
+        "changes": [
+          {
+            "key": "system.senses.darkvision",
+            "mode": 5,
+            "value": "true"
+          }
+        ]
       },
       {
         "name": "Sturdy",
-        "description": "<p>You gain +1 to saves against Fear, Sickened, and Shove effects.</p>"
+        "description": "<p>You gain +1 to saves against Fear, Sickened, and Shove effects.</p>",
+        "changes": []
       },
       {
         "name": "Tough",
-        "description": "<p>You gain +Level additional maximum HP.</p>"
+        "description": "<p>You gain +3 additional maximum HP.</p>",
+        "changes": [
+          {
+            "key": "system.resources.hp.bonus",
+            "mode": 2,
+            "value": "3"
+          }
+        ]
       }
     ]
   }

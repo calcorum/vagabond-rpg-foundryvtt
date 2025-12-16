@@ -1,0 +1,124 @@
+{
+  "prototype": {
+    "name": "Class & Character Progression Prototype",
+    "branch": "prototype/class-level-system",
+    "description": "Proof-of-concept implementations for Active Effects automation across classes, perks, ancestries, and caster progression",
+    "created": "2024-12-16",
+    "status": "in_progress",
+    "design_doc": "NoteDiscovery: gaming/vagabond-rpg/class-level-system-design.md"
+  },
+  "tasks": [
+    {
+      "id": "P1",
+      "name": "Class Level-Up with Active Effects",
+      "description": "Class features with changes[] arrays automatically create Active Effects on drop and level-up",
+      "status": "complete",
+      "commit": "a7862be",
+      "files_changed": [
+        "module/documents/item.mjs",
+        "module/documents/actor.mjs",
+        "module/applications/level-up-dialog.mjs",
+        "module/sheets/base-actor-sheet.mjs",
+        "packs/_source/classes/fighter.json"
+      ],
+      "patterns_established": [
+        "Features with changes[] become ActiveEffects via applyClassFeatures()",
+        "updateClassFeatures() handles level-up incrementally",
+        "Idempotency via checking existing effect flags",
+        "dragDrop config in DEFAULT_OPTIONS (not manual listeners)",
+        "ActiveEffect flags: vagabond.classFeature, className, featureName, featureLevel"
+      ],
+      "tested": true,
+      "notes": "Fighter Valor I/II/III reduces crit threshold cumulatively. Fixed duplicate item creation bug."
+    },
+    {
+      "id": "P2",
+      "name": "Perk Active Effects",
+      "description": "Perks apply Active Effects when added to character, using same changes[] pattern as class features",
+      "status": "complete",
+      "dependencies": ["P1"],
+      "implementation_plan": [
+        "Add changes[] array to PerkData schema if not present",
+        "Update VagabondItem._onCreate() to handle type === 'perk'",
+        "Create test perk with mechanical effect (e.g., 'Tough' adds +5 HP)",
+        "Verify effect applies on drop and removes on delete",
+        "Update level-up dialog perk selection to show effect preview"
+      ],
+      "files_to_modify": [
+        "module/documents/item.mjs",
+        "module/data/perk.mjs",
+        "packs/_source/perks/ (create test perks)"
+      ],
+      "acceptance_criteria": [
+        "Dropping perk on character creates ActiveEffect",
+        "Deleting perk removes its ActiveEffect",
+        "Perk effects stack with class effects",
+        "Level-up dialog perk selection works end-to-end"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Feature Choices (Fighting Style)",
+      "description": "Implement UI for features that require player choice, starting with Fighter's Fighting Style perk selection",
+      "status": "complete",
+      "dependencies": ["P2"],
+      "files_changed": [
+        "module/applications/level-up-dialog.mjs",
+        "module/documents/item.mjs",
+        "module/data/item/class.mjs",
+        "templates/dialog/level-up.hbs"
+      ],
+      "patterns_established": [
+        "Class features schema includes requiresChoice, choiceType, choiceFilter fields",
+        "_getFilteredPerksForChoice() filters perks by custom prerequisite text",
+        "ignorePrereqs flag allows bypassing all prerequisites for specific choices",
+        "Classes with choice features at level 1 show dialog on initial drop",
+        "_applyFightingStyle() auto-grants Situational Awareness + selected training perk",
+        "UUID must be constructed manually: Compendium.${pack.collection}.Item.${entry._id}"
+      ],
+      "tested": true,
+      "notes": "Fighting Style grants Situational Awareness AND one Melee/Ranged Training perk (ignoring prereqs). Fixed UUID null issue by constructing UUID from pack collection and entry ID."
+    },
+    {
+      "id": "P4",
+      "name": "Ancestry Traits as Active Effects",
+      "description": "Ancestry traits with mechanical effects apply as Active Effects when ancestry is added to character",
+      "status": "complete",
+      "dependencies": ["P1"],
+      "files_changed": [
+        "module/documents/item.mjs",
+        "module/data/item/ancestry.mjs",
+        "packs/_source/ancestries/dwarf.json"
+      ],
+      "patterns_established": [
+        "Ancestry traits use same changes[] pattern as class features",
+        "applyAncestryTraits() creates effects with vagabond.ancestryTrait flag",
+        "_removeAncestryEffects() cleans up on ancestry deletion/replacement",
+        "Mode 5 (OVERRIDE) for boolean senses like darkvision"
+      ],
+      "tested": true,
+      "notes": "Dwarf Darksight (+darkvision) and Tough (+3 HP bonus) traits verified working"
+    },
+    {
+      "id": "P5",
+      "name": "Caster Class Progression",
+      "description": "Verify mana and castingMax from class progression apply correctly for caster classes",
+      "status": "complete",
+      "dependencies": ["P1"],
+      "files_changed": ["module/sheets/base-actor-sheet.mjs"],
+      "patterns_established": [
+        "_applyClassProgression() accumulates mana from progression entries",
+        "Mana.value set to max only on initial grant (when value === 0)",
+        "Form submission cleanup via #cleanNumericFields() prevents empty string validation errors"
+      ],
+      "tested": true,
+      "notes": "Wizard Level 1 = 4 mana, Level 2 = 8 mana. Fixed validation error for empty numeric inputs."
+    }
+  ],
+  "merge_criteria": [
+    "All tasks complete and tested",
+    "No console errors in normal workflows",
+    "Design doc updated with new patterns",
+    "Compendiums rebuilt with test content"
+  ]
+}

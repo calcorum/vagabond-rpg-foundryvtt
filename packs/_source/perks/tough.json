@@ -1,0 +1,44 @@
+{
+  "_id": "vagabondPerkTough",
+  "name": "Tough",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Your body is hardened through training or natural resilience. You gain +5 maximum HP.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": 4,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": [],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [
+      {
+        "key": "system.resources.hp.bonus",
+        "mode": 2,
+        "value": "5"
+      }
+    ],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "defensive"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkTough"
+}

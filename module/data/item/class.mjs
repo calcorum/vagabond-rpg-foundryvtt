@@ -86,6 +86,10 @@ export default class ClassData extends VagabondItemBase {
             }),
             { initial: [] }
           ),
+          // Choice features - features that require player selection
+          requiresChoice: new fields.BooleanField({ initial: false }),
+          choiceType: new fields.StringField({ required: false, blank: true }), // "perk", "spell", etc.
+          choiceFilter: new fields.ObjectField({ required: false }), // Filter criteria for choices
         }),
         { initial: [] }
       ),

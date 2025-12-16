@@ -616,7 +616,38 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
   static async #onFormSubmit(event, form, formData) {
     const sheet = this;
     const updateData = foundry.utils.expandObject(formData.object);
+
+    // Clean up numeric fields that may have empty string values
+    // This can happen when number inputs are cleared by the user
+    VagabondActorSheet.#cleanNumericFields(updateData);
+
     await sheet.actor.update(updateData);
+  }
+
+  /**
+   * Recursively clean numeric fields in update data.
+   * Empty strings are converted to 0 for numeric resource fields.
+   * @param {Object} obj - Object to clean
+   * @param {string} path - Current path for debugging
+   * @private
+   */
+  static #cleanNumericFields(obj, path = "") {
+    if (!obj || typeof obj !== "object") return;
+
+    for (const [key, value] of Object.entries(obj)) {
+      const currentPath = path ? `${path}.${key}` : key;
+
+      if (typeof value === "object" && value !== null) {
+        // Recurse into nested objects
+        VagabondActorSheet.#cleanNumericFields(value, currentPath);
+      } else if (value === "" || value === null) {
+        // Check if this should be a numeric field based on common patterns
+        const numericKeys = ["value", "max", "bonus", "min", "base", "level", "castingMax"];
+        if (numericKeys.includes(key)) {
+          obj[key] = 0;
+        }
+      }
+    }
   }
 
   /**

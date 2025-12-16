@@ -43,6 +43,15 @@ export default class AncestryData extends VagabondItemBase {
         new fields.SchemaField({
           name: new fields.StringField({ required: true }),
           description: new fields.HTMLField({ required: true }),
+          // Mechanical effects as Active Effect changes
+          changes: new fields.ArrayField(
+            new fields.SchemaField({
+              key: new fields.StringField({ required: true }),
+              mode: new fields.NumberField({ integer: true, initial: 2 }),
+              value: new fields.StringField({ required: true }),
+            }),
+            { initial: [] }
+          ),
         }),
         { initial: [] }
       ),
