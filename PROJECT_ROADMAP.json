@@ -366,6 +366,16 @@
           "tested": false,
           "priority": "low",
           "dependencies": ["1.3"]
+        },
+        {
+          "id": "2.15",
+          "name": "Implement castingMax formula calculation",
+          "description": "Calculate maximum mana per spell from class formula. Currently stored as 0 in progression table with formula documented in feature text. Formula varies by class: Magus=(Reason + half Magus Level, round up), Luminary=(Awareness + half Luminary Level, round up), etc. Should calculate dynamically based on actor's stats and class level.",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["1.8", "2.2", "2.12"],
+          "notes": "Current pattern: progression.castingMax stores 0, formula described in class feature text (e.g., Spellstriker, Theurgy). Enhancement would calculate this automatically using actor stats + class level."
         }
       ]
     },

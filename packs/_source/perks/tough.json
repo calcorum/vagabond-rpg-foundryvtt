@@ -40,5 +40,6 @@
     "tags": ["combat", "defensive"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkTough"
+  "_key": "!items!vagabondPerkTough",
+  "reviewed": false
 }

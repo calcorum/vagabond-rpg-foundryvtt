@@ -22,5 +22,6 @@
         "description": "<p>When you take a Rest, you regain +1 additional Luck.</p>"
       }
     ]
-  }
+  },
+  "reviewed": false
 }

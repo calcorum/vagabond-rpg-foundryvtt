@@ -5,11 +5,16 @@
   "type": "class",
   "img": "icons/svg/silhouette.svg",
   "system": {
-    "description": "<p>Dancers are graceful performers who use their movements to inspire allies and evade attacks. Their fleet footwork makes them exceptional support characters who can grant allies extra actions.</p>",
+    "description": "<p>Practitioners of the alluring art of dance. They have a flair for enlivening their audience, drawing attention, and giving awe-inspiring shows.</p>",
     "keyStat": "dexterity",
     "actionStyle": "finesse",
     "zone": "midline",
-    "trainedSkills": ["finesse", "performance", "brawl", "influence", "sneak"],
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["finesse", "performance"], "count": 2 },
+      { "type": "choice", "skills": ["brawl", "influence", "sneak"], "count": 2 }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Courtesan or Musician</p>",
     "isCaster": false,
     "progression": [
@@ -20,8 +25,20 @@
         "spellsKnown": 0,
         "features": ["Fleet of Foot", "Step Up"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasive"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Evasive"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
       {
         "level": 4,
         "mana": 0,
@@ -29,12 +46,48 @@
         "spellsKnown": 0,
         "features": ["Don't Stop Me Now"]
       },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Choreographer"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Flash of Beauty"] },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Double Time"] }
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Choreographer"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Flash of Beauty"]
+      },
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Double Time"]
+      }
     ],
     "features": [
       {
@@ -88,5 +141,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

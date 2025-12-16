@@ -5,103 +5,82 @@
   "type": "class",
   "img": "icons/svg/fire.svg",
   "system": {
-    "description": "<p>Sorcerers are innate spellcasters who channel raw magical power through force of personality. Their ability to manipulate their spells on the fly makes them devastating backline blasters.</p>",
+    "description": "<p>Arcanists given a precious gift of magical prowess, sorcerers can tap into their own inner reserves to provide more Mana for casting.</p>",
     "keyStat": "presence",
-    "actionStyle": "influence",
+    "actionStyle": "cast",
     "zone": "backline",
-    "trainedSkills": ["influence", "arcana", "detect", "mysticism"],
-    "startingPack": "<p>Noble or Hermit</p>",
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["influence"], "count": 1 },
+      { "type": "choice", "skills": ["arcana", "brawl", "mysticism", "performance"], "count": 3 }
+    ],
+    "trainedSkills": [],
+    "startingPack": "<p>Mage or Occultist</p>",
     "isCaster": true,
     "progression": [
-      {
-        "level": 1,
-        "mana": 4,
-        "castingMax": 0,
-        "spellsKnown": 4,
-        "features": ["Innate Magic", "Metamagic"]
-      },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Font of Magic"] },
-      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      {
-        "level": 4,
-        "mana": 4,
-        "castingMax": 0,
-        "spellsKnown": 0,
-        "features": ["Sorcerous Origin"]
-      },
-      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      {
-        "level": 6,
-        "mana": 4,
-        "castingMax": 0,
-        "spellsKnown": 0,
-        "features": ["Empowered Spells"]
-      },
-      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Origin Mastery"] },
-      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      {
-        "level": 10,
-        "mana": 4,
-        "castingMax": 0,
-        "spellsKnown": 0,
-        "features": ["Arcane Apotheosis"]
-      }
+      { "level": 1, "mana": 4, "castingMax": 0, "spellsKnown": 4, "features": ["Glamour", "Tap"] },
+      { "level": 2, "mana": 8, "castingMax": 0, "spellsKnown": 0, "features": ["Spell-Slinger"] },
+      { "level": 3, "mana": 12, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 4, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Quickening"] },
+      { "level": 5, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 6, "mana": 24, "castingMax": 0, "spellsKnown": 0, "features": ["Arcane Anomaly"] },
+      { "level": 7, "mana": 28, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 32, "castingMax": 0, "spellsKnown": 0, "features": ["Spell Twinning"] },
+      { "level": 9, "mana": 36, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 10, "mana": 40, "castingMax": 0, "spellsKnown": 0, "features": ["Overpowered"] }
     ],
     "features": [
       {
-        "name": "Innate Magic",
+        "name": "Glamour",
         "level": 1,
-        "description": "<p>You can Cast Spells using Influence. <strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Sorcerer Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Presence + half your Sorcerer Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You can Cast Spells using Influence.</p><p><strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Sorcerer Levels hereafter.</p><p><strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Sorcerer Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Presence + half your Sorcerer Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Metamagic",
+        "name": "Tap",
         "level": 1,
-        "description": "<p>You can modify your Spells as you Cast them. Choose two Metamagic options: <strong>Careful</strong> (choose creatures to auto-succeed), <strong>Distant</strong> (double Range), <strong>Extended</strong> (double Duration), <strong>Quickened</strong> (Cast as Move), <strong>Subtle</strong> (no verbal/somatic), <strong>Twinned</strong> (Target second creature).</p>",
+        "description": "<p>You gain the <strong>Metamagic Perk</strong>. Further, when you Cast, you can reduce your Max HP to regain Mana equal to (2 × the reduction). This reduction ends when you Rest. If you die from this reduction, the Cast resolves before your death, and your body is vaporized.</p>",
         "passive": false,
         "changes": []
       },
       {
-        "name": "Font of Magic",
+        "name": "Spell-Slinger",
         "level": 2,
-        "description": "<p>You can convert Mana to Sorcery Points and vice versa. 1 Sorcery Point costs 1 Mana to create, and 1 Mana costs 2 Sorcery Points.</p>",
-        "passive": false,
+        "description": "<p>You Crit on Cast Checks on a roll of 19 to 20, and your Spells use a d8 damage die, rather than a d6.</p>",
+        "passive": true,
         "changes": []
       },
       {
-        "name": "Sorcerous Origin",
+        "name": "Quickening",
         "level": 4,
-        "description": "<p>Choose an Origin that grants additional abilities: <strong>Draconic</strong> (resistance to one element, +1 Armor), <strong>Wild</strong> (random magical effects), or <strong>Shadow</strong> (see in darkness, teleport through shadows).</p>",
+        "description": "<p>You can skip your Move to Cast a Spell. No Mana can be spent on this Casting.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Empowered Spells",
+        "name": "Arcane Anomaly",
         "level": 6,
-        "description": "<p>When you roll damage for a Spell, you can reroll a number of damage dice up to your Presence (minimum 1). You must use the new rolls.</p>",
-        "passive": false,
-        "changes": []
-      },
-      {
-        "name": "Origin Mastery",
-        "level": 8,
-        "description": "<p>Your Sorcerous Origin grants an improved ability based on your choice.</p>",
+        "description": "<p>You reduce Magic damage you take by half.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Arcane Apotheosis",
+        "name": "Spell Twinning",
+        "level": 8,
+        "description": "<p>If you Cast the same Spell twice on a Turn, the second Cast Check is Favored.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Overpowered",
         "level": 10,
-        "description": "<p>You regain 4 Mana when you finish a Breather, and your Metamagic options cost 1 less Sorcery Point (minimum 1).</p>",
+        "description": "<p>You Crit on Cast Checks on a roll of 18 to 20. Further, when you Cast, you can choose to gain 2 Fatigue. If you do, you regain Cd6 Mana at the start of your Turns, and you can spend as much Mana as you like to Cast.</p>",
         "passive": true,
         "changes": []
       }
     ],
-    "customResource": {
-      "name": "Sorcery Points",
-      "max": "@classes.sorcerer.level"
-    }
-  }
+    "customResource": {}
+  },
+  "reviewed": true
 }

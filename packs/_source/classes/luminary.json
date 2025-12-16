@@ -5,11 +5,20 @@
   "type": "class",
   "img": "icons/svg/sun.svg",
   "system": {
-    "description": "<p>Luminaries are divine healers who channel radiant energy to restore their allies. Their powerful healing magic and ability to revive the fallen make them invaluable support characters.</p>",
+    "description": "<p>Channelers of the magic of creation, luminaries are philosophers, muses, and healers of the people.</p>",
     "keyStat": "awareness",
     "actionStyle": "mysticism",
     "zone": "midline",
-    "trainedSkills": ["mysticism", "arcana", "detect", "influence", "leadership", "medicine"],
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["arcana", "detect", "influence", "leadership", "medicine"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Devout</p>",
     "isCaster": true,
     "progression": [
@@ -20,21 +29,75 @@
         "spellsKnown": 4,
         "features": ["Theurgy", "Radiant Healer"]
       },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Overheal"] },
-      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Ever-Cure"] },
-      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Revivify"] },
-      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Saving Grace"] },
-      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Life-Giver"] }
+      {
+        "level": 2,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Overheal"]
+      },
+      {
+        "level": 3,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Ever-Cure"]
+      },
+      {
+        "level": 5,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Revivify"]
+      },
+      {
+        "level": 7,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Saving Grace"]
+      },
+      {
+        "level": 9,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Life-Giver"]
+      }
     ],
     "features": [
       {
         "name": "Theurgy",
         "level": 1,
-        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, two of which must always be Life and Light. You learn 1 other Spell every 2 Luminary Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Luminary Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Luminary Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, two of which must always be Life and Light. You learn 1 other Spell every 2 Luminary Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 \u00d7 your Luminary Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Luminary Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },
@@ -82,5 +145,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

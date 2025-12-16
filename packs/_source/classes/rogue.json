@@ -5,12 +5,17 @@
   "type": "class",
   "img": "icons/svg/dagger.svg",
   "system": {
-    "description": "<p>Rogues are cunning opportunists who strike when their enemies least expect it. Their sneak attacks and luck manipulation make them deadly midline strikers who excel at exploiting weaknesses.</p>",
+    "description": "<p>Back-alley urchins, gutterborn scum, shadow-born assassins. To hammers, every problem looks like a nail. Rogues are blades, and every problem is a throat.</p>",
     "keyStat": "dexterity",
     "actionStyle": "attack",
     "zone": "midline",
-    "trainedSkills": ["sneak", "finesse", "detect", "influence"],
-    "startingPack": "<p>Assassin or Thief</p>",
+    "weaponTraining": ["ranged"],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["finesse", "sneak"], "count": 2 },
+      { "type": "choice", "skills": [], "count": 3 }
+    ],
+    "trainedSkills": [],
+    "startingPack": "<p>Assassin, Conman, Investigator, or Scout</p>",
     "isCaster": false,
     "progression": [
       {
@@ -18,69 +23,82 @@
         "mana": 0,
         "castingMax": 0,
         "spellsKnown": 0,
-        "features": ["Expertise", "Sneak Attack"]
+        "features": ["Sneak Attack", "Infiltrator"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Cunning Action"] },
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Unflinching Luck"]
+      },
       { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Uncanny Dodge"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasive"] },
       { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasion"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Lethal Weapon"] },
       { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Reliable Talent"] },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Unflinching Luck II"]
+      },
       { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Stroke of Luck"] }
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Waylay"] }
     ],
     "features": [
       {
-        "name": "Expertise",
-        "level": 1,
-        "description": "<p>You gain the <strong>Jack of All Trades Perk</strong>. Choose two Skills you are Trained in; you have Favor on Checks with those Skills.</p>",
-        "passive": true,
-        "changes": []
-      },
-      {
         "name": "Sneak Attack",
         "level": 1,
-        "description": "<p>Once per Turn, when you hit a Target with an attack and have Favor on the attack roll, or an Enemy of the Target is within 5 feet of it, you deal an extra Cd6 damage. This damage increases by 1d6 at 3rd, 5th, 7th, and 9th Levels in this Class.</p>",
+        "description": "<p>If your first attack on a Turn is Favored, it deals an extra d4 damage and ignores an amount of Armor equal to this number of extra dice.</p><p>The number of extra d4s increases by 1 every 3 Rogue Levels hereafter.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Cunning Action",
+        "name": "Infiltrator",
+        "level": 1,
+        "description": "<p>You gain the <strong>Resourceful Perk</strong>, and you have Favor on Checks and Saves made to ambush and against traps that you are aware of.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Unflinching Luck",
         "level": 2,
-        "description": "<p>You can take the Dash, Disengage, or Hide Action as a Move, rather than an Action.</p>",
+        "description": "<p>When you spend Luck to gain Favor on a Check, roll a d12. If the result is lower than your remaining Luck, the Luck is not spent.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Uncanny Dodge",
+        "name": "Evasive",
         "level": 4,
-        "description": "<p>When an attack hits you, you can use your Reaction to halve the attack's damage against you.</p>",
-        "passive": false,
+        "description": "<p>Your Reflex Saves can't be Hindered while you aren't Incapacitated, and you ignore two of a Dodged attack's damage dice on a passed Save, rather than one.</p>",
+        "passive": true,
         "changes": []
       },
       {
-        "name": "Evasion",
+        "name": "Lethal Weapon",
         "level": 6,
-        "description": "<p>When you pass a Reflex Save, you take no damage instead of half damage.</p>",
+        "description": "<p>Your Sneak Attack applies to any Favored attacks you make on a Turn, not just the first.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Reliable Talent",
+        "name": "Unflinching Luck II",
         "level": 8,
-        "description": "<p>When you make a Check with a Skill you are Trained in and roll lower than 10 on the d20, you can treat the roll as a 10.</p>",
+        "description": "<p>Your Unflinching Luck Feature now uses a d10 instead of a d12.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Stroke of Luck",
+        "name": "Waylay",
         "level": 10,
-        "description": "<p>Once per Rest, if you miss with an attack, you can turn the miss into a hit.</p>",
-        "passive": false,
+        "description": "<p>Once per Round, if you kill an Enemy during a Turn, you can immediately take one Action.</p>",
+        "passive": true,
         "changes": []
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

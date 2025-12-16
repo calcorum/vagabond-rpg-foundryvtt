@@ -5,11 +5,16 @@
   "type": "class",
   "img": "icons/svg/pawprint.svg",
   "system": {
-    "description": "<p>Hunters are expert trackers and survivalists who mark their prey for destruction. Their ability to focus on a single target makes them deadly strikers who rarely miss their mark.</p>",
+    "description": "<p>Keepers of the old way, hunters are survival experts that specialize in exploiting their enemies' weaknesses.</p>",
     "keyStat": "awareness",
     "actionStyle": "attack",
     "zone": "midline",
-    "trainedSkills": ["survival"],
+    "weaponTraining": ["melee", "ranged"],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["survival"], "count": 1 },
+      { "type": "choice", "skills": [], "count": 4 }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Scout or Warrior</p>",
     "isCaster": false,
     "progression": [
@@ -20,12 +25,48 @@
         "spellsKnown": 0,
         "features": ["Hunter's Mark", "Survivalist"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Rover"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Overwatch"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Quarry"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Rover"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Overwatch"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Quarry"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
       {
         "level": 8,
         "mana": 0,
@@ -33,8 +74,20 @@
         "spellsKnown": 0,
         "features": ["Lethal Precision"]
       },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Apex Predator"] }
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Apex Predator"]
+      }
     ],
     "features": [
       {
@@ -88,5 +141,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

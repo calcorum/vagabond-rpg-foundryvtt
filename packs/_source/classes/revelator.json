@@ -5,12 +5,17 @@
   "type": "class",
   "img": "icons/svg/holy-shield.svg",
   "system": {
-    "description": "<p>Revelators are holy warriors who combine martial prowess with divine magic. Their ability to smite evil and protect allies makes them formidable frontline paladins.</p>",
+    "description": "<p>Oathsworn knights that hold an honorable vow that becomes its own sacred power. Revelators are warriors of radiance and justice.</p>",
     "keyStat": "might",
-    "actionStyle": "leadership",
+    "actionStyle": "attack",
     "zone": "frontline",
-    "trainedSkills": ["leadership", "brawl", "influence", "mysticism"],
-    "startingPack": "<p>Knight or Devout</p>",
+    "weaponTraining": ["melee"],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["leadership"], "count": 1 },
+      { "type": "choice", "skills": ["brawl", "detect", "influence", "mysticism"], "count": 3 }
+    ],
+    "trainedSkills": [],
+    "startingPack": "<p>Knight or Warrior</p>",
     "isCaster": true,
     "progression": [
       {
@@ -18,78 +23,70 @@
         "mana": 2,
         "castingMax": 0,
         "spellsKnown": 2,
-        "features": ["Divine Sense", "Lay on Hands"]
+        "features": ["Righteous", "Selfless"]
       },
-      { "level": 2, "mana": 2, "castingMax": 0, "spellsKnown": 0, "features": ["Divine Smite"] },
-      { "level": 3, "mana": 2, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      {
-        "level": 4,
-        "mana": 2,
-        "castingMax": 0,
-        "spellsKnown": 0,
-        "features": ["Aura of Protection"]
-      },
-      { "level": 5, "mana": 2, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 2, "castingMax": 0, "spellsKnown": 0, "features": ["Aura of Courage"] },
-      { "level": 7, "mana": 2, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 2, "castingMax": 0, "spellsKnown": 0, "features": ["Improved Smite"] },
-      { "level": 9, "mana": 2, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 2, "castingMax": 0, "spellsKnown": 0, "features": ["Holy Champion"] }
+      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Lay on Hands"] },
+      { "level": 3, "mana": 6, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 8, "castingMax": 0, "spellsKnown": 1, "features": ["Paragon's Aura"] },
+      { "level": 5, "mana": 10, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 12, "castingMax": 0, "spellsKnown": 0, "features": ["Divine Resolve"] },
+      { "level": 7, "mana": 14, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Holy Diver"] },
+      { "level": 9, "mana": 18, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Sacrosanct"] }
     ],
     "features": [
       {
-        "name": "Divine Sense",
+        "name": "Righteous",
         "level": 1,
-        "description": "<p>You can Cast Spells using Leadership. <strong>Spells:</strong> You learn 2 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (2 × your Revelator Level). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You gain the <strong>Gish Perk</strong> and can Cast Spells using Leadership.</p><p><strong>Spells:</strong> You learn 2 Spells, one of which must always be Exalt. You learn 1 other Spell every 3 Revelator Levels hereafter.</p><p><strong>Mana:</strong> Your Maximum Mana is equal to (2 × your Revelator Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Presence + half your Revelator Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Selfless",
+        "level": 1,
+        "description": "<p>Once per Turn, when an Ally you can see takes damage, you can choose to take the damage instead. This can't be reduced in any way.</p>",
+        "passive": false,
         "changes": []
       },
       {
         "name": "Lay on Hands",
-        "level": 1,
-        "description": "<p>You have a pool of healing power equal to (5 × your Revelator Level). As an Action, you can touch a Being and restore HP from this pool. You can also spend 5 HP from this pool to cure one disease or neutralize one poison.</p>",
-        "passive": false,
-        "changes": []
-      },
-      {
-        "name": "Divine Smite",
         "level": 2,
-        "description": "<p>When you hit with a Melee attack, you can spend Mana to deal extra Radiant damage: 2d8 for 1 Mana, +1d8 for each additional Mana spent (max 5d8).</p>",
+        "description": "<p>You can Touch a Being to restore (d6 + your Level) HP by using your Action or skipping your Move. You can do so twice, and regain spent uses after you Rest.</p>",
         "passive": false,
         "changes": []
       },
       {
-        "name": "Aura of Protection",
+        "name": "Paragon's Aura",
         "level": 4,
-        "description": "<p>You and Allies within 10 feet gain a bonus to Saves equal to your Presence (minimum +1).</p>",
+        "description": "<p>It doesn't cost you Mana to Cast a Spell as a Close Aura, and you can Focus on a Spell as an Aura and one as Imbue at the same time.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Aura of Courage",
+        "name": "Divine Resolve",
         "level": 6,
-        "description": "<p>You and Allies within 10 feet cannot be Frightened while you are conscious.</p>",
+        "description": "<p>You can't be Blinded, Paralyzed, or Sickened. Further, when you restore a Being's HP with your Lay on Hands Feature, they are cured of these Statuses as well.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Improved Smite",
+        "name": "Holy Diver",
         "level": 8,
-        "description": "<p>All your Melee attacks deal an extra 1d8 Radiant damage.</p>",
+        "description": "<p>If you take damage for an Ally with your Selfless Feature, your next attack before the end of your next Turn has Favor and adds your Presence to the damage.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Holy Champion",
+        "name": "Sacrosanct",
         "level": 10,
-        "description": "<p>When you are reduced to 0 HP and not killed outright, you can choose to drop to 1 HP instead. Once you use this feature, you can't use it again until you Rest.</p>",
-        "passive": false,
+        "description": "<p>You have a +2 bonus to all Saves.</p>",
+        "passive": true,
         "changes": []
       }
     ],
-    "customResource": {
-      "name": "Lay on Hands Pool",
-      "max": "5 * @classes.revelator.level"
-    }
-  }
+    "customResource": {}
+  },
+  "reviewed": true
 }

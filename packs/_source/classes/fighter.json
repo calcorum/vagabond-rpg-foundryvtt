@@ -5,11 +5,20 @@
   "type": "class",
   "img": "icons/svg/sword.svg",
   "system": {
-    "description": "<p>Fighters are versatile combatants who excel in any battlefield role. Whether wielding sword or bow, their martial prowess and tactical awareness make them formidable opponents.</p>",
+    "description": "<p>Students of the art of violence. A fighter is defined by their skill with weapons, and large variety of martial techniques.</p>",
     "keyStat": "might",
     "actionStyle": "attack",
     "zone": "frontline",
-    "trainedSkills": ["brawl", "finesse", "detect", "leadership", "sneak"],
+    "weaponTraining": ["melee", "ranged"],
+    "skillTraining": [
+      { "type": "choice", "skills": ["brawl", "finesse"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["brawl", "detect", "finesse", "leadership", "sneak"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Gladiator, Knight, Warrior, or Watchman</p>",
     "isCaster": false,
     "progression": [
@@ -20,10 +29,34 @@
         "spellsKnown": 0,
         "features": ["Fighting Style", "Valor I"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Momentum"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Valor II"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Momentum"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Valor II"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
       {
         "level": 6,
         "mana": 0,
@@ -31,10 +64,34 @@
         "spellsKnown": 0,
         "features": ["Muster for Battle"]
       },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Valor III"] },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Harrying"] }
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Valor III"]
+      },
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Harrying"]
+      }
     ],
     "features": [
       {
@@ -44,7 +101,9 @@
         "passive": true,
         "requiresChoice": true,
         "choiceType": "perk",
-        "choiceFilter": { "prerequisite": ["Melee Training", "Ranged Training"] },
+        "choiceFilter": {
+          "prerequisite": ["Melee Training", "Ranged Training"]
+        },
         "changes": []
       },
       {
@@ -53,28 +112,58 @@
         "description": "<p>The roll required for you to Crit on Attack Checks, and Saves to Dodge or Block Attacks is reduced by 1.</p>",
         "passive": true,
         "changes": [
-          { "key": "system.attacks.melee.critThreshold", "mode": 2, "value": "-1", "priority": 10 },
-          { "key": "system.attacks.ranged.critThreshold", "mode": 2, "value": "-1", "priority": 10 }
+          {
+            "key": "system.attacks.melee.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          },
+          {
+            "key": "system.attacks.ranged.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          }
         ]
       },
       {
         "name": "Valor II",
         "level": 4,
-        "description": "<p>Your Valor improves. The crit threshold reduction increases to -2 total.</p>",
+        "description": "<p>Your Valor crit threshold reduction is reduced by 1 more (to -2 total).</p>",
         "passive": true,
         "changes": [
-          { "key": "system.attacks.melee.critThreshold", "mode": 2, "value": "-1", "priority": 10 },
-          { "key": "system.attacks.ranged.critThreshold", "mode": 2, "value": "-1", "priority": 10 }
+          {
+            "key": "system.attacks.melee.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          },
+          {
+            "key": "system.attacks.ranged.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          }
         ]
       },
       {
         "name": "Valor III",
         "level": 8,
-        "description": "<p>Your Valor reaches its peak. The crit threshold reduction increases to -3 total.</p>",
+        "description": "<p>Your Valor crit threshold reduction is reduced by 1 more (to -3 total).</p>",
         "passive": true,
         "changes": [
-          { "key": "system.attacks.melee.critThreshold", "mode": 2, "value": "-1", "priority": 10 },
-          { "key": "system.attacks.ranged.critThreshold", "mode": 2, "value": "-1", "priority": 10 }
+          {
+            "key": "system.attacks.melee.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          },
+          {
+            "key": "system.attacks.ranged.critThreshold",
+            "mode": 2,
+            "value": "-1",
+            "priority": 10
+          }
         ]
       },
       {
@@ -100,5 +189,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

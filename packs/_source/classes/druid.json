@@ -5,11 +5,20 @@
   "type": "class",
   "img": "icons/svg/oak.svg",
   "system": {
-    "description": "<p>Druids are primal mystics who draw power from nature. Their signature ability to shapeshift into beasts makes them versatile combatants who can adapt to any situation.</p>",
+    "description": "<p>Keepers of the wilderness, druids are mystics of nature that are adopted into beast-kind.</p>",
     "keyStat": "awareness",
     "actionStyle": "mysticism",
     "zone": "midline",
-    "trainedSkills": ["mysticism", "brawl", "craft", "detect", "medicine", "survival"],
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["brawl", "craft", "detect", "medicine", "survival"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Hermit</p>",
     "isCaster": true,
     "progression": [
@@ -20,21 +29,75 @@
         "spellsKnown": 4,
         "features": ["Primal Mystic", "Feral Shift"]
       },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Tempest Within"] },
-      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Innervate"] },
-      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Ancient Growth"] },
-      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Savagery"] },
-      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Force of Nature"] }
+      {
+        "level": 2,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Tempest Within"]
+      },
+      {
+        "level": 3,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Innervate"]
+      },
+      {
+        "level": 5,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Ancient Growth"]
+      },
+      {
+        "level": 7,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Savagery"]
+      },
+      {
+        "level": 9,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Force of Nature"]
+      }
     ],
     "features": [
       {
         "name": "Primal Mystic",
         "level": 1,
-        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, one of which must always be Polymorph. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Druid Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Druid Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, one of which must always be Polymorph. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 \u00d7 your Druid Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Druid Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },
@@ -82,5 +145,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

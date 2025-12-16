@@ -22,5 +22,6 @@
         "description": "<p>You gain Favor on saves against the Sickened condition.</p>"
       }
     ]
-  }
+  },
+  "reviewed": false
 }

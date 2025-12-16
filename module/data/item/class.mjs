@@ -49,7 +49,30 @@ export default class ClassData extends VagabondItemBase {
         choices: ["frontline", "midline", "backline"],
       }),
 
-      // Skills trained by this class (array of skill IDs)
+      // Weapon proficiencies granted by this class
+      // e.g., ["melee"], ["melee", "ranged"], or [] for none
+      weaponTraining: new fields.ArrayField(
+        new fields.StringField({ choices: ["melee", "ranged"] }),
+        { initial: [] }
+      ),
+
+      // Skills trained by this class - supports fixed grants and player choices
+      // Each entry is either: {type: "fixed", skills: ["craft"]} or {type: "choice", skills: ["detect", "sneak"], count: 2}
+      // Empty skills array for "choice" means any skill
+      skillTraining: new fields.ArrayField(
+        new fields.SchemaField({
+          type: new fields.StringField({
+            required: true,
+            choices: ["fixed", "choice"],
+            initial: "fixed",
+          }),
+          skills: new fields.ArrayField(new fields.StringField(), { initial: [] }),
+          count: new fields.NumberField({ integer: true, initial: 1 }),
+        }),
+        { initial: [] }
+      ),
+
+      // Legacy field - kept for backwards compatibility, prefer skillTraining
       trainedSkills: new fields.ArrayField(new fields.StringField(), { initial: [] }),
 
       // Starting equipment pack description
@@ -166,7 +189,9 @@ export default class ClassData extends VagabondItemBase {
     data.keyStat = this.keyStat;
     data.zone = this.zone;
     data.isCaster = this.isCaster;
-    data.trainedSkills = this.trainedSkills;
+    data.weaponTraining = this.weaponTraining;
+    data.skillTraining = this.skillTraining;
+    data.trainedSkills = this.trainedSkills; // Legacy
 
     return data;
   }

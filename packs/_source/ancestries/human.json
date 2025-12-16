@@ -18,5 +18,6 @@
         "description": "<p>You gain +1 to one Stat of your choice (maximum 7).</p>"
       }
     ]
-  }
+  },
+  "reviewed": false
 }

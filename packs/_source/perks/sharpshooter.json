@@ -40,5 +40,6 @@
     "tags": ["combat", "ranged", "training"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSharpshooter"
+  "_key": "!items!vagabondPerkSharpshooter",
+  "reviewed": false
 }

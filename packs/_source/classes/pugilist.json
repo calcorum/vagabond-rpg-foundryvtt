@@ -5,12 +5,21 @@
   "type": "class",
   "img": "icons/svg/fist.svg",
   "system": {
-    "description": "<p>Pugilists are masters of unarmed combat who turn their bodies into deadly weapons. Their devastating punches and grappling techniques make them formidable frontline bruisers.</p>",
+    "description": "<p>Brawlers of determination and swagger. An ascetic may dedicate themselves to a single focused blow, but a pugilist will break their fingers and keep punching with the bloody stump.</p>",
     "keyStat": "might",
-    "actionStyle": "brawl",
+    "actionStyle": "attack",
     "zone": "frontline",
-    "trainedSkills": ["brawl", "finesse", "detect", "influence"],
-    "startingPack": "<p>Gladiator or Traveler</p>",
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["brawl"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["detect", "finesse", "influence", "medicine", "sneak"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
+    "startingPack": "<p>Brawler or Monk</p>",
     "isCaster": false,
     "progression": [
       {
@@ -18,75 +27,70 @@
         "mana": 0,
         "castingMax": 0,
         "spellsKnown": 0,
-        "features": ["Fisticuffs", "Haymaker"]
+        "features": ["Fisticuffs", "Rope-a-Dope"]
       },
-      {
-        "level": 2,
-        "mana": 0,
-        "castingMax": 0,
-        "spellsKnown": 0,
-        "features": ["Deflect Missiles"]
-      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Beat Rush"] },
       { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Stunning Blow"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Prowess"] },
       { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Iron Body"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Haymaker"] },
       { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Flurry of Blows"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Impact"] },
       { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perfect Form"] }
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Hard Knocks"] }
     ],
     "features": [
       {
         "name": "Fisticuffs",
         "level": 1,
-        "description": "<p>Your Unarmed attacks deal 1d6 damage (increasing to 1d8 at 5th level and 1d10 at 9th level), and you can make an Unarmed attack as a Move.</p>",
+        "description": "<p>While only using Brawl Weapons, you can use a d4 if the damage was previously lower and, once per Round, you can spend half your Speed to make a second attack rather than skip your Move.</p><p>Additionally, if you have Favor on a Brawl Attack Check and hit a Target you could viably Grapple or Shove, you can choose to Grapple or Shove them.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Rope-a-Dope",
+        "level": 1,
+        "description": "<p>You gain the <strong>Check Hook Perk</strong> and can make two attacks with it, rather than one, if both attacks use Brawl Weapons.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Beat Rush",
+        "level": 2,
+        "description": "<p>If you take the Rush Action, you can also make one attack with a Brawl Weapon that Action.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Prowess",
+        "level": 4,
+        "description": "<p>If you pass a Save to Block, you ignore two of the highest rolled damage dice, rather than one.</p>",
         "passive": true,
         "changes": []
       },
       {
         "name": "Haymaker",
-        "level": 1,
-        "description": "<p>You gain the <strong>Wrestler Perk</strong>. When you hit with an Unarmed attack, you can push the target 5 feet.</p>",
-        "passive": true,
-        "changes": []
-      },
-      {
-        "name": "Deflect Missiles",
-        "level": 2,
-        "description": "<p>When hit by a Ranged attack, you can use your Reaction to reduce the damage by 1d10 + your Dexterity + your Pugilist Level.</p>",
-        "passive": false,
-        "changes": []
-      },
-      {
-        "name": "Stunning Blow",
-        "level": 4,
-        "description": "<p>When you hit with an Unarmed attack, you can force the target to make a Fortitude Save or be Dazed until the end of your next Turn.</p>",
-        "passive": false,
-        "changes": []
-      },
-      {
-        "name": "Iron Body",
         "level": 6,
-        "description": "<p>While you are not wearing Armor, you have +1 Armor. You also have resistance to Bludgeoning damage.</p>",
+        "description": "<p>If you roll 10 over your Brawl Difficulty for a Brawl weapon attack, you can choose to cause the Target to be Dazed until your next Turn.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Flurry of Blows",
+        "name": "Impact",
         "level": 8,
-        "description": "<p>When you take the Attack Action with an Unarmed attack, you can make two additional Unarmed attacks.</p>",
+        "description": "<p>You use a d6 for the damage die of your Brawl weapons.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Perfect Form",
+        "name": "Hard Knocks",
         "level": 10,
-        "description": "<p>Your Unarmed attacks count as (+2) Relics, and you have Favor on all Saves while you are not wearing Armor.</p>",
+        "description": "<p>Your Haymaker Feature now triggers if you roll 8 or more, rather than 10 or more.</p>",
         "passive": true,
         "changes": []
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

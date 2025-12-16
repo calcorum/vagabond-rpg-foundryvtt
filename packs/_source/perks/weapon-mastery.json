@@ -40,5 +40,6 @@
     "tags": ["combat", "melee", "training"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkWeaponMastery"
+  "_key": "!items!vagabondPerkWeaponMastery",
+  "reviewed": false
 }

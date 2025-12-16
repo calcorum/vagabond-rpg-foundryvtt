@@ -22,5 +22,6 @@
         "description": "<p>You have +2 additional Item Slots.</p>"
       }
     ]
-  }
+  },
+  "reviewed": false
 }

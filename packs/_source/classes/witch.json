@@ -5,12 +5,17 @@
   "type": "class",
   "img": "icons/svg/eye.svg",
   "system": {
-    "description": "<p>Witches are mysterious practitioners of dark magic who hex their enemies and commune with spirits. Their curses and debuffs make them powerful backline controllers.</p>",
+    "description": "<p>Mediaries of magical secrets. One may become a witch through the whispers of a familiar or the favor of a being from beyond.</p>",
     "keyStat": "awareness",
-    "actionStyle": "mysticism",
+    "actionStyle": "cast",
     "zone": "backline",
-    "trainedSkills": ["mysticism", "arcana", "craft", "detect", "survival"],
-    "startingPack": "<p>Hermit or Occultist</p>",
+    "weaponTraining": [],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
+      { "type": "choice", "skills": ["arcana", "craft", "medicine", "survival"], "count": 3 }
+    ],
+    "trainedSkills": [],
+    "startingPack": "<p>Fortune Teller or Mage</p>",
     "isCaster": true,
     "progression": [
       {
@@ -18,69 +23,70 @@
         "mana": 4,
         "castingMax": 0,
         "spellsKnown": 4,
-        "features": ["Witchcraft", "Hex"]
+        "features": ["Occultist", "Hex"]
       },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Familiar"] },
-      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Evil Eye"] },
-      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Coven Magic"] },
-      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Greater Hex"] },
-      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Grand Hex"] }
+      { "level": 2, "mana": 8, "castingMax": 0, "spellsKnown": 0, "features": ["Ritualism"] },
+      { "level": 3, "mana": 12, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 4, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Things Betwixt"] },
+      { "level": 5, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 6, "mana": 24, "castingMax": 0, "spellsKnown": 0, "features": ["Coventry"] },
+      { "level": 7, "mana": 28, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 32, "castingMax": 0, "spellsKnown": 0, "features": ["Widdershins"] },
+      { "level": 9, "mana": 36, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 10, "mana": 40, "castingMax": 0, "spellsKnown": 0, "features": ["Ritualism II"] }
     ],
     "features": [
       {
-        "name": "Witchcraft",
+        "name": "Occultist",
         "level": 1,
-        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Witch Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Witch Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You gain a Perk with a prerequisite of being Trained with Mysticism, and you can Cast Spells using Mysticism.</p><p><strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Witch Levels hereafter.</p><p><strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Witch Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Witch Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },
       {
         "name": "Hex",
         "level": 1,
-        "description": "<p>You can place a Hex on a Near Being as an Action. Choose one: <strong>Misfortune</strong> (Hinder on one roll per Turn), <strong>Slumber</strong> (Will Save or fall asleep), <strong>Cackle</strong> (extend Hex duration). The Hex lasts for 1 minute or until you place another Hex.</p>",
-        "passive": false,
+        "description": "<p>You can choose for the effects of a Spell you Cast (not the damage) to become continual for one of the Targets until you use this Feature on a different Target. This does not require your Focus. The number of Spells you can have as continual this way at the same time is equal to (half your Witch Level, round up).</p>",
+        "passive": true,
         "changes": []
       },
       {
-        "name": "Familiar",
+        "name": "Ritualism",
         "level": 2,
-        "description": "<p>You gain a magical familiar that can scout, deliver Touch spells, and aid you. If your familiar dies, you can resummon it during a Rest.</p>",
-        "passive": true,
-        "changes": []
-      },
-      {
-        "name": "Evil Eye",
-        "level": 4,
-        "description": "<p>You can curse a Near Enemy with your gaze. It has Hinder on Saves against your Spells and Hexes until the end of your next Turn.</p>",
+        "description": "<p>You can finish a Ritual that requires a Scene as an Action. You can only do so once per Shift.</p>",
         "passive": false,
         "changes": []
       },
       {
-        "name": "Coven Magic",
+        "name": "Things Betwixt",
+        "level": 4,
+        "description": "<p>Once per Scene, you can use your Action or skip your Move to become invisible until your next Turn. This requires your Focus.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Coventry",
         "level": 6,
-        "description": "<p>When you are within 30 feet of another caster, you can combine your magic. When you both Cast the same Spell targeting the same area or creature, combine the effects.</p>",
+        "description": "<p>You can Cast Spells that Near Allies can Cast.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Greater Hex",
+        "name": "Widdershins",
         "level": 8,
-        "description": "<p>You learn additional Hex options: <strong>Agony</strong> (target takes Cd6 damage each Turn), <strong>Disguise</strong> (target appears different), <strong>Flight</strong> (target gains Fly).</p>",
+        "description": "<p>The Target of your Hex is Weak to damage you deal. This does not ignore Immunity. Further, your Spells ignore Status Immunities of the Target of your Hex.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Grand Hex",
+        "name": "Ritualism II",
         "level": 10,
-        "description": "<p>You learn the most powerful Hexes: <strong>Death Curse</strong> (target must Save or die), <strong>Eternal Slumber</strong> (target falls into magical sleep until curse is broken), <strong>Forced Reincarnation</strong> (target's soul is placed in a new body).</p>",
+        "description": "<p>You can now use your Ritualism Feature twice per Shift.</p>",
         "passive": true,
         "changes": []
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

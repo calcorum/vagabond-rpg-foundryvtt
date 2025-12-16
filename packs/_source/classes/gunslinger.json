@@ -5,11 +5,20 @@
   "type": "class",
   "img": "icons/svg/target.svg",
   "system": {
-    "description": "<p>Gunslingers are deadly marksmen who specialize in ranged combat. Their quick draw and deadly aim make them feared backline strikers who excel at taking down targets from a distance.</p>",
+    "description": "<p>Attitude and tenacity are as core to the gunslinger as ammo. They stare down challenges through iron sights, fortified by their inner grit.</p>",
     "keyStat": "awareness",
     "actionStyle": "attack",
     "zone": "backline",
-    "trainedSkills": ["detect", "brawl", "finesse", "influence", "sneak", "survival"],
+    "weaponTraining": ["ranged"],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["detect"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["brawl", "finesse", "influence", "sneak", "survival"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Bounty Hunter or Tinker</p>",
     "isCaster": false,
     "progression": [
@@ -20,15 +29,69 @@
         "spellsKnown": 0,
         "features": ["Quick Draw", "Deadeye"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Skeet Shooter"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Grit"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Devastator"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Bad Medicine"] },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["High Noon"] }
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Skeet Shooter"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Grit"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Devastator"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Bad Medicine"]
+      },
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["High Noon"]
+      }
     ],
     "features": [
       {
@@ -82,5 +145,6 @@
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }

@@ -5,88 +5,146 @@
   "type": "class",
   "img": "icons/svg/lightning.svg",
   "system": {
-    "description": "<p>Magi are spell-swords who blend martial prowess with arcane magic. Their ability to channel spells through their weapons makes them versatile combatants who excel in both melee and magical combat.</p>",
+    "description": "<p>Spellblades, gishes, arcane knights, and eldritch tricksters all. Magi are arcane specialists that blend magic and martial prowess.</p>",
     "keyStat": "reason",
     "actionStyle": "arcana",
     "zone": "frontline",
-    "trainedSkills": ["arcana", "brawl", "finesse"],
+    "weaponTraining": ["melee"],
+    "skillTraining": [
+      { "type": "fixed", "skills": ["arcana"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["brawl", "detect", "finesse", "influence", "mysticism", "sneak"],
+        "count": 3
+      }
+    ],
+    "trainedSkills": [],
     "startingPack": "<p>Knight or Scholar</p>",
     "isCaster": true,
     "progression": [
       {
         "level": 1,
-        "mana": 4,
+        "mana": 2,
         "castingMax": 0,
-        "spellsKnown": 4,
-        "features": ["Arcane Warrior", "Spell Strike"]
+        "spellsKnown": 2,
+        "features": ["Spellstriker", "Esoteric Eye"]
       },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Arcane Pool"] },
-      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Spell Combat"] },
-      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Counterstrike"] },
-      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
       {
-        "level": 8,
-        "mana": 4,
+        "level": 2,
+        "mana": 2,
         "castingMax": 0,
         "spellsKnown": 0,
-        "features": ["Greater Spell Strike"]
+        "features": ["Spell Parry"]
       },
-      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["True Magus"] }
+      {
+        "level": 3,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Arcane Recall"]
+      },
+      {
+        "level": 5,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Spell Surge"]
+      },
+      {
+        "level": 7,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Aegis Obscura"]
+      },
+      {
+        "level": 9,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 2,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Melchior"]
+      }
     ],
     "features": [
       {
-        "name": "Arcane Warrior",
+        "name": "Spellstriker",
         "level": 1,
-        "description": "<p>You can Cast Spells using Arcana. <strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Magus Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Reason + half your Magus Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You gain the <strong>Gish Perk</strong> and you can Cast Spells using Arcana. <strong>Spells:</strong> You learn 2 Spells, one of which must always be Ward. You learn 1 other Spell every 3 Magus Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (2 × your Magus Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Reason + half your Magus Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Spell Strike",
+        "name": "Esoteric Eye",
         "level": 1,
-        "description": "<p>When you Cast a Spell that has a Range of Touch, you can deliver the Spell through a Melee Weapon attack. If the attack hits, the target is affected by both the attack and the Spell.</p>",
+        "description": "<p>If you can see a Target, you can use your Action or skip your Move to learn if any magic is currently affecting it. You can do so once per Shift, but you can spend 1 Mana to do so again.</p>",
         "passive": false,
         "changes": []
       },
       {
-        "name": "Arcane Pool",
+        "name": "Spell Parry",
         "level": 2,
-        "description": "<p>You can spend 1 Mana to enhance your weapon. For 1 minute, it counts as a (+1) Relic. This bonus increases by +1 at 6th and 10th Levels in this Class.</p>",
-        "passive": false,
-        "changes": []
-      },
-      {
-        "name": "Spell Combat",
-        "level": 4,
-        "description": "<p>When you take the Attack Action, you can also Cast a Spell with a Casting Time of 1 Action as part of that Action.</p>",
+        "description": "<p>You can Block Casts that include you as a Target if it either calls for a Reflex Save or has a delivery of Touch or Remote. If you Crit to Block a Cast, you can dispel the effect.</p>",
         "passive": true,
         "changes": []
       },
       {
-        "name": "Counterstrike",
+        "name": "Arcane Recall",
+        "level": 4,
+        "description": "<p>You can use your Action to open your esoteric eye of recall, allowing you to change one of your Spells Known that isn't Ward. You can't do so again until you Rest or take 1 Fatigue to do so.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Spell Surge",
         "level": 6,
-        "description": "<p>When an Enemy within your Melee Reach Casts a Spell, you can make an attack against them as a Reaction.</p>",
-        "passive": false,
+        "description": "<p>If you pass a Check to Block a Cast by 10 or more, you can reflect the Cast back at the Caster.</p>",
+        "passive": true,
         "changes": []
       },
       {
-        "name": "Greater Spell Strike",
+        "name": "Aegis Obscura",
         "level": 8,
-        "description": "<p>When you use Spell Strike and hit, you can spend 2 Mana to maximize the Spell's damage dice instead of rolling them.</p>",
-        "passive": false,
+        "description": "<p>You and the Target of your Ward Spell have Allsight and take half damage from magic-based sources.</p>",
+        "passive": true,
         "changes": []
       },
       {
-        "name": "True Magus",
+        "name": "Melchior",
         "level": 10,
-        "description": "<p>When you use Spell Combat, you can Cast two Spells instead of one.</p>",
+        "description": "<p>Your Spell Surge Feature now triggers if you roll 8 or more, rather than 10 or more.</p>",
         "passive": true,
         "changes": []
       }
     ],
     "customResource": {}
-  }
+  },
+  "reviewed": true
 }
