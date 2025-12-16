@@ -367,6 +367,12 @@ Hooks.once("init", () => {
     const n = Number(num) || 0;
     return n >= 0 ? `+${n}` : `${n}`;
   });
+
+  // Join array elements with separator
+  Handlebars.registerHelper("join", (arr, separator) => {
+    if (!Array.isArray(arr)) return "";
+    return arr.join(separator);
+  });
 });
 
 /* -------------------------------------------- */
