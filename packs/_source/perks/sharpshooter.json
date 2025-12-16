@@ -4,12 +4,12 @@
   "type": "perk",
   "img": "icons/svg/target.svg",
   "system": {
-    "description": "<p>You have trained extensively with ranged weapons. Your ranged attacks deal +1 damage.</p>",
+    "description": "<p>You can skip your Move to reduce the roll you need to Crit on a Ranged attack this Turn by 1.</p>",
     "prerequisites": {
       "stats": {
         "might": null,
-        "dexterity": 4,
-        "awareness": null,
+        "dexterity": null,
+        "awareness": 7,
         "reason": null,
         "presence": null,
         "luck": null
@@ -17,16 +17,10 @@
       "trainedSkills": ["ranged"],
       "spells": [],
       "perks": [],
-      "custom": "Ranged Training"
+      "custom": ""
     },
-    "changes": [
-      {
-        "key": "system.attacks.ranged.damageBonus",
-        "mode": 2,
-        "value": "1"
-      }
-    ],
-    "passive": true,
+    "changes": [],
+    "passive": false,
     "uses": {
       "value": 0,
       "max": 0,
@@ -37,9 +31,9 @@
     "isRitual": false,
     "ritualDuration": 0,
     "ritualComponents": "",
-    "tags": ["combat", "ranged", "training"]
+    "tags": ["combat", "ranged"]
   },
   "effects": [],
   "_key": "!items!vagabondPerkSharpshooter",
-  "reviewed": false
+  "reviewed": true
 }

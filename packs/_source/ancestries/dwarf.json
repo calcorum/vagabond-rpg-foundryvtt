@@ -27,16 +27,16 @@
       },
       {
         "name": "Tough",
-        "description": "<p>You gain +3 additional maximum HP.</p>",
+        "description": "<p>You gain additional maximum HP equal to your Level.</p>",
         "changes": [
           {
             "key": "system.resources.hp.bonus",
             "mode": 2,
-            "value": "3"
+            "value": "@level"
           }
         ]
       }
     ]
   },
-  "reviewed": false
+  "reviewed": true
 }

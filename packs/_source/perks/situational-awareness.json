@@ -4,7 +4,7 @@
   "type": "perk",
   "img": "icons/svg/eye.svg",
   "system": {
-    "description": "<p>You are always alert to danger. You cannot be Surprised, and you have Favor on Initiative rolls.</p>",
+    "description": "<p>You have Favor on Checks against surprise, and being flanked doesn't Hinder your Saves.</p>",
     "prerequisites": {
       "stats": {
         "might": null,
@@ -14,7 +14,7 @@
         "presence": null,
         "luck": null
       },
-      "trainedSkills": [],
+      "trainedSkills": ["detect"],
       "spells": [],
       "perks": [],
       "custom": ""
@@ -35,5 +35,5 @@
   },
   "effects": [],
   "_key": "!items!vagabondPerkSituationalAwareness",
-  "reviewed": false
+  "reviewed": true
 }
