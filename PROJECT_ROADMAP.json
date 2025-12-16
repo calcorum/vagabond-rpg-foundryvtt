@@ -346,7 +346,7 @@
           "tested": true,
           "priority": "high",
           "dependencies": ["2.2", "2.3", "1.8", "1.15"],
-          "notes": "Implemented via _onCreate/_preDelete lifecycle methods and updateActor hook. Made applyClassFeatures() idempotent. Commit 8afcf8c."
+          "notes": "Implemented via _onCreate lifecycle method and LevelUpDialog. Features with changes[] arrays auto-create ActiveEffects. applyClassFeatures() is idempotent, updateClassFeatures() handles level-up incrementally. Fixed duplicate item creation bug (dragDrop config). Design doc: NoteDiscovery gaming/vagabond-rpg/class-level-system-design.md. Prototype branch: prototype/class-level-system commit a7862be."
         },
         {
           "id": "2.13",
