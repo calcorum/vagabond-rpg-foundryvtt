@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsRogue0",
+  "_key": "!items!vagabondClsRogue0",
+  "name": "Rogue",
+  "type": "class",
+  "img": "icons/svg/dagger.svg",
+  "system": {
+    "description": "<p>Rogues are cunning opportunists who strike when their enemies least expect it. Their sneak attacks and luck manipulation make them deadly midline strikers who excel at exploiting weaknesses.</p>",
+    "keyStat": "dexterity",
+    "actionStyle": "attack",
+    "zone": "midline",
+    "trainedSkills": ["sneak", "finesse", "detect", "influence"],
+    "startingPack": "<p>Assassin or Thief</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Expertise", "Sneak Attack"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Cunning Action"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Uncanny Dodge"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasion"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Reliable Talent"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Stroke of Luck"] }
+    ],
+    "features": [
+      {
+        "name": "Expertise",
+        "level": 1,
+        "description": "<p>You gain the <strong>Jack of All Trades Perk</strong>. Choose two Skills you are Trained in; you have Favor on Checks with those Skills.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Sneak Attack",
+        "level": 1,
+        "description": "<p>Once per Turn, when you hit a Target with an attack and have Favor on the attack roll, or an Enemy of the Target is within 5 feet of it, you deal an extra Cd6 damage. This damage increases by 1d6 at 3rd, 5th, 7th, and 9th Levels in this Class.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Cunning Action",
+        "level": 2,
+        "description": "<p>You can take the Dash, Disengage, or Hide Action as a Move, rather than an Action.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Uncanny Dodge",
+        "level": 4,
+        "description": "<p>When an attack hits you, you can use your Reaction to halve the attack's damage against you.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Evasion",
+        "level": 6,
+        "description": "<p>When you pass a Reflex Save, you take no damage instead of half damage.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Reliable Talent",
+        "level": 8,
+        "description": "<p>When you make a Check with a Skill you are Trained in and roll lower than 10 on the d20, you can treat the roll as a 10.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Stroke of Luck",
+        "level": 10,
+        "description": "<p>Once per Rest, if you miss with an attack, you can turn the miss into a hit.</p>",
+        "passive": false,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

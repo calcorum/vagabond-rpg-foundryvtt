@@ -1,0 +1,92 @@
+{
+  "_id": "vagabondClsHunter",
+  "_key": "!items!vagabondClsHunter",
+  "name": "Hunter",
+  "type": "class",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "description": "<p>Hunters are expert trackers and survivalists who mark their prey for destruction. Their ability to focus on a single target makes them deadly strikers who rarely miss their mark.</p>",
+    "keyStat": "awareness",
+    "actionStyle": "attack",
+    "zone": "midline",
+    "trainedSkills": ["survival"],
+    "startingPack": "<p>Scout or Warrior</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Hunter's Mark", "Survivalist"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Rover"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Overwatch"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Quarry"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Lethal Precision"]
+      },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Apex Predator"] }
+    ],
+    "features": [
+      {
+        "name": "Hunter's Mark",
+        "level": 1,
+        "description": "<p>You can mark a Being either when you attack it, or by skipping your Move if you can sense it. When you do: You must Focus on the mark. When you make an attack against it, roll two d20s and use the highest for the Check.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Survivalist",
+        "level": 1,
+        "description": "<p>You gain the <strong>Padfoot Perk</strong>, you have Favor on Checks to track and navigate, and you can Forage while Traveling at a Normal Pace.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Rover",
+        "level": 2,
+        "description": "<p>Difficult Terrain does not impede your walking Speed, and you have Climb and Swim.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Overwatch",
+        "level": 4,
+        "description": "<p>Your additional d20 for attacks with your Hunter's Mark also applies to your Saves provoked by the marked Target.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Quarry",
+        "level": 6,
+        "description": "<p>You can sense Beings that are missing any HP within Far or that are marked by your Hunter's Mark as if by Blindsight.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Lethal Precision",
+        "level": 8,
+        "description": "<p>You now roll three d20s with your Hunter's Mark and Overwatch Features and use the highest result of the three for the result.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Apex Predator",
+        "level": 10,
+        "description": "<p>Damage dealt to the Target of your Hunter's Mark ignores Immune and 1 of its Armor.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

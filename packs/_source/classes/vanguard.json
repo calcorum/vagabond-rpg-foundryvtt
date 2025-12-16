@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsVangua",
+  "_key": "!items!vagabondClsVangua",
+  "name": "Vanguard",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Vanguards are stalwart defenders who protect their allies from harm. Their ability to absorb damage and control the battlefield makes them invaluable frontline tanks.</p>",
+    "keyStat": "might",
+    "actionStyle": "brawl",
+    "zone": "frontline",
+    "trainedSkills": ["brawl", "detect", "leadership", "influence"],
+    "startingPack": "<p>Knight or Warrior</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Shield Wall", "Protector"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Taunt"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Resolute"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Hold the Line"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Bulwark"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Immovable"] }
+    ],
+    "features": [
+      {
+        "name": "Shield Wall",
+        "level": 1,
+        "description": "<p>While you have a Shield equipped, you have +1 Armor, and Allies within 5 feet of you have +1 to their Block Saves.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Protector",
+        "level": 1,
+        "description": "<p>You gain the <strong>Sentinel Perk</strong>. When an Ally within 5 feet is targeted by an attack, you can use your Reaction to become the target instead.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Taunt",
+        "level": 2,
+        "description": "<p>As an Action, you can taunt a Near Enemy. Until the end of your next Turn, it has Hinder on attacks that don't include you as a Target.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Resolute",
+        "level": 4,
+        "description": "<p>You have Favor on Saves against being Frightened, Charmed, or moved against your will.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Hold the Line",
+        "level": 6,
+        "description": "<p>Enemies provoke an Opportunity Attack from you when they move while within your Reach, even if they Disengage.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Bulwark",
+        "level": 8,
+        "description": "<p>While you have a Shield equipped, you reduce all damage you take by 2 per damage die.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Immovable",
+        "level": 10,
+        "description": "<p>You cannot be moved against your will, and you cannot be knocked Prone. Additionally, your Shield Wall bonus increases to +2 Armor and +2 to Block Saves.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

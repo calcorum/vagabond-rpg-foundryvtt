@@ -1,0 +1,105 @@
+{{!-- Level Up Dialog Template --}}
+{{!-- Shows features gained and handles perk/choice selections --}}
+
+<div class="vagabond level-up-content">
+  <header class="level-up-header">
+    <h2>Level Up!</h2>
+    <p class="level-announcement">
+      {{actor.name}} has reached <strong>Level {{newLevel}}</strong>
+    </p>
+  </header>
+
+  {{!-- Features Gained --}}
+  {{#if features.length}}
+  <section class="features-gained">
+    <h3>Features Gained</h3>
+    <ul class="feature-list">
+      {{#each features}}
+      <li class="feature-item {{#if hasChanges}}has-effects{{/if}}">
+        <div class="feature-header">
+          <span class="feature-name">{{name}}</span>
+          <span class="feature-class">({{className}})</span>
+          {{#if hasChanges}}
+          <span class="feature-auto" title="Active Effect will be applied automatically">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          {{/if}}
+        </div>
+        <div class="feature-description">{{{description}}}</div>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{!-- Choice Features (e.g., Fighting Style) --}}
+  {{#if hasChoices}}
+  <section class="choice-features">
+    <h3>Feature Choices</h3>
+    {{#each choiceFeatures}}
+    <div class="choice-feature">
+      <label class="choice-label">
+        <span class="feature-name">{{name}}</span>
+        <span class="feature-class">({{className}})</span>
+      </label>
+      <div class="feature-description">{{{description}}}</div>
+
+      {{!-- For perk choices with filtered list --}}
+      {{#if (eq choiceType "perk")}}
+      <select name="featureChoice.{{name}}" data-feature-choice="{{name}}" class="perk-choice-select">
+        <option value="">-- Select a Perk --</option>
+        {{#each filteredPerks}}
+        <option value="{{this.uuid}}" {{#unless this.prerequisitesMet}}disabled{{/unless}}>
+          {{this.name}}{{#unless this.prerequisitesMet}} (Prerequisites not met){{/unless}}
+        </option>
+        {{/each}}
+      </select>
+      {{/if}}
+    </div>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  {{!-- Perk Selection --}}
+  {{#if hasPerks}}
+  <section class="perk-selection">
+    <h3>Perk Selection</h3>
+    <p class="perk-instruction">Choose a perk from the list below:</p>
+
+    {{#each perkSlots}}
+    <div class="perk-slot">
+      <label class="perk-slot-label">
+        Perk ({{className}})
+      </label>
+      <select data-perk-select="{{@index}}" class="perk-select">
+        <option value="">-- Select a Perk --</option>
+        {{#each ../availablePerks}}
+        <option value="{{uuid}}" {{#unless prerequisitesMet}}disabled{{/unless}}>
+          {{name}}{{#unless prerequisitesMet}} (Prerequisites not met){{/unless}}
+        </option>
+        {{/each}}
+      </select>
+    </div>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  {{!-- No features message --}}
+  {{#unless features.length}}
+  {{#unless hasPerks}}
+  {{#unless hasChoices}}
+  <section class="no-features">
+    <p>No new features at this level.</p>
+  </section>
+  {{/unless}}
+  {{/unless}}
+  {{/unless}}
+
+  {{!-- Confirm Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="confirm-btn">
+      <i class="fa-solid fa-check"></i>
+      Confirm Level Up
+    </button>
+  </div>
+</div>

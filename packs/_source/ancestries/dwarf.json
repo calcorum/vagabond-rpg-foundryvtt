@@ -1,0 +1,41 @@
+{
+  "_id": "vagabondAnceDwarf",
+  "_key": "!items!vagabondAnceDwarf",
+  "name": "Dwarf",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Stout and resilient, dwarves are known for their toughness and resistance to adversity. Their sturdy constitution makes them excellent warriors and craftsmen.</p>",
+    "beingType": "humanlike",
+    "size": "medium",
+    "traits": [
+      {
+        "name": "Darksight",
+        "description": "<p>You can see in darkness as if it were dim light.</p>",
+        "changes": [
+          {
+            "key": "system.senses.darkvision",
+            "mode": 5,
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "name": "Sturdy",
+        "description": "<p>You gain +1 to saves against Fear, Sickened, and Shove effects.</p>",
+        "changes": []
+      },
+      {
+        "name": "Tough",
+        "description": "<p>You gain +3 additional maximum HP.</p>",
+        "changes": [
+          {
+            "key": "system.resources.hp.bonus",
+            "mode": 2,
+            "value": "3"
+          }
+        ]
+      }
+    ]
+  }
+}

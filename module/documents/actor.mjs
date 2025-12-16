@@ -1,3 +1,14 @@
+import { LevelUpDialog } from "../applications/_module.mjs";
+
+// Debug logging for level-up workflow - set to false to disable
+const DEBUG_LEVELUP = true;
+const debugLog = (...args) => {
+  if (DEBUG_LEVELUP) console.log("[VagabondActor]", ...args);
+};
+const debugWarn = (...args) => {
+  if (DEBUG_LEVELUP) console.warn("[VagabondActor]", ...args);
+};
+
 /**
  * VagabondActor Document Class
  *
@@ -24,18 +35,33 @@ export default class VagabondActor extends Actor {
    * @override
    */
   async _onUpdate(changed, options, userId) {
+    debugLog(`_onUpdate called for "${this.name}"`, {
+      changed,
+      options,
+      userId,
+      currentUserId: game.user.id,
+    });
+
     await super._onUpdate(changed, options, userId);
 
     // Only process for the updating user
-    if (game.user.id !== userId) return;
+    if (game.user.id !== userId) {
+      debugLog("Skipping - not the updating user");
+      return;
+    }
 
     // Check for level change on characters
     if (this.type === "character" && changed.system?.level !== undefined) {
       const newLevel = changed.system.level;
       const oldLevel = options._previousLevel ?? 1;
 
+      debugLog(`Level change detected: ${oldLevel} -> ${newLevel}`);
+
       if (newLevel !== oldLevel) {
+        debugLog("Calling _onLevelChange...");
         await this._onLevelChange(newLevel, oldLevel);
+      } else {
+        debugLog("Level unchanged, skipping level change handling");
       }
     }
   }
@@ -46,30 +72,69 @@ export default class VagabondActor extends Actor {
    * @override
    */
   async _preUpdate(changed, options, userId) {
+    debugLog(`_preUpdate called for "${this.name}"`, {
+      changed,
+      currentLevel: this.system?.level,
+    });
+
     await super._preUpdate(changed, options, userId);
 
     // Store current level for level change detection
     if (this.type === "character" && changed.system?.level !== undefined) {
       options._previousLevel = this.system.level;
+      debugLog(`Stored previous level: ${options._previousLevel}`);
     }
   }
 
   /**
    * Handle character level changes.
-   * Updates class features for all owned class items.
+   * Shows level-up dialog to display gained features and handle choices.
    *
    * @param {number} newLevel - The new character level
    * @param {number} oldLevel - The previous character level
    * @private
    */
   async _onLevelChange(newLevel, oldLevel) {
-    // Get all class items
-    const classes = this.items.filter((i) => i.type === "class");
+    debugLog(`_onLevelChange called: ${oldLevel} -> ${newLevel}`);
 
-    // Update features for each class
-    for (const classItem of classes) {
-      await classItem.updateClassFeatures(newLevel, oldLevel);
+    // Check if there are any classes that have features to process
+    const classes = this.items.filter((i) => i.type === "class");
+    debugLog(
+      `Found ${classes.length} class(es):`,
+      classes.map((c) => c.name)
+    );
+
+    if (classes.length === 0) {
+      // No class, just notify
+      debugWarn("No classes found on actor - showing simple notification");
+      ui.notifications.info(`${this.name} advanced to level ${newLevel}!`);
+      return;
     }
+
+    // Log class feature info
+    for (const classItem of classes) {
+      const features = classItem.system.features || [];
+      const progression = classItem.system.progression || [];
+      debugLog(`Class "${classItem.name}" data:`, {
+        featuresCount: features.length,
+        features: features.map((f) => ({
+          name: f.name,
+          level: f.level,
+          hasChanges: f.changes?.length > 0,
+          requiresChoice: f.requiresChoice,
+        })),
+        progression: progression.map((p) => ({
+          level: p.level,
+          features: p.features,
+        })),
+      });
+    }
+
+    // Show level-up dialog to handle features and choices
+    // The dialog will call updateClassFeatures after user confirms
+    debugLog("Creating LevelUpDialog...");
+    await LevelUpDialog.create(this, newLevel, oldLevel);
+    debugLog("LevelUpDialog created/displayed");
   }
 
   /* -------------------------------------------- */

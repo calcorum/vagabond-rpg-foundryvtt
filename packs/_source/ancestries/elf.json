@@ -1,0 +1,26 @@
+{
+  "_id": "vagabondAnceElf00",
+  "_key": "!items!vagabondAnceElf00",
+  "name": "Elf",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Elves are graceful fae beings with an innate connection to magic. Their keen senses and natural attunement to the arcane make them exceptional spellcasters and perceptive scouts.</p>",
+    "beingType": "fae",
+    "size": "medium",
+    "traits": [
+      {
+        "name": "Ascendancy",
+        "description": "<p>You are Trained in one Skill of your choice.</p>"
+      },
+      {
+        "name": "Elven Eyes",
+        "description": "<p>You gain Favor on sight-based Detect checks.</p>"
+      },
+      {
+        "name": "Naturally Attuned",
+        "description": "<p>You know one Spell of your choice (even if you are not a caster).</p>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsMercha",
+  "_key": "!items!vagabondClsMercha",
+  "name": "Merchant",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "system": {
+    "description": "<p>Merchants are savvy traders who use their wealth and social connections to support their allies. Their ability to acquire rare items and manipulate markets makes them invaluable support characters.</p>",
+    "keyStat": "reason",
+    "actionStyle": "influence",
+    "zone": "midline",
+    "trainedSkills": ["influence", "craft", "detect"],
+    "startingPack": "<p>Noble or Traveler</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Deep Pockets", "Connections"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Appraisal"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Haggle"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Investment"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Black Market"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Tycoon"] }
+    ],
+    "features": [
+      {
+        "name": "Deep Pockets",
+        "level": 1,
+        "description": "<p>You start with an additional 5g, and you gain 1g at the start of each session.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Connections",
+        "level": 1,
+        "description": "<p>You gain the <strong>Silver Tongue Perk</strong>. In any settlement, you can find a contact who can help you acquire goods, information, or services.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Appraisal",
+        "level": 2,
+        "description": "<p>You can determine the exact value of any item, and you have Favor on Checks to identify magical items.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Haggle",
+        "level": 4,
+        "description": "<p>You buy items for 75% of their listed price and sell items for 75% of their value (instead of 50%).</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Investment",
+        "level": 6,
+        "description": "<p>During downtime, you can invest gold. At the start of the next session, roll a d6: on 4-6, you gain 50% profit; on 2-3, you break even; on 1, you lose 50%.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Black Market",
+        "level": 8,
+        "description": "<p>You can acquire any item regardless of its legality or rarity, given enough time and gold.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Tycoon",
+        "level": 10,
+        "description": "<p>Your session gold increases to 3g, and your investments always succeed (minimum break even on a 1).</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

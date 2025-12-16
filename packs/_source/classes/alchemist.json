@@ -1,0 +1,89 @@
+{
+  "_id": "vagabondClsAlchem",
+  "_key": "!items!vagabondClsAlchem",
+  "name": "Alchemist",
+  "type": "class",
+  "img": "icons/svg/flask.svg",
+  "system": {
+    "description": "<p>Alchemists are masters of chemical warfare and crafting, using their knowledge to create powerful potions, bombs, and elixirs that devastate their foes or aid their allies.</p>",
+    "keyStat": "reason",
+    "actionStyle": "craft",
+    "zone": "backline",
+    "trainedSkills": ["craft"],
+    "startingPack": "<p>Alchemist or Assassin</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Alchemy", "Catalyze"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Eureka"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Potency"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Mix"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Big Bang"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Prima Materia"] }
+    ],
+    "features": [
+      {
+        "name": "Alchemy",
+        "level": 1,
+        "description": "<p>You can attack with alchemical items using Craft. <strong>Formulae:</strong> Choose 4 alchemical items with a value no higher than (your Alchemist Level × 50s). You only need to provide 5s of materials to Craft these items and have Alchemy Tools equipped. You learn to Craft 1 other alchemical item this way every 2 Levels in this Class hereafter.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Catalyze",
+        "level": 1,
+        "description": "<p>You gain the <strong>Deft Hands Perk</strong>, and you can Craft alchemical items with the Use Action.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Eureka",
+        "level": 2,
+        "description": "<p>You gain a Studied die when you Crit on a Craft Check.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Potency",
+        "level": 4,
+        "description": "<p>The damage and healing dice of your alchemical items can explode.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Mix",
+        "level": 6,
+        "description": "<p>You can take the Use Action to combine two alchemical items together, causing their effects to both occur when you Use the combined item. This combined item lasts for the Round, then goes inert.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Big Bang",
+        "level": 8,
+        "description": "<p>You gain a d6 bonus to the damage and healing of your alchemical items, and they can explode on a roll of their two highest values.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Prima Materia",
+        "level": 10,
+        "description": "<p>Once per Day, you can use your Action or skip your Move to Craft an alchemical item with a value as high as 10g without materials.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {
+      "name": "Formulae Known",
+      "max": "4 + floor(@classes.alchemist.level / 2)"
+    }
+  }
+}

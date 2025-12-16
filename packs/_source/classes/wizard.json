@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsWizard0",
+  "_key": "!items!vagabondClsWizard0",
+  "name": "Wizard",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Wizards are scholars of the arcane who cast spells through careful study and precise technique. Their deep understanding of magical theory makes them versatile backline blasters.</p>",
+    "keyStat": "reason",
+    "actionStyle": "arcana",
+    "zone": "backline",
+    "trainedSkills": ["arcana", "craft", "detect", "influence", "medicine"],
+    "startingPack": "<p>Scholar</p>",
+    "isCaster": true,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 4,
+        "features": ["Arcane Scholar", "Spellbook"]
+      },
+      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Focused Casting"] },
+      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Magical Thesis"] },
+      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Multicast"] },
+      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Greater Thesis"] },
+      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Arcane Mastery"] }
+    ],
+    "features": [
+      {
+        "name": "Arcane Scholar",
+        "level": 1,
+        "description": "<p>You can Cast Spells using Arcana. <strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Wizard Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Reason + half your Wizard Level, round up). You regain spent Mana when you Rest.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Spellbook",
+        "level": 1,
+        "description": "<p>You get the <strong>Ritualist Perk</strong>. You have a Spellbook that contains the details and methods of Casting your Spells. If you lose your Spellbook, you can recopy it during a Rest using materials worth 5s × your Wizard Level. You can copy Spells from others' Spellbooks or Scrolls; doing so costs 5s and requires 1 hour per Spell.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Focused Casting",
+        "level": 2,
+        "description": "<p>You can Focus on two Spells simultaneously, rather than one.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Magical Thesis",
+        "level": 4,
+        "description": "<p>Choose one: <strong>Abjurer</strong> (reduce damage from Spells by 1 per die), <strong>Conjurer</strong> (summons have +1 Armor), <strong>Evoker</strong> (Spell damage dice can explode), or <strong>Illusionist</strong> (Illusions are Favored to disbelieve).</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Multicast",
+        "level": 6,
+        "description": "<p>When you Cast a Spell with a Range of Close or farther, you can spend 1 additional Mana to Target an additional Being within Range.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Greater Thesis",
+        "level": 8,
+        "description": "<p>Your Magical Thesis improves. <strong>Abjurer</strong> (reduce by 2), <strong>Conjurer</strong> (summons have +2 Armor), <strong>Evoker</strong> (explode on two highest values), <strong>Illusionist</strong> (Illusions deal psychic damage on failed disbelief).</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Arcane Mastery",
+        "level": 10,
+        "description": "<p>Once per Day, you can Cast a Spell without spending Mana.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "vagabondAnceDraken",
+  "_key": "!items!vagabondAnceDraken",
+  "name": "Draken",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Draken are dragon-blooded humanoids with scales, claws, and the ability to breathe elemental energy. Their draconic heritage grants them natural armor and resistance to one damage type.</p>",
+    "beingType": "cryptid",
+    "size": "medium",
+    "traits": [
+      {
+        "name": "Breath Attack",
+        "description": "<p>As an Action, you can breathe elemental energy in a 15-foot cone, dealing 2d6! damage of your chosen type (fire, cold, shock, or acid, chosen at character creation). Targets may make a Reflex save to take half damage.</p>"
+      },
+      {
+        "name": "Scale",
+        "description": "<p>Your natural scales grant you +1 Armor.</p>"
+      },
+      {
+        "name": "Draconic Resilience",
+        "description": "<p>You take half damage from one damage type of your choice (matching your breath weapon).</p>"
+      }
+    ]
+  }
+}
