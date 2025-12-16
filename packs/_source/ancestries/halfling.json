@@ -1,0 +1,26 @@
+{
+  "_id": "vagabondAnceHalfli",
+  "_key": "!items!vagabondAnceHalfli",
+  "name": "Halfling",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Small but surprisingly lucky, halflings are nimble folk who can slip through tight spaces and always seem to land on their feet. Their natural good fortune is legendary.</p>",
+    "beingType": "humanlike",
+    "size": "small",
+    "traits": [
+      {
+        "name": "Nimble",
+        "description": "<p>Your base Speed is increased by 5.</p>"
+      },
+      {
+        "name": "Squat",
+        "description": "<p>You can move through spaces occupied by larger creatures.</p>"
+      },
+      {
+        "name": "Tricksy",
+        "description": "<p>When you take a Rest, you regain +1 additional Luck.</p>"
+      }
+    ]
+  }
+}

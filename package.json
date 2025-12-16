@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "description": "Foundry VTT system for Vagabond RPG",
   "scripts": {
-    "build": "sass styles/scss/vagabond.scss styles/vagabond.css --style=compressed",
+    "build": "npm run build:css && npm run build:packs",
+    "build:css": "sass styles/scss/vagabond.scss styles/vagabond.css --style=compressed",
+    "build:packs": "fvtt package workon vagabond --type System && npm run build:pack:ancestries && npm run build:pack:classes && npm run build:pack:spells && npm run build:pack:perks",
+    "build:pack:ancestries": "fvtt package pack -n ancestries -t Item --in packs/_source/ancestries --out packs",
+    "build:pack:classes": "fvtt package pack -n classes -t Item --in packs/_source/classes --out packs",
+    "build:pack:spells": "fvtt package pack -n spells -t Item --in packs/_source/spells --out packs",
+    "build:pack:perks": "fvtt package pack -n perks -t Item --in packs/_source/perks --out packs",
     "watch": "sass styles/scss/vagabond.scss styles/vagabond.css --watch --style=expanded --source-map",
     "lint": "eslint module/",
     "lint:fix": "eslint module/ --fix",
@@ -23,6 +29,7 @@
   },
   "homepage": "https://github.com/calcorum/vagabond-rpg-foundryvtt#readme",
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.2",
     "eslint": "^8.57.0",
     "husky": "^9.1.0",
     "lint-staged": "^15.2.0",

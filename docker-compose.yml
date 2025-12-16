@@ -10,11 +10,15 @@ services:
       - FOUNDRY_ADMIN_KEY=${FOUNDRY_ADMIN_KEY:-vagabond-dev}
       - FOUNDRY_LICENSE_KEY=${FOUNDRY_LICENSE_KEY}
       - CONTAINER_PRESERVE_CONFIG=true
+      # Run as host user to avoid permission issues with bind-mounted packs
+      - PUID=1000
+      - PGID=1001
     volumes:
       # Foundry data directory
       - ./foundrydata:/data
       # Mount system directly for hot reload development
-      - ./:/data/Data/systems/vagabond:ro
+      # Note: Removed :ro because LevelDB packs need write access for temp files
+      - ./:/data/Data/systems/vagabond
     ports:
       - "30000:30000"
     # Required for Docker-in-LXC or rootless podman

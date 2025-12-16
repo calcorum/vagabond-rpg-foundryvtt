@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsWitch0",
+  "_key": "!items!vagabondClsWitch0",
+  "name": "Witch",
+  "type": "class",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>Witches are mysterious practitioners of dark magic who hex their enemies and commune with spirits. Their curses and debuffs make them powerful backline controllers.</p>",
+    "keyStat": "awareness",
+    "actionStyle": "mysticism",
+    "zone": "backline",
+    "trainedSkills": ["mysticism", "arcana", "craft", "detect", "survival"],
+    "startingPack": "<p>Hermit or Occultist</p>",
+    "isCaster": true,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 4,
+        "features": ["Witchcraft", "Hex"]
+      },
+      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Familiar"] },
+      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Evil Eye"] },
+      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Coven Magic"] },
+      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Greater Hex"] },
+      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Grand Hex"] }
+    ],
+    "features": [
+      {
+        "name": "Witchcraft",
+        "level": 1,
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Witch Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Witch Level, round up). You regain spent Mana when you Rest.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Hex",
+        "level": 1,
+        "description": "<p>You can place a Hex on a Near Being as an Action. Choose one: <strong>Misfortune</strong> (Hinder on one roll per Turn), <strong>Slumber</strong> (Will Save or fall asleep), <strong>Cackle</strong> (extend Hex duration). The Hex lasts for 1 minute or until you place another Hex.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Familiar",
+        "level": 2,
+        "description": "<p>You gain a magical familiar that can scout, deliver Touch spells, and aid you. If your familiar dies, you can resummon it during a Rest.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Evil Eye",
+        "level": 4,
+        "description": "<p>You can curse a Near Enemy with your gaze. It has Hinder on Saves against your Spells and Hexes until the end of your next Turn.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Coven Magic",
+        "level": 6,
+        "description": "<p>When you are within 30 feet of another caster, you can combine your magic. When you both Cast the same Spell targeting the same area or creature, combine the effects.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Greater Hex",
+        "level": 8,
+        "description": "<p>You learn additional Hex options: <strong>Agony</strong> (target takes Cd6 damage each Turn), <strong>Disguise</strong> (target appears different), <strong>Flight</strong> (target gains Fly).</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Grand Hex",
+        "level": 10,
+        "description": "<p>You learn the most powerful Hexes: <strong>Death Curse</strong> (target must Save or die), <strong>Eternal Slumber</strong> (target falls into magical sleep until curse is broken), <strong>Forced Reincarnation</strong> (target's soul is placed in a new body).</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

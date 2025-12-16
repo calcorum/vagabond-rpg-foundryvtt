@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsGunsli",
+  "_key": "!items!vagabondClsGunsli",
+  "name": "Gunslinger",
+  "type": "class",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Gunslingers are deadly marksmen who specialize in ranged combat. Their quick draw and deadly aim make them feared backline strikers who excel at taking down targets from a distance.</p>",
+    "keyStat": "awareness",
+    "actionStyle": "attack",
+    "zone": "backline",
+    "trainedSkills": ["detect", "brawl", "finesse", "influence", "sneak", "survival"],
+    "startingPack": "<p>Bounty Hunter or Tinker</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Quick Draw", "Deadeye"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Skeet Shooter"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Grit"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Devastator"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Bad Medicine"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["High Noon"] }
+    ],
+    "features": [
+      {
+        "name": "Quick Draw",
+        "level": 1,
+        "description": "<p>You gain the <strong>Marksmanship Perk</strong>. Further, when combat occurs, you can make one attack before the first Turn.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Deadeye",
+        "level": 1,
+        "description": "<p>After you pass a Ranged Check, you Crit on subsequent Ranged attacks on a d20 roll 1 lower, but no lower than 17. This resets to 0 at the end of your Turn if you did not pass a Ranged Check since your last Turn.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Skeet Shooter",
+        "level": 2,
+        "description": "<p>Once per Round, you can make a Ranged attack on an Off-Turn to Target a projectile from an attack you can see. If you pass, reduce the damage of the triggering attack by the damage you would deal with your attack. The projectile falls out of the air if reduced to 0.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Grit",
+        "level": 4,
+        "description": "<p>When you Crit on a Ranged attack, the damage dice can explode.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Devastator",
+        "level": 6,
+        "description": "<p>When you reduce an Enemy to 0 HP, the roll on the d20 to Crit as per your Deadeye Feature is immediately set to 17.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Bad Medicine",
+        "level": 8,
+        "description": "<p>You deal an extra die of damage when you Crit with a Ranged Check.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "High Noon",
+        "level": 10,
+        "description": "<p>Once per Turn, if you Crit on a Ranged Check, you can make one additional attack.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

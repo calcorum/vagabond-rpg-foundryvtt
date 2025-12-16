@@ -67,6 +67,10 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       modifyResource: VagabondActorSheet.#onModifyResource,
       toggleTrained: VagabondActorSheet.#onToggleTrained,
     },
+    // Drag-drop configuration - use Foundry's built-in system
+    // Setting to empty array disables ActorSheetV2's default handling
+    // so we can use our own _onDrop override
+    dragDrop: [{ dropSelector: null }],
   };
 
   /** @override */
@@ -416,7 +420,9 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
   }
 
   /**
-   * Set up drag-and-drop handlers.
+   * Set up drag-and-drop handlers for dragging items FROM this sheet.
+   * Drop handling is configured via DEFAULT_OPTIONS.dragDrop and uses
+   * the _onDrop method override - we don't add manual listeners for drops.
    * @protected
    */
   _setupDragDrop() {
@@ -426,10 +432,9 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       el.setAttribute("draggable", "true");
       el.addEventListener("dragstart", this._onDragStart.bind(this));
     }
-
-    // Enable dropping items onto the sheet
-    this.element.addEventListener("dragover", this._onDragOver.bind(this));
-    this.element.addEventListener("drop", this._onDrop.bind(this));
+    // Note: Drop handling is managed by Foundry's dragDrop configuration
+    // in DEFAULT_OPTIONS, which calls our _onDrop override. We don't add
+    // manual drop listeners here to avoid duplicate item creation.
   }
 
   /**

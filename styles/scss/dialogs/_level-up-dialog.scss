@@ -1,0 +1,241 @@
+// Vagabond RPG - Level Up Dialog Styles
+// ======================================
+// Styles for the level-up dialog that shows gained features and choices.
+
+.vagabond.level-up-dialog {
+  &.themed {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  .level-up-content {
+    @include flex-column;
+    gap: $spacing-4;
+    padding: $spacing-4;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  // Header section
+  .level-up-header {
+    text-align: center;
+    padding-bottom: $spacing-3;
+    border-bottom: 2px solid var(--color-accent-primary);
+
+    h2 {
+      margin: 0 0 $spacing-2 0;
+      font-family: $font-family-header;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      color: var(--color-accent-primary);
+    }
+
+    .level-announcement {
+      margin: 0;
+      font-size: $font-size-lg;
+      color: var(--color-text-primary);
+
+      strong {
+        color: var(--color-accent-primary);
+      }
+    }
+  }
+
+  // Features gained section
+  .features-gained {
+    @include flex-column;
+    gap: $spacing-3;
+
+    h3 {
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @include flex-column;
+      gap: $spacing-2;
+    }
+
+    .feature-item {
+      @include panel;
+      padding: $spacing-3;
+      background-color: var(--color-bg-secondary);
+
+      &.has-effects {
+        border-left: 3px solid var(--color-success);
+      }
+
+      .feature-header {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: $spacing-2;
+        margin-bottom: $spacing-2;
+
+        .feature-name {
+          font-weight: $font-weight-semibold;
+          color: var(--color-text-primary);
+        }
+
+        .feature-class {
+          font-size: $font-size-sm;
+          color: var(--color-text-muted);
+        }
+
+        .feature-auto {
+          color: var(--color-success);
+          font-size: $font-size-sm;
+
+          i {
+            font-size: $font-size-base;
+          }
+        }
+      }
+
+      .feature-description {
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+
+        p {
+          margin: 0;
+        }
+
+        strong {
+          color: var(--color-text-primary);
+        }
+      }
+    }
+  }
+
+  // Choice features section
+  .choice-features {
+    @include flex-column;
+    gap: $spacing-3;
+
+    h3 {
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    .choice-feature {
+      @include panel;
+      padding: $spacing-3;
+      background-color: var(--color-bg-secondary);
+      border-left: 3px solid var(--color-warning);
+
+      .choice-label {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: $spacing-2;
+        margin-bottom: $spacing-2;
+
+        .feature-name {
+          font-weight: $font-weight-semibold;
+          color: var(--color-text-primary);
+        }
+
+        .feature-class {
+          font-size: $font-size-sm;
+          color: var(--color-text-muted);
+        }
+      }
+
+      .feature-description {
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+        margin-bottom: $spacing-3;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .perk-choice-select {
+        @include input-base;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Perk selection section
+  .perk-selection {
+    @include flex-column;
+    gap: $spacing-3;
+
+    h3 {
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--color-text-primary);
+    }
+
+    .perk-instruction {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: var(--color-text-secondary);
+    }
+
+    .perk-slot {
+      @include panel;
+      padding: $spacing-3;
+      background-color: var(--color-bg-secondary);
+
+      .perk-slot-label {
+        display: block;
+        font-weight: $font-weight-semibold;
+        color: var(--color-text-primary);
+        margin-bottom: $spacing-2;
+      }
+
+      .perk-select {
+        @include input-base;
+        width: 100%;
+        cursor: pointer;
+
+        option:disabled {
+          color: var(--color-text-muted);
+        }
+      }
+    }
+  }
+
+  // No features message
+  .no-features {
+    @include panel;
+    padding: $spacing-4;
+    text-align: center;
+    background-color: var(--color-bg-secondary);
+
+    p {
+      margin: 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+  }
+
+  // Confirm button
+  .dialog-buttons {
+    margin-top: $spacing-2;
+
+    .confirm-btn {
+      @include button-primary;
+      width: 100%;
+      padding: $spacing-3;
+      font-size: $font-size-lg;
+      gap: $spacing-2;
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

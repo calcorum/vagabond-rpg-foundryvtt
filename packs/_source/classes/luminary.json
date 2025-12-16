@@ -1,0 +1,86 @@
+{
+  "_id": "vagabondClsLumina",
+  "_key": "!items!vagabondClsLumina",
+  "name": "Luminary",
+  "type": "class",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Luminaries are divine healers who channel radiant energy to restore their allies. Their powerful healing magic and ability to revive the fallen make them invaluable support characters.</p>",
+    "keyStat": "awareness",
+    "actionStyle": "mysticism",
+    "zone": "midline",
+    "trainedSkills": ["mysticism", "arcana", "detect", "influence", "leadership", "medicine"],
+    "startingPack": "<p>Devout</p>",
+    "isCaster": true,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 4,
+        "features": ["Theurgy", "Radiant Healer"]
+      },
+      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Overheal"] },
+      { "level": 3, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 4, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Ever-Cure"] },
+      { "level": 5, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 6, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Revivify"] },
+      { "level": 7, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 8, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Saving Grace"] },
+      { "level": 9, "mana": 4, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      { "level": 10, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Life-Giver"] }
+    ],
+    "features": [
+      {
+        "name": "Theurgy",
+        "level": 1,
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, two of which must always be Life and Light. You learn 1 other Spell every 2 Luminary Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Luminary Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Luminary Level, round up). You regain spent Mana when you Rest.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Radiant Healer",
+        "level": 1,
+        "description": "<p>You get the <strong>Assured Healer Perk</strong>, and the healing rolls of your Spells can also explode on their highest value.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Overheal",
+        "level": 2,
+        "description": "<p>If you restore HP that exceeds the Being's Max HP, you can give the excess to yourself or a Being you can see.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Ever-Cure",
+        "level": 4,
+        "description": "<p>When you restore HP, you can end either a Charmed, Confused, Dazed, Frightened, or Sickened Status affecting the Target.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Revivify",
+        "level": 6,
+        "description": "<p>You can revive a Being with the Life Spell if it has been dead for as long as 1 hour. If you die, you are revived automatically. Afterward, you cannot be revived by this Feature for 1 day.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Saving Grace",
+        "level": 8,
+        "description": "<p>Your healing rolls can also explode on a 2.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Life-Giver",
+        "level": 10,
+        "description": "<p>Beings you revive are revived at 4 Fatigue if their Fatigue was previously higher, and do not gain Fatigue from your Life Spell.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "vagabondAnceGoblin",
+  "_key": "!items!vagabondAnceGoblin",
+  "name": "Goblin",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Goblins are small, cunning creatures who thrive in darkness and refuse. Their ability to see in the dark and resistance to toxins makes them surprisingly resilient survivors.</p>",
+    "beingType": "cryptid",
+    "size": "small",
+    "traits": [
+      {
+        "name": "Darksight",
+        "description": "<p>You can see in darkness as if it were dim light.</p>"
+      },
+      {
+        "name": "Nimble",
+        "description": "<p>Your base Speed is increased by 5.</p>"
+      },
+      {
+        "name": "Scavenger",
+        "description": "<p>You gain Favor on saves against the Sickened condition.</p>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_id": "vagabondClsPugili",
+  "_key": "!items!vagabondClsPugili",
+  "name": "Pugilist",
+  "type": "class",
+  "img": "icons/svg/fist.svg",
+  "system": {
+    "description": "<p>Pugilists are masters of unarmed combat who turn their bodies into deadly weapons. Their devastating punches and grappling techniques make them formidable frontline bruisers.</p>",
+    "keyStat": "might",
+    "actionStyle": "brawl",
+    "zone": "frontline",
+    "trainedSkills": ["brawl", "finesse", "detect", "influence"],
+    "startingPack": "<p>Gladiator or Traveler</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Fisticuffs", "Haymaker"]
+      },
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Deflect Missiles"]
+      },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Stunning Blow"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Iron Body"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Flurry of Blows"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perfect Form"] }
+    ],
+    "features": [
+      {
+        "name": "Fisticuffs",
+        "level": 1,
+        "description": "<p>Your Unarmed attacks deal 1d6 damage (increasing to 1d8 at 5th level and 1d10 at 9th level), and you can make an Unarmed attack as a Move.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Haymaker",
+        "level": 1,
+        "description": "<p>You gain the <strong>Wrestler Perk</strong>. When you hit with an Unarmed attack, you can push the target 5 feet.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Deflect Missiles",
+        "level": 2,
+        "description": "<p>When hit by a Ranged attack, you can use your Reaction to reduce the damage by 1d10 + your Dexterity + your Pugilist Level.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Stunning Blow",
+        "level": 4,
+        "description": "<p>When you hit with an Unarmed attack, you can force the target to make a Fortitude Save or be Dazed until the end of your next Turn.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Iron Body",
+        "level": 6,
+        "description": "<p>While you are not wearing Armor, you have +1 Armor. You also have resistance to Bludgeoning damage.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Flurry of Blows",
+        "level": 8,
+        "description": "<p>When you take the Attack Action with an Unarmed attack, you can make two additional Unarmed attacks.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Perfect Form",
+        "level": 10,
+        "description": "<p>Your Unarmed attacks count as (+2) Relics, and you have Favor on all Saves while you are not wearing Armor.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

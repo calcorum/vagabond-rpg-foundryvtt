@@ -1,0 +1,80 @@
+{
+  "_id": "vagabondClsBarbar",
+  "_key": "!items!vagabondClsBarbar",
+  "name": "Barbarian",
+  "type": "class",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<p>Barbarians are ferocious warriors who channel their rage into devastating attacks. Their fury makes them formidable frontline bruisers who can shrug off damage and strike fear into their enemies.</p>",
+    "keyStat": "might",
+    "actionStyle": "attack",
+    "zone": "frontline",
+    "trainedSkills": ["brawl", "detect", "influence", "leadership", "mysticism", "survival"],
+    "startingPack": "<p>Gladiator or Warrior</p>",
+    "isCaster": false,
+    "progression": [
+      { "level": 1, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Rage", "Wrath"] },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Aggressor"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Fearmonger"] },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Mindless Rancor"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Bloodthirsty"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Rip and Tear"] }
+    ],
+    "features": [
+      {
+        "name": "Rage",
+        "level": 1,
+        "description": "<p>While Berserk and wearing Light Armor or no Armor, you reduce damage you take by 1 per damage die, and your attack damage dice are one size larger and can explode. Further, you can go Berserk after you take damage or as part of making an attack. You remain Berserk this way for 1 minute, unless you end it (no Action) or go Unconscious.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Wrath",
+        "level": 1,
+        "description": "<p>You gain the <strong>Interceptor Perk</strong>, and can make its attack against an Enemy that makes a Ranged Attack, Casts, or that damages you or an Ally.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Aggressor",
+        "level": 2,
+        "description": "<p>You have a 10 foot bonus to Speed during the first Round of Combat, and having 3 or more Fatigue does not prevent you from taking the Rush Action.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Fearmonger",
+        "level": 4,
+        "description": "<p>When you kill an Enemy, every Near Enemy with HD lower than your Level becomes Frightened until the end of your next Turn.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Mindless Rancor",
+        "level": 6,
+        "description": "<p>You cannot be Charmed, Confused, or compelled to act against your will.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Bloodthirsty",
+        "level": 8,
+        "description": "<p>Your attacks against Beings that are missing any HP are Favored, and you can sense them within Far as if by Blindsight.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Rip and Tear",
+        "level": 10,
+        "description": "<p>While Berserk, you reduce damage you take by 2 per damage die, rather than 1, and you gain a +1 bonus to each die of damage you deal.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}

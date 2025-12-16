@@ -1,3 +1,12 @@
+// Debug logging for level-up workflow - set to false to disable
+const DEBUG_LEVELUP = true;
+const debugLog = (...args) => {
+  if (DEBUG_LEVELUP) console.log("[VagabondItem]", ...args);
+};
+const debugWarn = (...args) => {
+  if (DEBUG_LEVELUP) console.warn("[VagabondItem]", ...args);
+};
+
 /**
  * VagabondItem Document Class
  *
@@ -25,19 +34,33 @@ export default class VagabondItem extends Item {
    * @override
    */
   async _onCreate(data, options, userId) {
+    debugLog(`_onCreate called for "${this.name}" (type: ${this.type})`, {
+      parentType: this.parent?.type,
+      actorId: this.actor?.id,
+      itemId: this.id,
+      userId,
+      currentUserId: game.user.id,
+    });
+
     await super._onCreate(data, options, userId);
 
     // Only process for the creating user
-    if (game.user.id !== userId) return;
+    if (game.user.id !== userId) {
+      debugLog("Skipping - not the creating user");
+      return;
+    }
 
     // Apply class features when class is added to a character
     // Check that actor still exists (may be deleted in tests)
     if (this.type === "class" && this.parent?.type === "character" && this.actor?.id) {
+      debugLog("Class added to character - applying initial features...");
       try {
-        await this.applyClassFeatures();
+        const effects = await this.applyClassFeatures();
+        debugLog(`Applied ${effects.length} initial Active Effects`);
       } catch (err) {
         // Actor may have been deleted during tests - silently ignore
         if (!err.message?.includes("does not exist")) throw err;
+        debugWarn("Actor was deleted during feature application");
       }
     }
   }
@@ -113,12 +136,13 @@ export default class VagabondItem extends Item {
     if (!system) return;
 
     // Determine attack skill based on properties
+    // Note: system.properties is a SchemaField (object with boolean values), not an array
     if (!system.attackSkill) {
-      if (system.properties?.includes("finesse")) {
+      if (system.properties?.finesse) {
         system.attackSkill = "finesse";
-      } else if (system.properties?.includes("brawl")) {
+      } else if (system.properties?.brawl) {
         system.attackSkill = "brawl";
-      } else if (system.gripType === "ranged" || system.properties?.includes("thrown")) {
+      } else if (system.gripType === "ranged" || system.properties?.thrown) {
         system.attackSkill = "ranged";
       } else {
         system.attackSkill = "melee";
@@ -555,19 +579,43 @@ export default class VagabondItem extends Item {
    * Called when class is added to character or when level changes.
    * This method is idempotent - it won't create duplicate effects.
    *
+   * Note: Race condition protection is handled at the _onCreate level via
+   * #initialFeaturesApplied map, which guards against duplicate calls.
+   *
    * @param {number} [targetLevel] - Level to apply features for (defaults to actor's level)
    * @returns {Promise<ActiveEffect[]>} Created effects
    */
   async applyClassFeatures(targetLevel = null) {
-    if (this.type !== "class" || !this.actor) return [];
+    debugLog(`applyClassFeatures called for class "${this.name}"`, {
+      targetLevel,
+      actorLevel: this.actor?.system?.level,
+    });
 
+    if (this.type !== "class" || !this.actor) {
+      debugWarn("applyClassFeatures: Not a class or no actor");
+      return [];
+    }
     const level = targetLevel ?? this.actor.system.level ?? 1;
     const features = this.system.features || [];
 
+    debugLog(`Processing features for level ${level}`, {
+      totalFeatures: features.length,
+      allFeatures: features.map((f) => ({
+        name: f.name,
+        level: f.level,
+        changesCount: f.changes?.length || 0,
+      })),
+    });
+
     // Get features at or below current level that have changes
     const applicableFeatures = features.filter((f) => f.level <= level && f.changes?.length > 0);
+    debugLog(
+      `Applicable features (level <= ${level} with changes):`,
+      applicableFeatures.map((f) => f.name)
+    );
 
     if (applicableFeatures.length === 0) {
+      debugLog("No applicable features with changes - applying progression only");
       // Still apply progression even if no features with changes
       await this._applyClassProgression(level);
       await this._applyTrainedSkills();
@@ -579,9 +627,16 @@ export default class VagabondItem extends Item {
     const existingFeatureNames = new Set(
       existingEffects.map((e) => e.flags?.vagabond?.featureName)
     );
+    debugLog(`Existing effects from this class:`, [...existingFeatureNames]);
+
     const newFeatures = applicableFeatures.filter((f) => !existingFeatureNames.has(f.name));
+    debugLog(
+      `New features to apply:`,
+      newFeatures.map((f) => f.name)
+    );
 
     if (newFeatures.length === 0) {
+      debugLog("All features already applied - updating progression only");
       // All features already applied, just update progression
       await this._applyClassProgression(level);
       await this._applyTrainedSkills();
@@ -609,8 +664,20 @@ export default class VagabondItem extends Item {
       },
     }));
 
+    debugLog(
+      "Creating Active Effects:",
+      effectsData.map((e) => ({
+        name: e.name,
+        changes: e.changes,
+      }))
+    );
+
     // Create the effects
     const createdEffects = await this.actor.createEmbeddedDocuments("ActiveEffect", effectsData);
+    debugLog(
+      `Created ${createdEffects.length} Active Effects:`,
+      createdEffects.map((e) => e.name)
+    );
 
     // Also update actor's mana and casting max from class progression
     await this._applyClassProgression(level);
@@ -630,16 +697,35 @@ export default class VagabondItem extends Item {
    * @returns {Promise<ActiveEffect[]>} Newly created effects
    */
   async updateClassFeatures(newLevel, oldLevel) {
-    if (this.type !== "class" || !this.actor) return [];
+    debugLog(`updateClassFeatures called for class "${this.name}"`, {
+      oldLevel,
+      newLevel,
+    });
+
+    if (this.type !== "class" || !this.actor) {
+      debugWarn("updateClassFeatures: Not a class or no actor");
+      return [];
+    }
 
     const features = this.system.features || [];
+    debugLog(`Total features in class: ${features.length}`);
 
     // Find features gained between old and new level
     const newFeatures = features.filter(
       (f) => f.level > oldLevel && f.level <= newLevel && f.changes?.length > 0
     );
 
+    debugLog(
+      `Features gained between level ${oldLevel} and ${newLevel}:`,
+      newFeatures.map((f) => ({
+        name: f.name,
+        level: f.level,
+        changesCount: f.changes?.length || 0,
+      }))
+    );
+
     if (newFeatures.length === 0) {
+      debugLog("No new features with changes - updating progression only");
       // Still update progression stats even if no new features
       await this._applyClassProgression(newLevel);
       return [];
@@ -666,7 +752,19 @@ export default class VagabondItem extends Item {
       },
     }));
 
+    debugLog(
+      "Creating Active Effects for level-up:",
+      effectsData.map((e) => ({
+        name: e.name,
+        changes: e.changes,
+      }))
+    );
+
     const createdEffects = await this.actor.createEmbeddedDocuments("ActiveEffect", effectsData);
+    debugLog(
+      `Created ${createdEffects.length} Active Effects:`,
+      createdEffects.map((e) => e.name)
+    );
 
     // Update mana and casting max
     await this._applyClassProgression(newLevel);

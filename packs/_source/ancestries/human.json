@@ -1,0 +1,22 @@
+{
+  "_id": "vagabondAnceHuman",
+  "_key": "!items!vagabondAnceHuman",
+  "name": "Human",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Humans are the most common and adaptable of all the peoples. Their knack for learning and strong potential make them capable of excelling in any field.</p>",
+    "beingType": "humanlike",
+    "size": "medium",
+    "traits": [
+      {
+        "name": "Knack",
+        "description": "<p>You gain one Perk and Training in one Skill of your choice.</p>"
+      },
+      {
+        "name": "Strong Potential",
+        "description": "<p>You gain +1 to one Stat of your choice (maximum 7).</p>"
+      }
+    ]
+  }
+}

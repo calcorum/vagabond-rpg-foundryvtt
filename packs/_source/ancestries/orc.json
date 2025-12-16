@@ -1,0 +1,26 @@
+{
+  "_id": "vagabondAnceOrc000",
+  "_key": "!items!vagabondAnceOrc000",
+  "name": "Orc",
+  "type": "ancestry",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Orcs are powerful, hulking warriors with a natural talent for physical confrontation. Their impressive size allows them to carry more equipment and overpower foes in close combat.</p>",
+    "beingType": "cryptid",
+    "size": "medium",
+    "traits": [
+      {
+        "name": "Darksight",
+        "description": "<p>You can see in darkness as if it were dim light.</p>"
+      },
+      {
+        "name": "Beefy",
+        "description": "<p>You gain Favor on Grapple and Shove attempts.</p>"
+      },
+      {
+        "name": "Hulking",
+        "description": "<p>You have +2 additional Item Slots.</p>"
+      }
+    ]
+  }
+}

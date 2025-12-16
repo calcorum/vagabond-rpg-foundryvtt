@@ -1,0 +1,92 @@
+{
+  "_id": "vagabondClsDancer",
+  "_key": "!items!vagabondClsDancer",
+  "name": "Dancer",
+  "type": "class",
+  "img": "icons/svg/silhouette.svg",
+  "system": {
+    "description": "<p>Dancers are graceful performers who use their movements to inspire allies and evade attacks. Their fleet footwork makes them exceptional support characters who can grant allies extra actions.</p>",
+    "keyStat": "dexterity",
+    "actionStyle": "finesse",
+    "zone": "midline",
+    "trainedSkills": ["finesse", "performance", "brawl", "influence", "sneak"],
+    "startingPack": "<p>Courtesan or Musician</p>",
+    "isCaster": false,
+    "progression": [
+      {
+        "level": 1,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Fleet of Foot", "Step Up"]
+      },
+      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasive"] },
+      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Don't Stop Me Now"]
+      },
+      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Choreographer"] },
+      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Flash of Beauty"] },
+      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Double Time"] }
+    ],
+    "features": [
+      {
+        "name": "Fleet of Foot",
+        "level": 1,
+        "description": "<p>You gain the <strong>Treads Lightly Perk</strong>, and the roll for you to Crit on Reflex Saves is reduced by an amount equal to (your Dancer Level divided by 4, round up).</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Step Up",
+        "level": 1,
+        "description": "<p>Once per Turn, you can use your Action to perform an enlivening dance. Doing so allows you to roll a second d20 on Reflex Saves until the start of your next Turn and use the higher result, and it gives one Ally of your choice that sees you a second Action this Turn.</p>",
+        "passive": false,
+        "changes": []
+      },
+      {
+        "name": "Evasive",
+        "level": 2,
+        "description": "<p>While you are not Incapacitated, you ignore Hinder on Reflex Saves and you ignore two of a Dodged attack's damage dice on a passed Save, rather than one.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Don't Stop Me Now",
+        "level": 4,
+        "description": "<p>Your Speed is not affected by Difficult Terrain and you have Favor on Saves against being Paralyzed, Restrained, or moved.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Choreographer",
+        "level": 6,
+        "description": "<p>When you use your Step Up Feature, the Ally gains Favor on the first Check they make with the Action you give them, and you both gain a 10 foot bonus to Speed for the Round.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Flash of Beauty",
+        "level": 8,
+        "description": "<p>When you Crit on a Save, you can take two Actions, rather than one.</p>",
+        "passive": true,
+        "changes": []
+      },
+      {
+        "name": "Double Time",
+        "level": 10,
+        "description": "<p>You can Target two Allies with your Step Up Feature, rather than one.</p>",
+        "passive": true,
+        "changes": []
+      }
+    ],
+    "customResource": {}
+  }
+}
