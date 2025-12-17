@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkMageSlayer",
+  "name": "Mage Slayer",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>When you damage a Focusing Being, the damage rolls can explode and, if the result of your d20 roll on the Check is 10 or higher than your Difficulty, the Focus ends.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["arcana", "mysticism"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkMageSlayer",
+  "reviewed": true
+}

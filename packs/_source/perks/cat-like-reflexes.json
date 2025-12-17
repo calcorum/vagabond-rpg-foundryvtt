@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkCatLikeReflexes",
+  "name": "Cat-Like Reflexes",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You reduce any fall damage you take by half and, while you are Prone, you can stand up using only 5 feet of Speed.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": 4,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["finesse"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "movement"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkCatLikeReflexes",
+  "reviewed": true
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkResourceful",
+  "name": "Resourceful",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can spend 1 Luck to recall having packed an Item in your inventory with a value as high as 50s. It doesn't \"appear,\" it was always there.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": 4
+      },
+      "trainedSkills": ["craft"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["utility"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkResourceful",
+  "reviewed": true
+}

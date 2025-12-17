@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkGish",
+  "name": "Gish",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can use Weapons as trinkets to Cast and, when you Cast with a Delivery of Imbue on a Weapon you have Equipped, you can make an attack with the weapon with the same Action.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["melee", "ranged"],
+      "spells": ["any"],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "magic"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkGish",
+  "reviewed": true
+}

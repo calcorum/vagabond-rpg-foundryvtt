@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkMasterChef",
+  "name": "Master Chef",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>During a Scene where you have cooking tools, you can cook meals using 5s worth of Materials. Doing so makes d6+1 rations which restore d6 HP to anyone who eats one as part of a Breather. They function as normal rations after a Shift.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": 4,
+        "luck": null
+      },
+      "trainedSkills": ["survival"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["defensive", "utility", "crafting", "healing"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkMasterChef",
+  "reviewed": true
+}

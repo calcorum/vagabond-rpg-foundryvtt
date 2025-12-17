@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkProtector",
+  "name": "Protector",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can Block on behalf of an Ally that fails their Save against the attack of an Enemy that is Close to you.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": 4,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["melee"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "defensive", "social"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkProtector",
+  "reviewed": true
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkProvoker",
+  "name": "Provoker",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can use your Action to intimidate or otherwise goad an Enemy that can see or hear you. When you do, your Allies make all Saves provoked by that Enemy's Attacks with Favor until the start of your Group's next Turn.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": 4,
+        "luck": null
+      },
+      "trainedSkills": ["influence"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "defensive"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkProvoker",
+  "reviewed": true
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkMesmer",
+  "name": "Mesmer",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>If you pass a Cast Check by 10 or more to cause a Target to be Charmed or Frightened, you can also cause it to act in one of the following ways in a manner of your choice on its next Turn: Move up to half its Speed. Attack a Target (it can attack itself). Drop or pick up an Item.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": [],
+      "spells": ["charm"],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "magic", "movement"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkMesmer",
+  "reviewed": true
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkSalbenist",
+  "name": "Salbenist",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can perform a 10 minute Ritual with a Weapon and an oil. Upon concluding the Ritual, you gain the following benefits until you perform it again: You can attack with it using Craft. You can will the absorbed oil to coat it on your Turn (no Action). This doesn't consume it, and it remains coated until you dismiss it, it leaves your hand, or until it is coated with another oil.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["craft", "mysticism"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": true,
+    "ritualDuration": 10,
+    "ritualComponents": "",
+    "tags": ["combat", "crafting", "ritual"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkSalbenist",
+  "reviewed": true
+}

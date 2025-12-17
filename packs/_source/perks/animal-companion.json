@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkAnimalCompanion",
+  "name": "Animal Companion",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>If you spend a Shift taming and training a non-hostile Beast with a HD count no higher than half your Level, you can have it follow you as a companion. You control it by commanding it with your Action or by skipping your Move. Otherwise, it instinctually attacks your Enemies. It uses your Survival Difficulty for Checks. You can only have one such companion at a time.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": 4,
+        "luck": null
+      },
+      "trainedSkills": ["survival"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "social", "movement"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkAnimalCompanion",
+  "reviewed": true
+}

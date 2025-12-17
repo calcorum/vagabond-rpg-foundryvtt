@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkKnifeJuggler",
+  "name": "Knife Juggler",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You treat 1H Thrown Weapons as 0 Slot for occupying your Item Slots, and can draw one as part of an attack with it.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": 4,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["finesse"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "utility"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkKnifeJuggler",
+  "reviewed": true
+}

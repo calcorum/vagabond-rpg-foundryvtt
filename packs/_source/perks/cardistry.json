@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkCardistry",
+  "name": "Cardistry",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can use a deck of cards as a Trinket and can make attacks with cards drawn from a deck using your Cast Skill. The Deck must be used as a 2H Grip Weapon to do so. It deals d4, and has the Finesse and Thrown properties. Cards used for an attack magically reappear in the deck.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": 4,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": [],
+      "spells": ["any"],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "social", "magic"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkCardistry",
+  "reviewed": true
+}

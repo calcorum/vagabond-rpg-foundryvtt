@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkFallawayReverse",
+  "name": "Fallaway Reverse",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>If you Crit to Dodge a Melee Attack, the attacker falls Prone.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": 4,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["finesse"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat", "defensive"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkFallawayReverse",
+  "reviewed": true
+}

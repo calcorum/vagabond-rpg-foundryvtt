@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkFullSwing",
+  "name": "Full Swing",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>When you make a Melee Attack Check and roll 10 above your Melee Difficulty, you can choose to push the Target as if you had shoved them if they are no more than one size larger than you.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": 4,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["melee"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkFullSwing",
+  "reviewed": true
+}

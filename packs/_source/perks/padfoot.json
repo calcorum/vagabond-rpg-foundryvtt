@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkPadfoot",
+  "name": "Padfoot",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Once per Day, you gain a Studied die when you Travel 6 miles or more.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": 4,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["survival"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["utility"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkPadfoot",
+  "reviewed": true
+}

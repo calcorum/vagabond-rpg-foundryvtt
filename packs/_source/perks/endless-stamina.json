@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkEndlessStamina",
+  "name": "Endless Stamina",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Fatigue doesn't prevent you from taking the Rush Action and, once per day, you can remove 1 Fatigue during a Breather.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": 4,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["brawl"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["movement"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkEndlessStamina",
+  "reviewed": true
+}

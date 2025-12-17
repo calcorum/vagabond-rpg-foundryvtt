@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkPrimordialSummoner",
+  "name": "Primordial Summoner",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You can conduct a 10 minute Ritual to conjure a Primordial with Hit Dice no higher than (half your Level, round up). It obeys your commands, which you can issue as an Action or by skipping your Move. Otherwise, it attacks your Enemies using your Cast Skill for its Checks and Saves. If you use this Feature to conjure another Primordial, the previous one is banished.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": null,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["arcana", "mysticism"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": true,
+    "ritualDuration": 10,
+    "ritualComponents": "",
+    "tags": ["combat", "defensive", "magic", "ritual", "movement"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkPrimordialSummoner",
+  "reviewed": true
+}

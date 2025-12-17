@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondPerkMountedCombatant",
+  "name": "Mounted Combatant",
+  "type": "perk",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Any Check you make to avoid falling off a mount is Favored, and you can wield Weapons with the Versatile Grip as 1H while riding a mount and get the benefits of them being wielded in both hands.</p>",
+    "prerequisites": {
+      "stats": {
+        "might": 4,
+        "dexterity": null,
+        "awareness": null,
+        "reason": null,
+        "presence": null,
+        "luck": null
+      },
+      "trainedSkills": ["survival"],
+      "spells": [],
+      "perks": [],
+      "custom": ""
+    },
+    "changes": [],
+    "passive": true,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": ""
+    },
+    "luckCost": 0,
+    "grantsLuck": 0,
+    "isRitual": false,
+    "ritualDuration": 0,
+    "ritualComponents": "",
+    "tags": ["combat"]
+  },
+  "effects": [],
+  "_key": "!items!vagabondPerkMountedCombatant",
+  "reviewed": true
+}
