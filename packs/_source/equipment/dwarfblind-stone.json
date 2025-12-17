@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipDwarfblindstone",
+  "name": "Dwarfblind stone",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Treated stones with a purple sheen. A hit Target with Darksight is Blinded (Cd6).</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 20000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "explosive"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipDwarfblindstone",
+  "reviewed": true
+}

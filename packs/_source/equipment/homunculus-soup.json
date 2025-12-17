@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipHomunculussoup",
+  "name": "Homunculus soup",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A special mixture of clay, ash, mandrake root, and the alchemist's own blood. This soup creates a homunculus under the alchemist's control, and it uses their Craft Skill for any Checks it makes. If another homunculus is created from the same alchemist's blood, the oldest homunculus dies.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 75000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipHomunculussoup",
+  "reviewed": true
+}

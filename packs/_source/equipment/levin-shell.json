@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipLevinshell",
+  "name": "Levin shell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>An unstable mass of electric energy that sparks when exposed to oxygen. A Target hit with this Item takes d6 damage and any other Close Beings take half. A Being that takes this damage is Dazed until the end of its next Turn.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 5000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "explosive"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipLevinshell",
+  "reviewed": true
+}

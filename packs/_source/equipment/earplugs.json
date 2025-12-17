@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipEarplugs",
+  "name": "Earplugs",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "slots": 0,
+    "slotsPerItem": false,
+    "value": 300,
+    "consumable": false,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "autoDestroy": true
+    },
+    "category": "gear",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": [],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipEarplugs",
+  "reviewed": true
+}

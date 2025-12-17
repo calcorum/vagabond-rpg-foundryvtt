@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipPotionclairaudience",
+  "name": "Potion, clairaudience",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>For 1 Hour, the consumer can hear what another Being of their choice hears if they are within Far. They can change the choice. Lead obstructs this sense.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 500000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "potion"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipPotionclairaudience",
+  "reviewed": true
+}

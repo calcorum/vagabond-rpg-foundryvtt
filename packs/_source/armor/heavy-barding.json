@@ -11,7 +11,7 @@
     "hindersDodge": false,
     "preventsRage": false,
     "slots": 3,
-    "value": 2500,
+    "value": 25000,
     "equipped": false,
     "magicBonus": 0,
     "properties": ["barding"],

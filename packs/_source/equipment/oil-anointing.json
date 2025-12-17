@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipOilanointing",
+  "name": "Oil, anointing",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Used in religious ceremonies, it acts as basic oil. However, when coated on a Weapon that is then ignited, the weapon counts as Silvered.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 5000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "oil", "holy"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipOilanointing",
+  "reviewed": true
+}

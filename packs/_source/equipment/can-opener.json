@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipCanopener",
+  "name": "Can opener",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "slots": 0,
+    "slotsPerItem": false,
+    "value": 500,
+    "consumable": false,
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "autoDestroy": true
+    },
+    "category": "gear",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["tool"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipCanopener",
+  "reviewed": true
+}

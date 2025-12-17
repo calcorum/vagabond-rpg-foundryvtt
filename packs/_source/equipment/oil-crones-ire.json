@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipOilcronesire",
+  "name": "Oil, crone's ire",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A sickly emerald oil that shrieks when lit. Acts as basic oil. However, when coated on a Weapon that is then ignited, attack damage with it can explode if the Target can Cast. If the Target is Focusing and any of the dice do explode, its Focus ends.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 50000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "oil"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipOilcronesire",
+  "reviewed": true
+}

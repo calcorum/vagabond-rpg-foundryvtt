@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipAleciderbarrelsmall",
+  "name": "Ale/Cider, barrel small",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 2000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 8,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["drink"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipAleciderbarrelsmall",
+  "reviewed": true
+}

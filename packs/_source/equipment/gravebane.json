@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipGravebane",
+  "name": "Gravebane",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>This thick white liquid evaporates almost instantly upon contact with air, creating a thin, nearly invisible smoke. The smoke is nearly odorless and has no effect on most Beings. Undead, however, are repulsed by it.</p><p>Once used, the smoke fills the area out to Near for 1 minute, or until disbursed by strong wind. Undead are Dazed while in the smoke, ignoring Immunities.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 20000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipGravebane",
+  "reviewed": true
+}

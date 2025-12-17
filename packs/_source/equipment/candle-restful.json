@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipCandlerestful",
+  "name": "Candle, restful",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Sheds light out to Close for up to 1 hour while burning and fills the air within Near with a cozy odor. Once per Shift, a Being that takes a Breather in this area gains Favor on its next Will Save that Shift.</p>",
+    "quantity": 1,
+    "slots": 0,
+    "slotsPerItem": false,
+    "value": 25000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "light"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipCandlerestful",
+  "reviewed": true
+}

@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipOilbasic",
+  "name": "Oil, basic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>The oil can coat either a 5-foot-square area or a Medium or smaller Target for as long as 1 week unless washed off. While coated, the Target can then be ignited, causing it to be Burning (Cd6, unless doused). Other Beings that touch the flames take d6 damage, and are Burning (d6) while still in contact with the flame.</p><p>A full flask fuels a burning lantern for a Shift.</p>",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 1000,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["alchemy", "oil"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipOilbasic",
+  "reviewed": true
+}

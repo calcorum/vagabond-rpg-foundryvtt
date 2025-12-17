@@ -1,0 +1,40 @@
+{
+  "_id": "vagabondEquipProduce1lbbag",
+  "name": "Produce, 1 lb. bag",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "slots": 1,
+    "slotsPerItem": false,
+    "value": 100,
+    "consumable": true,
+    "uses": {
+      "value": 0,
+      "max": 10,
+      "autoDestroy": true
+    },
+    "category": "consumable",
+    "equipped": false,
+    "containerCapacity": 0,
+    "tags": ["food"],
+    "isTrinket": false,
+    "canCastThrough": false,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondEquipProduce1lbbag",
+  "reviewed": true
+}
