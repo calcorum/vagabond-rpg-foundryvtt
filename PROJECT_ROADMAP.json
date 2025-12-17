@@ -1070,11 +1070,195 @@
           "dependencies": ["10.1", "10.2"]
         }
       ]
+    },
+    {
+      "id": "phase-11",
+      "name": "Active Effects Automation",
+      "description": "Automate mechanical effects from ancestries, perks, and class features via Active Effects changes arrays",
+      "tasks": [
+        {
+          "id": "11.1",
+          "name": "Extend EFFECT_KEYS mapping",
+          "description": "Add missing keys to module/helpers/effects.mjs: senses (6), movement capabilities (5), skill training (12), focus tracking",
+          "completed": true,
+          "tested": false,
+          "priority": "critical",
+          "dependencies": ["1.15"]
+        },
+        {
+          "id": "11.2",
+          "name": "Create Active Effects reference documentation",
+          "description": "Create docs/ACTIVE_EFFECTS_REFERENCE.md documenting all available effect keys, modes, JSON format, and formula support",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"]
+        },
+        {
+          "id": "11.3",
+          "name": "Automate Dwarf ancestry traits",
+          "description": "Add changes arrays: Darksight (system.senses.darkvision=true), Tough (system.resources.hp.bonus=@level)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Sturdy trait deferred - requires conditional Favor flag system"
+        },
+        {
+          "id": "11.4",
+          "name": "Automate Goblin ancestry traits",
+          "description": "Add changes arrays: Darksight (system.senses.darkvision=true), Nimble (system.speed.bonus=5)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Scavenger trait deferred - requires conditional Favor flag system"
+        },
+        {
+          "id": "11.5",
+          "name": "Automate Orc ancestry traits",
+          "description": "Add changes arrays: Darksight (system.senses.darkvision=true), Hulking (system.itemSlots.bonus=2)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Beefy trait deferred - requires conditional Favor flag system"
+        },
+        {
+          "id": "11.6",
+          "name": "Automate Halfling ancestry traits",
+          "description": "Add changes array: Nimble (system.speed.bonus=5)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Squat (movement rule) and Tricksy (rest bonus) deferred"
+        },
+        {
+          "id": "11.7",
+          "name": "Automate Draken ancestry traits",
+          "description": "Add changes array: Scale (system.armor=+1)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Breath Attack (complex ability) and Draconic Resilience (damage type choice) deferred"
+        },
+        {
+          "id": "11.8",
+          "name": "Automate Tough perk",
+          "description": "Verify changes array: system.resources.hp.bonus=@level (stackable)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Already had correct implementation from earlier work"
+        },
+        {
+          "id": "11.9",
+          "name": "Automate Fighter class features",
+          "description": "Valor I/II/III crit reductions for melee and ranged attacks",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"],
+          "notes": "Fighter is the proof of concept. Valor reduces melee+ranged crit thresholds by -1/-2/-3."
+        },
+        {
+          "id": "11.10",
+          "name": "Automate Wizard class features",
+          "description": "Manifold Mind I/II: system.focus.maxConcurrent += 1 each (cumulative to 2, then 3)",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["11.1"]
+        },
+        {
+          "id": "11.11",
+          "name": "Implement Favor/Hinder flag system for traits",
+          "description": "Create flag-based system for conditional Favor/Hinder: Elven Eyes (Favor on sight-based Detect), Beefy (Favor on Grapple/Shove), Scavenger (Favor on Sickened saves), Sturdy (Favor on Fear/Sickened/Shove)",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["11.3", "11.4", "11.5"],
+          "notes": "Deferred - requires extending existing Favor/Hinder Active Effects flag system to handle conditional triggers"
+        },
+        {
+          "id": "11.12",
+          "name": "Implement skill selection UI for ancestry traits",
+          "description": "Create dialog for traits that grant skill training choice: Elf Ascendancy (1 skill), Human Knack (1 skill + 1 perk)",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["11.3"],
+          "notes": "Deferred - requires UI similar to class level-up dialog"
+        },
+        {
+          "id": "11.13",
+          "name": "Implement spell selection UI for ancestry traits",
+          "description": "Create dialog for traits that grant spells: Elf Naturally Attuned (1 spell of choice)",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["11.12"],
+          "notes": "Deferred - requires spell compendium browser integration"
+        },
+        {
+          "id": "11.14",
+          "name": "Implement damage type selection for Draken",
+          "description": "Create dialog at ancestry add for Breath Attack damage type choice (fire/cold/shock/acid), applies to Draconic Resilience resistance",
+          "completed": false,
+          "tested": false,
+          "priority": "medium",
+          "dependencies": ["11.7"],
+          "notes": "Deferred - requires damage resistance system"
+        },
+        {
+          "id": "11.15",
+          "name": "Implement rest bonus hooks",
+          "description": "Hook into rest system for: Halfling Tricksy (+1 Luck on rest)",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["11.6"],
+          "notes": "Deferred - requires rest system implementation"
+        },
+        {
+          "id": "11.16",
+          "name": "Implement Sharpshooter action tracking",
+          "description": "Track 'skip Move' action to enable crit reduction for Sharpshooter perk",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["11.8"],
+          "notes": "Deferred - requires action economy tracking system"
+        },
+        {
+          "id": "11.17",
+          "name": "Implement Situational Awareness automation",
+          "description": "Automate: Favor on surprise checks, flanking doesn't Hinder saves",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["11.11"],
+          "notes": "Deferred - requires conditional Favor/Hinder flag system and flanking tracking"
+        },
+        {
+          "id": "11.18",
+          "name": "Implement Gunslinger Deadeye tracking",
+          "description": "Track consecutive ranged hits to dynamically reduce crit threshold (resets each turn)",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["11.1"],
+          "notes": "Deferred - requires combat turn state tracking, not a simple static bonus"
+        }
+      ]
     }
   ],
   "summary": {
-    "total_tasks": 98,
-    "phases": 11,
+    "total_tasks": 116,
+    "phases": 12,
     "critical_path": [
       "0.1 -> 1.1 -> 2.1 -> 2.2 -> 3.1 -> 3.2 -> 7.1 -> 9.2",
       "0.1 -> 1.6 -> 1.9 -> 2.8 -> 7.4 -> 9.4"

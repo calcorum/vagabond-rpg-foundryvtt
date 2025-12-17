@@ -74,7 +74,9 @@
         "level": 4,
         "description": "<p>You can Focus on up to two Spells at the same time.</p>",
         "passive": true,
-        "changes": []
+        "changes": [
+          { "key": "system.focus.maxConcurrent", "mode": 2, "value": "1", "priority": 10 }
+        ]
       },
       {
         "name": "Extracurricular",
@@ -88,7 +90,9 @@
         "level": 8,
         "description": "<p>You can now Focus on up to three Spells at the same time.</p>",
         "passive": true,
-        "changes": []
+        "changes": [
+          { "key": "system.focus.maxConcurrent", "mode": 2, "value": "1", "priority": 10 }
+        ]
       },
       {
         "name": "Archwizard",

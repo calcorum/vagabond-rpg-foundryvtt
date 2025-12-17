@@ -78,6 +78,38 @@ export const EFFECT_KEYS = {
   "crit.attack.brawl": "system.attacks.brawl.critThreshold",
   "crit.attack.ranged": "system.attacks.ranged.critThreshold",
   "crit.attack.finesse": "system.attacks.finesse.critThreshold",
+
+  // Senses (boolean, use OVERRIDE mode=5)
+  "sense.darkvision": "system.senses.darkvision",
+  "sense.blindsight": "system.senses.blindsight",
+  "sense.allsight": "system.senses.allsight",
+  "sense.echolocation": "system.senses.echolocation",
+  "sense.seismicsense": "system.senses.seismicsense",
+  "sense.telepathy": "system.senses.telepathy",
+
+  // Movement capabilities (boolean, use OVERRIDE mode=5)
+  "movement.fly": "system.movement.fly",
+  "movement.swim": "system.movement.swim",
+  "movement.climb": "system.movement.climb",
+  "movement.cling": "system.movement.cling",
+  "movement.phase": "system.movement.phase",
+
+  // Skill training (boolean, use OVERRIDE mode=5)
+  "skill.arcana.trained": "system.skills.arcana.trained",
+  "skill.brawl.trained": "system.skills.brawl.trained",
+  "skill.craft.trained": "system.skills.craft.trained",
+  "skill.detect.trained": "system.skills.detect.trained",
+  "skill.finesse.trained": "system.skills.finesse.trained",
+  "skill.influence.trained": "system.skills.influence.trained",
+  "skill.leadership.trained": "system.skills.leadership.trained",
+  "skill.medicine.trained": "system.skills.medicine.trained",
+  "skill.mysticism.trained": "system.skills.mysticism.trained",
+  "skill.performance.trained": "system.skills.performance.trained",
+  "skill.sneak.trained": "system.skills.sneak.trained",
+  "skill.survival.trained": "system.skills.survival.trained",
+
+  // Focus tracking
+  "focus.maxConcurrent": "system.focus.maxConcurrent",
 };
 
 /**

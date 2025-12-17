@@ -11,15 +11,18 @@
     "traits": [
       {
         "name": "Breath Attack",
-        "description": "<p>As an Action, you can breathe elemental energy in a 15-foot cone, dealing 2d6! damage of your chosen type (fire, cold, shock, or acid, chosen at character creation). Targets may make a Reflex save to take half damage.</p>"
+        "description": "<p>As an Action, you can breathe elemental energy in a 15-foot cone, dealing 2d6! damage of your chosen type (fire, cold, shock, or acid, chosen at character creation). Targets may make a Reflex save to take half damage.</p>",
+        "changes": []
       },
       {
         "name": "Scale",
-        "description": "<p>Your natural scales grant you +1 Armor.</p>"
+        "description": "<p>Your natural scales grant you +1 Armor.</p>",
+        "changes": [{ "key": "system.armor", "mode": 2, "value": "1" }]
       },
       {
         "name": "Draconic Resilience",
-        "description": "<p>You take half damage from one damage type of your choice (matching your breath weapon).</p>"
+        "description": "<p>You take half damage from one damage type of your choice (matching your breath weapon).</p>",
+        "changes": []
       }
     ]
   },

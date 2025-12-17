@@ -11,15 +11,18 @@
     "traits": [
       {
         "name": "Darksight",
-        "description": "<p>You can see in darkness as if it were dim light.</p>"
+        "description": "<p>You can see in darkness as if it were dim light.</p>",
+        "changes": [{ "key": "system.senses.darkvision", "mode": 5, "value": "true" }]
       },
       {
         "name": "Beefy",
-        "description": "<p>You gain Favor on Grapple and Shove attempts.</p>"
+        "description": "<p>You gain Favor on Grapple and Shove attempts.</p>",
+        "changes": []
       },
       {
         "name": "Hulking",
-        "description": "<p>You have +2 additional Item Slots.</p>"
+        "description": "<p>You have +2 additional Item Slots.</p>",
+        "changes": [{ "key": "system.itemSlots.bonus", "mode": 2, "value": "2" }]
       }
     ]
   },

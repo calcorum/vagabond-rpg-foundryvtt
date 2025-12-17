@@ -11,15 +11,18 @@
     "traits": [
       {
         "name": "Nimble",
-        "description": "<p>Your base Speed is increased by 5.</p>"
+        "description": "<p>Your base Speed is increased by 5.</p>",
+        "changes": [{ "key": "system.speed.bonus", "mode": 2, "value": "5" }]
       },
       {
         "name": "Squat",
-        "description": "<p>You can move through spaces occupied by larger creatures.</p>"
+        "description": "<p>You can move through spaces occupied by larger creatures.</p>",
+        "changes": []
       },
       {
         "name": "Tricksy",
-        "description": "<p>When you take a Rest, you regain +1 additional Luck.</p>"
+        "description": "<p>When you take a Rest, you regain +1 additional Luck.</p>",
+        "changes": []
       }
     ]
   },

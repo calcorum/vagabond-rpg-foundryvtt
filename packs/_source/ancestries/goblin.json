@@ -11,15 +11,18 @@
     "traits": [
       {
         "name": "Darksight",
-        "description": "<p>You can see in darkness as if it were dim light.</p>"
+        "description": "<p>You can see in darkness as if it were dim light.</p>",
+        "changes": [{ "key": "system.senses.darkvision", "mode": 5, "value": "true" }]
       },
       {
         "name": "Nimble",
-        "description": "<p>Your base Speed is increased by 5.</p>"
+        "description": "<p>Your base Speed is increased by 5.</p>",
+        "changes": [{ "key": "system.speed.bonus", "mode": 2, "value": "5" }]
       },
       {
         "name": "Scavenger",
-        "description": "<p>You gain Favor on saves against the Sickened condition.</p>"
+        "description": "<p>You gain Favor on saves against the Sickened condition.</p>",
+        "changes": []
       }
     ]
   },
