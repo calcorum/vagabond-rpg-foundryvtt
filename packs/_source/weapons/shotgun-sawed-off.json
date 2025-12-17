@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponShotgunSawedOff",
+  "name": "Shotgun, sawed-off",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A compact, one-handed shotgun with brutal stopping power.</p>",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "bonusDamage": 0,
+    "grip": "1h",
+    "versatileDamage": "",
+    "attackType": "ranged",
+    "range": {
+      "value": 30,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": true,
+      "entangle": false,
+      "keen": false,
+      "long": false,
+      "near": true,
+      "ranged": true,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 1,
+    "value": 700,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponShotgunSawedOff",
+  "reviewed": true
+}

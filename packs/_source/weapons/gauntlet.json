@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponGauntlet",
+  "name": "Gauntlet",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Armored gloves for brawling combat.</p>",
+    "damage": "1d4",
+    "damageType": "blunt",
+    "bonusDamage": 0,
+    "grip": "fist",
+    "versatileDamage": "",
+    "attackType": "brawl",
+    "range": {
+      "value": 5,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": true,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": false,
+      "long": false,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 1,
+    "value": 200,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponGauntlet",
+  "reviewed": true
+}

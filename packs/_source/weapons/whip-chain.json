@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponWhipChain",
+  "name": "Whip, chain",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A brutal chain whip with extended reach.</p>",
+    "damage": "1d6",
+    "damageType": "slashing",
+    "bonusDamage": 0,
+    "grip": "1h",
+    "versatileDamage": "",
+    "attackType": "melee",
+    "range": {
+      "value": 10,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": true,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": true,
+      "entangle": true,
+      "keen": false,
+      "long": true,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 2,
+    "value": 400,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponWhipChain",
+  "reviewed": true
+}

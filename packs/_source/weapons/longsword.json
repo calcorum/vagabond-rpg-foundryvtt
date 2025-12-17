@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponLongsword",
+  "name": "Longsword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A versatile blade with keen cutting edge.</p>",
+    "damage": "1d8",
+    "damageType": "slashing",
+    "bonusDamage": 0,
+    "grip": "versatile",
+    "versatileDamage": "1d10",
+    "attackType": "melee",
+    "range": {
+      "value": 5,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": true,
+      "brutal": false,
+      "entangle": false,
+      "keen": true,
+      "long": false,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 2,
+    "value": 400,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponLongsword",
+  "reviewed": true
+}

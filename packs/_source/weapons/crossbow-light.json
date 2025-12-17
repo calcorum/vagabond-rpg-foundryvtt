@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponCrossbowLight",
+  "name": "Crossbow, light",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A lightweight one-handed crossbow.</p>",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "bonusDamage": 0,
+    "grip": "1h",
+    "versatileDamage": "",
+    "attackType": "ranged",
+    "range": {
+      "value": 120,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": false,
+      "long": false,
+      "near": false,
+      "ranged": true,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 1,
+    "value": 400,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponCrossbowLight",
+  "reviewed": true
+}

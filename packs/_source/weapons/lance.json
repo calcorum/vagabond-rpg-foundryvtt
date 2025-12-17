@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponLance",
+  "name": "Lance",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>An extra-long cavalry weapon with keen striking power.</p>",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "bonusDamage": 0,
+    "grip": "2h",
+    "versatileDamage": "",
+    "attackType": "melee",
+    "range": {
+      "value": 10,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": false,
+      "thrown": false,
+      "cleave": false,
+      "reach": true,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": true,
+      "long": true,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 3,
+    "value": 900,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponLance",
+  "reviewed": true
+}

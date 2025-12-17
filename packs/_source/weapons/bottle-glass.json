@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponBottleGlass",
+  "name": "Bottle, glass",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A broken glass bottle that can be thrown.</p>",
+    "damage": "1",
+    "damageType": "piercing",
+    "bonusDamage": 0,
+    "grip": "1h",
+    "versatileDamage": "",
+    "attackType": "finesse",
+    "range": {
+      "value": 5,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": true,
+      "thrown": true,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": false,
+      "long": false,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 1,
+    "value": 20,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponBottleGlass",
+  "reviewed": true
+}

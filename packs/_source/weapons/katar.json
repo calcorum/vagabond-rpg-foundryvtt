@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponKatar",
+  "name": "Katar",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A punching dagger that leaves hands free for brawling and precise strikes.</p>",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "bonusDamage": 0,
+    "grip": "fist",
+    "versatileDamage": "",
+    "attackType": "brawl",
+    "range": {
+      "value": 5,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": true,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": true,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": true,
+      "long": false,
+      "near": false,
+      "ranged": false,
+      "shield": false
+    },
+    "material": "mundane",
+    "slots": 1,
+    "value": 200,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponKatar",
+  "reviewed": true
+}

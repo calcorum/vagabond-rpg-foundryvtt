@@ -1,0 +1,59 @@
+{
+  "_id": "vagabondWeaponStandardShield",
+  "name": "Standard shield",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A versatile shield that can block ranged attacks and be thrown.</p>",
+    "damage": "1d4",
+    "damageType": "blunt",
+    "bonusDamage": 0,
+    "grip": "1h",
+    "versatileDamage": "",
+    "attackType": "finesse",
+    "range": {
+      "value": 5,
+      "units": "ft"
+    },
+    "properties": {
+      "finesse": true,
+      "thrown": false,
+      "cleave": false,
+      "reach": false,
+      "loading": false,
+      "brawl": false,
+      "crude": false,
+      "versatile": false,
+      "brutal": false,
+      "entangle": false,
+      "keen": true,
+      "long": false,
+      "near": false,
+      "ranged": true,
+      "shield": true
+    },
+    "material": "mundane",
+    "slots": 2,
+    "value": 750,
+    "equipped": false,
+    "equippedHand": null,
+    "quantity": 1,
+    "attackBonus": 0,
+    "critThreshold": null,
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondWeaponStandardShield",
+  "reviewed": true
+}
