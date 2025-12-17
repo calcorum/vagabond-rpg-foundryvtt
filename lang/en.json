@@ -169,6 +169,7 @@
   "VAGABOND.Fumble": "Fumble!",
 
   "VAGABOND.Damage": "Damage",
+  "VAGABOND.RollDamage": "Roll Damage",
   "VAGABOND.DamageType": "Damage Type",
   "VAGABOND.Effect": "Effect",
   "VAGABOND.CritEffect": "Crit Effect",
@@ -395,6 +396,7 @@
   "VAGABOND.ItemNew": "New {type}",
   "VAGABOND.ItemDeleteTitle": "Delete {name}",
   "VAGABOND.ItemDeleteConfirm": "Are you sure you want to delete {name}?",
+  "VAGABOND.RemoveStatus": "Remove Status",
   "VAGABOND.ItemName": "Item Name",
 
   "VAGABOND.DamageTypeBlunt": "Blunt",
@@ -533,5 +535,72 @@
   "VAGABOND.ClassFeatures": "Class Features",
   "VAGABOND.NoProgression": "No progression entries",
   "VAGABOND.FeatureName": "Feature Name",
-  "VAGABOND.FeatureDescription": "Description"
+  "VAGABOND.FeatureDescription": "Description",
+
+  "VAGABOND.ItemTypeStatus": "Status",
+  "VAGABOND.StatusIcon": "Status Icon",
+  "VAGABOND.StatusRestrictions": "Status Restrictions",
+
+  "VAGABOND.MovementRestrictions": "Movement",
+  "VAGABOND.CantMove": "Cannot Move",
+  "VAGABOND.CantRush": "Cannot Rush",
+  "VAGABOND.SpeedZero": "Speed is 0",
+  "VAGABOND.CrawlOnly": "Crawl Only",
+
+  "VAGABOND.ActionRestrictions": "Actions",
+  "VAGABOND.CantFocus": "Cannot Focus",
+  "VAGABOND.CantUseActions": "Cannot Use Actions",
+  "VAGABOND.OnlyAttackMoveRush": "Only Attack, Move, Rush",
+
+  "VAGABOND.SenseRestrictions": "Senses",
+  "VAGABOND.CantSee": "Cannot See",
+
+  "VAGABOND.CombatModifiers": "Combat",
+  "VAGABOND.IsVulnerable": "Is Vulnerable",
+  "VAGABOND.CloseAttacksAutoCrit": "Close Attacks Auto-Crit",
+  "VAGABOND.FailsMightDexChecks": "Fails MIT/DEX Checks",
+
+  "VAGABOND.MoraleSpecial": "Morale & Special",
+  "VAGABOND.NoMoraleChecks": "No Morale Checks",
+  "VAGABOND.ImmuneToFrightened": "Immune to Frightened",
+  "VAGABOND.CantAttackCharmer": "Cannot Attack Charmer",
+  "VAGABOND.ReducesItemSlots": "Reduces Item Slots",
+
+  "VAGABOND.FavorHinderModifiers": "Favor/Hinder Modifiers",
+  "VAGABOND.HinderOnAfflicted": "Afflicted Has Hinder On",
+  "VAGABOND.FavorAgainstAfflicted": "Others Have Favor Against",
+  "VAGABOND.Checks": "Checks",
+  "VAGABOND.FavorHinderContext": "Context (optional)",
+
+  "VAGABOND.DamageHealingModifiers": "Damage/Healing Modifiers",
+  "VAGABOND.DamageDealtModifier": "Damage Dealt",
+  "VAGABOND.HealingReceivedModifier": "Healing Received",
+
+  "VAGABOND.PeriodicEffects": "Periodic Effects",
+  "VAGABOND.Trigger": "Trigger",
+  "VAGABOND.StartOfTurn": "Start of Turn",
+  "VAGABOND.EndOfTurn": "End of Turn",
+  "VAGABOND.EachRound": "Each Round",
+  "VAGABOND.EffectType": "Effect Type",
+  "VAGABOND.Healing": "Healing",
+  "VAGABOND.EffectDescription": "Effect Description",
+  "VAGABOND.None": "None",
+
+  "VAGABOND.DurationType": "Duration Type",
+  "VAGABOND.DurationValue": "Duration Value",
+  "VAGABOND.Rounds": "Rounds",
+  "VAGABOND.Minutes": "Minutes",
+  "VAGABOND.Hours": "Hours",
+  "VAGABOND.UntilRest": "Until Rest",
+  "VAGABOND.UntilRemoved": "Until Removed",
+
+  "VAGABOND.Stacking": "Stacking",
+  "VAGABOND.Stackable": "Stackable",
+  "VAGABOND.MaxStacks": "Max Stacks",
+
+  "VAGABOND.IncludedStatuses": "Included Statuses",
+  "VAGABOND.IncludedStatusesHint": "For composite statuses (e.g., Unconscious includes Blinded, Incapacitated, Prone)",
+  "VAGABOND.AddIncludedStatus": "Add Included Status",
+
+  "VAGABOND.Reference": "Reference"
 }

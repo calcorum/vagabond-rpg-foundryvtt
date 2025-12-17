@@ -13,3 +13,4 @@ export { default as WeaponData } from "./weapon.mjs";
 export { default as ArmorData } from "./armor.mjs";
 export { default as EquipmentData } from "./equipment.mjs";
 export { default as FeatureData } from "./feature.mjs";
+export { default as StatusData } from "./status.mjs";

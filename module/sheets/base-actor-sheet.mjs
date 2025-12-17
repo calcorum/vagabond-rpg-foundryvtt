@@ -66,6 +66,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       changeTab: VagabondActorSheet.#onChangeTab,
       modifyResource: VagabondActorSheet.#onModifyResource,
       toggleTrained: VagabondActorSheet.#onToggleTrained,
+      removeStatus: VagabondActorSheet.#onRemoveStatus,
     },
     // Drag-drop configuration - use Foundry's built-in system
     // Setting to empty array disables ActorSheetV2's default handling
@@ -184,6 +185,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       features: [],
       perks: [],
       classes: [],
+      statuses: [],
       ancestry: null,
     };
 
@@ -219,6 +221,9 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
           break;
         case "ancestry":
           items.ancestry = item;
+          break;
+        case "status":
+          items.statuses.push(item);
           break;
       }
     }
@@ -820,5 +825,21 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
 
     const currentValue = this.actor.system.skills[skillId]?.trained ?? false;
     await this.actor.update({ [`system.skills.${skillId}.trained`]: !currentValue });
+  }
+
+  /**
+   * Handle status removal action.
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveStatus(event, target) {
+    event.preventDefault();
+    const itemId = target.closest("[data-item-id]")?.dataset.itemId;
+    if (!itemId) return;
+
+    const item = this.actor.items.get(itemId);
+    if (!item || item.type !== "status") return;
+
+    await item.delete();
   }
 }

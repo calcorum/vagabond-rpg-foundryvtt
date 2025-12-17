@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusProne",
+  "name": "Prone",
+  "type": "status",
+  "img": "icons/svg/falling.svg",
+  "system": {
+    "description": "<p>You can either drop or stand from Prone by using 10 feet of Speed. While Prone, the following rules apply:</p><ul><li>It can only move by crawling (2 feet of Speed for 1 foot of movement) and it can't Rush.</li><li>It is Vulnerable for the purposes of Melee Attacks and Dodge Checks.</li></ul>",
+    "icon": "icons/svg/falling.svg",
+    "changes": [],
+    "includesStatuses": [],
+    "flags": {
+      "cantMove": false,
+      "cantRush": true,
+      "speedZero": false,
+      "crawlOnly": true,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": false,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": "Vulnerable for Melee Attacks and Dodge Checks"
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusProne"
+}

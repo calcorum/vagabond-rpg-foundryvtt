@@ -3,7 +3,7 @@
  * @module vagabond
  */
 
-/* global Actors, Items */
+/* global Actors, Items, AudioHelper */
 
 // Import configuration
 import { VAGABOND } from "./helpers/config.mjs";
@@ -19,6 +19,7 @@ import {
   ArmorData,
   EquipmentData,
   FeatureData,
+  StatusData,
 } from "./data/item/_module.mjs";
 
 // Import document classes
@@ -63,6 +64,7 @@ async function preloadHandlebarsTemplates() {
     "systems/vagabond/templates/actor/character-magic.hbs",
     "systems/vagabond/templates/actor/character-biography.hbs",
     "systems/vagabond/templates/actor/parts/tabs.hbs",
+    "systems/vagabond/templates/actor/parts/status-bar.hbs",
     // NPC sheet parts
     "systems/vagabond/templates/actor/npc-header.hbs",
     "systems/vagabond/templates/actor/npc-stats.hbs",
@@ -83,6 +85,7 @@ async function preloadHandlebarsTemplates() {
     "systems/vagabond/templates/item/types/spell.hbs",
     "systems/vagabond/templates/item/types/perk.hbs",
     "systems/vagabond/templates/item/types/feature.hbs",
+    "systems/vagabond/templates/item/types/status.hbs",
   ];
 
   return loadTemplates(templatePaths);
@@ -132,6 +135,7 @@ Hooks.once("init", async () => {
     armor: ArmorData,
     equipment: EquipmentData,
     feature: FeatureData,
+    status: StatusData,
   };
 
   // Define custom Document classes
@@ -472,6 +476,182 @@ Hooks.on("renderChatMessage", (message, html) => {
     button.textContent = "Morale Checked";
   });
 });
+
+/* -------------------------------------------- */
+/*  Attack Damage Roll Handling                 */
+/* -------------------------------------------- */
+
+/**
+ * Handle clicks on "Roll Damage" buttons in attack chat cards.
+ * Rolls damage using the stored weapon data and updates the message.
+ */
+Hooks.on("renderChatMessage", (message, html) => {
+  // Find damage roll buttons in this message
+  html.find(".roll-damage-btn").on("click", async (event) => {
+    event.preventDefault();
+
+    const button = event.currentTarget;
+    const flags = message.flags?.vagabond;
+
+    // Verify this is an attack roll message with pending damage
+    if (!flags || flags.type !== "attack-roll" || flags.damageRolled) {
+      ui.notifications.warn("Cannot roll damage for this message");
+      return;
+    }
+
+    // Disable button immediately to prevent double-clicks
+    button.disabled = true;
+    button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Rolling...';
+
+    try {
+      // Get the actor for roll data
+      const actor = game.actors.get(flags.actorId);
+      if (!actor) {
+        ui.notifications.error("Could not find actor for damage roll");
+        return;
+      }
+
+      // Import damageRoll function
+      const { damageRoll } = await import("./dice/rolls.mjs");
+
+      // Roll damage
+      const roll = await damageRoll(flags.damageFormula, {
+        isCrit: flags.isCrit,
+        rollData: actor.getRollData(),
+      });
+
+      // Extract dice results for display
+      const damageDiceResults = [];
+      for (const term of roll.terms) {
+        if (term instanceof foundry.dice.terms.Die) {
+          for (const r of term.results) {
+            damageDiceResults.push({
+              faces: term.faces,
+              result: r.result,
+            });
+          }
+        }
+      }
+
+      // Render updated content with damage
+      const content = await renderTemplate("systems/vagabond/templates/chat/attack-roll.hbs", {
+        // Original attack data from message content
+        ...(await _extractAttackDataFromMessage(message)),
+        // Damage data
+        hasDamage: true,
+        damageTotal: roll.total,
+        damageFormula: roll.formula,
+        damageDiceResults,
+        twoHanded: flags.twoHanded,
+        isCrit: flags.isCrit,
+        showDamageButton: false,
+      });
+
+      // Update the message with damage rolled
+      await message.update({
+        content,
+        rolls: [...message.rolls, roll],
+        "flags.vagabond.damageRolled": true,
+      });
+
+      // Play dice sound
+      AudioHelper.play({ src: CONFIG.sounds.dice }, true);
+    } catch (error) {
+      console.error("Vagabond RPG | Error rolling damage:", error);
+      ui.notifications.error("Failed to roll damage");
+      button.disabled = false;
+      button.innerHTML = '<i class="fa-solid fa-burst"></i> Roll Damage';
+    }
+  });
+});
+
+/**
+ * Extract attack data from an existing chat message for re-rendering.
+ * @param {ChatMessage} message - The chat message
+ * @returns {Promise<Object>} Template data extracted from the message
+ * @private
+ */
+async function _extractAttackDataFromMessage(message) {
+  const flags = message.flags?.vagabond || {};
+  const content = message.content;
+
+  // Parse values from the message HTML
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(content, "text/html");
+
+  // Extract weapon info
+  const weaponImg = doc.querySelector(".weapon-icon")?.getAttribute("src") || "";
+  const weaponName =
+    doc.querySelector(".weapon-name")?.textContent || flags.weaponName || "Unknown";
+  const attackLabel = doc.querySelector(".attack-type-badge")?.textContent || "";
+
+  // Extract roll result
+  const total = doc.querySelector(".roll-total")?.textContent || "0";
+  const status = doc.querySelector(".roll-status .status")?.classList;
+  const isCrit = status?.contains("critical") || false;
+  const isFumble = status?.contains("fumble") || false;
+  const success = status?.contains("success") || status?.contains("critical") || false;
+
+  // Extract formula and breakdown
+  const formula = doc.querySelector(".roll-formula .value")?.textContent || "";
+  const d20Result = doc.querySelector(".d20-result")?.textContent?.replace(/[^\d]/g, "") || "0";
+  const favorDieEl = doc.querySelector(".favor-die");
+  const favorDie = favorDieEl?.textContent?.replace(/[^\d-]/g, "") || null;
+  const netFavorHinder = favorDieEl?.classList.contains("favor")
+    ? 1
+    : favorDieEl?.classList.contains("hinder")
+      ? -1
+      : 0;
+  const modifier = doc.querySelector(".modifier")?.textContent?.replace(/[^\d-]/g, "") || null;
+
+  // Extract difficulty info
+  const difficulty = doc.querySelector(".difficulty .value")?.textContent || "10";
+  const critThreshold =
+    doc.querySelector(".crit-threshold .value")?.textContent?.replace(/[^\d]/g, "") || "20";
+
+  // Extract weapon properties
+  const propertyTags = doc.querySelectorAll(".weapon-properties .property-tag");
+  const properties = Array.from(propertyTags).map((el) => el.textContent);
+
+  // Extract favor/hinder sources
+  const favorSourcesEl = doc.querySelector(".favor-sources span");
+  const hinderSourcesEl = doc.querySelector(".hinder-sources span");
+  const favorSources =
+    favorSourcesEl?.textContent
+      ?.replace(/^[^:]+:\s*/, "")
+      .split(", ")
+      .filter(Boolean) || [];
+  const hinderSources =
+    hinderSourcesEl?.textContent
+      ?.replace(/^[^:]+:\s*/, "")
+      .split(", ")
+      .filter(Boolean) || [];
+
+  return {
+    weapon: {
+      id: flags.weaponId,
+      name: weaponName,
+      img: weaponImg,
+      damageType: flags.damageType,
+      damageTypeLabel: flags.damageTypeLabel,
+      properties,
+    },
+    attackLabel,
+    total,
+    d20Result,
+    favorDie: favorDie ? parseInt(favorDie) : null,
+    modifier: modifier ? parseInt(modifier) : null,
+    formula,
+    difficulty,
+    critThreshold,
+    success,
+    isCrit,
+    isFumble,
+    netFavorHinder,
+    favorSources,
+    hinderSources,
+  };
+}
 
 /* -------------------------------------------- */
 /*  Quench Test Registration                    */

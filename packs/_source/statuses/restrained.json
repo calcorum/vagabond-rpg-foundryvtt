@@ -1,0 +1,65 @@
+{
+  "_id": "vagabondStatusRestrained",
+  "name": "Restrained",
+  "type": "status",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "description": "<p>It is Vulnerable, and its Speed is 0.</p>",
+    "icon": "icons/svg/net.svg",
+    "changes": [
+      {
+        "key": "system.speed.walk",
+        "mode": 5,
+        "value": "0",
+        "priority": null
+      }
+    ],
+    "includesStatuses": ["Vulnerable"],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": true,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": true,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusRestrained"
+}

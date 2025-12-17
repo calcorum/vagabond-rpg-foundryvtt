@@ -1,0 +1,294 @@
+{{!-- Status Item Sheet Body --}}
+<div class="item-content status-content">
+  {{!-- Status Icon --}}
+  <div class="status-icon-section">
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.StatusIcon"}}</label>
+      <input type="text" name="system.icon" value="{{system.icon}}" placeholder="icons/svg/hazard.svg" {{#unless editable}}disabled{{/unless}} />
+    </div>
+    <div class="icon-preview">
+      <img src="{{system.icon}}" alt="Status Icon" />
+    </div>
+  </div>
+
+  {{!-- Core Status Flags --}}
+  <fieldset class="status-flags">
+    <legend>{{localize "VAGABOND.StatusRestrictions"}}</legend>
+
+    {{!-- Movement Restrictions --}}
+    <div class="flags-category">
+      <h4>{{localize "VAGABOND.MovementRestrictions"}}</h4>
+      <div class="flags-grid">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantMove" {{#if system.flags.cantMove}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantMove"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantRush" {{#if system.flags.cantRush}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantRush"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.speedZero" {{#if system.flags.speedZero}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.SpeedZero"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.crawlOnly" {{#if system.flags.crawlOnly}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CrawlOnly"}}
+        </label>
+      </div>
+    </div>
+
+    {{!-- Action Restrictions --}}
+    <div class="flags-category">
+      <h4>{{localize "VAGABOND.ActionRestrictions"}}</h4>
+      <div class="flags-grid">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantFocus" {{#if system.flags.cantFocus}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantFocus"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantUseActions" {{#if system.flags.cantUseActions}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantUseActions"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.onlyAttackMoveRush" {{#if system.flags.onlyAttackMoveRush}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.OnlyAttackMoveRush"}}
+        </label>
+      </div>
+    </div>
+
+    {{!-- Sense Restrictions --}}
+    <div class="flags-category">
+      <h4>{{localize "VAGABOND.SenseRestrictions"}}</h4>
+      <div class="flags-grid">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantSee" {{#if system.flags.cantSee}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantSee"}}
+        </label>
+      </div>
+    </div>
+
+    {{!-- Combat Modifiers --}}
+    <div class="flags-category">
+      <h4>{{localize "VAGABOND.CombatModifiers"}}</h4>
+      <div class="flags-grid">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.isVulnerable" {{#if system.flags.isVulnerable}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.IsVulnerable"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.closeAttacksAutoCrit" {{#if system.flags.closeAttacksAutoCrit}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CloseAttacksAutoCrit"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.failsMightDexChecks" {{#if system.flags.failsMightDexChecks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.FailsMightDexChecks"}}
+        </label>
+      </div>
+    </div>
+
+    {{!-- Morale & Special --}}
+    <div class="flags-category">
+      <h4>{{localize "VAGABOND.MoraleSpecial"}}</h4>
+      <div class="flags-grid">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.noMoraleChecks" {{#if system.flags.noMoraleChecks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.NoMoraleChecks"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.immuneToFrightened" {{#if system.flags.immuneToFrightened}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.ImmuneToFrightened"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.cantAttackCharmer" {{#if system.flags.cantAttackCharmer}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.CantAttackCharmer"}}
+        </label>
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.flags.reducesItemSlots" {{#if system.flags.reducesItemSlots}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.ReducesItemSlots"}}
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  {{!-- Favor/Hinder Modifiers --}}
+  <fieldset class="favor-hinder-section">
+    <legend>{{localize "VAGABOND.FavorHinderModifiers"}}</legend>
+
+    <div class="favor-hinder-grid">
+      {{!-- Hinder on afflicted --}}
+      <div class="fh-category">
+        <h4>{{localize "VAGABOND.HinderOnAfflicted"}}</h4>
+        <div class="flags-grid">
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.hinderChecks" {{#if system.favorHinder.hinderChecks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Checks"}}
+          </label>
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.hinderSaves" {{#if system.favorHinder.hinderSaves}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Saves"}}
+          </label>
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.hinderAttacks" {{#if system.favorHinder.hinderAttacks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Attacks"}}
+          </label>
+        </div>
+      </div>
+
+      {{!-- Favor against afflicted --}}
+      <div class="fh-category">
+        <h4>{{localize "VAGABOND.FavorAgainstAfflicted"}}</h4>
+        <div class="flags-grid">
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.favorAgainstChecks" {{#if system.favorHinder.favorAgainstChecks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Checks"}}
+          </label>
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.favorAgainstSaves" {{#if system.favorHinder.favorAgainstSaves}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Saves"}}
+          </label>
+          <label class="flag-checkbox">
+            <input type="checkbox" name="system.favorHinder.favorAgainstAttacks" {{#if system.favorHinder.favorAgainstAttacks}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+            {{localize "VAGABOND.Attacks"}}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-group">
+      <label>{{localize "VAGABOND.FavorHinderContext"}}</label>
+      <input type="text" name="system.favorHinder.context" value="{{system.favorHinder.context}}" placeholder="e.g. sight-based Detect checks" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </fieldset>
+
+  {{!-- Damage/Healing Modifiers --}}
+  <fieldset class="modifiers-section">
+    <legend>{{localize "VAGABOND.DamageHealingModifiers"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.DamageDealtModifier"}}</label>
+        <input type="number" name="system.modifiers.damageDealt" value="{{system.modifiers.damageDealt}}" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.HealingReceivedModifier"}}</label>
+        <input type="number" name="system.modifiers.healingReceived" value="{{system.modifiers.healingReceived}}" {{#unless editable}}disabled{{/unless}} />
+      </div>
+    </div>
+  </fieldset>
+
+  {{!-- Periodic Effects --}}
+  <fieldset class="periodic-section">
+    <legend>{{localize "VAGABOND.PeriodicEffects"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.Trigger"}}</label>
+        <select name="system.periodic.trigger" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.periodic.trigger}}selected{{/unless}}>{{localize "VAGABOND.None"}}</option>
+          <option value="startOfTurn" {{#if (eq system.periodic.trigger "startOfTurn")}}selected{{/if}}>{{localize "VAGABOND.StartOfTurn"}}</option>
+          <option value="endOfTurn" {{#if (eq system.periodic.trigger "endOfTurn")}}selected{{/if}}>{{localize "VAGABOND.EndOfTurn"}}</option>
+          <option value="eachRound" {{#if (eq system.periodic.trigger "eachRound")}}selected{{/if}}>{{localize "VAGABOND.EachRound"}}</option>
+        </select>
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.EffectType"}}</label>
+        <select name="system.periodic.type" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.periodic.type}}selected{{/unless}}>{{localize "VAGABOND.None"}}</option>
+          <option value="damage" {{#if (eq system.periodic.type "damage")}}selected{{/if}}>{{localize "VAGABOND.Damage"}}</option>
+          <option value="fatigue" {{#if (eq system.periodic.type "fatigue")}}selected{{/if}}>{{localize "VAGABOND.Fatigue"}}</option>
+          <option value="healing" {{#if (eq system.periodic.type "healing")}}selected{{/if}}>{{localize "VAGABOND.Healing"}}</option>
+          <option value="check" {{#if (eq system.periodic.type "check")}}selected{{/if}}>{{localize "VAGABOND.Check"}}</option>
+        </select>
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.Value"}}</label>
+        <input type="text" name="system.periodic.value" value="{{system.periodic.value}}" placeholder="e.g. 1d6" {{#unless editable}}disabled{{/unless}} />
+      </div>
+    </div>
+    <div class="stat-group full-width">
+      <label>{{localize "VAGABOND.EffectDescription"}}</label>
+      <input type="text" name="system.periodic.effectDescription" value="{{system.periodic.effectDescription}}" placeholder="e.g. Takes damage at start of turn" {{#unless editable}}disabled{{/unless}} />
+    </div>
+  </fieldset>
+
+  {{!-- Duration --}}
+  <fieldset class="duration-section">
+    <legend>{{localize "VAGABOND.Duration"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.DurationType"}}</label>
+        <select name="system.duration.type" {{#unless editable}}disabled{{/unless}}>
+          <option value="" {{#unless system.duration.type}}selected{{/unless}}>{{localize "VAGABOND.UntilRemoved"}}</option>
+          <option value="rounds" {{#if (eq system.duration.type "rounds")}}selected{{/if}}>{{localize "VAGABOND.Rounds"}}</option>
+          <option value="minutes" {{#if (eq system.duration.type "minutes")}}selected{{/if}}>{{localize "VAGABOND.Minutes"}}</option>
+          <option value="hours" {{#if (eq system.duration.type "hours")}}selected{{/if}}>{{localize "VAGABOND.Hours"}}</option>
+          <option value="untilRest" {{#if (eq system.duration.type "untilRest")}}selected{{/if}}>{{localize "VAGABOND.UntilRest"}}</option>
+          <option value="special" {{#if (eq system.duration.type "special")}}selected{{/if}}>{{localize "VAGABOND.Special"}}</option>
+        </select>
+      </div>
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.DurationValue"}}</label>
+        <input type="number" name="system.duration.value" value="{{system.duration.value}}" min="0" {{#unless editable}}disabled{{/unless}} />
+      </div>
+    </div>
+  </fieldset>
+
+  {{!-- Stacking --}}
+  <fieldset class="stacking-section">
+    <legend>{{localize "VAGABOND.Stacking"}}</legend>
+    <div class="item-stats-row">
+      <div class="stat-group">
+        <label class="flag-checkbox">
+          <input type="checkbox" name="system.stackable" {{#if system.stackable}}checked{{/if}} {{#unless editable}}disabled{{/unless}} />
+          {{localize "VAGABOND.Stackable"}}
+        </label>
+      </div>
+      {{#if system.stackable}}
+      <div class="stat-group">
+        <label>{{localize "VAGABOND.MaxStacks"}}</label>
+        <input type="number" name="system.maxStacks" value="{{system.maxStacks}}" min="1" {{#unless editable}}disabled{{/unless}} />
+      </div>
+      {{/if}}
+    </div>
+  </fieldset>
+
+  {{!-- Included Statuses (for composites) --}}
+  <fieldset class="includes-section">
+    <legend>{{localize "VAGABOND.IncludedStatuses"}}</legend>
+    <p class="section-hint">{{localize "VAGABOND.IncludedStatusesHint"}}</p>
+    <div class="includes-list">
+      {{#each system.includesStatuses}}
+      <div class="includes-entry" data-index="{{@index}}">
+        <input type="text" name="system.includesStatuses.{{@index}}" value="{{this}}" placeholder="e.g. Blinded" {{#unless ../editable}}disabled{{/unless}} />
+        {{#if ../editable}}
+        <button type="button" class="delete-entry" data-action="deleteArrayEntry" data-field="system.includesStatuses" data-index="{{@index}}">
+          <i class="fas fa-trash"></i>
+        </button>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{#if editable}}
+      <button type="button" class="add-entry" data-action="addArrayEntry" data-field="system.includesStatuses">
+        <i class="fas fa-plus"></i> {{localize "VAGABOND.AddIncludedStatus"}}
+      </button>
+      {{/if}}
+    </div>
+  </fieldset>
+
+  {{!-- Reference --}}
+  <div class="reference-section">
+    <label>{{localize "VAGABOND.Reference"}}</label>
+    <input type="text" name="system.reference" value="{{system.reference}}" placeholder="Core Rulebook p.36" {{#unless editable}}disabled{{/unless}} />
+  </div>
+
+  {{!-- Description --}}
+  <div class="item-description">
+    <label>{{localize "VAGABOND.Description"}}</label>
+    <div class="editor-wrapper">
+      {{#if editable}}
+      <prose-mirror name="system.description" toggled="false">{{{enrichedDescription}}}</prose-mirror>
+      {{else}}
+      <div class="editor-content">{{{enrichedDescription}}}</div>
+      {{/if}}
+    </div>
+  </div>
+</div>

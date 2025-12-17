@@ -204,6 +204,29 @@ export default class AttackRollDialog extends VagabondRollDialog {
     return weapon.system.getDamageFormula?.(this.twoHanded) || weapon.system.damage || "1d6";
   }
 
+  /**
+   * Extract dice results from a Roll for display.
+   * @param {Roll|null} roll - The roll to extract results from
+   * @returns {Array<{faces: number, result: number}>} Array of dice results
+   * @private
+   */
+  _extractDiceResults(roll) {
+    if (!roll) return [];
+
+    const results = [];
+    for (const term of roll.terms) {
+      if (term instanceof foundry.dice.terms.Die) {
+        for (const r of term.results) {
+          results.push({
+            faces: term.faces,
+            result: r.result,
+          });
+        }
+      }
+    }
+    return results;
+  }
+
   /* -------------------------------------------- */
   /*  Data Preparation                            */
   /* -------------------------------------------- */
@@ -318,18 +341,8 @@ export default class AttackRollDialog extends VagabondRollDialog {
       modifier: this.rollConfig.modifier,
     });
 
-    // Roll damage if the attack hit
-    let damageResult = null;
-    if (result.success) {
-      const damageFormula = this._getDamageFormula();
-      damageResult = await damageRoll(damageFormula, {
-        isCrit: result.isCrit,
-        rollData: this.actor.getRollData(),
-      });
-    }
-
-    // Send to chat with custom template
-    await this._sendToChat(result, damageResult);
+    // Send to chat (damage is rolled separately via button click)
+    await this._sendToChat(result);
   }
 
   /**
@@ -340,9 +353,10 @@ export default class AttackRollDialog extends VagabondRollDialog {
    * @returns {Promise<ChatMessage>}
    * @private
    */
-  async _sendToChat(result, damageResult) {
+  async _sendToChat(result, damageResult = null) {
     const weapon = this.weapon;
     const attackData = this.attackData;
+    const damageFormula = this._getDamageFormula();
 
     // Prepare template data
     const templateData = {
@@ -372,11 +386,15 @@ export default class AttackRollDialog extends VagabondRollDialog {
       netFavorHinder: this.netFavorHinder,
       favorSources: this.rollConfig.autoFavorHinder.favorSources,
       hinderSources: this.rollConfig.autoFavorHinder.hinderSources,
-      // Damage info
+      // Damage info (only present if damage was rolled)
       hasDamage: !!damageResult,
       damageTotal: damageResult?.total,
       damageFormula: damageResult?.formula,
+      damageDiceResults: this._extractDiceResults(damageResult),
       twoHanded: this.twoHanded,
+      // Show damage button if hit but damage not yet rolled
+      showDamageButton: result.success && !damageResult,
+      pendingDamageFormula: damageFormula,
     };
 
     // Render the chat card template
@@ -389,13 +407,30 @@ export default class AttackRollDialog extends VagabondRollDialog {
     const rolls = [result.roll];
     if (damageResult) rolls.push(damageResult);
 
-    // Create the chat message
+    // Create the chat message with flags for later damage rolling
     const chatData = {
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content,
       rolls,
       sound: CONFIG.sounds.dice,
+      flags: {
+        vagabond: {
+          type: "attack-roll",
+          actorId: this.actor.id,
+          weaponId: weapon.id,
+          weaponName: weapon.name,
+          damageFormula,
+          damageType: weapon.system.damageType,
+          damageTypeLabel: game.i18n.localize(
+            CONFIG.VAGABOND?.damageTypes?.[weapon.system.damageType] || weapon.system.damageType
+          ),
+          twoHanded: this.twoHanded,
+          isCrit: result.isCrit,
+          success: result.success,
+          damageRolled: !!damageResult,
+        },
+      },
     };
 
     return ChatMessage.create(chatData);

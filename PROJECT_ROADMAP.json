@@ -237,6 +237,16 @@
           "priority": "low",
           "dependencies": ["1.11", "1.12"],
           "notes": "Investigate what materials exist in Vagabond RPG and their mechanical effects. May need to update compendium items (6.6, 6.7) after implementation."
+        },
+        {
+          "id": "1.17",
+          "name": "Create Status item data model",
+          "description": "Status conditions as items: name, description, mechanical effects via embedded Active Effect data. 17 statuses from Core Rulebook: Berserk, Blinded, Burning, Charmed, Confused, Dazed, Fatigued, Frightened, Incapacitated, Invisible, Paralyzed, Prone, Restrained, Sickened, Suffocating, Unconscious, Vulnerable.",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["1.6", "1.15"],
+          "notes": "Implemented StatusData with: changes array for Active Effects, includesStatuses for composites, flags for rule hints (cantMove, cantFocus, isVulnerable, etc.), favorHinder for roll modifiers, modifiers for damage/healing penalties, periodic for turn-based effects, duration tracking, stacking support."
         }
       ]
     },
@@ -553,6 +563,16 @@
           "priority": "medium",
           "dependencies": ["3.13", "2.13"],
           "notes": "Morale roll button in header, disabled when morale broken."
+        },
+        {
+          "id": "3.17",
+          "name": "Implement Status display section on Actor sheets",
+          "description": "Add status condition display to both Character and NPC sheets. Show active statuses as icons/badges with tooltips. Allow adding/removing statuses via drag-drop or context menu. Display on Main tab for quick visibility during combat.",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["3.2", "3.13", "1.17"],
+          "notes": "Consider icon-based display similar to token status effects. Statuses should be visible at a glance. May integrate with Foundry's built-in status effect system for token overlay icons."
         }
       ]
     },
@@ -641,6 +661,16 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["4.1", "1.14"]
+        },
+        {
+          "id": "4.10",
+          "name": "Implement Status item sheet",
+          "description": "Status name, icon selector, description editor, embedded Active Effect configuration for mechanical effects. Show which effects the status applies (e.g., Vulnerable adds Hinder to saves).",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["4.1", "1.17"],
+          "notes": "Implemented with: icon selector with preview, flags section (movement/action/sense/combat/morale restrictions), favor/hinder modifiers, damage/healing modifiers, periodic effects (trigger/type/value), duration tracking, stacking config, included statuses for composites, reference field. Uses existing base item sheet infrastructure with type-specific status.hbs template."
         }
       ]
     },
@@ -849,6 +879,16 @@
           "priority": "medium",
           "dependencies": ["6.1", "1.3"],
           "notes": "In progress: 21/289+ creatures. Humanlike category complete (21 NPCs). Remaining: Artificials (23), Beasts (75+), Cryptids (75+), Fae (16), Outers (32), Primordials (28), Undead (21). Source: Core Rulebook pp.112-181."
+        },
+        {
+          "id": "6.10",
+          "name": "Populate Statuses compendium",
+          "description": "All 17 status conditions from Core Rulebook with icons and Active Effects: Berserk, Blinded, Burning, Charmed, Confused, Dazed, Fatigued, Frightened, Incapacitated, Invisible, Paralyzed, Prone, Restrained, Sickened, Suffocating, Unconscious, Vulnerable.",
+          "completed": true,
+          "tested": false,
+          "priority": "high",
+          "dependencies": ["6.1", "1.17"],
+          "notes": "Each status needs: icon, description from rulebook, Active Effects for mechanical changes. Key effects: Vulnerable (Hinder on saves, Favor for attackers), Confused (Hinder on checks/saves), Frightened (-2 damage), Sickened (-2 healing), Incapacitated (fail Might/Dex checks, is Vulnerable). Composite statuses: Unconscious (Blinded+Incapacitated+Prone), Paralyzed (Incapacitated+Speed 0), Restrained (Vulnerable+Speed 0)."
         }
       ]
     },
@@ -1279,7 +1319,7 @@
     }
   ],
   "summary": {
-    "total_tasks": 125,
+    "total_tasks": 129,
     "phases": 12,
     "critical_path": [
       "0.1 -> 1.1 -> 2.1 -> 2.2 -> 3.1 -> 3.2 -> 7.1 -> 9.2",

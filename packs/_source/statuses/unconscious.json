@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusUnconscious",
+  "name": "Unconscious",
+  "type": "status",
+  "img": "icons/svg/sleep.svg",
+  "system": {
+    "description": "<p>It is Blinded, Incapacitated, and Prone. In addition, close Attacks are automatically Critical Hits.</p>",
+    "icon": "icons/svg/sleep.svg",
+    "changes": [],
+    "includesStatuses": ["Blinded", "Incapacitated", "Prone"],
+    "flags": {
+      "cantMove": true,
+      "cantRush": true,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": true,
+      "cantUseActions": true,
+      "onlyAttackMoveRush": false,
+      "cantSee": true,
+      "isVulnerable": true,
+      "closeAttacksAutoCrit": true,
+      "failsMightDexChecks": true,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusUnconscious"
+}

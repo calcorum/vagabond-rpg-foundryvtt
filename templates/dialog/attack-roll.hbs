@@ -82,11 +82,11 @@
   <div class="favor-hinder-section">
     <label>{{localize "VAGABOND.FavorHinder"}}</label>
     <div class="favor-hinder-toggles">
-      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-favor="1">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
         <i class="fa-solid fa-arrow-up"></i>
         {{localize "VAGABOND.Favor"}}
       </button>
-      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-favor="-1">
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
         <i class="fa-solid fa-arrow-down"></i>
         {{localize "VAGABOND.Hinder"}}
       </button>
@@ -106,10 +106,10 @@
   <div class="modifier-section">
     <label>{{localize "VAGABOND.SituationalModifier"}}</label>
     <div class="modifier-presets">
-      <button type="button" class="modifier-preset" data-modifier="-5">-5</button>
-      <button type="button" class="modifier-preset" data-modifier="-1">-1</button>
-      <button type="button" class="modifier-preset" data-modifier="1">+1</button>
-      <button type="button" class="modifier-preset" data-modifier="5">+5</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="-5">-5</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="-1">-1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="1">+1</button>
+      <button type="button" class="modifier-preset" data-modifier-preset="5">+5</button>
     </div>
     <div class="modifier-input">
       <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">

@@ -64,7 +64,7 @@
     {{/if}}
   </div>
 
-  {{!-- Damage Section (if hit) --}}
+  {{!-- Damage Section (if damage was rolled) --}}
   {{#if hasDamage}}
   <div class="damage-section {{#if isCrit}}critical{{/if}}">
     <div class="damage-header">
@@ -78,12 +78,33 @@
       <span class="damage-total">{{damageTotal}}</span>
       <span class="damage-type">{{weapon.damageTypeLabel}}</span>
     </div>
+    <div class="damage-breakdown">
+      {{#each damageDiceResults}}
+      <span class="damage-die" data-tooltip="d{{this.faces}}">
+        <i class="fa-solid fa-dice-d{{this.faces}}"></i> {{this.result}}
+      </span>
+      {{/each}}
+    </div>
     <div class="damage-formula">
       {{damageFormula}}
       {{#if twoHanded}}
       <span class="grip-indicator">({{localize "VAGABOND.TwoHanded"}})</span>
       {{/if}}
     </div>
+  </div>
+  {{/if}}
+
+  {{!-- Roll Damage Button (if hit but damage not yet rolled) --}}
+  {{#if showDamageButton}}
+  <div class="card-buttons">
+    <button type="button" class="roll-damage-btn {{#if isCrit}}critical{{/if}}">
+      <i class="fa-solid fa-burst"></i>
+      {{localize "VAGABOND.RollDamage"}}
+      {{#if isCrit}}
+      <span class="crit-label">({{localize "VAGABOND.Critical"}}!)</span>
+      {{/if}}
+      <span class="damage-preview">({{pendingDamageFormula}})</span>
+    </button>
   </div>
   {{/if}}
 

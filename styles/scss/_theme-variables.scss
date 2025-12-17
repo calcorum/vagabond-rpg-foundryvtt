@@ -70,6 +70,7 @@
   --color-badge-feature: #{mix($color-presence, $color-parchment, 15%)};
   --color-badge-ancestry: #{mix($color-luck, $color-parchment, 15%)};
   --color-badge-equipment: #{mix($color-dexterity, $color-parchment, 15%)};
+  --color-badge-status: #{mix($color-danger, $color-parchment, 20%)};
 }
 
 // ==========================================
@@ -143,4 +144,5 @@ body.theme-dark .vagabond:not(.theme-light),
   --color-badge-feature: #383028;
   --color-badge-ancestry: #283838;
   --color-badge-equipment: #283828;
+  --color-badge-status: #3d2828;
 }

@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusConfused",
+  "name": "Confused",
+  "type": "status",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": "<p>Its Checks and Saves have Hinder, and Saves against its Actions have Favor.</p>",
+    "icon": "icons/svg/daze.svg",
+    "changes": [],
+    "includesStatuses": [],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": false,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": true,
+      "hinderSaves": true,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": true,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusConfused"
+}

@@ -24,4 +24,5 @@ export {
   ArmorData,
   EquipmentData,
   FeatureData,
+  StatusData,
 } from "./item/_module.mjs";

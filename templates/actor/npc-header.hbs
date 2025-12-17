@@ -1,4 +1,5 @@
 {{!-- NPC Sheet Header --}}
+<div class="header-wrapper">
 <header class="sheet-header npc-header">
   <div class="header-portrait">
     <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}"
@@ -59,3 +60,7 @@
     {{/if}}
   </div>
 </header>
+
+{{!-- Status Bar (below header) --}}
+{{> "systems/vagabond/templates/actor/parts/status-bar.hbs"}}
+</div>

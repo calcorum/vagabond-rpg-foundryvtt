@@ -437,6 +437,30 @@
       }
     }
 
+    .damage-breakdown {
+      @include flex-center;
+      gap: $spacing-2;
+      margin-top: $spacing-2;
+      padding-top: $spacing-2;
+      border-top: 1px solid rgba(201, 68, 68, 0.2);
+
+      .damage-die {
+        @include flex-center;
+        gap: $spacing-1;
+        padding: $spacing-1 $spacing-2;
+        background-color: rgba(201, 68, 68, 0.15);
+        border-radius: $radius-md;
+        font-family: $font-family-mono;
+        font-weight: $font-weight-bold;
+        color: var(--color-text-primary);
+
+        i {
+          color: var(--color-danger);
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
     .damage-formula {
       @include flex-center;
       gap: $spacing-2;
@@ -465,6 +489,54 @@
       border-radius: $radius-full;
       color: var(--color-text-secondary);
       text-transform: capitalize;
+    }
+  }
+
+  // Roll Damage button
+  .card-buttons {
+    .roll-damage-btn {
+      @include flex-center;
+      gap: $spacing-2;
+      width: 100%;
+      padding: $spacing-2 $spacing-3;
+      background-color: rgba(201, 68, 68, 0.2);
+      border: 1px solid var(--color-danger);
+      border-radius: $radius-md;
+      color: var(--color-danger);
+      font-weight: $font-weight-semibold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover:not(:disabled) {
+        background-color: rgba(201, 68, 68, 0.3);
+        border-color: var(--color-danger);
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      &.critical {
+        background-color: rgba(212, 163, 44, 0.2);
+        border-color: var(--color-warning);
+        color: var(--color-warning);
+
+        &:hover:not(:disabled) {
+          background-color: rgba(212, 163, 44, 0.3);
+        }
+      }
+
+      .crit-label {
+        font-size: $font-size-sm;
+        color: var(--color-warning);
+      }
+
+      .damage-preview {
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+      }
     }
   }
 }

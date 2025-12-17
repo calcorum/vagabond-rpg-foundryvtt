@@ -110,6 +110,10 @@ export const EFFECT_KEYS = {
 
   // Focus tracking
   "focus.maxConcurrent": "system.focus.maxConcurrent",
+
+  // Status-related modifiers
+  "damage.dealt.bonus": "system.modifiers.damageDealt",
+  "healing.received.bonus": "system.modifiers.healingReceived",
 };
 
 /**
@@ -273,6 +277,7 @@ export function getEffectsBySource(actor) {
     perk: [],
     feature: [],
     equipment: [],
+    status: [],
     temporary: [],
     other: [],
   };

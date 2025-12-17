@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:css && npm run build:packs",
     "build:css": "sass styles/scss/vagabond.scss styles/vagabond.css --style=compressed",
-    "build:packs": "fvtt package workon vagabond --type System && npm run build:pack:ancestries && npm run build:pack:classes && npm run build:pack:spells && npm run build:pack:perks && npm run build:pack:weapons && npm run build:pack:armor && npm run build:pack:equipment",
+    "build:packs": "fvtt package workon vagabond --type System && npm run build:pack:ancestries && npm run build:pack:classes && npm run build:pack:spells && npm run build:pack:perks && npm run build:pack:weapons && npm run build:pack:armor && npm run build:pack:equipment && npm run build:pack:statuses && npm run build:pack:bestiary",
     "build:pack:ancestries": "fvtt package pack -n ancestries -t Item --in packs/_source/ancestries --out packs",
     "build:pack:classes": "fvtt package pack -n classes -t Item --in packs/_source/classes --out packs",
     "build:pack:spells": "fvtt package pack -n spells -t Item --in packs/_source/spells --out packs",
@@ -13,6 +13,8 @@
     "build:pack:weapons": "fvtt package pack -n weapons -t Item --in packs/_source/weapons --out packs",
     "build:pack:armor": "fvtt package pack -n armor -t Item --in packs/_source/armor --out packs",
     "build:pack:equipment": "fvtt package pack -n equipment -t Item --in packs/_source/equipment --out packs",
+    "build:pack:statuses": "fvtt package pack -n statuses -t Item --in packs/_source/statuses --out packs",
+    "build:pack:bestiary": "fvtt package pack -n bestiary -t Actor --in packs/_source/bestiary --out packs",
     "watch": "sass styles/scss/vagabond.scss styles/vagabond.css --watch --style=expanded --source-map",
     "lint": "eslint module/",
     "lint:fix": "eslint module/ --fix",

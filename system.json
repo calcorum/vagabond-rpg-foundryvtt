@@ -104,13 +104,43 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "statuses",
+      "label": "Statuses",
+      "path": "packs/statuses",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
     {
       "name": "Vagabond RPG",
       "sorting": "a",
-      "packs": ["ancestries", "classes", "spells", "perks", "weapons", "armor", "equipment"]
+      "packs": [
+        "ancestries",
+        "classes",
+        "spells",
+        "perks",
+        "weapons",
+        "armor",
+        "equipment",
+        "statuses",
+        "bestiary"
+      ]
     }
   ],
   "documentTypes": {
@@ -150,6 +180,9 @@
         "htmlFields": ["description"]
       },
       "feature": {
+        "htmlFields": ["description"]
+      },
+      "status": {
         "htmlFields": ["description"]
       }
     }

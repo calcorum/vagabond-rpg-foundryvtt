@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusBurning",
+  "name": "Burning",
+  "type": "status",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>A die roll indicates damage it takes at the start of its Turns, unless an appropriate action is taken to end it (such as dousing fire).</p>",
+    "icon": "icons/svg/fire.svg",
+    "changes": [],
+    "includesStatuses": [],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": false,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": "startOfTurn",
+      "type": "damage",
+      "value": "varies",
+      "effectDescription": "Takes damage at the start of each turn (die roll indicates amount)"
+    },
+    "duration": {
+      "type": "special",
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusBurning"
+}

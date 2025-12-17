@@ -204,6 +204,9 @@ export default class VagabondActor extends Actor {
     }
     system.armor = totalArmor;
 
+    // Apply status modifiers
+    this._applyStatusModifiers();
+
     // Calculate used item slots from inventory
     // Each item type implements getTotalSlots() with its own logic
     let usedSlots = 0;
@@ -225,7 +228,39 @@ export default class VagabondActor extends Actor {
    */
   _prepareNPCDerivedData() {
     // NPC derived data is handled by NPCData.prepareDerivedData()
-    // Add any document-level NPC calculations here if needed
+    // Apply status modifiers to NPCs as well
+    this._applyStatusModifiers();
+  }
+
+  /**
+   * Apply modifiers from status items to the actor.
+   * Aggregates damageDealt and healingReceived modifiers from all active statuses.
+   *
+   * @private
+   */
+  _applyStatusModifiers() {
+    const system = this.system;
+
+    // Initialize modifiers if not present
+    if (!system.statusModifiers) {
+      system.statusModifiers = {
+        damageDealt: 0,
+        healingReceived: 0,
+      };
+    }
+
+    // Reset to base values
+    system.statusModifiers.damageDealt = 0;
+    system.statusModifiers.healingReceived = 0;
+
+    // Aggregate modifiers from all status items
+    for (const item of this.items) {
+      if (item.type === "status") {
+        const modifiers = item.system.modifiers || {};
+        system.statusModifiers.damageDealt += modifiers.damageDealt || 0;
+        system.statusModifiers.healingReceived += modifiers.healingReceived || 0;
+      }
+    }
   }
 
   /* -------------------------------------------- */
@@ -245,6 +280,12 @@ export default class VagabondActor extends Actor {
 
     // Add actor-level conveniences
     data.name = this.name;
+
+    // Add status modifiers for use in damage/healing formulas
+    data.statusModifiers = this.system.statusModifiers || {
+      damageDealt: 0,
+      healingReceived: 0,
+    };
 
     // Type-specific roll data is added by the TypeDataModel's getRollData()
 
@@ -417,16 +458,21 @@ export default class VagabondActor extends Actor {
 
   /**
    * Heal this actor.
+   * Applies status modifiers (e.g., Sickened reduces healing received).
    *
    * @param {number} amount - The amount to heal
    * @returns {Promise<VagabondActor>} The updated actor
    */
   async applyHealing(amount) {
+    // Apply status modifiers to healing (e.g., Sickened gives -2)
+    const healingModifier = this.system.statusModifiers?.healingReceived || 0;
+    const finalAmount = Math.max(0, amount + healingModifier);
+
     if (this.type === "character") {
-      return this.modifyResource("hp", amount);
+      return this.modifyResource("hp", finalAmount);
     }
     const max = this.system.hp.max;
-    const newHP = Math.min(max, this.system.hp.value + amount);
+    const newHP = Math.min(max, this.system.hp.value + finalAmount);
     return this.update({ "system.hp.value": newHP });
   }
 
@@ -693,7 +739,7 @@ export default class VagabondActor extends Actor {
     // Find the lowest morale score (weakest link)
     const actors = tokens.map((t) => t.actor);
     const lowestMorale = Math.min(...actors.map((a) => a.system.morale));
-    const groupName =
+    const _groupName =
       tokens.length === 1
         ? tokens[0].name
         : `${tokens.length} enemies (lowest morale: ${lowestMorale})`;

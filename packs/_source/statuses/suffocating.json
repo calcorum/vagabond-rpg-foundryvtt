@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusSuffocating",
+  "name": "Suffocating",
+  "type": "status",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "description": "<p>A creature can hold its breath for a number of rounds equal to its Might. After that, it begins Suffocating and takes 1d6 damage at the start of each of its turns until it can breathe again or dies.</p>",
+    "icon": "icons/svg/unconscious.svg",
+    "changes": [],
+    "includesStatuses": [],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": false,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": "turnStart",
+      "type": "damage",
+      "value": "1d6",
+      "effectDescription": "Takes 1d6 damage from suffocation"
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusSuffocating"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusFatigued",
+  "name": "Fatigued",
+  "type": "status",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "description": "<p>Fatigue is measured from 0 to 5. With 1 or more Fatigue, the following rules apply:</p><ul><li>Each Fatigue occupies an Item Slot.</li><li>At 3 or more Fatigue, it can't Rush.</li><li>At 5 Fatigue, it dies.</li></ul>",
+    "icon": "icons/svg/unconscious.svg",
+    "changes": [],
+    "includesStatuses": [],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": false,
+      "isVulnerable": false,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": true
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": "untilRest",
+      "value": null,
+      "remaining": null
+    },
+    "stackable": true,
+    "maxStacks": 5,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusFatigued"
+}

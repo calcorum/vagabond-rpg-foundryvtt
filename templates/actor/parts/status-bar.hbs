@@ -1,0 +1,18 @@
+{{!-- Status Bar - Displays active status conditions on the actor --}}
+{{#if items.statuses.length}}
+<div class="status-bar">
+  <div class="status-list">
+    {{#each items.statuses as |status|}}
+    <div class="status-chip" data-item-id="{{status.id}}" data-tooltip="{{status.name}}: {{{status.system.description}}}">
+      <img class="status-icon" src="{{status.img}}" alt="{{status.name}}" />
+      <span class="status-name">{{status.name}}</span>
+      {{#if ../editable}}
+      <button type="button" class="status-remove" data-action="removeStatus" data-tooltip="{{localize 'VAGABOND.RemoveStatus'}}">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/if}}

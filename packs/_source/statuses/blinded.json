@@ -1,0 +1,58 @@
+{
+  "_id": "vagabondStatusBlinded",
+  "name": "Blinded",
+  "type": "status",
+  "img": "icons/svg/blind.svg",
+  "system": {
+    "description": "<p>It can't see and is Vulnerable.</p>",
+    "icon": "icons/svg/blind.svg",
+    "changes": [],
+    "includesStatuses": ["Vulnerable"],
+    "flags": {
+      "cantMove": false,
+      "cantRush": false,
+      "speedZero": false,
+      "crawlOnly": false,
+      "cantFocus": false,
+      "cantUseActions": false,
+      "onlyAttackMoveRush": false,
+      "cantSee": true,
+      "isVulnerable": true,
+      "closeAttacksAutoCrit": false,
+      "failsMightDexChecks": false,
+      "noMoraleChecks": false,
+      "immuneToFrightened": false,
+      "cantAttackCharmer": false,
+      "reducesItemSlots": false
+    },
+    "favorHinder": {
+      "hinderChecks": false,
+      "hinderSaves": false,
+      "hinderAttacks": false,
+      "favorAgainstChecks": false,
+      "favorAgainstSaves": false,
+      "favorAgainstAttacks": false,
+      "context": ""
+    },
+    "modifiers": {
+      "damageDealt": 0,
+      "healingReceived": 0
+    },
+    "periodic": {
+      "trigger": null,
+      "type": null,
+      "value": "",
+      "effectDescription": ""
+    },
+    "duration": {
+      "type": null,
+      "value": null,
+      "remaining": null
+    },
+    "stackable": false,
+    "maxStacks": 1,
+    "reference": "Core Rulebook p.36"
+  },
+  "effects": [],
+  "_key": "!items!vagabondStatusBlinded"
+}

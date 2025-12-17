@@ -229,21 +229,31 @@ export async function saveRoll(actor, saveType, difficulty, options = {}) {
 
 /**
  * Roll damage dice.
+ * Automatically applies status modifiers (e.g., Frightened's -2 damage dealt).
  *
  * @param {string} formula - The damage formula (e.g., "2d6", "1d8+3")
  * @param {Object} options - Roll options
  * @param {boolean} [options.isCrit=false] - Double the dice on crit
  * @param {Object} [options.rollData={}] - Data for roll formula evaluation
+ * @param {boolean} [options.applyStatusModifiers=true] - Apply status damage modifiers
  * @returns {Promise<Roll>} The evaluated roll
  */
 export async function damageRoll(formula, options = {}) {
-  const { isCrit = false, rollData = {} } = options;
+  const { isCrit = false, rollData = {}, applyStatusModifiers = true } = options;
 
   let rollFormula = formula;
 
   // On crit, double the dice (not modifiers)
   if (isCrit) {
     rollFormula = doubleDice(formula);
+  }
+
+  // Apply status modifiers to damage dealt (e.g., Frightened gives -2)
+  if (applyStatusModifiers) {
+    const damageModifier = rollData.statusModifiers?.damageDealt || 0;
+    if (damageModifier !== 0) {
+      rollFormula += damageModifier > 0 ? ` + ${damageModifier}` : ` - ${Math.abs(damageModifier)}`;
+    }
   }
 
   const roll = new Roll(rollFormula, rollData);

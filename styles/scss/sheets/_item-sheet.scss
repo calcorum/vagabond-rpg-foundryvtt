@@ -104,6 +104,9 @@
           &.equipment {
             background-color: var(--color-badge-equipment);
           }
+          &.status {
+            background-color: var(--color-badge-status);
+          }
         }
       }
     }
@@ -872,6 +875,201 @@
       // Adjust columns without delete button column for non-editable
       &.readonly {
         grid-template-columns: 50px 60px 80px 80px 1fr;
+      }
+    }
+  }
+}
+
+// Status item sheet styles
+.vagabond.sheet.item {
+  .status-content {
+    // Icon section with preview
+    .status-icon-section {
+      display: flex;
+      align-items: flex-end;
+      gap: $spacing-4;
+      margin-bottom: $spacing-3;
+
+      .stat-group {
+        flex: 1;
+      }
+
+      .icon-preview {
+        width: 48px;
+        height: 48px;
+        border: 2px solid var(--color-border);
+        border-radius: $radius-md;
+        padding: $spacing-1;
+        background-color: var(--color-bg-input);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    // Status flags fieldsets
+    fieldset {
+      border: 1px solid var(--color-border);
+      border-radius: $radius-sm;
+      padding: $spacing-3;
+      margin: 0;
+      background-color: var(--color-bg-input);
+
+      legend {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: var(--color-accent-primary);
+        padding: 0 $spacing-2;
+      }
+    }
+
+    // Flags category groupings
+    .flags-category {
+      margin-bottom: $spacing-3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h4 {
+        margin: 0 0 $spacing-2 0;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        border-bottom: 1px solid var(--color-border-light);
+        padding-bottom: $spacing-1;
+      }
+    }
+
+    // Flags grid for checkboxes
+    .flags-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-2;
+    }
+
+    // Flag checkbox styling
+    .flag-checkbox {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      font-size: $font-size-sm;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        cursor: pointer;
+        accent-color: var(--color-accent-primary);
+      }
+
+      &:hover {
+        color: var(--color-accent-primary);
+      }
+    }
+
+    // Favor/Hinder section
+    .favor-hinder-section {
+      .favor-hinder-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-4;
+        margin-bottom: $spacing-3;
+      }
+
+      .fh-category {
+        h4 {
+          margin: 0 0 $spacing-2 0;
+          font-size: $font-size-xs;
+          font-weight: $font-weight-semibold;
+          color: var(--color-text-secondary);
+          text-transform: uppercase;
+        }
+
+        .flags-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    // Section hints
+    .section-hint {
+      font-size: $font-size-xs;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-bottom: $spacing-2;
+    }
+
+    // Included statuses list
+    .includes-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-2;
+
+      .includes-entry {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2;
+
+        input {
+          flex: 1;
+          padding: $spacing-2;
+          border: 1px solid var(--color-border);
+          border-radius: $radius-sm;
+          background-color: var(--color-bg-primary);
+          font-size: $font-size-sm;
+        }
+
+        .delete-entry {
+          @include button-icon;
+          color: var(--color-danger);
+
+          &:hover {
+            background-color: rgba(201, 68, 68, 0.1);
+          }
+        }
+      }
+
+      .add-entry {
+        @include button-secondary;
+        align-self: flex-start;
+        font-size: $font-size-sm;
+        padding: $spacing-1 $spacing-3;
+
+        i {
+          margin-right: $spacing-1;
+        }
+      }
+    }
+
+    // Reference and full-width stat groups
+    .reference-section,
+    .stat-group.full-width {
+      margin-top: $spacing-2;
+
+      > label {
+        display: block;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: $spacing-1;
+      }
+
+      input {
+        width: 100%;
+        padding: $spacing-2;
+        border: 1px solid var(--color-border);
+        border-radius: $radius-sm;
+        background-color: var(--color-bg-input);
+        font-size: $font-size-sm;
       }
     }
   }

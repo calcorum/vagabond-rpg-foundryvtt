@@ -1,4 +1,5 @@
 {{!-- Character Sheet Header --}}
+<div class="header-wrapper">
 <header class="sheet-header">
   <div class="header-left">
     <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}"
@@ -116,3 +117,7 @@
     </div>
   </div>
 </header>
+
+{{!-- Status Bar (below header) --}}
+{{> "systems/vagabond/templates/actor/parts/status-bar.hbs"}}
+</div>
