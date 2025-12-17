@@ -10,6 +10,13 @@
     color: var(--color-text-primary);
   }
 
+  // Enable scrolling on window content for tall dialogs
+  .window-content {
+    overflow-y: auto;
+    max-height: 80vh;
+    @include custom-scrollbar;
+  }
+
   .roll-dialog-content {
     @include flex-column;
     gap: $spacing-3;

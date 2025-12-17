@@ -378,20 +378,8 @@ export default class SpellCastDialog extends VagabondRollDialog {
       this.render();
     });
 
-    // Favor/hinder toggles (from parent)
-    const favorBtn = this.element.querySelector('[data-action="toggle-favor"]');
-    const hinderBtn = this.element.querySelector('[data-action="toggle-hinder"]');
-    favorBtn?.addEventListener("click", () => this._onToggleFavor());
-    hinderBtn?.addEventListener("click", () => this._onToggleHinder());
-
-    // Modifier presets
-    const presetBtns = this.element.querySelectorAll("[data-modifier-preset]");
-    for (const btn of presetBtns) {
-      btn.addEventListener("click", (event) => {
-        const value = parseInt(event.currentTarget.dataset.modifierPreset, 10);
-        this._onModifierPreset(value);
-      });
-    }
+    // Note: Favor/hinder toggles and modifier presets are handled by parent class
+    // via super._onRender() - no need to add duplicate listeners here
   }
 
   /** @override */
