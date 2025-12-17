@@ -783,47 +783,52 @@
         {
           "id": "6.4",
           "name": "Populate Spells compendium",
-          "description": "All 55+ spells with damage types, effects, crit bonuses, delivery/duration options",
-          "completed": false,
+          "description": "All 58 spells with damage types, effects, crit bonuses, delivery/duration options",
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["6.1", "1.9"]
+          "dependencies": ["6.1", "1.9"],
+          "notes": "58 spells validated against NoteDiscovery source. Includes damageType, effect, critEffect, deliveryTypes, durationTypes."
         },
         {
           "id": "6.5",
           "name": "Populate Perks compendium",
-          "description": "All 90+ perks with prerequisites and full descriptions",
-          "completed": false,
+          "description": "All 103 perks with prerequisites and full descriptions",
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["6.1", "1.10"]
+          "dependencies": ["6.1", "1.10"],
+          "notes": "103 perks with structured prerequisites (stats, trainedSkills, spells, perks, custom). Validated against NoteDiscovery source."
         },
         {
           "id": "6.6",
           "name": "Populate Weapons compendium",
-          "description": "Standard weapons from equipment tables with stats and properties",
-          "completed": false,
+          "description": "All 43 weapons from equipment tables with stats and properties",
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["6.1", "1.11"]
+          "dependencies": ["6.1", "1.11"],
+          "notes": "43 weapons with damage, grip, attackType, properties, range. Values use Silver Standard (1g=100s=10000c)."
         },
         {
           "id": "6.7",
           "name": "Populate Armor compendium",
-          "description": "Standard armor options from equipment tables",
-          "completed": false,
+          "description": "Light/Medium/Heavy armor plus Light/Heavy barding",
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["6.1", "1.12"]
+          "dependencies": ["6.1", "1.12"],
+          "notes": "5 armor items: Light/Medium/Heavy armor, Light/Heavy barding for mounts."
         },
         {
           "id": "6.8",
           "name": "Populate Equipment compendium",
           "description": "Adventuring gear, alchemical items, tools from equipment tables",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["6.1", "1.13"]
+          "dependencies": ["6.1", "1.13"],
+          "notes": "368 equipment items from gear-adventuring.md and gear-alchemical.md. Values use Silver Standard. Backpack has slotsWhenEquipped=0 and +2 slot bonus Active Effect."
         },
         {
           "id": "6.9",

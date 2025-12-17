@@ -1,0 +1,7 @@
+2025/12/17-00:56:12.031305 7f1a07fff6c0 Recovering log #5
+2025/12/17-00:56:12.064751 7f1a07fff6c0 Delete type=0 #5
+2025/12/17-00:56:12.064779 7f1a07fff6c0 Delete type=3 #4
+2025/12/17-00:56:12.068203 7f1a063ff6c0 Level-0 table #9: started
+2025/12/17-00:56:12.069557 7f1a063ff6c0 Level-0 table #9: 56954 bytes OK
+2025/12/17-00:56:12.070449 7f1a063ff6c0 Delete type=0 #7
+2025/12/17-00:56:12.070542 7f1a063ff6c0 Manual compaction at level-0 from '!items!vagabondEquipAccordion' @ 72057594037927935 : 1 .. '!items.effects!vagabondEquipBackpack.backpackSlotBonus' @ 0 : 0; will stop at (end)

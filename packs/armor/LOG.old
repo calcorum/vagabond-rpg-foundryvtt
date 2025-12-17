@@ -1,0 +1,5 @@
+2025/12/17-00:54:57.262541 7f60caffd6c0 Delete type=3 #1
+2025/12/17-00:54:57.264605 7f60ca7fc6c0 Level-0 table #5: started
+2025/12/17-00:54:57.265201 7f60ca7fc6c0 Level-0 table #5: 1041 bytes OK
+2025/12/17-00:54:57.266154 7f60ca7fc6c0 Delete type=0 #3
+2025/12/17-00:54:57.266221 7f60ca7fc6c0 Manual compaction at level-0 from '!items!vagabondArmorHeavy' @ 72057594037927935 : 1 .. '!items!vagabondArmorMedium' @ 0 : 0; will stop at (end)
