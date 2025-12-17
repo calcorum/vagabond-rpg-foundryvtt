@@ -25,6 +25,7 @@ export default class SpellCastDialog extends VagabondRollDialog {
     super(actor, options);
 
     this.spellId = options.spellId || null;
+    this.critThresholdModifier = 0; // Relative adjustment to base crit threshold
 
     // Casting configuration
     this.castConfig = {
@@ -275,7 +276,17 @@ export default class SpellCastDialog extends VagabondRollDialog {
       context.statValue = statValue;
       context.trained = trained;
       context.difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
-      context.critThreshold = skillData?.critThreshold || 20;
+
+      // Calculate base and effective crit threshold
+      const baseCritThreshold = skillData?.critThreshold || 20;
+      const effectiveCritThreshold = Math.clamp(
+        baseCritThreshold + this.critThresholdModifier,
+        1,
+        20
+      );
+      context.baseCritThreshold = baseCritThreshold;
+      context.effectiveCritThreshold = effectiveCritThreshold;
+      context.critThresholdModifier = this.critThresholdModifier;
 
       // Damage configuration
       context.isDamaging = spell.system.isDamaging();
@@ -347,6 +358,7 @@ export default class SpellCastDialog extends VagabondRollDialog {
     spellSelect?.addEventListener("change", (event) => {
       this.spellId = event.target.value;
       this._initializeCastConfig();
+      this.critThresholdModifier = 0; // Reset crit modifier when changing spell
       this.render();
     });
 
@@ -376,6 +388,40 @@ export default class SpellCastDialog extends VagabondRollDialog {
     includeEffectToggle?.addEventListener("change", (event) => {
       this.castConfig.includeEffect = event.target.checked;
       this.render();
+    });
+
+    // Crit threshold stepper buttons
+    const critIncrement = this.element.querySelector('[data-action="crit-increment"]');
+    const critDecrement = this.element.querySelector('[data-action="crit-decrement"]');
+
+    critIncrement?.addEventListener("click", () => {
+      const castingSkill = this._getCastingSkill();
+      const skillData = this.actor.system.skills?.[castingSkill];
+      const baseCritThreshold = skillData?.critThreshold || 20;
+      const effectiveCritThreshold = Math.clamp(
+        baseCritThreshold + this.critThresholdModifier,
+        1,
+        20
+      );
+      if (effectiveCritThreshold < 20) {
+        this.critThresholdModifier++;
+        this.render();
+      }
+    });
+
+    critDecrement?.addEventListener("click", () => {
+      const castingSkill = this._getCastingSkill();
+      const skillData = this.actor.system.skills?.[castingSkill];
+      const baseCritThreshold = skillData?.critThreshold || 20;
+      const effectiveCritThreshold = Math.clamp(
+        baseCritThreshold + this.critThresholdModifier,
+        1,
+        20
+      );
+      if (effectiveCritThreshold > 1) {
+        this.critThresholdModifier--;
+        this.render();
+      }
     });
 
     // Note: Favor/hinder toggles and modifier presets are handled by parent class
@@ -410,11 +456,18 @@ export default class SpellCastDialog extends VagabondRollDialog {
     const statValue = this.actor.system.stats?.[statKey]?.value || 0;
     const trained = skillData?.trained || false;
     const difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
-    const critThreshold = skillData?.critThreshold || 20;
+
+    // Calculate effective crit threshold with modifier
+    const baseCritThreshold = skillData?.critThreshold || 20;
+    const effectiveCritThreshold = Math.clamp(
+      baseCritThreshold + this.critThresholdModifier,
+      1,
+      20
+    );
 
     const result = await skillCheck(this.actor, castingSkill, {
       difficulty,
-      critThreshold,
+      critThreshold: effectiveCritThreshold,
       favorHinder: this.netFavorHinder,
       modifier: this.rollConfig.modifier,
     });

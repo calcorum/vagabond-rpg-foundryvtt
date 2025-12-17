@@ -25,6 +25,7 @@ export default class AttackRollDialog extends VagabondRollDialog {
 
     this.weaponId = options.weaponId || null;
     this.twoHanded = false;
+    this.critThresholdModifier = 0; // Relative adjustment to base crit threshold
 
     // Auto-select first equipped weapon if none specified, otherwise default to unarmed
     if (!this.weaponId) {
@@ -154,10 +155,17 @@ export default class AttackRollDialog extends VagabondRollDialog {
     // Attacks use trained difficulty (20 - stat × 2)
     const difficulty = 20 - statValue * 2;
 
-    // Get crit threshold from actor's attack data or weapon override
+    // Get base crit threshold from actor's attack data or weapon override
     const actorCritThreshold = this.actor.system.attacks?.[attackType]?.critThreshold || 20;
     const weaponCritThreshold = weapon.system.critThreshold;
-    const critThreshold = weaponCritThreshold ?? actorCritThreshold;
+    const baseCritThreshold = weaponCritThreshold ?? actorCritThreshold;
+
+    // Calculate effective crit threshold with modifier, clamped to 1-20
+    const effectiveCritThreshold = Math.clamp(
+      baseCritThreshold + this.critThresholdModifier,
+      1,
+      20
+    );
 
     return {
       attackType,
@@ -166,7 +174,9 @@ export default class AttackRollDialog extends VagabondRollDialog {
       statLabel: game.i18n.localize(CONFIG.VAGABOND?.stats?.[statKey] || statKey),
       statValue,
       difficulty,
-      critThreshold,
+      baseCritThreshold,
+      effectiveCritThreshold,
+      critThresholdModifier: this.critThresholdModifier,
     };
   }
 
@@ -279,7 +289,9 @@ export default class AttackRollDialog extends VagabondRollDialog {
       context.statLabel = attackData.statLabel;
       context.statValue = attackData.statValue;
       context.difficulty = attackData.difficulty;
-      context.critThreshold = attackData.critThreshold;
+      context.baseCritThreshold = attackData.baseCritThreshold;
+      context.effectiveCritThreshold = attackData.effectiveCritThreshold;
+      context.critThresholdModifier = attackData.critThresholdModifier;
     }
 
     // Versatile weapon handling
@@ -316,6 +328,7 @@ export default class AttackRollDialog extends VagabondRollDialog {
     weaponSelect?.addEventListener("change", (event) => {
       this.weaponId = event.target.value;
       this.twoHanded = false; // Reset two-handed when changing weapon
+      this.critThresholdModifier = 0; // Reset crit modifier when changing weapon
       this.render();
     });
 
@@ -324,6 +337,30 @@ export default class AttackRollDialog extends VagabondRollDialog {
     twoHandedToggle?.addEventListener("change", (event) => {
       this.twoHanded = event.target.checked;
       this.render();
+    });
+
+    // Crit threshold stepper buttons
+    const critIncrement = this.element.querySelector('[data-action="crit-increment"]');
+    const critDecrement = this.element.querySelector('[data-action="crit-decrement"]');
+
+    critIncrement?.addEventListener("click", () => {
+      const attackData = this.attackData;
+      if (!attackData) return;
+      const newEffective = attackData.effectiveCritThreshold + 1;
+      if (newEffective <= 20) {
+        this.critThresholdModifier++;
+        this.render();
+      }
+    });
+
+    critDecrement?.addEventListener("click", () => {
+      const attackData = this.attackData;
+      if (!attackData) return;
+      const newEffective = attackData.effectiveCritThreshold - 1;
+      if (newEffective >= 1) {
+        this.critThresholdModifier--;
+        this.render();
+      }
     });
   }
 
@@ -335,10 +372,15 @@ export default class AttackRollDialog extends VagabondRollDialog {
       return;
     }
 
+    // Get effective crit threshold from attack data
+    const attackData = this.attackData;
+    const effectiveCritThreshold = attackData?.effectiveCritThreshold ?? 20;
+
     // Perform the attack check
     const result = await attackCheck(this.actor, weapon, {
       favorHinder: this.netFavorHinder,
       modifier: this.rollConfig.modifier,
+      critThreshold: effectiveCritThreshold,
     });
 
     // Send to chat (damage is rolled separately via button click)

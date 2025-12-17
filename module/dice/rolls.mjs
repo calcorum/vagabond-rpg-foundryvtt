@@ -159,6 +159,7 @@ export async function skillCheck(actor, skillId, options = {}) {
  * @param {Object} options - Additional options
  * @param {number} [options.modifier=0] - Situational modifier
  * @param {number} [options.favorHinder] - Override favor/hinder
+ * @param {number} [options.critThreshold] - Override crit threshold
  * @returns {Promise<VagabondRollResult>} The roll result
  */
 export async function attackCheck(actor, weapon, options = {}) {
@@ -178,10 +179,11 @@ export async function attackCheck(actor, weapon, options = {}) {
   // Attack difficulty = 20 - stat × 2 (attacks are always "trained")
   const difficulty = 20 - statValue * 2;
 
-  // Get crit threshold: weapon override > actor attack data > default
+  // Get crit threshold: option override > weapon override > actor attack data > default
   const actorCritThreshold = system.attacks?.[attackType]?.critThreshold || 20;
   const weaponCritThreshold = weapon.system.critThreshold;
-  const critThreshold = weaponCritThreshold ?? actorCritThreshold;
+  const baseCritThreshold = weaponCritThreshold ?? actorCritThreshold;
+  const critThreshold = options.critThreshold ?? baseCritThreshold;
 
   // Determine favor/hinder from Active Effect flags or override
   const favorHinderResult = actor.getNetFavorHinder?.({ isAttack: true }) ?? { net: 0 };

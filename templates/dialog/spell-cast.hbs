@@ -67,12 +67,25 @@
       <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
       <span class="value difficulty">{{rollSpecific.difficulty}}</span>
     </div>
-    {{#if (lt rollSpecific.critThreshold 20)}}
-    <div class="casting-crit">
+
+    {{!-- Crit Threshold Stepper --}}
+    <div class="crit-threshold-section">
       <span class="label">{{localize "VAGABOND.CritThreshold"}}:</span>
-      <span class="value crit">{{rollSpecific.critThreshold}}+</span>
+      <div class="crit-stepper">
+        <button type="button" class="stepper-btn decrement" data-action="crit-decrement" {{#if (eq rollSpecific.effectiveCritThreshold 1)}}disabled{{/if}}>
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <span class="crit-value {{#if (lt rollSpecific.effectiveCritThreshold 20)}}modified{{/if}}">{{rollSpecific.effectiveCritThreshold}}+</span>
+        <button type="button" class="stepper-btn increment" data-action="crit-increment" {{#if (eq rollSpecific.effectiveCritThreshold 20)}}disabled{{/if}}>
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      {{#if rollSpecific.critThresholdModifier}}
+      <div class="crit-modifier-indicator">
+        ({{#if (lt rollSpecific.critThresholdModifier 0)}}{{rollSpecific.critThresholdModifier}}{{else}}+{{rollSpecific.critThresholdModifier}}{{/if}} from base {{rollSpecific.baseCritThreshold}})
+      </div>
+      {{/if}}
     </div>
-    {{/if}}
   </div>
 
   {{!-- Effect Description and Toggle --}}
