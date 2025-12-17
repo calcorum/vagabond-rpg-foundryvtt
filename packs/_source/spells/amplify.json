@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellAmplify",
+  "_key": "!items!vagabondSpellAmplify",
+  "name": "Amplify",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Any sound from the Target is amplified tenfold for the duration. During this time, Targets can't surprise others and all Checks to find them based on the sounds they make are Favored.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Any sound from the Target is amplified tenfold for the duration. During this time, Targets can't surprise others and all Checks to find them based on the sounds they make are Favored.</p>",
+    "critEffect": "<p>Duration is continual.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

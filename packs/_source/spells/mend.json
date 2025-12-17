@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellMend",
+  "_key": "!items!vagabondSpellMend",
+  "name": "Mend",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Targeted non-Relic Objects in the Area are repaired on your Turns for the duration, if you can provide 5s of Material per d8 HP or 1 Slot of Items repaired. This Spell can reassemble a broken Item if the pieces of it are held together during the Casting. This Spell also functions as a Life Spell, but only for Artificials.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Targeted non-Relic Objects in the Area are repaired on your Turns for the duration, if you can provide 5s of Material per d8 HP or 1 Slot of Items repaired. This Spell can reassemble a broken Item if the pieces of it are held together during the Casting. This Spell also functions as a Life Spell, but only for Artificials.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

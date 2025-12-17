@@ -766,7 +766,7 @@
           "id": "6.2",
           "name": "Populate Ancestries compendium",
           "description": "Human, Dwarf, Elf, Halfling, Draken, Goblin, Orc with full traits",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["6.1", "1.7"]
@@ -775,7 +775,7 @@
           "id": "6.3",
           "name": "Populate Classes compendium",
           "description": "All 18 classes with complete progression tables and features",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
           "dependencies": ["6.1", "1.8"]
@@ -845,37 +845,41 @@
           "id": "7.1",
           "name": "Create Skill Check dialog",
           "description": "Select skill, show difficulty/crit threshold, favor/hinder toggles, situational modifier input",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.5"]
+          "dependencies": ["2.5"],
+          "notes": "skill-check-dialog.mjs and templates/chat/skill-roll.hbs exist"
         },
         {
           "id": "7.2",
           "name": "Create Attack Roll dialog",
           "description": "Weapon selection, attack skill, favor/hinder, show crit threshold, target selection",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.6"]
+          "dependencies": ["2.6"],
+          "notes": "attack-roll-dialog.mjs and templates/chat/attack-roll.hbs exist"
         },
         {
           "id": "7.3",
           "name": "Create Save Roll dialog",
           "description": "Save type selection (or auto from context), Block/Dodge choice for defense, favor/hinder",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.7"]
+          "dependencies": ["2.7"],
+          "notes": "save-roll-dialog.mjs and templates/chat/save-roll.hbs exist"
         },
         {
           "id": "7.4",
           "name": "Create Spell Cast dialog",
           "description": "Damage dice selector (+Mana), delivery type dropdown with cost display, duration selector, total mana cost, cast skill",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "critical",
-          "dependencies": ["2.8"]
+          "dependencies": ["2.8"],
+          "notes": "spell-cast-dialog.mjs and templates/chat/spell-cast.hbs exist"
         },
         {
           "id": "7.5",
@@ -890,19 +894,21 @@
           "id": "7.6",
           "name": "Create roll result chat cards",
           "description": "Rich chat output: roll formula, result, success/fail/crit indicator, damage if applicable",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["2.4"]
+          "dependencies": ["2.4"],
+          "notes": "Chat card templates exist for all roll types"
         },
         {
           "id": "7.7",
           "name": "Create spell cast chat cards",
           "description": "Spell name, effect description, mana spent, damage if applicable, duration/focus indicator",
-          "completed": false,
+          "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["2.8", "7.6"]
+          "dependencies": ["2.8", "7.6"],
+          "notes": "templates/chat/spell-cast.hbs exists"
         },
         {
           "id": "7.8",
@@ -1257,7 +1263,7 @@
     }
   ],
   "summary": {
-    "total_tasks": 116,
+    "total_tasks": 124,
     "phases": 12,
     "critical_path": [
       "0.1 -> 1.1 -> 2.1 -> 2.2 -> 3.1 -> 3.2 -> 7.1 -> 9.2",

@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellPolymorph",
+  "_key": "!items!vagabondSpellPolymorph",
+  "name": "Polymorph",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target becomes a Beast of your choice with HD no higher than your Level for the duration. If the Target is unwilling and its HD are higher than your Level, the Spell fails. During this time, the Target uses:</p><ul><li>The Beast's Speed, Passives, Senses, Armor, Immune, Weak, Actions, and Abilities.</li><li>The Target's HP and, if possible, its Actions and Abilities.</li></ul><p>You must spend 1 Mana on your Turns to Focus on this Spell, even for willing Targets.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target becomes a Beast of your choice with HD no higher than your Level for the duration. If the Target is unwilling and its HD are higher than your Level, the Spell fails. During this time, the Target uses:</p><ul><li>The Beast's Speed, Passives, Senses, Armor, Immune, Weak, Actions, and Abilities.</li><li>The Target's HP and, if possible, its Actions and Abilities.</li></ul><p>You must spend 1 Mana on your Turns to Focus on this Spell, even for willing Targets.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

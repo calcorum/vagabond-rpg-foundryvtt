@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellFog",
+  "_key": "!items!vagabondSpellFog",
+  "name": "Fog",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Caster creates a cloud that obscures an Area equal to the size of the delivery (minimum 5-foot cube). It Hinders Checks relying on sight of a Target within the fog and as if Vulnerable if they are Attack Checks or Saves.</p>",
+    "damageType": "cold",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Caster creates a cloud that obscures an Area equal to the size of the delivery (minimum 5-foot cube). It Hinders Checks relying on sight of a Target within the fog and as if Vulnerable if they are Attack Checks or Saves.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

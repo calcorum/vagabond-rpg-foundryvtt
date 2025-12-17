@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellFear",
+  "_key": "!items!vagabondSpellFear",
+  "name": "Fear",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target is Frightened of another visible Target you choose for the duration, ending early if you Cast this Spell again.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target is Frightened of another visible Target you choose for the duration, ending early if you Cast this Spell again.</p>",
+    "critEffect": "<p>Duration is continual.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

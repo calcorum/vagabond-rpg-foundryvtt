@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellDispel",
+  "_key": "!items!vagabondSpellDispel",
+  "name": "Dispel",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You suspend a magic effect for the duration, treating it as an unwilling Target.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You suspend a magic effect for the duration, treating it as an unwilling Target.</p>",
+    "critEffect": "<p>The effect is completely dispelled if it is not a Relic's Power.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

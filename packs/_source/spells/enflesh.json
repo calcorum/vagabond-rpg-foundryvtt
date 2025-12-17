@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellEnflesh",
+  "_key": "!items!vagabondSpellEnflesh",
+  "name": "Enflesh",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Targeted, non-Relic fabric, stone, metal, or wood is turned to hair, tissue, and bone for the duration. Alternatively, if the Target is turned to stone through a curse or magic, the effect ends.</p>",
+    "damageType": "acid",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Targeted, non-Relic fabric, stone, metal, or wood is turned to hair, tissue, and bone for the duration. Alternatively, if the Target is turned to stone through a curse or magic, the effect ends.</p>",
+    "critEffect": "<p>Duration is continual.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

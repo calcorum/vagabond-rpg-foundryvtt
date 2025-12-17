@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellBlink",
+  "_key": "!items!vagabondSpellBlink",
+  "name": "Blink",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target can skip their Move to teleport to an empty space they can see within Near. They can teleport through space occupied by other Beings, but can't teleport through spaces they couldn't otherwise Move through.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target can skip their Move to teleport to an empty space they can see within Near. They can teleport through space occupied by other Beings, but can't teleport through spaces they couldn't otherwise Move through.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellForge",
+  "_key": "!items!vagabondSpellForge",
+  "name": "Forge",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You materialize an Item of 1 Slot or less worth no more than 1g either in an unoccupied space near the Target, worn by the Target, or one Item per 5-foot-cube within the Target area. This magic can create a solid Item made of either copper, iron, glass, stone, or wood. For example, this could create an iron flagon, but not a flagon of ale. If you Target yourself with this Spell, you can Equip the Item when it is created (no Action). Doing so can't cause an Equipped Item to become unequipped. The Item is usable as a physical copy for the duration, then disappears.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You materialize an Item of 1 Slot or less worth no more than 1g either in an unoccupied space near the Target, worn by the Target, or one Item per 5-foot-cube within the Target area. This magic can create a solid Item made of either copper, iron, glass, stone, or wood. For example, this could create an iron flagon, but not a flagon of ale. If you Target yourself with this Spell, you can Equip the Item when it is created (no Action). Doing so can't cause an Equipped Item to become unequipped. The Item is usable as a physical copy for the duration, then disappears.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

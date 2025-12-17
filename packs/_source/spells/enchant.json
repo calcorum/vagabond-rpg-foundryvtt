@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellEnchant",
+  "_key": "!items!vagabondSpellEnchant",
+  "name": "Enchant",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>An Item that is a Target or equipped by the Target is considered a Relic for the duration. Additionally, you can grant the Item the Relic Power of Bonus for this time by spending additional Mana per Item granted this Power when you Cast this Spell:</p><ul><li>+1 Bonus: 5 Mana</li><li>+2 Bonus: 10 Mana</li><li>+3 Bonus: 15 Mana</li></ul>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>An Item that is a Target or equipped by the Target is considered a Relic for the duration. Additionally, you can grant the Item the Relic Power of Bonus for this time by spending additional Mana per Item granted this Power when you Cast this Spell:</p><ul><li>+1 Bonus: 5 Mana</li><li>+2 Bonus: 10 Mana</li><li>+3 Bonus: 15 Mana</li></ul>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

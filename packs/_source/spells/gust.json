@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellGust",
+  "_key": "!items!vagabondSpellGust",
+  "name": "Gust",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target is blasted with a wind shear in the following ways:</p><ul><li><strong>Feather:</strong> If Cast on a falling Target, this blast can slow the descent of a falling Medium or smaller Target to a safe Speed for the duration.</li><li><strong>Target:</strong> This can push an Item that occupies 1 or less Slots, or a Being with Level or HD 1 or lower. You can increase this number by spending additional Mana on the Cast, increasing it by 1 per Mana spent to do so.</li><li><strong>Distance:</strong> This pushes the Target 5', and you can increase the distance pushed by spending Mana, increasing the distance by 5' per Mana spent to do so.</li></ul>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target is blasted with a wind shear in the following ways:</p><ul><li><strong>Feather:</strong> If Cast on a falling Target, this blast can slow the descent of a falling Medium or smaller Target to a safe Speed for the duration.</li><li><strong>Target:</strong> This can push an Item that occupies 1 or less Slots, or a Being with Level or HD 1 or lower. You can increase this number by spending additional Mana on the Cast, increasing it by 1 per Mana spent to do so.</li><li><strong>Distance:</strong> This pushes the Target 5', and you can increase the distance pushed by spending Mana, increasing the distance by 5' per Mana spent to do so.</li></ul>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

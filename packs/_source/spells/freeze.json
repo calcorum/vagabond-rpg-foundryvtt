@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellFreeze",
+  "_key": "!items!vagabondSpellFreeze",
+  "name": "Freeze",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Any freestanding water in the Area is frozen. If the Target is a Being, its Speed is reduced by 10'. Alternatively, you can create an Object made of ice that can fit within the Area, and is of a shape of your choice (such as an icicle dagger or a block of ice). If needed, the Object has HD: 1 (4 HP) and is Weak: Fire.</p><p>Any of these effects last for the duration.</p>",
+    "damageType": "cold",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Any freestanding water in the Area is frozen. If the Target is a Being, its Speed is reduced by 10'. Alternatively, you can create an Object made of ice that can fit within the Area, and is of a shape of your choice (such as an icicle dagger or a block of ice). If needed, the Object has HD: 1 (4 HP) and is Weak: Fire.</p><p>Any of these effects last for the duration.</p>",
+    "critEffect": "<p>Duration is continual.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

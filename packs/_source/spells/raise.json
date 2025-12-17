@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellRaise",
+  "_key": "!items!vagabondSpellRaise",
+  "name": "Raise",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Corpses in the Area of non-Artificial or Undead Beings with cumulative HD no higher than your Level rise as an Undead under your control for the duration. Afterward, any Undead you raised this way die and can't be raised by this Spell again. You can command your raised Undead when you Focus on this Cast, using your Cast Skill for Checks they make. The Undead you raise this way use their original statblock with the following changes:</p><ul><li>It is an Undead</li><li>It has Darksight, is Immune to Poison, Weak to Silvered Weapons, and can't be Sickened.</li></ul>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Corpses in the Area of non-Artificial or Undead Beings with cumulative HD no higher than your Level rise as an Undead under your control for the duration. Afterward, any Undead you raised this way die and can't be raised by this Spell again. You can command your raised Undead when you Focus on this Cast, using your Cast Skill for Checks they make. The Undead you raise this way use their original statblock with the following changes:</p><ul><li>It is an Undead</li><li>It has Darksight, is Immune to Poison, Weak to Silvered Weapons, and can't be Sickened.</li></ul>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

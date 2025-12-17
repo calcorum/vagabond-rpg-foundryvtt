@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellLevitate",
+  "_key": "!items!vagabondSpellLevitate",
+  "name": "Levitate",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target flutters up to 1 foot in the air if they have solid ground below them for the duration. The Target can still Move in the air as if walking. If the Target is a secured Object or an Item that occupies more than 2 Slots, it is unaffected.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target flutters up to 1 foot in the air if they have solid ground below them for the duration. The Target can still Move in the air as if walking. If the Target is a secured Object or an Item that occupies more than 2 Slots, it is unaffected.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

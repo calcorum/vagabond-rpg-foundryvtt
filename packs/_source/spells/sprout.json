@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellSprout",
+  "_key": "!items!vagabondSpellSprout",
+  "name": "Sprout",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You create growing plants on the Target, causing Difficult Terrain out to Close from it. Alternatively, you can cause up to a 5-foot-square patch of plants or fungus to magically grow to optimal harvesting and foraging.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You create growing plants on the Target, causing Difficult Terrain out to Close from it. Alternatively, you can cause up to a 5-foot-square patch of plants or fungus to magically grow to optimal harvesting and foraging.</p>",
+    "critEffect": "<p>The Target is Restrained.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

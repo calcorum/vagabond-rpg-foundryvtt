@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellBabble",
+  "_key": "!items!vagabondSpellBabble",
+  "name": "Babble",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>When the Check passes, and each time you Focus on the Cast for the duration, you can cause the Target to loudly and coherently repeat everything you mentally command them to. They are otherwise mute.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>When the Check passes, and each time you Focus on the Cast for the duration, you can cause the Target to loudly and coherently repeat everything you mentally command them to. They are otherwise mute.</p>",
+    "critEffect": "<p>Duration is continual.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

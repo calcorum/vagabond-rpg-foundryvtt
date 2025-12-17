@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellRust",
+  "_key": "!items!vagabondSpellRust",
+  "name": "Rust",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Non-Relic metal Objects within the Area rust for the duration. Each Turn when you Focus on this Spell, roll a d6 for each Item. On a roll of 1, the Item breaks. If the Item that breaks is larger than Medium, this creates a 1-foot square hole that is 1-foot deep in it.</p>",
+    "damageType": "acid",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Non-Relic metal Objects within the Area rust for the duration. Each Turn when you Focus on this Spell, roll a d6 for each Item. On a roll of 1, the Item breaks. If the Item that breaks is larger than Medium, this creates a 1-foot square hole that is 1-foot deep in it.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

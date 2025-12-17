@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellErupt",
+  "_key": "!items!vagabondSpellErupt",
+  "name": "Erupt",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Magma coats the nearest surface to the Target for the duration (minimum 5-foot square), causing it to be Difficult Terrain that deals d6 first time a Being enters the Area on a Turn and when it ends its Turn in the Area.</p>",
+    "damageType": "fire",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Magma coats the nearest surface to the Target for the duration (minimum 5-foot square), causing it to be Difficult Terrain that deals d6 first time a Being enters the Area on a Turn and when it ends its Turn in the Area.</p>",
+    "critEffect": "<p>Targets Burning (Cd4 while in the Area).</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

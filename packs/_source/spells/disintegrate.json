@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellDisintegrate",
+  "_key": "!items!vagabondSpellDisintegrate",
+  "name": "Disintegrate",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>A nonmagical, non-metal Target of 1 or fewer Slots is destroyed. The Slots of the Target can increase by spending Mana, increasing by 1 per Mana spent to do so. Any Target that is reduced to 0 HP or destroyed by this Spell is reduced to ash.</p>",
+    "damageType": "shock",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>A nonmagical, non-metal Target of 1 or fewer Slots is destroyed. The Slots of the Target can increase by spending Mana, increasing by 1 per Mana spent to do so. Any Target that is reduced to 0 HP or destroyed by this Spell is reduced to ash.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellGas",
+  "_key": "!items!vagabondSpellGas",
+  "name": "Gas",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You create a cloud of gas in an Area equal to the size of the delivery (minimum 5-foot cube). Targets act as Sickened (Vulnerable) while in the Area.</p>",
+    "damageType": "poison",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You create a cloud of gas in an Area equal to the size of the delivery (minimum 5-foot cube). Targets act as Sickened (Vulnerable) while in the Area.</p>",
+    "critEffect": "<p>The effect lasts 1 Hour, but can be dispersed by strong winds.</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

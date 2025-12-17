@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellLife",
+  "_key": "!items!vagabondSpellLife",
+  "name": "Life",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You revive a Target that died from damage in the last Round, restoring it with 1 HP and giving it 1 Fatigue. This Spell does not regenerate missing body parts.</p><p>In addition, you can spend Mana with this Spell to heal a Target for d6 HP per Mana spent to do so.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You revive a Target that died from damage in the last Round, restoring it with 1 HP and giving it 1 Fatigue. This Spell does not regenerate missing body parts.</p><p>In addition, you can spend Mana with this Spell to heal a Target for d6 HP per Mana spent to do so.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

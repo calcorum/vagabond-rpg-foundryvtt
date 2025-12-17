@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellCure",
+  "_key": "!items!vagabondSpellCure",
+  "name": "Cure",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>If the Target is Blinded or Sickened, the Status ends and they are immune to these Statuses for the duration.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>If the Target is Blinded or Sickened, the Status ends and they are immune to these Statuses for the duration.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

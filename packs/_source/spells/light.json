@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellLight",
+  "_key": "!items!vagabondSpellLight",
+  "name": "Light",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target sheds Light out to Near for the duration. You can choose to do so by creating a floating mote of light that follows the Target.</p>",
+    "damageType": "fire",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target sheds Light out to Near for the duration. You can choose to do so by creating a floating mote of light that follows the Target.</p>",
+    "critEffect": "<p>Beings of your choice within the Light when you Cast the Spell are Blinded (Cd4).</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

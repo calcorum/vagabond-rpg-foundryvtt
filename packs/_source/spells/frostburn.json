@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellFrostburn",
+  "_key": "!items!vagabondSpellFrostburn",
+  "name": "Frostburn",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>If the Target isn't Immune to Cold, they are Burning (d4, Speed reduced by 10') for the duration, ending early if they take damage from fire or heat.</p>",
+    "damageType": "cold",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>If the Target isn't Immune to Cold, they are Burning (d4, Speed reduced by 10') for the duration, ending early if they take damage from fire or heat.</p>",
+    "critEffect": "<p>Target is instead Burning (d6).</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

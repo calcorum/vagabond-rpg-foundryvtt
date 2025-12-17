@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellAnimate",
+  "_key": "!items!vagabondSpellAnimate",
+  "name": "Animate",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You animate an Item that occupies no more than 1 Slot in the Area or carried by the Target. For the duration, the Item gains a Speed of 30' (Fly), and uses the Object Armor & HP rules for its Stats. It obeys your commands, which you can issue when you Focus on this Spell. If it is a Weapon, it can make Attacks using your Cast Skill.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You animate an Item that occupies no more than 1 Slot in the Area or carried by the Target. For the duration, the Item gains a Speed of 30' (Fly), and uses the Object Armor & HP rules for its Stats. It obeys your commands, which you can issue when you Focus on this Spell. If it is a Weapon, it can make Attacks using your Cast Skill.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

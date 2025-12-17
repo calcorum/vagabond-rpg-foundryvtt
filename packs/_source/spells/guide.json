@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellGuide",
+  "_key": "!items!vagabondSpellGuide",
+  "name": "Guide",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Checks that rely on sight made against the Target have Favor for the duration.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Checks that rely on sight made against the Target have Favor for the duration.</p>",
+    "critEffect": "<p>Duration is 1 minute (no Focus required).</p>",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

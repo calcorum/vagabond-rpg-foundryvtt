@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellKnock",
+  "_key": "!items!vagabondSpellKnock",
+  "name": "Knock",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>Opens barred, locked, or stuck chests, doors, and gates that you can sense. It does so with an audible knock that can be heard out to 300 feet. This affects secret and magic locks and doors, but you must be aware of them to affect them.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>Opens barred, locked, or stuck chests, doors, and gates that you can sense. It does so with an audible knock that can be heard out to 300 feet. This affects secret and magic locks and doors, but you must be aware of them to affect them.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

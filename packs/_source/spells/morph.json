@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellMorph",
+  "_key": "!items!vagabondSpellMorph",
+  "name": "Morph",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>For the duration, the Target's body is altered in an illusionary manner. This magic is powerful enough to make them seem like a Being of the same Size and Being Type that has the same configuration of limbs and appendages (such as a Human appearing as a Dwarf, but not a horse).</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>For the duration, the Target's body is altered in an illusionary manner. This magic is powerful enough to make them seem like a Being of the same Size and Being Type that has the same configuration of limbs and appendages (such as a Human appearing as a Dwarf, but not a horse).</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

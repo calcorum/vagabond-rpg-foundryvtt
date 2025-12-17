@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellPortal",
+  "_key": "!items!vagabondSpellPortal",
+  "name": "Portal",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>You create a portal on a surface that fits within the Area (minimum 5-foot square), and a second portal of the same size on a surface Near that portal. The portals remain for the duration and can teleport anything smaller than it to an open Close space at the other portal's location. Unsecured Objects don't cost Mana to teleport, but Beings cost 1 Mana. If the Being is unwilling, it also requires a passed Cast Check to teleport it.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>You create a portal on a surface that fits within the Area (minimum 5-foot square), and a second portal of the same size on a surface Near that portal. The portals remain for the duration and can teleport anything smaller than it to an open Close space at the other portal's location. Unsecured Objects don't cost Mana to teleport, but Beings cost 1 Mana. If the Being is unwilling, it also requires a passed Cast Check to teleport it.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}

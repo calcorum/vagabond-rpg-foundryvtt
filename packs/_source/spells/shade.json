@@ -1,0 +1,35 @@
+{
+  "_id": "vagabondSpellShade",
+  "_key": "!items!vagabondSpellShade",
+  "name": "Shade",
+  "type": "spell",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "description": "<p>The Target is surrounded by magic darkness out to Close for the duration, which snuffs out nonmagic lights.</p>",
+    "damageType": "",
+    "damageBase": "d6",
+    "maxDice": 0,
+    "effect": "<p>The Target is surrounded by magic darkness out to Close for the duration, which snuffs out nonmagic lights.</p>",
+    "critEffect": "",
+    "deliveryTypes": {
+      "touch": true,
+      "remote": true,
+      "imbue": true,
+      "cube": true,
+      "aura": true,
+      "cone": true,
+      "glyph": true,
+      "line": true,
+      "sphere": true
+    },
+    "durationTypes": {
+      "instant": true,
+      "focus": true,
+      "continual": true
+    },
+    "castingSkill": "",
+    "focusing": false,
+    "tags": []
+  },
+  "reviewed": true
+}
