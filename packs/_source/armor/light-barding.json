@@ -1,0 +1,34 @@
+{
+  "_id": "vagabondArmorLightBarding",
+  "name": "Light Barding",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Light armor for mounts and animal companions.</p>",
+    "armorValue": 1,
+    "armorType": "light",
+    "dodgePenalty": false,
+    "hindersDodge": false,
+    "preventsRage": false,
+    "slots": 2,
+    "value": 1000,
+    "equipped": false,
+    "magicBonus": 0,
+    "properties": ["barding"],
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondArmorLightBarding",
+  "reviewed": true
+}

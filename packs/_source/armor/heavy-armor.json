@@ -1,0 +1,34 @@
+{
+  "_id": "vagabondArmorHeavy",
+  "name": "Heavy Armor",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Heavy armor includes plate and splint armor. Requires Might 5 or you are Restrained while wearing it.</p>",
+    "armorValue": 3,
+    "armorType": "heavy",
+    "dodgePenalty": false,
+    "hindersDodge": true,
+    "preventsRage": true,
+    "slots": 3,
+    "value": 2000,
+    "equipped": false,
+    "magicBonus": 0,
+    "properties": [],
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondArmorHeavy",
+  "reviewed": true
+}

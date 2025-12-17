@@ -1,0 +1,34 @@
+{
+  "_id": "vagabondArmorMedium",
+  "name": "Medium Armor",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Medium armor includes chain and scale armor. Requires Might 4 or you are Restrained while wearing it.</p>",
+    "armorValue": 2,
+    "armorType": "medium",
+    "dodgePenalty": false,
+    "hindersDodge": false,
+    "preventsRage": false,
+    "slots": 2,
+    "value": 1000,
+    "equipped": false,
+    "magicBonus": 0,
+    "properties": [],
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondArmorMedium",
+  "reviewed": true
+}

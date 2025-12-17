@@ -1,0 +1,34 @@
+{
+  "_id": "vagabondArmorHeavyBarding",
+  "name": "Heavy Barding",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Heavy armor for mounts and animal companions.</p>",
+    "armorValue": 3,
+    "armorType": "heavy",
+    "dodgePenalty": false,
+    "hindersDodge": false,
+    "preventsRage": false,
+    "slots": 3,
+    "value": 2500,
+    "equipped": false,
+    "magicBonus": 0,
+    "properties": ["barding"],
+    "relic": {
+      "isRelic": false,
+      "tier": 1,
+      "abilityName": "",
+      "abilityDescription": "",
+      "activationCost": "",
+      "usesPerDay": 0,
+      "usesRemaining": 0,
+      "requiresAttunement": false,
+      "attuned": false,
+      "lore": ""
+    }
+  },
+  "effects": [],
+  "_key": "!items!vagabondArmorHeavyBarding",
+  "reviewed": true
+}
