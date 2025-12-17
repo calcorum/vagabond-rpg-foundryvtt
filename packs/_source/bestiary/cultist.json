@@ -1,0 +1,45 @@
+{
+  "_id": "vagabondNpcCultist",
+  "_key": "!actors!vagabondNpcCultist",
+  "name": "Cultist",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.0,
+    "armor": 1,
+    "morale": 12,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Dagger",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Zealot",
+        "description": "<p>Can't be Charmed or Frightened.</p>",
+        "passive": true
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

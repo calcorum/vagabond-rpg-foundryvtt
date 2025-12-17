@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcThug",
+  "_key": "!actors!vagabondNpcThug",
+  "name": "Thug",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.5,
+    "armor": 1,
+    "morale": 8,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Weapon",
+        "description": "<p>[Attack]: 3 (d6) or (by Weapon)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Arbalest",
+        "description": "<p>[Ranged Attack]: 5 (d10)</p>",
+        "attackType": "ranged",
+        "damage": "1d10",
+        "damageType": "pierce",
+        "range": "far",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondNpcVeteran",
+  "_key": "!actors!vagabondNpcVeteran",
+  "name": "Veteran",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": { "value": 9, "max": 9 },
+    "tl": 2.4,
+    "armor": 3,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 25 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Weapon",
+        "description": "<p>[Attack]: 3 (d6) or (by Weapon)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

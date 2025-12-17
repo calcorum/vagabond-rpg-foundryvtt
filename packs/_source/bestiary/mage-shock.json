@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcMageShock",
+  "_key": "!actors!vagabondNpcMageShock",
+  "name": "Mage, Shock",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.9,
+    "armor": 0,
+    "morale": 4,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Lightning Bolt",
+        "description": "<p>[Cast, 30-foot Line | Reflex] (Recharge Cd6): 10 (3d6) and Dazed (Cd4)</p>",
+        "attackType": "cast",
+        "damage": "3d6",
+        "damageType": "shock",
+        "range": "far",
+        "properties": ["recharge cd6", "line", "reflex"]
+      },
+      {
+        "name": "Zap",
+        "description": "<p>[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and Dazed for the duration.</p>",
+        "attackType": "cast",
+        "damage": "2d6",
+        "damageType": "shock",
+        "range": "far",
+        "properties": ["focus", "bolt", "reflex"]
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

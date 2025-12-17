@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondNpcBandit",
+  "_key": "!actors!vagabondNpcBandit",
+  "name": "Bandit",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.5,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 35 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Weapon",
+        "description": "<p>[Attack]: 3 (d6) or (by Weapon)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

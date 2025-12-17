@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcBard",
+  "_key": "!actors!vagabondNpcBard",
+  "name": "Bard",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 9,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Inspiring Anthem",
+        "description": "<p>[Action]: Grants all of its Allies who can hear it a d4 bonus to their damage rolls and Will Saves for 1 Round. It can't use this Action if it doesn't have a Musical Instrument equipped.</p>",
+        "attackType": "utility",
+        "damage": "0",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Rapier",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

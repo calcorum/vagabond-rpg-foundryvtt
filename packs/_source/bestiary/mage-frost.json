@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcMageFrost",
+  "_key": "!actors!vagabondNpcMageFrost",
+  "name": "Mage, Frost",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.9,
+    "armor": 0,
+    "morale": 4,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Blizzard",
+        "description": "<p>[Cast, 20-foot Sphere (Focus) | Endure] (Recharge Cd6): 10 (3d6) and filling the area with snow (Difficult Terrain).</p>",
+        "attackType": "cast",
+        "damage": "3d6",
+        "damageType": "cold",
+        "range": "far",
+        "properties": ["recharge cd6", "focus", "sphere", "endure"]
+      },
+      {
+        "name": "Ice Knife",
+        "description": "<p>[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and its Speed is reduced by half for the duration.</p>",
+        "attackType": "cast",
+        "damage": "2d6",
+        "damageType": "cold",
+        "range": "far",
+        "properties": ["focus", "bolt", "reflex"]
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

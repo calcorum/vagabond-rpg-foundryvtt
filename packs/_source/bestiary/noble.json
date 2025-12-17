@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcNoble",
+  "_key": "!actors!vagabondNpcNoble",
+  "name": "Noble",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 9,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Rapier",
+        "description": "<p>[Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Rally",
+        "description": "<p>[Action]: Grants its Allies who hear it a d4 bonus to their damage rolls and Will Saves for 1 Round.</p>",
+        "attackType": "utility",
+        "damage": "0",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

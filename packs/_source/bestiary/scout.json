@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcScout",
+  "_key": "!actors!vagabondNpcScout",
+  "name": "Scout",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 1.4,
+    "armor": 1,
+    "morale": 3,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Longbow",
+        "description": "<p>[Ranged Attack]: 4 (d8)</p>",
+        "attackType": "ranged",
+        "damage": "1d8",
+        "damageType": "pierce",
+        "range": "far",
+        "properties": []
+      },
+      {
+        "name": "Dagger",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

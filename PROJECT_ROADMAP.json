@@ -227,6 +227,16 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["1.2", "1.8", "1.10", "1.14"]
+        },
+        {
+          "id": "1.16",
+          "name": "Add material system for weapons and armor",
+          "description": "Add material field to weapon and armor data models to support special materials with mechanical effects. Reference: Core Rulebook p.76",
+          "completed": false,
+          "tested": false,
+          "priority": "low",
+          "dependencies": ["1.11", "1.12"],
+          "notes": "Investigate what materials exist in Vagabond RPG and their mechanical effects. May need to update compendium items (6.6, 6.7) after implementation."
         }
       ]
     },
@@ -837,7 +847,8 @@
           "completed": false,
           "tested": false,
           "priority": "medium",
-          "dependencies": ["6.1", "1.3"]
+          "dependencies": ["6.1", "1.3"],
+          "notes": "In progress: 21/289+ creatures. Humanlike category complete (21 NPCs). Remaining: Artificials (23), Beasts (75+), Cryptids (75+), Fae (16), Outers (32), Primordials (28), Undead (21). Source: Core Rulebook pp.112-181."
         }
       ]
     },
@@ -1268,7 +1279,7 @@
     }
   ],
   "summary": {
-    "total_tasks": 124,
+    "total_tasks": 125,
     "phases": 12,
     "critical_path": [
       "0.1 -> 1.1 -> 2.1 -> 2.2 -> 3.1 -> 3.2 -> 7.1 -> 9.2",

@@ -1,0 +1,48 @@
+{
+  "_id": "vagabondNpcMageFire",
+  "_key": "!actors!vagabondNpcMageFire",
+  "name": "Mage, Fire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 2.3,
+    "armor": 0,
+    "morale": 8,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Fireball",
+        "description": "<p>[Cast, 20-foot Sphere | Reflex] (1/Day): 10 (3d6) and Burning (Cd4)</p>",
+        "attackType": "cast",
+        "damage": "3d6",
+        "damageType": "fire",
+        "range": "far",
+        "properties": ["1/day", "sphere", "reflex"]
+      },
+      {
+        "name": "Firebolt",
+        "description": "<p>[Cast, Remote (Focus) | Reflex]: 7 (2d6) and Burning (Cd4)</p>",
+        "attackType": "cast",
+        "damage": "2d6",
+        "damageType": "fire",
+        "range": "far",
+        "properties": ["focus", "reflex"]
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

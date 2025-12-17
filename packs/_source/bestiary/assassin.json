@@ -1,0 +1,54 @@
+{
+  "_id": "vagabondNpcAssassin",
+  "_key": "!actors!vagabondNpcAssassin",
+  "name": "Assassin",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 2.3,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 35 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Flurry",
+        "description": "<p>[Multi-Attack]: Two Daggers.</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": ["multi-attack"]
+      },
+      {
+        "name": "Dagger",
+        "description": "<p>[Attack]: 2 (d4) and Sneak Attack.</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Sneak Attack",
+        "description": "<p>Once per Turn, it deals 2 (d4) additional damage with an attack against a Vulnerable Target. This attack ignores Armor and can explode.</p>",
+        "passive": true
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

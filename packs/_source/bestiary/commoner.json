@@ -1,0 +1,39 @@
+{
+  "_id": "vagabondNpcCommoner",
+  "_key": "!actors!vagabondNpcCommoner",
+  "name": "Commoner",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 0.3,
+    "armor": 0,
+    "morale": 7,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 30 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Rock",
+        "description": "<p>[Melee Attack, Thrown]: 1</p>",
+        "attackType": "melee",
+        "damage": "1",
+        "damageType": "blunt",
+        "range": "",
+        "properties": ["thrown"]
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

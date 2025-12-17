@@ -1,0 +1,45 @@
+{
+  "_id": "vagabondNpcBerserker",
+  "_key": "!actors!vagabondNpcBerserker",
+  "name": "Berserker",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": { "value": 4, "max": 4 },
+    "tl": 2.8,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "humanlike",
+    "speed": { "value": 40 },
+    "appearing": "",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Greataxe",
+        "description": "<p>[Melee Attack, Cleave]: 6 (d12) or 13 (2d12!) if this Being is Berserk</p>",
+        "attackType": "melee",
+        "damage": "1d12",
+        "damageType": "slash",
+        "range": "",
+        "properties": ["cleave"]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rage",
+        "description": "<p>It goes Berserk when it is attacked or as part of making an Attack. While Berserk by any means, it reduces damage by 1 per damage die.</p>",
+        "passive": true
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
