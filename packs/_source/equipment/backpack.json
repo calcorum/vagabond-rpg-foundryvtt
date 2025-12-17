@@ -7,6 +7,7 @@
     "description": "<p>Grants +2 Slots, occupies 1 Slot (0 while worn). Can only benefit from one at a time.</p>",
     "quantity": 1,
     "slots": 1,
+    "slotsWhenEquipped": 0,
     "slotsPerItem": false,
     "value": 500,
     "consumable": false,
@@ -34,7 +35,21 @@
       "lore": ""
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "name": "Backpack Slot Bonus",
+      "icon": "icons/svg/item-bag.svg",
+      "changes": [
+        {
+          "key": "system.itemSlots.bonus",
+          "mode": 2,
+          "value": "2"
+        }
+      ],
+      "disabled": true,
+      "transfer": true
+    }
+  ],
   "_key": "!items!vagabondEquipBackpack",
   "reviewed": true
 }

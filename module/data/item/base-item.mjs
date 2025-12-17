@@ -64,4 +64,15 @@ export default class VagabondItemBase extends foundry.abstract.TypeDataModel {
       description: this.description,
     };
   }
+
+  /**
+   * Calculate the total inventory slot cost for this item.
+   * Override in subclasses that have inventory slots (weapons, armor, equipment).
+   * Items without inventory presence (features, classes, ancestries) return 0.
+   *
+   * @returns {number} Total slots used
+   */
+  getTotalSlots() {
+    return 0;
+  }
 }

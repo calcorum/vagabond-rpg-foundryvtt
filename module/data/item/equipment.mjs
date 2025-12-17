@@ -38,6 +38,15 @@ export default class EquipmentData extends VagabondItemBase {
         min: 0,
       }),
 
+      // Slot cost when equipped (null means same as slots)
+      // Used for items like backpacks that cost 0 slots when worn
+      slotsWhenEquipped: new fields.NumberField({
+        integer: true,
+        initial: null,
+        nullable: true,
+        min: 0,
+      }),
+
       // Whether slots are per-item or for the whole stack
       slotsPerItem: new fields.BooleanField({ initial: false }),
 
@@ -125,14 +134,20 @@ export default class EquipmentData extends VagabondItemBase {
 
   /**
    * Calculate the total slot cost for this item stack.
+   * Respects slotsWhenEquipped for items like backpacks that cost
+   * less (or zero) slots when worn.
    *
    * @returns {number} Total slots used
    */
   getTotalSlots() {
+    // Use slotsWhenEquipped if item is equipped and the field is set
+    const baseSlots =
+      this.equipped && this.slotsWhenEquipped !== null ? this.slotsWhenEquipped : this.slots;
+
     if (this.slotsPerItem) {
-      return this.slots * this.quantity;
+      return baseSlots * this.quantity;
     }
-    return this.slots;
+    return baseSlots;
   }
 
   /**

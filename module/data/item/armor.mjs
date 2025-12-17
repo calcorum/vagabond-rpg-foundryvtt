@@ -56,6 +56,15 @@ export default class ArmorData extends VagabondItemBase {
         min: 0,
       }),
 
+      // Slot cost when equipped (null means same as slots)
+      // Allows magic armor to reduce slot cost when worn
+      slotsWhenEquipped: new fields.NumberField({
+        integer: true,
+        initial: null,
+        nullable: true,
+        min: 0,
+      }),
+
       // Monetary value (in copper)
       value: new fields.NumberField({
         integer: true,
@@ -134,12 +143,16 @@ export default class ArmorData extends VagabondItemBase {
   }
 
   /**
-   * Calculate slot cost when equipped.
+   * Calculate the total inventory slot cost for this armor.
+   * Respects slotsWhenEquipped for magic armor that reduces slot cost when worn.
    *
-   * @returns {number} Slot cost
+   * @returns {number} Total slots used
    */
-  getEquippedSlots() {
-    return this.equipped ? this.slots : 0;
+  getTotalSlots() {
+    if (this.equipped && this.slotsWhenEquipped !== null) {
+      return this.slotsWhenEquipped;
+    }
+    return this.slots || 0;
   }
 
   /**

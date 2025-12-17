@@ -205,13 +205,11 @@ export default class VagabondActor extends Actor {
     system.armor = totalArmor;
 
     // Calculate used item slots from inventory
+    // Each item type implements getTotalSlots() with its own logic
     let usedSlots = 0;
     for (const item of this.items) {
-      // Only count items that take slots (not features, classes, etc.)
-      if (["weapon", "armor", "equipment"].includes(item.type)) {
-        const slots = item.system.slots || 0;
-        const quantity = item.system.quantity || 1;
-        usedSlots += slots * quantity;
+      if (typeof item.system.getTotalSlots === "function") {
+        usedSlots += item.system.getTotalSlots();
       }
     }
     system.itemSlots.used = usedSlots;

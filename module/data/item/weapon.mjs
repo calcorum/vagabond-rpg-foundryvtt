@@ -97,6 +97,15 @@ export default class WeaponData extends VagabondItemBase {
         min: 0,
       }),
 
+      // Slot cost when equipped (null means same as slots)
+      // Allows magic weapons to reduce slot cost when wielded
+      slotsWhenEquipped: new fields.NumberField({
+        integer: true,
+        initial: null,
+        nullable: true,
+        min: 0,
+      }),
+
       // Monetary value (in copper)
       value: new fields.NumberField({
         integer: true,
@@ -229,12 +238,15 @@ export default class WeaponData extends VagabondItemBase {
   }
 
   /**
-   * Calculate the slot cost when equipped.
+   * Calculate the total inventory slot cost for this weapon.
+   * Respects slotsWhenEquipped for magic weapons that reduce slot cost when wielded.
    *
-   * @returns {number} Slot cost
+   * @returns {number} Total slots used
    */
-  getEquippedSlots() {
-    return this.equipped ? this.slots : 0;
+  getTotalSlots() {
+    const baseSlots =
+      this.equipped && this.slotsWhenEquipped !== null ? this.slotsWhenEquipped : this.slots || 0;
+    return baseSlots * (this.quantity || 1);
   }
 
   /**

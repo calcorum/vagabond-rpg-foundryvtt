@@ -1102,6 +1102,49 @@ export default class VagabondItem extends Item {
   /* -------------------------------------------- */
 
   /**
+   * Handle item updates. Sync equipment Active Effects with equipped state.
+   *
+   * @override
+   */
+  async _onUpdate(changed, options, userId) {
+    await super._onUpdate(changed, options, userId);
+
+    // Only process for the updating user
+    if (game.user.id !== userId) return;
+
+    // Sync equipment effects with equipped state
+    if (
+      ["weapon", "armor", "equipment"].includes(this.type) &&
+      changed.system?.equipped !== undefined &&
+      this.actor
+    ) {
+      await this._syncEquippedEffects(changed.system.equipped);
+    }
+  }
+
+  /**
+   * Sync Active Effects' disabled state with equipped state.
+   * Effects should be enabled when equipped, disabled when not.
+   *
+   * @private
+   * @param {boolean} equipped - The new equipped state
+   * @returns {Promise<void>}
+   */
+  async _syncEquippedEffects(equipped) {
+    // Find effects on the actor that originated from this item
+    const itemEffects = this.actor.effects.filter((e) => e.origin === this.uuid);
+    if (itemEffects.length === 0) return;
+
+    // Update disabled state: disabled = !equipped
+    const updates = itemEffects.map((effect) => ({
+      _id: effect.id,
+      disabled: !equipped,
+    }));
+
+    await this.actor.updateEmbeddedDocuments("ActiveEffect", updates);
+  }
+
+  /**
    * Toggle the equipped state of this item.
    *
    * @returns {Promise<VagabondItem>} The updated item
