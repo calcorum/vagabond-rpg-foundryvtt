@@ -2141,6 +2141,16 @@
   min-width: 450px;
   min-height: 500px;
 
+  // Form is a flex column to allow scrollable body
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  // Header wrapper stays fixed at top
+  .header-wrapper {
+    flex-shrink: 0;
+  }
+
   // ----------------------------------------
   // NPC Header
   // ----------------------------------------
@@ -2383,6 +2393,7 @@
     overflow-y: auto;
     flex: 1;
     min-height: 0;
+    @include custom-scrollbar;
   }
 
   // ----------------------------------------

@@ -67,6 +67,7 @@ async function preloadHandlebarsTemplates() {
     "systems/vagabond/templates/actor/parts/status-bar.hbs",
     // NPC sheet parts
     "systems/vagabond/templates/actor/npc-header.hbs",
+    "systems/vagabond/templates/actor/npc-body.hbs",
     "systems/vagabond/templates/actor/npc-stats.hbs",
     "systems/vagabond/templates/actor/npc-actions.hbs",
     "systems/vagabond/templates/actor/npc-abilities.hbs",

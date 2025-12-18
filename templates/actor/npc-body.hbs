@@ -1,0 +1,310 @@
+{{!-- NPC Sheet Body - Scrollable Content Wrapper --}}
+<div class="sheet-body">
+  {{!-- Stats Section --}}
+  <section class="npc-stats">
+    <div class="stats-row">
+      {{!-- Zone --}}
+      <div class="stat-group zone">
+        <label>{{localize "VAGABOND.Zone"}}</label>
+        <select name="system.zone">
+          {{#each zoneOptions}}
+          <option value="{{@key}}" {{#if (eq @key ../zone)}}selected{{/if}}>
+            {{localize this}}
+          </option>
+          {{/each}}
+        </select>
+        <p class="zone-hint">{{zoneBehavior}}</p>
+      </div>
+
+      {{!-- Speed --}}
+      <div class="stat-group speed">
+        <label>{{localize "VAGABOND.Speed"}}</label>
+        <div class="speed-value">
+          <input type="number" name="system.speed.value" value="{{speed}}" min="0" />
+          <span class="unit">ft</span>
+        </div>
+      </div>
+
+      {{!-- Size & Type --}}
+      <div class="stat-group type">
+        <div class="type-field">
+          <label>{{localize "VAGABOND.Size"}}</label>
+          <select name="system.size">
+            {{#each sizeOptions}}
+            <option value="{{@key}}" {{#if (eq @key ../size)}}selected{{/if}}>
+              {{localize this}}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="type-field">
+          <label>{{localize "VAGABOND.BeingType"}}</label>
+          <select name="system.beingType">
+            {{#each beingTypeOptions}}
+            <option value="{{@key}}" {{#if (eq @key ../beingType)}}selected{{/if}}>
+              {{localize this}}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+
+      {{!-- Appearing --}}
+      <div class="stat-group appearing">
+        <label class="rollable" data-action="rollAppearing" data-tooltip="{{localize 'VAGABOND.RollAppearing'}}">
+          <i class="fa-solid fa-dice"></i>
+          {{localize "VAGABOND.Appearing"}}
+        </label>
+        <input type="text" name="system.appearing" value="{{appearing}}" placeholder="1d6" />
+      </div>
+    </div>
+
+    {{!-- Movement Types --}}
+    <div class="biography-section movement">
+      <h2 class="section-header">{{localize "VAGABOND.Movement"}}</h2>
+      <div class="movement-grid">
+        <div class="movement-field">
+          <label data-tooltip="{{localize 'VAGABOND.MovementClimbHint'}}">
+            <input type="checkbox" name="system.movement.climb" {{#if movement.climb}}checked{{/if}} />
+            {{localize "VAGABOND.Climb"}}
+          </label>
+        </div>
+        <div class="movement-field">
+          <label data-tooltip="{{localize 'VAGABOND.MovementClingHint'}}">
+            <input type="checkbox" name="system.movement.cling" {{#if movement.cling}}checked{{/if}} />
+            {{localize "VAGABOND.Cling"}}
+          </label>
+        </div>
+        <div class="movement-field">
+          <label data-tooltip="{{localize 'VAGABOND.MovementFlyHint'}}">
+            <input type="checkbox" name="system.movement.fly" {{#if movement.fly}}checked{{/if}} />
+            {{localize "VAGABOND.Fly"}}
+          </label>
+        </div>
+        <div class="movement-field">
+          <label data-tooltip="{{localize 'VAGABOND.MovementPhaseHint'}}">
+            <input type="checkbox" name="system.movement.phase" {{#if movement.phase}}checked{{/if}} />
+            {{localize "VAGABOND.Phase"}}
+          </label>
+        </div>
+        <div class="movement-field">
+          <label data-tooltip="{{localize 'VAGABOND.MovementSwimHint'}}">
+            <input type="checkbox" name="system.movement.swim" {{#if movement.swim}}checked{{/if}} />
+            {{localize "VAGABOND.Swim"}}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Senses --}}
+    {{#if hasSenses}}
+    <div class="senses-row">
+      <label>{{localize "VAGABOND.Senses"}}:</label>
+      {{#if senses.allsight}}
+      <span class="sense-tag">{{localize "VAGABOND.Allsight"}}</span>
+      {{/if}}
+      {{#if senses.blindsight}}
+      <span class="sense-tag">{{localize "VAGABOND.Blindsight"}}</span>
+      {{/if}}
+      {{#if senses.darkvision}}
+      <span class="sense-tag">{{localize "VAGABOND.Darkvision"}}</span>
+      {{/if}}
+      {{#if senses.echolocation}}
+      <span class="sense-tag">{{localize "VAGABOND.Echolocation"}}</span>
+      {{/if}}
+      {{#if senses.seismicsense}}
+      <span class="sense-tag">{{localize "VAGABOND.Seismicsense"}}</span>
+      {{/if}}
+      {{#if senses.telepathy}}
+      <span class="sense-tag">{{localize "VAGABOND.Telepathy"}}</span>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{!-- Damage Modifiers --}}
+    {{#if hasDamageModifiers}}
+    <div class="damage-modifiers">
+      {{#if immunities.length}}
+      <div class="modifier-row immunities">
+        <label>{{localize "VAGABOND.Immunities"}}:</label>
+        <div class="modifier-tags">
+          {{#each immunities}}
+          <span class="modifier-tag immune">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if resistances.length}}
+      <div class="modifier-row resistances">
+        <label>{{localize "VAGABOND.Resistances"}}:</label>
+        <div class="modifier-tags">
+          {{#each resistances}}
+          <span class="modifier-tag resist">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if weaknesses.length}}
+      <div class="modifier-row weaknesses">
+        <label>{{localize "VAGABOND.Weaknesses"}}:</label>
+        <div class="modifier-tags">
+          {{#each weaknesses}}
+          <span class="modifier-tag weak">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    {{/if}}
+  </section>
+
+  {{!-- Actions Section --}}
+  <section class="npc-actions">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Actions"}}</h2>
+      <button type="button" class="action-add" data-action="addAction"
+              data-tooltip="{{localize 'VAGABOND.AddAction'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <ul class="action-list">
+      {{#each actions}}
+      <li class="action-item" data-action-index="{{this.index}}">
+        <div class="action-header">
+          <input type="text" class="action-name" name="system.actions.{{this.index}}.name"
+                 value="{{this.name}}" placeholder="{{localize 'VAGABOND.ActionName'}}" />
+          <div class="action-controls">
+            <button type="button" class="action-roll" data-action="rollAction"
+                    data-action-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.RollAction'}}">
+              <i class="fa-solid fa-dice-d20"></i>
+            </button>
+            <button type="button" class="action-delete" data-action="deleteAction"
+                    data-action-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.DeleteAction'}}">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="action-details">
+          <div class="action-field attack-type">
+            <label>{{localize "VAGABOND.AttackType"}}</label>
+            <select name="system.actions.{{this.index}}.attackType">
+              {{#each ../attackTypeOptions}}
+              <option value="{{@key}}" {{#if (eq @key ../this.attackType)}}selected{{/if}}>
+                {{localize this}}
+              </option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="action-field damage">
+            <label>{{localize "VAGABOND.Damage"}}</label>
+            <input type="text" name="system.actions.{{this.index}}.damage"
+                   value="{{this.damage}}" placeholder="1d6" />
+          </div>
+
+          <div class="action-field damage-type">
+            <label>{{localize "VAGABOND.DamageType"}}</label>
+            <select name="system.actions.{{this.index}}.damageType">
+              {{#each ../damageTypeOptions}}
+              <option value="{{@key}}" {{#if (eq @key ../this.damageType)}}selected{{/if}}>
+                {{localize this}}
+              </option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="action-field range">
+            <label>{{localize "VAGABOND.Range"}}</label>
+            <input type="text" name="system.actions.{{this.index}}.range"
+                   value="{{this.range}}" placeholder="60 ft" />
+          </div>
+        </div>
+
+        <div class="action-description">
+          <textarea name="system.actions.{{this.index}}.description"
+                    placeholder="{{localize 'VAGABOND.ActionDescription'}}">{{this.description}}</textarea>
+        </div>
+      </li>
+      {{else}}
+      <li class="action-item empty">
+        <p>{{localize "VAGABOND.NoActions"}}</p>
+        <button type="button" data-action="addAction">
+          <i class="fa-solid fa-plus"></i>
+          {{localize "VAGABOND.AddAction"}}
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{!-- Abilities Section --}}
+  <section class="npc-abilities">
+    <div class="section-header-row">
+      <h2 class="section-header">{{localize "VAGABOND.Abilities"}}</h2>
+      <button type="button" class="ability-add" data-action="addAbility"
+              data-tooltip="{{localize 'VAGABOND.AddAbility'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <ul class="ability-list">
+      {{#each abilities}}
+      <li class="ability-item" data-ability-index="{{this.index}}">
+        <div class="ability-header">
+          <input type="text" class="ability-name" name="system.abilities.{{this.index}}.name"
+                 value="{{this.name}}" placeholder="{{localize 'VAGABOND.AbilityName'}}" />
+          <div class="ability-controls">
+            <label class="ability-passive">
+              <input type="checkbox" name="system.abilities.{{this.index}}.passive"
+                     {{#if this.passive}}checked{{/if}} />
+              {{localize "VAGABOND.Passive"}}
+            </label>
+            <button type="button" class="ability-delete" data-action="deleteAbility"
+                    data-ability-index="{{this.index}}" data-tooltip="{{localize 'VAGABOND.DeleteAbility'}}">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="ability-description">
+          <textarea name="system.abilities.{{this.index}}.description"
+                    placeholder="{{localize 'VAGABOND.AbilityDescription'}}">{{this.description}}</textarea>
+        </div>
+      </li>
+      {{else}}
+      <li class="ability-item empty">
+        <p>{{localize "VAGABOND.NoAbilities"}}</p>
+        <button type="button" data-action="addAbility">
+          <i class="fa-solid fa-plus"></i>
+          {{localize "VAGABOND.AddAbility"}}
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{!-- Notes Section --}}
+  <section class="npc-notes">
+    {{!-- Loot --}}
+    <div class="notes-section loot">
+      <h2 class="section-header">{{localize "VAGABOND.Loot"}}</h2>
+      <div class="editor-container">
+        <textarea name="system.loot"
+                  placeholder="{{localize 'VAGABOND.LootPlaceholder'}}">{{loot}}</textarea>
+      </div>
+    </div>
+
+    {{!-- GM Notes --}}
+    <div class="notes-section gm-notes">
+      <h2 class="section-header">{{localize "VAGABOND.GMNotes"}}</h2>
+      <div class="editor-container">
+        <textarea name="system.gmNotes"
+                  placeholder="{{localize 'VAGABOND.GMNotesPlaceholder'}}">{{gmNotes}}</textarea>
+      </div>
+    </div>
+  </section>
+</div>

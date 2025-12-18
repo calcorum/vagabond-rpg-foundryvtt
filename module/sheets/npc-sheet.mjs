@@ -47,17 +47,8 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
     header: {
       template: "systems/vagabond/templates/actor/npc-header.hbs",
     },
-    stats: {
-      template: "systems/vagabond/templates/actor/npc-stats.hbs",
-    },
-    actions: {
-      template: "systems/vagabond/templates/actor/npc-actions.hbs",
-    },
-    abilities: {
-      template: "systems/vagabond/templates/actor/npc-abilities.hbs",
-    },
-    notes: {
-      template: "systems/vagabond/templates/actor/npc-notes.hbs",
+    body: {
+      template: "systems/vagabond/templates/actor/npc-body.hbs",
     },
   };
 
@@ -172,8 +163,8 @@ export default class VagabondNPCSheet extends VagabondActorSheet {
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
 
-    // NPC sheets render all parts (no tabs)
-    options.parts = ["header", "stats", "actions", "abilities", "notes"];
+    // NPC sheets render header and body (no tabs)
+    options.parts = ["header", "body"];
   }
 
   /* -------------------------------------------- */
