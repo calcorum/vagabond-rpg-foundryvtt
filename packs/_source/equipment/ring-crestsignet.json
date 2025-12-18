@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRingcrestsignet",
+  "_id": "vgbdEqpringCrest",
   "name": "Ring, crest/signet",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRingcrestsignet",
+  "_key": "!items!vgbdEqpringCrest",
   "reviewed": true
 }

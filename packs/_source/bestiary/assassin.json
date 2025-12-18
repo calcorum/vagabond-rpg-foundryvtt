@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcAssassin",
-  "_key": "!actors!vagabondNpcAssassin",
+  "_id": "vgbdBstassassin0",
+  "_key": "!items!vgbdBstassassin0",
   "name": "Assassin",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 1,
-    "hp": { "value": 4, "max": 4 },
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
     "tl": 2.3,
     "armor": 1,
     "morale": 7,
     "zone": "midline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 35 },
+    "speed": {
+      "value": 35
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

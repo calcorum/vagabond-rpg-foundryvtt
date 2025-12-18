@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLanternbullseye",
+  "_id": "vgbdEqplanternBu",
   "name": "Lantern, bullseye",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLanternbullseye",
+  "_key": "!items!vgbdEqplanternBu",
   "reviewed": true
 }

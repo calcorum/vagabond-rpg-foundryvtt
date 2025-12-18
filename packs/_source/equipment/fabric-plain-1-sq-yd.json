@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFabricplain1sqyd",
+  "_id": "vgbdEqpfabricPla",
   "name": "Fabric, plain (1 sq. yd.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFabricplain1sqyd",
+  "_key": "!items!vgbdEqpfabricPla",
   "reviewed": true
 }

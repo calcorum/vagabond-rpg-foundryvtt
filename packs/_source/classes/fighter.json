@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsFighter",
-  "_key": "!items!vagabondClsFighter",
+  "_id": "vgbdClsfighter00",
+  "_key": "!items!vgbdClsfighter00",
   "name": "Fighter",
   "type": "class",
   "img": "icons/svg/sword.svg",
@@ -11,7 +11,11 @@
     "zone": "frontline",
     "weaponTraining": ["melee", "ranged"],
     "skillTraining": [
-      { "type": "choice", "skills": ["brawl", "finesse"], "count": 1 },
+      {
+        "type": "choice",
+        "skills": ["brawl", "finesse"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["brawl", "detect", "finesse", "leadership", "sneak"],

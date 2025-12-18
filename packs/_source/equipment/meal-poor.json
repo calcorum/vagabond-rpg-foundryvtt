@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMealpoor",
+  "_id": "vgbdEqpmealPoor0",
   "name": "Meal, poor",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMealpoor",
+  "_key": "!items!vgbdEqpmealPoor0",
   "reviewed": true
 }

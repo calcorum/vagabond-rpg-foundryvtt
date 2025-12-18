@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPrimordialSummoner",
+  "_id": "vgbdPrkprimordia",
   "name": "Primordial Summoner",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "magic", "ritual", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPrimordialSummoner",
+  "_key": "!items!vgbdPrkprimordia",
   "reviewed": true
 }

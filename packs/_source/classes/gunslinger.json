@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsGunsli",
-  "_key": "!items!vagabondClsGunsli",
+  "_id": "vgbdClsgunslinge",
+  "_key": "!items!vgbdClsgunslinge",
   "name": "Gunslinger",
   "type": "class",
   "img": "icons/svg/target.svg",
@@ -11,7 +11,11 @@
     "zone": "backline",
     "weaponTraining": ["ranged"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["detect"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["detect"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["brawl", "finesse", "influence", "sneak", "survival"],

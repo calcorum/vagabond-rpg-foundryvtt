@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPeriscope",
+  "_id": "vgbdEqpperiscope",
   "name": "Periscope",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPeriscope",
+  "_key": "!items!vgbdEqpperiscope",
   "reviewed": true
 }

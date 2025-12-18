@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLanternhooded",
+  "_id": "vgbdEqplanternHo",
   "name": "Lantern, hooded",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLanternhooded",
+  "_key": "!items!vgbdEqplanternHo",
   "reviewed": true
 }

@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstbat000000",
+  "_key": "!items!vgbdBstbat000000",
+  "name": "Bat",
+  "type": "npc",
+  "img": "icons/creatures/mammals/bat-gray.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.2,
+    "armor": 0,
+    "morale": 5,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "2d20",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 1 and pass [Endure] or become Sickened (Cd6 days)</p>",
+        "attackType": "melee",
+        "damage": "1",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Nimble",
+        "description": "<p>Attacks against it can't be Favored if it can Move.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 5' (Fly 30')</p>"
+  },
+  "reviewed": false
+}

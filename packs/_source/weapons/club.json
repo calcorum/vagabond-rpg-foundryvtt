@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponClub",
+  "_id": "vgbdWpnclub00000",
   "name": "Club",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponClub",
+  "_key": "!items!vgbdWpnclub00000",
   "reviewed": true
 }

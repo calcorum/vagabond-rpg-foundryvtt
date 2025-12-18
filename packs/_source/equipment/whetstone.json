@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWhetstone",
+  "_id": "vgbdEqpwhetstone",
   "name": "Whetstone",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWhetstone",
+  "_key": "!items!vgbdEqpwhetstone",
   "reviewed": true
 }

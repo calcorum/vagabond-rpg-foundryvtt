@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkInspiringPresence",
+  "_id": "vgbdPrkinspiring",
   "name": "Inspiring Presence",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility", "social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkInspiringPresence",
+  "_key": "!items!vgbdPrkinspiring",
   "reviewed": true
 }

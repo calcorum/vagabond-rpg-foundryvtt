@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCasemapscroll",
+  "_id": "vgbdEqpcaseMapsc",
   "name": "Case, map/scroll",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCasemapscroll",
+  "_key": "!items!vgbdEqpcaseMapsc",
   "reviewed": true
 }

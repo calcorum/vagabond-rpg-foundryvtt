@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBlanket",
+  "_id": "vgbdEqpblanket00",
   "name": "Blanket",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBlanket",
+  "_key": "!items!vgbdEqpblanket00",
   "reviewed": true
 }

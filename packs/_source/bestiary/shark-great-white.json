@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstsharkGrea",
+  "_key": "!items!vgbdBstsharkGrea",
+  "name": "Shark, Great White",
+  "type": "npc",
+  "img": "icons/creatures/fish/fish-shark-blue.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.8,
+    "armor": 2,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "3d4",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 11 (2d10) and Restrained if smaller</p>",
+        "attackType": "melee",
+        "damage": "2d10",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aquatic",
+        "description": "<p>Can only breathe water.</p>"
+      },
+      {
+        "name": "Blood Sense",
+        "description": "<p>It can sense Beings that are missing any HP within 1 mile as if by Blindsight.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 0' (Swim 60')</p>"
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHorsepony",
+  "_id": "vgbdEqphorsePony",
   "name": "Horse, pony",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHorsepony",
+  "_key": "!items!vgbdEqphorsePony",
   "reviewed": true
 }

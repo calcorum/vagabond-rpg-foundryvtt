@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMealdelicious",
+  "_id": "vgbdEqpmealDelic",
   "name": "Meal, delicious",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMealdelicious",
+  "_key": "!items!vgbdEqpmealDelic",
   "reviewed": true
 }

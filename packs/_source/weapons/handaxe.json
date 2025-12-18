@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponHandaxe",
+  "_id": "vgbdWpnhandaxe00",
   "name": "Handaxe",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponHandaxe",
+  "_key": "!items!vgbdWpnhandaxe00",
   "reviewed": true
 }

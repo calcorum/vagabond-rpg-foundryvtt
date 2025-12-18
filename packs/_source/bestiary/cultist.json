@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcCultist",
-  "_key": "!actors!vagabondNpcCultist",
+  "_id": "vgbdBstcultist00",
+  "_key": "!items!vgbdBstcultist00",
   "name": "Cultist",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 1,
-    "hp": { "value": 4, "max": 4 },
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
     "tl": 1.0,
     "armor": 1,
     "morale": 12,
     "zone": "midline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 30 },
+    "speed": {
+      "value": 30
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

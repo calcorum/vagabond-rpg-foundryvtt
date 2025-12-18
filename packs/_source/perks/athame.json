@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkAthame",
+  "_id": "vgbdPrkathame000",
   "name": "Athame",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["ritual"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkAthame",
+  "_key": "!items!vgbdPrkathame000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLute",
+  "_id": "vgbdEqplute00000",
   "name": "Lute",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLute",
+  "_key": "!items!vgbdEqplute00000",
   "reviewed": true
 }

@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcWarlord",
-  "_key": "!actors!vagabondNpcWarlord",
+  "_id": "vgbdBstwarlord00",
+  "_key": "!items!vgbdBstwarlord00",
   "name": "Warlord",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 5,
-    "hp": { "value": 22, "max": 22 },
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
     "tl": 3.0,
     "armor": 3,
     "morale": 10,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 30 },
+    "speed": {
+      "value": 30
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

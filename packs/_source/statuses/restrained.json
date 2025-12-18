@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusRestrained",
+  "_id": "vgbdStsrestraine",
   "name": "Restrained",
   "type": "status",
   "img": "icons/svg/net.svg",
@@ -61,5 +61,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusRestrained"
+  "_key": "!items!vgbdStsrestraine"
 }

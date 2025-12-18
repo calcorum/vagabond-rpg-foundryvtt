@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkWitchsight",
+  "_id": "vgbdPrkwitchsigh",
   "name": "Witchsight",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkWitchsight",
+  "_key": "!items!vgbdPrkwitchsigh",
   "reviewed": true
 }

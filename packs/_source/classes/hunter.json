@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsHunter",
-  "_key": "!items!vagabondClsHunter",
+  "_id": "vgbdClshunter000",
+  "_key": "!items!vgbdClshunter000",
   "name": "Hunter",
   "type": "class",
   "img": "icons/svg/pawprint.svg",
@@ -11,8 +11,16 @@
     "zone": "midline",
     "weaponTraining": ["melee", "ranged"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["survival"], "count": 1 },
-      { "type": "choice", "skills": [], "count": 4 }
+      {
+        "type": "fixed",
+        "skills": ["survival"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 4
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Scout or Warrior</p>",

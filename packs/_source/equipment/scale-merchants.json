@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipScalemerchants",
+  "_id": "vgbdEqpscaleMerc",
   "name": "Scale, merchant's",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipScalemerchants",
+  "_key": "!items!vgbdEqpscaleMerc",
   "reviewed": true
 }

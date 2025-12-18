@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAleciderbarrelsmall",
+  "_id": "vgbdEqpalecider1",
   "name": "Ale/Cider, barrel small",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAleciderbarrelsmall",
+  "_key": "!items!vgbdEqpalecider1",
   "reviewed": true
 }

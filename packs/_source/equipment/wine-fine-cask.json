@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWinefinecask",
+  "_id": "vgbdEqpwineFineC",
   "name": "Wine, fine cask",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWinefinecask",
+  "_key": "!items!vgbdEqpwineFineC",
   "reviewed": true
 }

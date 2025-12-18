@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponMorningstar",
+  "_id": "vgbdWpnmorningst",
   "name": "Morningstar",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponMorningstar",
+  "_key": "!items!vgbdWpnmorningst",
   "reviewed": true
 }

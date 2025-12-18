@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstsnakeCobr",
+  "_key": "!items!vgbdBstsnakeCobr",
+  "name": "Snake, Cobra",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/snake-fangs-small-green.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.5,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Venom Spit",
+        "description": "<p>[Ranged Attack, Near] (Recharge Cd4): 0 and, if failed by 5 or more, Blinded</p>",
+        "attackType": "ranged",
+        "damage": "0",
+        "damageType": "poison",
+        "range": "Near",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 1 (d3) and pass [Endure] or become Sickened (Cd6 damage each minute)</p>",
+        "attackType": "melee",
+        "damage": "1d3",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Venomous snakes that can deliver their venom through bites or by spitting.</p>"
+  },
+  "reviewed": false
+}

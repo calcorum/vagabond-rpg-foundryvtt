@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusFrightened",
+  "_id": "vgbdStsfrightene",
   "name": "Frightened",
   "type": "status",
   "img": "icons/svg/terror.svg",
@@ -61,5 +61,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusFrightened"
+  "_key": "!items!vgbdStsfrightene"
 }

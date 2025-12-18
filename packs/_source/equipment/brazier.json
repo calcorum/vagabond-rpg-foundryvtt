@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBrazier",
+  "_id": "vgbdEqpbrazier00",
   "name": "Brazier",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBrazier",
+  "_key": "!items!vgbdEqpbrazier00",
   "reviewed": true
 }

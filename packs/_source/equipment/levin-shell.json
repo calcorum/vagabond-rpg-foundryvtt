@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLevinshell",
+  "_id": "vgbdEqplevinShel",
   "name": "Levin shell",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLevinshell",
+  "_key": "!items!vgbdEqplevinShel",
   "reviewed": true
 }

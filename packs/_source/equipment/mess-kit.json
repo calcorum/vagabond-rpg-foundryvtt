@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMesskit",
+  "_id": "vgbdEqpmessKit00",
   "name": "Mess kit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMesskit",
+  "_key": "!items!vgbdEqpmessKit00",
   "reviewed": true
 }

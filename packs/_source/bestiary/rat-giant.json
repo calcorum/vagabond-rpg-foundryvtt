@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstratGiant0",
+  "_key": "!items!vgbdBstratGiant0",
+  "name": "Rat, Giant",
+  "type": "npc",
+  "img": "icons/creatures/mammals/rodent-rat-green.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.1,
+    "armor": 0,
+    "morale": 3,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 1 (d3) and pass [Endure] or become Sickened (Cd6 days)</p>",
+        "attackType": "melee",
+        "damage": "1d3",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Nimble",
+        "description": "<p>Attacks against it can't be Favored if it can Move.</p>"
+      },
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponShotgunSawedOff",
+  "_id": "vgbdWpnshotgunSa",
   "name": "Shotgun, sawed-off",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponShotgunSawedOff",
+  "_key": "!items!vgbdWpnshotgunSa",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipClothesformal",
+  "_id": "vgbdEqpclothesFo",
   "name": "Clothes, formal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipClothesformal",
+  "_key": "!items!vgbdEqpclothesFo",
   "reviewed": true
 }

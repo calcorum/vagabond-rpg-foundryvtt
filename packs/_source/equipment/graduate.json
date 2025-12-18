@@ -1,10 +1,10 @@
 {
-  "_id": "vagabondEquipGraduate",
+  "_id": "vgbdEqpgraduate0",
   "name": "Graduate",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "<p>Holds \u00bc pint.</p>",
+    "description": "<p>Holds ¼ pint.</p>",
     "quantity": 1,
     "slots": 1,
     "slotsPerItem": false,
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGraduate",
+  "_key": "!items!vgbdEqpgraduate0",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTrumpet",
+  "_id": "vgbdEqptrumpet00",
   "name": "Trumpet",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTrumpet",
+  "_key": "!items!vgbdEqptrumpet00",
   "reviewed": true
 }

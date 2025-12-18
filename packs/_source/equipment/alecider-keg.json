@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAleciderkeg",
+  "_id": "vgbdEqpaleciderK",
   "name": "Ale/Cider, keg",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAleciderkeg",
+  "_key": "!items!vgbdEqpaleciderK",
   "reviewed": true
 }

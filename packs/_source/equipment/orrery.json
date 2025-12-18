@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOrrery",
+  "_id": "vgbdEqporrery000",
   "name": "Orrery",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOrrery",
+  "_key": "!items!vgbdEqporrery000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPaper1sheet",
+  "_id": "vgbdEqppaper1She",
   "name": "Paper (1 sheet)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPaper1sheet",
+  "_key": "!items!vgbdEqppaper1She",
   "reviewed": true
 }

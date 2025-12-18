@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusFatigued",
+  "_id": "vgbdStsfatigued0",
   "name": "Fatigued",
   "type": "status",
   "img": "icons/svg/unconscious.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusFatigued"
+  "_key": "!items!vgbdStsfatigued0"
 }

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstsnakePitV",
+  "_key": "!items!vgbdBstsnakePitV",
+  "name": "Snake, Pit Viper",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/snake-fangs-small-green.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.8,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 2 (d4) and pass [Endure] or become Sickened (Cd6 damage each minute)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Other venomous snakes who only deliver their venom through bites.</p>"
+  },
+  "reviewed": false
+}

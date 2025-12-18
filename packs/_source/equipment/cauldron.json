@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCauldron",
+  "_id": "vgbdEqpcauldron0",
   "name": "Cauldron",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCauldron",
+  "_key": "!items!vgbdEqpcauldron0",
   "reviewed": true
 }

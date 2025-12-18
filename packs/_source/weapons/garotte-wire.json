@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponGarotteWire",
+  "_id": "vgbdWpngarotteWi",
   "name": "Garotte wire",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponGarotteWire",
+  "_key": "!items!vgbdWpngarotteWi",
   "reviewed": true
 }

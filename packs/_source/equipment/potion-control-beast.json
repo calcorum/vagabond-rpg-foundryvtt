@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotioncontrolbeast",
+  "_id": "vgbdEqppotionCon",
   "name": "Potion, control beast",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotioncontrolbeast",
+  "_key": "!items!vgbdEqppotionCon",
   "reviewed": true
 }

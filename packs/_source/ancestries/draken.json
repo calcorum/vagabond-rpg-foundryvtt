@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondAnceDraken",
-  "_key": "!items!vagabondAnceDraken",
+  "_id": "vgbdAncdraken000",
+  "_key": "!items!vgbdAncdraken000",
   "name": "Draken",
   "type": "ancestry",
   "img": "icons/svg/mystery-man.svg",
@@ -17,7 +17,13 @@
       {
         "name": "Scale",
         "description": "<p>Your natural scales grant you +1 Armor.</p>",
-        "changes": [{ "key": "system.armor", "mode": 2, "value": "1" }]
+        "changes": [
+          {
+            "key": "system.armor",
+            "mode": 2,
+            "value": "1"
+          }
+        ]
       },
       {
         "name": "Draconic Resilience",

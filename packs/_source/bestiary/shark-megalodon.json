@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstsharkMega",
+  "_key": "!items!vgbdBstsharkMega",
+  "name": "Shark, Megalodon",
+  "type": "npc",
+  "img": "icons/creatures/fish/fish-shark-blue.webp",
+  "system": {
+    "hd": 20,
+    "hp": {
+      "value": 90,
+      "max": 90
+    },
+    "tl": 7.4,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "giant",
+    "beingType": "beast",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 22 (4d10) and Restrained if smaller</p>",
+        "attackType": "melee",
+        "damage": "4d10",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aquatic",
+        "description": "<p>Can only breathe water.</p>"
+      },
+      {
+        "name": "Blood Sense",
+        "description": "<p>It can sense Beings that are missing any HP within 1 mile as if by Blindsight, and its attacks deal an extra die of damage to them.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 0' (Swim 60')</p>"
+  },
+  "reviewed": false
+}

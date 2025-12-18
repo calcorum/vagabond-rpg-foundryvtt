@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkHeavyArms",
+  "_id": "vgbdPrkheavyArms",
   "name": "Heavy Arms",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkHeavyArms",
+  "_key": "!items!vgbdPrkheavyArms",
   "reviewed": true
 }

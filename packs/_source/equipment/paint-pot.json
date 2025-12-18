@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPaintpot",
+  "_id": "vgbdEqppaintPot0",
   "name": "Paint, pot",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPaintpot",
+  "_key": "!items!vgbdEqppaintPot0",
   "reviewed": true
 }

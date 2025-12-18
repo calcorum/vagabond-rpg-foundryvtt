@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkIceKnife",
+  "_id": "vgbdPrkiceKnife0",
   "name": "Ice Knife",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkIceKnife",
+  "_key": "!items!vgbdPrkiceKnife0",
   "reviewed": true
 }

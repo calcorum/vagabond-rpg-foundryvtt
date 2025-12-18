@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGlasscutter",
+  "_id": "vgbdEqpglassCutt",
   "name": "Glass cutter",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGlasscutter",
+  "_key": "!items!vgbdEqpglassCutt",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWoodstake",
+  "_id": "vgbdEqpwoodStake",
   "name": "Wood stake",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWoodstake",
+  "_key": "!items!vgbdEqpwoodStake",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkAkimboTrigger",
+  "_id": "vgbdPrkakimboTri",
   "name": "Akimbo Trigger",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkAkimboTrigger",
+  "_key": "!items!vgbdPrkakimboTri",
   "reviewed": true
 }

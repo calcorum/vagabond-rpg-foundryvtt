@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkDeftHands",
+  "_id": "vgbdPrkdeftHands",
   "name": "Deft Hands",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkDeftHands",
+  "_key": "!items!vgbdPrkdeftHands",
   "reviewed": true
 }

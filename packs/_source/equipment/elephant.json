@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipElephant",
+  "_id": "vgbdEqpelephant0",
   "name": "Elephant",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipElephant",
+  "_key": "!items!vgbdEqpelephant0",
   "reviewed": true
 }

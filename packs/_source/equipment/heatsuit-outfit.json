@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHeatsuitoutfit",
+  "_id": "vgbdEqpheatsuitO",
   "name": "Heatsuit outfit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHeatsuitoutfit",
+  "_key": "!items!vgbdEqpheatsuitO",
   "reviewed": true
 }

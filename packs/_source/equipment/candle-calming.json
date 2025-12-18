@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCandlecalming",
+  "_id": "vgbdEqpcandleCal",
   "name": "Candle, calming",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCandlecalming",
+  "_key": "!items!vgbdEqpcandleCal",
   "reviewed": true
 }

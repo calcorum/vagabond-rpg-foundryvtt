@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTindertwig",
+  "_id": "vgbdEqptindertwi",
   "name": "Tindertwig",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTindertwig",
+  "_key": "!items!vgbdEqptindertwi",
   "reviewed": true
 }

@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcBerserker",
-  "_key": "!actors!vagabondNpcBerserker",
+  "_id": "vgbdBstberserker",
+  "_key": "!items!vgbdBstberserker",
   "name": "Berserker",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 1,
-    "hp": { "value": 4, "max": 4 },
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
     "tl": 2.8,
     "armor": 1,
     "morale": 8,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 40 },
+    "speed": {
+      "value": 40
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

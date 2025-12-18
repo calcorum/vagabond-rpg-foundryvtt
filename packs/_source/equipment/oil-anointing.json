@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilanointing",
+  "_id": "vgbdEqpoilAnoint",
   "name": "Oil, anointing",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilanointing",
+  "_key": "!items!vgbdEqpoilAnoint",
   "reviewed": true
 }

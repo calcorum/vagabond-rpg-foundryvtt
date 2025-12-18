@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusBurning",
+  "_id": "vgbdStsburning00",
   "name": "Burning",
   "type": "status",
   "img": "icons/svg/fire.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusBurning"
+  "_key": "!items!vgbdStsburning00"
 }

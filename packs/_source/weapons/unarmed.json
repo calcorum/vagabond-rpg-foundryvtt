@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponUnarmed",
+  "_id": "vgbdWpnunarmed00",
   "name": "Unarmed",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponUnarmed",
+  "_key": "!items!vgbdWpnunarmed00",
   "reviewed": true
 }

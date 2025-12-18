@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstpteranodo",
+  "_key": "!items!vgbdBstpteranodo",
+  "name": "Pteranodon",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/pterodactyl-flying-green.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 5,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d12",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Flying dinosaurs that resemble birds with fanged maws. Speed: 10' (Fly 60')</p>"
+  },
+  "reviewed": false
+}

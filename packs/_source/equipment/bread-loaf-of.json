@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBreadloafof",
+  "_id": "vgbdEqpbreadLoaf",
   "name": "Bread, loaf of",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBreadloafof",
+  "_key": "!items!vgbdEqpbreadLoaf",
   "reviewed": true
 }

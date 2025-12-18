@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilwyrmwound",
+  "_id": "vgbdEqpoilWyrmwo",
   "name": "Oil, wyrmwound",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilwyrmwound",
+  "_key": "!items!vgbdEqpoilWyrmwo",
   "reviewed": true
 }

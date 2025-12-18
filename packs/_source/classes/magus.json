@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsMagus0",
-  "_key": "!items!vagabondClsMagus0",
+  "_id": "vgbdClsmagus0000",
+  "_key": "!items!vgbdClsmagus0000",
   "name": "Magus",
   "type": "class",
   "img": "icons/svg/lightning.svg",
@@ -11,7 +11,11 @@
     "zone": "frontline",
     "weaponTraining": ["melee"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["arcana"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["arcana"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["brawl", "detect", "finesse", "influence", "mysticism", "sneak"],

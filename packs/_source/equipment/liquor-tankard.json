@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLiquortankard",
+  "_id": "vgbdEqpliquorTan",
   "name": "Liquor, tankard",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLiquortankard",
+  "_key": "!items!vgbdEqpliquorTan",
   "reviewed": true
 }

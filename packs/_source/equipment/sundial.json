@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSundial",
+  "_id": "vgbdEqpsundial00",
   "name": "Sundial",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSundial",
+  "_key": "!items!vgbdEqpsundial00",
   "reviewed": true
 }

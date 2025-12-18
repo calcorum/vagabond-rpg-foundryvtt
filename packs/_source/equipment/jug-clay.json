@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipJugclay",
+  "_id": "vgbdEqpjugClay00",
   "name": "Jug, clay",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipJugclay",
+  "_key": "!items!vgbdEqpjugClay00",
   "reviewed": true
 }

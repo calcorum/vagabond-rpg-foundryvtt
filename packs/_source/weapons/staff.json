@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponStaff",
+  "_id": "vgbdWpnstaff0000",
   "name": "Staff",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponStaff",
+  "_key": "!items!vgbdWpnstaff0000",
   "reviewed": true
 }

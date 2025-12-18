@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcKnight",
-  "_key": "!actors!vagabondNpcKnight",
+  "_id": "vgbdBstknight000",
+  "_key": "!items!vgbdBstknight000",
   "name": "Knight",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 3,
-    "hp": { "value": 13, "max": 13 },
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
     "tl": 2.8,
     "armor": 3,
     "morale": 8,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 25 },
+    "speed": {
+      "value": 25
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

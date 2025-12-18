@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMealopulent",
+  "_id": "vgbdEqpmealOpule",
   "name": "Meal, opulent",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMealopulent",
+  "_key": "!items!vgbdEqpmealOpule",
   "reviewed": true
 }

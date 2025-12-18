@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipEarring",
+  "_id": "vgbdEqpearring00",
   "name": "Earring",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipEarring",
+  "_key": "!items!vgbdEqpearring00",
   "reviewed": true
 }

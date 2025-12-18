@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPoisondeadlynightshade",
+  "_id": "vgbdEqppoisonDea",
   "name": "Poison, deadly nightshade",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPoisondeadlynightshade",
+  "_key": "!items!vgbdEqppoisonDea",
   "reviewed": true
 }

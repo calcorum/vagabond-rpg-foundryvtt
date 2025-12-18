@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAlembic",
+  "_id": "vgbdEqpalembic00",
   "name": "Alembic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAlembic",
+  "_key": "!items!vgbdEqpalembic00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDoublet",
+  "_id": "vgbdEqpdoublet00",
   "name": "Doublet",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDoublet",
+  "_key": "!items!vgbdEqpdoublet00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkCardistry",
+  "_id": "vgbdPrkcardistry",
   "name": "Cardistry",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "social", "magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkCardistry",
+  "_key": "!items!vgbdPrkcardistry",
   "reviewed": true
 }

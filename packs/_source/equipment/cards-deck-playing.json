@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCardsdeckplaying",
+  "_id": "vgbdEqpcardsDec1",
   "name": "Cards, deck playing",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCardsdeckplaying",
+  "_key": "!items!vgbdEqpcardsDec1",
   "reviewed": true
 }

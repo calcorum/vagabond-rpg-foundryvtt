@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstlizardGi1",
+  "_key": "!items!vgbdBstlizardGi1",
+  "name": "Lizard, Giant Gecko",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/lizard-horned-green.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.9,
+    "armor": 1,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "attackType": "melee",
+        "damage": "1d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Overgrown reptiles, often used as mounts.</p>"
+  },
+  "reviewed": false
+}

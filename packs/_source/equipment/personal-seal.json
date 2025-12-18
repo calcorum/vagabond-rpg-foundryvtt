@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPersonalseal",
+  "_id": "vgbdEqppersonalS",
   "name": "Personal seal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPersonalseal",
+  "_key": "!items!vgbdEqppersonalS",
   "reviewed": true
 }

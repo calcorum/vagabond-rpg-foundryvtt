@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipShawm",
+  "_id": "vgbdEqpshawm0000",
   "name": "Shawm",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipShawm",
+  "_key": "!items!vgbdEqpshawm0000",
   "reviewed": true
 }

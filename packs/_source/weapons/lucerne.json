@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponLucerne",
+  "_id": "vgbdWpnlucerne00",
   "name": "Lucerne",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponLucerne",
+  "_key": "!items!vgbdWpnlucerne00",
   "reviewed": true
 }

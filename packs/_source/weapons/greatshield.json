@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponGreatshield",
+  "_id": "vgbdWpngreatshie",
   "name": "Greatshield",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponGreatshield",
+  "_key": "!items!vgbdWpngreatshie",
   "reviewed": true
 }

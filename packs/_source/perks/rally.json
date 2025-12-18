@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkRally",
+  "_id": "vgbdPrkrally0000",
   "name": "Rally",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkRally",
+  "_key": "!items!vgbdPrkrally0000",
   "reviewed": true
 }

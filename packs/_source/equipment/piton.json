@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPiton",
+  "_id": "vgbdEqppiton0000",
   "name": "Piton",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPiton",
+  "_key": "!items!vgbdEqppiton0000",
   "reviewed": true
 }

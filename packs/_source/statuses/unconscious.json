@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusUnconscious",
+  "_id": "vgbdStsunconscio",
   "name": "Unconscious",
   "type": "status",
   "img": "icons/svg/sleep.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusUnconscious"
+  "_key": "!items!vgbdStsunconscio"
 }

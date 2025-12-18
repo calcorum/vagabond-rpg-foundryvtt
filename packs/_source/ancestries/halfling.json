@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondAnceHalfli",
-  "_key": "!items!vagabondAnceHalfli",
+  "_id": "vgbdAnchalfling0",
+  "_key": "!items!vgbdAnchalfling0",
   "name": "Halfling",
   "type": "ancestry",
   "img": "icons/svg/mystery-man.svg",
@@ -12,7 +12,13 @@
       {
         "name": "Nimble",
         "description": "<p>Your base Speed is increased by 5.</p>",
-        "changes": [{ "key": "system.speed.bonus", "mode": 2, "value": "5" }]
+        "changes": [
+          {
+            "key": "system.speed.bonus",
+            "mode": 2,
+            "value": "5"
+          }
+        ]
       },
       {
         "name": "Squat",

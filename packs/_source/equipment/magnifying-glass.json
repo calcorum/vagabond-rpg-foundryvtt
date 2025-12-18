@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMagnifyingglass",
+  "_id": "vgbdEqpmagnifyin",
   "name": "Magnifying glass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMagnifyingglass",
+  "_key": "!items!vgbdEqpmagnifyin",
   "reviewed": true
 }

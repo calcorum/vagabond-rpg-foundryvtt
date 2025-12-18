@@ -1,0 +1,71 @@
+{
+  "_id": "vgbdBstsabreToot",
+  "_key": "!items!vgbdBstsabreToot",
+  "name": "Sabre-tooth Tiger",
+  "type": "npc",
+  "img": "icons/creatures/mammals/cat-tiger-orange-green.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.9,
+    "armor": 2,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Maul",
+        "description": "<p>[Multi-Attack]: 2x Claw and 1x Bite</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 9 (2d8)</p>",
+        "attackType": "melee",
+        "damage": "2d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claws",
+        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "attackType": "melee",
+        "damage": "1d8",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      },
+      {
+        "name": "Pounce",
+        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcBrigand",
-  "_key": "!actors!vagabondNpcBrigand",
+  "_id": "vgbdBstbrigand00",
+  "_key": "!items!vgbdBstbrigand00",
   "name": "Brigand",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 1,
-    "hp": { "value": 4, "max": 4 },
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
     "tl": 1.7,
     "armor": 2,
     "morale": 12,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 40 },
+    "speed": {
+      "value": 40
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

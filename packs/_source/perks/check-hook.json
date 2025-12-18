@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkCheckHook",
+  "_id": "vgbdPrkcheckHook",
   "name": "Check Hook",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkCheckHook",
+  "_key": "!items!vgbdPrkcheckHook",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCaftan",
+  "_id": "vgbdEqpcaftan000",
   "name": "Caftan",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCaftan",
+  "_key": "!items!vgbdEqpcaftan000",
   "reviewed": true
 }

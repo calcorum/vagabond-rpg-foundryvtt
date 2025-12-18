@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkReAnimator",
+  "_id": "vgbdPrkreAnimato",
   "name": "Re-Animator",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility", "crafting", "magic", "ritual"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkReAnimator",
+  "_key": "!items!vgbdPrkreAnimato",
   "reviewed": true
 }

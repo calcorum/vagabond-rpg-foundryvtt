@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstwhaleBlue",
+  "_key": "!items!vgbdBstwhaleBlue",
+  "name": "Whale, Blue",
+  "type": "npc",
+  "img": "icons/creatures/fish/fish-bioluminescent-blue.webp",
+  "system": {
+    "hd": 15,
+    "hp": {
+      "value": 67,
+      "max": 67
+    },
+    "tl": 8.7,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "colossal",
+    "beingType": "beast",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Slam",
+        "description": "<p>[Melee Attack]: 39 (6d12)</p>",
+        "attackType": "melee",
+        "damage": "6d12",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Hold Breath",
+        "description": "<p>Can hold its breath for up to two hours.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 0' (Swim 60')</p>"
+  },
+  "reviewed": false
+}

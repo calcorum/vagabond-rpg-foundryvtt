@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponNet",
+  "_id": "vgbdWpnnet000000",
   "name": "Net",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponNet",
+  "_key": "!items!vgbdWpnnet000000",
   "reviewed": true
 }

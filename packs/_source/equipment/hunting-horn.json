@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHuntinghorn",
+  "_id": "vgbdEqphuntingHo",
   "name": "Hunting horn",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHuntinghorn",
+  "_key": "!items!vgbdEqphuntingHo",
   "reviewed": true
 }

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsWitch0",
-  "_key": "!items!vagabondClsWitch0",
+  "_id": "vgbdClswitch0000",
+  "_key": "!items!vgbdClswitch0000",
   "name": "Witch",
   "type": "class",
   "img": "icons/svg/eye.svg",
@@ -11,8 +11,16 @@
     "zone": "backline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
-      { "type": "choice", "skills": ["arcana", "craft", "medicine", "survival"], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["mysticism"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": ["arcana", "craft", "medicine", "survival"],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Fortune Teller or Mage</p>",
@@ -25,15 +33,69 @@
         "spellsKnown": 4,
         "features": ["Occultist", "Hex"]
       },
-      { "level": 2, "mana": 8, "castingMax": 0, "spellsKnown": 0, "features": ["Ritualism"] },
-      { "level": 3, "mana": 12, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Things Betwixt"] },
-      { "level": 5, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 24, "castingMax": 0, "spellsKnown": 0, "features": ["Coventry"] },
-      { "level": 7, "mana": 28, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 32, "castingMax": 0, "spellsKnown": 0, "features": ["Widdershins"] },
-      { "level": 9, "mana": 36, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 40, "castingMax": 0, "spellsKnown": 0, "features": ["Ritualism II"] }
+      {
+        "level": 2,
+        "mana": 8,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Ritualism"]
+      },
+      {
+        "level": 3,
+        "mana": 12,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 16,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Things Betwixt"]
+      },
+      {
+        "level": 5,
+        "mana": 20,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 24,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Coventry"]
+      },
+      {
+        "level": 7,
+        "mana": 28,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 32,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Widdershins"]
+      },
+      {
+        "level": 9,
+        "mana": 36,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 40,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Ritualism II"]
+      }
     ],
     "features": [
       {

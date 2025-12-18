@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilbasic",
+  "_id": "vgbdEqpoilBasic0",
   "name": "Oil, basic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilbasic",
+  "_key": "!items!vgbdEqpoilBasic0",
   "reviewed": true
 }

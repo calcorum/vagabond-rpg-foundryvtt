@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWaxsealing1lb",
+  "_id": "vgbdEqpwaxSealin",
   "name": "Wax, sealing (1 lb.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWaxsealing1lb",
+  "_key": "!items!vgbdEqpwaxSealin",
   "reviewed": true
 }

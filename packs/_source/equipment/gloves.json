@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGloves",
+  "_id": "vgbdEqpgloves000",
   "name": "Gloves",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGloves",
+  "_key": "!items!vgbdEqpgloves000",
   "reviewed": true
 }

@@ -1,0 +1,64 @@
+{
+  "_id": "vgbdBstleechGian",
+  "_key": "!items!vgbdBstleechGian",
+  "name": "Leech, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/leech-segmented-purple.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.0,
+    "armor": 0,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "3d6",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Drain",
+        "description": "<p>[Melee Attack, Restrained Being]: 2 (d4) healing this Being for the damage</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Latch",
+        "description": "<p>[Melee Attack]: 2 (d4) and Restrained if Medium or smaller</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Amphibious",
+        "description": "<p>Can breathe air or water.</p>"
+      },
+      {
+        "name": "Blood Sense",
+        "description": "<p>It can sense Beings missing any HP within 1 mile as if by Blindsight and deals an extra die of damage to them.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Massive blood-sucking parasites that latch onto their prey and drain their vitals. Speed: 10' (Swim 20')</p>"
+  },
+  "reviewed": false
+}

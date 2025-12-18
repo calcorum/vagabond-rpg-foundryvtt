@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstowl000000",
+  "_key": "!items!vgbdBstowl000000",
+  "name": "Owl",
+  "type": "npc",
+  "img": "icons/creatures/birds/owl-horned-gray.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.2,
+    "armor": 0,
+    "morale": 6,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Talon",
+        "description": "<p>[Melee Attack]: 1</p>",
+        "attackType": "melee",
+        "damage": "1",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Nimble",
+        "description": "<p>Attacks against it can't be Favored if it can Move.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 5' (Fly 60')</p>"
+  },
+  "reviewed": false
+}

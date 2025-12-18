@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsBarbar",
-  "_key": "!items!vagabondClsBarbar",
+  "_id": "vgbdClsbarbarian",
+  "_key": "!items!vgbdClsbarbarian",
   "name": "Barbarian",
   "type": "class",
   "img": "icons/svg/combat.svg",
@@ -11,7 +11,11 @@
     "zone": "frontline",
     "weaponTraining": ["melee"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["brawl"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["brawl"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["detect", "influence", "leadership", "mysticism", "survival"],

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMortarandpestle",
+  "_id": "vgbdEqpmortarAnd",
   "name": "Mortar and pestle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMortarandpestle",
+  "_key": "!items!vgbdEqpmortarAnd",
   "reviewed": true
 }

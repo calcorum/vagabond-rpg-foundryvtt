@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipInstantwall",
+  "_id": "vgbdEqpinstantWa",
   "name": "Instant wall",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipInstantwall",
+  "_key": "!items!vgbdEqpinstantWa",
   "reviewed": true
 }

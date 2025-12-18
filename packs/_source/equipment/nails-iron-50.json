@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipNailsiron50",
+  "_id": "vgbdEqpnailsIron",
   "name": "Nails, iron (50)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipNailsiron50",
+  "_key": "!items!vgbdEqpnailsIron",
   "reviewed": true
 }

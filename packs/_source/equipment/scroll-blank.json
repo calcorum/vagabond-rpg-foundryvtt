@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipScrollblank",
+  "_id": "vgbdEqpscrollBla",
   "name": "Scroll, blank",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipScrollblank",
+  "_key": "!items!vgbdEqpscrollBla",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBellows",
+  "_id": "vgbdEqpbellows00",
   "name": "Bellows",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBellows",
+  "_key": "!items!vgbdEqpbellows00",
   "reviewed": true
 }

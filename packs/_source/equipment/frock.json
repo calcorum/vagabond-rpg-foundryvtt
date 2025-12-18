@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFrock",
+  "_id": "vgbdEqpfrock0000",
   "name": "Frock",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFrock",
+  "_key": "!items!vgbdEqpfrock0000",
   "reviewed": true
 }

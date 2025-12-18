@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkNewTraining",
+  "_id": "vgbdPrknewTraini",
   "name": "New Training",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["repeatable"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkNewTraining",
+  "_key": "!items!vgbdPrknewTraini",
   "reviewed": true
 }

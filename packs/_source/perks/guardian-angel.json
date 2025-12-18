@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkGuardianAngel",
+  "_id": "vgbdPrkguardianA",
   "name": "Guardian Angel",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkGuardianAngel",
+  "_key": "!items!vgbdPrkguardianA",
   "reviewed": true
 }

@@ -1,0 +1,62 @@
+{
+  "_id": "vgbdBstsnakeGian",
+  "_key": "!items!vgbdBstsnakeGian",
+  "name": "Snake, Giant Constrictor",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/snake-coiled-yellow.webp",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 3.4,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>1x Bite and 1x Constrict</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack, Restrained Target]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Constrict",
+        "description": "<p>[Grapple]: 9 (2d8) and Restrained</p>",
+        "attackType": "melee",
+        "damage": "2d8",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>All manner of giant constricting snakes like boas and pythons. Always kills its prey by crushing it.</p>"
+  },
+  "reviewed": false
+}

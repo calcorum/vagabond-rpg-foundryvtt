@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHammersledge",
+  "_id": "vgbdEqphammerSle",
   "name": "Hammer, sledge",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHammersledge",
+  "_key": "!items!vgbdEqphammerSle",
   "reviewed": true
 }

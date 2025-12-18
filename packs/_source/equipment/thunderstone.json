@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipThunderstone",
+  "_id": "vgbdEqpthunderst",
   "name": "Thunderstone",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipThunderstone",
+  "_key": "!items!vgbdEqpthunderst",
   "reviewed": true
 }

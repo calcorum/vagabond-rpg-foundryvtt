@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstwolf00000",
+  "_key": "!items!vgbdBstwolf00000",
+  "name": "Wolf",
+  "type": "npc",
+  "img": "icons/creatures/mammals/wolf-howling-blue.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      },
+      {
+        "name": "Pounce",
+        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Medium or smaller.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

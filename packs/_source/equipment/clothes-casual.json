@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipClothescasual",
+  "_id": "vgbdEqpclothesCa",
   "name": "Clothes, casual",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipClothescasual",
+  "_key": "!items!vgbdEqpclothesCa",
   "reviewed": true
 }

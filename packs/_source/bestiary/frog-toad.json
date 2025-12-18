@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstfrogToad0",
+  "_key": "!items!vgbdBstfrogToad0",
+  "name": "Frog/Toad",
+  "type": "npc",
+  "img": "icons/creatures/amphibians/frog-spotted-green-yellow.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.1,
+    "armor": 0,
+    "morale": 2,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {
+      "climb": true,
+      "cling": true,
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 0</p>",
+        "attackType": "melee",
+        "damage": "0",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Amphibious",
+        "description": "<p>Can breathe air or water.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAlchemytools",
+  "_id": "vgbdEqpalchemyTo",
   "name": "Alchemy Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAlchemytools",
+  "_key": "!items!vgbdEqpalchemyTo",
   "reviewed": true
 }

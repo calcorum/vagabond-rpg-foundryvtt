@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipNeedlesewing",
+  "_id": "vgbdEqpneedleSew",
   "name": "Needle, sewing",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipNeedlesewing",
+  "_key": "!items!vgbdEqpneedleSew",
   "reviewed": true
 }

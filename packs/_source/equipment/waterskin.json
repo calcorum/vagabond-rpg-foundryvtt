@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWaterskin",
+  "_id": "vgbdEqpwaterskin",
   "name": "Waterskin",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWaterskin",
+  "_key": "!items!vgbdEqpwaterskin",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBrewingtools",
+  "_id": "vgbdEqpbrewingTo",
   "name": "Brewing Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBrewingtools",
+  "_key": "!items!vgbdEqpbrewingTo",
   "reviewed": true
 }

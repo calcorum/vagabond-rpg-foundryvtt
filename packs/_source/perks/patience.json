@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPatience",
+  "_id": "vgbdPrkpatience0",
   "name": "Patience",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPatience",
+  "_key": "!items!vgbdPrkpatience0",
   "reviewed": true
 }

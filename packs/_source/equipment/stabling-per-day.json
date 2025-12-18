@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipStablingperday",
+  "_id": "vgbdEqpstablingP",
   "name": "Stabling (per day)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipStablingperday",
+  "_key": "!items!vgbdEqpstablingP",
   "reviewed": true
 }

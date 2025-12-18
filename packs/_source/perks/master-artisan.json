@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMasterArtisan",
+  "_id": "vgbdPrkmasterArt",
   "name": "Master Artisan",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["crafting"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMasterArtisan",
+  "_key": "!items!vgbdPrkmasterArt",
   "reviewed": true
 }

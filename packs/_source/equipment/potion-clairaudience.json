@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionclairaudience",
+  "_id": "vgbdEqppotionCla",
   "name": "Potion, clairaudience",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionclairaudience",
+  "_key": "!items!vgbdEqppotionCla",
   "reviewed": true
 }

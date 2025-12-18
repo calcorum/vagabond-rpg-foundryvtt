@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstcentipede",
+  "_key": "!items!vgbdBstcentipede",
+  "name": "Centipede, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/centipede-brown-red.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 0.1,
+    "armor": 0,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "2d4",
+    "senses": {},
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: Pass [Endure] or become Sickened (Cd4, Paralyzed)</p>",
+        "attackType": "melee",
+        "damage": "0",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipVialgoldinlaid",
+  "_id": "vgbdEqpvialGoldI",
   "name": "Vial, gold-inlaid",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipVialgoldinlaid",
+  "_key": "!items!vgbdEqpvialGoldI",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkProvoker",
+  "_id": "vgbdPrkprovoker0",
   "name": "Provoker",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkProvoker",
+  "_key": "!items!vgbdPrkprovoker0",
   "reviewed": true
 }

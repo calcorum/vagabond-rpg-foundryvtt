@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSpyglass",
+  "_id": "vgbdEqpspyglass0",
   "name": "Spyglass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSpyglass",
+  "_key": "!items!vgbdEqpspyglass0",
   "reviewed": true
 }

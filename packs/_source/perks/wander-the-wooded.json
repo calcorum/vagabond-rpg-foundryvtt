@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkWanderTheWooded",
+  "_id": "vgbdPrkwanderThe",
   "name": "Wander the Wooded",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkWanderTheWooded",
+  "_key": "!items!vgbdPrkwanderThe",
   "reviewed": true
 }

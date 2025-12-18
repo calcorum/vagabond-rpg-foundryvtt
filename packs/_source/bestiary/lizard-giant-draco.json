@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstlizardGia",
+  "_key": "!items!vgbdBstlizardGia",
+  "name": "Lizard, Giant Draco",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/lizard-horned-green.webp",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.4,
+    "armor": 2,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d8",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 5 (d10)</p>",
+        "attackType": "melee",
+        "damage": "1d10",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Massive lizards that glide in desert canyons and have a taste for human flesh. Speed: 40' (70' with Glide)</p>"
+  },
+  "reviewed": false
+}

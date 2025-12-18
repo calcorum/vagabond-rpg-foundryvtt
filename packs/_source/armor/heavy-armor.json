@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondArmorHeavy",
+  "_id": "vgbdArmheavyArmo",
   "name": "Heavy Armor",
   "type": "armor",
   "img": "icons/svg/shield.svg",
@@ -29,6 +29,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondArmorHeavy",
+  "_key": "!items!vgbdArmheavyArmo",
   "reviewed": true
 }

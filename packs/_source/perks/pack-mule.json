@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPackMule",
+  "_id": "vgbdPrkpackMule0",
   "name": "Pack Mule",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility", "repeatable"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPackMule",
+  "_key": "!items!vgbdPrkpackMule0",
   "reviewed": true
 }

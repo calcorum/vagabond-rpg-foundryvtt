@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionesp",
+  "_id": "vgbdEqppotionEsp",
   "name": "Potion, ESP",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionesp",
+  "_key": "!items!vgbdEqppotionEsp",
   "reviewed": true
 }

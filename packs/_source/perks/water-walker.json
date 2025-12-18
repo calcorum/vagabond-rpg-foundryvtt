@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkWaterWalker",
+  "_id": "vgbdPrkwaterWalk",
   "name": "Water Walker",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkWaterWalker",
+  "_key": "!items!vgbdPrkwaterWalk",
   "reviewed": true
 }

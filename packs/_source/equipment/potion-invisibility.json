@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotioninvisibility",
+  "_id": "vgbdEqppotionInv",
   "name": "Potion, invisibility",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotioninvisibility",
+  "_key": "!items!vgbdEqppotionInv",
   "reviewed": true
 }

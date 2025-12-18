@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipChalkbagof",
+  "_id": "vgbdEqpchalkBagO",
   "name": "Chalk, bag of",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipChalkbagof",
+  "_key": "!items!vgbdEqpchalkBagO",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCattlecow",
+  "_id": "vgbdEqpcattleCow",
   "name": "Cattle - Cow",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCattlecow",
+  "_key": "!items!vgbdEqpcattleCow",
   "reviewed": true
 }

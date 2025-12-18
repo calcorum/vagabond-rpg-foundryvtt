@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipChisel",
+  "_id": "vgbdEqpchisel000",
   "name": "Chisel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipChisel",
+  "_key": "!items!vgbdEqpchisel000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFlintsteel",
+  "_id": "vgbdEqpflintStee",
   "name": "Flint & steel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFlintsteel",
+  "_key": "!items!vgbdEqpflintStee",
   "reviewed": true
 }

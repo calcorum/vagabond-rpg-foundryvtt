@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSaddletack",
+  "_id": "vgbdEqpsaddleTac",
   "name": "Saddle & tack",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSaddletack",
+  "_key": "!items!vgbdEqpsaddleTac",
   "reviewed": true
 }

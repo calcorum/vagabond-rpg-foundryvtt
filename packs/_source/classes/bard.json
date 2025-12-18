@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsBard00",
-  "_key": "!items!vagabondClsBard00",
+  "_id": "vgbdClsbard00000",
+  "_key": "!items!vgbdClsbard00000",
   "name": "Bard",
   "type": "class",
   "img": "icons/svg/sound.svg",
@@ -11,8 +11,16 @@
     "zone": "midline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["performance"], "count": 1 },
-      { "type": "choice", "skills": [], "count": 4 }
+      {
+        "type": "fixed",
+        "skills": ["performance"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 4
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Musician</p>",

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkTelepath",
+  "_id": "vgbdPrktelepath0",
   "name": "Telepath",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkTelepath",
+  "_key": "!items!vgbdPrktelepath0",
   "reviewed": true
 }

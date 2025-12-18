@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusSickened",
+  "_id": "vgbdStssickened0",
   "name": "Sickened",
   "type": "status",
   "img": "icons/svg/poison.svg",
@@ -61,5 +61,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusSickened"
+  "_key": "!items!vgbdStssickened0"
 }

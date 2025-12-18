@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipShriekpaste",
+  "_id": "vgbdEqpshriekPas",
   "name": "Shriek paste",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipShriekpaste",
+  "_key": "!items!vgbdEqpshriekPas",
   "reviewed": true
 }

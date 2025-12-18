@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBedroll",
+  "_id": "vgbdEqpbedroll00",
   "name": "Bedroll",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBedroll",
+  "_key": "!items!vgbdEqpbedroll00",
   "reviewed": true
 }

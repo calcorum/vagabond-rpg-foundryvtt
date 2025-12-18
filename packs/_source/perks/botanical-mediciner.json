@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkBotanicalMediciner",
+  "_id": "vgbdPrkbotanical",
   "name": "Botanical Mediciner",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "social", "movement", "healing"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkBotanicalMediciner",
+  "_key": "!items!vgbdPrkbotanical",
   "reviewed": true
 }

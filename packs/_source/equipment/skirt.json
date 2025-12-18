@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSkirt",
+  "_id": "vgbdEqpskirt0000",
   "name": "Skirt",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSkirt",
+  "_key": "!items!vgbdEqpskirt0000",
   "reviewed": true
 }

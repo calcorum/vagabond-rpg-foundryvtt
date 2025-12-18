@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAstrolabe",
+  "_id": "vgbdEqpastrolabe",
   "name": "Astrolabe",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAstrolabe",
+  "_key": "!items!vgbdEqpastrolabe",
   "reviewed": true
 }

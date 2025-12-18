@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBooksheetmusic",
+  "_id": "vgbdEqpbookSheet",
   "name": "Book, sheet music",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBooksheetmusic",
+  "_key": "!items!vgbdEqpbookSheet",
   "reviewed": true
 }

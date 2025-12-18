@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLocket",
+  "_id": "vgbdEqplocket000",
   "name": "Locket",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLocket",
+  "_key": "!items!vgbdEqplocket000",
   "reviewed": true
 }

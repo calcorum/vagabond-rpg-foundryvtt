@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponMace",
+  "_id": "vgbdWpnmace00000",
   "name": "Mace",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponMace",
+  "_key": "!items!vgbdWpnmace00000",
   "reviewed": true
 }

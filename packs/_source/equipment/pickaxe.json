@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPickaxe",
+  "_id": "vgbdEqppickaxe00",
   "name": "Pickaxe",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPickaxe",
+  "_key": "!items!vgbdEqppickaxe00",
   "reviewed": true
 }

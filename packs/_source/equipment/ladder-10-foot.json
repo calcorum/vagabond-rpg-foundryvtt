@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLadder10foot",
+  "_id": "vgbdEqpladder10F",
   "name": "Ladder (10-foot)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLadder10foot",
+  "_key": "!items!vgbdEqpladder10F",
   "reviewed": true
 }

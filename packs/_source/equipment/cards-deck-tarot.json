@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCardsdecktarot",
+  "_id": "vgbdEqpcardsDec2",
   "name": "Cards, deck tarot",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCardsdecktarot",
+  "_key": "!items!vgbdEqpcardsDec2",
   "reviewed": true
 }

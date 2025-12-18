@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusDazed",
+  "_id": "vgbdStsdazed0000",
   "name": "Dazed",
   "type": "status",
   "img": "icons/svg/stoned.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusDazed"
+  "_key": "!items!vgbdStsdazed0000"
 }

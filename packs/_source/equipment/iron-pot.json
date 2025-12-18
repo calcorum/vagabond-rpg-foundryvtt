@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipIronpot",
+  "_id": "vgbdEqpironPot00",
   "name": "Iron pot",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipIronpot",
+  "_key": "!items!vgbdEqpironPot00",
   "reviewed": true
 }

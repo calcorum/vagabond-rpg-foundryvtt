@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAdhesive",
+  "_id": "vgbdEqpadhesive0",
   "name": "Adhesive",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAdhesive",
+  "_key": "!items!vgbdEqpadhesive0",
   "reviewed": true
 }

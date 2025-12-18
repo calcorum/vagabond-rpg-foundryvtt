@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTripodcooking",
+  "_id": "vgbdEqptripodCoo",
   "name": "Tripod, cooking",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTripodcooking",
+  "_key": "!items!vgbdEqptripodCoo",
   "reviewed": true
 }

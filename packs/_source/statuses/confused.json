@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusConfused",
+  "_id": "vgbdStsconfused0",
   "name": "Confused",
   "type": "status",
   "img": "icons/svg/daze.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusConfused"
+  "_key": "!items!vgbdStsconfused0"
 }

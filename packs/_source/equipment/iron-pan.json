@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipIronpan",
+  "_id": "vgbdEqpironPan00",
   "name": "Iron pan",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipIronpan",
+  "_key": "!items!vgbdEqpironPan00",
   "reviewed": true
 }

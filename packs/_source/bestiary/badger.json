@@ -1,0 +1,63 @@
+{
+  "_id": "vgbdBstbadger000",
+  "_key": "!items!vgbdBstbadger000",
+  "name": "Badger",
+  "type": "npc",
+  "img": "icons/creatures/mammals/badger-gray-white.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.6,
+    "armor": 0,
+    "morale": 4,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 25
+    },
+    "appearing": "d4+1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["sickened"],
+    "actions": [
+      {
+        "name": "Maul",
+        "description": "<p>[Multi-Attack]: 2x Claw</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claw",
+        "description": "<p>[Melee Attack]: 1 (d3)</p>",
+        "attackType": "melee",
+        "damage": "1d3",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

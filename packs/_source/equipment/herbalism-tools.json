@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHerbalismtools",
+  "_id": "vgbdEqpherbalism",
   "name": "Herbalism Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHerbalismtools",
+  "_key": "!items!vgbdEqpherbalism",
   "reviewed": true
 }

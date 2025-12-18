@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsthippopota",
+  "_key": "!items!vgbdBsthippopota",
+  "name": "Hippopotamus, Behemoth",
+  "type": "npc",
+  "img": "icons/creatures/mammals/rhinoceros-gray.webp",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 4.9,
+    "armor": 3,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 13 (3d8) and Restrained if it is smaller. This always hits a Target Restrained this way.</p>",
+        "attackType": "melee",
+        "damage": "3d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aggressor",
+        "description": "<p>The first time it Moves at least 10 feet toward an Enemy on a Turn, it regains that Speed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Massive hippos, big enough for micro-ecosystems to develop on their backs. Uncontrollably territorial. Speed: 30' (Swim 40')</p>"
+  },
+  "reviewed": false
+}

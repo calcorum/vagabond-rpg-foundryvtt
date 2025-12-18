@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLockpick",
+  "_id": "vgbdEqplockpick0",
   "name": "Lockpick",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLockpick",
+  "_key": "!items!vgbdEqplockpick0",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLyre",
+  "_id": "vgbdEqplyre00000",
   "name": "Lyre",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLyre",
+  "_key": "!items!vgbdEqplyre00000",
   "reviewed": true
 }

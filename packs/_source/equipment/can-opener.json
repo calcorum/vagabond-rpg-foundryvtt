@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCanopener",
+  "_id": "vgbdEqpcanOpener",
   "name": "Can opener",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCanopener",
+  "_key": "!items!vgbdEqpcanOpener",
   "reviewed": true
 }

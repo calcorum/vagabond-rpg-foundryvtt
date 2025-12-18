@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkShapechanger",
+  "_id": "vgbdPrkshapechan",
   "name": "Shapechanger",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkShapechanger",
+  "_key": "!items!vgbdPrkshapechan",
   "reviewed": true
 }

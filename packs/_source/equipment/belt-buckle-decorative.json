@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBeltbuckledecorative",
+  "_id": "vgbdEqpbeltBuckl",
   "name": "Belt buckle, decorative",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBeltbuckledecorative",
+  "_key": "!items!vgbdEqpbeltBuckl",
   "reviewed": true
 }

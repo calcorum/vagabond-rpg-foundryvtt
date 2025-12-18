@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondAnceGoblin",
-  "_key": "!items!vagabondAnceGoblin",
+  "_id": "vgbdAncgoblin000",
+  "_key": "!items!vgbdAncgoblin000",
   "name": "Goblin",
   "type": "ancestry",
   "img": "icons/svg/mystery-man.svg",
@@ -12,12 +12,24 @@
       {
         "name": "Darksight",
         "description": "<p>You can see in darkness as if it were dim light.</p>",
-        "changes": [{ "key": "system.senses.darkvision", "mode": 5, "value": "true" }]
+        "changes": [
+          {
+            "key": "system.senses.darkvision",
+            "mode": 5,
+            "value": "true"
+          }
+        ]
       },
       {
         "name": "Nimble",
         "description": "<p>Your base Speed is increased by 5.</p>",
-        "changes": [{ "key": "system.speed.bonus", "mode": 2, "value": "5" }]
+        "changes": [
+          {
+            "key": "system.speed.bonus",
+            "mode": 2,
+            "value": "5"
+          }
+        ]
       },
       {
         "name": "Scavenger",

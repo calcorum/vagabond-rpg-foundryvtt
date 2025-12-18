@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsDruid0",
-  "_key": "!items!vagabondClsDruid0",
+  "_id": "vgbdClsdruid0000",
+  "_key": "!items!vgbdClsdruid0000",
   "name": "Druid",
   "type": "class",
   "img": "icons/svg/oak.svg",
@@ -11,7 +11,11 @@
     "zone": "midline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["mysticism"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["brawl", "craft", "detect", "medicine", "survival"],
@@ -97,7 +101,7 @@
       {
         "name": "Primal Mystic",
         "level": 1,
-        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, one of which must always be Polymorph. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 \u00d7 your Druid Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Druid Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, one of which must always be Polymorph. You learn 1 other Spell every 2 Levels in this Class hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Druid Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Druid Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotterytools",
+  "_id": "vgbdEqppotteryTo",
   "name": "Pottery Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotterytools",
+  "_key": "!items!vgbdEqppotteryTo",
   "reviewed": true
 }

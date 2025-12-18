@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTorchsentry",
+  "_id": "vgbdEqptorchSent",
   "name": "Torch, sentry",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTorchsentry",
+  "_key": "!items!vgbdEqptorchSent",
   "reviewed": true
 }

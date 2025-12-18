@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDogwarhound",
+  "_id": "vgbdEqpdogWarhou",
   "name": "Dog, warhound",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDogwarhound",
+  "_key": "!items!vgbdEqpdogWarhou",
   "reviewed": true
 }

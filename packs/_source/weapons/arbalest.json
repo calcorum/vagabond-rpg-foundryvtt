@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponArbalest",
+  "_id": "vgbdWpnarbalest0",
   "name": "Arbalest",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponArbalest",
+  "_key": "!items!vgbdWpnarbalest0",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipClotheswinterset",
+  "_id": "vgbdEqpclothesWi",
   "name": "Clothes, winter set",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipClotheswinterset",
+  "_key": "!items!vgbdEqpclothesWi",
   "reviewed": true
 }

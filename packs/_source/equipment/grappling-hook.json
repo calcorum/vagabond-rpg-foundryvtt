@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGrapplinghook",
+  "_id": "vgbdEqpgrappling",
   "name": "Grappling hook",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGrapplinghook",
+  "_key": "!items!vgbdEqpgrappling",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMageSlayer",
+  "_id": "vgbdPrkmageSlaye",
   "name": "Mage Slayer",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMageSlayer",
+  "_key": "!items!vgbdPrkmageSlaye",
   "reviewed": true
 }

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstantGiant0",
+  "_key": "!items!vgbdBstantGiant0",
+  "name": "Ant, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/ant-mandibles-red.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 2.9,
+    "armor": 3,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 60
+    },
+    "appearing": "2d6+2",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>The incredibly hardy ant, increased to massive proportions. Their tunnels are the size of mineshafts, and an infestation of giant ants can topple a city.</p>"
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRatsbagof20",
+  "_id": "vgbdEqpratsBagOf",
   "name": "Rats, bag of 20",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRatsbagof20",
+  "_key": "!items!vgbdEqpratsBagOf",
   "reviewed": true
 }

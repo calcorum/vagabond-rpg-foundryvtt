@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionmanai",
+  "_id": "vgbdEqppotionMan",
   "name": "Potion, mana I",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionmanai",
+  "_key": "!items!vgbdEqppotionMan",
   "reviewed": true
 }

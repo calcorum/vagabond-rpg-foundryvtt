@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkAmbusher",
+  "_id": "vgbdPrkambusher0",
   "name": "Ambusher",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkAmbusher",
+  "_key": "!items!vgbdPrkambusher0",
   "reviewed": true
 }

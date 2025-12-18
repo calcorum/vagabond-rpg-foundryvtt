@@ -1,0 +1,58 @@
+{
+  "_id": "vgbdBstelephant0",
+  "_key": "!items!vgbdBstelephant0",
+  "name": "Elephant",
+  "type": "npc",
+  "img": "icons/creatures/mammals/mammoth-brown.webp",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 5.0,
+    "armor": 2,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d20",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Trample",
+        "description": "<p>[Melee Attack] (Recharge Cd4): 18 (4d8)</p>",
+        "attackType": "melee",
+        "damage": "4d8",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Tusk",
+        "description": "<p>[Melee Attack]: 7 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Charger",
+        "description": "<p>If it Moves at least 20' in a straight line before making a Tusk Attack, the damage is doubled.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

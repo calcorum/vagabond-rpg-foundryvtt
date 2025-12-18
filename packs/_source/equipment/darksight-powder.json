@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDarksightpowder",
+  "_id": "vgbdEqpdarksight",
   "name": "Darksight powder",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDarksightpowder",
+  "_key": "!items!vgbdEqpdarksight",
   "reviewed": true
 }

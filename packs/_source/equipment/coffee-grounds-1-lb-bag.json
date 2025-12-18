@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCoffeegrounds1lbbag",
+  "_id": "vgbdEqpcoffeeGro",
   "name": "Coffee grounds (1 lb. bag)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCoffeegrounds1lbbag",
+  "_key": "!items!vgbdEqpcoffeeGro",
   "reviewed": true
 }

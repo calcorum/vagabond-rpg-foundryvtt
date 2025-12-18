@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSmoothTalker",
+  "_id": "vgbdPrksmoothTal",
   "name": "Smooth Talker",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility", "social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSmoothTalker",
+  "_key": "!items!vgbdPrksmoothTal",
   "reviewed": true
 }

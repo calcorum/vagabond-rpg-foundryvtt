@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMesmer",
+  "_id": "vgbdPrkmesmer000",
   "name": "Mesmer",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "magic", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMesmer",
+  "_key": "!items!vgbdPrkmesmer000",
   "reviewed": true
 }

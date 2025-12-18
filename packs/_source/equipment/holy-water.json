@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHolywater",
+  "_id": "vgbdEqpholyWater",
   "name": "Holy water",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHolywater",
+  "_key": "!items!vgbdEqpholyWater",
   "reviewed": true
 }

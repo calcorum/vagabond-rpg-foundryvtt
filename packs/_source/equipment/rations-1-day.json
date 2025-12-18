@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRations1day",
+  "_id": "vgbdEqprations1D",
   "name": "Rations (1 day)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRations1day",
+  "_key": "!items!vgbdEqprations1D",
   "reviewed": true
 }

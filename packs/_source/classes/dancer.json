@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsDancer",
-  "_key": "!items!vagabondClsDancer",
+  "_id": "vgbdClsdancer000",
+  "_key": "!items!vgbdClsdancer000",
   "name": "Dancer",
   "type": "class",
   "img": "icons/svg/silhouette.svg",
@@ -11,8 +11,16 @@
     "zone": "midline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["finesse", "performance"], "count": 2 },
-      { "type": "choice", "skills": ["brawl", "influence", "sneak"], "count": 2 }
+      {
+        "type": "fixed",
+        "skills": ["finesse", "performance"],
+        "count": 2
+      },
+      {
+        "type": "choice",
+        "skills": ["brawl", "influence", "sneak"],
+        "count": 2
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Courtesan or Musician</p>",

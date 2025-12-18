@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFabricfine1sqyd",
+  "_id": "vgbdEqpfabricFin",
   "name": "Fabric, fine (1 sq. yd.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFabricfine1sqyd",
+  "_key": "!items!vgbdEqpfabricFin",
   "reviewed": true
 }

@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstwhaleKill",
+  "_key": "!items!vgbdBstwhaleKill",
+  "name": "Whale, Killer",
+  "type": "npc",
+  "img": "icons/creatures/fish/fish-bioluminescent-blue.webp",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.1,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "colossal",
+    "beingType": "beast",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "d6",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 11 (2d10) and Restrained if smaller</p>",
+        "attackType": "melee",
+        "damage": "2d10",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Hold Breath",
+        "description": "<p>Can hold its breath for up to two hours.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 0' (Swim 80')</p>"
+  },
+  "reviewed": false
+}

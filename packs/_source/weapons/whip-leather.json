@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponWhipLeather",
+  "_id": "vgbdWpnwhipLeath",
   "name": "Whip, leather",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponWhipLeather",
+  "_key": "!items!vgbdWpnwhipLeath",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCattlebull",
+  "_id": "vgbdEqpcattleBul",
   "name": "Cattle - Bull",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCattlebull",
+  "_key": "!items!vgbdEqpcattleBul",
   "reviewed": true
 }

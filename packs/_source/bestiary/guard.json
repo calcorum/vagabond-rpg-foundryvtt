@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcGuard",
-  "_key": "!actors!vagabondNpcGuard",
+  "_id": "vgbdBstguard0000",
+  "_key": "!items!vgbdBstguard0000",
   "name": "Guard",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 2,
-    "hp": { "value": 9, "max": 9 },
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
     "tl": 1.9,
     "armor": 2,
     "morale": 7,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 30 },
+    "speed": {
+      "value": 30
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

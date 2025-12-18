@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTorch",
+  "_id": "vgbdEqptorch0000",
   "name": "Torch",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTorch",
+  "_key": "!items!vgbdEqptorch0000",
   "reviewed": true
 }

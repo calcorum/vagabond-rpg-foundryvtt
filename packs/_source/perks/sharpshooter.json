@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSharpshooter",
+  "_id": "vgbdPrksharpshoo",
   "name": "Sharpshooter",
   "type": "perk",
   "img": "icons/svg/target.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "ranged"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSharpshooter",
+  "_key": "!items!vgbdPrksharpshoo",
   "reviewed": true
 }

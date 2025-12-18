@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponLongbow",
+  "_id": "vgbdWpnlongbow00",
   "name": "Longbow",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponLongbow",
+  "_key": "!items!vgbdWpnlongbow00",
   "reviewed": true
 }

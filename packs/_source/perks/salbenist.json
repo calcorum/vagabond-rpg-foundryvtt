@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSalbenist",
+  "_id": "vgbdPrksalbenist",
   "name": "Salbenist",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "crafting", "ritual"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSalbenist",
+  "_key": "!items!vgbdPrksalbenist",
   "reviewed": true
 }

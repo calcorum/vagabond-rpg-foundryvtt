@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionhealingi",
+  "_id": "vgbdEqppotionHea",
   "name": "Potion, healing I",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionhealingi",
+  "_key": "!items!vgbdEqppotionHea",
   "reviewed": true
 }

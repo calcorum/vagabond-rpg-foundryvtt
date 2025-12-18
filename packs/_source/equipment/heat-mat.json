@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHeatmat",
+  "_id": "vgbdEqpheatMat00",
   "name": "Heat mat",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHeatmat",
+  "_key": "!items!vgbdEqpheatMat00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSunrod",
+  "_id": "vgbdEqpsunrod000",
   "name": "Sunrod",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSunrod",
+  "_key": "!items!vgbdEqpsunrod000",
   "reviewed": true
 }

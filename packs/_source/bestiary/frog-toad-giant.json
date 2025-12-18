@@ -1,0 +1,71 @@
+{
+  "_id": "vgbdBstfrogToadG",
+  "_key": "!items!vgbdBstfrogToadG",
+  "name": "Frog/Toad, Giant",
+  "type": "npc",
+  "img": "icons/creatures/amphibians/frog-spotted-green-yellow.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 6,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {
+      "climb": true,
+      "cling": true,
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>1x Tongue and 1x Bite</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Tongue",
+        "description": "<p>[Melee Attack, Near (Medium or smaller Being)]: Restrained and pulled Close</p>",
+        "attackType": "melee",
+        "damage": "0",
+        "damageType": "",
+        "range": "Near",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Amphibious",
+        "description": "<p>Can breathe air or water.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

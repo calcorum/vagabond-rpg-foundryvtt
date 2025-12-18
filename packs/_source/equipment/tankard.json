@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTankard",
+  "_id": "vgbdEqptankard00",
   "name": "Tankard",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTankard",
+  "_key": "!items!vgbdEqptankard00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipScribingtools",
+  "_id": "vgbdEqpscribingT",
   "name": "Scribing Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipScribingtools",
+  "_key": "!items!vgbdEqpscribingT",
   "reviewed": true
 }

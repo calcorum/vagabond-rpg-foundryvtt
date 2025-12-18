@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstthunderfo",
+  "_key": "!items!vgbdBstthunderfo",
+  "name": "Thunderfoot",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/dinosaur-brontosaurus-green.webp",
+  "system": {
+    "hd": 35,
+    "hp": {
+      "value": 157,
+      "max": 157
+    },
+    "tl": 10.5,
+    "armor": 4,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "colossal",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d12",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Stomp",
+        "description": "<p>[Melee Attack]: 25 (4d10+3)</p>",
+        "attackType": "melee",
+        "damage": "4d10+3",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Tail",
+        "description": "<p>[Melee Attack]: 22 (5d8) and shoved Prone 30' away</p>",
+        "attackType": "melee",
+        "damage": "5d8",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

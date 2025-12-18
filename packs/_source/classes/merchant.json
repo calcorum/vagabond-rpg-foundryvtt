@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsMercha",
-  "_key": "!items!vagabondClsMercha",
+  "_id": "vgbdClsmerchant0",
+  "_key": "!items!vgbdClsmerchant0",
   "name": "Merchant",
   "type": "class",
   "img": "icons/svg/coins.svg",
@@ -11,8 +11,16 @@
     "zone": "flexible",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["craft", "influence"], "count": 2 },
-      { "type": "choice", "skills": [], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["craft", "influence"],
+        "count": 2
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Blacksmith, Cook, or Tinker</p>",
@@ -32,11 +40,41 @@
         "spellsKnown": 0,
         "features": ["Bang for Your Buck"]
       },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Diamond Hands"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Treasure Seeker"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Diamond Hands"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Treasure Seeker"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
       {
         "level": 8,
         "mana": 0,
@@ -44,8 +82,20 @@
         "spellsKnown": 0,
         "features": ["Bang for Your Buck II"]
       },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Top Shelf"] }
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Top Shelf"]
+      }
     ],
     "features": [
       {

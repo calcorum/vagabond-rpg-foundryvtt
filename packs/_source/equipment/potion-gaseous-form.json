@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotiongaseousform",
+  "_id": "vgbdEqppotionGas",
   "name": "Potion, gaseous form",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotiongaseousform",
+  "_key": "!items!vgbdEqppotionGas",
   "reviewed": true
 }

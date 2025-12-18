@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPeerlessAthlete",
+  "_id": "vgbdPrkpeerlessA",
   "name": "Peerless Athlete",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPeerlessAthlete",
+  "_key": "!items!vgbdPrkpeerlessA",
   "reviewed": true
 }

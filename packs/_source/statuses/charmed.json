@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusCharmed",
+  "_id": "vgbdStscharmed00",
   "name": "Charmed",
   "type": "status",
   "img": "icons/svg/silenced.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusCharmed"
+  "_key": "!items!vgbdStscharmed00"
 }

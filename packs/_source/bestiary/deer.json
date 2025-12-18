@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstdeer00000",
+  "_key": "!items!vgbdBstdeer00000",
+  "name": "Deer",
+  "type": "npc",
+  "img": "icons/creatures/mammals/elk-moose-antlers-white.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 0.5,
+    "armor": 0,
+    "morale": 3,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Hooves",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

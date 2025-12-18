@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusVulnerable",
+  "_id": "vgbdStsvulnerabl",
   "name": "Vulnerable",
   "type": "status",
   "img": "icons/svg/target.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusVulnerable"
+  "_key": "!items!vgbdStsvulnerabl"
 }

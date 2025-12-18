@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkInfestingBurst",
+  "_id": "vgbdPrkinfesting",
   "name": "Infesting Burst",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkInfestingBurst",
+  "_key": "!items!vgbdPrkinfesting",
   "reviewed": true
 }

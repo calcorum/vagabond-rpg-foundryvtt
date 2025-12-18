@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponWhipChain",
+  "_id": "vgbdWpnwhipChain",
   "name": "Whip, chain",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponWhipChain",
+  "_key": "!items!vgbdWpnwhipChain",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPendant",
+  "_id": "vgbdEqppendant00",
   "name": "Pendant",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPendant",
+  "_key": "!items!vgbdEqppendant00",
   "reviewed": true
 }

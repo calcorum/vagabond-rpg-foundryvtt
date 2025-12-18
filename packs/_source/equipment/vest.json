@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipVest",
+  "_id": "vgbdEqpvest00000",
   "name": "Vest",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipVest",
+  "_key": "!items!vgbdEqpvest00000",
   "reviewed": true
 }

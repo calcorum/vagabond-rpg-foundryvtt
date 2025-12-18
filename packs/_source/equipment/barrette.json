@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBarrette",
+  "_id": "vgbdEqpbarrette0",
   "name": "Barrette",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBarrette",
+  "_key": "!items!vgbdEqpbarrette0",
   "reviewed": true
 }

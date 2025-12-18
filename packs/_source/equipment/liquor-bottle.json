@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLiquorbottle",
+  "_id": "vgbdEqpliquorBot",
   "name": "Liquor, bottle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLiquorbottle",
+  "_key": "!items!vgbdEqpliquorBot",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipEggdozen",
+  "_id": "vgbdEqpeggDozen0",
   "name": "Egg, dozen",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipEggdozen",
+  "_key": "!items!vgbdEqpeggDozen0",
   "reviewed": true
 }

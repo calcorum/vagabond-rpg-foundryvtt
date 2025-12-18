@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotioncontrolperson",
+  "_id": "vgbdEqppotionCo2",
   "name": "Potion, control person",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotioncontrolperson",
+  "_key": "!items!vgbdEqppotionCo2",
   "reviewed": true
 }

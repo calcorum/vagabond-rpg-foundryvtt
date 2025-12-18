@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionlongbreath",
+  "_id": "vgbdEqppotionLon",
   "name": "Potion, longbreath",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionlongbreath",
+  "_key": "!items!vgbdEqppotionLon",
   "reviewed": true
 }

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsRogue0",
-  "_key": "!items!vagabondClsRogue0",
+  "_id": "vgbdClsrogue0000",
+  "_key": "!items!vgbdClsrogue0000",
   "name": "Rogue",
   "type": "class",
   "img": "icons/svg/dagger.svg",
@@ -11,8 +11,16 @@
     "zone": "midline",
     "weaponTraining": ["ranged"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["finesse", "sneak"], "count": 2 },
-      { "type": "choice", "skills": [], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["finesse", "sneak"],
+        "count": 2
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Assassin, Conman, Investigator, or Scout</p>",
@@ -32,11 +40,41 @@
         "spellsKnown": 0,
         "features": ["Unflinching Luck"]
       },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Evasive"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Lethal Weapon"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Evasive"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Lethal Weapon"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
       {
         "level": 8,
         "mana": 0,
@@ -44,8 +82,20 @@
         "spellsKnown": 0,
         "features": ["Unflinching Luck II"]
       },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Waylay"] }
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Waylay"]
+      }
     ],
     "features": [
       {

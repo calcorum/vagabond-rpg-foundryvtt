@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponGreataxe",
+  "_id": "vgbdWpngreataxe0",
   "name": "Greataxe",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponGreataxe",
+  "_key": "!items!vgbdWpngreataxe0",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionlevitation",
+  "_id": "vgbdEqppotionLev",
   "name": "Potion, levitation",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionlevitation",
+  "_key": "!items!vgbdEqppotionLev",
   "reviewed": true
 }

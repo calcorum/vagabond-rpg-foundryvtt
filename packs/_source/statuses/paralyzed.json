@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusParalyzed",
+  "_id": "vgbdStsparalyzed",
   "name": "Paralyzed",
   "type": "status",
   "img": "icons/svg/frozen.svg",
@@ -61,5 +61,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusParalyzed"
+  "_key": "!items!vgbdStsparalyzed"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBardinglight",
+  "_id": "vgbdEqpbardingLi",
   "name": "Barding, light",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBardinglight",
+  "_key": "!items!vgbdEqpbardingLi",
   "reviewed": true
 }

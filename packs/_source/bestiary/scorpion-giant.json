@@ -1,0 +1,64 @@
+{
+  "_id": "vgbdBstscorpionG",
+  "_key": "!items!vgbdBstscorpionG",
+  "name": "Scorpion, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/scorpion-brown.webp",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 4.2,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Pin",
+        "description": "<p>[Multi-Attack]: 2x Claw and 1x Sting</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Sting",
+        "description": "<p>[Melee Attack]: 2 (d4) and pass [Endure] against Sickened or gain 1 Fatigue</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claw",
+        "description": "<p>[Melee Attack]: 5 (d10) and Restrained if its the second of this Being's Claw to hit it this Turn</p>",
+        "attackType": "melee",
+        "damage": "1d10",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Scorpions roughly the size of a cow. Extremely aggressive predators that kill on-sight. Speed: 30' (Climb 10')</p>"
+  },
+  "reviewed": false
+}

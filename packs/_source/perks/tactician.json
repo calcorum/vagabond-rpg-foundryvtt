@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkTactician",
+  "_id": "vgbdPrktactician",
   "name": "Tactician",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "magic", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkTactician",
+  "_key": "!items!vgbdPrktactician",
   "reviewed": true
 }

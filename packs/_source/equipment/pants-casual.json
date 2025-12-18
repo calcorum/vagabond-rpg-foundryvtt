@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPantscasual",
+  "_id": "vgbdEqppantsCasu",
   "name": "Pants, casual",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPantscasual",
+  "_key": "!items!vgbdEqppantsCasu",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMagnetsmall",
+  "_id": "vgbdEqpmagnetSma",
   "name": "Magnet, small",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMagnetsmall",
+  "_key": "!items!vgbdEqpmagnetSma",
   "reviewed": true
 }

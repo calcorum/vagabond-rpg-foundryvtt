@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMasterChef",
+  "_id": "vgbdPrkmasterChe",
   "name": "Master Chef",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "utility", "crafting", "healing"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMasterChef",
+  "_key": "!items!vgbdPrkmasterChe",
   "reviewed": true
 }

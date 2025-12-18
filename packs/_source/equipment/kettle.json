@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipKettle",
+  "_id": "vgbdEqpkettle000",
   "name": "Kettle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipKettle",
+  "_key": "!items!vgbdEqpkettle000",
   "reviewed": true
 }

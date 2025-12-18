@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipInsectrepellent",
+  "_id": "vgbdEqpinsectRep",
   "name": "Insect repellent",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipInsectrepellent",
+  "_key": "!items!vgbdEqpinsectRep",
   "reviewed": true
 }

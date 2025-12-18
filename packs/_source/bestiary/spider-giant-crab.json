@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstspiderGi1",
+  "_key": "!items!vgbdBstspiderGi1",
+  "name": "Spider, Giant Crab",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/spider-web-gray.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.5,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "cling": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 4 (d8) and pass [Endure] with a +2 bonus or become Sickened (Cd4, +1 Fatigue each Round).</p>",
+        "attackType": "melee",
+        "damage": "1d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Man-sized venomous spiders with the ability to blend into their environment like a chameleon.</p>"
+  },
+  "reviewed": false
+}

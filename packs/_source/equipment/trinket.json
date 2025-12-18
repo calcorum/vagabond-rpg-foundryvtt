@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTrinket",
+  "_id": "vgbdEqptrinket00",
   "name": "Trinket",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTrinket",
+  "_key": "!items!vgbdEqptrinket00",
   "reviewed": true
 }

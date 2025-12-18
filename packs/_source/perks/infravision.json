@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkInfravision",
+  "_id": "vgbdPrkinfravisi",
   "name": "Infravision",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkInfravision",
+  "_key": "!items!vgbdPrkinfravisi",
   "reviewed": true
 }

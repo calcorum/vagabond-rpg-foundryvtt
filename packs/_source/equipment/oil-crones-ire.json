@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilcronesire",
+  "_id": "vgbdEqpoilCrones",
   "name": "Oil, crone's ire",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilcronesire",
+  "_key": "!items!vgbdEqpoilCrones",
   "reviewed": true
 }

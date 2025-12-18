@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPole10foot",
+  "_id": "vgbdEqppole10Foo",
   "name": "Pole (10-foot)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPole10foot",
+  "_key": "!items!vgbdEqppole10Foo",
   "reviewed": true
 }

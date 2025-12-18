@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTanglefootbag",
+  "_id": "vgbdEqptanglefoo",
   "name": "Tanglefoot bag",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTanglefootbag",
+  "_key": "!items!vgbdEqptanglefoo",
   "reviewed": true
 }

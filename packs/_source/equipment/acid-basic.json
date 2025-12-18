@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAcidbasic",
+  "_id": "vgbdEqpacidBasic",
   "name": "Acid, basic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAcidbasic",
+  "_key": "!items!vgbdEqpacidBasic",
   "reviewed": true
 }

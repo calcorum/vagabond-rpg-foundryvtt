@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponGauntlet",
+  "_id": "vgbdWpngauntlet0",
   "name": "Gauntlet",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponGauntlet",
+  "_key": "!items!vgbdWpngauntlet0",
   "reviewed": true
 }

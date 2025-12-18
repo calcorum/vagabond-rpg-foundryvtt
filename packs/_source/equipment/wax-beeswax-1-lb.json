@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWaxbeeswax1lb",
+  "_id": "vgbdEqpwaxBeeswa",
   "name": "Wax, beeswax (1 lb.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWaxbeeswax1lb",
+  "_key": "!items!vgbdEqpwaxBeeswa",
   "reviewed": true
 }

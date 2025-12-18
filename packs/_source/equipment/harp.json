@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHarp",
+  "_id": "vgbdEqpharp00000",
   "name": "Harp",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHarp",
+  "_key": "!items!vgbdEqpharp00000",
   "reviewed": true
 }

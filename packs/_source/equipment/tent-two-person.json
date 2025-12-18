@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTenttwoperson",
+  "_id": "vgbdEqptentTwoPe",
   "name": "Tent, two-person",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTenttwoperson",
+  "_key": "!items!vgbdEqptentTwoPe",
   "reviewed": true
 }

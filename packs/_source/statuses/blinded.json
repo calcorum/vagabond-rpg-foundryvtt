@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusBlinded",
+  "_id": "vgbdStsblinded00",
   "name": "Blinded",
   "type": "status",
   "img": "icons/svg/blind.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusBlinded"
+  "_key": "!items!vgbdStsblinded00"
 }

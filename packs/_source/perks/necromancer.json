@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkNecromancer",
+  "_id": "vgbdPrknecromanc",
   "name": "Necromancer",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "magic", "healing"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkNecromancer",
+  "_key": "!items!vgbdPrknecromanc",
   "reviewed": true
 }

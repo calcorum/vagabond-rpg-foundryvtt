@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLiquorshotof",
+  "_id": "vgbdEqpliquorSho",
   "name": "Liquor, shot of",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLiquorshotof",
+  "_key": "!items!vgbdEqpliquorSho",
   "reviewed": true
 }

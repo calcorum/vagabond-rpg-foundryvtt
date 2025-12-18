@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPolecollapsing10foot",
+  "_id": "vgbdEqppoleColla",
   "name": "Pole, collapsing (10-foot)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPolecollapsing10foot",
+  "_key": "!items!vgbdEqppoleColla",
   "reviewed": true
 }

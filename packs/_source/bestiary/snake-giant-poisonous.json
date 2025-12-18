@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstsnakeGia1",
+  "_key": "!items!vgbdBstsnakeGia1",
+  "name": "Snake, Giant Poisonous",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/snake-fangs-small-green.webp",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 2.7,
+    "armor": 1,
+    "morale": 9,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 9 (2d8) and pass [Endure] or become Sickened (Cd6 damage each Minute).</p>",
+        "attackType": "melee",
+        "damage": "2d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Over-sized versions of the deadly cobra and viper.</p>"
+  },
+  "reviewed": false
+}

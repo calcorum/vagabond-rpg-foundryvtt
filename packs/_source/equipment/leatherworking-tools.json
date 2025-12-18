@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLeatherworkingtools",
+  "_id": "vgbdEqpleatherwo",
   "name": "Leatherworking Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLeatherworkingtools",
+  "_key": "!items!vgbdEqpleatherwo",
   "reviewed": true
 }

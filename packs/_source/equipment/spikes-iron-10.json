@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSpikesiron10",
+  "_id": "vgbdEqpspikesIro",
   "name": "Spikes, iron (10)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSpikesiron10",
+  "_key": "!items!vgbdEqpspikesIro",
   "reviewed": true
 }

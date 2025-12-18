@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondSpellPolymorph",
-  "_key": "!items!vagabondSpellPolymorph",
+  "_id": "vgbdSplpolymorph",
+  "_key": "!items!vgbdSplpolymorph",
   "name": "Polymorph",
   "type": "spell",
   "img": "icons/svg/lightning.svg",

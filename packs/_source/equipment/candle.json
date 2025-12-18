@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCandle",
+  "_id": "vgbdEqpcandle000",
   "name": "Candle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCandle",
+  "_key": "!items!vgbdEqpcandle000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponCrossbowLight",
+  "_id": "vgbdWpncrossbowL",
   "name": "Crossbow, light",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponCrossbowLight",
+  "_key": "!items!vgbdWpncrossbowL",
   "reviewed": true
 }

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsWizard0",
-  "_key": "!items!vagabondClsWizard0",
+  "_id": "vgbdClswizard000",
+  "_key": "!items!vgbdClswizard000",
   "name": "Wizard",
   "type": "class",
   "img": "icons/svg/book.svg",
@@ -11,8 +11,16 @@
     "zone": "backline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["arcana"], "count": 1 },
-      { "type": "choice", "skills": [], "count": 4 }
+      {
+        "type": "fixed",
+        "skills": ["arcana"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 4
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Astronomer or Mage</p>",
@@ -25,10 +33,34 @@
         "spellsKnown": 4,
         "features": ["Spellcaster", "Page Master"]
       },
-      { "level": 2, "mana": 8, "castingMax": 0, "spellsKnown": 0, "features": ["Sculpt Spell"] },
-      { "level": 3, "mana": 12, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Manifold Mind"] },
-      { "level": 5, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      {
+        "level": 2,
+        "mana": 8,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Sculpt Spell"]
+      },
+      {
+        "level": 3,
+        "mana": 12,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 16,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Manifold Mind"]
+      },
+      {
+        "level": 5,
+        "mana": 20,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
       {
         "level": 6,
         "mana": 24,
@@ -36,7 +68,13 @@
         "spellsKnown": 0,
         "features": ["Extracurricular"]
       },
-      { "level": 7, "mana": 28, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
+      {
+        "level": 7,
+        "mana": 28,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
       {
         "level": 8,
         "mana": 32,
@@ -44,8 +82,20 @@
         "spellsKnown": 0,
         "features": ["Manifold Mind II"]
       },
-      { "level": 9, "mana": 36, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 40, "castingMax": 0, "spellsKnown": 0, "features": ["Archwizard"] }
+      {
+        "level": 9,
+        "mana": 36,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 40,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Archwizard"]
+      }
     ],
     "features": [
       {
@@ -75,7 +125,12 @@
         "description": "<p>You can Focus on up to two Spells at the same time.</p>",
         "passive": true,
         "changes": [
-          { "key": "system.focus.maxConcurrent", "mode": 2, "value": "1", "priority": 10 }
+          {
+            "key": "system.focus.maxConcurrent",
+            "mode": 2,
+            "value": "1",
+            "priority": 10
+          }
         ]
       },
       {
@@ -91,7 +146,12 @@
         "description": "<p>You can now Focus on up to three Spells at the same time.</p>",
         "passive": true,
         "changes": [
-          { "key": "system.focus.maxConcurrent", "mode": 2, "value": "1", "priority": 10 }
+          {
+            "key": "system.focus.maxConcurrent",
+            "mode": 2,
+            "value": "1",
+            "priority": 10
+          }
         ]
       },
       {

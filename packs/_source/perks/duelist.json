@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkDuelist",
+  "_id": "vgbdPrkduelist00",
   "name": "Duelist",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkDuelist",
+  "_key": "!items!vgbdPrkduelist00",
   "reviewed": true
 }

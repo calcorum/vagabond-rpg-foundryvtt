@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipJarmetal",
+  "_id": "vgbdEqpjarMetal0",
   "name": "Jar, metal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipJarmetal",
+  "_key": "!items!vgbdEqpjarMetal0",
   "reviewed": true
 }

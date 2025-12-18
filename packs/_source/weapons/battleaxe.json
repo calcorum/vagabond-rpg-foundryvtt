@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponBattleaxe",
+  "_id": "vgbdWpnbattleaxe",
   "name": "Battleaxe",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponBattleaxe",
+  "_key": "!items!vgbdWpnbattleaxe",
   "reviewed": true
 }

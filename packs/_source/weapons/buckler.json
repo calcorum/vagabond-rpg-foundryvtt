@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponBuckler",
+  "_id": "vgbdWpnbuckler00",
   "name": "Buckler",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponBuckler",
+  "_key": "!items!vgbdWpnbuckler00",
   "reviewed": true
 }

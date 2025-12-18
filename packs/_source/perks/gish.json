@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkGish",
+  "_id": "vgbdPrkgish00000",
   "name": "Gish",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkGish",
+  "_key": "!items!vgbdPrkgish00000",
   "reviewed": true
 }

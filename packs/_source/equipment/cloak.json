@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCloak",
+  "_id": "vgbdEqpcloak0000",
   "name": "Cloak",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCloak",
+  "_key": "!items!vgbdEqpcloak0000",
   "reviewed": true
 }

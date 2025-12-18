@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstslugGiant",
+  "_key": "!items!vgbdBstslugGiant",
+  "name": "Slug, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/snail-slug-black.webp",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 4.2,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "giant",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "cling": true
+    },
+    "immunities": ["blunt"],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Acid Spit",
+        "description": "<p>[Ranged Attack, Near] (Recharge Cd4): 10 (3d6) and Burning (Cd6)</p>",
+        "attackType": "ranged",
+        "damage": "3d6",
+        "damageType": "acid",
+        "range": "Near",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Armor: 1 [as Unarmored plus Shield]. Immune: Blunt from non-Relics</p>"
+  },
+  "reviewed": false
+}

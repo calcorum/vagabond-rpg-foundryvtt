@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponDagger",
+  "_id": "vgbdWpndagger000",
   "name": "Dagger",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponDagger",
+  "_key": "!items!vgbdWpndagger000",
   "reviewed": true
 }

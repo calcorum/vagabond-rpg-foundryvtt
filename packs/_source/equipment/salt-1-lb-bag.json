@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSalt1lbbag",
+  "_id": "vgbdEqpsalt1LbBa",
   "name": "Salt (1 lb. bag)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSalt1lbbag",
+  "_key": "!items!vgbdEqpsalt1LbBa",
   "reviewed": true
 }

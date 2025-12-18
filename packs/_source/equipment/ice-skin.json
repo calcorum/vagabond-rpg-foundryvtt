@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipIceskin",
+  "_id": "vgbdEqpiceSkin00",
   "name": "Ice skin",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipIceskin",
+  "_key": "!items!vgbdEqpiceSkin00",
   "reviewed": true
 }

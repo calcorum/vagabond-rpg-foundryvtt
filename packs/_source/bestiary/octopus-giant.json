@@ -1,0 +1,79 @@
+{
+  "_id": "vgbdBstoctopusGi",
+  "_key": "!items!vgbdBstoctopusGi",
+  "name": "Octopus, Giant",
+  "type": "npc",
+  "img": "icons/creatures/fish/squid-kraken-orange.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 4.8,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>1x Tentacle per Tentacle it has.</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Beak",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Tentacle",
+        "description": "<p>[Melee Attack, Near]: 2 (d4) and Restrained if Medium or smaller</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "blunt",
+        "range": "Near",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Amphibious",
+        "description": "<p>It can breathe air or water.</p>"
+      },
+      {
+        "name": "Ink Cloud",
+        "description": "<p>If it retreats, the surrounding 20' of water becomes obscured by ink for 1 minute.</p>"
+      },
+      {
+        "name": "Tentacles",
+        "description": "<p>Starts with 8. Targetting a Tentacle causes a -3 penalty to the Attack Check, but severs it if at least 6 damage is dealt with the attack.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Cephalopods capable of taking down small boats. Speed: 10' (Swim 30')</p>"
+  },
+  "reviewed": false
+}

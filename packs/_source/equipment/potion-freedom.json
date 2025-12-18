@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionfreedom",
+  "_id": "vgbdEqppotionFre",
   "name": "Potion, freedom",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionfreedom",
+  "_key": "!items!vgbdEqppotionFre",
   "reviewed": true
 }

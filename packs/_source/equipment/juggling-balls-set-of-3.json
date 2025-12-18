@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipJugglingballssetof3",
+  "_id": "vgbdEqpjugglingB",
   "name": "Juggling balls, set of 3",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipJugglingballssetof3",
+  "_key": "!items!vgbdEqpjugglingB",
   "reviewed": true
 }

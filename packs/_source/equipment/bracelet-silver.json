@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBraceletsilver",
+  "_id": "vgbdEqpbraceletS",
   "name": "Bracelet, silver",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBraceletsilver",
+  "_key": "!items!vgbdEqpbraceletS",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipStringtwine100feet",
+  "_id": "vgbdEqpstringtwi",
   "name": "String/twine, 100 feet",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipStringtwine100feet",
+  "_key": "!items!vgbdEqpstringtwi",
   "reviewed": true
 }

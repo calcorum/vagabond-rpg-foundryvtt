@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFrigidazote",
+  "_id": "vgbdEqpfrigidAzo",
   "name": "Frigid azote",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFrigidazote",
+  "_key": "!items!vgbdEqpfrigidAzo",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipJarglass",
+  "_id": "vgbdEqpjarGlass0",
   "name": "Jar, glass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipJarglass",
+  "_key": "!items!vgbdEqpjarGlass0",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBoots",
+  "_id": "vgbdEqpboots0000",
   "name": "Boots",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBoots",
+  "_key": "!items!vgbdEqpboots0000",
   "reviewed": true
 }

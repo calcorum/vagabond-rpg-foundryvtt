@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkAdvancement",
+  "_id": "vgbdPrkadvanceme",
   "name": "Advancement",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkAdvancement",
+  "_key": "!items!vgbdPrkadvanceme",
   "reviewed": true
 }

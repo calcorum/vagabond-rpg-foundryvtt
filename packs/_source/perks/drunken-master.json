@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkDrunkenMaster",
+  "_id": "vgbdPrkdrunkenMa",
   "name": "Drunken Master",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkDrunkenMaster",
+  "_key": "!items!vgbdPrkdrunkenMa",
   "reviewed": true
 }

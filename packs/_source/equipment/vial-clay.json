@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipVialclay",
+  "_id": "vgbdEqpvialClay0",
   "name": "Vial, clay",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipVialclay",
+  "_key": "!items!vgbdEqpvialClay0",
   "reviewed": true
 }

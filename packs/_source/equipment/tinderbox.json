@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTinderbox",
+  "_id": "vgbdEqptinderbox",
   "name": "Tinderbox",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTinderbox",
+  "_key": "!items!vgbdEqptinderbox",
   "reviewed": true
 }

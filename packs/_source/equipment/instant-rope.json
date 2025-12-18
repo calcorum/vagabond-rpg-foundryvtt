@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipInstantrope",
+  "_id": "vgbdEqpinstantRo",
   "name": "Instant rope",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipInstantrope",
+  "_key": "!items!vgbdEqpinstantRo",
   "reviewed": true
 }

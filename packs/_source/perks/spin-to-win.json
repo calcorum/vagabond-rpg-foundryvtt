@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSpinToWin",
+  "_id": "vgbdPrkspinToWin",
   "name": "Spin-to-Win",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSpinToWin",
+  "_key": "!items!vgbdPrkspinToWin",
   "reviewed": true
 }

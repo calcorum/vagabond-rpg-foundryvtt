@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTorchfrigidflame",
+  "_id": "vgbdEqptorchFrig",
   "name": "Torch, frigidflame",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTorchfrigidflame",
+  "_key": "!items!vgbdEqptorchFrig",
   "reviewed": true
 }

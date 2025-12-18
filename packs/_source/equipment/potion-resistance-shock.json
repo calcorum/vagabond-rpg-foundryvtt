@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionresistanceshock",
+  "_id": "vgbdEqppotionRe4",
   "name": "Potion, resistance (shock)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionresistanceshock",
+  "_key": "!items!vgbdEqppotionRe4",
   "reviewed": true
 }

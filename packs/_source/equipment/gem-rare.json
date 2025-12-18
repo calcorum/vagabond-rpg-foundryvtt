@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGemrare",
+  "_id": "vgbdEqpgemRare00",
   "name": "Gem, rare",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGemrare",
+  "_key": "!items!vgbdEqpgemRare00",
   "reviewed": true
 }

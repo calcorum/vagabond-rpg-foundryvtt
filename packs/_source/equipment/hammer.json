@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHammer",
+  "_id": "vgbdEqphammer000",
   "name": "Hammer",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHammer",
+  "_key": "!items!vgbdEqphammer000",
   "reviewed": true
 }

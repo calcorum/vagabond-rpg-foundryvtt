@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCaltropsbagof10",
+  "_id": "vgbdEqpcaltropsB",
   "name": "Caltrops, bag of 10",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCaltropsbagof10",
+  "_key": "!items!vgbdEqpcaltropsB",
   "reviewed": true
 }

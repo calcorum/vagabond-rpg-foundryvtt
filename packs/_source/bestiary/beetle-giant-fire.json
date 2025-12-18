@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstbeetleGia",
+  "_key": "!items!vgbdBstbeetleGia",
+  "name": "Beetle, Giant Fire",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/beetle-fire-orange.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 1.7,
+    "armor": 1,
+    "morale": 3,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Bioluminescent",
+        "description": "<p>Sheds Light out to Near.</p>"
+      },
+      {
+        "name": "Soft Underbelly",
+        "description": "<p>Its Armor is 0 while it is Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Cat-sized beetles that illuminate dark, cavernous areas with the glowing glands across their bodies.</p>"
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCookingtools",
+  "_id": "vgbdEqpcookingTo",
   "name": "Cooking Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCookingtools",
+  "_key": "!items!vgbdEqpcookingTo",
   "reviewed": true
 }

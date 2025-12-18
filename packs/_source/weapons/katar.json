@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponKatar",
+  "_id": "vgbdWpnkatar0000",
   "name": "Katar",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponKatar",
+  "_key": "!items!vgbdWpnkatar0000",
   "reviewed": true
 }

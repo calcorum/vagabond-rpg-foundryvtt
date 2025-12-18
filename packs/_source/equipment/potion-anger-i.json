@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionangeri",
+  "_id": "vgbdEqppotionAng",
   "name": "Potion, anger I",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionangeri",
+  "_key": "!items!vgbdEqppotionAng",
   "reviewed": true
 }

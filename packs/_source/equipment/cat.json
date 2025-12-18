@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCat",
+  "_id": "vgbdEqpcat000000",
   "name": "Cat",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCat",
+  "_key": "!items!vgbdEqpcat000000",
   "reviewed": true
 }

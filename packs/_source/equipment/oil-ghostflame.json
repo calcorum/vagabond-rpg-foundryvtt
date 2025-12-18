@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilghostflame",
+  "_id": "vgbdEqpoilGhostf",
   "name": "Oil, ghostflame",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilghostflame",
+  "_key": "!items!vgbdEqpoilGhostf",
   "reviewed": true
 }

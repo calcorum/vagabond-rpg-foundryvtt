@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkScrapper'sDelight",
+  "_id": "vgbdPrkscrappers",
   "name": "Scrapper's Delight",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["social", "crafting", "ritual"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkScrapper'sDelight",
+  "_key": "!items!vgbdPrkscrappers",
   "reviewed": true
 }

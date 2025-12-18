@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDicesetloaded",
+  "_id": "vgbdEqpdiceSetLo",
   "name": "Dice set, loaded",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDicesetloaded",
+  "_key": "!items!vgbdEqpdiceSetLo",
   "reviewed": true
 }

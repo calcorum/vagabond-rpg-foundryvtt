@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGemuncommon",
+  "_id": "vgbdEqpgemUncomm",
   "name": "Gem, uncommon",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGemuncommon",
+  "_key": "!items!vgbdEqpgemUncomm",
   "reviewed": true
 }

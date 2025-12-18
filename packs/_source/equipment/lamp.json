@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLamp",
+  "_id": "vgbdEqplamp00000",
   "name": "Lamp",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLamp",
+  "_key": "!items!vgbdEqplamp00000",
   "reviewed": true
 }

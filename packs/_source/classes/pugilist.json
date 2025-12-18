@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsPugili",
-  "_key": "!items!vagabondClsPugili",
+  "_id": "vgbdClspugilist0",
+  "_key": "!items!vgbdClspugilist0",
   "name": "Pugilist",
   "type": "class",
   "img": "icons/svg/fist.svg",
@@ -11,7 +11,11 @@
     "zone": "frontline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["brawl"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["brawl"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["detect", "finesse", "influence", "medicine", "sneak"],
@@ -29,15 +33,69 @@
         "spellsKnown": 0,
         "features": ["Fisticuffs", "Rope-a-Dope"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Beat Rush"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Prowess"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Haymaker"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Impact"] },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Hard Knocks"] }
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Beat Rush"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Prowess"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Haymaker"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Impact"]
+      },
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Hard Knocks"]
+      }
     ],
     "features": [
       {

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsVangua",
-  "_key": "!items!vagabondClsVangua",
+  "_id": "vgbdClsvanguard0",
+  "_key": "!items!vgbdClsvanguard0",
   "name": "Vanguard",
   "type": "class",
   "img": "icons/svg/shield.svg",
@@ -11,8 +11,16 @@
     "zone": "frontline",
     "weaponTraining": ["melee"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["brawl"], "count": 1 },
-      { "type": "choice", "skills": ["detect", "leadership", "medicine", "survival"], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["brawl"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": ["detect", "leadership", "medicine", "survival"],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Sentinel</p>",
@@ -25,15 +33,69 @@
         "spellsKnown": 0,
         "features": ["Stalwart", "Guard"]
       },
-      { "level": 2, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Rampant Charge"] },
-      { "level": 3, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Wall"] },
-      { "level": 5, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Unstoppable"] },
-      { "level": 7, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 8, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Wall II"] },
-      { "level": 9, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 0, "castingMax": 0, "spellsKnown": 0, "features": ["Indestructible"] }
+      {
+        "level": 2,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Rampant Charge"]
+      },
+      {
+        "level": 3,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Wall"]
+      },
+      {
+        "level": 5,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Unstoppable"]
+      },
+      {
+        "level": 7,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Wall II"]
+      },
+      {
+        "level": 9,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 0,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Indestructible"]
+      }
     ],
     "features": [
       {

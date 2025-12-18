@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBsttyrannosa",
+  "_key": "!items!vgbdBsttyrannosa",
+  "name": "Tyrannosaurus Rex",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/dinosaur-horned-green.webp",
+  "system": {
+    "hd": 20,
+    "hp": {
+      "value": 90,
+      "max": 90
+    },
+    "tl": 6.8,
+    "armor": 2,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 21 (6d6) and Restrained</p>",
+        "attackType": "melee",
+        "damage": "6d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>The tyrant lizard that dominates regions that have been \"lost to time.\" Its massive jaws are nearly unstoppable by man.</p>"
+  },
+  "reviewed": false
+}

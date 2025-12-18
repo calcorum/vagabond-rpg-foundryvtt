@@ -1,0 +1,58 @@
+{
+  "_id": "vgbdBstweaselGia",
+  "_key": "!items!vgbdBstweaselGia",
+  "name": "Weasel, Giant",
+  "type": "npc",
+  "img": "icons/creatures/mammals/rodent-rat-green.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 12,
+      "max": 12
+    },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d8",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Drain",
+        "description": "<p>[Action, a Restrained Being]: 5 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 2 (d4) and Restrained.</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Giant weasels are ferocious subterranean mammals that gnomes and other smaller cave dwellers train as hunting animals and mounts.</p>"
+  },
+  "reviewed": false
+}

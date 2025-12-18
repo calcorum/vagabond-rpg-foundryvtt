@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipManacles",
+  "_id": "vgbdEqpmanacles0",
   "name": "Manacles",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipManacles",
+  "_key": "!items!vgbdEqpmanacles0",
   "reviewed": true
 }

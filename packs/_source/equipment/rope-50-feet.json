@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRope50feet",
+  "_id": "vgbdEqprope50Fee",
   "name": "Rope (50 feet)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRope50feet",
+  "_key": "!items!vgbdEqprope50Fee",
   "reviewed": true
 }

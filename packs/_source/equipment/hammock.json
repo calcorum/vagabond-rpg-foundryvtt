@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHammock",
+  "_id": "vgbdEqphammock00",
   "name": "Hammock",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHammock",
+  "_key": "!items!vgbdEqphammock00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkUnfailingGuidance",
+  "_id": "vgbdPrkunfailing",
   "name": "Unfailing Guidance",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "social", "magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkUnfailingGuidance",
+  "_key": "!items!vgbdPrkunfailing",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipShoescasual",
+  "_id": "vgbdEqpshoesCasu",
   "name": "Shoes, casual",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipShoescasual",
+  "_key": "!items!vgbdEqpshoesCasu",
   "reviewed": true
 }

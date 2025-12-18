@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponJavelin",
+  "_id": "vgbdWpnjavelin00",
   "name": "Javelin",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponJavelin",
+  "_key": "!items!vgbdWpnjavelin00",
   "reviewed": true
 }

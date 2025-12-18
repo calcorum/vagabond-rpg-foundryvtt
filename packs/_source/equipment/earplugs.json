@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipEarplugs",
+  "_id": "vgbdEqpearplugs0",
   "name": "Earplugs",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipEarplugs",
+  "_key": "!items!vgbdEqpearplugs0",
   "reviewed": true
 }

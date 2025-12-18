@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPoisoner",
+  "_id": "vgbdPrkpoisoner0",
   "name": "Poisoner",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPoisoner",
+  "_key": "!items!vgbdPrkpoisoner0",
   "reviewed": true
 }

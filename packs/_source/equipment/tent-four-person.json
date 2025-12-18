@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTentfourperson",
+  "_id": "vgbdEqptentFourP",
   "name": "Tent, four-person",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTentfourperson",
+  "_key": "!items!vgbdEqptentFourP",
   "reviewed": true
 }

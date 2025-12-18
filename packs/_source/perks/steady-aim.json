@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSteadyAim",
+  "_id": "vgbdPrksteadyAim",
   "name": "Steady Aim",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSteadyAim",
+  "_key": "!items!vgbdPrksteadyAim",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponWarhammer",
+  "_id": "vgbdWpnwarhammer",
   "name": "Warhammer",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponWarhammer",
+  "_key": "!items!vgbdWpnwarhammer",
   "reviewed": true
 }

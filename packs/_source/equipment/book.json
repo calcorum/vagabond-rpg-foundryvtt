@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBook",
+  "_id": "vgbdEqpbook00000",
   "name": "Book",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBook",
+  "_key": "!items!vgbdEqpbook00000",
   "reviewed": true
 }

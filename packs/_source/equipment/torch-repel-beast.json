@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTorchrepelbeast",
+  "_id": "vgbdEqptorchRepe",
   "name": "Torch, repel beast",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTorchrepelbeast",
+  "_key": "!items!vgbdEqptorchRepe",
   "reviewed": true
 }

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsSorcer",
-  "_key": "!items!vagabondClsSorcer",
+  "_id": "vgbdClssorcerer0",
+  "_key": "!items!vgbdClssorcerer0",
   "name": "Sorcerer",
   "type": "class",
   "img": "icons/svg/fire.svg",
@@ -11,23 +11,91 @@
     "zone": "backline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["influence"], "count": 1 },
-      { "type": "choice", "skills": ["arcana", "brawl", "mysticism", "performance"], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["influence"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": ["arcana", "brawl", "mysticism", "performance"],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Mage or Occultist</p>",
     "isCaster": true,
     "progression": [
-      { "level": 1, "mana": 4, "castingMax": 0, "spellsKnown": 4, "features": ["Glamour", "Tap"] },
-      { "level": 2, "mana": 8, "castingMax": 0, "spellsKnown": 0, "features": ["Spell-Slinger"] },
-      { "level": 3, "mana": 12, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 4, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Quickening"] },
-      { "level": 5, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 6, "mana": 24, "castingMax": 0, "spellsKnown": 0, "features": ["Arcane Anomaly"] },
-      { "level": 7, "mana": 28, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 32, "castingMax": 0, "spellsKnown": 0, "features": ["Spell Twinning"] },
-      { "level": 9, "mana": 36, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 10, "mana": 40, "castingMax": 0, "spellsKnown": 0, "features": ["Overpowered"] }
+      {
+        "level": 1,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 4,
+        "features": ["Glamour", "Tap"]
+      },
+      {
+        "level": 2,
+        "mana": 8,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Spell-Slinger"]
+      },
+      {
+        "level": 3,
+        "mana": 12,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 16,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Quickening"]
+      },
+      {
+        "level": 5,
+        "mana": 20,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 24,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Arcane Anomaly"]
+      },
+      {
+        "level": 7,
+        "mana": 28,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 32,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Spell Twinning"]
+      },
+      {
+        "level": 9,
+        "mana": 36,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 40,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Overpowered"]
+      }
     ],
     "features": [
       {

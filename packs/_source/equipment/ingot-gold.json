@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipIngotgold",
+  "_id": "vgbdEqpingotGold",
   "name": "Ingot, gold",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipIngotgold",
+  "_key": "!items!vgbdEqpingotGold",
   "reviewed": true
 }

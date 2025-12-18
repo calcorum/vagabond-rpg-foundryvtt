@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipLeggings",
+  "_id": "vgbdEqpleggings0",
   "name": "Leggings",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipLeggings",
+  "_key": "!items!vgbdEqpleggings0",
   "reviewed": true
 }

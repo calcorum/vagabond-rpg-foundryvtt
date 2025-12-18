@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusSuffocating",
+  "_id": "vgbdStssuffocati",
   "name": "Suffocating",
   "type": "status",
   "img": "icons/svg/unconscious.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusSuffocating"
+  "_key": "!items!vgbdStssuffocati"
 }

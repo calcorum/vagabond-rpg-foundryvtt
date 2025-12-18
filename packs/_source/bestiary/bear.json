@@ -1,0 +1,69 @@
+{
+  "_id": "vgbdBstbear00000",
+  "_key": "!items!vgbdBstbear00000",
+  "name": "Bear",
+  "type": "npc",
+  "img": "icons/creatures/mammals/bear-brown-standing.webp",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.5,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4+1",
+    "senses": {},
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Maul",
+        "description": "<p>[Multi-Attack]: Two Claws and a Bite. If both Claws hit the same Target, the Bite can automatically hit that Target.</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claws",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "attackType": "melee",
+        "damage": "1d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Dense Muscled",
+        "description": "<p>Grapples and Shoves as Large.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSignalwhistle",
+  "_id": "vgbdEqpsignalWhi",
   "name": "Signal whistle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSignalwhistle",
+  "_key": "!items!vgbdEqpsignalWhi",
   "reviewed": true
 }

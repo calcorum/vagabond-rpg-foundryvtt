@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstboarGiant",
+  "_key": "!items!vgbdBstboarGiant",
+  "name": "Boar, Giant",
+  "type": "npc",
+  "img": "icons/creatures/mammals/boar-brown.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.1,
+    "armor": 2,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "1d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Tusk",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Relentless",
+        "description": "<p>Once per Day, if it is reduced to 0 HP, it instead regains 2d4 HP.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Cow-sized boars known to give chase until they-or their target-dies of exhaustion.</p>"
+  },
+  "reviewed": false
+}

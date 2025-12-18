@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkAnimalCompanion",
+  "_id": "vgbdPrkanimalCom",
   "name": "Animal Companion",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "social", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkAnimalCompanion",
+  "_key": "!items!vgbdPrkanimalCom",
   "reviewed": true
 }

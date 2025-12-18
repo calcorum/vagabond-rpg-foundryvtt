@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRazorshaving",
+  "_id": "vgbdEqprazorShav",
   "name": "Razor, shaving",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRazorshaving",
+  "_key": "!items!vgbdEqprazorShav",
   "reviewed": true
 }

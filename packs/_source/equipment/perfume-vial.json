@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPerfumevial",
+  "_id": "vgbdEqpperfumeVi",
   "name": "Perfume, vial",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPerfumevial",
+  "_key": "!items!vgbdEqpperfumeVi",
   "reviewed": true
 }

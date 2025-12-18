@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilbladefire",
+  "_id": "vgbdEqpoilBladef",
   "name": "Oil, bladefire",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilbladefire",
+  "_key": "!items!vgbdEqpoilBladef",
   "reviewed": true
 }

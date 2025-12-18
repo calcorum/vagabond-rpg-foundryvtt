@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSoapbar",
+  "_id": "vgbdEqpsoapBar00",
   "name": "Soap, bar",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSoapbar",
+  "_key": "!items!vgbdEqpsoapBar00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSixthSense",
+  "_id": "vgbdPrksixthSens",
   "name": "Sixth Sense",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSixthSense",
+  "_key": "!items!vgbdPrksixthSens",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkUngarmax",
+  "_id": "vgbdPrkungarmax0",
   "name": "Ungarmax",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkUngarmax",
+  "_key": "!items!vgbdPrkungarmax0",
   "reviewed": true
 }

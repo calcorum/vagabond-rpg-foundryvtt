@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBlockandtackle",
+  "_id": "vgbdEqpblockAndT",
   "name": "Block and tackle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBlockandtackle",
+  "_key": "!items!vgbdEqpblockAndT",
   "reviewed": true
 }

@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstwolfDire0",
+  "_key": "!items!vgbdBstwolfDire0",
+  "name": "Wolf, Dire",
+  "type": "npc",
+  "img": "icons/creatures/mammals/wolf-howling-blue.webp",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 1.9,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      },
+      {
+        "name": "Pounce",
+        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Overgrown wolf variants. Often the alpha of packs of dozens of wolves.</p>"
+  },
+  "reviewed": false
+}

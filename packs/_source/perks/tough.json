@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkTough",
+  "_id": "vgbdPrktough0000",
   "name": "Tough",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -40,6 +40,6 @@
     "tags": ["combat", "defensive"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkTough",
+  "_key": "!items!vgbdPrktough0000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkBully",
+  "_id": "vgbdPrkbully0000",
   "name": "Bully",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkBully",
+  "_key": "!items!vgbdPrkbully0000",
   "reviewed": true
 }

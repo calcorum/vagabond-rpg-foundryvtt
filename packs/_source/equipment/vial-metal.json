@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipVialmetal",
+  "_id": "vgbdEqpvialMetal",
   "name": "Vial, metal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipVialmetal",
+  "_key": "!items!vgbdEqpvialMetal",
   "reviewed": true
 }

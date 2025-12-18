@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCompass",
+  "_id": "vgbdEqpcompass00",
   "name": "Compass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCompass",
+  "_key": "!items!vgbdEqpcompass00",
   "reviewed": true
 }

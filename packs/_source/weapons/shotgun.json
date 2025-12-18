@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponShotgun",
+  "_id": "vgbdWpnshotgun00",
   "name": "Shotgun",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponShotgun",
+  "_key": "!items!vgbdWpnshotgun00",
   "reviewed": true
 }

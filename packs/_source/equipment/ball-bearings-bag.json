@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBallbearingsbag",
+  "_id": "vgbdEqpballBeari",
   "name": "Ball bearings, bag",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBallbearingsbag",
+  "_key": "!items!vgbdEqpballBeari",
   "reviewed": true
 }

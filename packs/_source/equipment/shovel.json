@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipShovel",
+  "_id": "vgbdEqpshovel000",
   "name": "Shovel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipShovel",
+  "_key": "!items!vgbdEqpshovel000",
   "reviewed": true
 }

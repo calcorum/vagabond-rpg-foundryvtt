@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsthippopot1",
+  "_key": "!items!vgbdBsthippopot1",
+  "name": "Hippopotamus",
+  "type": "npc",
+  "img": "icons/creatures/mammals/rhinoceros-gray.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.1,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6) and Restrained if it is smaller. This always hits a Target Restrained this way.</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aggressor",
+        "description": "<p>The first time it Moves at least 10 feet toward an Enemy on a Turn, it regains that Speed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Speed: 20' (Swim 40')</p>"
+  },
+  "reviewed": false
+}

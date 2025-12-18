@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTunic",
+  "_id": "vgbdEqptunic0000",
   "name": "Tunic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTunic",
+  "_key": "!items!vgbdEqptunic0000",
   "reviewed": true
 }

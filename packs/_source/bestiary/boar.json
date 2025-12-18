@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstboar00000",
+  "_key": "!items!vgbdBstboar00000",
+  "name": "Boar",
+  "type": "npc",
+  "img": "icons/creatures/mammals/boar-brown.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.7,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Tusk",
+        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Relentless",
+        "description": "<p>Once per Day, if it is reduced to 0 HP, it instead regains d4 HP.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>More often found in forested areas. The boar is a feral pig with a notorious temper.</p>"
+  },
+  "reviewed": false
+}

@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcGladiator",
-  "_key": "!actors!vagabondNpcGladiator",
+  "_id": "vgbdBstgladiator",
+  "_key": "!items!vgbdBstgladiator",
   "name": "Gladiator",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 2,
-    "hp": { "value": 9, "max": 9 },
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
     "tl": 1.7,
     "armor": 1,
     "morale": 7,
     "zone": "frontline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 30 },
+    "speed": {
+      "value": 30
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

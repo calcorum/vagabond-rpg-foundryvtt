@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponSling",
+  "_id": "vgbdWpnsling0000",
   "name": "Sling",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponSling",
+  "_key": "!items!vgbdWpnsling0000",
   "reviewed": true
 }

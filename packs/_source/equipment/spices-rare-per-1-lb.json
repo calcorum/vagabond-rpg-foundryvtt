@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSpicesrareper1lb",
+  "_id": "vgbdEqpspicesRar",
   "name": "Spices, rare (per 1 lb.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSpicesrareper1lb",
+  "_key": "!items!vgbdEqpspicesRar",
   "reviewed": true
 }

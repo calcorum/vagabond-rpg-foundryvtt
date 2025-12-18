@@ -1,0 +1,62 @@
+{
+  "_id": "vgbdBstphorusrha",
+  "_key": "!items!vgbdBstphorusrha",
+  "name": "Phorusrhacos",
+  "type": "npc",
+  "img": "icons/creatures/birds/corvid-crow-black.webp",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 3.3,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 45
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>2x Claw and 1x Beak</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Beak",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claw",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Flightless, aggressive birds of impressive stature.</p>"
+  },
+  "reviewed": false
+}

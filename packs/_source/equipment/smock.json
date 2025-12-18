@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSmock",
+  "_id": "vgbdEqpsmock0000",
   "name": "Smock",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSmock",
+  "_key": "!items!vgbdEqpsmock0000",
   "reviewed": true
 }

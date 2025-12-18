@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipInkenchanted1oz",
+  "_id": "vgbdEqpinkEnchan",
   "name": "Ink, enchanted (1 oz)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipInkenchanted1oz",
+  "_key": "!items!vgbdEqpinkEnchan",
   "reviewed": true
 }

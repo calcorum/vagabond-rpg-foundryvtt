@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstbeetleGi1",
+  "_key": "!items!vgbdBstbeetleGi1",
+  "name": "Beetle, Giant Tiger",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/beetle-horned-brown.webp",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 3.0,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Giant beetles with tiger-striped carapace. Their mandibles are strong enough to crush bone.</p>"
+  },
+  "reviewed": false
+}

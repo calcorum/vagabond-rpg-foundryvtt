@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSplashcatalyst",
+  "_id": "vgbdEqpsplashCat",
   "name": "Splash catalyst",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSplashcatalyst",
+  "_key": "!items!vgbdEqpsplashCat",
   "reviewed": true
 }

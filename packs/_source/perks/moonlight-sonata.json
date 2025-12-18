@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMoonlightSonata",
+  "_id": "vgbdPrkmoonlight",
   "name": "Moonlight Sonata",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMoonlightSonata",
+  "_key": "!items!vgbdPrkmoonlight",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPoisontruthserum",
+  "_id": "vgbdEqppoisonTru",
   "name": "Poison, truth serum",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPoisontruthserum",
+  "_key": "!items!vgbdEqppoisonTru",
   "reviewed": true
 }

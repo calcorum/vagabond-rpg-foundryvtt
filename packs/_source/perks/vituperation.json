@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkVituperation",
+  "_id": "vgbdPrkvituperat",
   "name": "Vituperation",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "social", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkVituperation",
+  "_key": "!items!vgbdPrkvituperat",
   "reviewed": true
 }

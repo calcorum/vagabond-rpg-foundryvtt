@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsLumina",
-  "_key": "!items!vagabondClsLumina",
+  "_id": "vgbdClsluminary0",
+  "_key": "!items!vgbdClsluminary0",
   "name": "Luminary",
   "type": "class",
   "img": "icons/svg/sun.svg",
@@ -11,7 +11,11 @@
     "zone": "midline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["mysticism"], "count": 1 },
+      {
+        "type": "fixed",
+        "skills": ["mysticism"],
+        "count": 1
+      },
       {
         "type": "choice",
         "skills": ["arcana", "detect", "influence", "leadership", "medicine"],
@@ -97,7 +101,7 @@
       {
         "name": "Theurgy",
         "level": 1,
-        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, two of which must always be Life and Light. You learn 1 other Spell every 2 Luminary Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 \u00d7 your Luminary Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Luminary Level, round up). You regain spent Mana when you Rest.</p>",
+        "description": "<p>You can Cast Spells using Mysticism. <strong>Spells:</strong> You learn 4 Spells, two of which must always be Life and Light. You learn 1 other Spell every 2 Luminary Levels hereafter. <strong>Mana:</strong> Your Maximum Mana is equal to (4 × your Luminary Level), and the highest amount of Mana you can spend to Cast a Spell is equal to (Awareness + half your Luminary Level, round up). You regain spent Mana when you Rest.</p>",
         "passive": true,
         "changes": []
       },

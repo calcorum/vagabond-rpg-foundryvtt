@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMule",
+  "_id": "vgbdEqpmule00000",
   "name": "Mule",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMule",
+  "_key": "!items!vgbdEqpmule00000",
   "reviewed": true
 }

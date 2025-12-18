@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondArmorMedium",
+  "_id": "vgbdArmmediumArm",
   "name": "Medium Armor",
   "type": "armor",
   "img": "icons/svg/shield.svg",
@@ -29,6 +29,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondArmorMedium",
+  "_key": "!items!vgbdArmmediumArm",
   "reviewed": true
 }

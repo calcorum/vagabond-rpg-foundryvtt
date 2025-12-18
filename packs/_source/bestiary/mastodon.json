@@ -1,0 +1,67 @@
+{
+  "_id": "vgbdBstmastodon0",
+  "_key": "!items!vgbdBstmastodon0",
+  "name": "Mastodon",
+  "type": "npc",
+  "img": "icons/creatures/mammals/mammoth-brown.webp",
+  "system": {
+    "hd": 13,
+    "hp": {
+      "value": 58,
+      "max": 58
+    },
+    "tl": 8.3,
+    "armor": 3,
+    "morale": 4,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>1x Tusk and 1x Stomp</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Stomp",
+        "description": "<p>[Melee Attack]: 18 (4d8)</p>",
+        "attackType": "melee",
+        "damage": "4d8",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Tusk",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Charger",
+        "description": "<p>Tusks deal double damage that Turn if it Moves at least 20' before the attack.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Both the woolly and imperial mammoths roam arctic and subtropic lands.</p>"
+  },
+  "reviewed": false
+}

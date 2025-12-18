@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBackpack",
+  "_id": "vgbdEqpbackpack0",
   "name": "Backpack",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -52,6 +52,6 @@
       "transfer": true
     }
   ],
-  "_key": "!items!vagabondEquipBackpack",
+  "_key": "!items!vgbdEqpbackpack0",
   "reviewed": true
 }

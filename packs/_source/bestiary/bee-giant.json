@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstbeeGiant0",
+  "_key": "!items!vgbdBstbeeGiant0",
+  "name": "Bee, Giant",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/bee-yellow-black.webp",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 9,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Sting",
+        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Roughly 1 foot in length, these giant bees are extremely territorial, but otherwise non-aggressive. Speed: 10' (Fly 50')</p>"
+  },
+  "reviewed": false
+}

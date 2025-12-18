@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSnarerootTrapper",
+  "_id": "vgbdPrksnareroot",
   "name": "Snareroot Trapper",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSnarerootTrapper",
+  "_key": "!items!vgbdPrksnareroot",
   "reviewed": true
 }

@@ -1,0 +1,75 @@
+{
+  "_id": "vgbdBstcatGreat0",
+  "_key": "!items!vgbdBstcatGreat0",
+  "name": "Cat, Great",
+  "type": "npc",
+  "img": "icons/creatures/mammals/cat-tiger-orange-green.webp",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 3.2,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>2x Claw and 1x Bite</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 5 (d10)</p>",
+        "attackType": "melee",
+        "damage": "1d10",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claws",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Dense Muscled",
+        "description": "<p>Grapples and Shoves as Large.</p>"
+      },
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      },
+      {
+        "name": "Pounce",
+        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>All manner of lions, tigers, and panthers.</p>"
+  },
+  "reviewed": false
+}

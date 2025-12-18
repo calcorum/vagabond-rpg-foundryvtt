@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDwarfblindstone",
+  "_id": "vgbdEqpdwarfblin",
   "name": "Dwarfblind stone",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDwarfblindstone",
+  "_key": "!items!vgbdEqpdwarfblin",
   "reviewed": true
 }

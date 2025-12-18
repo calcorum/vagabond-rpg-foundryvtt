@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponFlail",
+  "_id": "vgbdWpnflail0000",
   "name": "Flail",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponFlail",
+  "_key": "!items!vgbdWpnflail0000",
   "reviewed": true
 }

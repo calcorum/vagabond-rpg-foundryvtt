@@ -1,10 +1,10 @@
 {
-  "_id": "vagabondEquipBottleglass",
+  "_id": "vgbdEqpbottleGla",
   "name": "Bottle, glass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "<p>Holds 1\u00bd pints.</p>",
+    "description": "<p>Holds 1½ pints.</p>",
     "quantity": 1,
     "slots": 1,
     "slotsPerItem": false,
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBottleglass",
+  "_key": "!items!vgbdEqpbottleGla",
   "reviewed": true
 }

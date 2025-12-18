@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBeerkeg",
+  "_id": "vgbdEqpbeerKeg00",
   "name": "Beer, keg",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBeerkeg",
+  "_key": "!items!vgbdEqpbeerKeg00",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAcidgreenslime",
+  "_id": "vgbdEqpacidGreen",
   "name": "Acid, green slime",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAcidgreenslime",
+  "_key": "!items!vgbdEqpacidGreen",
   "reviewed": true
 }

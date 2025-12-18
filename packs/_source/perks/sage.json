@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSage",
+  "_id": "vgbdPrksage00000",
   "name": "Sage",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSage",
+  "_key": "!items!vgbdPrksage00000",
   "reviewed": true
 }

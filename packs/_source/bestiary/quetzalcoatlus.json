@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstquetzalco",
+  "_key": "!items!vgbdBstquetzalco",
+  "name": "Quetzalcoatlus",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/pterodactyl-flying-green.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.6,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d3",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "<p>[Melee Attack]: 10 (3d6)</p>",
+        "attackType": "melee",
+        "damage": "3d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Speed: 10' (Fly 60')</p>"
+  },
+  "reviewed": false
+}

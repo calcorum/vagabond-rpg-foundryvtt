@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkFamiliar",
+  "_id": "vgbdPrkfamiliar0",
   "name": "Familiar",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "utility", "social", "magic", "ritual"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkFamiliar",
+  "_key": "!items!vgbdPrkfamiliar0",
   "reviewed": true
 }

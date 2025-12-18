@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionspeedi",
+  "_id": "vgbdEqppotionSpe",
   "name": "Potion, speed I",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionspeedi",
+  "_key": "!items!vgbdEqppotionSpe",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAlecidermug",
+  "_id": "vgbdEqpaleciderM",
   "name": "Ale/Cider, mug",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAlecidermug",
+  "_key": "!items!vgbdEqpaleciderM",
   "reviewed": true
 }

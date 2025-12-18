@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHorsewarhorse",
+  "_id": "vgbdEqphorseWarh",
   "name": "Horse, warhorse",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHorsewarhorse",
+  "_key": "!items!vgbdEqphorseWarh",
   "reviewed": true
 }

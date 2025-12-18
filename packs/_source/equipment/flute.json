@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFlute",
+  "_id": "vgbdEqpflute0000",
   "name": "Flute",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFlute",
+  "_key": "!items!vgbdEqpflute0000",
   "reviewed": true
 }

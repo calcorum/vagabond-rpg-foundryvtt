@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDogcommon",
+  "_id": "vgbdEqpdogCommon",
   "name": "Dog, common",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDogcommon",
+  "_key": "!items!vgbdEqpdogCommon",
   "reviewed": true
 }

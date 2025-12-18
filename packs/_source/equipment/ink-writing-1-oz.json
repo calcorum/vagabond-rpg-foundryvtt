@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipInkwriting1oz",
+  "_id": "vgbdEqpinkWritin",
   "name": "Ink, writing (1 oz)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipInkwriting1oz",
+  "_key": "!items!vgbdEqpinkWritin",
   "reviewed": true
 }

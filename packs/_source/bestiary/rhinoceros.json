@@ -1,0 +1,58 @@
+{
+  "_id": "vgbdBstrhinocero",
+  "_key": "!items!vgbdBstrhinocero",
+  "name": "Rhinoceros",
+  "type": "npc",
+  "img": "icons/creatures/mammals/rhinoceros-gray.webp",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.6,
+    "armor": 2,
+    "morale": 6,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d12",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Horn",
+        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "attackType": "melee",
+        "damage": "2d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Stomp",
+        "description": "<p>[Melee Attack]: 9 (2d8)</p>",
+        "attackType": "melee",
+        "damage": "2d8",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rampant",
+        "description": "<p>If it Moves at least 20' in a straight line, it can automatically make one Horn Attack against anything in its path for the rest of the Turn (no Action).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

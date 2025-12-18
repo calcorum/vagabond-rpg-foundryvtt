@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMonocle",
+  "_id": "vgbdEqpmonocle00",
   "name": "Monocle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMonocle",
+  "_key": "!items!vgbdEqpmonocle00",
   "reviewed": true
 }

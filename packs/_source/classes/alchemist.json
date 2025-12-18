@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsAlchem",
-  "_key": "!items!vagabondClsAlchem",
+  "_id": "vgbdClsalchemist",
+  "_key": "!items!vgbdClsalchemist",
   "name": "Alchemist",
   "type": "class",
   "img": "icons/svg/flask.svg",
@@ -11,8 +11,16 @@
     "zone": "backline",
     "weaponTraining": [],
     "skillTraining": [
-      { "type": "fixed", "skills": ["craft"], "count": 1 },
-      { "type": "choice", "skills": [], "count": 4 }
+      {
+        "type": "fixed",
+        "skills": ["craft"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": [],
+        "count": 4
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Alchemist or Assassin</p>",
@@ -93,7 +101,7 @@
       {
         "name": "Alchemy",
         "level": 1,
-        "description": "<p>You can attack with alchemical items using Craft. <strong>Formulae:</strong> Choose 4 alchemical items with a value no higher than (your Alchemist Level \u00d7 50s). You only need to provide 5s of materials to Craft these items and have Alchemy Tools equipped. You learn to Craft 1 other alchemical item this way every 2 Levels in this Class hereafter.</p>",
+        "description": "<p>You can attack with alchemical items using Craft. <strong>Formulae:</strong> Choose 4 alchemical items with a value no higher than (your Alchemist Level × 50s). You only need to provide 5s of materials to Craft these items and have Alchemy Tools equipped. You learn to Craft 1 other alchemical item this way every 2 Levels in this Class hereafter.</p>",
         "passive": true,
         "changes": []
       },

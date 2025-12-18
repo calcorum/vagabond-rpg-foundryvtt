@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFishingrod",
+  "_id": "vgbdEqpfishingRo",
   "name": "Fishing rod",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFishingrod",
+  "_key": "!items!vgbdEqpfishingRo",
   "reviewed": true
 }

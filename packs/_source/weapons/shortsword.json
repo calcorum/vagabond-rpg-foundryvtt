@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponShortsword",
+  "_id": "vgbdWpnshortswor",
   "name": "Shortsword",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponShortsword",
+  "_key": "!items!vgbdWpnshortswor",
   "reviewed": true
 }

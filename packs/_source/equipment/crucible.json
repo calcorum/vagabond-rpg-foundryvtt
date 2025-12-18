@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCrucible",
+  "_id": "vgbdEqpcrucible0",
   "name": "Crucible",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCrucible",
+  "_key": "!items!vgbdEqpcrucible0",
   "reviewed": true
 }

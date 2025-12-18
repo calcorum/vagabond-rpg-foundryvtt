@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstspiderGi2",
+  "_key": "!items!vgbdBstspiderGi2",
+  "name": "Spider, Giant Tarantella",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/spider-red-black.webp",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.2,
+    "armor": 2,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true,
+      "cling": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 4 (d8) and pass [Endure] or become Sickened (Cd4, Vulnerable and must skip its Move to dance in place causing a -4 penalty to Attack Checks and giving them +1 Fatigue each Round. Anyone who witnesses this dancing must pass [Will] or also become Charmed this way for (Cd4)).</p>",
+        "attackType": "melee",
+        "damage": "1d8",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Man-sized venomous spiders with the ability to blend into their environment like a chameleon.</p>"
+  },
+  "reviewed": false
+}

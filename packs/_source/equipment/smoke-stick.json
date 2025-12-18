@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSmokestick",
+  "_id": "vgbdEqpsmokeStic",
   "name": "Smoke stick",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSmokestick",
+  "_key": "!items!vgbdEqpsmokeStic",
   "reviewed": true
 }

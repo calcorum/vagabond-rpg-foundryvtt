@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAnimalfeedperday",
+  "_id": "vgbdEqpanimalFee",
   "name": "Animal feed (per Day)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAnimalfeedperday",
+  "_key": "!items!vgbdEqpanimalFee",
   "reviewed": true
 }

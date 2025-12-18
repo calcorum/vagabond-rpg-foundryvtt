@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSentinel",
+  "_id": "vgbdPrksentinel0",
   "name": "Sentinel",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "movement"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSentinel",
+  "_key": "!items!vgbdPrksentinel0",
   "reviewed": true
 }

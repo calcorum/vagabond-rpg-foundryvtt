@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCowl",
+  "_id": "vgbdEqpcowl00000",
   "name": "Cowl",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCowl",
+  "_key": "!items!vgbdEqpcowl00000",
   "reviewed": true
 }

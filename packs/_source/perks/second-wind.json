@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkSecondWind",
+  "_id": "vgbdPrksecondWin",
   "name": "Second Wind",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "movement", "healing"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkSecondWind",
+  "_key": "!items!vgbdPrksecondWin",
   "reviewed": true
 }

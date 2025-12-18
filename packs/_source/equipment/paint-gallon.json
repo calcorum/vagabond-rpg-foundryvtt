@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPaintgallon",
+  "_id": "vgbdEqppaintGall",
   "name": "Paint, gallon",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPaintgallon",
+  "_key": "!items!vgbdEqppaintGall",
   "reviewed": true
 }

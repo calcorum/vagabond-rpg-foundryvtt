@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondClsRevela",
-  "_key": "!items!vagabondClsRevela",
+  "_id": "vgbdClsrevelator",
+  "_key": "!items!vgbdClsrevelator",
   "name": "Revelator",
   "type": "class",
   "img": "icons/svg/holy-shield.svg",
@@ -11,8 +11,16 @@
     "zone": "frontline",
     "weaponTraining": ["melee"],
     "skillTraining": [
-      { "type": "fixed", "skills": ["leadership"], "count": 1 },
-      { "type": "choice", "skills": ["brawl", "detect", "influence", "mysticism"], "count": 3 }
+      {
+        "type": "fixed",
+        "skills": ["leadership"],
+        "count": 1
+      },
+      {
+        "type": "choice",
+        "skills": ["brawl", "detect", "influence", "mysticism"],
+        "count": 3
+      }
     ],
     "trainedSkills": [],
     "startingPack": "<p>Knight or Warrior</p>",
@@ -25,15 +33,69 @@
         "spellsKnown": 2,
         "features": ["Righteous", "Selfless"]
       },
-      { "level": 2, "mana": 4, "castingMax": 0, "spellsKnown": 0, "features": ["Lay on Hands"] },
-      { "level": 3, "mana": 6, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 4, "mana": 8, "castingMax": 0, "spellsKnown": 1, "features": ["Paragon's Aura"] },
-      { "level": 5, "mana": 10, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 6, "mana": 12, "castingMax": 0, "spellsKnown": 0, "features": ["Divine Resolve"] },
-      { "level": 7, "mana": 14, "castingMax": 0, "spellsKnown": 1, "features": ["Perk"] },
-      { "level": 8, "mana": 16, "castingMax": 0, "spellsKnown": 0, "features": ["Holy Diver"] },
-      { "level": 9, "mana": 18, "castingMax": 0, "spellsKnown": 0, "features": ["Perk"] },
-      { "level": 10, "mana": 20, "castingMax": 0, "spellsKnown": 1, "features": ["Sacrosanct"] }
+      {
+        "level": 2,
+        "mana": 4,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Lay on Hands"]
+      },
+      {
+        "level": 3,
+        "mana": 6,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 4,
+        "mana": 8,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Paragon's Aura"]
+      },
+      {
+        "level": 5,
+        "mana": 10,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 6,
+        "mana": 12,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Divine Resolve"]
+      },
+      {
+        "level": 7,
+        "mana": 14,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Perk"]
+      },
+      {
+        "level": 8,
+        "mana": 16,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Holy Diver"]
+      },
+      {
+        "level": 9,
+        "mana": 18,
+        "castingMax": 0,
+        "spellsKnown": 0,
+        "features": ["Perk"]
+      },
+      {
+        "level": 10,
+        "mana": 20,
+        "castingMax": 0,
+        "spellsKnown": 1,
+        "features": ["Sacrosanct"]
+      }
     ],
     "features": [
       {

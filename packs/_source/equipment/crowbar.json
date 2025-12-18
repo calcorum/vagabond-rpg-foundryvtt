@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCrowbar",
+  "_id": "vgbdEqpcrowbar00",
   "name": "Crowbar",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCrowbar",
+  "_key": "!items!vgbdEqpcrowbar00",
   "reviewed": true
 }

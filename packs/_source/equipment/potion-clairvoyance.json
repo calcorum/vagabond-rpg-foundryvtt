@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionclairvoyance",
+  "_id": "vgbdEqppotionCl1",
   "name": "Potion, clairvoyance",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionclairvoyance",
+  "_key": "!items!vgbdEqppotionCl1",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionflying",
+  "_id": "vgbdEqppotionFly",
   "name": "Potion, flying",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionflying",
+  "_key": "!items!vgbdEqppotionFly",
   "reviewed": true
 }

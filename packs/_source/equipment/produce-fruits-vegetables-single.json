@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipProducefruitsvegetablessingle",
+  "_id": "vgbdEqpproduceFr",
   "name": "Produce (Fruits & Vegetables), single",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipProducefruitsvegetablessingle",
+  "_key": "!items!vgbdEqpproduceFr",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCenser",
+  "_id": "vgbdEqpcenser000",
   "name": "Censer",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCenser",
+  "_key": "!items!vgbdEqpcenser000",
   "reviewed": true
 }

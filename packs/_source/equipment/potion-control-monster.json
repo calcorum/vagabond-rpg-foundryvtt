@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotioncontrolmonster",
+  "_id": "vgbdEqppotionCo1",
   "name": "Potion, control monster",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotioncontrolmonster",
+  "_key": "!items!vgbdEqppotionCo1",
   "reviewed": true
 }

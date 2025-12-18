@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponLightHammer",
+  "_id": "vgbdWpnlightHamm",
   "name": "Light hammer",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponLightHammer",
+  "_key": "!items!vgbdWpnlightHamm",
   "reviewed": true
 }

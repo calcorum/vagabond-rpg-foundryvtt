@@ -1,0 +1,57 @@
+{
+  "_id": "vgbdBstspiderGia",
+  "_key": "!items!vgbdBstspiderGia",
+  "name": "Spider, Giant Black Widow",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/spider-black-red.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.0,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d3",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "cling": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6) and pass [Endure] or become Sickened (Cd4, +1 Fatigue each Round).</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Webs",
+        "description": "<p>Its web is an Object with 4 HP and Armor: 5.</p>"
+      },
+      {
+        "name": "Web Walker",
+        "description": "<p>It can sense any Being on the same web as it as if by Blindsight, and is not impeded by web as Difficult Terrain.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>Man-sized venomous spiders distinguished by their red hourglass mark.</p>"
+  },
+  "reviewed": false
+}

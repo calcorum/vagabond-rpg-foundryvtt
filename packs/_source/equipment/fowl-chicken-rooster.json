@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFowlchickenrooster",
+  "_id": "vgbdEqpfowlChic1",
   "name": "Fowl - Chicken, rooster",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFowlchickenrooster",
+  "_key": "!items!vgbdEqpfowlChic1",
   "reviewed": true
 }

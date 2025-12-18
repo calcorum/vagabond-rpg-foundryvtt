@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkStrategist",
+  "_id": "vgbdPrkstrategis",
   "name": "Strategist",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkStrategist",
+  "_key": "!items!vgbdPrkstrategis",
   "reviewed": true
 }

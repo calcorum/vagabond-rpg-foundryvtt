@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipOilvicious",
+  "_id": "vgbdEqpoilViciou",
   "name": "Oil, vicious",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipOilvicious",
+  "_key": "!items!vgbdEqpoilViciou",
   "reviewed": true
 }

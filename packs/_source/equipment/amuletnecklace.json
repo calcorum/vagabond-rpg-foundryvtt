@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAmuletnecklace",
+  "_id": "vgbdEqpamuletnec",
   "name": "Amulet/necklace",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAmuletnecklace",
+  "_key": "!items!vgbdEqpamuletnec",
   "reviewed": true
 }

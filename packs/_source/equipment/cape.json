@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCape",
+  "_id": "vgbdEqpcape00000",
   "name": "Cape",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCape",
+  "_key": "!items!vgbdEqpcape00000",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFirecracker",
+  "_id": "vgbdEqpfirecrack",
   "name": "Firecracker",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFirecracker",
+  "_key": "!items!vgbdEqpfirecrack",
   "reviewed": true
 }

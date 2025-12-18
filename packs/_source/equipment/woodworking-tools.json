@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWoodworkingtools",
+  "_id": "vgbdEqpwoodworki",
   "name": "Woodworking Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWoodworkingtools",
+  "_key": "!items!vgbdEqpwoodworki",
   "reviewed": true
 }

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstcattle000",
+  "_key": "!items!vgbdBstcattle000",
+  "name": "Cattle",
+  "type": "npc",
+  "img": "icons/creatures/mammals/ox-buffalo-brown.webp",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 1.4,
+    "armor": 1,
+    "morale": 2,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Horn",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Cows, bison, aurochs, and other large bovine.</p>"
+  },
+  "reviewed": false
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHourglasshour",
+  "_id": "vgbdEqphourglass",
   "name": "Hourglass, hour",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHourglasshour",
+  "_key": "!items!vgbdEqphourglass",
   "reviewed": true
 }

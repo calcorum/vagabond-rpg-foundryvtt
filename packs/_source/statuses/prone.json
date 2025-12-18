@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondStatusProne",
+  "_id": "vgbdStsprone0000",
   "name": "Prone",
   "type": "status",
   "img": "icons/svg/falling.svg",
@@ -54,5 +54,5 @@
     "reference": "Core Rulebook p.36"
   },
   "effects": [],
-  "_key": "!items!vagabondStatusProne"
+  "_key": "!items!vgbdStsprone0000"
 }

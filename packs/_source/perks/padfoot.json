@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkPadfoot",
+  "_id": "vgbdPrkpadfoot00",
   "name": "Padfoot",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkPadfoot",
+  "_key": "!items!vgbdPrkpadfoot00",
   "reviewed": true
 }

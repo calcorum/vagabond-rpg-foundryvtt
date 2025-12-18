@@ -1,0 +1,58 @@
+{
+  "_id": "vgbdBsttricerato",
+  "_key": "!items!vgbdBsttricerato",
+  "name": "Triceratops",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/dinosaur-horned-green.webp",
+  "system": {
+    "hd": 11,
+    "hp": {
+      "value": 49,
+      "max": 49
+    },
+    "tl": 4.5,
+    "armor": 3,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Horn",
+        "description": "<p>[Melee Attack]: 10 (3d6)</p>",
+        "attackType": "melee",
+        "damage": "3d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Stomp",
+        "description": "<p>[Melee Attack]: 10 (3d6)</p>",
+        "attackType": "melee",
+        "damage": "3d6",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rampant",
+        "description": "<p>If it Moves at least 20' in a straight line, it can automatically make one Horn Attack against anything in its path for the rest of the Turn (no Action).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

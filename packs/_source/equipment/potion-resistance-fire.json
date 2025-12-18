@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionresistancefire",
+  "_id": "vgbdEqppotionRe3",
   "name": "Potion, resistance (fire)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionresistancefire",
+  "_key": "!items!vgbdEqppotionRe3",
   "reviewed": true
 }

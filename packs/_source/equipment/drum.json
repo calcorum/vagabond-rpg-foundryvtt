@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDrum",
+  "_id": "vgbdEqpdrum00000",
   "name": "Drum",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDrum",
+  "_key": "!items!vgbdEqpdrum00000",
   "reviewed": true
 }

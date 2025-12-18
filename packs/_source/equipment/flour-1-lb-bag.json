@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFlour1lbbag",
+  "_id": "vgbdEqpflour1LbB",
   "name": "Flour (1 lb. bag)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFlour1lbbag",
+  "_key": "!items!vgbdEqpflour1LbB",
   "reviewed": true
 }

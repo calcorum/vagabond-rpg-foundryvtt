@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWinecommonbottle",
+  "_id": "vgbdEqpwineCommo",
   "name": "Wine, common bottle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWinecommonbottle",
+  "_key": "!items!vgbdEqpwineCommo",
   "reviewed": true
 }

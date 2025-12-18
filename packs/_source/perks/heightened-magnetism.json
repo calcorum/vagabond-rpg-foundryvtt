@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkHeightenedMagnetism",
+  "_id": "vgbdPrkheighten1",
   "name": "Heightened Magnetism",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["utility", "social"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkHeightenedMagnetism",
+  "_key": "!items!vgbdPrkheighten1",
   "reviewed": true
 }

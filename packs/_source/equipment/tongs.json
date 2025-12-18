@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipTongs",
+  "_id": "vgbdEqptongs0000",
   "name": "Tongs",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipTongs",
+  "_key": "!items!vgbdEqptongs0000",
   "reviewed": true
 }

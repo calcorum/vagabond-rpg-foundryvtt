@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipRat",
+  "_id": "vgbdEqprat000000",
   "name": "Rat",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipRat",
+  "_key": "!items!vgbdEqprat000000",
   "reviewed": true
 }

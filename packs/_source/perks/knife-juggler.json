@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkKnifeJuggler",
+  "_id": "vgbdPrkknifeJugg",
   "name": "Knife Juggler",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkKnifeJuggler",
+  "_key": "!items!vgbdPrkknifeJugg",
   "reviewed": true
 }

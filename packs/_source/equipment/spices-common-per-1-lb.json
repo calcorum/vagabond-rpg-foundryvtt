@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSpicescommonper1lb",
+  "_id": "vgbdEqpspicesCom",
   "name": "Spices, common (per 1 lb.)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSpicescommonper1lb",
+  "_key": "!items!vgbdEqpspicesCom",
   "reviewed": true
 }

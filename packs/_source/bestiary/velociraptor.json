@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstvelocirap",
+  "_key": "!items!vgbdBstvelocirap",
+  "name": "Velociraptor",
+  "type": "npc",
+  "img": "icons/creatures/reptiles/dinosaur-raptor-green.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 12,
+      "max": 12
+    },
+    "tl": 1.4,
+    "armor": 1,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "beast",
+    "speed": {
+      "value": 45
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>A vicious reptilian carnivore from the lost world. It walks upright, and moves with blinding speed.</p>"
+  },
+  "reviewed": false
+}

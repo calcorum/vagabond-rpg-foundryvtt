@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBsthorseWar0",
+  "_key": "!items!vgbdBsthorseWar0",
+  "name": "Horse, War",
+  "type": "npc",
+  "img": "icons/creatures/mammals/horse-armored-brown.webp",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.0,
+    "armor": 1,
+    "morale": 9,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Multi-Attack",
+        "description": "<p>2x Hoof</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Hoof",
+        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "attackType": "melee",
+        "damage": "1d6",
+        "damageType": "blunt",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

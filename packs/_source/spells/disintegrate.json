@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondSpellDisintegrate",
-  "_key": "!items!vagabondSpellDisintegrate",
+  "_id": "vgbdSpldisintegr",
+  "_key": "!items!vgbdSpldisintegr",
   "name": "Disintegrate",
   "type": "spell",
   "img": "icons/svg/lightning.svg",

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkBookworm",
+  "_id": "vgbdPrkbookworm0",
   "name": "Bookworm",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["repeatable"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkBookworm",
+  "_key": "!items!vgbdPrkbookworm0",
   "reviewed": true
 }

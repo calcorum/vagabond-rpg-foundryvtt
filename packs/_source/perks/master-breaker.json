@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMasterBreaker",
+  "_id": "vgbdPrkmasterBre",
   "name": "Master Breaker",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMasterBreaker",
+  "_key": "!items!vgbdPrkmasterBre",
   "reviewed": true
 }

@@ -1,6 +1,6 @@
 {
-  "_id": "vagabondAnceOrc000",
-  "_key": "!items!vagabondAnceOrc000",
+  "_id": "vgbdAncorc000000",
+  "_key": "!items!vgbdAncorc000000",
   "name": "Orc",
   "type": "ancestry",
   "img": "icons/svg/mystery-man.svg",
@@ -12,7 +12,13 @@
       {
         "name": "Darksight",
         "description": "<p>You can see in darkness as if it were dim light.</p>",
-        "changes": [{ "key": "system.senses.darkvision", "mode": 5, "value": "true" }]
+        "changes": [
+          {
+            "key": "system.senses.darkvision",
+            "mode": 5,
+            "value": "true"
+          }
+        ]
       },
       {
         "name": "Beefy",
@@ -22,7 +28,13 @@
       {
         "name": "Hulking",
         "description": "<p>You have +2 additional Item Slots.</p>",
-        "changes": [{ "key": "system.itemSlots.bonus", "mode": 2, "value": "2" }]
+        "changes": [
+          {
+            "key": "system.itemSlots.bonus",
+            "mode": 2,
+            "value": "2"
+          }
+        ]
       }
     ]
   },

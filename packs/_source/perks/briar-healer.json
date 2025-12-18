@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkBriarHealer",
+  "_id": "vgbdPrkbriarHeal",
   "name": "Briar Healer",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["combat", "defensive", "magic"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkBriarHealer",
+  "_key": "!items!vgbdPrkbriarHeal",
   "reviewed": true
 }

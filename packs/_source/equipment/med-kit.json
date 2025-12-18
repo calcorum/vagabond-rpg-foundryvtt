@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMedkit",
+  "_id": "vgbdEqpmedKit000",
   "name": "Med Kit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMedkit",
+  "_key": "!items!vgbdEqpmedKit000",
   "reviewed": true
 }

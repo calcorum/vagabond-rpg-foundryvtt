@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipAcidoxidizing",
+  "_id": "vgbdEqpacidOxidi",
   "name": "Acid, oxidizing",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipAcidoxidizing",
+  "_key": "!items!vgbdEqpacidOxidi",
   "reviewed": true
 }

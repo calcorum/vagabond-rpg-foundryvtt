@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipHuntingtrap",
+  "_id": "vgbdEqphuntingTr",
   "name": "Hunting trap",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipHuntingtrap",
+  "_key": "!items!vgbdEqphuntingTr",
   "reviewed": true
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipGirdle",
+  "_id": "vgbdEqpgirdle000",
   "name": "Girdle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipGirdle",
+  "_key": "!items!vgbdEqpgirdle000",
   "reviewed": true
 }

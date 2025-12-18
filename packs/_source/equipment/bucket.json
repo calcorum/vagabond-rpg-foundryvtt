@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBucket",
+  "_id": "vgbdEqpbucket000",
   "name": "Bucket",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBucket",
+  "_key": "!items!vgbdEqpbucket000",
   "reviewed": true
 }

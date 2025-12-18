@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipFlask",
+  "_id": "vgbdEqpflask0000",
   "name": "Flask",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipFlask",
+  "_key": "!items!vgbdEqpflask0000",
   "reviewed": true
 }

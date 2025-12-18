@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipVialglass",
+  "_id": "vgbdEqpvialGlass",
   "name": "Vial, glass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipVialglass",
+  "_key": "!items!vgbdEqpvialGlass",
   "reviewed": true
 }

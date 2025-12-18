@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipCamel",
+  "_id": "vgbdEqpcamel0000",
   "name": "Camel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipCamel",
+  "_key": "!items!vgbdEqpcamel0000",
   "reviewed": true
 }

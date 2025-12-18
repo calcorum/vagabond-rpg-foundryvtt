@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkCombatMedic",
+  "_id": "vgbdPrkcombatMed",
   "name": "Combat Medic",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "movement", "healing"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkCombatMedic",
+  "_key": "!items!vgbdPrkcombatMed",
   "reviewed": true
 }

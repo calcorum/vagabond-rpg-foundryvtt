@@ -1,19 +1,24 @@
 {
-  "_id": "vagabondNpcApothecary",
-  "_key": "!actors!vagabondNpcApothecary",
+  "_id": "vgbdBstapothecar",
+  "_key": "!items!vgbdBstapothecar",
   "name": "Apothecary",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "hd": 1,
-    "hp": { "value": 4, "max": 4 },
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
     "tl": 0.5,
     "armor": 0,
     "morale": 7,
     "zone": "backline",
     "size": "medium",
     "beingType": "humanlike",
-    "speed": { "value": 30 },
+    "speed": {
+      "value": 30
+    },
     "appearing": "",
     "senses": {},
     "movement": {},

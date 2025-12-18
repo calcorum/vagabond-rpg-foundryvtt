@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipMarblesbagof",
+  "_id": "vgbdEqpmarblesBa",
   "name": "Marbles, bag of",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipMarblesbagof",
+  "_key": "!items!vgbdEqpmarblesBa",
   "reviewed": true
 }

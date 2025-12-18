@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotclay",
+  "_id": "vgbdEqppotClay00",
   "name": "Pot, clay",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotclay",
+  "_key": "!items!vgbdEqppotClay00",
   "reviewed": true
 }

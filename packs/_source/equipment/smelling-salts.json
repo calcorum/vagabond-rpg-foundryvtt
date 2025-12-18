@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipSmellingsalts",
+  "_id": "vgbdEqpsmellingS",
   "name": "Smelling salts",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipSmellingsalts",
+  "_key": "!items!vgbdEqpsmellingS",
   "reviewed": true
 }

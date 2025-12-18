@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkArchaeologist",
+  "_id": "vgbdPrkarchaeolo",
   "name": "Archaeologist",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["defensive", "utility"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkArchaeologist",
+  "_key": "!items!vgbdPrkarchaeolo",
   "reviewed": true
 }

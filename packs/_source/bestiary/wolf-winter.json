@@ -1,0 +1,62 @@
+{
+  "_id": "vgbdBstwolfWinte",
+  "_key": "!items!vgbdBstwolfWinte",
+  "name": "Wolf, Winter",
+  "type": "npc",
+  "img": "icons/creatures/mammals/wolf-howling-white.webp",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 4.2,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": ["cold"],
+    "weaknesses": ["fire"],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Frost Breath",
+        "description": "<p>[Cast, Close Aura] (Recharge Cd4): 15 (6d4)</p>",
+        "attackType": "special",
+        "damage": "6d4",
+        "damageType": "cold",
+        "range": "Close Aura",
+        "properties": []
+      },
+      {
+        "name": "Bite",
+        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "attackType": "melee",
+        "damage": "2d6",
+        "damageType": "pierce",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+      },
+      {
+        "name": "Pounce",
+        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "<p>The white coated winter wolves are revered as guardian spirits of the tundra.</p>"
+  },
+  "reviewed": false
+}

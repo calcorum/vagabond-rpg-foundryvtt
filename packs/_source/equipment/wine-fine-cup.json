@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipWinefinecup",
+  "_id": "vgbdEqpwineFine1",
   "name": "Wine, fine cup",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipWinefinecup",
+  "_key": "!items!vgbdEqpwineFine1",
   "reviewed": true
 }

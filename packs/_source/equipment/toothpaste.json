@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipToothpaste",
+  "_id": "vgbdEqptoothpast",
   "name": "Toothpaste",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipToothpaste",
+  "_key": "!items!vgbdEqptoothpast",
   "reviewed": true
 }

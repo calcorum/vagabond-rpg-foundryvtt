@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondWeaponPoleblade",
+  "_id": "vgbdWpnpoleblade",
   "name": "Poleblade",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
@@ -54,6 +54,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondWeaponPoleblade",
+  "_key": "!items!vgbdWpnpoleblade",
   "reviewed": true
 }

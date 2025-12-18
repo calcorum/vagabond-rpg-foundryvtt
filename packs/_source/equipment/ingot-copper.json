@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipIngotcopper",
+  "_id": "vgbdEqpingotCopp",
   "name": "Ingot, copper",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipIngotcopper",
+  "_key": "!items!vgbdEqpingotCopp",
   "reviewed": true
 }

@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstapeGiant0",
+  "_key": "!items!vgbdBstapeGiant0",
+  "name": "Ape, Giant",
+  "type": "npc",
+  "img": "icons/creatures/mammals/ape-gorilla-gray.webp",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.3,
+    "armor": 2,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Maul",
+        "description": "<p>[Multi-Attack]: 2x Claw</p>",
+        "attackType": "melee",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      },
+      {
+        "name": "Claw",
+        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "attackType": "melee",
+        "damage": "1d4",
+        "damageType": "slash",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": "<p>Gorillas and the cave-dwelling white apes.</p>"
+  },
+  "reviewed": false
+}

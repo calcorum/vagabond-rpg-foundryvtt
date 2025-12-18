@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondPerkMetamagic",
+  "_id": "vgbdPrkmetamagic",
   "name": "Metamagic",
   "type": "perk",
   "img": "icons/svg/shield.svg",
@@ -34,6 +34,6 @@
     "tags": ["magic", "repeatable"]
   },
   "effects": [],
-  "_key": "!items!vagabondPerkMetamagic",
+  "_key": "!items!vgbdPrkmetamagic",
   "reviewed": true
 }

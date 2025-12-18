@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipDoll",
+  "_id": "vgbdEqpdoll00000",
   "name": "Doll",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipDoll",
+  "_key": "!items!vgbdEqpdoll00000",
   "reviewed": true
 }

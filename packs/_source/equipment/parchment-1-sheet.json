@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipParchment1sheet",
+  "_id": "vgbdEqpparchment",
   "name": "Parchment (1 sheet)",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipParchment1sheet",
+  "_key": "!items!vgbdEqpparchment",
   "reviewed": true
 }

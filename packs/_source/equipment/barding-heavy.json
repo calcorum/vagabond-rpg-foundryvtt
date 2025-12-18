@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipBardingheavy",
+  "_id": "vgbdEqpbardingHe",
   "name": "Barding, heavy",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipBardingheavy",
+  "_key": "!items!vgbdEqpbardingHe",
   "reviewed": true
 }

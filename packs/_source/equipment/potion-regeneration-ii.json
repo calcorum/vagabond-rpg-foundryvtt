@@ -1,5 +1,5 @@
 {
-  "_id": "vagabondEquipPotionregenerationii",
+  "_id": "vgbdEqppotionRe1",
   "name": "Potion, regeneration II",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -35,6 +35,6 @@
     }
   },
   "effects": [],
-  "_key": "!items!vagabondEquipPotionregenerationii",
+  "_key": "!items!vgbdEqppotionRe1",
   "reviewed": true
 }
