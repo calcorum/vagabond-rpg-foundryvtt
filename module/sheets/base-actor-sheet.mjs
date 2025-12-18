@@ -66,6 +66,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       changeTab: VagabondActorSheet.#onChangeTab,
       modifyResource: VagabondActorSheet.#onModifyResource,
       toggleTrained: VagabondActorSheet.#onToggleTrained,
+      toggleAttackTrained: VagabondActorSheet.#onToggleAttackTrained,
       removeStatus: VagabondActorSheet.#onRemoveStatus,
     },
     // Drag-drop configuration - use Foundry's built-in system
@@ -825,6 +826,21 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
 
     const currentValue = this.actor.system.skills[skillId]?.trained ?? false;
     await this.actor.update({ [`system.skills.${skillId}.trained`]: !currentValue });
+  }
+
+  /**
+   * Handle attack skill trained toggle.
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleAttackTrained(event, target) {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent triggering the row's rollAttack action
+    const attackId = target.dataset.attack;
+    if (!attackId) return;
+
+    const currentValue = this.actor.system.attacks[attackId]?.trained ?? false;
+    await this.actor.update({ [`system.attacks.${attackId}.trained`]: !currentValue });
   }
 
   /**

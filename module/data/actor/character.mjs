@@ -184,18 +184,26 @@ export default class CharacterData extends VagabondActorBase {
         }),
       }),
 
-      // Attack skills with crit thresholds
+      // Attack skills with trained status and crit thresholds
       attacks: new fields.SchemaField({
         melee: new fields.SchemaField({
+          trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         brawl: new fields.SchemaField({
+          trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         ranged: new fields.SchemaField({
+          trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
         finesse: new fields.SchemaField({
+          trained: new fields.BooleanField({ initial: false }),
+          difficulty: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
           critThreshold: new fields.NumberField({ integer: true, initial: 20, min: 1, max: 20 }),
         }),
       }),
@@ -652,8 +660,8 @@ export default class CharacterData extends VagabondActorBase {
     // Calculate Skill Difficulties (also clamps skill crit thresholds)
     this._calculateSkillDifficulties();
 
-    // Clamp attack crit thresholds after Active Effects
-    this._clampAttackCritThresholds();
+    // Calculate Attack Difficulties (also clamps attack crit thresholds)
+    this._calculateAttackDifficulties();
   }
 
   /**
@@ -683,13 +691,28 @@ export default class CharacterData extends VagabondActorBase {
   }
 
   /**
-   * Clamp attack crit thresholds after Active Effects are applied.
-   * Schema constraints don't apply to effect-modified data.
+   * Calculate difficulty values for all attack skills.
+   * Untrained: 20 - stat
+   * Trained: 20 - (stat × 2)
+   * Also clamps crit thresholds after Active Effects.
    *
    * @private
    */
-  _clampAttackCritThresholds() {
-    for (const attackData of Object.values(this.attacks)) {
+  _calculateAttackDifficulties() {
+    const attackStats = CONFIG.VAGABOND?.attackTypes || {};
+
+    for (const [attackId, attackData] of Object.entries(this.attacks)) {
+      const attackConfig = attackStats[attackId];
+      if (!attackConfig) continue;
+
+      const statKey = attackConfig.stat;
+      const statValue = this.stats[statKey]?.value || 0;
+      const trained = attackData.trained;
+
+      // Calculate difficulty: 20 - stat (untrained) or 20 - stat×2 (trained)
+      attackData.difficulty = trained ? 20 - statValue * 2 : 20 - statValue;
+
+      // Clamp crit threshold after Active Effects (schema min doesn't apply to effect-modified data)
       attackData.critThreshold = Math.max(1, Math.min(20, attackData.critThreshold));
     }
   }

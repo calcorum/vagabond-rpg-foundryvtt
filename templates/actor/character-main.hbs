@@ -76,9 +76,16 @@
         <h2 class="section-header">{{localize "VAGABOND.Attacks"}}</h2>
         <div class="attack-skills-grid">
           {{#each attackSkills}}
-          <div class="attack-skill-row interactive-row" role="button" tabindex="0"
-               data-action="rollAttack" data-attack-skill="{{this.id}}"
-               aria-label="{{localize this.label}} {{localize 'VAGABOND.Attack'}}: {{localize 'VAGABOND.Difficulty'}} {{this.difficulty}}">
+          <div class="attack-skill-row {{#if this.trained}}trained{{/if}}" data-attack-skill="{{this.id}}">
+            <button type="button" class="attack-trained-toggle"
+                    data-action="toggleAttackTrained" data-attack="{{this.id}}"
+                    data-tooltip="{{localize 'VAGABOND.ToggleTrained'}}">
+              {{#if this.trained}}
+              <i class="fa-solid fa-check"></i>
+              {{else}}
+              <i class="fa-regular fa-circle"></i>
+              {{/if}}
+            </button>
             <span class="attack-name">{{localize this.label}}</span>
             <span class="attack-stat">({{this.statAbbr}})</span>
             <span class="attack-difficulty">{{this.difficulty}}</span>
@@ -87,6 +94,11 @@
               <i class="fa-solid fa-star" aria-hidden="true"></i>{{this.critThreshold}}
             </span>
             {{/if}}
+            <button type="button" class="attack-roll-btn"
+                    data-action="rollAttack" data-attack-skill="{{this.id}}"
+                    data-tooltip="{{localize 'VAGABOND.RollAttack'}}">
+              <i class="fa-solid fa-dice-d20"></i>
+            </button>
           </div>
           {{/each}}
         </div>

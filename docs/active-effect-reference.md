@@ -61,14 +61,23 @@ Each skill has `trained`, `difficulty`, and `critThreshold` properties.
 - `system.skills.melee.critThreshold` - Modify melee crit threshold
 - `system.skills.sneak.critThreshold` - Modify sneak crit threshold
 
-### Attack Crit Thresholds
+### Attack Skills
 
-| Key                                    | Type   | Range | Description                   |
-| -------------------------------------- | ------ | ----- | ----------------------------- |
-| `system.attacks.melee.critThreshold`   | Number | 1-20  | Melee attack crit threshold   |
-| `system.attacks.brawl.critThreshold`   | Number | 1-20  | Brawl attack crit threshold   |
-| `system.attacks.ranged.critThreshold`  | Number | 1-20  | Ranged attack crit threshold  |
-| `system.attacks.finesse.critThreshold` | Number | 1-20  | Finesse attack crit threshold |
+Each attack skill has `trained`, `difficulty`, and `critThreshold` properties.
+
+**Attack Skills:** `melee`, `brawl`, `ranged`, `finesse`
+
+| Key Pattern                             | Type    | Range      | Description                 |
+| --------------------------------------- | ------- | ---------- | --------------------------- |
+| `system.attacks.<attack>.trained`       | Boolean | true/false | Is attack skill trained?    |
+| `system.attacks.<attack>.difficulty`    | Number  | 1-20       | Roll target (derived)       |
+| `system.attacks.<attack>.critThreshold` | Number  | 1-20       | Crit on this roll or higher |
+
+**Examples:**
+
+- `system.attacks.melee.trained` - Train Melee attack skill
+- `system.attacks.ranged.trained` - Train Ranged attack skill
+- `system.attacks.melee.critThreshold` - Modify melee crit threshold
 
 ### Saves
 

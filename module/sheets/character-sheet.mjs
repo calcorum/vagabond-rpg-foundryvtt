@@ -219,29 +219,23 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
    */
   _prepareAttackSkills() {
     const system = this.actor.system;
-
-    const attackConfig = {
-      melee: { label: "VAGABOND.AttackMelee", stat: "might" },
-      brawl: { label: "VAGABOND.AttackBrawl", stat: "might" },
-      ranged: { label: "VAGABOND.AttackRanged", stat: "awareness" },
-      finesse: { label: "VAGABOND.AttackFinesse", stat: "dexterity" },
-    };
+    const attackConfig = CONFIG.VAGABOND?.attackTypes || {};
 
     const attacks = {};
 
     for (const [key, config] of Object.entries(attackConfig)) {
-      const statValue = system.stats[config.stat]?.value || 0;
-      // Attack difficulty is 20 - stat (always trained)
-      const difficulty = 20 - statValue * 2;
+      const attackData = system.attacks[key];
+      if (!attackData) continue;
 
       attacks[key] = {
         id: key,
         label: config.label,
         stat: config.stat,
         statAbbr: this._getStatAbbr(config.stat),
-        difficulty,
-        critThreshold: system.attacks[key]?.critThreshold || 20,
-        hasCritBonus: (system.attacks[key]?.critThreshold || 20) < 20,
+        trained: attackData.trained,
+        difficulty: attackData.difficulty,
+        critThreshold: attackData.critThreshold || 20,
+        hasCritBonus: (attackData.critThreshold || 20) < 20,
       };
     }
 
