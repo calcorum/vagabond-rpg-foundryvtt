@@ -472,15 +472,8 @@ export default class SpellCastDialog extends VagabondRollDialog {
       modifier: this.rollConfig.modifier,
     });
 
-    // Roll damage if the cast succeeded and spell deals damage
-    let damageResult = null;
-    if (result.success && spell.system.isDamaging() && this.castConfig.damageDice > 0) {
-      const damageFormula = this._getDamageFormula();
-      damageResult = await damageRoll(damageFormula, {
-        isCrit: result.isCrit,
-        rollData: this.actor.getRollData(),
-      });
-    }
+    // Damage is rolled separately via button click (like attacks)
+    // Just pass null for damageResult - the button will handle it
 
     // Spend mana (regardless of success - mana is spent on attempt)
     await this.actor.update({
@@ -513,19 +506,19 @@ export default class SpellCastDialog extends VagabondRollDialog {
       }
     }
 
-    // Send to chat
-    await this._sendToChat(result, damageResult);
+    // Send to chat (damage is rolled separately via button click)
+    await this._sendToChat(result);
   }
 
   /**
    * Send the spell cast result to chat.
    *
    * @param {VagabondRollResult} result - The casting skill check result
-   * @param {Roll|null} damageResult - The damage roll (if applicable)
+   * @param {Roll|null} damageResult - The damage roll (if already rolled, e.g., for updates)
    * @returns {Promise<ChatMessage>}
    * @private
    */
-  async _sendToChat(result, damageResult) {
+  async _sendToChat(result, damageResult = null) {
     const spell = this.spell;
     const castingSkill = this._getCastingSkill();
     const skillConfig = CONFIG.VAGABOND?.skills?.[castingSkill];
@@ -571,11 +564,14 @@ export default class SpellCastDialog extends VagabondRollDialog {
       netFavorHinder: this.netFavorHinder,
       favorSources: this.rollConfig.autoFavorHinder.favorSources,
       hinderSources: this.rollConfig.autoFavorHinder.hinderSources,
-      // Damage info
+      // Damage info (only present if damage was rolled)
       hasDamage: !!damageResult,
       damageTotal: damageResult?.total,
       damageFormula: damageResult?.formula,
       damageDice: this.castConfig.damageDice,
+      // Show damage button if cast succeeded and there's a damage formula to roll
+      pendingDamageFormula: this._getDamageFormula(),
+      showDamageButton: result.success && !!this._getDamageFormula() && !damageResult,
       // Effect info
       includeEffect: this.castConfig.includeEffect,
       hasEffect: Boolean(spell.system.effect && spell.system.effect.trim()),
@@ -591,13 +587,30 @@ export default class SpellCastDialog extends VagabondRollDialog {
     const rolls = [result.roll];
     if (damageResult) rolls.push(damageResult);
 
-    // Create the chat message
+    // Create the chat message with flags for later damage rolling
+    const damageFormula = this._getDamageFormula();
     const chatData = {
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content,
       rolls,
       sound: CONFIG.sounds.dice,
+      flags: {
+        vagabond: {
+          type: "spell-cast",
+          actorId: this.actor.id,
+          spellId: spell.id,
+          spellName: spell.name,
+          damageFormula,
+          damageType: spell.system.damageType,
+          damageTypeLabel: game.i18n.localize(
+            CONFIG.VAGABOND?.damageTypes?.[spell.system.damageType] || spell.system.damageType
+          ),
+          isCrit: result.isCrit,
+          success: result.success,
+          damageRolled: !!damageResult,
+        },
+      },
     };
 
     return ChatMessage.create(chatData);

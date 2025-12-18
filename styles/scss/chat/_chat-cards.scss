@@ -545,8 +545,36 @@
 .vagabond.chat-card.spell-card,
 .vagabond.chat-card.spell-cast {
   .card-header {
-    .spell-name {
-      margin: 0;
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+
+    .spell-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-sm;
+      border: 1px solid var(--color-border);
+      object-fit: cover;
+    }
+
+    .header-text {
+      flex: 1;
+      min-width: 0; // Prevent flex overflow
+
+      .spell-name {
+        margin: 0;
+        font-size: $font-size-base;
+        color: var(--color-text-primary);
+      }
+
+      .casting-skill-badge {
+        font-size: $font-size-xs;
+        padding: $spacing-1 $spacing-2;
+        background-color: rgba(112, 80, 176, 0.2);
+        color: var(--color-reason);
+        border-radius: $radius-full;
+        font-weight: $font-weight-medium;
+      }
     }
 
     .mana-cost-badge {
@@ -563,6 +591,37 @@
     }
   }
 
+  // Cast configuration display (delivery, duration, mana)
+  .cast-config {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-2;
+    margin: $spacing-2 $spacing-3;
+    padding: $spacing-2;
+    background-color: var(--color-bg-tertiary);
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+
+    .config-item {
+      display: flex;
+      gap: $spacing-1;
+
+      .label {
+        color: var(--color-text-muted);
+      }
+
+      .value {
+        font-weight: $font-weight-medium;
+        color: var(--color-text-primary);
+
+        i {
+          color: var(--color-warning);
+          margin-left: $spacing-1;
+        }
+      }
+    }
+  }
+
   .spell-effect {
     padding: $spacing-3;
     font-style: italic;
@@ -570,6 +629,109 @@
     background-color: var(--color-bg-secondary);
     margin: $spacing-3;
     color: var(--color-text-secondary);
+  }
+
+  // Spell effect section in chat (different from .spell-effect above)
+  .spell-effect-section {
+    margin: $spacing-3;
+    padding: $spacing-3;
+    background-color: var(--color-bg-secondary);
+    border-radius: $radius-md;
+    border-left: 3px solid var(--color-accent-primary);
+
+    .effect-header {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $spacing-2;
+      margin-bottom: $spacing-2;
+      font-weight: $font-weight-semibold;
+      color: var(--color-accent-primary);
+    }
+
+    .effect-text {
+      font-size: $font-size-sm;
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    .crit-effect {
+      margin-top: $spacing-2;
+      padding-top: $spacing-2;
+      border-top: 1px solid var(--color-border);
+
+      .crit-label {
+        font-weight: $font-weight-semibold;
+        color: var(--color-warning);
+      }
+
+      .crit-text {
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+        font-style: italic;
+      }
+    }
+  }
+
+  // Damage section (similar to attack-roll)
+  .damage-section {
+    margin: $spacing-3;
+    padding: $spacing-3;
+    background-color: rgba(201, 68, 68, 0.1);
+    border: 1px solid rgba(201, 68, 68, 0.3);
+    border-radius: $radius-md;
+
+    &.critical {
+      background-color: rgba(212, 163, 44, 0.15);
+      border-color: var(--color-warning);
+
+      .damage-total {
+        color: var(--color-warning);
+      }
+    }
+
+    .damage-header {
+      @include flex-center;
+      gap: $spacing-2;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacing-2;
+      color: var(--color-text-primary);
+
+      i {
+        color: var(--color-danger);
+      }
+
+      .crit-label {
+        color: var(--color-warning);
+        font-size: $font-size-sm;
+      }
+    }
+
+    .damage-result {
+      @include flex-center;
+      gap: $spacing-2;
+
+      .damage-total {
+        font-family: $font-family-header;
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bold;
+        color: var(--color-danger);
+        line-height: 1;
+      }
+
+      .damage-type {
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+        text-transform: capitalize;
+      }
+    }
+
+    .damage-formula {
+      @include flex-center;
+      margin-top: $spacing-2;
+      font-family: $font-family-mono;
+      font-size: $font-size-sm;
+      color: var(--color-text-muted);
+    }
   }
 
   .spell-meta {
@@ -620,6 +782,54 @@
     border-radius: $radius-md;
     font-size: $font-size-sm;
     color: var(--color-warning);
+  }
+
+  // Roll Damage button (same style as attack-roll)
+  .card-buttons {
+    .roll-damage-btn {
+      @include flex-center;
+      gap: $spacing-2;
+      width: 100%;
+      padding: $spacing-2 $spacing-3;
+      background-color: rgba(201, 68, 68, 0.2);
+      border: 1px solid var(--color-danger);
+      border-radius: $radius-md;
+      color: var(--color-danger);
+      font-weight: $font-weight-semibold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover:not(:disabled) {
+        background-color: rgba(201, 68, 68, 0.3);
+        border-color: var(--color-danger);
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      &.critical {
+        background-color: rgba(212, 163, 44, 0.2);
+        border-color: var(--color-warning);
+        color: var(--color-warning);
+
+        &:hover:not(:disabled) {
+          background-color: rgba(212, 163, 44, 0.3);
+        }
+      }
+
+      .crit-label {
+        font-size: $font-size-sm;
+        color: var(--color-warning);
+      }
+
+      .damage-preview {
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+        color: var(--color-text-secondary);
+      }
+    }
   }
 }
 

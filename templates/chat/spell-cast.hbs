@@ -106,7 +106,7 @@
   {{/if}}
   {{/if}}
 
-  {{!-- Damage Section (if hit and dealing damage) --}}
+  {{!-- Damage Section (if damage was rolled) --}}
   {{#if hasDamage}}
   <div class="damage-section {{#if isCrit}}critical{{/if}}">
     <div class="damage-header">
@@ -123,6 +123,20 @@
     <div class="damage-formula">
       {{damageFormula}}
     </div>
+  </div>
+  {{/if}}
+
+  {{!-- Roll Damage Button (if cast succeeded but damage not yet rolled) --}}
+  {{#if showDamageButton}}
+  <div class="card-buttons">
+    <button type="button" class="roll-damage-btn {{#if isCrit}}critical{{/if}}">
+      <i class="fa-solid fa-burst"></i>
+      {{localize "VAGABOND.RollDamage"}}
+      {{#if isCrit}}
+      <span class="crit-label">({{localize "VAGABOND.Critical"}}!)</span>
+      {{/if}}
+      <span class="damage-preview">({{pendingDamageFormula}})</span>
+    </button>
   </div>
   {{/if}}
 

@@ -654,6 +654,189 @@ async function _extractAttackDataFromMessage(message) {
 }
 
 /* -------------------------------------------- */
+/*  Spell Damage Roll Handling                  */
+/* -------------------------------------------- */
+
+/**
+ * Handle clicks on "Roll Damage" buttons in spell chat cards.
+ * Rolls damage using the stored spell data and updates the message.
+ */
+Hooks.on("renderChatMessage", (message, html) => {
+  // Only handle spell-cast messages
+  const flags = message.flags?.vagabond;
+  if (!flags || flags.type !== "spell-cast") return;
+
+  // Find damage roll buttons in this message
+  html.find(".roll-damage-btn").on("click", async (event) => {
+    event.preventDefault();
+
+    const button = event.currentTarget;
+
+    // Verify damage hasn't been rolled yet
+    if (flags.damageRolled) {
+      ui.notifications.warn("Damage has already been rolled for this spell");
+      return;
+    }
+
+    // Disable button immediately to prevent double-clicks
+    button.disabled = true;
+    button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Rolling...';
+
+    try {
+      // Get the actor for roll data
+      const actor = game.actors.get(flags.actorId);
+      if (!actor) {
+        ui.notifications.error("Could not find actor for damage roll");
+        return;
+      }
+
+      // Import damageRoll function
+      const { damageRoll } = await import("./dice/rolls.mjs");
+
+      // Roll damage
+      const roll = await damageRoll(flags.damageFormula, {
+        isCrit: flags.isCrit,
+        rollData: actor.getRollData(),
+      });
+
+      // Render updated content with damage
+      const content = await renderTemplate("systems/vagabond/templates/chat/spell-cast.hbs", {
+        // Original spell data from message content
+        ...(await _extractSpellDataFromMessage(message)),
+        // Damage data
+        hasDamage: true,
+        damageTotal: roll.total,
+        damageFormula: roll.formula,
+        isCrit: flags.isCrit,
+        showDamageButton: false,
+      });
+
+      // Update the message with damage rolled
+      await message.update({
+        content,
+        rolls: [...message.rolls, roll],
+        "flags.vagabond.damageRolled": true,
+      });
+
+      // Play dice sound
+      AudioHelper.play({ src: CONFIG.sounds.dice }, true);
+    } catch (error) {
+      console.error("Vagabond RPG | Error rolling spell damage:", error);
+      ui.notifications.error("Failed to roll damage");
+      button.disabled = false;
+      button.innerHTML = '<i class="fa-solid fa-burst"></i> Roll Damage';
+    }
+  });
+});
+
+/**
+ * Extract spell data from an existing chat message for re-rendering.
+ * @param {ChatMessage} message - The chat message
+ * @returns {Promise<Object>} Template data extracted from the message
+ * @private
+ */
+async function _extractSpellDataFromMessage(message) {
+  const flags = message.flags?.vagabond || {};
+  const content = message.content;
+
+  // Parse values from the message HTML
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(content, "text/html");
+
+  // Extract spell info
+  const spellImg = doc.querySelector(".spell-icon")?.getAttribute("src") || "";
+  const spellName = doc.querySelector(".spell-name")?.textContent || flags.spellName || "Unknown";
+  const castingSkillLabel = doc.querySelector(".casting-skill-badge")?.textContent || "";
+
+  // Extract cast config
+  const deliveryLabel =
+    doc.querySelector(".config-item.delivery .value")?.textContent?.trim() || "";
+  const durationLabel =
+    doc.querySelector(".config-item.duration .value")?.textContent?.trim() || "";
+  const manaCost = doc.querySelector(".config-item.mana-cost .value")?.textContent?.trim() || "0";
+
+  // Extract roll result
+  const total = doc.querySelector(".roll-total")?.textContent || "0";
+  const status = doc.querySelector(".roll-status .status")?.classList;
+  const isCrit = status?.contains("critical") || false;
+  const isFumble = status?.contains("fumble") || false;
+  const success = status?.contains("success") || status?.contains("critical") || false;
+
+  // Extract formula and breakdown
+  const formula = doc.querySelector(".roll-formula .value")?.textContent || "";
+  const d20Result = doc.querySelector(".d20-result")?.textContent?.replace(/[^\d]/g, "") || "0";
+  const favorDieEl = doc.querySelector(".favor-die");
+  const favorDie = favorDieEl?.textContent?.replace(/[^\d-]/g, "") || null;
+  const netFavorHinder = favorDieEl?.classList.contains("favor")
+    ? 1
+    : favorDieEl?.classList.contains("hinder")
+      ? -1
+      : 0;
+  const modifier = doc.querySelector(".modifier")?.textContent?.replace(/[^\d-]/g, "") || null;
+
+  // Extract difficulty info
+  const difficulty = doc.querySelector(".difficulty .value")?.textContent || "10";
+  const critThreshold =
+    doc.querySelector(".crit-threshold .value")?.textContent?.replace(/[^\d]/g, "") || "20";
+
+  // Extract spell effect
+  const effectText = doc.querySelector(".spell-effect-section .effect-text")?.innerHTML || "";
+  const critEffectText = doc.querySelector(".spell-effect-section .crit-text")?.innerHTML || "";
+  const hasEffect = !!effectText;
+  const includeEffect = hasEffect;
+
+  // Extract focus indicator
+  const isFocus = !!doc.querySelector(".focus-indicator");
+
+  // Extract favor/hinder sources
+  const favorSourcesEl = doc.querySelector(".favor-sources span");
+  const hinderSourcesEl = doc.querySelector(".hinder-sources span");
+  const favorSources =
+    favorSourcesEl?.textContent
+      ?.replace(/^[^:]+:\s*/, "")
+      .split(", ")
+      .filter(Boolean) || [];
+  const hinderSources =
+    hinderSourcesEl?.textContent
+      ?.replace(/^[^:]+:\s*/, "")
+      .split(", ")
+      .filter(Boolean) || [];
+
+  return {
+    spell: {
+      id: flags.spellId,
+      name: spellName,
+      img: spellImg,
+      damageType: flags.damageType,
+      damageTypeLabel: flags.damageTypeLabel,
+      effect: effectText,
+      critEffect: critEffectText,
+      isDamaging: !!flags.damageFormula,
+    },
+    castingSkillLabel,
+    deliveryLabel,
+    durationLabel,
+    isFocus,
+    manaCost,
+    total,
+    d20Result,
+    favorDie: favorDie ? parseInt(favorDie) : null,
+    modifier: modifier ? parseInt(modifier) : null,
+    formula,
+    difficulty,
+    critThreshold,
+    success,
+    isCrit,
+    isFumble,
+    netFavorHinder,
+    favorSources,
+    hinderSources,
+    hasEffect,
+    includeEffect,
+  };
+}
+
+/* -------------------------------------------- */
 /*  Quench Test Registration                    */
 /* -------------------------------------------- */
 
