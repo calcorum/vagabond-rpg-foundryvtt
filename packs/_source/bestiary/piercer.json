@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstpiercer00",
+  "_key": "!actors!vgbdBstpiercer00",
+  "name": "Piercer",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 3.6,
+    "armor": 3,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "3d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Drop [Melee Attack]: 10 (3d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Falling Ambush: Does not take falling damage from\nheights of 30' or shorter.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

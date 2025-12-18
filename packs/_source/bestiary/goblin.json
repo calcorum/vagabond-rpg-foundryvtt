@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgoblin000",
+  "_key": "!actors!vgbdBstgoblin000",
+  "name": "Goblin",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 7,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Determined by type on table below.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Sun-Averse: Is Vulnerable while in Sunlight</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

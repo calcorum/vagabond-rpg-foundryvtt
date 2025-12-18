@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstharpy0000",
+  "_key": "!actors!vgbdBstharpy0000",
+  "name": "Harpy",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.5,
+    "armor": 1,
+    "morale": 2,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Enthralling Song [Cast, all that hear it (Focus) | Will]\n(Recharge Cd6): Charmed (Cd4) and must Move\ntoward this Being.\nClaws [Melee Attack]: 3 (d6)\nWeapon [Attack]: 3 (d6) or (by Weapon)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

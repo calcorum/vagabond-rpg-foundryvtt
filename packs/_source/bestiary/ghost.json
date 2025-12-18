@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstghost0000",
+  "_key": "!actors!vgbdBstghost0000",
+  "name": "Ghost",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 3.8,
+    "armor": 4,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Chill Touch [Cast, Touch | Endure]: 3 (d6) and +1\nFatigue\nPosession [Cast, Remote | Will] (Recharge Cd6):\nThis Being gains control of the Target while it is alive,\nunless forced out by an effect that turns Undead or\ndispells magic</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Aging Terror II [Enemies' first time seeing it and on\ntheir Turns | Will]: Frightened (Cd6) and aged 10\n(d20) years.\nNightwalker: Can\u2019t Move or Target over lines of salt or\nin areas illuminated by Sunlight. It is Incapacitated and\nBurning (d8) while in Sunlight.\nStatblocks // Undead\nStatblocks // Undead\n177\n177\nBestiary</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

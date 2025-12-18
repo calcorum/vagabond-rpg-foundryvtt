@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsthaggreen0",
+  "_key": "!actors!vgbdBsthaggreen0",
+  "name": "Hag, Green",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 4.0,
+    "armor": 3,
+    "morale": 4,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 4 (d8) and Restrained if it's this\nBeing's second Claw to hit it this Turn\nShapeshift [Cast, Self (Focus)]: Takes on the\nappearance of a Medium Humanlike.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: It can breathe air and water.\nFade Out: When it Moves, it turns itself and anything\nit is carrying Invisible for the duration (Focus). If it\nhas a Being Restrained, it turns them Invisible for the\nduration as well.\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.\nTerror I: Enemies that can see it for the first time and\nat the start of their Turns must pass [Will] or be\nFrightened (Cd4).\nBestiary\nBestiary\n154\n154\n\fHag, Grove TL: 9.7\nMedium Fae (Shapechanger)\nNightmarish brutes of crones that reside in swamps\nand dead woods. They are known for devouring\nhumans with their iron claws and teeth.\nHD: 8 (36 HP)\b Speed: 50' (Cling)\nZone: Frontline Morale: 10\b # Appearing: 1\nSenses: Allsight, Darksight\nArmor: 4 [as (+1) Plate]\nWeak: Cold Iron Weapons\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite. A Being hit by all\nthree is Restrained and takes 18 (4d8) damage at the\nstart of this Being's Turns.\nBite [Melee Attack]: 7 (d8+3)\nClaw [Melee Attack]: 7 (d8+3)\nShapeshift [Cast, Self] (Focus): Takes on the\nappearance of a Medium Humanlike.\nABILITIES\nBlair Omniscience: It is always aware of any Beings\nwithin the woodland it claims as its domain.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nTerror I: Enemies that can see it for the first time and at\nthe start of their Turns must pass a [Will] Save or be\nFrightened until they pass this Check on a subsequent\nTurn, or for Cd4 Rounds afterwards.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

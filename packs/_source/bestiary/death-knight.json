@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstdeathknig",
+  "_key": "!actors!vgbdBstdeathknig",
+  "name": "Death Knight",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 11,
+    "hp": {
+      "value": 49,
+      "max": 49
+    },
+    "tl": 9.6,
+    "armor": 4,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 25
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Stun [Cast, all who hear it | Will] (1/Day): Paralyzed\n(Cd6 Rounds)\nMulti-Attack: 3\u00d7(+2) Longsword\n(+2) Longsword [Melee Attack]: 6 (d8+2)\nHellfire [Cast, 20-foot Sphere | Reflex] (1/Day): 35\n(10d6) and Burning (Cd6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Fear Aura [Aura Near | Will]: Frightened until they\npass this Check on a subsequent Turn, or Cd6 after.\nDispel: It can skip its Move to end a Spell affecting it.\nZombie: It can't be reduced below 1 HP unless damaged\nby a Crit, damage it is Weak to, or while in Sunlight.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

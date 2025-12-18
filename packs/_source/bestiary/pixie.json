@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstpixie0000",
+  "_key": "!actors!vgbdBstpixie0000",
+  "name": "Pixie",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 2.0,
+    "armor": 3,
+    "morale": 7,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "fae",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d4",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Dagger [Melee Attack]: 2 (d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nMajor Invisibility: It can magically become Invisible\nduring its Turn (No Action, requires Focus).\nPixie Dust [Item]: It can produce one dose of Pixie\nDust once per Day, which gives a Medium or smaller\nBeing Fly for 1 Hour.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

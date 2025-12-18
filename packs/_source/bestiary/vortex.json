@@ -1,0 +1,41 @@
+{
+  "_id": "vgbdBstvortex000",
+  "_key": "!actors!vgbdBstvortex000",
+  "name": "Vortex",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 2.9,
+    "armor": 3,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d8",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Gale: Gusts surround it out to Near, Hindering\nEnemy Ranged Attacks Targeting those within.\nWhirlwind: Medium or smaller Close Beings must pass\n[Endure] against being Restrained at the start of their\nTurns or be thrown 25 (d10\u00d75) feet in the air.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

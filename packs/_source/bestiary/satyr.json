@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstsatyr0000",
+  "_key": "!actors!vgbdBstsatyr0000",
+  "name": "Satyr",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.3,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 35
+    },
+    "appearing": "2d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Sleep [Cast, Beings who hear it] (1/Day):\nUnconscious (Cd6 or until awoken)\nCharm [Cast, Beings who hear it | Will] (1/Day):\nCharmed (until this Being drops Focus). Those Charmed\nthis way must Move toward this Being and use their\nAction to obey its commands.\nHorns [Melee Attack]: 5 (2d4)\nFear [Cast, Beings who hear it | Will] (1/Day):\nFrightened (Cd4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nPanpipes [Item]: It casn't use Sleep, Charm, or Fear\nwithout its panpipes.\nBestiary\nBestiary\n156\n156\n\fUnicorn TL: 4.2\nLarge Fae (Divine)\nHD: 4 (18 HP)\b Speed: 80'\nZone: Midline Morale: 7\b # Appearing: 1\nSenses: Allsight, Telepathy (Far)\nArmor: 3 [as (+1) Chain]\nWeak: Cold Iron Weapons\nStatus Immunities: Charmed, Confused, Frightened\nACTIONS\nHeal [Cast, Touch] (1/Day): Regains 7 (2d6) HP\nand removes the Blinded, Confused, Paralyzed, or\nSickened Status\nMulti-Attack: 2\u00d7Hoof and 1\u00d7Horn\nHoof [Melee Attack]: 4 (d8)\nHorn [Melee Attack]: 4 (d8)\nTeleport [Cast] (1/Day): Teleports itself and any\nBeing mounting it up to Far\nABILITIES\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nRegenerate I: Regains 4 (d8) HP on each of its Turns.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

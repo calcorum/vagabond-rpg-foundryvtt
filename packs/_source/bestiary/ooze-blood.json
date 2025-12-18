@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstoozeblood",
+  "_key": "!actors!vgbdBstoozeblood",
+  "name": "Ooze, Blood",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 1.7,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Pseudopod [Melee Attack]: 7 (2d6), and this Being is\nhealed for the damage dealt</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amorphous: It can Move into occupied space as small\nas 1 inch without squeezing.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstminotaur0",
+  "_key": "!actors!vgbdBstminotaur0",
+  "name": "Minotaur",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.9,
+    "armor": 2,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Gore and 1\u00d7Greataxe\nGore [Melee Attack]: 7 (3d4) and Prone if failed by\n10 or more.\nGreataxe [Melee Attack, Cleave]: 5 (d10) or half to\ntwo Targets</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

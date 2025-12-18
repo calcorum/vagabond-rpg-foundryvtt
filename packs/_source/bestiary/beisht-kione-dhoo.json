@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstbeishtkio",
+  "_key": "!actors!vgbdBstbeishtkio",
+  "name": "Beisht Kione Dhoo",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 13,
+    "hp": {
+      "value": 58,
+      "max": 58
+    },
+    "tl": 6.6,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "fae",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Bite and 1\u00d7Slam\nBite [Melee Attack]: 10 (3d6) and Restrained if it is\nLarge or smaller. If this Being has a Target this way, it\ncan only Bite the Restrained Target.\nSlam [Melee Attack]: 11 (2d10) and shoved Prone if\nLarge or smaller than this Being.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: Breathes air and water.\nDreadnought: Deals double damage to vehicles.\nTerror III: Enemies that can see it for the first time and\nat the start of their Turns must pass a [Will] Save or be\nFrightened (until they pass this Check on a subsequent\nTurn, or for Cd8 Rounds afterwards).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

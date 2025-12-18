@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstfirebat00",
+  "_key": "!actors!vgbdBstfirebat00",
+  "name": "Firebat",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 1.0,
+    "armor": 1,
+    "morale": 4,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "primordial",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack]: Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Fire: Close Beings are Burning (d4). It is Burning\n(d8) while in water.\nIlluminating: Sheds Light out to Near.\nStatblocks // Primordials\nStatblocks // Primordials\n171\n171\nBestiary\n\fGelatinous Cube TL: 1.3\nLarge Primordial (Slime)\nA mostly transparent cube of slime that lurks in\npassageways, attempting to trap unaware delvers.\nHD: 4 (18 HP)\b Speed: 10'\nZone: Frontline Morale: 12\b # Appearing: 1\nSenses: Blindsense\nArmor: 0 [as Unarmored]\nImmune: Acid, Cold, Shock\nStatus Immunities: Blinded, Charmed, Fatigue,\nFrightened, Prone, Suffocating\nACTIONS\nEngulf [Melee Attack]: Restrained\nABILITIES\nAmorphous: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.\nEngulfer: Beings that share its space are Burning (2d4).\nSticky: Hinders attempts to end being Restrained by it.\nBeings that make physical contact with it must pass\n[Endure] or be Restrained.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstbasilisk0",
+  "_key": "!actors!vgbdBstbasilisk0",
+  "name": "Basilisk",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.1,
+    "armor": 3,
+    "morale": 8,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Glare [Cast, a Being looking at it | Endure] (Recharge\nCd4): Cursed (turned to stone until this Being dies)\nBite [Melee Attack]: 5 (d10) and pass an [Endure] Save\nor be Cursed (turned to stone until this Being dies)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

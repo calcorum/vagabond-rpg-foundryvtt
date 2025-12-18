@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstjarjacha0",
+  "_key": "!actors!vgbdBstjarjacha0",
+  "name": "Jarjacha",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 0.8,
+    "armor": 0,
+    "morale": 7,
+    "zone": "backline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Glare [Cast, a Humanlike that can see it | Will]\n(Recharge Cd8): Gains 3 (d4+1) Fatigue.\nStomp [Melee Attack]: 2 (d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstgiant0000",
+  "_key": "!actors!vgbdBstgiant0000",
+  "name": "Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.9,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Greatclub [Melee Attack, 10']: 9 (2d8)\nRock [Ranged Attack]: 9 (2d6)\nType Changes\nCyclops One-Eyed: Attacks as if Vulnerable against\nTargets further than Near.\nHill \u2014\nStone Armor: 3 [as (+1) Chain]</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstpoteadlar",
+  "_key": "!actors!vgbdBstpoteadlar",
+  "name": "Potead, Large",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.4,
+    "armor": 2,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "2d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Slam [Melee Attack]: 9 (2d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nBestiary\nBestiary\n122\n122\n\fRipworm TL: 3.1\nMedium Artificial\nTunneling automatons known to wreak havoc on\nstructures by undermining its foundation. They can\ncut through solid rock and earth with ease.\nHD: 4 (18 HP)\b Speed: 20'\nZone: Frontline Morale: 10\b # Appearing: d4\nSenses: Seismicsense 60'\nArmor: 3 [as Plate]\nImmune: Poison\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nRipsaw [Melee Attack]: 7 (2d6)\nABILITIES\nImmutable: It can't be transformed.\nTunneller: Can Move through solid rock and earth,\nleaving a 3-foot tunnel in its path.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

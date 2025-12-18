@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgolemston",
+  "_key": "!actors!vgbdBstgolemston",
+  "name": "Golem, Stone",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 13,
+    "hp": {
+      "value": 58,
+      "max": 58
+    },
+    "tl": 7.5,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Slow Down [Cast, Aura Near | Will] (Recharge\nCd4): Dazed (Cd4)\nMulti-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 13 (3d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

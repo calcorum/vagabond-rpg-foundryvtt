@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstflyingspe",
+  "_key": "!actors!vgbdBstflyingspe",
+  "name": "Flying Spellbook",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.7,
+    "armor": 0,
+    "morale": 7,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "artificial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "d6",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Freeze [Cast, Remote | Endure] (Recharge Cd4): 3\n(d6) and its Speed is reduced by 10 feet (Cd4).\nZap [Cast, Bolt | Reflex] (Recharge Cd4): 3 (d6) and\nDazed (Cd4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Antimagic Vulnerability: It is Dazed for Cd4 if\naffected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.\nBestiary\nBestiary\n118\n118\n\fFlying Sword TL: 2.3\nSmall Artificial\nAn enchanted sword that dances through the air.\nHD: 1 (1 HP)\b Speed: 0' (Fly 50')\nZone: Frontline Morale: -\b # Appearing: d4\nSenses: Blindsight\nArmor: 3 [as Plate]\nImmune: Poison\nStatus Immunities: Charmed, Frightened, Sickened,\nSuffocating\nACTIONS\nSlash [Melee Attack]: 4 (d8)\nABILITIES\nAntimagic Vulnerability: It is Dazed (Cd4) if affected\nby the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstairbubble",
+  "_key": "!actors!vgbdBstairbubble",
+  "name": "Air Bubble",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 1.6,
+    "armor": 0,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Engulf [Melee Attack]: Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Seep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.\nEngulfer: Beings that share its space are Burning (2d4).\nSticky: Hinders attempts to end being Restrained by it.\nBeings that make physical contact with it must pass\n[Endure] or be Restrained.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstlivingsta",
+  "_key": "!actors!vgbdBstlivingsta",
+  "name": "Living Statue, Iron",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.7,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "artificial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Weapon [Melee Attack]: 4 (d8) or (by Weapon)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nIron Absorption: When hit with a metal weapon that\nisn\u2019t a Relic, the attacker must pass [Will] or the\nweapon becomes stuck in this Being's body, and can\nonly be removed if this Being is killed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

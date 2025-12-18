@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstwolfinshe",
+  "_key": "!actors!vgbdBstwolfinshe",
+  "name": "Wolf in Sheep's Clothing",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 2.4,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "1",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack]: 5 (2d4)\nTentacle [Melee Attack, Near]: 2 (d4)\nBestiary\nBestiary\n166\n166\n\fZotz, Demon TL: 9.2\nHuge Outer (Hellspawn)\nMassive bats out of hell.\nHD: 14 (63 HP)\b Speed: 20' (Fly 80')\nZone: Frontline Morale: 11\b # Appearing: d4\nSenses: Echolocation\nArmor: 4 [as (+1) Plate]\nImmune: Poison; Physical from non-Relics\nStatus Immunities: Fatigued, Frightened\nACTIONS\nShriek [Action, Far Aura | Will] (Recharge Cd4):\nFrightened (Cd6, it can't hear)\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\n(+2) Claw [Melee Attack]: 9 (2d6+2)\n(+2) Bite [Melee Attack]: 15 (3d8+2) and this Being\nis healed for the damage dealt</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Avatar of Death: No Being within Near can be\nrevived.\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.\nNimble: Attacks against it can\u2019t be Favored if it can Move.\nStatblocks // Outers\nStatblocks // Outers\n167\n167\nBestiary\n\fPRIMORDIALS\nAftertheSparkofCreation,while\nthe gods began performing the\nMelody of Time, the first of\nits audience members were\nPrimordial creatures of pure\nelemental potential. It is\ntheoried that all material came\nfrom these primal elementals,\nbut there are some Beings with\nmuch closer ties to them. Over\ntime, the energy of air, earth, fire,\nand water swirled together, creating\nthe Primordial descendants.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstelementa2",
+  "_key": "!actors!vgbdBstelementa2",
+  "name": "Elemental, Greater Air",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 16,
+    "hp": {
+      "value": 72,
+      "max": 72
+    },
+    "tl": 7.3,
+    "armor": 5,
+    "morale": 10,
+    "zone": "midline",
+    "size": "huge",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Gust [Ranged Attack]: 13 (3d8) plus 4 (d8) if flying</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Gale: Gusts surround it out to Near, Hindering\nEnemy Ranged Attacks Targeting those within.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

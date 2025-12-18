@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstvioletfun",
+  "_key": "!actors!vgbdBstvioletfun",
+  "name": "Violet Fungus",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.7,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "d4",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Tendril\nTendril [Melee Attack]: 5 (2d4) and pass [Endure] or\nbecome Sickened (Cd8, +1 Fatigue each Round)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

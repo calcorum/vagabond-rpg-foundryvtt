@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstlivingst1",
+  "_key": "!actors!vgbdBstlivingst1",
+  "name": "Living Statue, Rock",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 5.0,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "artificial",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d4",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Magma Jet\nMagma Jet [Ranged Attack]: 7 (2d6) and Burning\n(Cd6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nStatblocks // Artificials\nStatblocks // Artificials\n121\n121\nBestiary\n\fNecrophidius TL: 2.0\nLarge Artificial/Undead\nSlithering, animated bones with a serpentine form\nand humanoid head.\nHD: 2 (9 HP)\b Speed: 25'\nZone: Frontline Morale: -\b # Appearing: 1\nSenses: Blindsight\nArmor: 2 [as Chain]\nImmune: Poison\nWeak: Blunt\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nDance of Death [Cast, Remote | Will]: Dazed (Cd4)\nBite [Melee Attack]: 4 (d8) and pass [Endure] or\nbecome Sickened (Cd4, Paralyzed)\nABILITIES\nImmutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstelementa4",
+  "_key": "!actors!vgbdBstelementa4",
+  "name": "Elemental, Greater Fire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 16,
+    "hp": {
+      "value": 72,
+      "max": 72
+    },
+    "tl": 8.3,
+    "armor": 5,
+    "morale": 10,
+    "zone": "midline",
+    "size": "huge",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Flame [Ranged Attack]: 13 (3d8) and Burning (Cd8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Fire: Close Beings are Burning (d10).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.\nBestiary\nBestiary\n170\n170\n\fElemental, Lesser Water TL: 3.9\nMedium Primordial\nHD: 8 (36 HP)\b Speed: 0' (Swim 30')\nZone: Midline Morale: 10\b # Appearing: 1\nSenses: Blindsense\nArmor: 3 [as Plate]\nImmune: Acid, Poison; Physical from non-Relics\nWeak: Shock\nStatus Immunities: Fatigued, Prone, Sickened,\nSuffocating, Restrained\nACTIONS\nStrike [Melee Attack]: 4 (d8) plus 4 (d8) if in water\nABILITIES\nWaterbound: Must stay Near a body of water.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

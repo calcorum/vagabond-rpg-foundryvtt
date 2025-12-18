@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstgraspingg",
+  "_key": "!actors!vgbdBstgraspingg",
+  "name": "Grasping Goo",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.7,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "primordial",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Pseudopod [Melee Attack]: Restrained, Corroding,\nand Burning (d6) while Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amorphous: It can Move into occupied space as small\nas 1 inch without squeezing.\nFreeze Susceptability: It is Dazed (1 Round) after\nbeing harmed by cold.\nCorroding: Non-Relic metal Items that make contact\nwith it corrode. When this happens, roll a d6 for each\nItem. On a roll of 1, the Item breaks. If the Item that\nbreaks is larger than Medium, this destroys a 1-foot\nsquare hole that is 1-foot deep in it.\nSticky: Hinders attempts to end being Restrained by it.\nBeings that make physical contact with it must pass\n[Endure] or be Restrained.\nBestiary\nBestiary\n172\n172\n\fGreen Slime TL: 1.0\nMedium Primordial (Slime)\nHD: 2 (9 HP)\b Speed: 0' (Cling)\nZone: Frontline Morale: 12 # Appearing: 1\nSenses: Blindsense\nArmor: 0 [as Unarmored]\nImmune: Acid, Poison\nWeak: Cold, Fire\nStatus Immunities: Blinded, Fatigue, Prone, Sickened\nABILITIES\nAmorphous: It can Move into occupied space as small\nas 1 inch without squeezing.\nConsume [Endure]: Beings in its space are Burning\n(2d8). A Being that dies this way is dissolved, and\nbecomes another green slime.\nLiving Sick: Sunlight and any effect that ends the\nSickened Status or kills bacteria kills this Being.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

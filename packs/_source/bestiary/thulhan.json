@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstthulhan00",
+  "_key": "!actors!vgbdBstthulhan00",
+  "name": "Thulhan",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.8,
+    "armor": 3,
+    "morale": 4,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 4\u00d7Tentacle and 1\u00d7Flay\nFlay [Melee Attack, Paralyzed Target]: 5 (d8+1)\nFatigue. If it dies to Fatigue this way, its brain is\nextracted.\nMind Blast [Cast, Cone Far | Will] (Recharge Cd4):\n10 (3d6) and Paralyzed (1 Round)\nTentacle [Melee Attack, Paralyzed Target]: 2 (d4)\nand Restrained if Medium or smaller</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Levitation (Focus): It has Fly.\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.\nStatblocks // Outers\nStatblocks // Outers\n165\n165\nBestiary\n\fVigzud TL: 3.5\nMedium Outer (Beyonder)\nA bearded, panther-like creature with the eyes of\na spider.\nHD: 5 (22 HP)\b Speed: 30' (Climb, Cling)\nZone: Midline Morale: 4\b # Appearing: d2\nSenses: Darksight\nArmor: 2 [as Chain]\nImmune: Poison\nStatus Immunities: Berserk, Frightened, Sickened\nACTIONS\nWeb [Ranged Attack] (Recharge Cd4): Restrained\nby Web\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8) and pass [Will] or\nbecome Sickened (Cd4, Berserk).\nClaw [Melee Attack]: 3 (d6)\nABILITIES\nBloodlust: Beings at or below half HP are Vulnerable\nto its attacks.\nPouncer: If it moves at least 20 feet before making an\nAttack on the same Turn, the Target is shoved Prone\nif it is this Being's size or smaller.\nWeb-Walk: Its Move is not impeded by webbing.\nWeb: Its web is an Object with 5 HP and Armor 1.\nThe webs are Difficult Terrain as a surface, and cause\na Target to be Restrained if hit with a Web Spit\nAttack from the Vigzud.\nThe Vigzud was originally created by Amanda Lee Frank.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

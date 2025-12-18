@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstblackpudd",
+  "_key": "!actors!vgbdBstblackpudd",
+  "name": "Black Pudding",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 8.2,
+    "armor": 2,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Pseudopod [Melee Attack]: 13 (3d8) and Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Pudding Nature: Is Dazed (1 Round) after being\nsubjected to Cold.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.\nEngulfer: Beings that share a space with it are Burning\n13 (3d8).\nPudding Split: If it is larger than Small when subjected\nto Shock or Slash, it splits into two Black Puddings\nwith half its current HP, round up, and are one size\nsmaller. These deal 1 less d8 with its Pseudopod\nAction and Engulfer Ability.\nSticky: Hinders attempts to end being Restrained by it.\nBeings that make physical contact with it must pass\n[Endure] or be Restrained.\nBestiary\nBestiary\n168\n168\n\fEfreeti TL: 5.7\nLarge Primordial (Djinn)\nHD: 10 (45 HP)\b Speed: 30' (Fly 80')\nZone: Frontline Morale: 11 # Appearing: 1\nSenses: Darksight\nArmor: 3 [as Plate]\nImmune: Fire\nACTIONS\nWall of Fire [Cast, 60' Line | Reflex] (3/Day, Focus):\nBurning (d6, while in the flames). It takes this damage\nthe first time it enters the flames while it isn't Burning\nas well.\nConjure Object [Cast, Remote | Reflex] (3/Day): An\nObject no larger than 10'\u00d710' is created. Objects\nmade this way composed of metal or stone disappear\nafter one day.\nMulti-Attack: 2\u00d7Fist\nFist [Melee Attack]: 9 (2d8)\nInvisibility [Cast, Touch | Will] (Focus): Turns Invisible\nfor the duration.\nABILITIES\nRegenerate II: Regains 9 (2d8) HP on each of its Turns.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

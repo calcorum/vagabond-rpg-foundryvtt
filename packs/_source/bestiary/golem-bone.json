@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgolembone",
+  "_key": "!actors!vgbdBstgolembone",
+  "name": "Golem, Bone",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 4.3,
+    "armor": 2,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d2",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 4\u00d7Cutlass\nCutlass [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nLimbs: It is encountered with 5 (d6 + 2) limbs, and\nloses a limb each time it takes at least 4 damage.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

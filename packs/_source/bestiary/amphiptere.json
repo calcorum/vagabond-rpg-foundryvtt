@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstamphipter",
+  "_key": "!actors!vgbdBstamphipter",
+  "name": "Amphiptere",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.9,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Fireball [Ranged Attack] (Recharge Cd4): 3 (d6) and\nBurning (Cd4)\nBite [Melee Attack]: 4 (d8)\nBestiary\nBestiary\n134\n134\n\fAnkheg TL: 5.1\nLarge Cryptid\nHorse-sized, acid-spewing antlions that typically\nmake their nests deep underground.\nHD: 5 (22 HP)\b Speed: 40'\nZone: Frontline Morale: 5\b # Appearing: d6\nSenses: Darksight, Seismicsense\nArmor: 3 [as Chain plus Shield]\nACTIONS\nAcid Spray [Ranged Attack, Near] (1/Day): 18 (4d8)\nand Burning (Cd4)\nBite [Melee Attack]: 10 (3d6) and Burning (Cd4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Soft Underbelly: Its Armor is 0 while it is Prone.\nTunneler: It can Move at full Speed through solid\nearth and stone by digging.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

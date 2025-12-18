@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstagnar0000",
+  "_key": "!actors!vgbdBstagnar0000",
+  "name": "Agnar",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 3.9,
+    "armor": 2,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Spin-Thrash (it can only use this Action while at or\nbelow half HP) [Cast, Aura Near | Endure] (3/Day):\n9 (2d8), deals half on a pass and heals this Being for\nthe damage roll.\nChomp [Melee Attack, Cleave]: 10 (3d6) and\nRestrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Flame Anger: If it takes Fire damage or sees open\nflame, it goes Berserk (Cd4).\nLockjaw: Hinders Checks to end being Restrained by it.\nLeap: If it uses its Move to Jump, any Being within 5\nfeet when it lands must pass a [Reflex] Save or take\n10 (3d6) and be shoved Prone.\nThe Agnar was originally created by Hankerin Ferinale for\nIndex Card RPG.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

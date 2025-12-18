@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstrhagodess",
+  "_key": "!actors!vgbdBstrhagodess",
+  "name": "Rhagodessa",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 20,
+      "max": 20
+    },
+    "tl": 3.0,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Sucker and 1\u00d7Bite\nBite [Melee Attack]: 9 (2d8)\nSucker [Melee Attack]: Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgolemiron",
+  "_key": "!actors!vgbdBstgolemiron",
+  "name": "Golem, Iron",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 18,
+    "hp": {
+      "value": 81,
+      "max": 81
+    },
+    "tl": 8.9,
+    "armor": 5,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Poison Breath and 1\u00d7Greatsword,\nor 2\u00d7Greatsword\nPoison Breath [Cast, Close 10' Cube | Endure]\n(Recharge Cd8): 2 (d4) Fatigue\nGreatsword [Melee Attack]: 13 (2d12)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Fire-Absorber: Fire damage rolls heal it instead.\nImmutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

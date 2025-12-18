@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstelementa8",
+  "_key": "!actors!vgbdBstelementa8",
+  "name": "Elemental, Lesser Fire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.6,
+    "armor": 3,
+    "morale": 10,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Flame [Ranged Attack]: 4 (d8) and Burning (Cd4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Fire: Close Beings are Burning (d6).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

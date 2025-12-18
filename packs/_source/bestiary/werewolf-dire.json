@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstwerewolfd",
+  "_key": "!actors!vgbdBstwerewolfd",
+  "name": "Werewolf, Dire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 5.3,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6) and pass [Will] or be\ncursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 5 (2d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Bloodthirst: It is Berserk and Beings at or below half\nHP make Checks against it as if Vulnerable.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

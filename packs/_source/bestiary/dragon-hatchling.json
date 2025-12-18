@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstdragonhat",
+  "_key": "!actors!vgbdBstdragonhat",
+  "name": "Dragon, Hatchling",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 3.2,
+    "armor": 2,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Breath Attack [Attack | Half damage on a pass]\n(Recharge Cd6): Take an Action to begin this Attack,\nwhich occurs on this Being's next Turn. See [Breath\nAttack] column below.\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8)\nClaw [Melee Attack]: 2 (d4)\nType Breath Attack Immune\nRed [Near Cone | Endure or Reflex]: 7\n(2d6), and Burning (Cd4) if failed\nFire\nBlue [Near Line | Endure or Reflex]: 13\n(2d12), and Dazed (Cd4) if failed\nShock\nGreen [Close Aura | Endure]: 10 (3d6),\nand Sickened (Cd4 dmg) if failed\nPoison\nWhite [Near Cone | Endure or Reflex]:\n10 (3d6), and Dazed (Cd4, Speed\nreduced by 15') if failed\nCold\nBlack [Near Line, 5' wide | Endure\nor Reflex]: 3 (d6) and Burning\n(Cd4) if failed\nAcid\nStatblocks // Cryptids\nStatblocks // Cryptids\n139\n139\nBestiary\n\fDragon Turtle TL: 10.6\nColossal Cryptid\nHD: 30 (135 HP)\b Speed: 10' (Swim 30')\nZone: Frontline Morale: 10 \b # Appearing: 1\nSenses: Darksight\nArmor: 5 [as (+2) Plate]\nImmune: Fire\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Steam Breath or 1\u00d7Bite\nSteam Breath [Attack; Far Cone | Endure or Reflex]\n(Recharge Cd6): 28 (8d6), and Burning (Cd6) if failed\nClaw [Melee Attack]: 7 (2d6)\nBite [Melee Attack]: 18 (4d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

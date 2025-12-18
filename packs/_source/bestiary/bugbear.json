@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstbugbear00",
+  "_key": "!actors!vgbdBstbugbear00",
+  "name": "Bugbear",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.6,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Morningstar [Melee Attack, 10']: 4 (d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Ambusher: If it attacks a Being that has not acted in\nthe Combat, it deals an extra die of damage.\nStatblocks // Cryptids\nStatblocks // Cryptids\n135\n135\nBestiary\n\fBulette TL: 10.9\nLarge Cryptid\nArmored land sharks that rip through the earth.\nHD: 9 (40 HP)\b Speed: 40'\nZone: Frontline Morale: 7\b # Appearing: d2\nSenses: Seismicsense (Far)\nArmor: 4 [as (+1) Plate]\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 26 (4d12)\nClaw [Melee Attack]: 10 (3d6)\nABILITIES\nSoft Underbelly: Its Armor is 0 while it is Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

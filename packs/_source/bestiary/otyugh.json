@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstotyugh000",
+  "_key": "!actors!vgbdBstotyugh000",
+  "name": "Otyugh",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 4.6,
+    "armor": 3,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Tentacle and 1\u00d7Bite\nBite [Melee Attack]: 5 (d10) and pass [Endure] or\nbecome Sickened (until cured, Otyugh Disease)\nTentacle [Melee Attack]: 4 (d8) and Restrained. If\nthe Target is already Restrained this way, it is instead\nslammed into something and takes 7 (2d6) and must\npass an [Endure] Save or be Dazed for 1 Round.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Otyugh Disease: Beings that aren't otyughs that are\nSickened this way must pass an an [Endure] Save every\nday or lose 3 (d6) from their Max HP. This reduction to\ntheirMaxHPlastswhiletheyareSickenedbythisdisease.\nBestiary\nBestiary\n162\n162\n\fPhoenix TL: 10.5\nGiant Outer (Divine)\nHD: 20 (90 HP)\b Speed: 50' (Fly 150')\nZone: Backline Morale: 10\b # Appearing: 1\nSenses: Allsight\nArmor: 5 [as (+3) Chain]\nImmune: Fire; Physical from non-Relics\nStatus Immunities: Charmed, Confused, Paralyzed,\nRestrained, Sickened, Suffocating\nACTIONS\nResurrect [Cast, the corpse of an Ally it is Touching]\n(1/Day): Revived at Full HP with 0 Fatigue\nMulti-Attack: 2\u00d7Talon and 1\u00d7Beak\nTalon [Melee Attack]: 7 (2d6)\nBeak [Melee Attack]: 14 (4d6)\nABILITIES\nFiery Revival (1/Day): If it dies, a ball of fire erupts\nout from it as a Near Aura. All within must pass a\n[Reflex] Save or take 55 (d10\u00d710) and be Burning\n(Cd6). This fire is divine, and ignores Immune to Fire.\nThis Being is than revived in 1 Round at full HP. It will\nalways try to flee until this Ability refreshes.\nIlluminator: Sheds Sunlight in Near.\nLiving Fire: Close Beings are Burning (2d6)\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.\nPhoenix Down [Item; Value 2500g]: Extremely\nmagical Material. Can Use to revive a dead Being\nwhose corpse the down is placed on at full HP. This\ndoes not work on Undead.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

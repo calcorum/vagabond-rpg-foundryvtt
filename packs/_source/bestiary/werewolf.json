@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstwerewolf0",
+  "_key": "!actors!vgbdBstwerewolf0",
+  "name": "Werewolf",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.9,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack, a Restrained Target]: 3 (d6) and\npass [Will] or be cursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 2 (d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Bloodthirst: It is Berserk and Beings at or below half\nHP make Checks against it as if Vulnerable.\nShapechanger: This is a form that a Humanlike cursed\nwith lycanthropy can become when the curse takes\nhold. They revert automatically if they die.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

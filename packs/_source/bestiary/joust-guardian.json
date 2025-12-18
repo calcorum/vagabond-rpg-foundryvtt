@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstjoustguar",
+  "_key": "!actors!vgbdBstjoustguar",
+  "name": "Joust Guardian",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 6.3,
+    "armor": 3,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Assault [Multi-Attack]: Lance and Cannon attack.\nLance [Melee Attack, Near]: 13 (2d12)\nCannon [Ranged Attack (Sphere 10 foot)]: 11 (3d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstsphinxarc",
+  "_key": "!actors!vgbdBstsphinxarc",
+  "name": "Sphinx, Archon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 24,
+    "hp": {
+      "value": 108,
+      "max": 108
+    },
+    "tl": 12.6,
+    "armor": 6,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "outer",
+    "speed": {
+      "value": 60
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Cast of its choice\nClaw [Melee Attack]: 14 (4d6)\nArcane Wing [Cast, 2\u00d7Remote | Reflex]: 27 (5d10)\nReality Warp [Cast, Near Cone | Endure]: Roll d4;\n1 Gate [Endure]: Pulled Close to this Being\n2 Riddle [Will]: Dazed (Cd4)\n3 Time Lock [Endure]: Paralyzed (Cd4)\n4 Unmake [Reflex]: 13 (3d8)\nBanish [Cast, Remote (Focus) | Will] (Focus):\nIncapacitated (Cd4, sent to a pocket dimension)\nDispel Magic [Cast, Remote | Will] (3/Day): A magic\neffect of its choice is dispelled or suspended for 2d6\nhours if it is a Curse or Relic Power</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Future Sight: Hinders Saves against its Attacks.\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nMetalepsis (1/Day): This Being gains the approximate\nanswer to a question it asks itself.\nTeleporting (Recharge Cd4): It can use its Move to\nteleport to an open space it can see.\nBestiary\nBestiary\n164\n164\n\fStolas TL: 11.2\nGiant Outer (Hellspawn)\nStolas daemons are the astronomers of hell,\nappearing as massive owls whose eyes scintillate\nwith a cosmic sprawl. They are created from the\ndeceased souls of philosophers who valued reason\nand pragmatism over humanity and ethics, and\nstolas are extreme utilitarians in their slaughter.\nHD: 27 (121 HP)\b Speed: 40' (Cling; Fly 160')\nZone: Frontline Morale: 11\b # Appearing: 1\nSenses: Darksight, Telepathy (Far)\nArmor: 7 [as (+4) Plate]\nImmune: Fire, Poison; Physical from non-Relics\nACTIONS\nPeer Beyond [Cast, 30' Cone | Will] (Recharge Cd4):\n21 (6d6) and Dazed (Cd6 Rounds)\nMulti-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 14 (4d6)\nClaw [Melee Attack]: 13 (3d8) and Restrained if\nfailed by 5 or more.\nABILITIES\nMagic Ward IV: Cast Checks that include it as a Target\nhave a d10 penalty.\nRegenerate III: Regains 13 (3d8) HP on each of its\nTurns.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

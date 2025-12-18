@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstettercap0",
+  "_key": "!actors!vgbdBstettercap0",
+  "name": "Ettercap",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.1,
+    "armor": 1,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack]: 7 (2d6) and pass [Endure] or\nbecome Sickened (Cd4, +1 Fatigue each Round).</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Webs: Its web is an Object with 4 HP and Armor: 5.\nWeb Walker: It can sense any Being on the same web\nas it as if by Blindsight, and is not impeded by web as\nDifficult Terrain.\nBestiary\nBestiary\n140\n140\n\fFlail Snail TL: 6.2\nHuge Cryptid (Beast)\nHD: 4 (18 HP)\b Speed: 10' (Cling)\nZone: Frontline Morale: 10\b # Appearing: 1\nArmor: 4 [as (+1) Plate]\nImmune: Fire, Poison\nACTIONS\nMulti-Attack: 5\u00d7Flail\nFlail [Melee Attack]: 4 (d8)\nABILITIES\nFlails: Starts with 5 Flails. Targetting a Flail causes a -4\npenalty to the Attack Check, but severs it if at least 4\ndamage is dealt with the attack.\nReflective Shell: When Targeted with a Spell, roll d6.\nOn a 1, the Spell is reflected back at its source. On\na 2 or 3, the Spell is dispelled. On a 4 to 6, the Spell\nworks as normal.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "vgbdBstrotgrub00",
+  "_key": "!actors!vgbdBstrotgrub00",
+  "name": "Rot Grub",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.7,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "5d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Flesh Burrow: This Being burrows itself into flesh that\ncomes into contact with it, causing that Being to\nbecome Sickened (3 (d6) damage each Round).\nParasite: If this Being or any Being it is burrowing into\ntakes Fire damage or is the Target of an effect that\nends the Sickened Status, this Being dies instantly.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

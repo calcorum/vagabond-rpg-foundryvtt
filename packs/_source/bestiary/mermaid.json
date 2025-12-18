@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstmermaid00",
+  "_key": "!actors!vgbdBstmermaid00",
+  "name": "Mermaid",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.0,
+    "armor": 2,
+    "morale": 2,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Call Terror [Cast] (1/Day): Terror-Bound Being\narrives in Cd4.\nEnchanting Song [Cast (Focus)]: Enchanting Song\nTrident [Melee Attack]: 3 (d6)\nStorm Bringer [Cast] (1/Day): A storm stirs out to 1\nmile from it, and lasts for Cd4 hours.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: Breathes air and water.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nEnchanting Song: Enemies that can hear it for the first\ntime and at the start of their Turns must pass [Will] or\nbe Charmed (Cd4). While Charmed this way, they can\nonly Move directly toward this Being.\nImmortal of the Sea: It can\u2019t be reduced below 1 HP\nwhile it is even partially submerged in a body of water.\nTerror-Bound: It is bound to a terror of the sea, such as a\nbeisht kione dhoo, kraken, or sea serpent.\nStatblocks // Fae\nStatblocks // Fae\n155\n155\nBestiary\n\fNymph TL: 0.3\nMedium Fae\nThe source of \u201cLady of the Lake\u201d stories, nymphs\nare feminine spirits of freshwater.\nHD: 2 (9 HP)\b Speed: 30', (Swim 60')\nZone: Frontline Morale: 4\b # Appearing: d4\nArmor: 0 [as Unarmored]\nWeak: Cold Iron Weapons\nACTIONS\nNymph\u2019s Kiss [Cast, Touch | Will]: Cursed (Cd8\nRounds, immediately suffocating and can only\nbreathe water).\nABILITIES\nAmphibious: Can breathe air or water.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

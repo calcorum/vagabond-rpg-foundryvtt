@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstelemental",
+  "_key": "!actors!vgbdBstelemental",
+  "name": "Elemental, Air",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 5.6,
+    "armor": 4,
+    "morale": 10,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Gust [Ranged Attack]: 9 (2d8) plus 4 (d8) if flying</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Gale: Gusts surround it out to Near, Hindering\nEnemy Ranged Attacks Targeting those within.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

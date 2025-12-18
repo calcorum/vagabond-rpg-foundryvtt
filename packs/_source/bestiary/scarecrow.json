@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstscarecrow",
+  "_key": "!actors!vgbdBstscarecrow",
+  "name": "Scarecrow",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.2,
+    "armor": 1,
+    "morale": 2,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "artificial",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Scream [Cast, any Being who can hear it | Will]\n(Recharge Cd4): Frightened (Cd4, Paralyzed if failed\nby 5 or more)\nMulti-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

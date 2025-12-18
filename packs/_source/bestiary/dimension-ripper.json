@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstdimension",
+  "_key": "!actors!vgbdBstdimension",
+  "name": "Dimension Ripper",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 6.3,
+    "armor": 3,
+    "morale": 5,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 35
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Temporal Lock [Cast, Sight | Will] (Recharge Cd4):\nParalyzed (Cd4)\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\n(+1) Bite [Melee Attack]: 5 (d8+1)\n(+1) Claw [Melee Attack]: 8 (2d6+1)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Maddening I: Enemies that can hear it for the first\ntime and at the start of their Turns must pass [Will]\nor be Confused (Cd4).\nTerror I: Enemies that can see it for the first time and\nat the start of their Turns must pass [Will] or be\nFrightened (Cd4).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

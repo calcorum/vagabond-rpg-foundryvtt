@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstsealion00",
+  "_key": "!actors!vgbdBstsealion00",
+  "name": "Sea Lion",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 4.1,
+    "armor": 2,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6)\nClaw [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: It can breathe air and water.\nPack Hunter: Targets within 5 feet of one of this\nBeing's Allies are Vulnerable to its attacks.\nPounce: If it moves at least 20' immediately before\nhitting with an attack on the same Turn, the Target is\nalso knocked Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

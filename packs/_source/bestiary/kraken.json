@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstkraken000",
+  "_key": "!actors!vgbdBstkraken000",
+  "name": "Kraken",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 20,
+    "hp": {
+      "value": 89,
+      "max": 89
+    },
+    "tl": 22.3,
+    "armor": 4,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Lightning Bolt [Cast, 2 (d4) 120' Lines | Reflex]\n(Recharge Cd4): 21 (6d6)\nMulti-Attack: 1\u00d7Tentacle per (Tentacles)\nTentacle [Grapple]: 13 (3d8) and Restrained if smaller</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Tentacles: Starts with 8. Targetting one causes a -4\npenalty to the Check, but severs it if at least 16\ndamage is dealt.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

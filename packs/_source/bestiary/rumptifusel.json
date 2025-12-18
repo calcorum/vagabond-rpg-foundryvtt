@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstrumptifus",
+  "_key": "!actors!vgbdBstrumptifus",
+  "name": "Rumptifusel",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 1.7,
+    "armor": 1,
+    "morale": 3,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Drain, or 1\u00d7Cloak and 1\u00d7Drain\nDrain [Melee Attack, Restrained Target]: 2 (d4) and\nthis Being is healed for the damage dealt\nCloak [Melee Attack]: Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Cloaking: While it has a Target Restrained, any damage\ndealt to it is halved and also dealt to the Target.\nStatblocks // Cryptids\nStatblocks // Cryptids\n147\n147\nBestiary\n\fRust Monster TL: 2.7\nMedium Cryptid\nInsectoids known to destroy any metal.\nHD: 5 (22 HP)\b Speed: 15'\nZone: Frontline Morale: 7\b # Appearing: d2\nSenses: Darksight\nArmor: 4 [as Plate plus Shield]\nACTIONS\nAntenna [Cast, Touch (metal Object)]: Rust Touch\nBite [Melee Attack]: 3 (d6)\nABILITIES\nRust Touch: Non-Relic metal Items that make contact\nwith it corrode. When this happens, roll a d6 for each\nItem. On a roll of 1, the Item breaks. If the Item that\nbreaks is larger than Medium, this destroys a 1-foot\nsquare hole that is 1-foot deep in it.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

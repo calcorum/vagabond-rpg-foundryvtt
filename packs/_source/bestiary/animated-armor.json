@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstanimateda",
+  "_key": "!actors!vgbdBstanimateda",
+  "name": "Animated Armor",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 2.4,
+    "armor": 3,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "artificial",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Weapon [Melee Attack]: 3 (d6) or (by Weapon)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Antimagic Vulnerability: It is Dazed for Cd4 if\naffected by the Dispel Spell or other antimagic.\nImmutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

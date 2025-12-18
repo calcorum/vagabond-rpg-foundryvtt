@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstthoom0000",
+  "_key": "!actors!vgbdBstthoom0000",
+  "name": "Thoom",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 2.2,
+    "armor": 1,
+    "morale": 4,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 25
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Tentacle and 1\u00d7Cannon\nCannon [Ranged Attack]: 3 (d6)\nTentacle [Melee Attack]: 2 (d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: Breathes air and water.\nTentacle: Starts with 4. Targetting one causes a\n-1 penalty to the Check, but severs it if at least 2\ndamage is dealt.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

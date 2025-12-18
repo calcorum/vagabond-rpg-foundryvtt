@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstmanticore",
+  "_key": "!actors!vgbdBstmanticore",
+  "name": "Manticore",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.8,
+    "armor": 2,
+    "morale": 9,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack 1 (1/Day): 3 (d6)\u00d7Tail Spike\nMulti-Attack 2: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 5 (2d4)\nClaws [Melee Attack]: 2 (d4)\nTail Spike [Ranged Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

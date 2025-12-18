@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstbrownie00",
+  "_key": "!actors!vgbdBstbrownie00",
+  "name": "Brownie",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 2.0,
+    "armor": 3,
+    "morale": 7,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "fae",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d6+1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Dagger [Melee Attack]: 2 (d4)\nDancing Lights [Cast, Remote]: Causes dancing lights\nof any shape no larger than Medium within Near\nDimension Door [Cast, Self] (1/Day): Teleports to an\nopen Area it is aware of within 360'</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Ambush Innured: It can't be surprised, and can take\nan Action and Move before the first Turn of Combat.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nStatblocks // Fae\nStatblocks // Fae\n153\n153\nBestiary\n\fCarcolh TL: 7.1\nHuge Fae (Wyrm)\nA snail-like serpent that usually resides in gardens\nof splendor and crystal caves. Their mouths are\nlined with draconic fangs, and their head is crowned\nwith multiple hairy tentacles.\nHD: 15 (67 HP)\b Speed: 20' (Climb, Cling)\nZone: Frontline Morale: 11\b # Appearing: 1\nSenses: Seismicsense\nArmor: 4 [as (+1) Plate]\nWeak: Cold Iron Weapons\nACTIONS\nMulti-Attack: 1\u00d7Tentacle per (Tentacles) and 1\u00d7Bite\nBite [Melee Attack]: 16 (3d10) and Burning (Cd6)\nTentacle [Grapple, Near]: Restrained and pulled Close.\nABILITIES\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.\nTentacles: Starts with 6 Tentacles. Targetting a\nTentacle causes a -4 penalty to the Attack Check, but\nsevers it if at least 16 damage is dealt with the attack.\nDoppelg\u00e4nger TL: 2.6\nMedium Fae (Shapechanger)\nHD: 4 (18 HP)\b Speed: 30'\nZone: Frontline Morale: 10\b # Appearing: d6\nArmor: 2 [as Chain]\nWeak: Cold Iron Weapons\nStatus Immunities: Charmed, Unconscious\nACTIONS\nShapechange [Cast, Self (Focus)] (1/Minute):\nAppears to be a Being of humanoid form it has seen.\nBite [Melee Attack]: 6 (d12)\nABILITIES\nDoppelgang: Enemy Abilities treat this Being as an Ally\nwhile they are convinced it is an Ally.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

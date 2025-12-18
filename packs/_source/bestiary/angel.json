@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstangel0000",
+  "_key": "!actors!vgbdBstangel0000",
+  "name": "Angel",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 10.5,
+    "armor": 6,
+    "morale": 11,
+    "zone": "midline",
+    "size": "huge",
+    "beingType": "outer",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Dominator [2 Actions as below (re-roll duplicates)]:\n1 (+3) Flaming Sword [Melee Attack]: 17\n(4d6+3) and Burning (Cd6)\n2 Burning Slash [Melee Attack, Near Cone | Half\ndamage on a pass]: 13 (3d6+3) and Burning (Cd6)\n3 Banish [Remote | Will]: It is returned to its\nnormal realm of existence, or ends another Being's\npossession of the Target.\n4 Command [Cast, Far Aura]: 4 (d6+1) or obey\nthe command issued by this Being.\n5 Heal [Cast, Touch]: If it is a mortal Being, its HP is\nrestored to maximum, and is cured of the Blinded,\nParalyzed, or Sickened Status.\n6 Radiance [Cast, Far Aura]: The area within the\nAura is Sunlight, which moves with this Being.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Fall from Grace: If it ever acts against divine\nordainment, it loses Grace, Fly Speed, All-Sight,\nImmune, and Status Immunities.\nGrace: It can't be reduced below 1 HP. If its body\nis destroyed, it immediately appears in its plane of\norigin at full HP.\nIlluminator: Sheds Sunlight in Near.\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nFlaming Sword [Relic; (+3) Silvered Greatsword]:\nHas the Loyalty Power.\nBestiary\nBestiary\n158\n158\n\fByakhee TL: 10.5\nHuge Outer (Beyonder, Wyrm)\nA grey alien dragon from beyond the stars. It can fly\nat the speed of light.\nHD: 15 (67 HP)\b Speed: 60' (Fly 180')\nZone: Midline Morale: 10\b # Appearing: 1\nSenses: Darksight, Telepathy\nArmor: 5 [as (+2) Plate]\nStatus Immunities: Suffocating\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 10 (3d6) and pass [Endure] or\nSickened (Cd6 per Round, Dazed for Cd4 after the\nStatus ends).\nClaw [Melee Attack 10']: 13 (3d8)\nABILITIES\nInstant Transmission (Recharge Cd10 days): If it is\nin space, it can use its Action to teleport itself and\nany Beings in physical contact with it at lightspeed to\nanywhere within the nearby star system.\nInterstellar: It can freely move in the vacuum of space.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

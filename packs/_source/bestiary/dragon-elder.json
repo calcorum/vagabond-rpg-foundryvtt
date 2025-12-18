@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstdragoneld",
+  "_key": "!actors!vgbdBstdragoneld",
+  "name": "Dragon, Elder",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 20,
+    "hp": {
+      "value": 90,
+      "max": 90
+    },
+    "tl": 8.7,
+    "armor": 5,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Breath Attack [Attack | Half damage on a pass]\n(Recharge Cd4): Take an Action to begin this Attack,\nwhich occurs on this Being's next Turn. See [Breath\nAttack] column below.\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 11 (2d10)\nClaw [Melee Attack]: 4 (d8)\nTail [Melee Attack 10']: 5 (d10) and shoved Prone\n20' away</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nTerror I: Enemies that can see it for the first time and at\nthe start of their Turns thereafter must pass [Will] or be\nFrightened (Cd4).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

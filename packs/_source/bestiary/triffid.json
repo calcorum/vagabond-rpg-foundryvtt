@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsttriffid00",
+  "_key": "!actors!vgbdBsttriffid00",
+  "name": "Triffid",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.6,
+    "armor": 1,
+    "morale": 4,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "2d6",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Whorl [Melee Attack, Near]: 2 (d4) and Sickened\n(Cd4 damage)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Blinded: Blinded without its Echolocation.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

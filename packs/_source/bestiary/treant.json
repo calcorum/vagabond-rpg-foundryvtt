@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBsttreant000",
+  "_key": "!actors!vgbdBsttreant000",
+  "name": "Treant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 5.3,
+    "armor": 4,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "primordial",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d8",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Animate Trees [Cast, a tree in Far] (Focus): The tree\nacts as a Treant, though it has a Speed of 10' and\ndoesn't have this Animate Trees Action.\nMulti-Attack: 2\u00d7Slams\nSlam [Melee Attack]: 7 (2d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

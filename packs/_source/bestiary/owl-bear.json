@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstowlbear00",
+  "_key": "!actors!vgbdBstowlbear00",
+  "name": "Owl Bear",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 4.6,
+    "armor": 2,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Beak. If both Claws hit,\nit takes an extra 9 (2d8)\nBeak [Melee Attack]: 4 (d8)\nClaw [Melee Attack]: 4 (d8)\nStatblocks // Cryptids\nStatblocks // Cryptids\n145\n145\nBestiary\n\fPeryton TL: 3.2\nMedium Cryptid (Beast)\nFlying elks with the souls of killers. Upon their\ncreation, the peryton casts the shadow of a man.\nOnly after murdering a human and devouring its\nheart does this shadow take its expected shape.\nHD: 4 (18 HP)\b Speed: 40' (Fly 60')\nZone: Frontline Morale: 9\b # Appearing: 2d4\nArmor: 2 [as (+1) Leather]\nImmune: Physical from non-Relics\nACTIONS\nHorn [Melee Attack]: 7 (2d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Dive Bomb: If it flies at least 20 feet toward a Target\nbefore making an attack, the attack deals an extra\ndie of damage.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

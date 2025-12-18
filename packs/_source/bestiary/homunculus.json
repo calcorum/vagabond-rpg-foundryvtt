@@ -1,0 +1,54 @@
+{
+  "_id": "vgbdBsthomunculu",
+  "_key": "!actors!vgbdBsthomunculu",
+  "name": "Homunculus",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 3,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "artificial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true,
+      "echolocation": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack]: 1 (d3) and (1/Day) pass [Endure]\nor become Sickened (Cd6 Rounds, Unconscious until\nit takes damage).\nSpit Acid [Ranged Attack, Near]: 2 (d4) and Burning\n(Cd4)\nBestiary\nBestiary\n120\n120\n\fLiving Statue, Crystal TL: 2.6\nMedium Artificial\nAn animated crystal statue, capable of moving and\nattacking.\nHD: 3 (13 HP)\b Speed: 30'\nZone: Frontline Morale: 11\b # Appearing: d4\nArmor: 3 [as (+1) Chain]\nImmune: Poison\nWeak: Blunt\nStatus Immunities: Blinded, Fatigued, Suffocating,\nUnconscious\nACTIONS\nWeapon [Melee Attack]: 4 (d8) or (by Weapon)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

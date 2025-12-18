@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstlindworm0",
+  "_key": "!actors!vgbdBstlindworm0",
+  "name": "Lindworm",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 5.7,
+    "armor": 3,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 13 (3d8)\nClaw [Melee Attack]: 7 (2d6)\nCaustic Venom [Ranged Attack] (Recharge Cd4): 7\n(2d6), and Burning (Cd6) and Sickened (Cd4 damage)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Regenerate I: Regains 9 (2d8) HP on its Turns.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

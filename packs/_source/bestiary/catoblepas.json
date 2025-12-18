@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstcatoblepa",
+  "_key": "!actors!vgbdBstcatoblepa",
+  "name": "Catoblepas",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 24,
+      "max": 24
+    },
+    "tl": 5.7,
+    "armor": 1,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d3",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Tail and 1\u00d7Death Ray\nDeath Ray [Cast, Remote | Endure] (Recharge Cd4):\n24 (8d6) and +1 Fatigue\nTail [Melee Attack]: 3 (d6) and pass an [Endure] Save\nor knocked Prone and be Dazed for 1 Round.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Stench: Non-Catoblepas Beings that have to breathe\nare Sickened (Hinder on all Checks) while Near it.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

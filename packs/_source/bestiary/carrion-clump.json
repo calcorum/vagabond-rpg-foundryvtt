@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstcarrioncl",
+  "_key": "!actors!vgbdBstcarrioncl",
+  "name": "Carrion Clump",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d6",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Viscera Sling [Ranged Attack]: 3 (d6) and pass\n[Endure] or become Sickened (Cd6, stinks and can't\nspeak from retching).</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

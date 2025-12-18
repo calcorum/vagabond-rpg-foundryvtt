@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstroper0000",
+  "_key": "!actors!vgbdBstroper0000",
+  "name": "Roper",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 5.8,
+    "armor": 3,
+    "morale": 2,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d3",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Tendril per (Tendrils) and 1\u00d7Bite\nBite [Melee Attack]: 17 (5d6)\nTendril [Grapple, Far]: Restrained and pulled Close</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Tendrils: Starts with 6. Targetting one causes a\n-4 penalty to the Check, but severs it if at least 4\ndamage is dealt.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

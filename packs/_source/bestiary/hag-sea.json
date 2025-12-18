@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsthagsea000",
+  "_key": "!actors!vgbdBsthagsea000",
+  "name": "Hag, Sea",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 3.6,
+    "armor": 2,
+    "morale": 4,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Death Glare [Cast, Sight (a Frightened Being) |\nWill] (3/Day): 13 (3d8) and +2 (d4) Fatigue\nClaw [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: It can breathe air and water.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nTerror I: Enemies that can see it for the first time and at\nthe start of their Turns must pass a [Will] Save or be\nFrightened until they pass this Check on a subsequent\nTurn, or for Cd4 Rounds afterwards.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

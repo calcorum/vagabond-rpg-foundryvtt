@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBststirge000",
+  "_key": "!actors!vgbdBststirge000",
+  "name": "Stirge",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 4,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 5
+    },
+    "appearing": "3d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Beak [Melee Attack]: 1 (d3) and Restrained (d4\ndamage each Round while Restrained this way)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Leech: Its Max HP increases by the amount of damage\nit deals with its Beak, which also heals it for the same\namount. Max HP gained this way is lost after 1 minute.\nLatcher: Checks to end being Restrained by its Beak\nhave a -3 penalty.\nStatblocks // Cryptids\nStatblocks // Cryptids\n149\n149\nBestiary\n\fBestiary\nBestiary\n150\n150\n\fTarrasque TL: 24.7\nColossal Cryptid\nA four-legged reptile of gargantuan proportions.\nIt slumbers for centuries, then awakes to eat for\nweeks before returning to its sleep. During this time,\nit leaves destruction in its wake.\nHD: 36 (162 HP)\b Speed: 120' (Swim)\nZone: Frontline Morale: 9\b # Appearing: Unique\nSenses: Darksight\nArmor: 10 [as (+3) Plate plus (+3) Shield]\nImmune: Cold, Fire, Shock; Physical from non-Relics\nStatus Immunity: Charmed, Confused, Frightened,\nParalyzed, Sickened, Suffocating\nACTIONS\nMulti-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Bite, and 1\u00d7Tail\nClaw [Melee Attack, Near]: 18 (4d8)\nHorns [Melee Attack]: 16 (3d10)\nBite [Melee Attack]: 27 (5d10) and the Target loses a\nlimb of its choice if failed by 10 or more\nTail [Melee Attack, Near]: 13 (3d8) and shoved Prone\nABILITIES\nCharge: If it Moves at least 30 feet in a straight line\nthen makes a Horn Attack on the same Turn, that\nattack deals double damage.\nLegendary: Cast Checks Targeting it have a d12 penalty.\nMythic: It doesn't die unless a wish is granted to do so.\nReflective Carapace: When Targeted with a Spell, roll\nd6. On a 1, the Spell is reflected back at its source.\nOn a 2 or 3, the Spell is dispelled. On a 4 to 6, the\nSpell works as normal.\nRegenerate II: Regains 9 (2d8) HP on each of its Turns.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

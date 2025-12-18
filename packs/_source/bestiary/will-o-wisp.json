@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstwillowisp",
+  "_key": "!actors!vgbdBstwillowisp",
+  "name": "Will o' Wisp",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.6,
+    "armor": 4,
+    "morale": 11,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "fae",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Life Zap [Cast, Touch | Endure]: 5 (d10), healing this\nBeing for the damage dealt\nDissipate [Cast, Self (Focus)]: Invisible for the duration.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Wyrd Ward: Cast Checks Targeting it are Hindered, as\nare attacks made with Magically-enhanced Weapons.\nIlluminating: Sheds Light out to 30 feet.\nStatblocks // Fae\nStatblocks // Fae\n157\n157\nBestiary\n\fOUTERS\nBeings who are truly alien to the mortal\nrealm or whose intrinsic nature aligns them\nwith forces of good or evil. Their essence is\ntypically tied to either an aligned plane (such\nas Hellspawn and negative planes or Divines\nand positive planes), or they are the eldritch\nhorrors from the incomprehensible beyond.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

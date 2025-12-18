@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBsthydra0000",
+  "_key": "!actors!vgbdBsthydra0000",
+  "name": "Hydra",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 9.5,
+    "armor": 2,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 25
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Bite per Head (Multi-Headed)\nBite [Melee Attack, Near]: 5 (d10) and Restrained\nif smaller.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Multi-Headed: It starts with 8 (d8+4) Heads.\nTargetting an area that could behead it causes a\n-3 penalty to the Check, but severs it if at least 10\ndamage is dealt in a single damage instance.\nHydra Regrowth: Regains 9 HP at the start of its Turns.\nIf it is missing one of its heads when this happens,\ntwo Heads sprout. This Ability doesn't work if it took\ndamage from Fire since its last Turn.\nStatblocks // Cryptids\nStatblocks // Cryptids\n143\n143\nBestiary\n\fKobold TL: 1.2\nMedium Cryptid (Wyrm)\nHD: 1 (4 HP)\b Speed: 35'\nZone: Midline Morale: 4\b # Appearing: 2d6\nSenses: Darksight\nArmor: 1 [as Leather]\nACTIONS\nWeapon [Attack]: 3 (d6) or (by Weapon)\nABILITIES\nPack Instincts: If one of its Allies is within 5 feet of a\nTarget of this Being\u2019s Attack, that Target is Vulnerable\nagainst the Attack.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

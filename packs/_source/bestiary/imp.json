@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstimp000000",
+  "_key": "!actors!vgbdBstimp000000",
+  "name": "Imp",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 2.0,
+    "armor": 3,
+    "morale": 2,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "outer",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Sting [Melee Attack]: 2 (d4) and pass [Endure] or\nSickened (Cd4, Unconscious)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

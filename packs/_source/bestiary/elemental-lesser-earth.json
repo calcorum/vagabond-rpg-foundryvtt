@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstelementa7",
+  "_key": "!actors!vgbdBstelementa7",
+  "name": "Elemental, Lesser Earth",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.9,
+    "armor": 3,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Strike [Melee Attack]: 4 (d8) plus 4 (d8) if on the\nground</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Burrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.\nStatblocks // Primordials\nStatblocks // Primordials\n169\n169\nBestiary\n\fElemental, Earth TL: 5.6\nLarge Primordial\nHD: 12 (54 HP)\b Speed: 30'\nZone: Frontline Morale: 10\b # Appearing: 1\nSenses: Seismicsense\nArmor: 4 [as (+1) Plate]\nImmune: Poison, Shock\nWeak: Blunt\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nStrike [Melee Attack]: 9 (2d8) plus 4 (d8) if on the\nground\nABILITIES\nBurrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

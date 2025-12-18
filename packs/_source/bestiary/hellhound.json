@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBsthellhound",
+  "_key": "!actors!vgbdBsthellhound",
+  "name": "Hellhound",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 4.3,
+    "armor": 3,
+    "morale": 8,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Hellfire [Cast, Cone 15' | Reflex] (Recharge Cd6): 10\n(3d6) and Burning (Cd6)\nBite [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

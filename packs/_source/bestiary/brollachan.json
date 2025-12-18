@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstbrollacha",
+  "_key": "!actors!vgbdBstbrollacha",
+  "name": "Brollachan",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 2.2,
+    "armor": 4,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "fae",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Tendril [Melee Attack, Near]: 9 (2d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Engulfer: Other Beings in its space are Burning (2d6).\nFormless: It can Move into space occupied by Beings.\nMaddening I: Enemies that can hear it for the first time\nand at the start of their Turns must pass a [Will] Save or\nbe Confused (until they pass this Check on a subsequent\nTurn, or for Cd4 Rounds afterwards).</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

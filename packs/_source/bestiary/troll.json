@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBsttroll0000",
+  "_key": "!actors!vgbdBsttroll0000",
+  "name": "Troll",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 3.9,
+    "armor": 2,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 5 (d10)\nClaw [Melee Attack 10']: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Lesser Regenerate I: Regains 4 (d8) HP on each of its\nTurns unless it took damage it was Weak to in the\nlast Round. It can\u2019t be reduced below 1 HP except by\ndamage it is Weak to.\nSunlight Aversion: The troll\u2019s Armor from [Natural]\nand Trollish Regeneration trait are suspended while\nit is in sunlight, and it is Burning (d6). If the troll dies\nwithin sunlight, it is turned to stone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstpseudodra",
+  "_key": "!actors!vgbdBstpseudodra",
+  "name": "Pseudodragon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 0.8,
+    "armor": 1,
+    "morale": 7,
+    "zone": "midline",
+    "size": "small",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Stinger [Melee Attack] (1/Day): 1 (d3) and pass\n[Endure] or become Sickened (Cd4, Unconscious)\nBite [Melee Attack]: 1 (d3)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

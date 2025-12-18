@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstseaserpen",
+  "_key": "!actors!vgbdBstseaserpen",
+  "name": "Sea Serpent",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 14,
+    "hp": {
+      "value": 63,
+      "max": 63
+    },
+    "tl": 6.2,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Bite or 1\u00d7Constrict\nBite [Melee Attack]: 10 (3d6) and Restrained if smaller\nConstrict [Melee Attack, Near Vessel]: 11 (2d10)\nand Restrained</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: It can breathe air and water.\nDreadnought: Deals double damage to vehicles.\nBestiary\nBestiary\n148\n148\n\fSkeljaskrimsli TL: 6.3\nLarge Cryptid\nAn armored aquatic creature that resembles a bear.\nWhen they feed in the water, the act of opening\ntheir mouth can create small whirlpool.\nHD: 10 (45 HP)\b Speed: 20' (Swim)\nZone: Frontline Morale: 9\b # Appearing: 1\nArmor: 5 [as (+2) Plate]\nWeak: Poison, Shock\nACTIONS\nMulti-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6)\nClaw [Melee Attack]: 4 (d8)\nSlam [Melee Attack]: 7 (2d6) and Prone if this Being\nmoved at least 20 feet straight toward the Target\nbefore the attack.\nABILITIES\nAmphibious: It can breathe air and water.\nDreadnought: Deals double damage to vehicles.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "vgbdBstvipertree",
+  "_key": "!actors!vgbdBstvipertree",
+  "name": "Viper Tree",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 3.2,
+    "armor": 2,
+    "morale": 7,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "2d10",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack, Near]: 7 (2d6) and pass [Endure]\nwith a -3 penalty or be Sickened (Cd4, Paralyzed).</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstelementa1",
+  "_key": "!actors!vgbdBstelementa1",
+  "name": "Elemental, Fire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 5.9,
+    "armor": 4,
+    "morale": 10,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Flame [Ranged Attack]: 9 (2d8) and Burning (Cd6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Living Fire: Close Beings are Burning (d8).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

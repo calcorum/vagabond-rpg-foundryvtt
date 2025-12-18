@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstroc000000",
+  "_key": "!actors!vgbdBstroc000000",
+  "name": "Roc",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 36,
+    "hp": {
+      "value": 162,
+      "max": 162
+    },
+    "tl": 11.4,
+    "armor": 4,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 28 (8d6)\nClaw [Melee Attack, Near]: 10 (3d6) and Restrained if\nit\u2019s this Being's second Claw attack to hit it this Turn.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Dive Bomb: If it flies at least 20' toward a Target before\nmaking an attack, the attack deals double damage.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

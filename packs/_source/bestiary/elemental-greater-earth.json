@@ -1,0 +1,49 @@
+{
+  "_id": "vgbdBstelementa3",
+  "_key": "!actors!vgbdBstelementa3",
+  "name": "Elemental, Greater Earth",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 16,
+    "hp": {
+      "value": 72,
+      "max": 72
+    },
+    "tl": 7.3,
+    "armor": 5,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "primordial",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Strike [Melee Attack]: 13 (3d8) plus 4 (d8) if on the\nground</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Burrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

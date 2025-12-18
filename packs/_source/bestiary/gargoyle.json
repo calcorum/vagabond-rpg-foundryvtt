@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgargoyle0",
+  "_key": "!actors!vgbdBstgargoyle0",
+  "name": "Gargoyle",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.6,
+    "armor": 2,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "artificial",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 3 (d6)\nClaw [Melee Attack]: 1 (d3)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Immutable: It can't be transformed.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

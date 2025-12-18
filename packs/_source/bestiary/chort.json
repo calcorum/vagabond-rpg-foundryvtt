@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstchort0000",
+  "_key": "!actors!vgbdBstchort0000",
+  "name": "Chort",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 5.0,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Headbutt\n(+1) Claw [Melee Attack]: 3 (d4+1)\nHeadbutt [Melee Attack]: 9 (2d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Magic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

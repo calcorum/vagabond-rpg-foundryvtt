@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstmedusa000",
+  "_key": "!actors!vgbdBstmedusa000",
+  "name": "Medusa",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 1.1,
+    "armor": 0,
+    "morale": 8,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Snakebite [Melee Attack] (Recharge Cd4): 3 (d6) and\npass [Endure] or be Sickened (drops to 0 HP).\nClaw [Melee Attack]: 2 (d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Petrifying Visage: Beings that look at it for the first\ntime on their Turns must pass [Endure] against\nSickened or take 1 Fatigue. A Being with 3 or more\nFatigue that gains another Fatigue this way is cursed\n(petrified as a stone statue until this medusa dies).\nBestiary\nBestiary\n144\n144\n\fMimic TL: 2.6\nMedium Cryptid\nTends to shapeshift into chests, chairs, and\ndoors, lying in wait for undiscerning prey. Some\nadventurers tell tales of intelligent mimics that have\nhelped them on their journey.\nHD: 5 (22 HP)\b Speed: 10'\nZone: Frontline Morale: 9\b # Appearing: 1\nSenses: Darksight\nArmor: 1 [as Leather]\nACTIONS\nBite [Melee Attack]: 9 (2d8) and Restrained if smaller\nMimic [Action (Focus)]: It takes on the appearance of\nan Object that is its size or smaller for the Duration.\nPseudopod [Melee Attack]: 7 (3d4)\nABILITIES\nAdhere: Hinders Checks to end being Restrained by it.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstpurplewor",
+  "_key": "!actors!vgbdBstpurplewor",
+  "name": "Purple Worm",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 15,
+    "hp": {
+      "value": 67,
+      "max": 67
+    },
+    "tl": 5.5,
+    "armor": 3,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d2",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Bite and 1\u00d7Sting\nBite [Melee Attack, Cleave]: 9 (2d8) or half to all\nTargets Close to its mouth.\nSting [Melee Attack, Near its tail]: 4 (d8) and pass\n[Endure] or become Sickened (+1 Fatigue for Cd12).</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Sand Swimmer: Can Move through sand and earth\nusing its Speed.\nBestiary\nBestiary\n146\n146\n\fQuesting Beast TL: 4.8\nLarge Cryptid (Beast)\nA chimeric feline with a snake's head, a cheetah's\nbody, and hooved hindquarters like a deer. Sounds\nlike a pack of beagles on the hunt.\nHD: 8 (36 HP)\b Speed: 60'\nZone: Frontline Morale: 9\b # Appearing: 1\nSenses: Darksight\nArmor: 2 [as Chain]\nACTIONS\nMulti-Attack: 2\u00d7Claw and Bite\nBite [Melee Attack]: 6 (d12) and pass [Endure] or\nbecome Sickened (Cd6 damage)\nClaw [Melee Attack]: 3 (d6)</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

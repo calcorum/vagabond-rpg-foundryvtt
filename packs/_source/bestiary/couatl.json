@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstcouatl000",
+  "_key": "!actors!vgbdBstcouatl000",
+  "name": "Couatl",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 3.8,
+    "armor": 3,
+    "morale": 9,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Bite [Melee Attack]: 2 (d4) and Sickened (Cd4,\nUnconscious and +1 Fatigue each Round). If failed by\n5 or more, it is also Restrained (5 (2d4) each Round)\nRestoration [Cast, Touch]: Regain 10 (3d6) HP\nShapechange [Cast, Self] (Focus): Polymorphs into a\nMedium or smaller Being. It uses its own Statblock.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

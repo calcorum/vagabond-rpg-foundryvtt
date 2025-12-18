@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstwarpbeast",
+  "_key": "!actors!vgbdBstwarpbeast",
+  "name": "Warp Beast",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 3.4,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "2d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Tentacle\nTentacle [Melee Attack 10']: 5 (2d4)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Displacement I: Attack and Cast Checks that directly\nTarget it have a d4 penalty.\nStatblocks // Cryptids\nStatblocks // Cryptids\n151\n151\nBestiary\n\fWererat TL: 2.0\nMedium Cryptid (Shapechanger)\nA half-rat, half-human monster that haunts sewers\nand abandoned ruins.\nHD: 3 (13 HP)\b Speed: 40'\nZone: Frontline Morale: 7\b # Appearing: 1\nSenses: Darksight\nArmor: 1 [as Leather]\nImmune: Physical\nWeak: Silvered Weapons\nACTIONS\nMulti-Attack: 1\u00d7Cutlass and 1\u00d7Bite\nBite [Melee Attack]: 3 (d6) and pass [Will] or be\ncursed with Wererat Lycanthropy.\nWeapon [Melee Attack]: 3 (d6) or (by Weapon)\nABILITIES\nShapechanger: This is a form that a Humanlike cursed\nwith lycanthropy can become when the curse takes\nhold. They revert automatically if they die.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

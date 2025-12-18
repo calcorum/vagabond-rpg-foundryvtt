@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstcavefishe",
+  "_key": "!actors!vgbdBstcavefishe",
+  "name": "Cave Fisher",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.5,
+    "armor": 1,
+    "morale": 6,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Fish and 1\u00d7Claw, or 2\u00d7Claw\nClaw [Melee Attack]: 5 (2d4)\nFish [Ranged Attack]: Restrained by Filament and\npulled Close.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Filament: As rope with 1 HD (4 HP)\nBestiary\nBestiary\n136\n136\n\fChimera TL: 7.0\nLarge Cryptid\nThe arcane fusion of a lion, goat, and dragon.\nHD: 9 (40 HP)\b Speed: 10' (Fly 30')\nZone: Frontline Morale: 9\b # Appearing: d2\nArmor: 3 [as (+1) Chain]\nACTIONS\nMulti-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Lion's Bite, and\n1\u00d7Breath or 1\u00d7Dragon's Bite\nClaw [Melee Attack]: 3 (d6)\nHorn [Melee Attack]: 5 (2d4)\nLion\u2019s Bite [Melee Attack]: 4 (d8)\nBreath [Cast, 10'\u00d760' Line] (Recharge Cd6): 10 (3d6)\nDragon\u2019s Bite [Melee Attack]: (3d4)</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

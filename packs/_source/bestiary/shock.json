@@ -1,0 +1,34 @@
+{
+  "_id": "vgbdBstshock0000",
+  "_key": "!actors!vgbdBstshock0000",
+  "name": "Shock",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.9,
+    "armor": 0,
+    "morale": 4,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

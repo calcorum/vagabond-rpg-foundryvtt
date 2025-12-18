@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstcarcasscr",
+  "_key": "!actors!vgbdBstcarcasscr",
+  "name": "Carcass Crawler",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.2,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d4",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 1\u00d7Tentacle and 1\u00d7Bite\nBite [Melee Attack, a Paralyzed Target]: 3 (d6)\nTentacle [Melee Attack]: 4 (d8) and pass [Endure] or\nbecome Sickened (Cd6, Paralyzed)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Soft Underbelly: Its Armor is 0 while it is Prone.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

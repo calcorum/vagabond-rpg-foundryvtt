@@ -1,0 +1,41 @@
+{
+  "_id": "vgbdBstyellowmou",
+  "_key": "!actors!vgbdBstyellowmou",
+  "name": "Yellow Mould",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 12,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "d4",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Spore Cloud [When Touched, Aura Close | Endure]: 3\n(d6) and pass [Endure] or become Sickened (Cd8, +1\nFatigue each Round).\nStatblocks // Primordials\nStatblocks // Primordials\n175\n175\nBestiary\n\fUNDEAD\nWhen a being dies and its soul or corpse\nremain animated, it becomes an undead.\nThese creatures may remain animated through\nmagical means, but are most-often the result\nof powerful curses. Generally, undead don't\nneed to breathe, eat, drink, or sleep.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

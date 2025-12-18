@@ -1,0 +1,46 @@
+{
+  "_id": "vgbdBstaurumvora",
+  "_key": "!actors!vgbdBstaurumvora",
+  "name": "Aurumvorax",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 6,
+      "max": 6
+    },
+    "tl": 6.3,
+    "armor": 3,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack [a Restrained Being]: 8\u00d7Claw\nClaw [Melee Attack]: 3 (d6)\nJaw Lock [Melee Attack]: 5 (2d4) and Restrained\nuntil this Being dies.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

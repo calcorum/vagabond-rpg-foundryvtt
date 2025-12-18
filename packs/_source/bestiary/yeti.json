@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstyeti00000",
+  "_key": "!actors!vgbdBstyeti00000",
+  "name": "Yeti",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 3.5,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 3 (d6) plus 9 (2d8) if failed by\n5 or more\nTerror Glare [Cast, Sight | Will] (1/Day): Frightened\n(Cd4, Paralyzed)\nBestiary\nBestiary\n152\n152\n\fFAE\nFae embody the natural world, themselves\nadapting characteristics of their domain. In\nkind, the environment also begins evolving in\ntheir presence, with some fae hightening its\nsplendor, and others evoking terror. In areas\nwhere benevolent fae reside, some say you\ncan hear the wind sing the songs of creation.\nHowever, this wind can turn to a black howl\nof hate at the fickle whims of these creatures.\b\nFinding yourself in a fae\u2019s domain without\nthe permission of a fae is no easy task. Intention\nitself seems to keep mortals out of those\nrealms, leading many to believe only those of\npure innocence to the point of naivety can find\nthemselves within a domain. You don\u2019t find the\nwilds of the fae, they find you.</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

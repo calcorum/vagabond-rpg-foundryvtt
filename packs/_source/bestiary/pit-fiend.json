@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstpitfiend0",
+  "_key": "!actors!vgbdBstpitfiend0",
+  "name": "Pit Fiend",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 13,
+    "hp": {
+      "value": 58,
+      "max": 58
+    },
+    "tl": 7.9,
+    "armor": 5,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Symbol of Pain [Cast, Aura Far | Will] (1/Day):\nCursed (2d10 Rounds, -4 penalty to Attack Checks\nand a -2 to [Reflex] Saves)\nFireball [Cast, 20' Sphere | Reflex] (Recharge Cd4):\n21 (6d6) and Burning (Cd4)\nMulti-Attack: 1\u00d7Pit Mace, 1\u00d7Bite, and 1\u00d7Tail\nBite [Melee Attack]: 10 (3d6) and pass [Endure] with\na -1 penalty or become Sickened (Cd6 damage)\n(+2) Mace [Melee Attack]: 5 (d6+2) and Burning (Cd6)\nWall of Fire [Cast, Line | Reflex] (3/Day, Focus):\nBurning (2d6)\nHold [Cast, Remote | Endure] (Recharge Cd4):\nParalyzed (Cd4)\nTail [Melee Attack]: 5 (2d4) and Restrained, taking\n5 (2d4) at the start of this Being's Turns while\nRestrained this way</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Supreme Hellspawn: Regains 13 HP each Round.\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nRegenerate II: Regains 9 (2d8) HP on each of its Turns.\nTerror II: Enemies that can see it for the first time and at\nthe start of their Turns thereafter must pass [Will] or be\nFrightened (Cd6 Rounds).\nStatblocks // Outers\nStatblocks // Outers\n163\n163\nBestiary\n\fSphinx TL: 5.7\nLarge Outer (Beyonder)\nMonsters with human faces, lion bodies, and the\nwings of eagles. Known to trade in knowledge and\npoetry, making riddles a valuable commodity to\nthese creatures.\nHD: 12 (54 HP)\b Speed: 60' (Fly 120')\nZone: Frontline Morale: 10\b # Appearing: 1\nSenses: Allsight, Telepathy (Far)\nArmor: 4 [as (+1) Plate]\nImmune: Physical from non-Relics\nStatus Immunities: Berserk, Charmed, Confused,\nFrightened, Suffocating\nACTIONS\nMulti-Attack: 2\u00d7Claw and either 1\u00d7Roar or 1\u00d7Cast\nof its choice\nRoar [Action, all Beings who hear it | Will] (2/Day):\nFrightened (Cd4, and Dazed if within Near)\nClaw [Melee Attack]: 7 (2d6)\nDispel Magic [Cast, Remote | Will] (2/Day): A magic\neffect of its choice is dispelled or suspended for 2d6\nhours if it is a Curse or Relic Power\nABILITIES\nFuture Sight: Hinders Saves against its Attacks.\nMagic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

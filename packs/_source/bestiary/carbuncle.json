@@ -1,0 +1,41 @@
+{
+  "_id": "vgbdBstcarbuncle",
+  "_key": "!actors!vgbdBstcarbuncle",
+  "name": "Carbuncle",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 1.6,
+    "armor": 3,
+    "morale": 1,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Scare to Death: If it fails a Morale Check or becomes\nFrightened, it dies.\nShattering Death: When it dies, it shatters to dust.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

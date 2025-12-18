@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstamikuk000",
+  "_key": "!actors!vgbdBstamikuk000",
+  "name": "Amikuk",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 3.6,
+    "armor": 1,
+    "morale": 5,
+    "zone": "backline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "climb": true
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Drown [Melee Attack, while submerged]: Restrained\nand pulled Close\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nClaw [Melee Attack, Near]: 3 (d6)\nBite [Melee Attack]: 9 (2d8)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Amphibious: Breathes air and water.</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

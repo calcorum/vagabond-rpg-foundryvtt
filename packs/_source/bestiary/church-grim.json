@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstchurchgri",
+  "_key": "!actors!vgbdBstchurchgri",
+  "name": "Church Grim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 4.6,
+    "armor": 2,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "beast",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8)\nClaws [Melee Attack]: 3 (d6)</p>",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "<p>Bloodthirst: It is Berserk and Beings at or below half\nHP make Checks against it as if Vulnerable.\nGrim Resurrection: It dies instantly if its original\ncorpse is destroyed. If it drops to 0 HP and its original\ncorpse is not destroyed, it vanishes in a puff of smoke\nand reapparates in its church of origin in the next\nScene at full HP.\nBestiary\nBestiary\n176\n176\n\fCrawling Claw TL: 1.0\nSmall Undead\nA necromantically-animated humanoid hand.\nHD: 2 (2 HP)\b Speed: 25'\nZone: Frontline Morale: 12\b # Appearing: d20\nSenses: Blindsight\nArmor: 1 [as Leather]\nImmune: Poison\nWeak: Silvered Weapons\nStatus Immunities: Charmed, Fatigued, Sickened,\nSuffocating\nACTIONS\nClaw [Melee Attack]: 2 (d4)</p>"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
