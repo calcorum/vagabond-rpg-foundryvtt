@@ -5,14 +5,14 @@
   "type": "npc",
   "img": "icons/creatures/invertebrates/beetle-black-green.webp",
   "system": {
-    "hd": 3,
+    "hd": 2,
     "hp": {
-      "value": 13,
-      "max": 13
+      "value": 2,
+      "max": 2
     },
     "tl": 2.0,
-    "armor": 3,
-    "morale": 9,
+    "armor": 1,
+    "morale": 8,
     "zone": "frontline",
     "size": "small",
     "beingType": "beast",

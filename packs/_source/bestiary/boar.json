@@ -17,7 +17,7 @@
     "size": "medium",
     "beingType": "beast",
     "speed": {
-      "value": 40
+      "value": 50
     },
     "appearing": "1",
     "senses": {},

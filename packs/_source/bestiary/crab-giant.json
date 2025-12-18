@@ -17,7 +17,7 @@
     "size": "medium",
     "beingType": "beast",
     "speed": {
-      "value": 25
+      "value": 20
     },
     "appearing": "2d6",
     "senses": {},
