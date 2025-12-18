@@ -309,7 +309,7 @@
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.4", "2.5", "1.11"],
-          "notes": "AttackRollDialog with weapon selection, damage roll on hit, crit doubles dice. Block/Dodge prompts deferred to Task 7.8"
+          "notes": "AttackRollDialog with weapon selection, crit doubles dice. Block/Dodge prompts deferred to Task 7.8. Enhanced: Separate 'Roll Damage' button in chat (not auto-rolled), crit threshold stepper (+/- buttons) in dialog, attack skills have trained/untrained toggle like regular skills. Ranged attacks use Awareness stat (not Dexterity)."
         },
         {
           "id": "2.7",
@@ -329,7 +329,7 @@
           "tested": false,
           "priority": "critical",
           "dependencies": ["2.4", "1.9"],
-          "notes": "SpellCastDialog with damage/effect toggle, delivery/duration selectors, live mana cost using rulebook formula. Focus tracking on successful cast."
+          "notes": "SpellCastDialog with damage/effect toggle, delivery/duration selectors, live mana cost using rulebook formula. Focus tracking on successful cast. Enhanced: Separate 'Roll Damage' button in chat (not auto-rolled), crit threshold stepper (+/- buttons) in dialog."
         },
         {
           "id": "2.9",
@@ -482,7 +482,7 @@
           "tested": false,
           "priority": "critical",
           "dependencies": ["3.2", "2.6"],
-          "notes": "Attack skills and equipped weapons on Main tab with roll buttons."
+          "notes": "Attack skills and equipped weapons on Main tab with roll buttons. Enhanced: Attack skills now have trained/untrained toggle like regular skills (untrained=20-stat, trained=20-stat×2). Ranged uses Awareness stat."
         },
         {
           "id": "3.9",
@@ -964,7 +964,7 @@
           "tested": false,
           "priority": "high",
           "dependencies": ["2.8", "7.6"],
-          "notes": "templates/chat/spell-cast.hbs exists"
+          "notes": "templates/chat/spell-cast.hbs with styled header, cast config, roll result, effect section. Enhanced: Separate 'Roll Damage' button (damage not auto-rolled), matches attack chat card pattern with message flags for deferred damage rolling."
         },
         {
           "id": "7.8",
@@ -1154,7 +1154,8 @@
           "completed": true,
           "tested": false,
           "priority": "high",
-          "dependencies": ["11.1"]
+          "dependencies": ["11.1"],
+          "notes": "Created docs/active-effect-reference.md with comprehensive attribute key reference for characters and NPCs. Includes stats, skills, attacks (trained/difficulty/critThreshold), resources, saves, movement, senses, and flag-based favor/hinder system. Example patterns for common effects."
         },
         {
           "id": "11.3",
