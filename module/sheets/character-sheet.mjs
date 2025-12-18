@@ -223,7 +223,7 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
     const attackConfig = {
       melee: { label: "VAGABOND.AttackMelee", stat: "might" },
       brawl: { label: "VAGABOND.AttackBrawl", stat: "might" },
-      ranged: { label: "VAGABOND.AttackRanged", stat: "dexterity" },
+      ranged: { label: "VAGABOND.AttackRanged", stat: "awareness" },
       finesse: { label: "VAGABOND.AttackFinesse", stat: "dexterity" },
     };
 
