@@ -878,7 +878,7 @@
           "tested": false,
           "priority": "medium",
           "dependencies": ["6.1", "1.3"],
-          "notes": "In progress: 21/289+ creatures. Humanlike category complete (21 NPCs). Remaining: Artificials (23), Beasts (75+), Cryptids (75+), Fae (16), Outers (32), Primordials (28), Undead (21). Source: Core Rulebook pp.112-181."
+          "notes": "In progress: 92/289+ creatures. Humanlike (21 NPCs) and Beasts (71 creatures) categories complete. Remaining: Artificials (23), Cryptids (75+), Fae (16), Outers (32), Primordials (28), Undead (21). Source: Core Rulebook pp.112-181."
         },
         {
           "id": "6.10",
