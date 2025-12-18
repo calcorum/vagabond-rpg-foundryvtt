@@ -32,3 +32,16 @@ npm-debug.log*
 *.pem
 *.key
 credentials.json
+
+# Compendium LevelDB files (generated from _source/ JSON)
+packs/*/*.ldb
+packs/*/MANIFEST-*
+packs/*/LOG
+packs/*/LOG.old
+packs/*/CURRENT
+packs/*/LOCK
+packs/*/lost/
+
+# Temp/working files
+bestiary_audit_summary.txt
+.claude/vagabond-bestiary.txt
