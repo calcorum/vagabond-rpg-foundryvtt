@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Bite per head (Multi-Headed)\nBite [Melee Attack, Near]: 2 (d4)</p>",
+        "description": "Multi-Attack: 1\u00d7Bite per head (Multi-Headed) Bite [Melee Attack, Near]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Multi-Headed: It starts with 3 Heads. Targetting an\narea that could behead it causes a -3 penalty to the\nCheck, but severs it if at least 2 damage is dealt in a\nsingle damage instance.\nHydra Regrowth: Regains 4 HP at the start of its Turns.\nIf it is missing one of its heads when this happens,\ntwo Heads sprout. This Ability doesn't work if it took\ndamage from fire since its last Turn.</p>"
+        "description": "Multi-Headed: It starts with 3 Heads. Targetting an area that could behead it causes a -3 penalty to the Check, but severs it if at least 2 damage is dealt in a single damage instance.\nHydra Regrowth: Regains 4 HP at the start of its Turns.\nIf it is missing one of its heads when this happens, two Heads sprout. This Ability doesn't work if it took damage from fire since its last Turn."
       }
     ],
     "loot": "",

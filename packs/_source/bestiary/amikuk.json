@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Drown [Melee Attack, while submerged]: Restrained\nand pulled Close\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nClaw [Melee Attack, Near]: 3 (d6)\nBite [Melee Attack]: 9 (2d8)</p>",
+        "description": "Drown [Melee Attack, while submerged]: Restrained and pulled Close Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Claw [Melee Attack, Near]: 3 (d6) Bite [Melee Attack]: 9 (2d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amphibious: Breathes air and water.</p>"
+        "description": "Amphibious: Breathes air and water."
       }
     ],
     "loot": "",

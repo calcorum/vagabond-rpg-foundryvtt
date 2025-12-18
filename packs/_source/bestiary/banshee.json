@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Wail [Action while in darkness, all Near who hear\nit | Will] (1/Day): Frightened (Cd4) or immediate\ndeath if failed by 5 or more\nChill Touch [Melee Attack]: 4 (d8)</p>",
+        "description": "Wail [Action while in darkness, all Near who hear it | Will] (1/Day): Frightened (Cd4) or immediate death if failed by 5 or more Chill Touch [Melee Attack]: 4 (d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Nightwalker: Can\u2019t Move or Target over lines of salt or\nin areas illuminated by Sunlight. It is Incapacitated and\nBurning (d8) while in Sunlight.\nTerror II [Enemies' first time seeing it and on their\nTurns | Will]: Frightened until they pass this Check\non a subsequent Turn, or for Cd6 after.</p>"
+        "description": "Nightwalker: Can\u2019t Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight.\nTerror II [Enemies' first time seeing it and on their Turns | Will]: Frightened until they pass this Check on a subsequent Turn, or for Cd6 after."
       }
     ],
     "loot": "",

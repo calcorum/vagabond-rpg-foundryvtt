@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Strike [Melee Attack]: 4 (d8) plus 4 (d8) if on the\nground</p>",
+        "description": "Strike [Melee Attack]: 4 (d8) plus 4 (d8) if on the ground",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Burrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.\nStatblocks // Primordials\nStatblocks // Primordials\n169\n169\nBestiary\n\fElemental, Earth TL: 5.6\nLarge Primordial\nHD: 12 (54 HP)\b Speed: 30'\nZone: Frontline Morale: 10\b # Appearing: 1\nSenses: Seismicsense\nArmor: 4 [as (+1) Plate]\nImmune: Poison, Shock\nWeak: Blunt\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nStrike [Melee Attack]: 9 (2d8) plus 4 (d8) if on the\nground\nABILITIES\nBurrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.</p>"
+        "description": "Burrower: It ignored Difficult Terrain of sand, stone, and earth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.\nStatblocks // Primordials Statblocks // Primordials 169 169 Bestiary Elemental, Earth TL: 5.6 Large Primordial HD: 12 (54 HP)\b Speed: 30' Zone: Frontline Morale: 10\b # Appearing: 1 Senses: Seismicsense Armor: 4 [as (+1) Plate] Immune: Poison, Shock Weak: Blunt Status Immunities: Fatigued, Sickened, Suffocating ACTIONS Strike [Melee Attack]: 9 (2d8) plus 4 (d8) if on the ground ABILITIES Burrower: It ignored Difficult Terrain of sand, stone, and earth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height."
       }
     ],
     "loot": "",

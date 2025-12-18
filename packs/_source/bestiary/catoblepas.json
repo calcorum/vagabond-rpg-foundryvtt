@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Tail and 1\u00d7Death Ray\nDeath Ray [Cast, Remote | Endure] (Recharge Cd4):\n24 (8d6) and +1 Fatigue\nTail [Melee Attack]: 3 (d6) and pass an [Endure] Save\nor knocked Prone and be Dazed for 1 Round.</p>",
+        "description": "Multi-Attack: 1\u00d7Tail and 1\u00d7Death Ray Death Ray [Cast, Remote | Endure] (Recharge Cd4):\n24 (8d6) and +1 Fatigue Tail [Melee Attack]: 3 (d6) and pass an [Endure] Save or knocked Prone and be Dazed for 1 Round.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Stench: Non-Catoblepas Beings that have to breathe\nare Sickened (Hinder on all Checks) while Near it.</p>"
+        "description": "Stench: Non-Catoblepas Beings that have to breathe are Sickened (Hinder on all Checks) while Near it."
       }
     ],
     "loot": "",

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Snip-Snip",
-        "description": "<p>[Multi-Attack]: 2x Claw</p>",
+        "description": "[Multi-Attack]: 2x Claw",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Claw",
-        "description": "<p>[Melee Attack]: 9 (2d8) and Restrained if smaller.</p>",
+        "description": "[Melee Attack]: 9 (2d8) and Restrained if smaller.",
         "attackType": "melee",
         "damage": "2d8",
         "damageType": "blunt",
@@ -50,7 +50,7 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>It can breathe air and water.</p>"
+        "description": "It can breathe air and water."
       }
     ],
     "loot": "",

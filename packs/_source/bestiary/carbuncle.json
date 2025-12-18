@@ -31,7 +31,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Scare to Death: If it fails a Morale Check or becomes\nFrightened, it dies.\nShattering Death: When it dies, it shatters to dust.</p>"
+        "description": "Scare to Death: If it fails a Morale Check or becomes Frightened, it dies.\nShattering Death: When it dies, it shatters to dust."
       }
     ],
     "loot": "",

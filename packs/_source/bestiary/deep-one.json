@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 3 (d6)\nWeapon [Melee Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw Claw [Melee Attack]: 3 (d6) Weapon [Melee Attack]: 3 (d6) or (by Weapon)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amphibious: Can breathe air and water.\nSunblinded: Blinded by Sunlight.\nStatblocks // Outers\nStatblocks // Outers\n159\n159\nBestiary\n\fDemon Ray TL: 2.4\nMedium Outer (Beyonder)\nVampiric manta rays with razor sharp teeth and a\nremarkable bite force.\nHD: 1 (4 HP)\b Speed: 0' (Swim 30')\nZone: Midline Morale: 10\b # Appearing: 2d6\nSenses: Darksight\nArmor: 2 [as Chain]\nACTIONS\nBite [Melee Attack]: 7 (3d4)\nLeech [Cast, Remote | Endure]: 3 (d6) and Sickened\n(Cd6, any healing that affects it heals this Being\ninstead)\nABILITIES\nAmphibious: Can breathe air and water.\nSunblinded: Blinded by Sunlight.</p>"
+        "description": "Amphibious: Can breathe air and water.\nSunblinded: Blinded by Sunlight.\nStatblocks // Outers Statblocks // Outers 159 159 Bestiary Demon Ray TL: 2.4 Medium Outer (Beyonder) Vampiric manta rays with razor sharp teeth and a remarkable bite force.\nHD: 1 (4 HP)\b Speed: 0' (Swim 30') Zone: Midline Morale: 10\b # Appearing: 2d6 Senses: Darksight Armor: 2 [as Chain] ACTIONS Bite [Melee Attack]: 7 (3d4) Leech [Cast, Remote | Endure]: 3 (d6) and Sickened (Cd6, any healing that affects it heals this Being instead) ABILITIES Amphibious: Can breathe air and water.\nSunblinded: Blinded by Sunlight."
       }
     ],
     "loot": "",

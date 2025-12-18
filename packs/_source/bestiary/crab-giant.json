@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>2x Pincer</p>",
+        "description": "2x Pincer",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Pincer",
-        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "description": "[Melee Attack]: 7 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "blunt",
@@ -48,11 +48,11 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>It can breathe air and water.</p>"
+        "description": "It can breathe air and water."
       },
       {
         "name": "On-Sight",
-        "description": "<p>Is Berserk, considers all Beings Enemies.</p>"
+        "description": "Is Berserk, considers all Beings Enemies."
       }
     ],
     "loot": "",

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 9 (2d8)</p>",
+        "description": "Multi-Attack: 2\u00d7Slam Slam [Melee Attack]: 9 (2d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Acid Bather: Acid damage rolls affect it as healing rolls.\nImmutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nUnbaked: If it takes 5 or more Fire damage at once, it\nis Dazed (Cd4).\nStatblocks // Artificials\nStatblocks // Artificials\n119\n119\nBestiary\n\fGolem, Flesh TL: 4.7\nLarge Artificial\nA living automoton of stitched-together flesh, given\nlife through electric strikes.\nHD: 9 (40 HP)\b Speed: 20'\nZone: Frontline Morale: 10\b # Appearing:1\nSenses: Darksight\nArmor: 0 [as Unarmored]\nImmune: Cold, Poison, Shock; Physical from non-Relics\nWeak: Fire\nStatus Immunities: Charmed, Fatigued, Paralyzed,\nSickened\nACTIONS\nMulti-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 9 (2d8 (+2 if this Being is\nBerserk))\nABILITIES\nBloodied Rage: At 20 HP or less, it is Berserk.\nFlame-Averse: If it can see fire or takes damage from\nfire, it is Frightened (Cd4).\nShock-Absorber: Shock damage rolls heal it instead.</p>"
+        "description": "Acid Bather: Acid damage rolls affect it as healing rolls.\nImmutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target have a d4 penalty.\nUnbaked: If it takes 5 or more Fire damage at once, it is Dazed (Cd4).\nStatblocks // Artificials Statblocks // Artificials 119 119 Bestiary Golem, Flesh TL: 4.7 Large Artificial A living automoton of stitched-together flesh, given life through electric strikes.\nHD: 9 (40 HP)\b Speed: 20' Zone: Frontline Morale: 10\b # Appearing:1 Senses: Darksight Armor: 0 [as Unarmored] Immune: Cold, Poison, Shock; Physical from non-Relics Weak: Fire Status Immunities: Charmed, Fatigued, Paralyzed, Sickened ACTIONS Multi-Attack: 2\u00d7Slam Slam [Melee Attack]: 9 (2d8 (+2 if this Being is Berserk)) ABILITIES Bloodied Rage: At 20 HP or less, it is Berserk.\nFlame-Averse: If it can see fire or takes damage from fire, it is Frightened (Cd4).\nShock-Absorber: Shock damage rolls heal it instead."
       }
     ],
     "loot": "",

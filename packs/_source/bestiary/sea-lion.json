@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6)\nClaw [Melee Attack]: 3 (d6)</p>",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite Bite [Melee Attack]: 7 (2d6) Claw [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amphibious: It can breathe air and water.\nPack Hunter: Targets within 5 feet of one of this\nBeing's Allies are Vulnerable to its attacks.\nPounce: If it moves at least 20' immediately before\nhitting with an attack on the same Turn, the Target is\nalso knocked Prone.</p>"
+        "description": "Amphibious: It can breathe air and water.\nPack Hunter: Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.\nPounce: If it moves at least 20' immediately before hitting with an attack on the same Turn, the Target is also knocked Prone."
       }
     ],
     "loot": "",

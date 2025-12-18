@@ -29,7 +29,7 @@
     "actions": [
       {
         "name": "Maul",
-        "description": "<p>[Multi-Attack]: 2x Claw</p>",
+        "description": "[Multi-Attack]: 2x Claw",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -38,7 +38,7 @@
       },
       {
         "name": "Claw",
-        "description": "<p>[Melee Attack]: 1 (d3)</p>",
+        "description": "[Melee Attack]: 1 (d3)",
         "attackType": "melee",
         "damage": "1d3",
         "damageType": "slash",
@@ -47,7 +47,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "description": "[Melee Attack]: 2 (d4)",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Trample",
-        "description": "<p>[Melee Attack] (Recharge Cd4): 18 (4d8)</p>",
+        "description": "[Melee Attack] (Recharge Cd4): 18 (4d8)",
         "attackType": "melee",
         "damage": "4d8",
         "damageType": "blunt",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Tusk",
-        "description": "<p>[Melee Attack]: 7 (2d4)</p>",
+        "description": "[Melee Attack]: 7 (2d4)",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -48,7 +48,7 @@
     "abilities": [
       {
         "name": "Charger",
-        "description": "<p>If it Moves at least 20' in a straight line before making a Tusk Attack, the damage is doubled.</p>"
+        "description": "If it Moves at least 20' in a straight line before making a Tusk Attack, the damage is doubled."
       }
     ],
     "loot": "",

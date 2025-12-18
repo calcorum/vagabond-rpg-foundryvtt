@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Lightning Bolt [Cast, 2 (d4) 120' Lines | Reflex]\n(Recharge Cd4): 21 (6d6)\nMulti-Attack: 1\u00d7Tentacle per (Tentacles)\nTentacle [Grapple]: 13 (3d8) and Restrained if smaller</p>",
+        "description": "Lightning Bolt [Cast, 2 (d4) 120' Lines | Reflex] (Recharge Cd4): 21 (6d6) Multi-Attack: 1\u00d7Tentacle per (Tentacles) Tentacle [Grapple]: 13 (3d8) and Restrained if smaller",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Tentacles: Starts with 8. Targetting one causes a -4\npenalty to the Check, but severs it if at least 16\ndamage is dealt.</p>"
+        "description": "Tentacles: Starts with 8. Targetting one causes a -4 penalty to the Check, but severs it if at least 16 damage is dealt."
       }
     ],
     "loot": "",

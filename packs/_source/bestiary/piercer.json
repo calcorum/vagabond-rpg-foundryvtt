@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Drop [Melee Attack]: 10 (3d6)</p>",
+        "description": "Drop [Melee Attack]: 10 (3d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Falling Ambush: Does not take falling damage from\nheights of 30' or shorter.</p>"
+        "description": "Falling Ambush: Does not take falling damage from heights of 30' or shorter."
       }
     ],
     "loot": "",

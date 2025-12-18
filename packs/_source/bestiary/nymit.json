@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Pick [Melee Attack]: 3 (d6)</p>",
+        "description": "Pick [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Befuddling Defense: When it takes damage, all Near\nEnemies must pass [Will] or become Confused (Cd4\nor until damaged).</p>"
+        "description": "Befuddling Defense: When it takes damage, all Near Enemies must pass [Will] or become Confused (Cd4 or until damaged)."
       }
     ],
     "loot": "",

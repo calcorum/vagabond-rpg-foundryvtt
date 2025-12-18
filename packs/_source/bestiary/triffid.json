@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Whorl [Melee Attack, Near]: 2 (d4) and Sickened\n(Cd4 damage)</p>",
+        "description": "Whorl [Melee Attack, Near]: 2 (d4) and Sickened (Cd4 damage)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Blinded: Blinded without its Echolocation.</p>"
+        "description": "Blinded: Blinded without its Echolocation."
       }
     ],
     "loot": "",

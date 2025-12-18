@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Maul",
-        "description": "<p>[Multi-Attack]: Two Claws and a Bite. If both Claws hit the same Target, the Bite can automatically hit that Target.</p>",
+        "description": "[Multi-Attack]: Two Claws and a Bite. If both Claws hit the same Target, the Bite can automatically hit that Target.",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Claws",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "slash",
@@ -48,7 +48,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "description": "[Melee Attack]: 4 (d8)",
         "attackType": "melee",
         "damage": "1d8",
         "damageType": "pierce",
@@ -59,7 +59,7 @@
     "abilities": [
       {
         "name": "Dense Muscled",
-        "description": "<p>Grapples and Shoves as Large.</p>"
+        "description": "Grapples and Shoves as Large."
       }
     ],
     "loot": "",

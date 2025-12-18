@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack [a Restrained Being]: 8\u00d7Claw\nClaw [Melee Attack]: 3 (d6)\nJaw Lock [Melee Attack]: 5 (2d4) and Restrained\nuntil this Being dies.</p>",
+        "description": "Multi-Attack [a Restrained Being]: 8\u00d7Claw Claw [Melee Attack]: 3 (d6) Jaw Lock [Melee Attack]: 5 (2d4) and Restrained until this Being dies.",
         "attackType": "special",
         "damage": "",
         "damageType": "",

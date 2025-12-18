@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 13 (3d8) and Restrained if it is smaller. This always hits a Target Restrained this way.</p>",
+        "description": "[Melee Attack]: 13 (3d8) and Restrained if it is smaller. This always hits a Target Restrained this way.",
         "attackType": "melee",
         "damage": "3d8",
         "damageType": "pierce",
@@ -41,11 +41,11 @@
     "abilities": [
       {
         "name": "Aggressor",
-        "description": "<p>The first time it Moves at least 10 feet toward an Enemy on a Turn, it regains that Speed.</p>"
+        "description": "The first time it Moves at least 10 feet toward an Enemy on a Turn, it regains that Speed."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Massive hippos, big enough for micro-ecosystems to develop on their backs. Uncontrollably territorial. Speed: 30' (Swim 40')</p>"
+    "gmNotes": "Massive hippos, big enough for micro-ecosystems to develop on their backs. Uncontrollably territorial. Speed: 30' (Swim 40')"
   },
   "reviewed": false
 }

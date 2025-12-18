@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Headbutt\n(+1) Claw [Melee Attack]: 3 (d4+1)\nHeadbutt [Melee Attack]: 9 (2d8)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Headbutt (+1) Claw [Melee Attack]: 3 (d4+1) Headbutt [Melee Attack]: 9 (2d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Magic Ward II: Cast Checks that include it as a Target\nhave a d6 penalty.</p>"
+        "description": "Magic Ward II: Cast Checks that include it as a Target have a d6 penalty."
       }
     ],
     "loot": "",

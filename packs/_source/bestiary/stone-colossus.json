@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Laser and 1\u00d7Slam, or 2\u00d7Slams\nSlam [Melee Attack, Near]: 21 (6d6) and Prone\nLaser [Ranged Attack] (Recharge Cd4): 14 (4d6)</p>",
+        "description": "Multi-Attack: 1\u00d7Laser and 1\u00d7Slam, or 2\u00d7Slams Slam [Melee Attack, Near]: 21 (6d6) and Prone Laser [Ranged Attack] (Recharge Cd4): 14 (4d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Besieger: Deals double damage to Structures.\nImmutable: It can't be transformed.\nMagic Ward IV: Cast Checks that include it as a Target\nhave a d10 penalty.\nSelf-Destruct: If it is at or below half its HP, its core\nbegins self-destructing. This core goes off in 1\nminute, and the sonic boom deals 200 damage to\neverything within 1 mile.\nStatblocks // Artificials\nStatblocks // Artificials\n123\n123\nBestiary\n\fBEASTS\nThe creatures one would normally see in\nour mortal realm, as well as their fantastical\nhybrids, fall under the domain of Beasts.</p>"
+        "description": "Besieger: Deals double damage to Structures.\nImmutable: It can't be transformed.\nMagic Ward IV: Cast Checks that include it as a Target have a d10 penalty.\nSelf-Destruct: If it is at or below half its HP, its core begins self-destructing. This core goes off in 1 minute, and the sonic boom deals 200 damage to everything within 1 mile.\nStatblocks // Artificials Statblocks // Artificials 123 123 Bestiary BEASTS The creatures one would normally see in our mortal realm, as well as their fantastical hybrids, fall under the domain of Beasts."
       }
     ],
     "loot": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "description": "[Melee Attack]: 5 (2d4)",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -39,15 +39,15 @@
     "abilities": [
       {
         "name": "Bioluminescent",
-        "description": "<p>Sheds Light out to Near.</p>"
+        "description": "Sheds Light out to Near."
       },
       {
         "name": "Soft Underbelly",
-        "description": "<p>Its Armor is 0 while it is Prone.</p>"
+        "description": "Its Armor is 0 while it is Prone."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Cat-sized beetles that illuminate dark, cavernous areas with the glowing glands across their bodies.</p>"
+    "gmNotes": "Cat-sized beetles that illuminate dark, cavernous areas with the glowing glands across their bodies."
   },
   "reviewed": false
 }

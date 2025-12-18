@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Tusk",
-        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "description": "[Melee Attack]: 7 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Relentless",
-        "description": "<p>Once per Day, if it is reduced to 0 HP, it instead regains 2d4 HP.</p>"
+        "description": "Once per Day, if it is reduced to 0 HP, it instead regains 2d4 HP."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Cow-sized boars known to give chase until they-or their target-dies of exhaustion.</p>"
+    "gmNotes": "Cow-sized boars known to give chase until they-or their target-dies of exhaustion."
   },
   "reviewed": false
 }

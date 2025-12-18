@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 7 (2d6) and pass [Endure] or become Sickened (Cd4, +1 Fatigue each Round).</p>",
+        "description": "[Melee Attack]: 7 (2d6) and pass [Endure] or become Sickened (Cd4, +1 Fatigue each Round).",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -43,15 +43,15 @@
     "abilities": [
       {
         "name": "Webs",
-        "description": "<p>Its web is an Object with 4 HP and Armor: 5.</p>"
+        "description": "Its web is an Object with 4 HP and Armor: 5."
       },
       {
         "name": "Web Walker",
-        "description": "<p>It can sense any Being on the same web as it as if by Blindsight, and is not impeded by web as Difficult Terrain.</p>"
+        "description": "It can sense any Being on the same web as it as if by Blindsight, and is not impeded by web as Difficult Terrain."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Man-sized venomous spiders distinguished by their red hourglass mark.</p>"
+    "gmNotes": "Man-sized venomous spiders distinguished by their red hourglass mark."
   },
   "reviewed": false
 }

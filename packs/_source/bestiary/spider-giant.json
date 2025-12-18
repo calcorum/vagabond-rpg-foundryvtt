@@ -33,7 +33,7 @@
     "actions": [
       {
         "name": "Web Shot",
-        "description": "<p>[Ranged Attack] (Recharge Cd4): Restrained by Webs.</p>",
+        "description": "[Ranged Attack] (Recharge Cd4): Restrained by Webs.",
         "attackType": "ranged",
         "damage": "0",
         "damageType": "",
@@ -42,7 +42,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 4 (d8) and pass [Endure] against Sickened or take another 4 (d8) damage and be Sickened (Cd8, Paralyzed).</p>",
+        "description": "[Melee Attack]: 4 (d8) and pass [Endure] against Sickened or take another 4 (d8) damage and be Sickened (Cd8, Paralyzed).",
         "attackType": "melee",
         "damage": "1d8",
         "damageType": "pierce",
@@ -53,15 +53,15 @@
     "abilities": [
       {
         "name": "Webs",
-        "description": "<p>Its web is an Object with 4 HP and Armor: 1.</p>"
+        "description": "Its web is an Object with 4 HP and Armor: 1."
       },
       {
         "name": "Web Walker",
-        "description": "<p>It can sense any Being on the same web as it as if by Blindsight, and is not impeded by web as Difficult Terrain.</p>"
+        "description": "It can sense any Being on the same web as it as if by Blindsight, and is not impeded by web as Difficult Terrain."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Oversized arachnids that can spin and shoot webs.</p>"
+    "gmNotes": "Oversized arachnids that can spin and shoot webs."
   },
   "reviewed": false
 }

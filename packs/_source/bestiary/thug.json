@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Weapon",
-        "description": "<p>[Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "[Attack]: 3 (d6) or (by Weapon)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "blunt",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Arbalest",
-        "description": "<p>[Ranged Attack]: 5 (d10)</p>",
+        "description": "[Ranged Attack]: 5 (d10)",
         "attackType": "ranged",
         "damage": "1d10",
         "damageType": "pierce",

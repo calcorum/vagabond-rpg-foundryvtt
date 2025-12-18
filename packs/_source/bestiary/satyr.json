@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Sleep [Cast, Beings who hear it] (1/Day):\nUnconscious (Cd6 or until awoken)\nCharm [Cast, Beings who hear it | Will] (1/Day):\nCharmed (until this Being drops Focus). Those Charmed\nthis way must Move toward this Being and use their\nAction to obey its commands.\nHorns [Melee Attack]: 5 (2d4)\nFear [Cast, Beings who hear it | Will] (1/Day):\nFrightened (Cd4)</p>",
+        "description": "Sleep [Cast, Beings who hear it] (1/Day):\nUnconscious (Cd6 or until awoken) Charm [Cast, Beings who hear it | Will] (1/Day):\nCharmed (until this Being drops Focus). Those Charmed this way must Move toward this Being and use their Action to obey its commands.\nHorns [Melee Attack]: 5 (2d4) Fear [Cast, Beings who hear it | Will] (1/Day):\nFrightened (Cd4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nPanpipes [Item]: It casn't use Sleep, Charm, or Fear\nwithout its panpipes.\nBestiary\nBestiary\n156\n156\n\fUnicorn TL: 4.2\nLarge Fae (Divine)\nHD: 4 (18 HP)\b Speed: 80'\nZone: Midline Morale: 7\b # Appearing: 1\nSenses: Allsight, Telepathy (Far)\nArmor: 3 [as (+1) Chain]\nWeak: Cold Iron Weapons\nStatus Immunities: Charmed, Confused, Frightened\nACTIONS\nHeal [Cast, Touch] (1/Day): Regains 7 (2d6) HP\nand removes the Blinded, Confused, Paralyzed, or\nSickened Status\nMulti-Attack: 2\u00d7Hoof and 1\u00d7Horn\nHoof [Melee Attack]: 4 (d8)\nHorn [Melee Attack]: 4 (d8)\nTeleport [Cast] (1/Day): Teleports itself and any\nBeing mounting it up to Far\nABILITIES\nMagic Ward III: Cast Checks that include it as a Target\nhave a d8 penalty.\nRegenerate I: Regains 4 (d8) HP on each of its Turns.</p>"
+        "description": "Magic Ward I: Cast Checks that include it as a Target have a d4 penalty.\nPanpipes [Item]: It casn't use Sleep, Charm, or Fear without its panpipes.\nBestiary Bestiary 156 156 Unicorn TL: 4.2 Large Fae (Divine) HD: 4 (18 HP)\b Speed: 80' Zone: Midline Morale: 7\b # Appearing: 1 Senses: Allsight, Telepathy (Far) Armor: 3 [as (+1) Chain] Weak: Cold Iron Weapons Status Immunities: Charmed, Confused, Frightened ACTIONS Heal [Cast, Touch] (1/Day): Regains 7 (2d6) HP and removes the Blinded, Confused, Paralyzed, or Sickened Status Multi-Attack: 2\u00d7Hoof and 1\u00d7Horn Hoof [Melee Attack]: 4 (d8) Horn [Melee Attack]: 4 (d8) Teleport [Cast] (1/Day): Teleports itself and any Being mounting it up to Far ABILITIES Magic Ward III: Cast Checks that include it as a Target have a d8 penalty.\nRegenerate I: Regains 4 (d8) HP on each of its Turns."
       }
     ],
     "loot": "",

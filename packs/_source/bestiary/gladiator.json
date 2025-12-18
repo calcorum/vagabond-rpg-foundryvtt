@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Weapon",
-        "description": "<p>[Attack]: 5 (d8+1) or (by Weapon)</p>",
+        "description": "[Attack]: 5 (d8+1) or (by Weapon)",
         "attackType": "melee",
         "damage": "1d8+1",
         "damageType": "slash",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Prowess",
-        "description": "<p>+1 to attack damage it deals (already factored in).</p>",
+        "description": "+1 to attack damage it deals (already factored in).",
         "passive": true
       }
     ],

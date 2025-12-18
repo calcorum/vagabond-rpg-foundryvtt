@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Glare [Cast, a Humanlike that can see it | Will]\n(Recharge Cd8): Gains 3 (d4+1) Fatigue.\nStomp [Melee Attack]: 2 (d4)</p>",
+        "description": "Glare [Cast, a Humanlike that can see it | Will] (Recharge Cd8): Gains 3 (d4+1) Fatigue.\nStomp [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

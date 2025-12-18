@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Shock",
-        "description": "<p>[Attack, Aura Close | Endure]: 7 (2d6), Paralyzed (Cd4) if failed by 5 or more.</p>",
+        "description": "[Attack, Aura Close | Endure]: 7 (2d6), Paralyzed (Cd4) if failed by 5 or more.",
         "attackType": "special",
         "damage": "2d6",
         "damageType": "shock",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Attack]: 2 (d4)</p>",
+        "description": "[Attack]: 2 (d4)",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -50,11 +50,11 @@
     "abilities": [
       {
         "name": "Aquatic",
-        "description": "<p>Can only breathe water.</p>"
+        "description": "Can only breathe water."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Speed: 0' (Swim 30')</p>"
+    "gmNotes": "Speed: 0' (Swim 30')"
   },
   "reviewed": false
 }

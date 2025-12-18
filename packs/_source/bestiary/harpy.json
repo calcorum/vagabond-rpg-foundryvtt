@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Enthralling Song [Cast, all that hear it (Focus) | Will]\n(Recharge Cd6): Charmed (Cd4) and must Move\ntoward this Being.\nClaws [Melee Attack]: 3 (d6)\nWeapon [Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "Enthralling Song [Cast, all that hear it (Focus) | Will] (Recharge Cd6): Charmed (Cd4) and must Move toward this Being.\nClaws [Melee Attack]: 3 (d6) Weapon [Attack]: 3 (d6) or (by Weapon)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

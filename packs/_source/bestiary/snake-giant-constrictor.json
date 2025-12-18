@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>1x Bite and 1x Constrict</p>",
+        "description": "1x Bite and 1x Constrict",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack, Restrained Target]: 3 (d6)</p>",
+        "description": "[Melee Attack, Restrained Target]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Constrict",
-        "description": "<p>[Grapple]: 9 (2d8) and Restrained</p>",
+        "description": "[Grapple]: 9 (2d8) and Restrained",
         "attackType": "melee",
         "damage": "2d8",
         "damageType": "blunt",
@@ -56,7 +56,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>All manner of giant constricting snakes like boas and pythons. Always kills its prey by crushing it.</p>"
+    "gmNotes": "All manner of giant constricting snakes like boas and pythons. Always kills its prey by crushing it."
   },
   "reviewed": false
 }

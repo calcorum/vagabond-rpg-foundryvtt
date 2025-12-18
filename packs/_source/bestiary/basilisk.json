@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Glare [Cast, a Being looking at it | Endure] (Recharge\nCd4): Cursed (turned to stone until this Being dies)\nBite [Melee Attack]: 5 (d10) and pass an [Endure] Save\nor be Cursed (turned to stone until this Being dies)</p>",
+        "description": "Glare [Cast, a Being looking at it | Endure] (Recharge Cd4): Cursed (turned to stone until this Being dies) Bite [Melee Attack]: 5 (d10) and pass an [Endure] Save or be Cursed (turned to stone until this Being dies)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

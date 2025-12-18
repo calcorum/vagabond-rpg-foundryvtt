@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack, a Restrained Target]: 3 (d6) and\npass [Will] or be cursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 2 (d4)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Bite [Melee Attack, a Restrained Target]: 3 (d6) and pass [Will] or be cursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Bloodthirst: It is Berserk and Beings at or below half\nHP make Checks against it as if Vulnerable.\nShapechanger: This is a form that a Humanlike cursed\nwith lycanthropy can become when the curse takes\nhold. They revert automatically if they die.</p>"
+        "description": "Bloodthirst: It is Berserk and Beings at or below half HP make Checks against it as if Vulnerable.\nShapechanger: This is a form that a Humanlike cursed with lycanthropy can become when the curse takes hold. They revert automatically if they die."
       }
     ],
     "loot": "",

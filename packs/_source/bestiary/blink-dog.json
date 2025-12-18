@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Bite [Melee Attack]: 3 (d6)</p>",
+        "description": "Bite [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Blink: It can use its Speed to magically teleport itself\nanywhere within the used Speed.</p>"
+        "description": "Blink: It can use its Speed to magically teleport itself anywhere within the used Speed."
       }
     ],
     "loot": "",

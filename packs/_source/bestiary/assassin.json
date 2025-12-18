@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Flurry",
-        "description": "<p>[Multi-Attack]: Two Daggers.</p>",
+        "description": "[Multi-Attack]: Two Daggers.",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Dagger",
-        "description": "<p>[Attack]: 2 (d4) and Sneak Attack.</p>",
+        "description": "[Attack]: 2 (d4) and Sneak Attack.",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -48,7 +48,7 @@
     "abilities": [
       {
         "name": "Sneak Attack",
-        "description": "<p>Once per Turn, it deals 2 (d4) additional damage with an attack against a Vulnerable Target. This attack ignores Armor and can explode.</p>",
+        "description": "Once per Turn, it deals 2 (d4) additional damage with an attack against a Vulnerable Target. This attack ignores Armor and can explode.",
         "passive": true
       }
     ],

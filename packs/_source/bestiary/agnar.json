@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Spin-Thrash (it can only use this Action while at or\nbelow half HP) [Cast, Aura Near | Endure] (3/Day):\n9 (2d8), deals half on a pass and heals this Being for\nthe damage roll.\nChomp [Melee Attack, Cleave]: 10 (3d6) and\nRestrained</p>",
+        "description": "Spin-Thrash (it can only use this Action while at or below half HP) [Cast, Aura Near | Endure] (3/Day):\n9 (2d8), deals half on a pass and heals this Being for the damage roll.\nChomp [Melee Attack, Cleave]: 10 (3d6) and Restrained",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Flame Anger: If it takes Fire damage or sees open\nflame, it goes Berserk (Cd4).\nLockjaw: Hinders Checks to end being Restrained by it.\nLeap: If it uses its Move to Jump, any Being within 5\nfeet when it lands must pass a [Reflex] Save or take\n10 (3d6) and be shoved Prone.\nThe Agnar was originally created by Hankerin Ferinale for\nIndex Card RPG.</p>"
+        "description": "Flame Anger: If it takes Fire damage or sees open flame, it goes Berserk (Cd4).\nLockjaw: Hinders Checks to end being Restrained by it.\nLeap: If it uses its Move to Jump, any Being within 5 feet when it lands must pass a [Reflex] Save or take 10 (3d6) and be shoved Prone.\nThe Agnar was originally created by Hankerin Ferinale for Index Card RPG."
       }
     ],
     "loot": "",

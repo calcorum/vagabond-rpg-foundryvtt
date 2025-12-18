@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Drain",
-        "description": "<p>[Action, a Restrained Being]: 5 (2d6)</p>",
+        "description": "[Action, a Restrained Being]: 5 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 2 (d4) and Restrained.</p>",
+        "description": "[Melee Attack]: 2 (d4) and Restrained.",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -48,11 +48,11 @@
     "abilities": [
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Giant weasels are ferocious subterranean mammals that gnomes and other smaller cave dwellers train as hunting animals and mounts.</p>"
+    "gmNotes": "Giant weasels are ferocious subterranean mammals that gnomes and other smaller cave dwellers train as hunting animals and mounts."
   },
   "reviewed": false
 }

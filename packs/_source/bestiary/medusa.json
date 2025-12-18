@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Snakebite [Melee Attack] (Recharge Cd4): 3 (d6) and\npass [Endure] or be Sickened (drops to 0 HP).\nClaw [Melee Attack]: 2 (d4)</p>",
+        "description": "Snakebite [Melee Attack] (Recharge Cd4): 3 (d6) and pass [Endure] or be Sickened (drops to 0 HP).\nClaw [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Petrifying Visage: Beings that look at it for the first\ntime on their Turns must pass [Endure] against\nSickened or take 1 Fatigue. A Being with 3 or more\nFatigue that gains another Fatigue this way is cursed\n(petrified as a stone statue until this medusa dies).\nBestiary\nBestiary\n144\n144\n\fMimic TL: 2.6\nMedium Cryptid\nTends to shapeshift into chests, chairs, and\ndoors, lying in wait for undiscerning prey. Some\nadventurers tell tales of intelligent mimics that have\nhelped them on their journey.\nHD: 5 (22 HP)\b Speed: 10'\nZone: Frontline Morale: 9\b # Appearing: 1\nSenses: Darksight\nArmor: 1 [as Leather]\nACTIONS\nBite [Melee Attack]: 9 (2d8) and Restrained if smaller\nMimic [Action (Focus)]: It takes on the appearance of\nan Object that is its size or smaller for the Duration.\nPseudopod [Melee Attack]: 7 (3d4)\nABILITIES\nAdhere: Hinders Checks to end being Restrained by it.</p>"
+        "description": "Petrifying Visage: Beings that look at it for the first time on their Turns must pass [Endure] against Sickened or take 1 Fatigue. A Being with 3 or more Fatigue that gains another Fatigue this way is cursed (petrified as a stone statue until this medusa dies).\nBestiary Bestiary 144 144 Mimic TL: 2.6 Medium Cryptid Tends to shapeshift into chests, chairs, and doors, lying in wait for undiscerning prey. Some adventurers tell tales of intelligent mimics that have helped them on their journey.\nHD: 5 (22 HP)\b Speed: 10' Zone: Frontline Morale: 9\b # Appearing: 1 Senses: Darksight Armor: 1 [as Leather] ACTIONS Bite [Melee Attack]: 9 (2d8) and Restrained if smaller Mimic [Action (Focus)]: It takes on the appearance of an Object that is its size or smaller for the Duration.\nPseudopod [Melee Attack]: 7 (3d4) ABILITIES Adhere: Hinders Checks to end being Restrained by it."
       }
     ],
     "loot": "",

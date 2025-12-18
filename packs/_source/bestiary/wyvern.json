@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Stinger and 1\u00d7Bite; or 2\u00d7Claw and\n1\u00d7Bite\nStinger [Melee Attack] (Recharge Cd4): 3 (d6) and\nSickened (Cd4, +1 Fatigue each Round)\nClaw [Melee Attack]: 3 (d6)\nBite [Melee Attack]: 9 (2d8)</p>",
+        "description": "Multi-Attack: 1\u00d7Stinger and 1\u00d7Bite; or 2\u00d7Claw and 1\u00d7Bite Stinger [Melee Attack] (Recharge Cd4): 3 (d6) and Sickened (Cd4, +1 Fatigue each Round) Claw [Melee Attack]: 3 (d6) Bite [Melee Attack]: 9 (2d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

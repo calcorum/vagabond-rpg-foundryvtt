@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Talons and 1\u00d7Drain, or 2\u00d7Drain\nDrain [Action, Restrained Being | Endure]: 5 (2d4)\nHP is drained from the Target\nTalon [Melee Attack]: 7 (2d6) and Restrained if its\nthis Being's second Talon to hit it this Turn</p>",
+        "description": "Multi-Attack: 2\u00d7Talons and 1\u00d7Drain, or 2\u00d7Drain Drain [Action, Restrained Being | Endure]: 5 (2d4) HP is drained from the Target Talon [Melee Attack]: 7 (2d6) and Restrained if its this Being's second Talon to hit it this Turn",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Booze Hound: It takes half damage from poison-based\ndamage and can sense alcohol within 1 mile as if by\nAll-Sight. It doesn't flee if it is sensing alcohol, except\nby its Divine-Averse Ability.\nDivine-Averse: It makes Morale Checks if it can see a\ndivine trinket.</p>"
+        "description": "Booze Hound: It takes half damage from poison-based damage and can sense alcohol within 1 mile as if by All-Sight. It doesn't flee if it is sensing alcohol, except by its Divine-Averse Ability.\nDivine-Averse: It makes Morale Checks if it can see a divine trinket."
       }
     ],
     "loot": "",

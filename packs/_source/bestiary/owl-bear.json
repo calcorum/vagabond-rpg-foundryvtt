@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Beak. If both Claws hit,\nit takes an extra 9 (2d8)\nBeak [Melee Attack]: 4 (d8)\nClaw [Melee Attack]: 4 (d8)\nStatblocks // Cryptids\nStatblocks // Cryptids\n145\n145\nBestiary\n\fPeryton TL: 3.2\nMedium Cryptid (Beast)\nFlying elks with the souls of killers. Upon their\ncreation, the peryton casts the shadow of a man.\nOnly after murdering a human and devouring its\nheart does this shadow take its expected shape.\nHD: 4 (18 HP)\b Speed: 40' (Fly 60')\nZone: Frontline Morale: 9\b # Appearing: 2d4\nArmor: 2 [as (+1) Leather]\nImmune: Physical from non-Relics\nACTIONS\nHorn [Melee Attack]: 7 (2d6)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Beak. If both Claws hit, it takes an extra 9 (2d8) Beak [Melee Attack]: 4 (d8) Claw [Melee Attack]: 4 (d8) Statblocks // Cryptids Statblocks // Cryptids 145 145 Bestiary Peryton TL: 3.2 Medium Cryptid (Beast) Flying elks with the souls of killers. Upon their creation, the peryton casts the shadow of a man.\nOnly after murdering a human and devouring its heart does this shadow take its expected shape.\nHD: 4 (18 HP)\b Speed: 40' (Fly 60') Zone: Frontline Morale: 9\b # Appearing: 2d4 Armor: 2 [as (+1) Leather] Immune: Physical from non-Relics ACTIONS Horn [Melee Attack]: 7 (2d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Dive Bomb: If it flies at least 20 feet toward a Target\nbefore making an attack, the attack deals an extra\ndie of damage.</p>"
+        "description": "Dive Bomb: If it flies at least 20 feet toward a Target before making an attack, the attack deals an extra die of damage."
       }
     ],
     "loot": "",

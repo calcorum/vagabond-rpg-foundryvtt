@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Bite [Melee Attack]: 2 (d4) and Sickened (Cd4,\nUnconscious and +1 Fatigue each Round). If failed by\n5 or more, it is also Restrained (5 (2d4) each Round)\nRestoration [Cast, Touch]: Regain 10 (3d6) HP\nShapechange [Cast, Self] (Focus): Polymorphs into a\nMedium or smaller Being. It uses its own Statblock.</p>",
+        "description": "Bite [Melee Attack]: 2 (d4) and Sickened (Cd4, Unconscious and +1 Fatigue each Round). If failed by 5 or more, it is also Restrained (5 (2d4) each Round) Restoration [Cast, Touch]: Regain 10 (3d6) HP Shapechange [Cast, Self] (Focus): Polymorphs into a Medium or smaller Being. It uses its own Statblock.",
         "attackType": "special",
         "damage": "",
         "damageType": "",

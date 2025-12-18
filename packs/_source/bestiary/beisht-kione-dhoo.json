@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Bite and 1\u00d7Slam\nBite [Melee Attack]: 10 (3d6) and Restrained if it is\nLarge or smaller. If this Being has a Target this way, it\ncan only Bite the Restrained Target.\nSlam [Melee Attack]: 11 (2d10) and shoved Prone if\nLarge or smaller than this Being.</p>",
+        "description": "Multi-Attack: 1\u00d7Bite and 1\u00d7Slam Bite [Melee Attack]: 10 (3d6) and Restrained if it is Large or smaller. If this Being has a Target this way, it can only Bite the Restrained Target.\nSlam [Melee Attack]: 11 (2d10) and shoved Prone if Large or smaller than this Being.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amphibious: Breathes air and water.\nDreadnought: Deals double damage to vehicles.\nTerror III: Enemies that can see it for the first time and\nat the start of their Turns must pass a [Will] Save or be\nFrightened (until they pass this Check on a subsequent\nTurn, or for Cd8 Rounds afterwards).</p>"
+        "description": "Amphibious: Breathes air and water.\nDreadnought: Deals double damage to vehicles.\nTerror III: Enemies that can see it for the first time and at the start of their Turns must pass a [Will] Save or be Frightened (until they pass this Check on a subsequent Turn, or for Cd8 Rounds afterwards)."
       }
     ],
     "loot": "",

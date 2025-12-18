@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: Pass [Endure] or become Sickened (Cd4, Paralyzed)</p>",
+        "description": "[Melee Attack]: Pass [Endure] or become Sickened (Cd4, Paralyzed)",
         "attackType": "melee",
         "damage": "0",
         "damageType": "pierce",

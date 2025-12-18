@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Log Throw [Ranged Attack, Near]: 4 (d8)\nClaw [Melee Attack]: 2 (d4)</p>",
+        "description": "Log Throw [Ranged Attack, Near]: 4 (d8) Claw [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

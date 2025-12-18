@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Tentacle and 1\u00d7Bite\nBite [Melee Attack, a Paralyzed Target]: 3 (d6)\nTentacle [Melee Attack]: 4 (d8) and pass [Endure] or\nbecome Sickened (Cd6, Paralyzed)</p>",
+        "description": "Multi-Attack: 1\u00d7Tentacle and 1\u00d7Bite Bite [Melee Attack, a Paralyzed Target]: 3 (d6) Tentacle [Melee Attack]: 4 (d8) and pass [Endure] or become Sickened (Cd6, Paralyzed)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Soft Underbelly: Its Armor is 0 while it is Prone.</p>"
+        "description": "Soft Underbelly: Its Armor is 0 while it is Prone."
       }
     ],
     "loot": "",

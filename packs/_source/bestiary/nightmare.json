@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Stampede [Multi-Attack]: 1\u00d7Bite and 1\u00d7Stomp\nBite [Melee Attack]: 5 (2d4)\nStomp [Melee Attack]: 3 (d6) plus 3 (d6 if Prone))\nand Burning (Cd4)</p>",
+        "description": "Stampede [Multi-Attack]: 1\u00d7Bite and 1\u00d7Stomp Bite [Melee Attack]: 5 (2d4) Stomp [Melee Attack]: 3 (d6) plus 3 (d6 if Prone)) and Burning (Cd4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Fire Rider: Allies mounted on it are Immune to Fire.\nIlluminating: Sheds Light out to Near.\nStatblocks // Outers\nStatblocks // Outers\n161\n161\nBestiary\n\fOgler TL: 11.2\nLarge Outer (Beyonder)\nGreedy, pompous creatures out-of-touch with\nreality by nature. They are always driven insane by\narrogance and the insatiable desire to rule over all.\nThey are known to claim the works of their subjects\nas their own, enforce overreaching taxes, and trick\nothers into outrageous deals.\nHD: 12 (54 HP)\b Speed: 0' (Fly 20')\nZone: Backline Morale: 12\b # Appearing: 1\nSenses: Darksight, Telepathy (Far)\nArmor: 4 [as (+1) Plate]\nACTIONS\nMulti-Cast: 3 (d6)\u00d7Eyebeam and 1\u00d7Bite\nEyebeam [Cast, Remote]: Roll d8 for each:\n1 Charm [Will]: Charmed (Cd4, or until damaged)\n2 Sleep [Will]: Unconscious (Cd6, or woken up)\n3 Kinesis [Endure]: Restrained (1 Round)\n4 Petrify [Will]: Transformed into a stone statue\n5 Death [Near Only | Endure]: 14 (4d6)\n6 Fear [Will]: Frightened (Cd4)\n7 Slow [Will]: Speed reduced to 10' for (Cd4)\n8 Paralysis [Endure]: Paralyzed (Cd4)\nBite [Melee Attack]: 5 (2d4)\nABILITIES\nAntimagical Cone: Cast Checks in a Far Cone from\nits central eye always fail, and any magic effect in the\nCone is suspended while in the cone.\nMind of Madness: It can Cast while Berserk.</p>"
+        "description": "Fire Rider: Allies mounted on it are Immune to Fire.\nIlluminating: Sheds Light out to Near.\nStatblocks // Outers Statblocks // Outers 161 161 Bestiary Ogler TL: 11.2 Large Outer (Beyonder) Greedy, pompous creatures out-of-touch with reality by nature. They are always driven insane by arrogance and the insatiable desire to rule over all.\nThey are known to claim the works of their subjects as their own, enforce overreaching taxes, and trick others into outrageous deals.\nHD: 12 (54 HP)\b Speed: 0' (Fly 20') Zone: Backline Morale: 12\b # Appearing: 1 Senses: Darksight, Telepathy (Far) Armor: 4 [as (+1) Plate] ACTIONS Multi-Cast: 3 (d6)\u00d7Eyebeam and 1\u00d7Bite Eyebeam [Cast, Remote]: Roll d8 for each:\n1 Charm [Will]: Charmed (Cd4, or until damaged) 2 Sleep [Will]: Unconscious (Cd6, or woken up) 3 Kinesis [Endure]: Restrained (1 Round) 4 Petrify [Will]: Transformed into a stone statue 5 Death [Near Only | Endure]: 14 (4d6) 6 Fear [Will]: Frightened (Cd4) 7 Slow [Will]: Speed reduced to 10' for (Cd4) 8 Paralysis [Endure]: Paralyzed (Cd4) Bite [Melee Attack]: 5 (2d4) ABILITIES Antimagical Cone: Cast Checks in a Far Cone from its central eye always fail, and any magic effect in the Cone is suspended while in the cone.\nMind of Madness: It can Cast while Berserk."
       }
     ],
     "loot": "",

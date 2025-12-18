@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Drain, or 1\u00d7Cloak and 1\u00d7Drain\nDrain [Melee Attack, Restrained Target]: 2 (d4) and\nthis Being is healed for the damage dealt\nCloak [Melee Attack]: Restrained</p>",
+        "description": "Multi-Attack: 2\u00d7Drain, or 1\u00d7Cloak and 1\u00d7Drain Drain [Melee Attack, Restrained Target]: 2 (d4) and this Being is healed for the damage dealt Cloak [Melee Attack]: Restrained",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Cloaking: While it has a Target Restrained, any damage\ndealt to it is halved and also dealt to the Target.\nStatblocks // Cryptids\nStatblocks // Cryptids\n147\n147\nBestiary\n\fRust Monster TL: 2.7\nMedium Cryptid\nInsectoids known to destroy any metal.\nHD: 5 (22 HP)\b Speed: 15'\nZone: Frontline Morale: 7\b # Appearing: d2\nSenses: Darksight\nArmor: 4 [as Plate plus Shield]\nACTIONS\nAntenna [Cast, Touch (metal Object)]: Rust Touch\nBite [Melee Attack]: 3 (d6)\nABILITIES\nRust Touch: Non-Relic metal Items that make contact\nwith it corrode. When this happens, roll a d6 for each\nItem. On a roll of 1, the Item breaks. If the Item that\nbreaks is larger than Medium, this destroys a 1-foot\nsquare hole that is 1-foot deep in it.</p>"
+        "description": "Cloaking: While it has a Target Restrained, any damage dealt to it is halved and also dealt to the Target.\nStatblocks // Cryptids Statblocks // Cryptids 147 147 Bestiary Rust Monster TL: 2.7 Medium Cryptid Insectoids known to destroy any metal.\nHD: 5 (22 HP)\b Speed: 15' Zone: Frontline Morale: 7\b # Appearing: d2 Senses: Darksight Armor: 4 [as Plate plus Shield] ACTIONS Antenna [Cast, Touch (metal Object)]: Rust Touch Bite [Melee Attack]: 3 (d6) ABILITIES Rust Touch: Non-Relic metal Items that make contact with it corrode. When this happens, roll a d6 for each Item. On a roll of 1, the Item breaks. If the Item that breaks is larger than Medium, this destroys a 1-foot square hole that is 1-foot deep in it."
       }
     ],
     "loot": "",

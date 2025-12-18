@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Magma Jet\nMagma Jet [Ranged Attack]: 7 (2d6) and Burning\n(Cd6)</p>",
+        "description": "Multi-Attack: 2\u00d7Magma Jet Magma Jet [Ranged Attack]: 7 (2d6) and Burning (Cd6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.\nStatblocks // Artificials\nStatblocks // Artificials\n121\n121\nBestiary\n\fNecrophidius TL: 2.0\nLarge Artificial/Undead\nSlithering, animated bones with a serpentine form\nand humanoid head.\nHD: 2 (9 HP)\b Speed: 25'\nZone: Frontline Morale: -\b # Appearing: 1\nSenses: Blindsight\nArmor: 2 [as Chain]\nImmune: Poison\nWeak: Blunt\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nDance of Death [Cast, Remote | Will]: Dazed (Cd4)\nBite [Melee Attack]: 4 (d8) and pass [Endure] or\nbecome Sickened (Cd4, Paralyzed)\nABILITIES\nImmutable: It can't be transformed.</p>"
+        "description": "Immutable: It can't be transformed.\nStatblocks // Artificials Statblocks // Artificials 121 121 Bestiary Necrophidius TL: 2.0 Large Artificial/Undead Slithering, animated bones with a serpentine form and humanoid head.\nHD: 2 (9 HP)\b Speed: 25' Zone: Frontline Morale: -\b # Appearing: 1 Senses: Blindsight Armor: 2 [as Chain] Immune: Poison Weak: Blunt Status Immunities: Fatigued, Sickened, Suffocating ACTIONS Dance of Death [Cast, Remote | Will]: Dazed (Cd4) Bite [Melee Attack]: 4 (d8) and pass [Endure] or become Sickened (Cd4, Paralyzed) ABILITIES Immutable: It can't be transformed."
       }
     ],
     "loot": "",

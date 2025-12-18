@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "description": "[Melee Attack]: 4 (d8)",
         "attackType": "melee",
         "damage": "1d8",
         "damageType": "pierce",
@@ -42,7 +42,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Overgrown reptiles, often used as mounts.</p>"
+    "gmNotes": "Overgrown reptiles, often used as mounts."
   },
   "reviewed": false
 }

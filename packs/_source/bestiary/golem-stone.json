@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Slow Down [Cast, Aura Near | Will] (Recharge\nCd4): Dazed (Cd4)\nMulti-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 13 (3d8)</p>",
+        "description": "Slow Down [Cast, Aura Near | Will] (Recharge Cd4): Dazed (Cd4) Multi-Attack: 2\u00d7Slam Slam [Melee Attack]: 13 (3d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+        "description": "Immutable: It can't be transformed.\nMagic Ward I: Cast Checks that include it as a Target have a d4 penalty."
       }
     ],
     "loot": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Blow [Melee Attack]: 10 (4d4)</p>",
+        "description": "Blow [Melee Attack]: 10 (4d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Invisible: All Beings that can't detect invisibility act\nas Blinded when Targeting this Being and defending\nagainst its attacks.\nStatblocks // Primordials\nStatblocks // Primordials\n173\n173\nBestiary\n\fKelpie TL: 2.4\nMedium Primordial (Shapechanger)\nIntelligent, aquatic plant life that normally only\nappear as lumps of wet kelp. It can change its form\nto that of a horse or beautiful woman.\nHD: 5 (22 HP)\b Speed: 30' (Swim)\nZone: Backline Morale: 4\b # Appearing: d4\nArmor: 2 [as Chain]\nWeak: Shock\nACTIONS\nEntangle [Grapple, an Enemy in Water]: Restrained\nEnlure [Cast, Sight | Will (-2 penalty)] (1/Day):\nCharmed (Cd6, it must Move closer to this Being)\nABILITIES\nAmphibious: It can breathe air and water.\nShapechange: It can skip its Move to turn into a green\nwoman, or an aquatic horse (use the hippocampus\nstatblock). It maintains its HP in these forms.</p>"
+        "description": "Invisible: All Beings that can't detect invisibility act as Blinded when Targeting this Being and defending against its attacks.\nStatblocks // Primordials Statblocks // Primordials 173 173 Bestiary Kelpie TL: 2.4 Medium Primordial (Shapechanger) Intelligent, aquatic plant life that normally only appear as lumps of wet kelp. It can change its form to that of a horse or beautiful woman.\nHD: 5 (22 HP)\b Speed: 30' (Swim) Zone: Backline Morale: 4\b # Appearing: d4 Armor: 2 [as Chain] Weak: Shock ACTIONS Entangle [Grapple, an Enemy in Water]: Restrained Enlure [Cast, Sight | Will (-2 penalty)] (1/Day):\nCharmed (Cd6, it must Move closer to this Being) ABILITIES Amphibious: It can breathe air and water.\nShapechange: It can skip its Move to turn into a green woman, or an aquatic horse (use the hippocampus statblock). It maintains its HP in these forms."
       }
     ],
     "loot": "",

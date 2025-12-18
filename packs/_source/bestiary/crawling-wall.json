@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Grasp and 1\u00d7Crush\nGrasp [Melee Attack]: 4 (d8) and Restrained\nCrush [Rush]: Any Huge or smaller Being in its path is\npushed in front of it for the Move. If there is no open\nspace within Close for the Being to go when this\nhappens, it takes 3 (d6) for every 5' of Speed this Being\nhas remaining.\nImmutable: It can't be transformed.</p>",
+        "description": "Multi-Attack: 1\u00d7Grasp and 1\u00d7Crush Grasp [Melee Attack]: 4 (d8) and Restrained Crush [Rush]: Any Huge or smaller Being in its path is pushed in front of it for the Move. If there is no open space within Close for the Being to go when this happens, it takes 3 (d6) for every 5' of Speed this Being has remaining.\nImmutable: It can't be transformed.",
         "attackType": "special",
         "damage": "",
         "damageType": "",

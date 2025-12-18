@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Strike [Melee Attack]: 9 (2d8) plus 4 (d8) if in water</p>",
+        "description": "Strike [Melee Attack]: 9 (2d8) plus 4 (d8) if in water",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Waterbound: Must stay Near a body of water.</p>"
+        "description": "Waterbound: Must stay Near a body of water."
       }
     ],
     "loot": "",

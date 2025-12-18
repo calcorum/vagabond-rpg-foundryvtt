@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Fire Breath [Cast, Near Cone | Reflex or Endure]:\n10 (3d6)\nSpike [Melee Attack]: 4 (d8)\nBite [Melee Attack]: 2 (d6)</p>",
+        "description": "Fire Breath [Cast, Near Cone | Reflex or Endure]:\n10 (3d6) Spike [Melee Attack]: 4 (d8) Bite [Melee Attack]: 2 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Bloodlust: If it is missing at least half its HP, it is Berserk.\nWhenever it is Berserk, it can make 2 Attacks on its\nTurn instead of 1.\nLemoniphobic: Frightened (Cd4) after seeing a lemon.\nStench: All Near non-hodags that have to breathe are\nSickened (while Near this Being).</p>"
+        "description": "Bloodlust: If it is missing at least half its HP, it is Berserk.\nWhenever it is Berserk, it can make 2 Attacks on its Turn instead of 1.\nLemoniphobic: Frightened (Cd4) after seeing a lemon.\nStench: All Near non-hodags that have to breathe are Sickened (while Near this Being)."
       }
     ],
     "loot": "",

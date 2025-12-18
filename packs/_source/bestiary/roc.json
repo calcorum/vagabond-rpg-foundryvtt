@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 28 (8d6)\nClaw [Melee Attack, Near]: 10 (3d6) and Restrained if\nit\u2019s this Being's second Claw attack to hit it this Turn.</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Beak Beak [Melee Attack]: 28 (8d6) Claw [Melee Attack, Near]: 10 (3d6) and Restrained if it\u2019s this Being's second Claw attack to hit it this Turn.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Dive Bomb: If it flies at least 20' toward a Target before\nmaking an attack, the attack deals double damage.</p>"
+        "description": "Dive Bomb: If it flies at least 20' toward a Target before making an attack, the attack deals double damage."
       }
     ],
     "loot": "",

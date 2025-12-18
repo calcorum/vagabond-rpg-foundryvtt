@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Cone of Cold [Cast, 60' Cone | Endure] (1/Day): 36\n(8d8)\nCharm Person [Cast, a Remote Humanlike | Will]\n(1/Day, Focus): Charmed\nDarkness [Cast, 20' Sphere]: The Area becomes\nmagical darkness, and snuffs out any light sources.\nSleep [Cast, 20' Sphere | Endure] (1/Day):\nUnconscious (Cd4, or woken up)\nGaseous Form [Cast, Touch | Endure] (1/Day): Turns\ninto an incorporeal cloud of gas for the duration.\nMulti-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 6 (d8+2)\nInvisibility [Cast, Touch | Will] (Focus): Turns Invisible\nfor the duration.</p>",
+        "description": "Cone of Cold [Cast, 60' Cone | Endure] (1/Day): 36 (8d8) Charm Person [Cast, a Remote Humanlike | Will] (1/Day, Focus): Charmed Darkness [Cast, 20' Sphere]: The Area becomes magical darkness, and snuffs out any light sources.\nSleep [Cast, 20' Sphere | Endure] (1/Day):\nUnconscious (Cd4, or woken up) Gaseous Form [Cast, Touch | Endure] (1/Day): Turns into an incorporeal cloud of gas for the duration.\nMulti-Attack: 2\u00d7Claw Claw [Melee Attack]: 6 (d8+2) Invisibility [Cast, Touch | Will] (Focus): Turns Invisible for the duration.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Regenerate II: Regains 9 (2d8) HP on its Turns.</p>"
+        "description": "Regenerate II: Regains 9 (2d8) HP on its Turns."
       }
     ],
     "loot": "",

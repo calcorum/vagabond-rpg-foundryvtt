@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Acid Spit",
-        "description": "<p>[Ranged Attack, Near] (Recharge Cd4): 10 (3d6) and Burning (Cd6)</p>",
+        "description": "[Ranged Attack, Near] (Recharge Cd4): 10 (3d6) and Burning (Cd6)",
         "attackType": "ranged",
         "damage": "3d6",
         "damageType": "acid",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "description": "[Melee Attack]: 7 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -49,7 +49,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Armor: 1 [as Unarmored plus Shield]. Immune: Blunt from non-Relics</p>"
+    "gmNotes": "Armor: 1 [as Unarmored plus Shield]. Immune: Blunt from non-Relics"
   },
   "reviewed": false
 }

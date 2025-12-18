@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 5 (d10)</p>",
+        "description": "[Melee Attack]: 5 (d10)",
         "attackType": "melee",
         "damage": "1d10",
         "damageType": "pierce",
@@ -40,7 +40,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Massive lizards that glide in desert canyons and have a taste for human flesh. Speed: 40' (70' with Glide)</p>"
+    "gmNotes": "Massive lizards that glide in desert canyons and have a taste for human flesh. Speed: 40' (70' with Glide)"
   },
   "reviewed": false
 }

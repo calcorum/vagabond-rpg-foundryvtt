@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Assault [Multi-Attack]: Lance and Cannon attack.\nLance [Melee Attack, Near]: 13 (2d12)\nCannon [Ranged Attack (Sphere 10 foot)]: 11 (3d6)</p>",
+        "description": "Assault [Multi-Attack]: Lance and Cannon attack.\nLance [Melee Attack, Near]: 13 (2d12) Cannon [Ranged Attack (Sphere 10 foot)]: 11 (3d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.</p>"
+        "description": "Immutable: It can't be transformed."
       }
     ],
     "loot": "",

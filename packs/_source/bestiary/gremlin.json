@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Sabotage [Cast, a non-Relic Item in Near | Wielder's\nEndure] (1/Day): Breaks into materials.\nBite [Melee Attack]: 2 (d4)</p>",
+        "description": "Sabotage [Cast, a non-Relic Item in Near | Wielder's Endure] (1/Day): Breaks into materials.\nBite [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Doom Magnet: Near Enemies can't gain Favor.\nMagic Resistance I: If Targeted with Magic, roll a d4.\nOn a roll of 1, it ignores the effect.\nStatblocks // Cryptids\nStatblocks // Cryptids\n141\n141\nBestiary\n\fGriffon TL: 3.7\nLarge Cryptid\nHybrid creatures with an eagle's head, wings, and\nforelegs, and hind-quarters of a lion.\nHD: 7 (31 HP)\b Speed: 30' (Fly 80')\nZone: Frontline Morale: 8\b # Appearing: d4\nArmor: 2 [as Chain]\nWeak: Shock\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 9 (2d8)\nClaw [Melee Attack]: 2 (d4)</p>"
+        "description": "Doom Magnet: Near Enemies can't gain Favor.\nMagic Resistance I: If Targeted with Magic, roll a d4.\nOn a roll of 1, it ignores the effect.\nStatblocks // Cryptids Statblocks // Cryptids 141 141 Bestiary Griffon TL: 3.7 Large Cryptid Hybrid creatures with an eagle's head, wings, and forelegs, and hind-quarters of a lion.\nHD: 7 (31 HP)\b Speed: 30' (Fly 80') Zone: Frontline Morale: 8\b # Appearing: d4 Armor: 2 [as Chain] Weak: Shock ACTIONS Multi-Attack: 2\u00d7Claw and 1\u00d7Beak Beak [Melee Attack]: 9 (2d8) Claw [Melee Attack]: 2 (d4)"
       }
     ],
     "loot": "",

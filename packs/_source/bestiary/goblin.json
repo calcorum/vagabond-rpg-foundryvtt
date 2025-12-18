@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Determined by type on table below.</p>",
+        "description": "Determined by type on table below.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Sun-Averse: Is Vulnerable while in Sunlight</p>"
+        "description": "Sun-Averse: Is Vulnerable while in Sunlight"
       }
     ],
     "loot": "",

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Flame [Ranged Attack]: 9 (2d8) and Burning (Cd6)</p>",
+        "description": "Flame [Ranged Attack]: 9 (2d8) and Burning (Cd6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Living Fire: Close Beings are Burning (d8).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.</p>"
+        "description": "Living Fire: Close Beings are Burning (d8).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and openings as small as 1 inch without squeezing."
       }
     ],
     "loot": "",

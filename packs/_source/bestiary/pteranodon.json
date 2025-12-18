@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Beak",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -40,7 +40,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Flying dinosaurs that resemble birds with fanged maws. Speed: 10' (Fly 60')</p>"
+    "gmNotes": "Flying dinosaurs that resemble birds with fanged maws. Speed: 10' (Fly 60')"
   },
   "reviewed": false
 }

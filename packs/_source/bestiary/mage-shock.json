@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Lightning Bolt",
-        "description": "<p>[Cast, 30-foot Line | Reflex] (Recharge Cd6): 10 (3d6) and Dazed (Cd4)</p>",
+        "description": "[Cast, 30-foot Line | Reflex] (Recharge Cd6): 10 (3d6) and Dazed (Cd4)",
         "attackType": "cast",
         "damage": "3d6",
         "damageType": "shock",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Zap",
-        "description": "<p>[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and Dazed for the duration.</p>",
+        "description": "[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and Dazed for the duration.",
         "attackType": "cast",
         "damage": "2d6",
         "damageType": "shock",

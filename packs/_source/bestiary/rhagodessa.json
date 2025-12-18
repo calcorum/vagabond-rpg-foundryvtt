@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Sucker and 1\u00d7Bite\nBite [Melee Attack]: 9 (2d8)\nSucker [Melee Attack]: Restrained</p>",
+        "description": "Multi-Attack: 1\u00d7Sucker and 1\u00d7Bite Bite [Melee Attack]: 9 (2d8) Sucker [Melee Attack]: Restrained",
         "attackType": "special",
         "damage": "",
         "damageType": "",

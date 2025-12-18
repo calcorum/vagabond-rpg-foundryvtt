@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Morningstar [Melee Attack, 10']: 4 (d8)</p>",
+        "description": "Morningstar [Melee Attack, 10']: 4 (d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Ambusher: If it attacks a Being that has not acted in\nthe Combat, it deals an extra die of damage.\nStatblocks // Cryptids\nStatblocks // Cryptids\n135\n135\nBestiary\n\fBulette TL: 10.9\nLarge Cryptid\nArmored land sharks that rip through the earth.\nHD: 9 (40 HP)\b Speed: 40'\nZone: Frontline Morale: 7\b # Appearing: d2\nSenses: Seismicsense (Far)\nArmor: 4 [as (+1) Plate]\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 26 (4d12)\nClaw [Melee Attack]: 10 (3d6)\nABILITIES\nSoft Underbelly: Its Armor is 0 while it is Prone.</p>"
+        "description": "Ambusher: If it attacks a Being that has not acted in the Combat, it deals an extra die of damage.\nStatblocks // Cryptids Statblocks // Cryptids 135 135 Bestiary Bulette TL: 10.9 Large Cryptid Armored land sharks that rip through the earth.\nHD: 9 (40 HP)\b Speed: 40' Zone: Frontline Morale: 7\b # Appearing: d2 Senses: Seismicsense (Far) Armor: 4 [as (+1) Plate] ACTIONS Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Bite [Melee Attack]: 26 (4d12) Claw [Melee Attack]: 10 (3d6) ABILITIES Soft Underbelly: Its Armor is 0 while it is Prone."
       }
     ],
     "loot": "",

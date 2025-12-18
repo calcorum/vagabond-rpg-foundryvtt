@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Life Zap [Cast, Touch | Endure]: 5 (d10), healing this\nBeing for the damage dealt\nDissipate [Cast, Self (Focus)]: Invisible for the duration.</p>",
+        "description": "Life Zap [Cast, Touch | Endure]: 5 (d10), healing this Being for the damage dealt Dissipate [Cast, Self (Focus)]: Invisible for the duration.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Wyrd Ward: Cast Checks Targeting it are Hindered, as\nare attacks made with Magically-enhanced Weapons.\nIlluminating: Sheds Light out to 30 feet.\nStatblocks // Fae\nStatblocks // Fae\n157\n157\nBestiary\n\fOUTERS\nBeings who are truly alien to the mortal\nrealm or whose intrinsic nature aligns them\nwith forces of good or evil. Their essence is\ntypically tied to either an aligned plane (such\nas Hellspawn and negative planes or Divines\nand positive planes), or they are the eldritch\nhorrors from the incomprehensible beyond.</p>"
+        "description": "Wyrd Ward: Cast Checks Targeting it are Hindered, as are attacks made with Magically-enhanced Weapons.\nIlluminating: Sheds Light out to 30 feet.\nStatblocks // Fae Statblocks // Fae 157 157 Bestiary OUTERS Beings who are truly alien to the mortal realm or whose intrinsic nature aligns them with forces of good or evil. Their essence is typically tied to either an aligned plane (such as Hellspawn and negative planes or Divines and positive planes), or they are the eldritch horrors from the incomprehensible beyond."
       }
     ],
     "loot": "",

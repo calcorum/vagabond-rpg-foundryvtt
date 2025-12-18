@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>2x Hoof</p>",
+        "description": "2x Hoof",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Hoof",
-        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "description": "[Melee Attack]: 2 (d4)",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "blunt",

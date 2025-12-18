@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Beak\nBeak [Melee Attack]: 5 (d10)\nClaw [Melee Attack]: 3 (d6)\nBestiary\nBestiary\n142\n142\n\fHobgoblin TL: 1.4\nMedium Cryptid\nTaller goblins with refined tactical minds from years\nof combat.\nHD: 2 (9 HP)\b Speed: 30'\nZone: Frontline Morale: 9\b # Appearing: 1\nArmor: 2 [as Leather plus Shield]\nACTIONS\nWeapon [Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Beak Beak [Melee Attack]: 5 (d10) Claw [Melee Attack]: 3 (d6) Bestiary Bestiary 142 142 Hobgoblin TL: 1.4 Medium Cryptid Taller goblins with refined tactical minds from years of combat.\nHD: 2 (9 HP)\b Speed: 30' Zone: Frontline Morale: 9\b # Appearing: 1 Armor: 2 [as Leather plus Shield] ACTIONS Weapon [Attack]: 3 (d6) or (by Weapon)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Tactical: Targets Save against its attacks as if Vulnerable\nif at least one of this Being's Allies are within 5 feet\nof the Target.</p>"
+        "description": "Tactical: Targets Save against its attacks as if Vulnerable if at least one of this Being's Allies are within 5 feet of the Target."
       }
     ],
     "loot": "",

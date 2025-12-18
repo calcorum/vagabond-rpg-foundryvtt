@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nClaws [Melee Attack]: 2 (d4)\nBite [Melee Attack]: 5 (2d4)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Claws [Melee Attack]: 2 (d4) Bite [Melee Attack]: 5 (2d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Chameleon Skin: Detect Checks to find it based on\nsight are Hindered.\nStench [Aura Near]: At the start of each of this\nBeing's Turns, pass [Endure] or be Sickened (-2 to\nAttack Checks while in the Area). On a pass, it is\nimmune to this Ability for 1 day.\nSun-Averse: Is Blinded (Cd4) by Sunlight.</p>"
+        "description": "Chameleon Skin: Detect Checks to find it based on sight are Hindered.\nStench [Aura Near]: At the start of each of this Being's Turns, pass [Endure] or be Sickened (-2 to Attack Checks while in the Area). On a pass, it is immune to this Ability for 1 day.\nSun-Averse: Is Blinded (Cd4) by Sunlight."
       }
     ],
     "loot": "",

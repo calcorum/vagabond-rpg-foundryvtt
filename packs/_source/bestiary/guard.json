@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Weapon",
-        "description": "<p>[Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "[Attack]: 3 (d6) or (by Weapon)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "slash",

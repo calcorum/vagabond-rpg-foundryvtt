@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>1x Tongue and 1x Bite</p>",
+        "description": "1x Tongue and 1x Bite",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -50,7 +50,7 @@
       },
       {
         "name": "Tongue",
-        "description": "<p>[Melee Attack, Near (Medium or smaller Being)]: Restrained and pulled Close</p>",
+        "description": "[Melee Attack, Near (Medium or smaller Being)]: Restrained and pulled Close",
         "attackType": "melee",
         "damage": "0",
         "damageType": "",
@@ -61,7 +61,7 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>Can breathe air or water.</p>"
+        "description": "Can breathe air or water."
       }
     ],
     "loot": "",

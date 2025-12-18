@@ -31,7 +31,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Hoof\nHoof [Melee Attack]: 3 (d6)</p>",
+        "description": "Multi-Attack: 2\u00d7Hoof Hoof [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

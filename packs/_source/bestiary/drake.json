@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8)\nClaw [Melee Attack]: 3 (d6)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Bite [Melee Attack]: 4 (d8) Claw [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

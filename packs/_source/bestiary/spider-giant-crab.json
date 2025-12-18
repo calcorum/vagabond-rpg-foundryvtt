@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 4 (d8) and pass [Endure] with a +2 bonus or become Sickened (Cd4, +1 Fatigue each Round).</p>",
+        "description": "[Melee Attack]: 4 (d8) and pass [Endure] with a +2 bonus or become Sickened (Cd4, +1 Fatigue each Round).",
         "attackType": "melee",
         "damage": "1d8",
         "damageType": "pierce",
@@ -42,7 +42,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Man-sized venomous spiders with the ability to blend into their environment like a chameleon.</p>"
+    "gmNotes": "Man-sized venomous spiders with the ability to blend into their environment like a chameleon."
   },
   "reviewed": false
 }

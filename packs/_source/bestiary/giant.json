@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Greatclub [Melee Attack, 10']: 9 (2d8)\nRock [Ranged Attack]: 9 (2d6)\nType Changes\nCyclops One-Eyed: Attacks as if Vulnerable against\nTargets further than Near.\nHill \u2014\nStone Armor: 3 [as (+1) Chain]</p>",
+        "description": "Greatclub [Melee Attack, 10']: 9 (2d8) Rock [Ranged Attack]: 9 (2d6) Type Changes Cyclops One-Eyed: Attacks as if Vulnerable against Targets further than Near.\nHill \u2014 Stone Armor: 3 [as (+1) Chain]",
         "attackType": "special",
         "damage": "",
         "damageType": "",

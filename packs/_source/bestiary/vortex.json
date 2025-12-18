@@ -31,7 +31,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Living Gale: Gusts surround it out to Near, Hindering\nEnemy Ranged Attacks Targeting those within.\nWhirlwind: Medium or smaller Close Beings must pass\n[Endure] against being Restrained at the start of their\nTurns or be thrown 25 (d10\u00d75) feet in the air.</p>"
+        "description": "Living Gale: Gusts surround it out to Near, Hindering Enemy Ranged Attacks Targeting those within.\nWhirlwind: Medium or smaller Close Beings must pass [Endure] against being Restrained at the start of their Turns or be thrown 25 (d10\u00d75) feet in the air."
       }
     ],
     "loot": "",

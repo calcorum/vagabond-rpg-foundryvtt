@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 4\u00d7Cutlass\nCutlass [Melee Attack]: 3 (d6)</p>",
+        "description": "Multi-Attack: 4\u00d7Cutlass Cutlass [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.\nLimbs: It is encountered with 5 (d6 + 2) limbs, and\nloses a limb each time it takes at least 4 damage.\nMagic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+        "description": "Immutable: It can't be transformed.\nLimbs: It is encountered with 5 (d6 + 2) limbs, and loses a limb each time it takes at least 4 damage.\nMagic Ward I: Cast Checks that include it as a Target have a d4 penalty."
       }
     ],
     "loot": "",

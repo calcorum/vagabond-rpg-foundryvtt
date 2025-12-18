@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Rock",
-        "description": "<p>[Melee Attack, Thrown]: 1</p>",
+        "description": "[Melee Attack, Thrown]: 1",
         "attackType": "melee",
         "damage": "1",
         "damageType": "blunt",

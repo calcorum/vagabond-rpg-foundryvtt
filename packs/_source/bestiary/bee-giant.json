@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Sting",
-        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "description": "[Melee Attack]: 5 (2d4)",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -40,7 +40,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Roughly 1 foot in length, these giant bees are extremely territorial, but otherwise non-aggressive. Speed: 10' (Fly 50')</p>"
+    "gmNotes": "Roughly 1 foot in length, these giant bees are extremely territorial, but otherwise non-aggressive. Speed: 10' (Fly 50')"
   },
   "reviewed": false
 }

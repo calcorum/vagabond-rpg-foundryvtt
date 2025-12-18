@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Greatclub [Melee Attack]: 5 (d10)</p>",
+        "description": "Greatclub [Melee Attack]: 5 (d10)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Hulking: Counts as Large for Grapples and Shoves.</p>"
+        "description": "Hulking: Counts as Large for Grapples and Shoves."
       }
     ],
     "loot": "",

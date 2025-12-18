@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 3 (d6)\nClaw [Melee Attack]: 1 (d3)</p>",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Bite [Melee Attack]: 3 (d6) Claw [Melee Attack]: 1 (d3)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.</p>"
+        "description": "Immutable: It can't be transformed."
       }
     ],
     "loot": "",

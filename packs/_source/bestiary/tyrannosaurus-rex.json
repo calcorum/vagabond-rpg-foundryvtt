@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 21 (6d6) and Restrained</p>",
+        "description": "[Melee Attack]: 21 (6d6) and Restrained",
         "attackType": "melee",
         "damage": "6d6",
         "damageType": "pierce",
@@ -38,7 +38,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>The tyrant lizard that dominates regions that have been \"lost to time.\" Its massive jaws are nearly unstoppable by man.</p>"
+    "gmNotes": "The tyrant lizard that dominates regions that have been \"lost to time.\" Its massive jaws are nearly unstoppable by man."
   },
   "reviewed": false
 }

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Flame [Ranged Attack]: 13 (3d8) and Burning (Cd8)</p>",
+        "description": "Flame [Ranged Attack]: 13 (3d8) and Burning (Cd8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Living Fire: Close Beings are Burning (d10).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and\nopenings as small as 1 inch without squeezing.\nBestiary\nBestiary\n170\n170\n\fElemental, Lesser Water TL: 3.9\nMedium Primordial\nHD: 8 (36 HP)\b Speed: 0' (Swim 30')\nZone: Midline Morale: 10\b # Appearing: 1\nSenses: Blindsense\nArmor: 3 [as Plate]\nImmune: Acid, Poison; Physical from non-Relics\nWeak: Shock\nStatus Immunities: Fatigued, Prone, Sickened,\nSuffocating, Restrained\nACTIONS\nStrike [Melee Attack]: 4 (d8) plus 4 (d8) if in water\nABILITIES\nWaterbound: Must stay Near a body of water.</p>"
+        "description": "Living Fire: Close Beings are Burning (d10).\nIlluminating: Sheds Light out to Near.\nSeep: It can enter the space of other Beings and openings as small as 1 inch without squeezing.\nBestiary Bestiary 170 170 Elemental, Lesser Water TL: 3.9 Medium Primordial HD: 8 (36 HP)\b Speed: 0' (Swim 30') Zone: Midline Morale: 10\b # Appearing: 1 Senses: Blindsense Armor: 3 [as Plate] Immune: Acid, Poison; Physical from non-Relics Weak: Shock Status Immunities: Fatigued, Prone, Sickened, Suffocating, Restrained ACTIONS Strike [Melee Attack]: 4 (d8) plus 4 (d8) if in water ABILITIES Waterbound: Must stay Near a body of water."
       }
     ],
     "loot": "",

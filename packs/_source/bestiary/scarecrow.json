@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Scream [Cast, any Being who can hear it | Will]\n(Recharge Cd4): Frightened (Cd4, Paralyzed if failed\nby 5 or more)\nMulti-Attack: 2\u00d7Claw\nClaw [Melee Attack]: 3 (d6)</p>",
+        "description": "Scream [Cast, any Being who can hear it | Will] (Recharge Cd4): Frightened (Cd4, Paralyzed if failed by 5 or more) Multi-Attack: 2\u00d7Claw Claw [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.</p>"
+        "description": "Immutable: It can't be transformed."
       }
     ],
     "loot": "",

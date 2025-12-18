@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Health Potion",
-        "description": "<p>[Use] (2/Shift): Regain 4 (d6+1) HP</p>",
+        "description": "[Use] (2/Shift): Regain 4 (d6+1) HP",
         "attackType": "utility",
         "damage": "1d6+1",
         "damageType": "healing",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Panacea",
-        "description": "<p>[Use] (1/Shift): Cured of either Blinded or Sickened.</p>",
+        "description": "[Use] (1/Shift): Cured of either Blinded or Sickened.",
         "attackType": "utility",
         "damage": "0",
         "damageType": "",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Crossbow",
-        "description": "<p>[Ranged Attack]: 2 (d4)</p>",
+        "description": "[Ranged Attack]: 2 (d4)",
         "attackType": "ranged",
         "damage": "1d4",
         "damageType": "pierce",

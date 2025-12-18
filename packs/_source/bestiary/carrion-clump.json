@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Viscera Sling [Ranged Attack]: 3 (d6) and pass\n[Endure] or become Sickened (Cd6, stinks and can't\nspeak from retching).</p>",
+        "description": "Viscera Sling [Ranged Attack]: 3 (d6) and pass [Endure] or become Sickened (Cd6, stinks and can't speak from retching).",
         "attackType": "special",
         "damage": "",
         "damageType": "",

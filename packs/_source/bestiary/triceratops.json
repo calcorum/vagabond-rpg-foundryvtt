@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Horn",
-        "description": "<p>[Melee Attack]: 10 (3d6)</p>",
+        "description": "[Melee Attack]: 10 (3d6)",
         "attackType": "melee",
         "damage": "3d6",
         "damageType": "pierce",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Stomp",
-        "description": "<p>[Melee Attack]: 10 (3d6)</p>",
+        "description": "[Melee Attack]: 10 (3d6)",
         "attackType": "melee",
         "damage": "3d6",
         "damageType": "blunt",
@@ -48,7 +48,7 @@
     "abilities": [
       {
         "name": "Rampant",
-        "description": "<p>If it Moves at least 20' in a straight line, it can automatically make one Horn Attack against anything in its path for the rest of the Turn (no Action).</p>"
+        "description": "If it Moves at least 20' in a straight line, it can automatically make one Horn Attack against anything in its path for the rest of the Turn (no Action)."
       }
     ],
     "loot": "",

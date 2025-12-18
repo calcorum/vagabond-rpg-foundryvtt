@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Sting [Melee Attack]: 2 (d4) and pass [Endure] or\nSickened (Cd4, Unconscious)</p>",
+        "description": "Sting [Melee Attack]: 2 (d4) and pass [Endure] or Sickened (Cd4, Unconscious)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+        "description": "Magic Ward I: Cast Checks that include it as a Target have a d4 penalty."
       }
     ],
     "loot": "",

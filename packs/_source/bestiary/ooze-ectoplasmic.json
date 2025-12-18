@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Pseudopod [Melee Attack]: 7 (2d6), and pass\n[Endure] or +1 Fatigue</p>",
+        "description": "Pseudopod [Melee Attack]: 7 (2d6), and pass [Endure] or +1 Fatigue",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amorphous: It can Move into occupied space as small\nas 1 inch without squeezing.</p>"
+        "description": "Amorphous: It can Move into occupied space as small as 1 inch without squeezing."
       }
     ],
     "loot": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Strike [Melee Attack]: 13 (3d8) plus 4 (d8) if on the\nground</p>",
+        "description": "Strike [Melee Attack]: 13 (3d8) plus 4 (d8) if on the ground",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Burrower: It ignored Difficult Terrain of sand, stone, and\nearth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height.</p>"
+        "description": "Burrower: It ignored Difficult Terrain of sand, stone, and earth, and it can Move by quickly burrowing in them.\nHowever, it can't cross water deeper than its height."
       }
     ],
     "loot": "",

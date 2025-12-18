@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Tusk",
-        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "description": "[Melee Attack]: 5 (2d4)",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Relentless",
-        "description": "<p>Once per Day, if it is reduced to 0 HP, it instead regains d4 HP.</p>"
+        "description": "Once per Day, if it is reduced to 0 HP, it instead regains d4 HP."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>More often found in forested areas. The boar is a feral pig with a notorious temper.</p>"
+    "gmNotes": "More often found in forested areas. The boar is a feral pig with a notorious temper."
   },
   "reviewed": false
 }

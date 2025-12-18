@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Blizzard",
-        "description": "<p>[Cast, 20-foot Sphere (Focus) | Endure] (Recharge Cd6): 10 (3d6) and filling the area with snow (Difficult Terrain).</p>",
+        "description": "[Cast, 20-foot Sphere (Focus) | Endure] (Recharge Cd6): 10 (3d6) and filling the area with snow (Difficult Terrain).",
         "attackType": "cast",
         "damage": "3d6",
         "damageType": "cold",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Ice Knife",
-        "description": "<p>[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and its Speed is reduced by half for the duration.</p>",
+        "description": "[Cast, Bolt (Focus) | Reflex]: 7 (2d6) and its Speed is reduced by half for the duration.",
         "attackType": "cast",
         "damage": "2d6",
         "damageType": "cold",

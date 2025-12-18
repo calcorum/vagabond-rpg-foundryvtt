@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Bite [Melee Attack, Near]: 7 (2d6) and pass [Endure]\nwith a -3 penalty or be Sickened (Cd4, Paralyzed).</p>",
+        "description": "Bite [Melee Attack, Near]: 7 (2d6) and pass [Endure] with a -3 penalty or be Sickened (Cd4, Paralyzed).",
         "attackType": "special",
         "damage": "",
         "damageType": "",

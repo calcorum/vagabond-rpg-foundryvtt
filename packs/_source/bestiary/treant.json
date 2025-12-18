@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Animate Trees [Cast, a tree in Far] (Focus): The tree\nacts as a Treant, though it has a Speed of 10' and\ndoesn't have this Animate Trees Action.\nMulti-Attack: 2\u00d7Slams\nSlam [Melee Attack]: 7 (2d6)</p>",
+        "description": "Animate Trees [Cast, a tree in Far] (Focus): The tree acts as a Treant, though it has a Speed of 10' and doesn't have this Animate Trees Action.\nMulti-Attack: 2\u00d7Slams Slam [Melee Attack]: 7 (2d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

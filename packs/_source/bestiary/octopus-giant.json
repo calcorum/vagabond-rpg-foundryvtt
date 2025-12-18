@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>1x Tentacle per Tentacle it has.</p>",
+        "description": "1x Tentacle per Tentacle it has.",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
       },
       {
         "name": "Beak",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -50,7 +50,7 @@
       },
       {
         "name": "Tentacle",
-        "description": "<p>[Melee Attack, Near]: 2 (d4) and Restrained if Medium or smaller</p>",
+        "description": "[Melee Attack, Near]: 2 (d4) and Restrained if Medium or smaller",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "blunt",
@@ -61,19 +61,19 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>It can breathe air or water.</p>"
+        "description": "It can breathe air or water."
       },
       {
         "name": "Ink Cloud",
-        "description": "<p>If it retreats, the surrounding 20' of water becomes obscured by ink for 1 minute.</p>"
+        "description": "If it retreats, the surrounding 20' of water becomes obscured by ink for 1 minute."
       },
       {
         "name": "Tentacles",
-        "description": "<p>Starts with 8. Targetting a Tentacle causes a -3 penalty to the Attack Check, but severs it if at least 6 damage is dealt with the attack.</p>"
+        "description": "Starts with 8. Targetting a Tentacle causes a -3 penalty to the Attack Check, but severs it if at least 6 damage is dealt with the attack."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Cephalopods capable of taking down small boats. Speed: 10' (Swim 30')</p>"
+    "gmNotes": "Cephalopods capable of taking down small boats. Speed: 10' (Swim 30')"
   },
   "reviewed": false
 }

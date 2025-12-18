@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Bite and 1\u00d7Sting\nBite [Melee Attack, Cleave]: 9 (2d8) or half to all\nTargets Close to its mouth.\nSting [Melee Attack, Near its tail]: 4 (d8) and pass\n[Endure] or become Sickened (+1 Fatigue for Cd12).</p>",
+        "description": "Multi-Attack: 1\u00d7Bite and 1\u00d7Sting Bite [Melee Attack, Cleave]: 9 (2d8) or half to all Targets Close to its mouth.\nSting [Melee Attack, Near its tail]: 4 (d8) and pass [Endure] or become Sickened (+1 Fatigue for Cd12).",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Sand Swimmer: Can Move through sand and earth\nusing its Speed.\nBestiary\nBestiary\n146\n146\n\fQuesting Beast TL: 4.8\nLarge Cryptid (Beast)\nA chimeric feline with a snake's head, a cheetah's\nbody, and hooved hindquarters like a deer. Sounds\nlike a pack of beagles on the hunt.\nHD: 8 (36 HP)\b Speed: 60'\nZone: Frontline Morale: 9\b # Appearing: 1\nSenses: Darksight\nArmor: 2 [as Chain]\nACTIONS\nMulti-Attack: 2\u00d7Claw and Bite\nBite [Melee Attack]: 6 (d12) and pass [Endure] or\nbecome Sickened (Cd6 damage)\nClaw [Melee Attack]: 3 (d6)</p>"
+        "description": "Sand Swimmer: Can Move through sand and earth using its Speed.\nBestiary Bestiary 146 146 Questing Beast TL: 4.8 Large Cryptid (Beast) A chimeric feline with a snake's head, a cheetah's body, and hooved hindquarters like a deer. Sounds like a pack of beagles on the hunt.\nHD: 8 (36 HP)\b Speed: 60' Zone: Frontline Morale: 9\b # Appearing: 1 Senses: Darksight Armor: 2 [as Chain] ACTIONS Multi-Attack: 2\u00d7Claw and Bite Bite [Melee Attack]: 6 (d12) and pass [Endure] or become Sickened (Cd6 damage) Claw [Melee Attack]: 3 (d6)"
       }
     ],
     "loot": "",

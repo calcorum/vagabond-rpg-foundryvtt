@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Slam [Melee Attack]: 9 (2d8)</p>",
+        "description": "Slam [Melee Attack]: 9 (2d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.\nBestiary\nBestiary\n122\n122\n\fRipworm TL: 3.1\nMedium Artificial\nTunneling automatons known to wreak havoc on\nstructures by undermining its foundation. They can\ncut through solid rock and earth with ease.\nHD: 4 (18 HP)\b Speed: 20'\nZone: Frontline Morale: 10\b # Appearing: d4\nSenses: Seismicsense 60'\nArmor: 3 [as Plate]\nImmune: Poison\nStatus Immunities: Fatigued, Sickened, Suffocating\nACTIONS\nRipsaw [Melee Attack]: 7 (2d6)\nABILITIES\nImmutable: It can't be transformed.\nTunneller: Can Move through solid rock and earth,\nleaving a 3-foot tunnel in its path.</p>"
+        "description": "Immutable: It can't be transformed.\nBestiary Bestiary 122 122 Ripworm TL: 3.1 Medium Artificial Tunneling automatons known to wreak havoc on structures by undermining its foundation. They can cut through solid rock and earth with ease.\nHD: 4 (18 HP)\b Speed: 20' Zone: Frontline Morale: 10\b # Appearing: d4 Senses: Seismicsense 60' Armor: 3 [as Plate] Immune: Poison Status Immunities: Fatigued, Sickened, Suffocating ACTIONS Ripsaw [Melee Attack]: 7 (2d6) ABILITIES Immutable: It can't be transformed.\nTunneller: Can Move through solid rock and earth, leaving a 3-foot tunnel in its path."
       }
     ],
     "loot": "",

@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 9 (2d8) and Restrained and\nSuffocating if it's this Being's second Slam attack to hit\nit this Turn, and the Target is this Being's size or smaller</p>",
+        "description": "Multi-Attack: 2\u00d7Slam Slam [Melee Attack]: 9 (2d8) and Restrained and Suffocating if it's this Being's second Slam attack to hit it this Turn, and the Target is this Being's size or smaller",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amphibious: It can breathe air and water.\nShock-Absorb: It treats all Shock damage as healing.\nBestiary\nBestiary\n174\n174\n\fMagmot TL: 6.4\nLarge Primordial\nRocken worms of lava, whose bodies glow white\nhot like molten steel.\nHD: 3 (12 HP)\b Speed: 10'\nZone: Frontline Morale: 9\b # Appearing: d2\nArmor: 3 [as Plate]\nImmune: Fire\nWeak: Cold\nACTIONS\nMulti-Attack: 2\u00d7Slams\nSlam [Melee Attack]: 7 (2d6) and pass [Endure] or\nbecome Burning (Cd4)\nABILITIES\nBurrow Burst: If it breaches the ground after moving\nat least 20' on the same Turn, its first Slam deals 18\n(4d8) instead.\nTunneler: It can Move by burrowing in the ground at\n30' per Round.</p>"
+        "description": "Amphibious: It can breathe air and water.\nShock-Absorb: It treats all Shock damage as healing.\nBestiary Bestiary 174 174 Magmot TL: 6.4 Large Primordial Rocken worms of lava, whose bodies glow white hot like molten steel.\nHD: 3 (12 HP)\b Speed: 10' Zone: Frontline Morale: 9\b # Appearing: d2 Armor: 3 [as Plate] Immune: Fire Weak: Cold ACTIONS Multi-Attack: 2\u00d7Slams Slam [Melee Attack]: 7 (2d6) and pass [Endure] or become Burning (Cd4) ABILITIES Burrow Burst: If it breaches the ground after moving at least 20' on the same Turn, its first Slam deals 18 (4d8) instead.\nTunneler: It can Move by burrowing in the ground at 30' per Round."
       }
     ],
     "loot": "",

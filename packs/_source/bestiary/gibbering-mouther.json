@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Frenzy [Multi-Attack]: 2\u00d7Bite\nBite [Melee Attack]: 4 (d8) and Medium or smaller\nTargets must pass [Endure] or be knocked Prone\nBabble [Action, Aura Near | Will]: Confused (Cd4)\nSpit [Ranged Attack, Near | Endure]: Blinded (Cd4)</p>",
+        "description": "Frenzy [Multi-Attack]: 2\u00d7Bite Bite [Melee Attack]: 4 (d8) and Medium or smaller Targets must pass [Endure] or be knocked Prone Babble [Action, Aura Near | Will]: Confused (Cd4) Spit [Ranged Attack, Near | Endure]: Blinded (Cd4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Eldritch Ground: The Close ground around it is\nDifficult Terrain made of gummy, warped flesh.</p>"
+        "description": "Eldritch Ground: The Close ground around it is Difficult Terrain made of gummy, warped flesh."
       }
     ],
     "loot": "",

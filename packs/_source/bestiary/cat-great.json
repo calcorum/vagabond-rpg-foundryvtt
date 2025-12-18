@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>2x Claw and 1x Bite</p>",
+        "description": "2x Claw and 1x Bite",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 5 (d10)</p>",
+        "description": "[Melee Attack]: 5 (d10)",
         "attackType": "melee",
         "damage": "1d10",
         "damageType": "pierce",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Claws",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "slash",
@@ -57,19 +57,19 @@
     "abilities": [
       {
         "name": "Dense Muscled",
-        "description": "<p>Grapples and Shoves as Large.</p>"
+        "description": "Grapples and Shoves as Large."
       },
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       },
       {
         "name": "Pounce",
-        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone.</p>"
+        "description": "If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>All manner of lions, tigers, and panthers.</p>"
+    "gmNotes": "All manner of lions, tigers, and panthers."
   },
   "reviewed": false
 }

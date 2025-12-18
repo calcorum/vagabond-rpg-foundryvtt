@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Freeze [Cast, Remote | Endure] (Recharge Cd4): 3\n(d6) and its Speed is reduced by 10 feet (Cd4).\nZap [Cast, Bolt | Reflex] (Recharge Cd4): 3 (d6) and\nDazed (Cd4)</p>",
+        "description": "Freeze [Cast, Remote | Endure] (Recharge Cd4): 3 (d6) and its Speed is reduced by 10 feet (Cd4).\nZap [Cast, Bolt | Reflex] (Recharge Cd4): 3 (d6) and Dazed (Cd4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Antimagic Vulnerability: It is Dazed for Cd4 if\naffected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.\nBestiary\nBestiary\n118\n118\n\fFlying Sword TL: 2.3\nSmall Artificial\nAn enchanted sword that dances through the air.\nHD: 1 (1 HP)\b Speed: 0' (Fly 50')\nZone: Frontline Morale: -\b # Appearing: d4\nSenses: Blindsight\nArmor: 3 [as Plate]\nImmune: Poison\nStatus Immunities: Charmed, Frightened, Sickened,\nSuffocating\nACTIONS\nSlash [Melee Attack]: 4 (d8)\nABILITIES\nAntimagic Vulnerability: It is Dazed (Cd4) if affected\nby the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.</p>"
+        "description": "Antimagic Vulnerability: It is Dazed for Cd4 if affected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.\nBestiary Bestiary 118 118 Flying Sword TL: 2.3 Small Artificial An enchanted sword that dances through the air.\nHD: 1 (1 HP)\b Speed: 0' (Fly 50') Zone: Frontline Morale: -\b # Appearing: d4 Senses: Blindsight Armor: 3 [as Plate] Immune: Poison Status Immunities: Charmed, Frightened, Sickened, Suffocating ACTIONS Slash [Melee Attack]: 4 (d8) ABILITIES Antimagic Vulnerability: It is Dazed (Cd4) if affected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move."
       }
     ],
     "loot": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Greataxe",
-        "description": "<p>[Melee Attack, Cleave]: 6 (d12) or 13 (2d12!) if this Being is Berserk</p>",
+        "description": "[Melee Attack, Cleave]: 6 (d12) or 13 (2d12!) if this Being is Berserk",
         "attackType": "melee",
         "damage": "1d12",
         "damageType": "slash",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Rage",
-        "description": "<p>It goes Berserk when it is attacked or as part of making an Attack. While Berserk by any means, it reduces damage by 1 per damage die.</p>",
+        "description": "It goes Berserk when it is attacked or as part of making an Attack. While Berserk by any means, it reduces damage by 1 per damage die.",
         "passive": true
       }
     ],

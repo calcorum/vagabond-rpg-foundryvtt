@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Kiss [Melee Attack, a Paralyzed Enemy | Will]:\nDethbat\u2019s Curse (Continual, until removed)\nShriek [All Near non-Dethbats that hear it | Will]:\nFrightened (Cd4, Paralyzed)\nBite [Melee Attack]: 2 (d4)</p>",
+        "description": "Kiss [Melee Attack, a Paralyzed Enemy | Will]:\nDethbat\u2019s Curse (Continual, until removed) Shriek [All Near non-Dethbats that hear it | Will]:\nFrightened (Cd4, Paralyzed) Bite [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Dethbat\u2019s Curse [Curse]: Every hour while cursed\nand not in Sunlight, the victim rolls a d6, progressing\nthe curse by 1 stage on a roll of 1:\n1 Their hair falls out.\n2 Their ears transform into wings and their teeth\nbecome fangs.\n3 They gain 1 Fatigue. If they die due to this, their\nhead rips from their body and becomes a Dethbat.</p>"
+        "description": "Dethbat\u2019s Curse [Curse]: Every hour while cursed and not in Sunlight, the victim rolls a d6, progressing the curse by 1 stage on a roll of 1:\n1 Their hair falls out.\n2 Their ears transform into wings and their teeth become fangs.\n3 They gain 1 Fatigue. If they die due to this, their head rips from their body and becomes a Dethbat."
       }
     ],
     "loot": "",

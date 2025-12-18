@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Fish and 1\u00d7Claw, or 2\u00d7Claw\nClaw [Melee Attack]: 5 (2d4)\nFish [Ranged Attack]: Restrained by Filament and\npulled Close.</p>",
+        "description": "Multi-Attack: 1\u00d7Fish and 1\u00d7Claw, or 2\u00d7Claw Claw [Melee Attack]: 5 (2d4) Fish [Ranged Attack]: Restrained by Filament and pulled Close.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Filament: As rope with 1 HD (4 HP)\nBestiary\nBestiary\n136\n136\n\fChimera TL: 7.0\nLarge Cryptid\nThe arcane fusion of a lion, goat, and dragon.\nHD: 9 (40 HP)\b Speed: 10' (Fly 30')\nZone: Frontline Morale: 9\b # Appearing: d2\nArmor: 3 [as (+1) Chain]\nACTIONS\nMulti-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Lion's Bite, and\n1\u00d7Breath or 1\u00d7Dragon's Bite\nClaw [Melee Attack]: 3 (d6)\nHorn [Melee Attack]: 5 (2d4)\nLion\u2019s Bite [Melee Attack]: 4 (d8)\nBreath [Cast, 10'\u00d760' Line] (Recharge Cd6): 10 (3d6)\nDragon\u2019s Bite [Melee Attack]: (3d4)</p>"
+        "description": "Filament: As rope with 1 HD (4 HP) Bestiary Bestiary 136 136 Chimera TL: 7.0 Large Cryptid The arcane fusion of a lion, goat, and dragon.\nHD: 9 (40 HP)\b Speed: 10' (Fly 30') Zone: Frontline Morale: 9\b # Appearing: d2 Armor: 3 [as (+1) Chain] ACTIONS Multi-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Lion's Bite, and 1\u00d7Breath or 1\u00d7Dragon's Bite Claw [Melee Attack]: 3 (d6) Horn [Melee Attack]: 5 (2d4) Lion\u2019s Bite [Melee Attack]: 4 (d8) Breath [Cast, 10'\u00d760' Line] (Recharge Cd6): 10 (3d6) Dragon\u2019s Bite [Melee Attack]: (3d4)"
       }
     ],
     "loot": "",

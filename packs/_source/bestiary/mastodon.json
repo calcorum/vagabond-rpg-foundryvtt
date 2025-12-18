@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Multi-Attack",
-        "description": "<p>1x Tusk and 1x Stomp</p>",
+        "description": "1x Tusk and 1x Stomp",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Stomp",
-        "description": "<p>[Melee Attack]: 18 (4d8)</p>",
+        "description": "[Melee Attack]: 18 (4d8)",
         "attackType": "melee",
         "damage": "4d8",
         "damageType": "blunt",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Tusk",
-        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "description": "[Melee Attack]: 7 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -57,11 +57,11 @@
     "abilities": [
       {
         "name": "Charger",
-        "description": "<p>Tusks deal double damage that Turn if it Moves at least 20' before the attack.</p>"
+        "description": "Tusks deal double damage that Turn if it Moves at least 20' before the attack."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Both the woolly and imperial mammoths roam arctic and subtropic lands.</p>"
+    "gmNotes": "Both the woolly and imperial mammoths roam arctic and subtropic lands."
   },
   "reviewed": false
 }

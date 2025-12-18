@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 22 (4d10) and Restrained if smaller</p>",
+        "description": "[Melee Attack]: 22 (4d10) and Restrained if smaller",
         "attackType": "melee",
         "damage": "4d10",
         "damageType": "pierce",
@@ -41,15 +41,15 @@
     "abilities": [
       {
         "name": "Aquatic",
-        "description": "<p>Can only breathe water.</p>"
+        "description": "Can only breathe water."
       },
       {
         "name": "Blood Sense",
-        "description": "<p>It can sense Beings that are missing any HP within 1 mile as if by Blindsight, and its attacks deal an extra die of damage to them.</p>"
+        "description": "It can sense Beings that are missing any HP within 1 mile as if by Blindsight, and its attacks deal an extra die of damage to them."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Speed: 0' (Swim 60')</p>"
+    "gmNotes": "Speed: 0' (Swim 60')"
   },
   "reviewed": false
 }

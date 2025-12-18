@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Gore and 1\u00d7Greataxe\nGore [Melee Attack]: 7 (3d4) and Prone if failed by\n10 or more.\nGreataxe [Melee Attack, Cleave]: 5 (d10) or half to\ntwo Targets</p>",
+        "description": "Multi-Attack: 1\u00d7Gore and 1\u00d7Greataxe Gore [Melee Attack]: 7 (3d4) and Prone if failed by 10 or more.\nGreataxe [Melee Attack, Cleave]: 5 (d10) or half to two Targets",
         "attackType": "special",
         "damage": "",
         "damageType": "",

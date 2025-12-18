@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Bite [Melee Attack]: 16 (3d10)\nMulti-Attack: 2\u00d7Tentacle\nTentacle [Melee Attack, Near]: 13 (3d8) and\nRestrained if smaller. It can't Restrain more than one\nTarget at a time with the same Tentacle.\nTongue [Melee Attack, Near]: Restrained if smaller.\nIf Restrained, it is pulled to Close, and this Being can\nmake a Bite Attack against it.</p>",
+        "description": "Bite [Melee Attack]: 16 (3d10) Multi-Attack: 2\u00d7Tentacle Tentacle [Melee Attack, Near]: 13 (3d8) and Restrained if smaller. It can't Restrain more than one Target at a time with the same Tentacle.\nTongue [Melee Attack, Near]: Restrained if smaller.\nIf Restrained, it is pulled to Close, and this Being can make a Bite Attack against it.",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Tentacles: Starts with 4 Tentacles. Targetting one\ncauses a -4 penalty to the Attack Check, but severs it\nif at least 15 damage is dealt with the attack.</p>"
+        "description": "Tentacles: Starts with 4 Tentacles. Targetting one causes a -4 penalty to the Attack Check, but severs it if at least 15 damage is dealt with the attack."
       }
     ],
     "loot": "",

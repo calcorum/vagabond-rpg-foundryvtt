@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Hellfire [Cast, Cone 15' | Reflex] (Recharge Cd6): 10\n(3d6) and Burning (Cd6)\nBite [Melee Attack]: 3 (d6)</p>",
+        "description": "Hellfire [Cast, Cone 15' | Reflex] (Recharge Cd6): 10 (3d6) and Burning (Cd6) Bite [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

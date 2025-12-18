@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Dagger [Melee Attack]: 2 (d4)</p>",
+        "description": "Dagger [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.\nMajor Invisibility: It can magically become Invisible\nduring its Turn (No Action, requires Focus).\nPixie Dust [Item]: It can produce one dose of Pixie\nDust once per Day, which gives a Medium or smaller\nBeing Fly for 1 Hour.</p>"
+        "description": "Magic Ward I: Cast Checks that include it as a Target have a d4 penalty.\nMajor Invisibility: It can magically become Invisible during its Turn (No Action, requires Focus).\nPixie Dust [Item]: It can produce one dose of Pixie Dust once per Day, which gives a Medium or smaller Being Fly for 1 Hour."
       }
     ],
     "loot": "",

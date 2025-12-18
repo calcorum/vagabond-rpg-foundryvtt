@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 5 (2d4)</p>",
+        "description": "[Melee Attack]: 5 (2d4)",
         "attackType": "melee",
         "damage": "2d4",
         "damageType": "pierce",
@@ -39,15 +39,15 @@
     "abilities": [
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       },
       {
         "name": "Pounce",
-        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller.</p>"
+        "description": "If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Overgrown wolf variants. Often the alpha of packs of dozens of wolves.</p>"
+    "gmNotes": "Overgrown wolf variants. Often the alpha of packs of dozens of wolves."
   },
   "reviewed": false
 }

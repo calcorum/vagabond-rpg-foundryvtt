@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>A vicious reptilian carnivore from the lost world. It walks upright, and moves with blinding speed.</p>"
+    "gmNotes": "A vicious reptilian carnivore from the lost world. It walks upright, and moves with blinding speed."
   },
   "reviewed": false
 }

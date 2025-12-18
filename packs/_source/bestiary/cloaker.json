@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Cloak and 2\u00d7Bite\nCloak [Melee Attack]: Restrained\nBite [Melee Attack]: 2 (d4)</p>",
+        "description": "Multi-Attack: 1\u00d7Cloak and 2\u00d7Bite Cloak [Melee Attack]: Restrained Bite [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Cloaking: While it has a Target Restrained, attack\ndamage dealt to it is halved and also dealt to the Target.</p>"
+        "description": "Cloaking: While it has a Target Restrained, attack damage dealt to it is halved and also dealt to the Target."
       }
     ],
     "loot": "",

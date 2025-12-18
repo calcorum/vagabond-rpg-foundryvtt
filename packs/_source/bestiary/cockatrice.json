@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Beak [Melee Attack]: 3 (d6) and pass [Endure] or be\nCursed (turned to stone for 1 Day)</p>",
+        "description": "Beak [Melee Attack]: 3 (d6) and pass [Endure] or be Cursed (turned to stone for 1 Day)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

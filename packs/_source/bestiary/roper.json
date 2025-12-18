@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Tendril per (Tendrils) and 1\u00d7Bite\nBite [Melee Attack]: 17 (5d6)\nTendril [Grapple, Far]: Restrained and pulled Close</p>",
+        "description": "Multi-Attack: 1\u00d7Tendril per (Tendrils) and 1\u00d7Bite Bite [Melee Attack]: 17 (5d6) Tendril [Grapple, Far]: Restrained and pulled Close",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Tendrils: Starts with 6. Targetting one causes a\n-4 penalty to the Check, but severs it if at least 4\ndamage is dealt.</p>"
+        "description": "Tendrils: Starts with 6. Targetting one causes a -4 penalty to the Check, but severs it if at least 4 damage is dealt."
       }
     ],
     "loot": "",

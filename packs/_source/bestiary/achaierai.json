@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Smoky Escape [Rush, when Fleeing]: Fills a 10-foot\nsphere with black smoke. Other Beings in the area\nmust pass [Endure] or take 7 (2d6).\nMulti-Attack: 2\u00d7Talons and 1\u00d7Beak\nBeak [Melee Attack]: 5 (d10)\nTalon [Melee Attack]: 4 (d8)</p>",
+        "description": "Smoky Escape [Rush, when Fleeing]: Fills a 10-foot sphere with black smoke. Other Beings in the area must pass [Endure] or take 7 (2d6).\nMulti-Attack: 2\u00d7Talons and 1\u00d7Beak Beak [Melee Attack]: 5 (d10) Talon [Melee Attack]: 4 (d8)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Noxious Gas",
-        "description": "<p>[Attack, Cone 10' | Endure] (Recharge Cd6): 7 (2d6), half on pass and not a Crit.</p>",
+        "description": "[Attack, Cone 10' | Endure] (Recharge Cd6): 7 (2d6), half on pass and not a Crit.",
         "attackType": "special",
         "damage": "2d6",
         "damageType": "poison",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",
@@ -48,11 +48,11 @@
     "abilities": [
       {
         "name": "Soft Underbelly",
-        "description": "<p>Its Armor is 0 while it is Prone.</p>"
+        "description": "Its Armor is 0 while it is Prone."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>A 3-foot long beetle with powerful mandibles that is capable of emitting noxious fumes that burns flesh.</p>"
+    "gmNotes": "A 3-foot long beetle with powerful mandibles that is capable of emitting noxious fumes that burns flesh."
   },
   "reviewed": false
 }

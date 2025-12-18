@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Cure Wounds",
-        "description": "<p>[Cast, Touch (damaged Ally)] (3/Day): Regain 3 (d6) HP</p>",
+        "description": "[Cast, Touch (damaged Ally)] (3/Day): Regain 3 (d6) HP",
         "attackType": "cast",
         "damage": "1d6",
         "damageType": "healing",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Turn Undead",
-        "description": "<p>[Cast, Aura Near] (2/Day): Undead Targets are Frightened (Cd4), ignoring Immunity.</p>",
+        "description": "[Cast, Aura Near] (2/Day): Undead Targets are Frightened (Cd4), ignoring Immunity.",
         "attackType": "cast",
         "damage": "0",
         "damageType": "",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Sacred Flame",
-        "description": "<p>[Cast, Aura Near | Endure]: 7 (2d6) and Blinded (Cd4)</p>",
+        "description": "[Cast, Aura Near | Endure]: 7 (2d6) and Blinded (Cd4)",
         "attackType": "cast",
         "damage": "2d6",
         "damageType": "radiant",
@@ -55,7 +55,7 @@
       },
       {
         "name": "Mace",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "blunt",

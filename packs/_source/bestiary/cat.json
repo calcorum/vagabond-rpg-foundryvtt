@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Claw",
-        "description": "<p>[Melee Attack]: 1</p>",
+        "description": "[Melee Attack]: 1",
         "attackType": "melee",
         "damage": "1",
         "damageType": "slash",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Righting Reflex",
-        "description": "<p>It doesn't take falling damage from falling 40' or less.</p>"
+        "description": "It doesn't take falling damage from falling 40' or less."
       }
     ],
     "loot": "",

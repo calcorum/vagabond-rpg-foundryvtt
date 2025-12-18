@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 1\u00d7Bite for each Head (Multiple Heads)\nBite [Melee Attack, Near]: 5 (d10)\nSong of Discord [Action, 5-mile Aura (only those\nwho can hear it) | Will] (Focus): Charmed (until\nthe song ends, it acts as if it can't see or hear this\nBeing and creates false memories of illogical events).</p>",
+        "description": "Multi-Attack: 1\u00d7Bite for each Head (Multiple Heads) Bite [Melee Attack, Near]: 5 (d10) Song of Discord [Action, 5-mile Aura (only those who can hear it) | Will] (Focus): Charmed (until the song ends, it acts as if it can't see or hear this Being and creates false memories of illogical events).",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Tunneler: Can Move through loose earth using its Speed.\nMultiple Heads: It starts with one head, but grows\nanother as it consumes humanoid Beings. Each time it\ngrows a new head, it gains 3 HD (13 HP), and its stats\nchange as shown below:\n# Consumed Heads Size TL\n3 2 Medium 4.1\n6 3 Large 5.6\n9 4 Large 6.9\n15 5 Huge 8.2\n24 6 Huge 9.4\nBestiary\nBestiary\n160\n160\n\fFloating Eye TL: 0.1\nSmall Outer\nA single eye around 2 feet in height, typically with\nbat-like wings.\nHD: 1 (1 HP)\b Speed: 0' (Fly 30')\nZone: Backline Morale: 7\b # Appearing: 2d6\nSenses: Darksight, Telepathy\nArmor: 0 [as Unarmored]\nWeak: Acid, Pierce\nStatus Immunities: Prone\nACTIONS\nGlare [Cast, 30-foot Cone] (1/Day): Transformed into a\nstone statue (Cd6)\nMuddle [Cast, 30-foot Cone] (Recharge Cd4):\nConfused (Cd4, or until this Being dies)\nEnrage [Cast, 30-foot Cone] (Recharge Cd4): Berserk\n(Cd4, or until this Being dies)\nABILITIES\nAntimagical Cone: No Cast Check in a 30-foot cone\noriginating from its central eye passes.\nOcular: Checks to make it Blinded are Favored.</p>"
+        "description": "Tunneler: Can Move through loose earth using its Speed.\nMultiple Heads: It starts with one head, but grows another as it consumes humanoid Beings. Each time it grows a new head, it gains 3 HD (13 HP), and its stats change as shown below:\n# Consumed Heads Size TL 3 2 Medium 4.1 6 3 Large 5.6 9 4 Large 6.9 15 5 Huge 8.2 24 6 Huge 9.4 Bestiary Bestiary 160 160 Floating Eye TL: 0.1 Small Outer A single eye around 2 feet in height, typically with bat-like wings.\nHD: 1 (1 HP)\b Speed: 0' (Fly 30') Zone: Backline Morale: 7\b # Appearing: 2d6 Senses: Darksight, Telepathy Armor: 0 [as Unarmored] Weak: Acid, Pierce Status Immunities: Prone ACTIONS Glare [Cast, 30-foot Cone] (1/Day): Transformed into a stone statue (Cd6) Muddle [Cast, 30-foot Cone] (Recharge Cd4):\nConfused (Cd4, or until this Being dies) Enrage [Cast, 30-foot Cone] (Recharge Cd4): Berserk (Cd4, or until this Being dies) ABILITIES Antimagical Cone: No Cast Check in a 30-foot cone originating from its central eye passes.\nOcular: Checks to make it Blinded are Favored."
       }
     ],
     "loot": "",

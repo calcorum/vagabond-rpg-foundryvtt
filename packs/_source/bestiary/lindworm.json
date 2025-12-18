@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 13 (3d8)\nClaw [Melee Attack]: 7 (2d6)\nCaustic Venom [Ranged Attack] (Recharge Cd4): 7\n(2d6), and Burning (Cd6) and Sickened (Cd4 damage)</p>",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite Bite [Melee Attack]: 13 (3d8) Claw [Melee Attack]: 7 (2d6) Caustic Venom [Ranged Attack] (Recharge Cd4): 7 (2d6), and Burning (Cd6) and Sickened (Cd4 damage)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Regenerate I: Regains 9 (2d8) HP on its Turns.</p>"
+        "description": "Regenerate I: Regains 9 (2d8) HP on its Turns."
       }
     ],
     "loot": "",

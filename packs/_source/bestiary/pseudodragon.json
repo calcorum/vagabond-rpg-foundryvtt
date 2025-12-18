@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Stinger [Melee Attack] (1/Day): 1 (d3) and pass\n[Endure] or become Sickened (Cd4, Unconscious)\nBite [Melee Attack]: 1 (d3)</p>",
+        "description": "Stinger [Melee Attack] (1/Day): 1 (d3) and pass [Endure] or become Sickened (Cd4, Unconscious) Bite [Melee Attack]: 1 (d3)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Magic Ward I: Cast Checks that include it as a Target\nhave a d4 penalty.</p>"
+        "description": "Magic Ward I: Cast Checks that include it as a Target have a d4 penalty."
       }
     ],
     "loot": "",

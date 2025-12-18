@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Beak",
-        "description": "<p>[Melee Attack]: 1</p>",
+        "description": "[Melee Attack]: 1",
         "attackType": "melee",
         "damage": "1",
         "damageType": "pierce",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Flutter",
-        "description": "<p>It can't support itself in the air while flying at the end its Turn, but it does not take damage from falling if the distance was 30' or less.</p>"
+        "description": "It can't support itself in the air while flying at the end its Turn, but it does not take damage from falling if the distance was 30' or less."
       }
     ],
     "loot": "",

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Stun [Cast, all who hear it | Will] (1/Day): Paralyzed\n(Cd6 Rounds)\nMulti-Attack: 3\u00d7(+2) Longsword\n(+2) Longsword [Melee Attack]: 6 (d8+2)\nHellfire [Cast, 20-foot Sphere | Reflex] (1/Day): 35\n(10d6) and Burning (Cd6)</p>",
+        "description": "Stun [Cast, all who hear it | Will] (1/Day): Paralyzed (Cd6 Rounds) Multi-Attack: 3\u00d7(+2) Longsword (+2) Longsword [Melee Attack]: 6 (d8+2) Hellfire [Cast, 20-foot Sphere | Reflex] (1/Day): 35 (10d6) and Burning (Cd6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Fear Aura [Aura Near | Will]: Frightened until they\npass this Check on a subsequent Turn, or Cd6 after.\nDispel: It can skip its Move to end a Spell affecting it.\nZombie: It can't be reduced below 1 HP unless damaged\nby a Crit, damage it is Weak to, or while in Sunlight.</p>"
+        "description": "Fear Aura [Aura Near | Will]: Frightened until they pass this Check on a subsequent Turn, or Cd6 after.\nDispel: It can skip its Move to end a Spell affecting it.\nZombie: It can't be reduced below 1 HP unless damaged by a Crit, damage it is Weak to, or while in Sunlight."
       }
     ],
     "loot": "",

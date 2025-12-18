@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Dagger",
-        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "description": "[Melee Attack]: 2 (d4)",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Zealot",
-        "description": "<p>Can't be Charmed or Frightened.</p>",
+        "description": "Can't be Charmed or Frightened.",
         "passive": true
       }
     ],

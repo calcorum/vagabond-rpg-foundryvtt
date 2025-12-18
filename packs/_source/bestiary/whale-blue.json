@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Slam",
-        "description": "<p>[Melee Attack]: 39 (6d12)</p>",
+        "description": "[Melee Attack]: 39 (6d12)",
         "attackType": "melee",
         "damage": "6d12",
         "damageType": "blunt",
@@ -43,11 +43,11 @@
     "abilities": [
       {
         "name": "Hold Breath",
-        "description": "<p>Can hold its breath for up to two hours.</p>"
+        "description": "Can hold its breath for up to two hours."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Speed: 0' (Swim 60')</p>"
+    "gmNotes": "Speed: 0' (Swim 60')"
   },
   "reviewed": false
 }

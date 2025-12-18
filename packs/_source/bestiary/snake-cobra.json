@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Venom Spit",
-        "description": "<p>[Ranged Attack, Near] (Recharge Cd4): 0 and, if failed by 5 or more, Blinded</p>",
+        "description": "[Ranged Attack, Near] (Recharge Cd4): 0 and, if failed by 5 or more, Blinded",
         "attackType": "ranged",
         "damage": "0",
         "damageType": "poison",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 1 (d3) and pass [Endure] or become Sickened (Cd6 damage each minute)</p>",
+        "description": "[Melee Attack]: 1 (d3) and pass [Endure] or become Sickened (Cd6 damage each minute)",
         "attackType": "melee",
         "damage": "1d3",
         "damageType": "pierce",
@@ -47,7 +47,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Venomous snakes that can deliver their venom through bites or by spitting.</p>"
+    "gmNotes": "Venomous snakes that can deliver their venom through bites or by spitting."
   },
   "reviewed": false
 }

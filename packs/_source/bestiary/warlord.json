@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Maul",
-        "description": "<p>[Melee Attack]: 5 (d10)</p>",
+        "description": "[Melee Attack]: 5 (d10)",
         "attackType": "melee",
         "damage": "1d10",
         "damageType": "blunt",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Rally",
-        "description": "<p>[Action]: Grants its Allies who hear it a d4 bonus to their damage rolls and Will Saves for 1 Round.</p>",
+        "description": "[Action]: Grants its Allies who hear it a d4 bonus to their damage rolls and Will Saves for 1 Round.",
         "attackType": "utility",
         "damage": "0",
         "damageType": "",

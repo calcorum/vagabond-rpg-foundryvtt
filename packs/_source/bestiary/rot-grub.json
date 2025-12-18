@@ -31,7 +31,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Flesh Burrow: This Being burrows itself into flesh that\ncomes into contact with it, causing that Being to\nbecome Sickened (3 (d6) damage each Round).\nParasite: If this Being or any Being it is burrowing into\ntakes Fire damage or is the Target of an effect that\nends the Sickened Status, this Being dies instantly.</p>"
+        "description": "Flesh Burrow: This Being burrows itself into flesh that comes into contact with it, causing that Being to become Sickened (3 (d6) damage each Round).\nParasite: If this Being or any Being it is burrowing into takes Fire damage or is the Target of an effect that ends the Sickened Status, this Being dies instantly."
       }
     ],
     "loot": "",

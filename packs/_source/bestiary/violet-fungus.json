@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Tendril\nTendril [Melee Attack]: 5 (2d4) and pass [Endure] or\nbecome Sickened (Cd8, +1 Fatigue each Round)</p>",
+        "description": "Multi-Attack: 2\u00d7Tendril Tendril [Melee Attack]: 5 (2d4) and pass [Endure] or become Sickened (Cd8, +1 Fatigue each Round)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

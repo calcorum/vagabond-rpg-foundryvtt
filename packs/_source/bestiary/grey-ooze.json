@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Pseudopod [Melee Attack]: 9 (2d8) and Corroding</p>",
+        "description": "Pseudopod [Melee Attack]: 9 (2d8) and Corroding",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Amorphous: It can Move into occupied space as small\nas 1 inch without squeezing.\nCorroding: Non-Relic metal Items that make contact\nwith it corrode. When this happens, roll a d6 for each\nItem. On a roll of 1, the Item breaks. If the Item that\nbreaks is larger than Medium, this destroys a 1-foot\nsquare hole that is 1-foot deep in it.</p>"
+        "description": "Amorphous: It can Move into occupied space as small as 1 inch without squeezing.\nCorroding: Non-Relic metal Items that make contact with it corrode. When this happens, roll a d6 for each Item. On a roll of 1, the Item breaks. If the Item that breaks is larger than Medium, this destroys a 1-foot square hole that is 1-foot deep in it."
       }
     ],
     "loot": "",

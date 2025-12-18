@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Choke [Melee Attack]: 2 (d4) and Restrained\n(Suffocating)</p>",
+        "description": "Choke [Melee Attack]: 2 (d4) and Restrained (Suffocating)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

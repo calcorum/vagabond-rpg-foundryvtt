@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6) and pass [Will] or be\ncursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 5 (2d4)</p>",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite Bite [Melee Attack]: 7 (2d6) and pass [Will] or be cursed with Werewolf Lycanthropy.\nClaws [Melee Attack]: 5 (2d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Bloodthirst: It is Berserk and Beings at or below half\nHP make Checks against it as if Vulnerable.</p>"
+        "description": "Bloodthirst: It is Berserk and Beings at or below half HP make Checks against it as if Vulnerable."
       }
     ],
     "loot": "",

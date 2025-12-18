@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 9 (2d8) and pass [Endure] or become Sickened (Cd6 damage each Minute).</p>",
+        "description": "[Melee Attack]: 9 (2d8) and pass [Endure] or become Sickened (Cd6 damage each Minute).",
         "attackType": "melee",
         "damage": "2d8",
         "damageType": "pierce",
@@ -38,7 +38,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Over-sized versions of the deadly cobra and viper.</p>"
+    "gmNotes": "Over-sized versions of the deadly cobra and viper."
   },
   "reviewed": false
 }

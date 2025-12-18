@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Talon",
-        "description": "<p>[Melee Attack]: 1</p>",
+        "description": "[Melee Attack]: 1",
         "attackType": "melee",
         "damage": "1",
         "damageType": "slash",
@@ -43,11 +43,11 @@
     "abilities": [
       {
         "name": "Nimble",
-        "description": "<p>Attacks against it can't be Favored if it can Move.</p>"
+        "description": "Attacks against it can't be Favored if it can Move."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Speed: 5' (Fly 60')</p>"
+    "gmNotes": "Speed: 5' (Fly 60')"
   },
   "reviewed": false
 }

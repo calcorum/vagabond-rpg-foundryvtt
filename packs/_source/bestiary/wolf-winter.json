@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Frost Breath",
-        "description": "<p>[Cast, Close Aura] (Recharge Cd4): 15 (6d4)</p>",
+        "description": "[Cast, Close Aura] (Recharge Cd4): 15 (6d4)",
         "attackType": "special",
         "damage": "6d4",
         "damageType": "cold",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 7 (2d6)</p>",
+        "description": "[Melee Attack]: 7 (2d6)",
         "attackType": "melee",
         "damage": "2d6",
         "damageType": "pierce",
@@ -48,15 +48,15 @@
     "abilities": [
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       },
       {
         "name": "Pounce",
-        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller.</p>"
+        "description": "If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone if it is Large or smaller."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>The white coated winter wolves are revered as guardian spirits of the tundra.</p>"
+    "gmNotes": "The white coated winter wolves are revered as guardian spirits of the tundra."
   },
   "reviewed": false
 }

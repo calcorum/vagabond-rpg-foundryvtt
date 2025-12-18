@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Maul",
-        "description": "<p>[Multi-Attack]: 2x Claw and 1x Bite</p>",
+        "description": "[Multi-Attack]: 2x Claw and 1x Bite",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 9 (2d8)</p>",
+        "description": "[Melee Attack]: 9 (2d8)",
         "attackType": "melee",
         "damage": "2d8",
         "damageType": "pierce",
@@ -46,7 +46,7 @@
       },
       {
         "name": "Claws",
-        "description": "<p>[Melee Attack]: 4 (d8)</p>",
+        "description": "[Melee Attack]: 4 (d8)",
         "attackType": "melee",
         "damage": "1d8",
         "damageType": "slash",
@@ -57,11 +57,11 @@
     "abilities": [
       {
         "name": "Pack Hunter",
-        "description": "<p>Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks.</p>"
+        "description": "Targets within 5 feet of one of this Being's Allies are Vulnerable to its attacks."
       },
       {
         "name": "Pounce",
-        "description": "<p>If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone.</p>"
+        "description": "If it moves at least 20' before an attack on the same Turn, the Target is also knocked Prone."
       }
     ],
     "loot": "",

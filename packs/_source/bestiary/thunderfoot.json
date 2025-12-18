@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Stomp",
-        "description": "<p>[Melee Attack]: 25 (4d10+3)</p>",
+        "description": "[Melee Attack]: 25 (4d10+3)",
         "attackType": "melee",
         "damage": "4d10+3",
         "damageType": "blunt",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Tail",
-        "description": "<p>[Melee Attack]: 22 (5d8) and shoved Prone 30' away</p>",
+        "description": "[Melee Attack]: 22 (5d8) and shoved Prone 30' away",
         "attackType": "melee",
         "damage": "5d8",
         "damageType": "blunt",

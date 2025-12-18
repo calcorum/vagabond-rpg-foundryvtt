@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Drain",
-        "description": "<p>[Melee Attack, Restrained Being]: 2 (d4) healing this Being for the damage</p>",
+        "description": "[Melee Attack, Restrained Being]: 2 (d4) healing this Being for the damage",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Latch",
-        "description": "<p>[Melee Attack]: 2 (d4) and Restrained if Medium or smaller</p>",
+        "description": "[Melee Attack]: 2 (d4) and Restrained if Medium or smaller",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -50,15 +50,15 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>Can breathe air or water.</p>"
+        "description": "Can breathe air or water."
       },
       {
         "name": "Blood Sense",
-        "description": "<p>It can sense Beings missing any HP within 1 mile as if by Blindsight and deals an extra die of damage to them.</p>"
+        "description": "It can sense Beings missing any HP within 1 mile as if by Blindsight and deals an extra die of damage to them."
       }
     ],
     "loot": "",
-    "gmNotes": "<p>Massive blood-sucking parasites that latch onto their prey and drain their vitals. Speed: 10' (Swim 20')</p>"
+    "gmNotes": "Massive blood-sucking parasites that latch onto their prey and drain their vitals. Speed: 10' (Swim 20')"
   },
   "reviewed": false
 }

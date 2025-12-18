@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 0</p>",
+        "description": "[Melee Attack]: 0",
         "attackType": "melee",
         "damage": "0",
         "damageType": "pierce",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Amphibious",
-        "description": "<p>Can breathe air or water.</p>"
+        "description": "Can breathe air or water."
       }
     ],
     "loot": "",

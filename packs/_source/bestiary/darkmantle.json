@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Cloak of Darkness [Cast, Near Aura]: Extinguishes all\nlight sources, and the Area becomes magic darkness.\nIf the light source was Magic, it is dispelled.\nBite [Melee Attack]: 3 (d6)\nStatblocks // Cryptids\nStatblocks // Cryptids\n137\n137\nBestiary\n\fDobar-Ch\u00fa TL: 5.8\nLarge Cryptid\nThe \"water devil\" is a semi-aquatic mammal that\nappears to be a huge otter\nHD: 6 (27 HP)\b Speed: 30' (Swim 40')\nZone: Frontline Morale: 9\b # Appearing: d3\nArmor: 2 [as Chain]\nWeak: Shock\nACTIONS\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nClaw [Melee Attack]: 7 (2d6)\nBite [Melee Attack]: 10 (3d6)</p>",
+        "description": "Cloak of Darkness [Cast, Near Aura]: Extinguishes all light sources, and the Area becomes magic darkness.\nIf the light source was Magic, it is dispelled.\nBite [Melee Attack]: 3 (d6) Statblocks // Cryptids Statblocks // Cryptids 137 137 Bestiary Dobar-Ch\u00fa TL: 5.8 Large Cryptid The \"water devil\" is a semi-aquatic mammal that appears to be a huge otter HD: 6 (27 HP)\b Speed: 30' (Swim 40') Zone: Frontline Morale: 9\b # Appearing: d3 Armor: 2 [as Chain] Weak: Shock ACTIONS Multi-Attack: 2\u00d7Claw and 1\u00d7Bite Claw [Melee Attack]: 7 (2d6) Bite [Melee Attack]: 10 (3d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",

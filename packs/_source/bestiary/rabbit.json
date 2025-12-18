@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Bite",
-        "description": "<p>[Melee Attack]: 1</p>",
+        "description": "[Melee Attack]: 1",
         "attackType": "melee",
         "damage": "1",
         "damageType": "pierce",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Nimble",
-        "description": "<p>Attacks against it can't be Favored if it can Move.</p>"
+        "description": "Attacks against it can't be Favored if it can Move."
       }
     ],
     "loot": "",

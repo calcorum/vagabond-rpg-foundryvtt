@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Maul",
-        "description": "<p>[Multi-Attack]: 2x Claw</p>",
+        "description": "[Multi-Attack]: 2x Claw",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Claw",
-        "description": "<p>[Melee Attack]: 2 (d4)</p>",
+        "description": "[Melee Attack]: 2 (d4)",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "slash",
@@ -49,7 +49,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Gorillas and the cave-dwelling white apes.</p>"
+    "gmNotes": "Gorillas and the cave-dwelling white apes."
   },
   "reviewed": false
 }

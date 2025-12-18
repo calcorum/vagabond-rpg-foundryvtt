@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Pin",
-        "description": "<p>[Multi-Attack]: 2x Claw and 1x Sting</p>",
+        "description": "[Multi-Attack]: 2x Claw and 1x Sting",
         "attackType": "melee",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Sting",
-        "description": "<p>[Melee Attack]: 2 (d4) and pass [Endure] against Sickened or gain 1 Fatigue</p>",
+        "description": "[Melee Attack]: 2 (d4) and pass [Endure] against Sickened or gain 1 Fatigue",
         "attackType": "melee",
         "damage": "1d4",
         "damageType": "pierce",
@@ -48,7 +48,7 @@
       },
       {
         "name": "Claw",
-        "description": "<p>[Melee Attack]: 5 (d10) and Restrained if its the second of this Being's Claw to hit it this Turn</p>",
+        "description": "[Melee Attack]: 5 (d10) and Restrained if its the second of this Being's Claw to hit it this Turn",
         "attackType": "melee",
         "damage": "1d10",
         "damageType": "blunt",
@@ -58,7 +58,7 @@
     ],
     "abilities": [],
     "loot": "",
-    "gmNotes": "<p>Scorpions roughly the size of a cow. Extremely aggressive predators that kill on-sight. Speed: 30' (Climb 10')</p>"
+    "gmNotes": "Scorpions roughly the size of a cow. Extremely aggressive predators that kill on-sight. Speed: 30' (Climb 10')"
   },
   "reviewed": false
 }

@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Weapon [Attack]: 4 (d8) or (by Weapon).</p>",
+        "description": "Weapon [Attack]: 4 (d8) or (by Weapon).",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +41,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Hulking: Counts as Large for Grapples and Shoves.</p>"
+        "description": "Hulking: Counts as Large for Grapples and Shoves."
       }
     ],
     "loot": "",

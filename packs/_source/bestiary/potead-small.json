@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Slam [Melee Attack]: 2 (d4)</p>",
+        "description": "Slam [Melee Attack]: 2 (d4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Immutable: It can't be transformed.</p>"
+        "description": "Immutable: It can't be transformed."
       }
     ],
     "loot": "",

@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Fireball",
-        "description": "<p>[Cast, 20-foot Sphere | Reflex] (1/Day): 10 (3d6) and Burning (Cd4)</p>",
+        "description": "[Cast, 20-foot Sphere | Reflex] (1/Day): 10 (3d6) and Burning (Cd4)",
         "attackType": "cast",
         "damage": "3d6",
         "damageType": "fire",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Firebolt",
-        "description": "<p>[Cast, Remote (Focus) | Reflex]: 7 (2d6) and Burning (Cd4)</p>",
+        "description": "[Cast, Remote (Focus) | Reflex]: 7 (2d6) and Burning (Cd4)",
         "attackType": "cast",
         "damage": "2d6",
         "damageType": "fire",

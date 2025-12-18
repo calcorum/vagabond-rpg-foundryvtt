@@ -32,7 +32,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Fireball [Ranged Attack] (Recharge Cd4): 3 (d6) and\nBurning (Cd4)\nBite [Melee Attack]: 4 (d8)\nBestiary\nBestiary\n134\n134\n\fAnkheg TL: 5.1\nLarge Cryptid\nHorse-sized, acid-spewing antlions that typically\nmake their nests deep underground.\nHD: 5 (22 HP)\b Speed: 40'\nZone: Frontline Morale: 5\b # Appearing: d6\nSenses: Darksight, Seismicsense\nArmor: 3 [as Chain plus Shield]\nACTIONS\nAcid Spray [Ranged Attack, Near] (1/Day): 18 (4d8)\nand Burning (Cd4)\nBite [Melee Attack]: 10 (3d6) and Burning (Cd4)</p>",
+        "description": "Fireball [Ranged Attack] (Recharge Cd4): 3 (d6) and Burning (Cd4) Bite [Melee Attack]: 4 (d8) Bestiary Bestiary 134 134 Ankheg TL: 5.1 Large Cryptid Horse-sized, acid-spewing antlions that typically make their nests deep underground.\nHD: 5 (22 HP)\b Speed: 40' Zone: Frontline Morale: 5\b # Appearing: d6 Senses: Darksight, Seismicsense Armor: 3 [as Chain plus Shield] ACTIONS Acid Spray [Ranged Attack, Near] (1/Day): 18 (4d8) and Burning (Cd4) Bite [Melee Attack]: 10 (3d6) and Burning (Cd4)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -43,7 +43,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Soft Underbelly: Its Armor is 0 while it is Prone.\nTunneler: It can Move at full Speed through solid\nearth and stone by digging.</p>"
+        "description": "Soft Underbelly: Its Armor is 0 while it is Prone.\nTunneler: It can Move at full Speed through solid earth and stone by digging."
       }
     ],
     "loot": "",

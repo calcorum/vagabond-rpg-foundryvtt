@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Inspiring Anthem",
-        "description": "<p>[Action]: Grants all of its Allies who can hear it a d4 bonus to their damage rolls and Will Saves for 1 Round. It can't use this Action if it doesn't have a Musical Instrument equipped.</p>",
+        "description": "[Action]: Grants all of its Allies who can hear it a d4 bonus to their damage rolls and Will Saves for 1 Round. It can't use this Action if it doesn't have a Musical Instrument equipped.",
         "attackType": "utility",
         "damage": "0",
         "damageType": "",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Rapier",
-        "description": "<p>[Melee Attack]: 3 (d6)</p>",
+        "description": "[Melee Attack]: 3 (d6)",
         "attackType": "melee",
         "damage": "1d6",
         "damageType": "pierce",

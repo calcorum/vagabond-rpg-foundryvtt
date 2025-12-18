@@ -30,7 +30,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Constrain [Melee Attack, Restrained Target]: 9 (2d8)\nVine [Melee Attack, Near]: 4 (d8) and Restrained</p>",
+        "description": "Constrain [Melee Attack, Restrained Target]: 9 (2d8) Vine [Melee Attack, Near]: 4 (d8) and Restrained",
         "attackType": "special",
         "damage": "",
         "damageType": "",

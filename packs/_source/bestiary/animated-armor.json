@@ -28,7 +28,7 @@
     "actions": [
       {
         "name": "Actions",
-        "description": "<p>Weapon [Melee Attack]: 3 (d6) or (by Weapon)</p>",
+        "description": "Weapon [Melee Attack]: 3 (d6) or (by Weapon)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,7 +39,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "<p>Antimagic Vulnerability: It is Dazed for Cd4 if\naffected by the Dispel Spell or other antimagic.\nImmutable: It can't be transformed.</p>"
+        "description": "Antimagic Vulnerability: It is Dazed for Cd4 if affected by the Dispel Spell or other antimagic.\nImmutable: It can't be transformed."
       }
     ],
     "loot": "",
