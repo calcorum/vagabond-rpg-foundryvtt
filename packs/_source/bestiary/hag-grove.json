@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBsthaggrove0",
+  "_key": "!actors!vgbdBsthaggrove0",
+  "name": "Hag, Grove",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 9.7,
+    "armor": 4,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 50
+    },
+    "appearing": "1",
+    "senses": {
+      "allsight": true,
+      "darkvision": true
+    },
+    "movement": {
+      "cling": true
+    },
+    "immunities": [],
+    "weaknesses": ["Cold Iron Weapons"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite. A Being hit by all three is Restrained and takes 18 (4d8) damage at the start of this Being's Turns.\nBite [Melee Attack]: 7 (d8+3)\nClaw [Melee Attack]: 7 (d8+3)\nShapeshift [Cast, Self] (Focus): Takes on the appearance of a Medium Humanlike.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Blair Omniscience: It is always aware of any Beings within the woodland it claims as its domain.\nMagic Ward I: Cast Checks that include it as a Target have a d4 penalty.\nTerror I: Enemies that can see it for the first time and at the start of their Turns must pass a [Will] Save or be Frightened until they pass this Check on a subsequent Turn, or for Cd4 Rounds afterwards."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

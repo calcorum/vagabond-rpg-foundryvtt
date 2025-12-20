@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstunicorn00",
+  "_key": "!actors!vgbdBstunicorn00",
+  "name": "Unicorn",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 4.2,
+    "armor": 3,
+    "morale": 7,
+    "zone": "midline",
+    "size": "large",
+    "beingType": "fae",
+    "speed": {
+      "value": 80
+    },
+    "appearing": "1",
+    "senses": {
+      "allsight": true,
+      "telepathy": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": ["Cold Iron Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Charmed", "Confused", "Frightened"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Heal [Cast, Touch] (1/Day): Regains 7 (2d6) HP and removes the Blinded, Confused, Paralyzed, or Sickened Status\nMulti-Attack: 2\u00d7Hoof and 1\u00d7Horn\nHoof [Melee Attack]: 4 (d8)\nHorn [Melee Attack]: 4 (d8)\nTeleport [Cast] (1/Day): Teleports itself and any Being mounting it up to Far",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Magic Ward III: Cast Checks that include it as a Target have a d8 penalty.\nRegenerate I: Regains 4 (d8) HP on each of its Turns."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

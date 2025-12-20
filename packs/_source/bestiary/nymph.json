@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstnymph0000",
+  "_key": "!actors!vgbdBstnymph0000",
+  "name": "Nymph",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.3,
+    "armor": 0,
+    "morale": 4,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 30,
+      "swim": 60
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "swim": 60
+    },
+    "immunities": [],
+    "weaknesses": ["Cold Iron Weapons"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Nymph's Kiss [Cast, Touch | Will]: Cursed (Cd8 Rounds, immediately suffocating and can only breathe water).",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amphibious: Can breathe air or water.\nMagic Ward I: Cast Checks that include it as a Target have a d4 penalty."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

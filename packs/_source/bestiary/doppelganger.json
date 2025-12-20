@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstdoppelgan",
+  "_key": "!actors!vgbdBstdoppelgan",
+  "name": "Doppelg\u00e4nger",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 2.6,
+    "armor": 2,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "fae",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": ["Cold Iron Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Charmed", "Unconscious"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Shapechange [Cast, Self (Focus)] (1/Minute): Appears to be a Being of humanoid form it has seen.\nBite [Melee Attack]: 6 (d12)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Doppelgang: Enemy Abilities treat this Being as an Ally while they are convinced it is an Ally."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

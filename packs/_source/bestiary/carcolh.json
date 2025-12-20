@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstcarcolh00",
+  "_key": "!actors!vgbdBstcarcolh00",
+  "name": "Carcolh",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 15,
+    "hp": {
+      "value": 67,
+      "max": 67
+    },
+    "tl": 7.1,
+    "armor": 4,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "fae",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {
+      "tremorsense": true
+    },
+    "movement": {
+      "climb": 20,
+      "cling": true
+    },
+    "immunities": [],
+    "weaknesses": ["Cold Iron Weapons"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 1\u00d7Tentacle per (Tentacles) and 1\u00d7Bite\nBite [Melee Attack]: 16 (3d10) and Burning (Cd6)\nTentacle [Grapple, Near]: Restrained and pulled Close.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Magic Ward II: Cast Checks that include it as a Target have a d6 penalty.\nTentacles: Starts with 6 Tentacles. Targeting a Tentacle causes a -4 penalty to the Attack Check, but severs it if at least 16 damage is dealt with the attack."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
