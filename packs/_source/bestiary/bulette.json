@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstbulette00",
+  "_key": "!actors!vgbdBstbulette00",
+  "name": "Bulette",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 10.9,
+    "armor": 4,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d2",
+    "senses": {
+      "tremorsense": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 26 (4d12)\nClaw [Melee Attack]: 10 (3d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Soft Underbelly: Its Armor is 0 while it is Prone."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

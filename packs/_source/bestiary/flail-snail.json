@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstflailsnai",
+  "_key": "!actors!vgbdBstflailsnai",
+  "name": "Flail Snail",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 6.2,
+    "armor": 4,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "cling": true
+    },
+    "immunities": ["Fire", "Poison"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 5\u00d7Flail\nFlail [Melee Attack]: 4 (d8)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Flails: Starts with 5 Flails. Targeting a Flail causes a -4 penalty to the Attack Check, but severs it if at least 4 damage is dealt with the attack.\nReflective Shell: When Targeted with a Spell, roll d6. On a 1, the Spell is reflected back at its source. On a 2 or 3, the Spell is dispelled. On a 4 to 6, the Spell works as normal."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

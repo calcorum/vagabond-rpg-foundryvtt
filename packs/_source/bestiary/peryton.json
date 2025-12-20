@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstperyton00",
+  "_key": "!actors!vgbdBstperyton00",
+  "name": "Peryton",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 3.2,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40,
+      "fly": 60
+    },
+    "appearing": "2d4",
+    "senses": {},
+    "movement": {
+      "fly": 60
+    },
+    "immunities": ["Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Horn [Melee Attack]: 7 (2d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Dive Bomb: If it flies at least 20 feet toward a Target before making an attack, the attack deals an extra die of damage."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstankheg000",
+  "_key": "!actors!vgbdBstankheg000",
+  "name": "Ankheg",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 5.1,
+    "armor": 3,
+    "morale": 5,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "d6",
+    "senses": {
+      "darkvision": true,
+      "tremorsense": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Acid Spray [Ranged Attack, Near] (1/Day): 18 (4d8) and Burning (Cd4)\nBite [Melee Attack]: 10 (3d6) and Burning (Cd4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Soft Underbelly: Its Armor is 0 while it is Prone.\nTunneler: It can Move at full Speed through solid earth and stone by digging."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

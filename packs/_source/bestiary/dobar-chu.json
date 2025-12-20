@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstdobarchu0",
+  "_key": "!actors!vgbdBstdobarchu0",
+  "name": "Dobar-Ch\u00fa",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 5.8,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30,
+      "swim": 40
+    },
+    "appearing": "d3",
+    "senses": {},
+    "movement": {
+      "swim": 40
+    },
+    "immunities": [],
+    "weaknesses": ["Shock"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nClaw [Melee Attack]: 7 (2d6)\nBite [Melee Attack]: 10 (3d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

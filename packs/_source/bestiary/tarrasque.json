@@ -1,0 +1,62 @@
+{
+  "_id": "vgbdBsttarrasque",
+  "_key": "!actors!vgbdBsttarrasque",
+  "name": "Tarrasque",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 36,
+    "hp": {
+      "value": 162,
+      "max": 162
+    },
+    "tl": 24.7,
+    "armor": 10,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "colossal",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 120,
+      "swim": 120
+    },
+    "appearing": "Unique",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": 120
+    },
+    "immunities": ["Cold", "Fire", "Shock", "Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [
+      "Charmed",
+      "Confused",
+      "Frightened",
+      "Paralyzed",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Bite, and 1\u00d7Tail\nClaw [Melee Attack, Near]: 18 (4d8)\nHorns [Melee Attack]: 16 (3d10)\nBite [Melee Attack]: 27 (5d10) and the Target loses a limb of its choice if failed by 10 or more\nTail [Melee Attack, Near]: 13 (3d8) and shoved Prone",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Charge: If it Moves at least 30 feet in a straight line then makes a Horn Attack on the same Turn, that attack deals double damage.\nLegendary: Cast Checks Targeting it have a d12 penalty.\nMythic: It doesn't die unless a wish is granted to do so.\nReflective Carapace: When Targeted with a Spell, roll d6. On a 1, the Spell is reflected back at its source. On a 2 or 3, the Spell is dispelled. On a 4 to 6, the Spell works as normal.\nRegenerate II: Regains 9 (2d8) HP on each of its Turns."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

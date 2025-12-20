@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstwererat00",
+  "_key": "!actors!vgbdBstwererat00",
+  "name": "Wererat",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 13,
+      "max": 13
+    },
+    "tl": 2.0,
+    "armor": 1,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": ["Physical"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 1\u00d7Cutlass and 1\u00d7Bite\nBite [Melee Attack]: 3 (d6) and pass [Will] or be cursed with Wererat Lycanthropy.\nWeapon [Melee Attack]: 3 (d6) or (by Weapon)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Shapechanger: This is a form that a Humanlike cursed with lycanthropy can become when the curse takes hold. They revert automatically if they die."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

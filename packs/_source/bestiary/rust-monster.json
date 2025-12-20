@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstrustmonst",
+  "_key": "!actors!vgbdBstrustmonst",
+  "name": "Rust Monster",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.7,
+    "armor": 4,
+    "morale": 7,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 15
+    },
+    "appearing": "d2",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Antenna [Cast, Touch (metal Object)]: Rust Touch\nBite [Melee Attack]: 3 (d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Rust Touch: Non-Relic metal Items that make contact with it corrode. When this happens, roll a d6 for each Item. On a roll of 1, the Item breaks. If the Item that breaks is larger than Medium, this destroys a 1-foot square hole that is 1-foot deep in it."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

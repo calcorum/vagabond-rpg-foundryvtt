@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstskeljaskr",
+  "_key": "!actors!vgbdBstskeljaskr",
+  "name": "Skeljaskrimsli",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 6.3,
+    "armor": 5,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 20,
+      "swim": 20
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {
+      "swim": 20
+    },
+    "immunities": [],
+    "weaknesses": ["Poison", "Shock"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6)\nClaw [Melee Attack]: 4 (d8)\nSlam [Melee Attack]: 7 (2d6) and Prone if this Being moved at least 20 feet straight toward the Target before the attack.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amphibious: It can breathe air and water.\nDreadnought: Deals double damage to vehicles."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

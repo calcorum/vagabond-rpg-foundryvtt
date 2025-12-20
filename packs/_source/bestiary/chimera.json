@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstchimera00",
+  "_key": "!actors!vgbdBstchimera00",
+  "name": "Chimera",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 7.0,
+    "armor": 3,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10,
+      "fly": 30
+    },
+    "appearing": "d2",
+    "senses": {},
+    "movement": {
+      "fly": 30
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw, 1\u00d7Horn, 1\u00d7Lion's Bite, and 1\u00d7Breath or 1\u00d7Dragon's Bite\nClaw [Melee Attack]: 3 (d6)\nHorn [Melee Attack]: 5 (2d4)\nLion's Bite [Melee Attack]: 4 (d8)\nBreath [Cast, 10'\u00d760' Line] (Recharge Cd6): 10 (3d6)\nDragon's Bite [Melee Attack]: (3d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

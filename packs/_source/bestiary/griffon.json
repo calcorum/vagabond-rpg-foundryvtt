@@ -1,0 +1,48 @@
+{
+  "_id": "vgbdBstgriffon00",
+  "_key": "!actors!vgbdBstgriffon00",
+  "name": "Griffon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 7,
+    "hp": {
+      "value": 31,
+      "max": 31
+    },
+    "tl": 3.7,
+    "armor": 2,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30,
+      "fly": 80
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "fly": 80
+    },
+    "immunities": [],
+    "weaknesses": ["Shock"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 9 (2d8)\nClaw [Melee Attack]: 2 (d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBsthobgoblin",
+  "_key": "!actors!vgbdBsthobgoblin",
+  "name": "Hobgoblin",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.4,
+    "armor": 2,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Weapon [Attack]: 3 (d6) or (by Weapon)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Tactical: Targets Save against its attacks as if Vulnerable if at least one of this Being's Allies are within 5 feet of the Target."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

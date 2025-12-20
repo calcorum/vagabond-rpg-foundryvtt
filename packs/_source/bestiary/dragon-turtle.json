@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstdragontur",
+  "_key": "!actors!vgbdBstdragontur",
+  "name": "Dragon Turtle",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 30,
+    "hp": {
+      "value": 135,
+      "max": 135
+    },
+    "tl": 10.6,
+    "armor": 5,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "colossal",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10,
+      "swim": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": 30
+    },
+    "immunities": ["Fire"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Steam Breath or 1\u00d7Bite\nSteam Breath [Attack; Far Cone | Endure or Reflex] (Recharge Cd6): 28 (8d6), and Burning (Cd6) if failed\nClaw [Melee Attack]: 7 (2d6)\nBite [Melee Attack]: 18 (4d8)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

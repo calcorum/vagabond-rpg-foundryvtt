@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstdragonyou",
+  "_key": "!actors!vgbdBstdragonyou",
+  "name": "Dragon, Young",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 5.3,
+    "armor": 3,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 40,
+      "fly": 80
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "fly": 80
+    },
+    "immunities": ["Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Berserk", "Charmed", "Confused", "Frightened"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Breath Attack [Attack | Half damage on a pass] (Recharge Cd6): See table. Take an Action to begin this Attack, which occurs on this Being's next Turn.\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 9 (2d8)\nClaw [Melee Attack]: 3 (d6)\nTail [Melee Attack]: 5 (d8) and shoved Prone 10' away",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Immutable: It can't be transformed.\nMagic Ward II: Cast Checks that include it as a Target have a d6 penalty.\nDragon Types: Red (Fire immune, Near Cone 14/4d6 fire+Burning), Blue (Shock immune, Far Line 13/2d12 shock+Dazed), Green (Poison immune, 15' Aura 10/3d6 poison+Sickened)"
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

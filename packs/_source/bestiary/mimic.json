@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstmimic0000",
+  "_key": "!actors!vgbdBstmimic0000",
+  "name": "Mimic",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.6,
+    "armor": 1,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "cryptid",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Bite [Melee Attack]: 9 (2d8) and Restrained if smaller\nMimic [Action (Focus)]: It takes on the appearance of an Object that is its size or smaller for the Duration.\nPseudopod [Melee Attack]: 7 (3d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Adhere: Hinders Checks to end being Restrained by it."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
