@@ -22,7 +22,7 @@
     "appearing": "2d6",
     "senses": {},
     "movement": {},
-    "immunities": [],
+    "immunities": ["fire", "poison"],
     "weaknesses": [],
     "resistances": [],
     "actions": [
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Immutable: It can't be transformed.\nBestiary Bestiary 122 122 Ripworm TL: 3.1 Medium Artificial Tunneling automatons known to wreak havoc on structures by undermining its foundation. They can cut through solid rock and earth with ease.\nHD: 4 (18 HP)\b Speed: 20' Zone: Frontline Morale: 10\b # Appearing: d4 Senses: Seismicsense 60' Armor: 3 [as Plate] Immune: Poison Status Immunities: Fatigued, Sickened, Suffocating ACTIONS Ripsaw [Melee Attack]: 7 (2d6) ABILITIES Immutable: It can't be transformed.\nTunneller: Can Move through solid rock and earth, leaving a 3-foot tunnel in its path."
+        "description": "Immutable: It can't be transformed.\nStatus Immunities: Fatigued, Sickened, Suffocating"
       }
     ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "A living planter, it could fit a tree."
   },
   "reviewed": false
 }

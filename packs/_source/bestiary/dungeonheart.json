@@ -12,8 +12,8 @@
     },
     "tl": 1.7,
     "armor": 1,
-    "morale": 7,
-    "zone": "midline",
+    "morale": 12,
+    "zone": "backline",
     "size": "huge",
     "beingType": "artificial",
     "speed": {
@@ -23,12 +23,12 @@
     "senses": {},
     "movement": {},
     "immunities": [],
-    "weaknesses": [],
+    "weaknesses": ["pierce"],
     "resistances": [],
     "actions": [
       {
         "name": "Actions",
-        "description": "Spawn: At the start of its Turn, roll d4. On a roll of 2 to 4, this Being spawns an Ally Being (d6, roll two and take the highest if this Being is at half HP or lower), which appears in the nearest open space:\n1\t\t Giant Spider (p. 132) 2\t\tBasilisk (p. 135) 3\t\t Owl Bear (p. 145) 4\t\t Rust Monster (p. 148) 5\t\t Warp Beast (p. 151) 6\t\t Gelatinous Cube (p. 172)",
+        "description": "Spawn: At the start of its Turn, roll d4. On a roll of 2 to 4, this Being spawns an Ally Being (d6, roll two and take the highest if this Being is at half HP or lower), which appears in the nearest open space:\n1 Giant Spider\n2 Basilisk\n3 Owl Bear\n4 Rust Monster\n5 Warp Beast\n6 Gelatinous Cube",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -36,9 +36,14 @@
         "properties": []
       }
     ],
-    "abilities": [],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Status Immunities: Berserk, Charmed, Confused, Dazed, Frightened, Incapacitated, Suffocating, Unconscious"
+      }
+    ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "The creation of a dungeonheart involves opening a summoning portal within a living troll's heart. The troll must survive the initial process to guarantee its regeneration works. Over time, the troll's blood and tissue seeps through the portal, which spits out all manner of bizarre creatures."
   },
   "reviewed": false
 }

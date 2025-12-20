@@ -12,7 +12,7 @@
     },
     "tl": 6.3,
     "armor": 3,
-    "morale": 7,
+    "morale": 12,
     "zone": "frontline",
     "size": "large",
     "beingType": "artificial",
@@ -22,13 +22,13 @@
     "appearing": "1",
     "senses": {},
     "movement": {},
-    "immunities": [],
+    "immunities": ["poison"],
     "weaknesses": [],
     "resistances": [],
     "actions": [
       {
         "name": "Actions",
-        "description": "Assault [Multi-Attack]: Lance and Cannon attack.\nLance [Melee Attack, Near]: 13 (2d12) Cannon [Ranged Attack (Sphere 10 foot)]: 11 (3d6)",
+        "description": "Assault [Multi-Attack]: Lance and Cannon attack.\nLance [Melee Attack, Near]: 13 (2d12)\nCannon [Ranged Attack (Sphere 10 foot)]: 11 (3d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Immutable: It can't be transformed."
+        "description": "Immutable: It can't be transformed.\nStatus Immunities: Berserk, Charmed, Confused, Fatigued, Frightened, Unconscious, Sickened, Suffocating"
       }
     ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "A mechanical warrior from eons past, typically found guarding ruins of fallen advanced societies."
   },
   "reviewed": false
 }

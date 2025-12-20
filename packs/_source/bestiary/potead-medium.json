@@ -22,7 +22,7 @@
     "appearing": "2d6",
     "senses": {},
     "movement": {},
-    "immunities": [],
+    "immunities": ["fire", "poison"],
     "weaknesses": [],
     "resistances": [],
     "actions": [
@@ -39,11 +39,11 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Immutable: It can't be transformed."
+        "description": "Immutable: It can't be transformed.\nStatus Immunities: Fatigued, Sickened, Suffocating"
       }
     ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "A living cauldron, possibly animated by a brew."
   },
   "reviewed": false
 }

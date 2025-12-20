@@ -1,7 +1,7 @@
 {
-  "_id": "vgbdBstlvstiron0",
-  "_key": "!actors!vgbdBstlvstiron0",
-  "name": "Living Statue, Iron",
+  "_id": "vgbdBstripworm",
+  "_key": "!actors!vgbdBstripworm",
+  "name": "Ripworm",
   "type": "npc",
   "img": "icons/svg/mystery-man.svg",
   "system": {
@@ -10,25 +10,27 @@
       "value": 18,
       "max": 18
     },
-    "tl": 2.7,
+    "tl": 3.1,
     "armor": 3,
-    "morale": 11,
+    "morale": 10,
     "zone": "frontline",
     "size": "medium",
     "beingType": "artificial",
     "speed": {
-      "value": 10
+      "value": 20
     },
     "appearing": "d4",
-    "senses": {},
+    "senses": {
+      "seismicsense": true
+    },
     "movement": {},
-    "immunities": [],
+    "immunities": ["poison"],
     "weaknesses": [],
     "resistances": [],
     "actions": [
       {
         "name": "Actions",
-        "description": "Weapon [Melee Attack]: 4 (d8) or (by Weapon)",
+        "description": "Ripsaw [Melee Attack]: 7 (2d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -39,11 +41,11 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Immutable: It can't be transformed.\nIron Absorption: When hit with a metal weapon that isn\u2019t a Relic, the attacker must pass [Will] or the weapon becomes stuck in this Being's body, and can only be removed if this Being is killed."
+        "description": "Immutable: It can't be transformed.\nTunneller: Can Move through solid rock and earth, leaving a 3-foot tunnel in its path.\nStatus Immunities: Fatigued, Sickened, Suffocating"
       }
     ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "Tunneling automatons known to wreak havoc on structures by undermining its foundation. They can cut through solid rock and earth with ease."
   },
   "reviewed": false
 }

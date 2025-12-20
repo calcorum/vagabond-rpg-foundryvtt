@@ -12,7 +12,7 @@
     },
     "tl": 0.7,
     "armor": 0,
-    "morale": 7,
+    "morale": 12,
     "zone": "backline",
     "size": "small",
     "beingType": "artificial",
@@ -26,8 +26,8 @@
     "movement": {
       "fly": true
     },
-    "immunities": [],
-    "weaknesses": [],
+    "immunities": ["poison"],
+    "weaknesses": ["fire"],
     "resistances": [],
     "actions": [
       {
@@ -43,11 +43,11 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Antimagic Vulnerability: It is Dazed for Cd4 if affected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move.\nBestiary Bestiary 118 118 Flying Sword TL: 2.3 Small Artificial An enchanted sword that dances through the air.\nHD: 1 (1 HP)\b Speed: 0' (Fly 50') Zone: Frontline Morale: -\b # Appearing: d4 Senses: Blindsight Armor: 3 [as Plate] Immune: Poison Status Immunities: Charmed, Frightened, Sickened, Suffocating ACTIONS Slash [Melee Attack]: 4 (d8) ABILITIES Antimagic Vulnerability: It is Dazed (Cd4) if affected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can\u2019t be Favored if it can Move."
+        "description": "Antimagic Vulnerability: It is Dazed for Cd4 if affected by the Dispel Spell or other antimagic.\nNimble: Attacks against it can't be Favored if it can Move.\nStatus Immunities: Sickened, Suffocating\nFly Speed: 30'"
       }
     ],
     "loot": "",
-    "gmNotes": ""
+    "gmNotes": "An animated spellbook that flies like a bird, capable of casting the magic written on its pages."
   },
   "reviewed": false
 }

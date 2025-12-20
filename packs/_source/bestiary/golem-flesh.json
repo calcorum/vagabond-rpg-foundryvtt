@@ -1,0 +1,51 @@
+{
+  "_id": "vgbdBstgolemfles",
+  "_key": "!actors!vgbdBstgolemfles",
+  "name": "Golem, Flesh",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 9,
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "tl": 4.7,
+    "armor": 0,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "artificial",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {},
+    "immunities": ["cold", "poison", "shock"],
+    "weaknesses": ["fire"],
+    "resistances": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Slam\nSlam [Melee Attack]: 9 (2d8 (+2 if this Being is Berserk))",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Bloodied Rage: At 20 HP or less, it is Berserk.\nFlame-Averse: If it can see fire or takes damage from fire, it is Frightened (Cd4).\nShock-Absorber: Shock damage rolls heal it instead.\nStatus Immunities: Charmed, Fatigued, Paralyzed, Sickened\nImmune to Physical from non-Relics"
+      }
+    ],
+    "loot": "",
+    "gmNotes": "A living automoton of stitched-together flesh, given life through electric strikes."
+  },
+  "reviewed": false
+}
