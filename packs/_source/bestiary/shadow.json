@@ -1,0 +1,64 @@
+{
+  "_id": "vgbdBstshadow000",
+  "_key": "!actors!vgbdBstshadow000",
+  "name": "Shadow",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.6,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {
+      "phase": true
+    },
+    "immunities": ["Poison", "Physical from non-Relics"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Charmed",
+      "Fatigue",
+      "Frightened",
+      "Paralyzed",
+      "Prone",
+      "Restrained",
+      "Sickened",
+      "Suffocating",
+      "Unconscious"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Life Drain [Melee Attack]: 5 (2d4) and pass [Endure] or +1 Fatigue. If this kills it, it rises as a Shadow.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Nightwalker: Can't Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight.\nShadow Stealth: It is Invisible in the Dark."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

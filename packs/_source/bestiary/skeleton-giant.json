@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstskeletong",
+  "_key": "!actors!vgbdBstskeletong",
+  "name": "Skeleton, Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 6,
+    "hp": {
+      "value": 27,
+      "max": 27
+    },
+    "tl": 4.7,
+    "armor": 2,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": ["Pierce", "Poison", "Slash"],
+    "weaknesses": ["Blunt", "Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Fatigued", "Sickened", "Suffocating", "Unconscious"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Colossal Sword or Weapon\nColossal Sword [Melee Attack]: 9 (2d8)\nWeapon [Melee Attack]: 7 (2d6) or (by Weapon)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Nightwalker: Can't Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

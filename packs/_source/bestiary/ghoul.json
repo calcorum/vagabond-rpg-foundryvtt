@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstghoul0000",
+  "_key": "!actors!vgbdBstghoul0000",
+  "name": "Ghoul",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 2.0,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {},
+    "immunities": ["Poison"],
+    "weaknesses": ["Physical from Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Charmed", "Frightened", "Sickened", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 2 (d4) and pass [Endure] or be Paralyzed (Cd4)\nClaw [Melee Attack]: 2 (d4) and pass [Endure] or be Paralyzed (Cd4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Zombie: It can't be reduced below 1 HP unless damaged by a Crit, damage it is Weak to, or while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

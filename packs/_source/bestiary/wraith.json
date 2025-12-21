@@ -1,0 +1,63 @@
+{
+  "_id": "vgbdBstwraith000",
+  "_key": "!actors!vgbdBstwraith000",
+  "name": "Wraith",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.7,
+    "armor": 3,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {
+      "phase": true
+    },
+    "immunities": ["Physical"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Charmed",
+      "Fatigue",
+      "Frightened",
+      "Paralyzed",
+      "Prone",
+      "Restrained",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Energy Drain [Cast, Touch]: 3 (d6), which also reduces its Maximum HP until it spends 1 Shift in Sunlight",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Nightwalker: Can't Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight.\nIncorporeal: It can Move into occupied space.\nShadow Stealth: It is Invisible in the Dark."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

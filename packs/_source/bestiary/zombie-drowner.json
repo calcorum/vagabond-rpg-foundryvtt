@@ -1,0 +1,63 @@
+{
+  "_id": "vgbdBstzombiedro",
+  "_key": "!actors!vgbdBstzombiedro",
+  "name": "Zombie, Drowner",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 20,
+      "swim": 20
+    },
+    "appearing": "3d8",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {
+      "swim": 20
+    },
+    "immunities": ["Poison"],
+    "weaknesses": ["Shock", "Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Berserk",
+      "Charmed",
+      "Confused",
+      "Fatigued",
+      "Frightened",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Bite [Melee Attack, a Restrained Being]: 3 (d6)\nGrasp [Melee Attack]: Restrained",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Zombie: It can't be reduced below 1 HP unless dealt by a Crit, damage it is Weak to, or while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

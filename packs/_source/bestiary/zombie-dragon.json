@@ -1,0 +1,63 @@
+{
+  "_id": "vgbdBstzombiedra",
+  "_key": "!actors!vgbdBstzombiedra",
+  "name": "Zombie Dragon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 25,
+    "hp": {
+      "value": 112,
+      "max": 112
+    },
+    "tl": 9.1,
+    "armor": 3,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "giant",
+    "beingType": "undead",
+    "speed": {
+      "value": 30,
+      "fly": 60
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "fly": 60
+    },
+    "immunities": ["Cold", "Poison", "Physical from non-Relics"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Berserk",
+      "Charmed",
+      "Confused",
+      "Fatigued",
+      "Frightened",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw, 1\u00d7Bite, and 1\u00d7Gore Spray\nGore Spray [Attack, Far Cone] (Recharge Cd4): 7 (2d6) and Sickened (Cd6)\nBite [Melee Attack]: 9 (2d8)\n(+1) Claw [Melee Attack]: 4 (d6+1)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Grim Harvester: Whenever a Being dies within Far, this Being regains HP equal to that Being's HD or Level.\nTerror III [Enemies' first time seeing it and on their Turns | Will]: Frightened until they pass this Save on a subsequent Turn, or for Cd8 after.\nZombie: It can't be reduced below 1 HP unless dealt by a Crit, damage it is Weak to, or while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

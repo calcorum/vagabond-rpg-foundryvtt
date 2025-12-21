@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstskeletonb",
+  "_key": "!actors!vgbdBstskeletonb",
+  "name": "Skeleton, Blazing Bones",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.6,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {},
+    "movement": {},
+    "immunities": ["Fire", "Pierce", "Poison", "Slash"],
+    "weaknesses": ["Blunt", "Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Fatigue", "Sickened", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Hurl Fire [Cast, Bolt | Reflex]: 3 (d6) and Burning (Cd4)\nGrapple [Melee Attack]: Restrained",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Flame Aura: Close Beings are Burning (d6)."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

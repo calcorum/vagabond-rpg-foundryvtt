@@ -1,0 +1,56 @@
+{
+  "_id": "vgbdBstvampire00",
+  "_key": "!actors!vgbdBstvampire00",
+  "name": "Vampire",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 6.7,
+    "armor": 4,
+    "morale": 12,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 35,
+      "fly": 30
+    },
+    "appearing": "d4",
+    "senses": {
+      "darksight": true,
+      "telepathy": true
+    },
+    "movement": {
+      "fly": 30
+    },
+    "immunities": ["Cold", "Poison", "Physical from non-Relics"],
+    "weaknesses": ["Silvered Weapons", "Wood Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Charmed", "Fatigue", "Paralyzed", "Sickened", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Enthrall [Cast, all Beings that can see it | Will] (Recharge Cd6): Target is Charmed (Cd6) and must do all it can to defend this Being. A Target that passes the Save is immune to this for 1 Day.\nMulti-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 7 (2d6) and this Being is healed for the damage dealt. A Being that takes damage from this attack must pass [Endure] or be Cursed with Vampirism.\nClaw [Melee Attack]: 7 (3d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Magic Ward II: Cast Checks that include it as a Target have a d6 penalty.\nShapeshift: It can use its Action to change into a bat, owl, rat, or wolf. It typically does so to retreat.\nSunlight Hypersensitivity: It is Burning (d8) while illuminated by Sunlight.\nVampiric: It regenerates 3 HP at the start of its Turn unless it is in Sunlight. If it is killed, it reforms in its resting place after 1 Day unless either:\n\u2022 A wooden stake is stabbed through its heart.\n\u2022 It dies in Sunlight or while doused in holy water.\n\u2022 It consumes garlic."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,60 @@
+{
+  "_id": "vgbdBstzombie000",
+  "_key": "!actors!vgbdBstzombie000",
+  "name": "Zombie",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 0.9,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 20
+    },
+    "appearing": "3d8",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {},
+    "immunities": ["Poison"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Berserk",
+      "Charmed",
+      "Confused",
+      "Fatigued",
+      "Frightened",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Bite [Melee Attack]: 3 (d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Nightwalker: Can't Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight.\nZombie: It can't be reduced below 1 HP unless damaged by a Crit, damage it is Weak to, or while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

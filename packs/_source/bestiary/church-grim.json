@@ -15,22 +15,23 @@
     "morale": 12,
     "zone": "frontline",
     "size": "medium",
-    "beingType": "beast",
+    "beingType": "undead",
     "speed": {
       "value": 40
     },
     "appearing": "1",
     "senses": {
-      "darkvision": true
+      "darksight": true
     },
     "movement": {},
-    "immunities": [],
-    "weaknesses": [],
+    "immunities": ["Physical from non-Relics"],
+    "weaknesses": ["Silvered Weapons"],
     "resistances": [],
+    "statusImmunities": ["Charmed", "Fatigued", "Sickened", "Suffocating"],
     "actions": [
       {
         "name": "Actions",
-        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite Bite [Melee Attack]: 4 (d8) Claws [Melee Attack]: 3 (d6)",
+        "description": "Multi-Attack: 2\u00d7Claws and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8)\nClaws [Melee Attack]: 3 (d6)",
         "attackType": "special",
         "damage": "",
         "damageType": "",
@@ -41,7 +42,7 @@
     "abilities": [
       {
         "name": "Abilities",
-        "description": "Bloodthirst: It is Berserk and Beings at or below half HP make Checks against it as if Vulnerable.\nGrim Resurrection: It dies instantly if its original corpse is destroyed. If it drops to 0 HP and its original corpse is not destroyed, it vanishes in a puff of smoke and reapparates in its church of origin in the next Scene at full HP.\nBestiary Bestiary 176 176 Crawling Claw TL: 1.0 Small Undead A necromantically-animated humanoid hand.\nHD: 2 (2 HP)\b Speed: 25' Zone: Frontline Morale: 12\b # Appearing: d20 Senses: Blindsight Armor: 1 [as Leather] Immune: Poison Weak: Silvered Weapons Status Immunities: Charmed, Fatigued, Sickened, Suffocating ACTIONS Claw [Melee Attack]: 2 (d4)"
+        "description": "Bloodthirst: It is Berserk and Beings at or below half HP make Checks against it as if Vulnerable.\nGrim Resurrection: It dies instantly if its original corpse is destroyed. If it drops to 0 HP and its original corpse is not destroyed, it vanishes in a puff of smoke and reappears in its church of origin in the next Scene at full HP."
       }
     ],
     "loot": "",

@@ -1,0 +1,65 @@
+{
+  "_id": "vgbdBstlich00000",
+  "_key": "!actors!vgbdBstlich00000",
+  "name": "Lich",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 11,
+    "hp": {
+      "value": 49,
+      "max": 49
+    },
+    "tl": 8.5,
+    "armor": 4,
+    "morale": 8,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 20,
+      "fly": 60
+    },
+    "appearing": "1",
+    "senses": {
+      "allsight": true
+    },
+    "movement": {
+      "fly": 60
+    },
+    "immunities": ["Poison", "Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [
+      "Berserk",
+      "Charmed",
+      "Confused",
+      "Fatigued",
+      "Frightened",
+      "Paralyzed",
+      "Sickened",
+      "Suffocating",
+      "Unconscious"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Dominator [2 Actions as below (d6 to determine)]:\n1 Anti-Life Drain [Cast, Remote | Endure]: 10 (3d6) and this Being is healed equal to the damage\n2 Disintegrate [Cast, Remote | Endure] (Recharge Cd4): 21 (6d6) and disintegrated if killed this way\n3 Raise [Cast, a corpse in Far]: Raised as a Zombie under this Being's control\n4 Death Touch [Cast, Remote | Endure]: 5 (d10) and Paralyzed (Cd6)\n5 Fear [Cast, Aura Far | Will]: Frightened (Cd4)\n6 Life Disruption [Cast, Aura Near | Endure]: 10 (3d6, half on pass) and +1 Fatigue",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Fear Aura [Aura Near | Will]: Frightened until they pass this Check on a subsequent Turn, or Cd6 after.\nIndomitable: It can't be transformed.\nGrim Harvester: Whenever a Being dies within Far, this Being regains HP equal to that Being's HD or Level.\nMagic Ward V: Cast Checks that include it as a Target have a d12 penalty.\nSoul Jar: It can't die if it has a Soul Jar intact."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

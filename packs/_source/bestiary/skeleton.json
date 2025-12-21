@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstskeleton0",
+  "_key": "!actors!vgbdBstskeleton0",
+  "name": "Skeleton",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 1.2,
+    "armor": 1,
+    "morale": 12,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d6",
+    "senses": {},
+    "movement": {},
+    "immunities": ["Pierce", "Poison", "Slash"],
+    "weaknesses": ["Blunt", "Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Fatigued", "Sickened", "Suffocating", "Unconscious"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Weapon [Melee Attack]: 3 (d6) or (by Weapon)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Nightwalker: Can't Move or Target over lines of salt or in areas illuminated by Sunlight. It is Incapacitated and Burning (d8) while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

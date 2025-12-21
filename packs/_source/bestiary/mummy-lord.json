@@ -1,0 +1,60 @@
+{
+  "_id": "vgbdBstmummylord",
+  "_key": "!actors!vgbdBstmummylord",
+  "name": "Mummy Lord",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 13,
+    "hp": {
+      "value": 58,
+      "max": 58
+    },
+    "tl": 7.0,
+    "armor": 4,
+    "morale": 12,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "undead",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "darksight": true
+    },
+    "movement": {},
+    "immunities": ["Poison", "Physical from non-Relics"],
+    "weaknesses": ["Fire", "Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": [
+      "Berserk",
+      "Charmed",
+      "Confused",
+      "Fatigue",
+      "Frightened",
+      "Sickened",
+      "Suffocating"
+    ],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Glare [Cast, Sight | Will] (Recharge Cd4): Frightened (Cd4, Paralyzed)\nCursed Touch [Melee Attack]: 10 (3d6) and pass an [Endure] Save or be Cursed (can't regain HP, and it loses 10 (3d6) HP every day)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Magic Ward II: Cast Checks that include it as a Target have a d6 penalty.\nDoom Magnet: Near Enemies can't gain Favor.\nZombie: It can't be reduced below 1 HP unless damaged by a Crit, damage it is Weak to, or while in Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

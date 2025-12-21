@@ -1,0 +1,47 @@
+{
+  "_id": "vgbdBstcrawlingc",
+  "_key": "!actors!vgbdBstcrawlingc",
+  "name": "Crawling Claw",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 2,
+      "max": 2
+    },
+    "tl": 1.0,
+    "armor": 1,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "small",
+    "beingType": "undead",
+    "speed": {
+      "value": 25
+    },
+    "appearing": "d20",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": ["Poison"],
+    "weaknesses": ["Silvered Weapons"],
+    "resistances": [],
+    "statusImmunities": ["Charmed", "Fatigued", "Sickened", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Claw [Melee Attack]: 2 (d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
