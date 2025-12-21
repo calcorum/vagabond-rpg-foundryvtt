@@ -1,0 +1,57 @@
+{
+  "_id": "vgbdBststolas000",
+  "_key": "!actors!vgbdBststolas000",
+  "name": "Stolas",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 27,
+    "hp": {
+      "value": 121,
+      "max": 121
+    },
+    "tl": 11.2,
+    "armor": 7,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "giant",
+    "beingType": "outer",
+    "speed": {
+      "value": 40,
+      "fly": 160
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true,
+      "telepathy": true
+    },
+    "movement": {
+      "cling": true,
+      "fly": 160
+    },
+    "immunities": ["Fire", "Poison", "Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Peer Beyond [Cast, 30' Cone | Will] (Recharge Cd4): 21 (6d6) and Dazed (Cd6 Rounds)\nMulti-Attack: 2\u00d7Claw and 1\u00d7Beak\nBeak [Melee Attack]: 14 (4d6)\nClaw [Melee Attack]: 13 (3d8) and Restrained if failed by 5 or more.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Magic Ward IV: Cast Checks that include it as a Target have a d10 penalty.\nRegenerate III: Regains 13 (3d8) HP on each of its Turns."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

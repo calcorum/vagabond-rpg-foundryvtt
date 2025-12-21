@@ -1,0 +1,56 @@
+{
+  "_id": "vgbdBstogler0000",
+  "_key": "!actors!vgbdBstogler0000",
+  "name": "Ogler",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 11.2,
+    "armor": 4,
+    "morale": 12,
+    "zone": "backline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 0,
+      "fly": 20
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true,
+      "telepathy": true
+    },
+    "movement": {
+      "fly": 20
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Cast: 3 (d6)\u00d7Eyebeam and 1\u00d7Bite\nEyebeam [Cast, Remote]: Roll d8 for each:\n1 Charm [Will]: Charmed (Cd4, or until damaged)\n2 Sleep [Will]: Unconscious (Cd6, or woken up)\n3 Kinesis [Endure]: Restrained (1 Round)\n4 Petrify [Will]: Transformed into a stone statue\n5 Death [Near Only | Endure]: 14 (4d6)\n6 Fear [Will]: Frightened (Cd4)\n7 Slow [Will]: Speed reduced to 10' for (Cd4)\n8 Paralysis [Endure]: Paralyzed (Cd4)\nBite [Melee Attack]: 5 (2d4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Antimagical Cone: Cast Checks in a Far Cone from its central eye always fail, and any magic effect in the Cone is suspended while in the cone.\nMind of Madness: It can Cast while Berserk."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

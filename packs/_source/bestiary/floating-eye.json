@@ -1,0 +1,56 @@
+{
+  "_id": "vgbdBstfloatinge",
+  "_key": "!actors!vgbdBstfloatinge",
+  "name": "Floating Eye",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 1,
+      "max": 1
+    },
+    "tl": 0.1,
+    "armor": 0,
+    "morale": 7,
+    "zone": "backline",
+    "size": "small",
+    "beingType": "outer",
+    "speed": {
+      "value": 0,
+      "fly": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true,
+      "telepathy": true
+    },
+    "movement": {
+      "fly": 30
+    },
+    "immunities": [],
+    "weaknesses": ["Acid", "Pierce"],
+    "resistances": [],
+    "statusImmunities": ["Prone"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Glare [Cast, 30-foot Cone] (1/Day): Transformed into a stone statue (Cd6)\nMuddle [Cast, 30-foot Cone] (Recharge Cd4): Confused (Cd4, or until this Being dies)\nEnrage [Cast, 30-foot Cone] (Recharge Cd4): Berserk (Cd4, or until this Being dies)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Antimagical Cone: No Cast Check in a 30-foot cone originating from its central eye passes.\nOcular: Checks to make it Blinded are Favored."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

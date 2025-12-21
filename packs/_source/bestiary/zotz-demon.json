@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstzotzdem00",
+  "_key": "!actors!vgbdBstzotzdem00",
+  "name": "Zotz, Demon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 14,
+    "hp": {
+      "value": 63,
+      "max": 63
+    },
+    "tl": 9.2,
+    "armor": 4,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "huge",
+    "beingType": "outer",
+    "speed": {
+      "value": 20,
+      "fly": 80
+    },
+    "appearing": "d4",
+    "senses": {
+      "echolocation": true
+    },
+    "movement": {
+      "fly": 80
+    },
+    "immunities": ["Poison", "Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Fatigued", "Frightened"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Shriek [Action, Far Aura | Will] (Recharge Cd4): Frightened (Cd6, it can't hear)\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\n(+2) Claw [Melee Attack]: 9 (2d6+2)\n(+2) Bite [Melee Attack]: 15 (3d8+2) and this Being is healed for the damage dealt",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Avatar of Death: No Being within Near can be revived.\nMagic Ward II: Cast Checks that include it as a Target have a d6 penalty.\nNimble: Attacks against it can't be Favored if it can Move."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "vgbdBstbyakhee00",
+  "_key": "!actors!vgbdBstbyakhee00",
+  "name": "Byakhee",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 15,
+    "hp": {
+      "value": 67,
+      "max": 67
+    },
+    "tl": 10.5,
+    "armor": 5,
+    "morale": 10,
+    "zone": "midline",
+    "size": "huge",
+    "beingType": "outer",
+    "speed": {
+      "value": 60,
+      "fly": 180
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true,
+      "telepathy": true
+    },
+    "movement": {
+      "fly": 180
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 10 (3d6) and pass [Endure] or Sickened (Cd6 per Round, Dazed for Cd4 after the Status ends).\nClaw [Melee Attack 10']: 13 (3d8)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Instant Transmission (Recharge Cd10 days): If it is in space, it can use its Action to teleport itself and any Beings in physical contact with it at lightspeed to anywhere within the nearby star system.\nInterstellar: It can freely move in the vacuum of space."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

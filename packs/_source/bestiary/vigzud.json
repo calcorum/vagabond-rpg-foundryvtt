@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstvigzud000",
+  "_key": "!actors!vgbdBstvigzud000",
+  "name": "Vigzud",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 3.5,
+    "armor": 2,
+    "morale": 4,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 30
+    },
+    "appearing": "d2",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "climb": 30,
+      "cling": true
+    },
+    "immunities": ["Poison"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Berserk", "Frightened", "Sickened"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Web [Ranged Attack] (Recharge Cd4): Restrained by Web\nMulti-Attack: 2\u00d7Claw and 1\u00d7Bite\nBite [Melee Attack]: 4 (d8) and pass [Will] or become Sickened (Cd4, Berserk).\nClaw [Melee Attack]: 3 (d6)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Bloodlust: Beings at or below half HP are Vulnerable to its attacks.\nPouncer: If it moves at least 20 feet before making an Attack on the same Turn, the Target is shoved Prone if it is this Being's size or smaller.\nWeb-Walk: Its Move is not impeded by webbing.\nWeb: Its web is an Object with 5 HP and Armor 1. The webs are Difficult Terrain as a surface, and cause a Target to be Restrained if hit with a Web Spit Attack from the Vigzud."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

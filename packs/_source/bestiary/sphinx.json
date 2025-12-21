@@ -1,0 +1,56 @@
+{
+  "_id": "vgbdBstsphinx000",
+  "_key": "!actors!vgbdBstsphinx000",
+  "name": "Sphinx",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 12,
+    "hp": {
+      "value": 54,
+      "max": 54
+    },
+    "tl": 5.7,
+    "armor": 4,
+    "morale": 10,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "outer",
+    "speed": {
+      "value": 60,
+      "fly": 120
+    },
+    "appearing": "1",
+    "senses": {
+      "allsight": true,
+      "telepathy": true
+    },
+    "movement": {
+      "fly": 120
+    },
+    "immunities": ["Physical from non-Relics"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Berserk", "Charmed", "Confused", "Frightened", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Claw and either 1\u00d7Roar or 1\u00d7Cast of its choice\nRoar [Action, all Beings who hear it | Will] (2/Day): Frightened (Cd4, and Dazed if within Near)\nClaw [Melee Attack]: 7 (2d6)\nDispel Magic [Cast, Remote | Will] (2/Day): A magic effect of its choice is dispelled or suspended for 2d6 hours if it is a Curse or Relic Power",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Future Sight: Hinders Saves against its Attacks.\nMagic Ward II: Cast Checks that include it as a Target have a d6 penalty."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

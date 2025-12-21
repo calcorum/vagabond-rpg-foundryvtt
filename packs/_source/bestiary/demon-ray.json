@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstdemonray0",
+  "_key": "!actors!vgbdBstdemonray0",
+  "name": "Demon Ray",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 1,
+    "hp": {
+      "value": 4,
+      "max": 4
+    },
+    "tl": 2.4,
+    "armor": 2,
+    "morale": 10,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "outer",
+    "speed": {
+      "value": 0,
+      "swim": 30
+    },
+    "appearing": "2d6",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "swim": 30
+    },
+    "immunities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Bite [Melee Attack]: 7 (3d4)\nLeech [Cast, Remote | Endure]: 3 (d6) and Sickened (Cd6, any healing that affects it heals this Being instead)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amphibious: Can breathe air and water.\nSunblinded: Blinded by Sunlight."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
