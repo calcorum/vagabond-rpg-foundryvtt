@@ -1,0 +1,53 @@
+{
+  "_id": "vgbdBstkelpie000",
+  "_key": "!actors!vgbdBstkelpie000",
+  "name": "Kelpie",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 5,
+    "hp": {
+      "value": 22,
+      "max": 22
+    },
+    "tl": 2.4,
+    "armor": 2,
+    "morale": 4,
+    "zone": "backline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 30,
+      "swim": 30
+    },
+    "appearing": "d4",
+    "senses": {},
+    "movement": {
+      "swim": 30
+    },
+    "immunities": [],
+    "weaknesses": ["Shock"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Entangle [Grapple, an Enemy in Water]: Restrained\nEnlure [Cast, Sight | Will (-2 penalty)] (1/Day): Charmed (Cd6, it must Move closer to this Being)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amphibious: It can breathe air and water.\nShapechange: It can skip its Move to turn into a green woman, or an aquatic horse (use the hippocampus statblock). It maintains its HP in these forms."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

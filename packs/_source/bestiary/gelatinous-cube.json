@@ -1,0 +1,52 @@
+{
+  "_id": "vgbdBstgelatinou",
+  "_key": "!actors!vgbdBstgelatinou",
+  "name": "Gelatinous Cube",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 4,
+    "hp": {
+      "value": 18,
+      "max": 18
+    },
+    "tl": 1.3,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {},
+    "immunities": ["Acid", "Cold", "Shock"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": ["Blinded", "Charmed", "Fatigue", "Frightened", "Prone", "Suffocating"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Engulf [Melee Attack]: Restrained",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amorphous: It can enter the space of other Beings and openings as small as 1 inch without squeezing.\nEngulfer: Beings that share its space are Burning (2d4).\nSticky: Hinders attempts to end being Restrained by it. Beings that make physical contact with it must pass [Endure] or be Restrained."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

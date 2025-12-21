@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstefreeti00",
+  "_key": "!actors!vgbdBstefreeti00",
+  "name": "Efreeti",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 10,
+    "hp": {
+      "value": 45,
+      "max": 45
+    },
+    "tl": 5.7,
+    "armor": 3,
+    "morale": 11,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 30,
+      "fly": 80
+    },
+    "appearing": "1",
+    "senses": {
+      "darkvision": true
+    },
+    "movement": {
+      "fly": 80
+    },
+    "immunities": ["Fire"],
+    "weaknesses": [],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Wall of Fire [Cast, 60' Line | Reflex] (3/Day, Focus): Burning (d6, while in the flames). It takes this damage the first time it enters the flames while it isn't Burning as well.\nConjure Object [Cast, Remote | Reflex] (3/Day): An Object no larger than 10'\u00d710' is created. Objects made this way composed of metal or stone disappear after one day.\nMulti-Attack: 2\u00d7Fist\nFist [Melee Attack]: 9 (2d8)\nInvisibility [Cast, Touch | Will] (Focus): Turns Invisible for the duration.",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Regenerate II: Regains 9 (2d8) HP on each of its Turns."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

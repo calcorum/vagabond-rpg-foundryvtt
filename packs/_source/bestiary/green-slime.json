@@ -1,0 +1,54 @@
+{
+  "_id": "vgbdBstgreenslim",
+  "_key": "!actors!vgbdBstgreenslim",
+  "name": "Green Slime",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 2,
+    "hp": {
+      "value": 9,
+      "max": 9
+    },
+    "tl": 1.0,
+    "armor": 0,
+    "morale": 12,
+    "zone": "frontline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "cling": true
+    },
+    "immunities": ["Acid", "Poison"],
+    "weaknesses": ["Cold", "Fire"],
+    "resistances": [],
+    "statusImmunities": ["Blinded", "Fatigue", "Prone", "Sickened"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "(No standard attacks)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Amorphous: It can Move into occupied space as small as 1 inch without squeezing.\nConsume [Endure]: Beings in its space are Burning (2d8). A Being that dies this way is dissolved, and becomes another green slime.\nLiving Sick: Sunlight and any effect that ends the Sickened Status or kills bacteria kills this Being."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

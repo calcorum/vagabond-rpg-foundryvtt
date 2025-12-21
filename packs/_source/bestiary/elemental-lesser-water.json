@@ -1,0 +1,55 @@
+{
+  "_id": "vgbdBstelemleswa",
+  "_key": "!actors!vgbdBstelemleswa",
+  "name": "Elemental, Lesser Water",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 8,
+    "hp": {
+      "value": 36,
+      "max": 36
+    },
+    "tl": 3.9,
+    "armor": 3,
+    "morale": 10,
+    "zone": "midline",
+    "size": "medium",
+    "beingType": "primordial",
+    "speed": {
+      "value": 0,
+      "swim": 30
+    },
+    "appearing": "1",
+    "senses": {
+      "blindsight": true
+    },
+    "movement": {
+      "swim": 30
+    },
+    "immunities": ["Acid", "Poison", "Physical from non-Relics"],
+    "weaknesses": ["Shock"],
+    "resistances": [],
+    "statusImmunities": ["Fatigued", "Prone", "Sickened", "Suffocating", "Restrained"],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Strike [Melee Attack]: 4 (d8) plus 4 (d8) if in water",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Waterbound: Must stay Near a body of water."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}

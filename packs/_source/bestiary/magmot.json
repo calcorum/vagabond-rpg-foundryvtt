@@ -1,0 +1,50 @@
+{
+  "_id": "vgbdBstmagmot000",
+  "_key": "!actors!vgbdBstmagmot000",
+  "name": "Magmot",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hd": 3,
+    "hp": {
+      "value": 12,
+      "max": 12
+    },
+    "tl": 6.4,
+    "armor": 3,
+    "morale": 9,
+    "zone": "frontline",
+    "size": "large",
+    "beingType": "primordial",
+    "speed": {
+      "value": 10
+    },
+    "appearing": "d2",
+    "senses": {},
+    "movement": {},
+    "immunities": ["Fire"],
+    "weaknesses": ["Cold"],
+    "resistances": [],
+    "statusImmunities": [],
+    "actions": [
+      {
+        "name": "Actions",
+        "description": "Multi-Attack: 2\u00d7Slams\nSlam [Melee Attack]: 7 (2d6) and pass [Endure] or become Burning (Cd4)",
+        "attackType": "special",
+        "damage": "",
+        "damageType": "",
+        "range": "",
+        "properties": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Abilities",
+        "description": "Burrow Burst: If it breaches the ground after moving at least 20' on the same Turn, its first Slam deals 18 (4d8) instead.\nTunneler: It can Move by burrowing in the ground at 30' per Round."
+      }
+    ],
+    "loot": "",
+    "gmNotes": ""
+  },
+  "reviewed": false
+}
