@@ -609,7 +609,10 @@
   .skills-section {
     .skills-grid {
       display: grid;
+      // 2 columns with vertical flow (fills columns top-to-bottom, then left-to-right)
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, auto);
+      grid-auto-flow: column;
       gap: $spacing-2;
     }
 

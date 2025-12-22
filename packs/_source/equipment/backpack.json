@@ -38,7 +38,7 @@
   "effects": [
     {
       "_id": "backpackSlotBonus",
-      "_key": "!items.effects!vagabondEquipBackpack.backpackSlotBonus",
+      "_key": "!items.effects!vgbdEqpbackpack0.backpackSlotBonus",
       "name": "Backpack Slot Bonus",
       "icon": "icons/svg/item-bag.svg",
       "changes": [

@@ -119,6 +119,45 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
     context.classes = context.items.classes;
     context.className = context.items.classes[0]?.name || "None";
     context.ancestryName = context.items.ancestry?.name || "None";
+
+    // Prepare class features from class items for display
+    context.classFeatures = this._prepareClassFeatures();
+  }
+
+  /**
+   * Prepare class features for display on the abilities tab.
+   * Extracts features from class items at or below the character's current level.
+   * @returns {Object[]}
+   * @private
+   */
+  _prepareClassFeatures() {
+    const level = this.actor.system.level || 1;
+    const classFeatures = [];
+
+    for (const classItem of this.actor.items.filter((i) => i.type === "class")) {
+      const features = classItem.system.features || [];
+      for (const feature of features) {
+        // Only include features at or below current level
+        if (feature.level <= level) {
+          classFeatures.push({
+            name: feature.name,
+            description: feature.description,
+            passive: feature.passive,
+            level: feature.level,
+            sourceClass: classItem.name,
+            img: classItem.img || "icons/svg/book.svg",
+          });
+        }
+      }
+    }
+
+    // Sort by level, then alphabetically
+    classFeatures.sort((a, b) => {
+      if (a.level !== b.level) return a.level - b.level;
+      return a.name.localeCompare(b.name);
+    });
+
+    return classFeatures;
   }
 
   /**

@@ -634,9 +634,10 @@ export default class CharacterData extends VagabondActorBase {
 
     // Calculate Item Slots: 8 + Might - Fatigue + bonus
     const baseSlots = CONFIG.VAGABOND?.baseItemSlots || 8;
-    // Sum up all bonus sources
+    // Sum up all bonus sources from the bonuses array and ADD to existing bonus
+    // (existing bonus may have been set by Active Effects before prepareDerivedData runs)
     const totalBonus = this.itemSlots.bonuses.reduce((sum, b) => sum + b.value, 0);
-    this.itemSlots.bonus = totalBonus;
+    this.itemSlots.bonus += totalBonus;
     this.itemSlots.max =
       baseSlots + stats.might.value - this.resources.fatigue.value + this.itemSlots.bonus;
     // Check if overburdened
