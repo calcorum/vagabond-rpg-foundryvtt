@@ -55,6 +55,7 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       closeOnSubmit: false,
     },
     actions: {
+      editImage: VagabondActorSheet.#onEditImage,
       rollSkill: VagabondActorSheet.#onRollSkill,
       rollSave: VagabondActorSheet.#onRollSave,
       rollAttack: VagabondActorSheet.#onRollAttack,
@@ -857,5 +858,25 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
     if (!item || item.type !== "status") return;
 
     await item.delete();
+  }
+
+  /**
+   * Handle image editing via FilePicker.
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onEditImage(event, target) {
+    event.preventDefault();
+    const field = target.dataset.field || "img";
+    const current = foundry.utils.getProperty(this.document, field);
+
+    const fp = new FilePicker({
+      type: "image",
+      current,
+      callback: async (path) => {
+        await this.document.update({ [field]: path });
+      },
+    });
+    fp.render(true);
   }
 }

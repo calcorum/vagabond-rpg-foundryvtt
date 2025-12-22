@@ -32,7 +32,7 @@
         transition: opacity $transition-fast;
 
         &:hover {
-          opacity: 0.85;
+          opacity: 0.8;
         }
       }
     }
@@ -2173,9 +2173,12 @@
         border: 2px solid var(--color-border);
         border-radius: $radius-md;
         cursor: pointer;
-        transition: border-color $transition-fast;
+        transition:
+          border-color $transition-fast,
+          opacity $transition-fast;
 
         &:hover {
+          opacity: 0.8;
           border-color: var(--color-accent-primary);
         }
       }
