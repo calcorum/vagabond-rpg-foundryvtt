@@ -31,6 +31,8 @@ import {
   SkillCheckDialog,
   AttackRollDialog,
   SaveRollDialog,
+  DodgeRollDialog,
+  BlockRollDialog,
   SpellCastDialog,
   FavorHinderDebug,
 } from "./applications/_module.mjs";
@@ -109,6 +111,8 @@ Hooks.once("init", async () => {
       SkillCheckDialog,
       AttackRollDialog,
       SaveRollDialog,
+      DodgeRollDialog,
+      BlockRollDialog,
       SpellCastDialog,
       FavorHinderDebug,
     },

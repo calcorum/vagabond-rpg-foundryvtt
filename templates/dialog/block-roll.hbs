@@ -1,0 +1,92 @@
+{{!-- Block Roll Dialog Template --}}
+{{!-- Defense roll using Endure save with vs Ranged toggle --}}
+
+<div class="vagabond roll-dialog-content block-roll-dialog">
+  {{!-- Automatic Favor/Hinder from Active Effects --}}
+  {{#if hasAutoFavor}}
+  <div class="auto-favor-hinder favor">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span>{{localize "VAGABOND.AutoFavor"}}: {{#each autoFavorHinder.favorSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+  {{#if rollSpecific.hinderSources.length}}
+  <div class="auto-favor-hinder hinder">
+    <i class="fa-solid fa-arrow-down"></i>
+    <span>{{localize "VAGABOND.AutoHinder"}}: {{#each rollSpecific.hinderSources}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </div>
+  {{/if}}
+
+  {{!-- Block Info Header --}}
+  <div class="defense-info-header">
+    <h3>{{localize "VAGABOND.Block"}}</h3>
+  </div>
+
+  {{!-- Save Info --}}
+  <div class="save-info">
+    <div class="save-stat">
+      <span class="label">{{localize "VAGABOND.Stats"}}:</span>
+      <span class="value">{{rollSpecific.saveStats}}</span>
+    </div>
+    <div class="save-difficulty">
+      <span class="label">{{localize "VAGABOND.Difficulty"}}:</span>
+      <span class="value difficulty">{{rollSpecific.difficulty}}</span>
+    </div>
+  </div>
+
+  {{!-- vs Ranged Attack Toggle --}}
+  <div class="ranged-toggle-section">
+    <label class="ranged-toggle checkbox-label">
+      <input type="checkbox" name="vsRanged" {{#if rollSpecific.vsRanged}}checked{{/if}}>
+      <span>{{localize "VAGABOND.VsRangedAttack"}}</span>
+    </label>
+    {{#if rollSpecific.vsRanged}}
+    <div class="ranged-warning hinder-warning">
+      <i class="fa-solid fa-arrow-down"></i>
+      <span>{{localize "VAGABOND.Hinder"}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{!-- Favor/Hinder Toggles --}}
+  <div class="favor-hinder-section">
+    <label>{{localize "VAGABOND.FavorHinder"}}</label>
+    <div class="favor-hinder-toggles">
+      <button type="button" class="favor-btn {{#if (eq config.favorHinder 1)}}active{{/if}}" data-action="toggle-favor">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{localize "VAGABOND.Favor"}}
+      </button>
+      <button type="button" class="hinder-btn {{#if (eq config.favorHinder -1)}}active{{/if}}" data-action="toggle-hinder">
+        <i class="fa-solid fa-arrow-down"></i>
+        {{localize "VAGABOND.Hinder"}}
+      </button>
+    </div>
+    {{#if (gt netFavorHinder 0)}}
+    <div class="net-favor-hinder favor">+d6 {{localize "VAGABOND.Favor"}}</div>
+    {{else if (lt netFavorHinder 0)}}
+    <div class="net-favor-hinder hinder">-d6 {{localize "VAGABOND.Hinder"}}</div>
+    {{/if}}
+  </div>
+
+  {{!-- Situational Modifier --}}
+  <div class="modifier-section">
+    <label>{{localize "VAGABOND.SituationalModifier"}}</label>
+    <div class="modifier-presets">
+      {{#each modifierPresets}}
+      <button type="button" class="modifier-preset" data-modifier-preset="{{this.value}}">
+        {{this.label}}
+      </button>
+      {{/each}}
+    </div>
+    <div class="modifier-input">
+      <input type="number" name="modifier" value="{{config.modifier}}" placeholder="0">
+    </div>
+  </div>
+
+  {{!-- Roll Button --}}
+  <div class="dialog-buttons">
+    <button type="submit" class="roll-btn">
+      <i class="fa-solid fa-shield"></i>
+      {{localize "VAGABOND.Block"}}
+    </button>
+  </div>
+</div>

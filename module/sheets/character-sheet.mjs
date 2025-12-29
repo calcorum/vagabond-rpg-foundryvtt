@@ -226,6 +226,11 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
   _prepareSaves() {
     const system = this.actor.system;
 
+    // Check armor conditions for defense rolls
+    const equippedArmor = this.actor.getEquippedArmor();
+    const hasHeavyArmor = equippedArmor.some((a) => a.system.hindersDodge);
+    const hasShield = equippedArmor.some((a) => a.system.armorType === "shield");
+
     return {
       reflex: {
         id: "reflex",
@@ -233,6 +238,11 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
         stats: "DEX + AWR",
         difficulty: system.saves.reflex.difficulty,
         bonus: system.saves.reflex.bonus,
+        dodge: {
+          difficulty: system.saves.reflex.difficulty,
+          hindered: hasHeavyArmor,
+          hinderSource: hasHeavyArmor ? "VAGABOND.HinderedByHeavyArmor" : null,
+        },
       },
       endure: {
         id: "endure",
@@ -240,6 +250,10 @@ export default class VagabondCharacterSheet extends VagabondActorSheet {
         stats: "MIT + MIT",
         difficulty: system.saves.endure.difficulty,
         bonus: system.saves.endure.bonus,
+        block: {
+          difficulty: system.saves.endure.difficulty,
+          hasShield,
+        },
       },
       will: {
         id: "will",

@@ -7,6 +7,8 @@ export { default as VagabondRollDialog } from "./base-roll-dialog.mjs";
 export { default as SkillCheckDialog } from "./skill-check-dialog.mjs";
 export { default as AttackRollDialog } from "./attack-roll-dialog.mjs";
 export { default as SaveRollDialog } from "./save-roll-dialog.mjs";
+export { default as DodgeRollDialog } from "./dodge-roll-dialog.mjs";
+export { default as BlockRollDialog } from "./block-roll-dialog.mjs";
 export { default as SpellCastDialog } from "./spell-cast-dialog.mjs";
 export { default as FavorHinderDebug } from "./favor-hinder-debug.mjs";
 export { default as LevelUpDialog } from "./level-up-dialog.mjs";

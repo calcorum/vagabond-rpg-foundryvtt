@@ -262,6 +262,9 @@
   "VAGABOND.DodgeInfo": "Dodge allows you to avoid the attack entirely",
   "VAGABOND.BlockedWith": "Blocked with shield",
   "VAGABOND.DodgedAttack": "Dodged the attack",
+  "VAGABOND.VsRangedAttack": "vs Ranged Attack?",
+  "VAGABOND.HinderedByHeavyArmor": "Heavy Armor",
+  "VAGABOND.HinderedByRanged": "Ranged Attack",
   "VAGABOND.CriticalSuccess": "Critical Success!",
 
   "VAGABOND.CastSpell": "Cast Spell",

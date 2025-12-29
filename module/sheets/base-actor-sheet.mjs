@@ -58,6 +58,8 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
       editImage: VagabondActorSheet.#onEditImage,
       rollSkill: VagabondActorSheet.#onRollSkill,
       rollSave: VagabondActorSheet.#onRollSave,
+      rollDodge: VagabondActorSheet.#onRollDodge,
+      rollBlock: VagabondActorSheet.#onRollBlock,
       rollAttack: VagabondActorSheet.#onRollAttack,
       castSpell: VagabondActorSheet.#onCastSpell,
       itemEdit: VagabondActorSheet.#onItemEdit,
@@ -683,6 +685,39 @@ export default class VagabondActorSheet extends HandlebarsApplicationMixin(Actor
 
     const { SaveRollDialog } = game.vagabond.applications;
     await SaveRollDialog.prompt(this.actor, saveType);
+  }
+
+  /**
+   * Handle dodge roll action.
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollDodge(event, target) {
+    event.preventDefault();
+    const { DodgeRollDialog } = game.vagabond.applications;
+    await DodgeRollDialog.prompt(this.actor);
+  }
+
+  /**
+   * Handle block roll action.
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollBlock(event, target) {
+    event.preventDefault();
+
+    // Check if shield is equipped
+    const hasShield = this.actor
+      .getEquippedArmor()
+      .some((armor) => armor.system.armorType === "shield");
+
+    if (!hasShield) {
+      ui.notifications.warn(game.i18n.localize("VAGABOND.RequiresShield"));
+      return;
+    }
+
+    const { BlockRollDialog } = game.vagabond.applications;
+    await BlockRollDialog.prompt(this.actor);
   }
 
   /**

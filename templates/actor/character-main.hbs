@@ -22,16 +22,57 @@
       <div class="saves-section">
         <h2 class="section-header">{{localize "VAGABOND.Saves"}}</h2>
         <div class="saves-list">
-          {{#each saves}}
+          {{!-- Reflex Save --}}
           <div class="save-row interactive-row" role="button" tabindex="0"
-               data-action="rollSave" data-save="{{this.id}}"
-               aria-label="{{localize this.label}} {{localize 'VAGABOND.Save'}}: {{localize 'VAGABOND.Difficulty'}} {{this.difficulty}}">
-            <span class="save-label">{{localize this.label}}</span>
-            <span class="save-stats">({{this.stats}})</span>
-            <span class="save-difficulty">{{this.difficulty}}</span>
+               data-action="rollSave" data-save="reflex"
+               aria-label="{{localize saves.reflex.label}} {{localize 'VAGABOND.Save'}}: {{localize 'VAGABOND.Difficulty'}} {{saves.reflex.difficulty}}">
+            <span class="save-label">{{localize saves.reflex.label}}</span>
+            <span class="save-stats">({{saves.reflex.stats}})</span>
+            <span class="save-difficulty">{{saves.reflex.difficulty}}</span>
             <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
           </div>
-          {{/each}}
+          {{!-- Dodge sub-row (indented under Reflex) --}}
+          <div class="defense-row dodge-row interactive-row" role="button" tabindex="0"
+               data-action="rollDodge"
+               aria-label="{{localize 'VAGABOND.Dodge'}}: {{localize 'VAGABOND.Difficulty'}} {{saves.reflex.dodge.difficulty}}">
+            <span class="defense-label">{{localize "VAGABOND.Dodge"}}</span>
+            {{#if saves.reflex.dodge.hindered}}
+            <span class="hinder-indicator" data-tooltip="{{localize saves.reflex.dodge.hinderSource}}">
+              <i class="fa-solid fa-arrow-down"></i>
+            </span>
+            {{/if}}
+            <span class="defense-difficulty">{{saves.reflex.dodge.difficulty}}</span>
+            <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
+          </div>
+
+          {{!-- Endure Save --}}
+          <div class="save-row interactive-row" role="button" tabindex="0"
+               data-action="rollSave" data-save="endure"
+               aria-label="{{localize saves.endure.label}} {{localize 'VAGABOND.Save'}}: {{localize 'VAGABOND.Difficulty'}} {{saves.endure.difficulty}}">
+            <span class="save-label">{{localize saves.endure.label}}</span>
+            <span class="save-stats">({{saves.endure.stats}})</span>
+            <span class="save-difficulty">{{saves.endure.difficulty}}</span>
+            <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
+          </div>
+          {{!-- Block sub-row (indented under Endure) --}}
+          <div class="defense-row block-row interactive-row {{#unless saves.endure.block.hasShield}}no-shield{{/unless}}"
+               role="button" tabindex="0"
+               data-action="rollBlock"
+               aria-label="{{localize 'VAGABOND.Block'}}: {{localize 'VAGABOND.Difficulty'}} {{saves.endure.block.difficulty}}">
+            <span class="defense-label">{{localize "VAGABOND.Block"}}</span>
+            <span class="defense-difficulty">{{saves.endure.block.difficulty}}</span>
+            <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
+          </div>
+
+          {{!-- Will Save --}}
+          <div class="save-row interactive-row" role="button" tabindex="0"
+               data-action="rollSave" data-save="will"
+               aria-label="{{localize saves.will.label}} {{localize 'VAGABOND.Save'}}: {{localize 'VAGABOND.Difficulty'}} {{saves.will.difficulty}}">
+            <span class="save-label">{{localize saves.will.label}}</span>
+            <span class="save-stats">({{saves.will.stats}})</span>
+            <span class="save-difficulty">{{saves.will.difficulty}}</span>
+            <i class="fa-solid fa-dice-d20 roll-icon" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
 
