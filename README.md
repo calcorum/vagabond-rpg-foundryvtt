@@ -112,6 +112,6 @@ Vagabond RPG is a product of its respective copyright holders. This system imple
 
 ## Acknowledgments
 
-- Vagabond RPG by [Publisher] for the amazing game system
+- Vagabond RPG by Taron "Indestructoboy" Pounds at Land of the Blind for the amazing game system
 - Foundry VTT community for documentation and examples
 - All contributors to this project
